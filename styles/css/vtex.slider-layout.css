@@ -29,3 +29,25 @@
   padding-right: .5rem;
   min-height: 550px;
 }
+
+.sliderLayoutContainer--repuestoxCategories {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+}
+
+@media screen and (min-width: 40em) {
+  .sliderLayoutContainer--repuestoxCategories {
+    padding: 0 1rem 2.5rem;
+  }
+}
+
+.sliderTrackContainer--repuestoxCategories {
+  padding-bottom: 0.5rem;
+}
+
+.sliderLeftArrow--repuestoxCategories,
+.sliderRightArrow--repuestoxCategories,
+.paginationDotsContainer--repuestoxCategories {
+  display: none;
+}

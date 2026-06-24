@@ -24,6 +24,17 @@
 
 .flexRowContent--main-header {
   background-color: #f0f0f0;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Logo a la izquierda; menú + login + carrito agrupados a la derecha */
+.flexRow--main-header .flexCol--headerNavLinks {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  padding-right: 0.5rem;
 }
 
 .flexRowContent--main-header-mobile {
@@ -96,3 +107,359 @@
 .flexRow--addToCartRow {
   padding-bottom: 1rem;
 }
+
+/* --- Home Repuestox: split hero (Carros | Motos) --- */
+.flexRow--repuestoxSplitHero {
+  padding: 2.5rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.flexRowContent--repuestoxSplitHero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: min(92vw, 38rem);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.stretchChildrenWidth--repuestoxSplitHero {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block;
+}
+
+.flexCol--repuestoxSplitCol {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f5f6f8;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48em) {
+  .flexRow--repuestoxSplitHero {
+    padding: 3rem 1rem 3.5rem;
+  }
+
+  .flexRowContent--repuestoxSplitHero {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    width: 80vw;
+  }
+
+  .flexCol--repuestoxSplitCol {
+    aspect-ratio: auto;
+    height: min(calc(100vh - 11rem), 38rem);
+    min-height: 22rem;
+  }
+}
+
+.flexCol--repuestoxSplitCol .flexColChild--repuestoxSplitSlotImage,
+.flexCol--repuestoxSplitCol .flexCol--repuestoxSplitSlotImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.flexCol--repuestoxSplitCol .flexColChild--repuestoxSplitSlotCopy,
+.flexCol--repuestoxSplitCol .flexCol--repuestoxSplitSlotCopy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem 1.5rem;
+  margin: 0;
+  pointer-events: none;
+}
+
+.flexCol--repuestoxSplitCol:hover .imageElement--repuestoxSplitHeroImage {
+  transform: scale(1.04);
+}
+
+.flexRow--repuestoxBrandsStaticRow {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 1.5rem;
+}
+
+.flexRowContent--repuestoxBrandsStaticRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+  align-items: center;
+}
+
+.stretchChildrenWidth--repuestoxBrandCol {
+  width: 100% !important;
+}
+
+.flexCol--repuestoxBrandCol {
+  width: 100%;
+}
+
+.flexRow--categoryHeroRow {
+  max-width: 96rem;
+  margin: 0.75rem auto 0;
+  padding: 0 0.5rem 2rem;
+}
+
+.flexCol--categoryHeroCol {
+  position: relative;
+  min-height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Slots use blockClass handles (IO forbids :nth-child(n) except odd/even) */
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotImage {
+  position: absolute;
+  inset: 0;
+  left: auto;
+  width: auto;
+  z-index: 0;
+}
+
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotTitle,
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotDescription,
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
+  position: absolute;
+  left: 1.5rem;
+  z-index: 2;
+  width: min(46%, 34rem);
+}
+
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotTitle {
+  top: 1.75rem;
+}
+
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotDescription {
+  top: 5.85rem;
+}
+
+.flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
+  bottom: 2rem;
+}
+
+.flexCol--repuestoxCategoryCard {
+  background-color: #ffffff;
+  border: 1px solid #e3e4e6;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.5rem;
+}
+
+.flexCol--repuestoxCategoryCard:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.flexRow--repuestoxCategoriesGrid {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 2rem;
+}
+
+.flexRowContent--repuestoxCategoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.stretchChildrenWidth--repuestoxCategoryGridItem {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0;
+}
+
+.flexRow--repuestoxCategoryGridItem {
+  width: 100%;
+}
+
+.flexRowContent--repuestoxCategoryGridItem {
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRow--categoryHeroRow {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .flexRow--repuestoxBrandsStaticRow {
+    padding: 0 1rem 2rem;
+  }
+
+  .flexRowContent--repuestoxBrandsStaticRow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .flexRow--repuestoxCategoriesGrid {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .stretchChildrenWidth--repuestoxCategoryGridItem {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotTitle,
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotDescription,
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
+    left: 1.75rem;
+    width: min(44%, 35rem);
+  }
+
+  .flexRowContent--repuestoxBrandsStaticRow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .flexRowContent--repuestoxCategoriesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .flexCol--categoryHeroCol {
+    min-height: 420px;
+  }
+
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotTitle,
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotDescription,
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
+    width: min(90%, 36rem);
+  }
+
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotTitle {
+    top: 1.5rem;
+  }
+
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotDescription {
+    top: 5rem;
+  }
+
+  .flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
+    bottom: 1.5rem;
+  }
+}
+
+/* --- Carros landing: hero --- */
+.flexRow--carrosHero {
+  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+  min-height: 540px;
+}
+
+.flexRowContent--carrosHero {
+  min-height: 540px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.52);
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.flexCol--carrosHeroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* --- Carros landing: CTA banner --- */
+.flexRow--carrosCtaBanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+  min-height: 360px;
+  margin: 3rem 0;
+}
+
+.flexRowContent--carrosCtaBanner {
+  min-height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.flexCol--carrosCtaBannerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: 760px;
+  width: 100%;
+}
+
+/* --- Home Repuestox: splash / loading overlay --- */
+.flexRow--repuestoxSplash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  animation: repuestoxSplashFadeOut 2.2s ease forwards;
+}
+
+.flexRowContent--repuestoxSplash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes repuestoxSplashFadeOut {
+  0%,
+  60% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* --- Footer Repuestox: socials row --- */
+.flexRow--repuestoxSocials {
+  padding: 1rem 0;
+}
+
+.flexRowContent--repuestoxSocials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+

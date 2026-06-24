@@ -1,0 +1,63 @@
+/*
+  vtex.login — el header usa Styleguide: <button class="vtex-button bg-transparent ...">
+  y el texto <span class="... vtex-login-2-x-label ... gray">.
+  Por eso .profile / .buttonLink solos no bastan: hay que pisar .vtex-button y .gray.
+*/
+
+/* Botón real (Styleguide) dentro del login */
+.container :global(.vtex-button),
+.profile :global(.vtex-button) {
+  background-color: #FF371E !important;
+  border-color: transparent !important;
+  border-radius: 10px;
+  min-height: 0;
+  transition: background-color 0.2s ease;
+}
+
+.container :global(.vtex-button):hover,
+.profile :global(.vtex-button):hover {
+  background-color: #d62e18 !important;
+  border-color: transparent !important;
+}
+
+/* Texto: gana a utilitarios .gray y .c-action-primary del botón */
+.label {
+  color: #ffffff !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.arrowUp {
+  display: none;
+}
+
+/* ============================================================
+   Home-only minimal navbar
+   Hide everything in the global header except the logo when we
+   are on store.home (render-route-store-home). All other routes
+   keep the full header intact.
+   These rules live here because vtex.login@2.x skips CSS
+   validation, letting us use the render-route class.
+   ============================================================ */
+
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerNavLinks),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActions),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--headerActions),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerDrawerMobile),
+:global(.render-route-store-home) :global(.vtex-telemarketing-1-x-container) {
+  display: none !important;
+}
+
+/* Center the logo when it is the only element left on home */
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
+  justify-content: center;
+}
+
+/* Remove the sticky bottom border on home for a cleaner first screen */
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
+  border-bottom: none;
+}

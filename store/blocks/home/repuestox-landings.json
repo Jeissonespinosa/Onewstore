@@ -1,0 +1,464 @@
+{
+  "store.custom#landing-carros": {
+    "blocks": [
+      "flex-layout.row#carros-hero",
+      "flex-layout.row#carros-products-anchor",
+      "search-result-layout.customQuery#carros",
+      "flex-layout.row#carros-cta-banner",
+      "rich-text#repuestox-section-brands-landing-carros",
+      "flex-layout.row#repuestox-brands-static-landing-carros"
+    ]
+  },
+  "store.custom#landing-motos": {
+    "blocks": [
+      "rich-text#repuestox-section-products-landing-motos",
+      "flex-layout.row#repuestox-categories-grid-landing-motos",
+      "rich-text#repuestox-section-brands-landing-motos",
+      "flex-layout.row#repuestox-brands-static-landing-motos"
+    ]
+  },
+
+  "flex-layout.row#carros-hero": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "carrosHero"
+    },
+    "children": ["flex-layout.col#carros-hero-content"]
+  },
+  "flex-layout.col#carros-hero-content": {
+    "props": {
+      "blockClass": "carrosHeroContent",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#carros-hero-h1",
+      "rich-text#carros-hero-subheading",
+      "rich-text#carros-hero-cta"
+    ]
+  },
+  "rich-text#carros-hero-h1": {
+    "props": {
+      "text": "# Repuestos de Alta Calidad para Tu Carro",
+      "textAlignment": "CENTER",
+      "blockClass": "carrosHeroH1"
+    }
+  },
+  "rich-text#carros-hero-subheading": {
+    "props": {
+      "text": "Encuentra los mejores repuestos, lubricantes, baterías y accesorios para mantener tu vehículo en perfecto estado.",
+      "textAlignment": "CENTER",
+      "blockClass": "carrosHeroSubheading"
+    }
+  },
+  "rich-text#carros-hero-cta": {
+    "props": {
+      "text": "[**Ver productos disponibles ↓**](#carros-produtos)",
+      "textAlignment": "CENTER",
+      "blockClass": "carrosHeroCta"
+    }
+  },
+
+  "flex-layout.row#carros-products-anchor": {
+    "children": ["rich-text#carros-products-title"],
+    "props": {
+      "fullWidth": true,
+      "htmlId": "carros-produtos",
+      "blockClass": "carrosProductosSection"
+    }
+  },
+
+  "rich-text#carros-products-title": {
+    "props": {
+      "text": "## Productos disponibles para carros",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSectionHeading"
+    }
+  },
+
+  "search-result-layout.customQuery#carros": {
+    "props": {
+      "querySchema": {
+        "query": "carros",
+        "map": "c",
+        "orderByField": "OrderByScoreDESC",
+        "hideUnavailableItems": false,
+        "skusFilter": "ALL_AVAILABLE",
+        "maxItemsPerPage": 12
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#carros",
+      "search-result-layout.mobile#carros",
+      "search-not-found-layout#carros"
+    ]
+  },
+
+  "search-result-layout.desktop#carros": {
+    "children": [
+      "flex-layout.row#carros-products"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "search-result-layout.mobile#carros": {
+    "children": [
+      "flex-layout.row#carros-products"
+    ],
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid"
+    }
+  },
+
+  "search-not-found-layout#carros": {
+    "children": ["rich-text#carros-no-products"]
+  },
+
+  "rich-text#carros-no-products": {
+    "props": {
+      "text": "No hay productos disponibles en este momento.",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSectionHeading"
+    }
+  },
+
+  "flex-layout.row#carros-products": {
+    "children": ["search-content#carros"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "search-content#carros": {
+    "blocks": ["gallery#carros", "not-found"]
+  },
+
+  "gallery#carros": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 3,
+            "tablet": 2,
+            "phone": 2
+          }
+        }
+      ],
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+
+  "rich-text#repuestox-section-products-landing-motos": {
+    "props": {
+      "text": "## Linea de productos para motos",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSectionHeading"
+    }
+  },
+  "flex-layout.row#repuestox-categories-grid-landing-motos": {
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "repuestoxCategoriesGrid"
+    },
+    "children": [
+      "flex-layout.row#repuestox-cat-1-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-2-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-3-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-4-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-5-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-6-wrap-landing-motos",
+      "flex-layout.row#repuestox-cat-7-wrap-landing-motos"
+    ]
+  },
+  "flex-layout.row#repuestox-cat-1-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-1-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-1-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-1-landing-motos", "rich-text#repuestox-cat-txt-1-landing-motos"]
+  },
+  "image#repuestox-cat-img-1-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/fc2bea71-2dfb-4637-ba0b-ff9b43adbf3f___6378611418c942765ac9c036946b6d81.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/baterias", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-1-landing-motos": {
+    "props": { "text": "[**Baterias**](/linea-productos/baterias)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-2-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-2-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-2-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-2-landing-motos", "rich-text#repuestox-cat-txt-2-landing-motos"]
+  },
+  "image#repuestox-cat-img-2-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/94ce2b17-0991-4a35-a898-e70261882391___76fd7690c9af107ab6f1ce45b542f7da.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/lubricantes", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-2-landing-motos": {
+    "props": { "text": "[**Lubricantes**](/linea-productos/lubricantes)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-3-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-3-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-3-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-3-landing-motos", "rich-text#repuestox-cat-txt-3-landing-motos"]
+  },
+  "image#repuestox-cat-img-3-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/65358340-0e0f-49a1-b84e-96e8037ee3d3___e46e3303b35921a006b3770aca6649f5.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/autopartes", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-3-landing-motos": {
+    "props": { "text": "[**Autopartes**](/linea-productos/autopartes)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-4-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-4-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-4-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-4-landing-motos", "rich-text#repuestox-cat-txt-4-landing-motos"]
+  },
+  "image#repuestox-cat-img-4-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/3afc118b-9102-4352-958e-165a2d4ef493___ed81eafca3ea3be8f095bdca07a7d677.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/motopartes", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-4-landing-motos": {
+    "props": { "text": "[**Motopartes**](/linea-productos/motopartes)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-5-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-5-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-5-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-5-landing-motos", "rich-text#repuestox-cat-txt-5-landing-motos"]
+  },
+  "image#repuestox-cat-img-5-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/a499180c-83b8-48de-91b3-33dcc7009752___1948d4904b33d4adad7561135fbb0349.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/equipos-de-diagnostico", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-5-landing-motos": {
+    "props": { "text": "[**Equipos de diagnostico**](/linea-productos/equipos-de-diagnostico)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-6-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-6-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-6-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-6-landing-motos", "rich-text#repuestox-cat-txt-6-landing-motos"]
+  },
+  "image#repuestox-cat-img-6-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/6238a127-d6df-414b-ba8b-29ab28ae56f3___ee4ec2fea539a66adf3966d10bef8560.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/sistemas-de-respaldo", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-6-landing-motos": {
+    "props": { "text": "[**Sistemas de respaldo**](/linea-productos/sistemas-de-respaldo)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+  "flex-layout.row#repuestox-cat-7-wrap-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryGridItem" },
+    "children": ["flex-layout.col#repuestox-cat-7-landing-motos"]
+  },
+  "flex-layout.col#repuestox-cat-7-landing-motos": {
+    "props": { "blockClass": "repuestoxCategoryCard" },
+    "children": ["image#repuestox-cat-img-7-landing-motos", "rich-text#repuestox-cat-txt-7-landing-motos"]
+  },
+  "image#repuestox-cat-img-7-landing-motos": {
+    "props": {
+      "blockClass": "repuestoxCategoryImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/dbfa02d9-99aa-4370-b189-03d87e8684a9___f1d1f9b2bd54f020c21139bfb4663134.png",
+      "maxHeight": 200,
+      "link": { "url": "/linea-productos/baterias-de-traccion", "newTab": false, "attributeNofollow": false }
+    }
+  },
+  "rich-text#repuestox-cat-txt-7-landing-motos": {
+    "props": { "text": "[**Baterias de traccion**](/linea-productos/baterias-de-traccion)", "textAlignment": "CENTER", "blockClass": "repuestoxCategoryCardTitle" }
+  },
+
+  "flex-layout.row#carros-cta-banner": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "carrosCtaBanner"
+    },
+    "children": ["flex-layout.col#carros-cta-banner-content"]
+  },
+  "flex-layout.col#carros-cta-banner-content": {
+    "props": {
+      "blockClass": "carrosCtaBannerContent",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#carros-cta-banner-title",
+      "rich-text#carros-cta-banner-button"
+    ]
+  },
+  "rich-text#carros-cta-banner-title": {
+    "props": {
+      "text": "## Encuentra el repuesto perfecto para tu vehiculo",
+      "textAlignment": "CENTER",
+      "blockClass": "carrosCtaBannerTitle"
+    }
+  },
+  "rich-text#carros-cta-banner-button": {
+    "props": {
+      "text": "[Ver productos](#carros-produtos)",
+      "textAlignment": "CENTER",
+      "blockClass": "carrosCtaBannerButton"
+    }
+  },
+
+  "rich-text#repuestox-section-brands-landing-carros": {
+    "props": {
+      "text": "## Contamos con marcas lideres en el mercado",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSectionHeading"
+    }
+  },
+  "rich-text#repuestox-section-brands-landing-motos": {
+    "props": {
+      "text": "## Marcas para tu linea de motos",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSectionHeading"
+    }
+  },
+  "flex-layout.row#repuestox-brands-static-landing-carros": {
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "repuestoxBrandsStaticRow"
+    },
+    "children": [
+      "flex-layout.col#repuestox-brand-1-landing-carros",
+      "flex-layout.col#repuestox-brand-2-landing-carros",
+      "flex-layout.col#repuestox-brand-3-landing-carros",
+      "flex-layout.col#repuestox-brand-4-landing-carros",
+      "flex-layout.col#repuestox-brand-5-landing-carros"
+    ]
+  },
+  "flex-layout.row#repuestox-brands-static-landing-motos": {
+    "props": {
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "repuestoxBrandsStaticRow"
+    },
+    "children": [
+      "flex-layout.col#repuestox-brand-1-landing-motos",
+      "flex-layout.col#repuestox-brand-2-landing-motos",
+      "flex-layout.col#repuestox-brand-3-landing-motos",
+      "flex-layout.col#repuestox-brand-4-landing-motos",
+      "flex-layout.col#repuestox-brand-5-landing-motos"
+    ]
+  },
+  "flex-layout.col#repuestox-brand-1-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-1-landing-carros"]
+  },
+  "flex-layout.col#repuestox-brand-1-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-1-landing-motos"]
+  },
+  "image#repuestox-brand-1-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0061ef75-77a5-4ffe-bda4-0f2600f56a91___695dfa71ddc3f02d0eb3ca95924bc64d.png", "alt": "Marca MAC" }
+  },
+  "image#repuestox-brand-1-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0061ef75-77a5-4ffe-bda4-0f2600f56a91___695dfa71ddc3f02d0eb3ca95924bc64d.png", "alt": "Marca MAC" }
+  },
+  "flex-layout.col#repuestox-brand-2-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-2-landing-carros"]
+  },
+  "flex-layout.col#repuestox-brand-2-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-2-landing-motos"]
+  },
+  "image#repuestox-brand-2-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/5f2f5912-c1c9-41d8-b906-6f99f26d39e0___7a022803378e56fb4cb02f9bcb436e1f.png", "alt": "Marca Magna" }
+  },
+  "image#repuestox-brand-2-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/5f2f5912-c1c9-41d8-b906-6f99f26d39e0___7a022803378e56fb4cb02f9bcb436e1f.png", "alt": "Marca Magna" }
+  },
+  "flex-layout.col#repuestox-brand-3-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-3-landing-carros"]
+  },
+  "flex-layout.col#repuestox-brand-3-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-3-landing-motos"]
+  },
+  "image#repuestox-brand-3-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/8cdf2d5e-6063-4f63-90ac-cce1ad878c0b___5de370a522c78993a73677ec34386aaa.webp", "alt": "Marca Goodride" }
+  },
+  "image#repuestox-brand-3-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/8cdf2d5e-6063-4f63-90ac-cce1ad878c0b___5de370a522c78993a73677ec34386aaa.webp", "alt": "Marca Goodride" }
+  },
+  "flex-layout.col#repuestox-brand-4-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-4-landing-carros"]
+  },
+  "flex-layout.col#repuestox-brand-4-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-4-landing-motos"]
+  },
+  "image#repuestox-brand-4-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/4e90ef65-6e54-47dc-a0bb-365ff156c399___1122986a61c3a0a9934dc624bea7af4a.png", "alt": "Marca Snap-on" }
+  },
+  "image#repuestox-brand-4-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/4e90ef65-6e54-47dc-a0bb-365ff156c399___1122986a61c3a0a9934dc624bea7af4a.png", "alt": "Marca Snap-on" }
+  },
+  "flex-layout.col#repuestox-brand-5-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-5-landing-carros"]
+  },
+  "flex-layout.col#repuestox-brand-5-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandCol" },
+    "children": ["image#repuestox-brand-5-landing-motos"]
+  },
+  "image#repuestox-brand-5-landing-carros": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/28c7280a-11d0-46f9-881e-25caf92c9999___4f4d9bff1e37ce3fe76978fb53d7ba03.png", "alt": "Marca NGK" }
+  },
+  "image#repuestox-brand-5-landing-motos": {
+    "props": { "blockClass": "repuestoxBrandImage", "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/28c7280a-11d0-46f9-881e-25caf92c9999___4f4d9bff1e37ce3fe76978fb53d7ba03.png", "alt": "Marca NGK" }
+  }
+}

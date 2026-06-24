@@ -1,4 +1,10 @@
 {
+  "store.custom#landing-carros": {
+    "path": "/carros"
+  },
+  "store.custom#landing-motos": {
+    "path": "/motos"
+  },
   "store.custom#about-us": {
     "path": "/about-us"
   },
@@ -7,5 +13,26 @@
   },
   "store.custom#contact-us": {
     "path": "/contact-us"
+  },
+  "store.custom#categoria-baterias": {
+    "path": "/linea-productos/baterias"
+  },
+  "store.custom#categoria-lubricantes": {
+    "path": "/linea-productos/lubricantes"
+  },
+  "store.custom#categoria-autopartes": {
+    "path": "/linea-productos/autopartes"
+  },
+  "store.custom#categoria-motopartes": {
+    "path": "/linea-productos/motopartes"
+  },
+  "store.custom#categoria-equipos-diagnostico": {
+    "path": "/linea-productos/equipos-de-diagnostico"
+  },
+  "store.custom#categoria-sistemas-respaldo": {
+    "path": "/linea-productos/sistemas-de-respaldo"
+  },
+  "store.custom#categoria-baterias-traccion": {
+    "path": "/linea-productos/baterias-de-traccion"
   }
 }

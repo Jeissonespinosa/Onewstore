@@ -1,0 +1,115 @@
+{
+  "flex-layout.row#repuestox-splash": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "repuestoxSplash"
+    },
+    "children": ["image#repuestox-splash-logo"]
+  },
+  "image#repuestox-splash-logo": {
+    "props": {
+      "src": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/49047458-cec0-4f58-9c58-2d008bd04f71___26e677192553caaf43fd069a83223dc2.png",
+      "alt": "Repuestox",
+      "blockClass": "repuestoxSplashLogo"
+    }
+  },
+
+  "flex-layout.row#repuestox-split-hero": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "repuestoxSplitHero"
+    },
+    "children": [
+      "flex-layout.col#repuestox-split-carros",
+      "flex-layout.col#repuestox-split-motos"
+    ]
+  },
+
+  "flex-layout.col#repuestox-split-carros": {
+    "props": {
+      "blockClass": "repuestoxSplitCol",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#repuestox-split-carros-image-slot",
+      "flex-layout.col#repuestox-split-carros-copy-slot"
+    ]
+  },
+  "flex-layout.col#repuestox-split-carros-image-slot": {
+    "props": {
+      "blockClass": "repuestoxSplitSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#repuestox-split-carros-bg"]
+  },
+  "image#repuestox-split-carros-bg": {
+    "props": {
+      "blockClass": "repuestoxSplitHeroImage",
+      "src": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Repuestos para carros",
+      "link": {
+        "url": "/carros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.col#repuestox-split-carros-copy-slot": {
+    "props": {
+      "blockClass": "repuestoxSplitSlotCopy",
+      "width": "100%"
+    },
+    "children": ["rich-text#repuestox-split-carros-title"]
+  },
+  "rich-text#repuestox-split-carros-title": {
+    "props": {
+      "text": "[**CARROS**](/carros)",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSplitHeroTitle"
+    }
+  },
+
+  "flex-layout.col#repuestox-split-motos": {
+    "props": {
+      "blockClass": "repuestoxSplitCol",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#repuestox-split-motos-image-slot",
+      "flex-layout.col#repuestox-split-motos-copy-slot"
+    ]
+  },
+  "flex-layout.col#repuestox-split-motos-image-slot": {
+    "props": {
+      "blockClass": "repuestoxSplitSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#repuestox-split-motos-bg"]
+  },
+  "image#repuestox-split-motos-bg": {
+    "props": {
+      "blockClass": "repuestoxSplitHeroImage",
+      "src": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Repuestos para motos",
+      "link": {
+        "url": "/motos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.col#repuestox-split-motos-copy-slot": {
+    "props": {
+      "blockClass": "repuestoxSplitSlotCopy",
+      "width": "100%"
+    },
+    "children": ["rich-text#repuestox-split-motos-title"]
+  },
+  "rich-text#repuestox-split-motos-title": {
+    "props": {
+      "text": "[**MOTOS**](/motos)",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSplitHeroTitle"
+    }
+  }
+}

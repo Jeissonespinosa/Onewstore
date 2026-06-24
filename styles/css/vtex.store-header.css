@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 /* add transitions */
 :global(.vtex-sticky-layout-0-x-container)
   :global(.vtex-store-components-3-x-logoLink),
 :global(.vtex-sticky-layout-0-x-container)
-  :global(.vtex-minicart-2-x-openIconContainer),
-:global(.vtex-sticky-layout-0-x-container)
-  :global(.vtex-store-components-3-x-searchBarContainer) {
+  :global(.vtex-minicart-2-x-openIconContainer) {
   transition: all 0.3s ease;
   display: block;
 }
@@ -55,13 +55,36 @@
     :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
   :global(.vtex-sticky-layout-0-x-wrapper--stuck):not(:hover)
     :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
-    background: rgba(240, 240, 240, 0.8);
+    background: rgba(255, 255, 255, 0.88);
   }
 }
 
 /* stick wrapper with the same color as the desktop/mobile header */
 :global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* desktop/mobile header background: white with brand */
+:global(.vtex-flex-layout-0-x-flexRowContent--main-header),
+:global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
+  background-color: #ffffff;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Top category nav links: black text, red accent on hover */
+.flexCol--headerNavLinks :global(.vtex-menu-2-x-styledLink),
+.flexCol--headerNavLinks :global(.vtex-menu-2-x-styledLinkContainer) {
+  color: #010101;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.flexCol--headerNavLinks :global(.vtex-menu-2-x-styledLink):hover,
+.flexCol--headerNavLinks :global(.vtex-menu-2-x-styledLinkContainer):hover {
+  color: #FF371E;
 }
 
 /* resize the logo for neat effect */
@@ -75,10 +98,12 @@
     :global(.vtex-store-components-3-x-logoLink),
   :global(.vtex-sticky-layout-0-x-container)
     :global(.vtex-minicart-2-x-openIconContainer),
-  :global(.vtex-sticky-layout-0-x-container)
-    :global(.vtex-store-components-3-x-searchBarContainer),
   :global(.vtex-sticky-layout-0-x-wrapper--stuck)
     :global(.vtex-flex-layout-0-x-flexRowContent--main-header) {
     transition: none;
   }
 }
+
+/* Home-only navbar rules live in vtex.login.css (validation is
+   skipped for vtex.login@2.x by the VTEX builder, which lets us
+   use render-route-store-home as a route-scope selector). */

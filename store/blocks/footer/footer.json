@@ -2,56 +2,82 @@
   "footer": {
     "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
   },
+
   "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#footer-2-desktop",
-      "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#repuestox-footer-socials",
+      "flex-layout.row#footer-payments",
+      "flex-layout.row#footer-credits"
     ]
   },
-  "flex-layout.row#footer-1-desktop": {
+
+  "footer-layout.mobile": {
     "children": [
-      "vtex.menu@2.x:menu#Products",
-      "vtex.menu@2.x:menu#footer-clothing",
-      "vtex.menu@2.x:menu#footer-decoration",
-      "vtex.menu@2.x:menu#footer-bags",
-      "footer-spacer",
-      "social-networks"
-    ],
+      "flex-layout.row#repuestox-footer-socials",
+      "flex-layout.row#footer-payments",
+      "flex-layout.row#footer-credits"
+    ]
+  },
+
+  "flex-layout.row#repuestox-footer-socials": {
     "props": {
-      "blockClass": "menu-row",
-      "paddingTop": 6,
-      "paddingBottom": 3
+      "blockClass": "repuestoxSocials",
+      "paddingTop": 4,
+      "paddingBottom": 2,
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "image#repuestox-social-facebook",
+      "image#repuestox-social-instagram",
+      "image#repuestox-social-tiktok"
+    ]
+  },
+
+  "image#repuestox-social-facebook": {
+    "props": {
+      "blockClass": "repuestoxSocialIcon",
+      "src": "https://cdn.simpleicons.org/facebook/1f2937",
+      "alt": "Facebook",
+      "link": {
+        "url": "https://www.facebook.com/",
+        "newTab": true,
+        "attributeNofollow": true
+      }
+    }
+  },
+  "image#repuestox-social-instagram": {
+    "props": {
+      "blockClass": "repuestoxSocialIcon",
+      "src": "https://cdn.simpleicons.org/instagram/1f2937",
+      "alt": "Instagram",
+      "link": {
+        "url": "https://www.instagram.com/",
+        "newTab": true,
+        "attributeNofollow": true
+      }
+    }
+  },
+  "image#repuestox-social-tiktok": {
+    "props": {
+      "blockClass": "repuestoxSocialIcon",
+      "src": "https://cdn.simpleicons.org/tiktok/1f2937",
+      "alt": "TikTok",
+      "link": {
+        "url": "https://www.tiktok.com/",
+        "newTab": true,
+        "attributeNofollow": true
+      }
     }
   },
 
-  "social-networks": {
-    "props": {
-      "socialNetworks": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/vtexonline/"
-        },
-        {
-          "name": "Instagram",
-          "url": "https://www.instagram.com/vtextruecloud/"
-        },
-        {
-          "name": "Twitter",
-          "url": "https://twitter.com/vtexonline"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/user/VTEXTV"
-        }
-      ]
-    }
-  },
-
-  "flex-layout.row#footer-2-desktop": {
+  "flex-layout.row#footer-payments": {
     "children": ["accepted-payment-methods"],
     "props": {
-      "blockClass": "payment-methods"
+      "blockClass": "payment-methods",
+      "paddingTop": 2,
+      "paddingBottom": 3,
+      "horizontalAlign": "center"
     }
   },
   "accepted-payment-methods": {
@@ -60,56 +86,17 @@
     }
   },
 
-  "flex-layout.row#footer-3-desktop": {
+  "flex-layout.row#footer-credits": {
     "children": ["rich-text#footer"],
     "props": {
-      "blockClass": "credits"
+      "blockClass": "credits",
+      "paddingBottom": 4
     }
   },
   "rich-text#footer": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
-      "blockClass": "footer"
-    }
-  },
-
-  "footer-layout.mobile": {
-    "children": [
-      "flex-layout.row#1-footer-mobile",
-      "flex-layout.row#2-footer-mobile"
-    ]
-  },
-  "flex-layout.row#2-footer-mobile": {
-    "children": ["flex-layout.col#footer-1-mobile"],
-    "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4
-    }
-  },
-  "flex-layout.col#footer-1-mobile": {
-    "children": [
-      "accepted-payment-methods",
-      "social-networks",
-      "rich-text#footer-mobile"
-    ],
-    "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4,
-      "rowGap": 4
-    }
-  },
-  "flex-layout.row#1-footer-mobile": {
-    "props": {
-      "paddingTop": 4,
-      "paddingBottom": 4
-    },
-    "children": ["vtex.menu@2.x:menu#footer-mobile"]
-  },
-  "rich-text#footer-mobile": {
-    "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "© Repuestox · Todos los derechos reservados",
+      "textAlignment": "CENTER",
       "blockClass": "footer"
     }
   }

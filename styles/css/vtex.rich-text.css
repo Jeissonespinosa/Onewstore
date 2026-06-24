@@ -4,22 +4,8 @@
   justify-content: center;
 }
 
-.container--shelfTitle {
-  color: #727273;
-  justify-content: center;
-  text-align: center;
-}
-
-.headingLevel2--shelfTitle {
-  font-weight: 200;
-}
-
 .container--deals .paragraph {
   margin: 0;
-}
-
-.container--link {
-  justify-content: center;
 }
 
 .container--question {
@@ -38,27 +24,6 @@
   font-size: 32px;
   line-height: 2rem;
   font-weight: 700;
-}
-
-.container--link .paragraph {
-  text-align: center;
-  max-width: 540px;
-  padding-top: 36px;
-  padding-bottom: 84px;
-  color: #03034E;
-}
-
-.container--link .strong {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.container--link .link {
-  text-decoration: none;
-  font-size: 36px;
-  font-weight: 300;
-  color: #03034E;
 }
 
 .container--title {
@@ -88,3 +53,271 @@
     line-height: 1.3em;
   }
 }
+
+/* Home Repuestox: split hero title (Bershka-style, full card + title both clickable) */
+.container--repuestoxSplitHeroTitle {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container--repuestoxSplitHeroTitle .paragraph {
+  margin: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.container--repuestoxSplitHeroTitle .link {
+  color: #ffffff;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.container--repuestoxSplitHeroTitle .strong,
+.container--repuestoxSplitHeroTitle .link {
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.container--repuestoxSectionHeading {
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+}
+
+.container--repuestoxSectionHeading .headingLevel2 {
+  color: #3f3f40;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .container--repuestoxSectionHeading .headingLevel2 {
+    font-size: 1.75rem;
+  }
+}
+
+.container--repuestoxCategoryCardTitle {
+  justify-content: center;
+  padding: 1rem 0.75rem 1.25rem;
+}
+
+.container--repuestoxCategoryCardTitle .paragraph {
+  margin: 0;
+}
+
+.container--repuestoxCategoryCardTitle .link {
+  color: #1f2d3d;
+  font-weight: 600;
+  font-size: 1.75rem;
+  text-decoration: none;
+}
+
+.container--repuestoxCategoryCardTitle .link:hover {
+  text-decoration: underline;
+}
+
+.container--categoryHeroTitle {
+  justify-content: flex-start;
+}
+
+.container--categoryHeroTitle .headingLevel1 {
+  margin: 0;
+  color: #1a2a44;
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.container--categoryHeroDescription {
+  justify-content: flex-start;
+}
+
+.container--categoryHeroDescription .paragraph {
+  margin: 0;
+  color: #2b2c30;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.container--categoryHeroDescription .strong {
+  color: #f56a1f;
+}
+
+.container--categoryHeroButton {
+  justify-content: flex-start;
+}
+
+.container--categoryHeroButton .paragraph {
+  margin: 0;
+}
+
+.container--categoryHeroButton .link {
+  display: inline-block;
+  background-color: #f56a1f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.container--categoryHeroButton .link:hover {
+  background-color: #dc5d1a;
+}
+
+/* --- Carros landing: hero text --- */
+.container--carrosHeroH1 .headingLevel1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;
+}
+
+.container--carrosHeroSubheading .paragraph {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.55;
+  max-width: 600px;
+  text-align: center;
+  margin: 0;
+}
+
+.container--carrosHeroCta {
+  justify-content: center;
+}
+
+.container--carrosHeroCta .paragraph {
+  margin: 0;
+}
+
+.container--carrosHeroCta .link {
+  display: inline-block;
+  background-color: #FF371E;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.container--carrosHeroCta .link:hover {
+  background-color: #e02a14;
+  transform: translateY(-2px);
+}
+
+.container--carrosHeroCta .strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
+/* --- Carros landing: CTA banner text + button --- */
+.container--carrosCtaBannerTitle {
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.container--carrosCtaBannerTitle .headingLevel2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.container--carrosCtaBannerButton {
+  justify-content: center;
+}
+
+.container--carrosCtaBannerButton .paragraph {
+  margin: 0;
+}
+
+.container--carrosCtaBannerButton .link {
+  display: inline-block;
+  background-color: #F5C400;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 0.95rem 2.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.container--carrosCtaBannerButton .link:hover {
+  background-color: #ffd60a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
+.container--categoryOfferTitle {
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.container--categoryOfferTitle .headingLevel2 {
+  margin: 0;
+  color: #3f3f40;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.container--categoryOfferSubtitle {
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem 1rem 2rem;
+}
+
+.container--categoryOfferSubtitle .paragraph {
+  max-width: 72rem;
+  margin: 0;
+  color: #3f3f40;
+  font-size: 2rem;
+  line-height: 1.35;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container--categoryHeroTitle .headingLevel1 {
+    font-size: 2.25rem;
+  }
+
+  .container--categoryHeroDescription .paragraph {
+    font-size: 1rem;
+  }
+
+  .container--categoryHeroButton .link {
+    font-size: 1rem;
+    padding: 0.65rem 1.5rem;
+  }
+
+  .container--categoryOfferTitle .headingLevel2 {
+    font-size: 2.2rem;
+  }
+
+  .container--categoryOfferSubtitle .paragraph {
+    font-size: 1.45rem;
+  }
+}
+

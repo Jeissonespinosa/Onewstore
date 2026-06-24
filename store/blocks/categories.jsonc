@@ -1,0 +1,570 @@
+{
+  "store.custom#categoria-baterias": {
+    "blocks": [
+      "flex-layout.row#category-hero-baterias",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-lubricantes": {
+    "blocks": [
+      "flex-layout.row#category-hero-lubricantes",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-autopartes": {
+    "blocks": [
+      "flex-layout.row#category-hero-autopartes",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-motopartes": {
+    "blocks": [
+      "flex-layout.row#category-hero-motopartes",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-equipos-diagnostico": {
+    "blocks": [
+      "flex-layout.row#category-hero-equipos-diagnostico",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-sistemas-respaldo": {
+    "blocks": [
+      "flex-layout.row#category-hero-sistemas-respaldo",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+  "store.custom#categoria-baterias-traccion": {
+    "blocks": [
+      "flex-layout.row#category-hero-baterias-traccion",
+      "rich-text#category-offer-title",
+      "rich-text#category-offer-subtitle"
+    ]
+  },
+
+  "flex-layout.row#category-hero-baterias": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-baterias"]
+  },
+  "flex-layout.col#category-hero-content-baterias": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-baterias",
+      "flex-layout.col#category-hero-slot-title-baterias",
+      "flex-layout.col#category-hero-slot-description-baterias",
+      "flex-layout.col#category-hero-slot-cta-baterias"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-baterias": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-baterias"]
+  },
+  "flex-layout.col#category-hero-slot-title-baterias": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-baterias"]
+  },
+  "flex-layout.col#category-hero-slot-description-baterias": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-baterias"]
+  },
+  "flex-layout.col#category-hero-slot-cta-baterias": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-baterias"]
+  },
+  "image#category-hero-image-baterias": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Baterias"
+    }
+  },
+  "rich-text#category-hero-title-baterias": {
+    "props": {
+      "text": "# Baterías",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-baterias": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-baterias": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-lubricantes": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-lubricantes"]
+  },
+  "flex-layout.col#category-hero-content-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-lubricantes",
+      "flex-layout.col#category-hero-slot-title-lubricantes",
+      "flex-layout.col#category-hero-slot-description-lubricantes",
+      "flex-layout.col#category-hero-slot-cta-lubricantes"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-lubricantes"]
+  },
+  "flex-layout.col#category-hero-slot-title-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-lubricantes"]
+  },
+  "flex-layout.col#category-hero-slot-description-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-lubricantes"]
+  },
+  "flex-layout.col#category-hero-slot-cta-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-lubricantes"]
+  },
+  "image#category-hero-image-lubricantes": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Lubricantes"
+    }
+  },
+  "rich-text#category-hero-title-lubricantes": {
+    "props": {
+      "text": "# Lubricantes",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-lubricantes": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-lubricantes": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-autopartes": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-autopartes"]
+  },
+  "flex-layout.col#category-hero-content-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-autopartes",
+      "flex-layout.col#category-hero-slot-title-autopartes",
+      "flex-layout.col#category-hero-slot-description-autopartes",
+      "flex-layout.col#category-hero-slot-cta-autopartes"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-autopartes"]
+  },
+  "flex-layout.col#category-hero-slot-title-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-autopartes"]
+  },
+  "flex-layout.col#category-hero-slot-description-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-autopartes"]
+  },
+  "flex-layout.col#category-hero-slot-cta-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-autopartes"]
+  },
+  "image#category-hero-image-autopartes": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Autopartes"
+    }
+  },
+  "rich-text#category-hero-title-autopartes": {
+    "props": {
+      "text": "# Autopartes",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-autopartes": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-autopartes": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-motopartes": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-motopartes"]
+  },
+  "flex-layout.col#category-hero-content-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-motopartes",
+      "flex-layout.col#category-hero-slot-title-motopartes",
+      "flex-layout.col#category-hero-slot-description-motopartes",
+      "flex-layout.col#category-hero-slot-cta-motopartes"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-motopartes"]
+  },
+  "flex-layout.col#category-hero-slot-title-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-motopartes"]
+  },
+  "flex-layout.col#category-hero-slot-description-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-motopartes"]
+  },
+  "flex-layout.col#category-hero-slot-cta-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-motopartes"]
+  },
+  "image#category-hero-image-motopartes": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Motopartes"
+    }
+  },
+  "rich-text#category-hero-title-motopartes": {
+    "props": {
+      "text": "# Motopartes",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-motopartes": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-motopartes": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-equipos-diagnostico": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-equipos-diagnostico"]
+  },
+  "flex-layout.col#category-hero-content-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-equipos-diagnostico",
+      "flex-layout.col#category-hero-slot-title-equipos-diagnostico",
+      "flex-layout.col#category-hero-slot-description-equipos-diagnostico",
+      "flex-layout.col#category-hero-slot-cta-equipos-diagnostico"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-equipos-diagnostico"]
+  },
+  "flex-layout.col#category-hero-slot-title-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-equipos-diagnostico"]
+  },
+  "flex-layout.col#category-hero-slot-description-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-equipos-diagnostico"]
+  },
+  "flex-layout.col#category-hero-slot-cta-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-equipos-diagnostico"]
+  },
+  "image#category-hero-image-equipos-diagnostico": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Equipos de diagnostico"
+    }
+  },
+  "rich-text#category-hero-title-equipos-diagnostico": {
+    "props": {
+      "text": "# Equipos de diagnóstico",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-equipos-diagnostico": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-equipos-diagnostico": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-sistemas-respaldo": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-sistemas-respaldo"]
+  },
+  "flex-layout.col#category-hero-content-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-sistemas-respaldo",
+      "flex-layout.col#category-hero-slot-title-sistemas-respaldo",
+      "flex-layout.col#category-hero-slot-description-sistemas-respaldo",
+      "flex-layout.col#category-hero-slot-cta-sistemas-respaldo"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-sistemas-respaldo"]
+  },
+  "flex-layout.col#category-hero-slot-title-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-sistemas-respaldo"]
+  },
+  "flex-layout.col#category-hero-slot-description-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-sistemas-respaldo"]
+  },
+  "flex-layout.col#category-hero-slot-cta-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-sistemas-respaldo"]
+  },
+  "image#category-hero-image-sistemas-respaldo": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Sistemas de respaldo"
+    }
+  },
+  "rich-text#category-hero-title-sistemas-respaldo": {
+    "props": {
+      "text": "# Sistemas de respaldo",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-sistemas-respaldo": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-sistemas-respaldo": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "flex-layout.row#category-hero-baterias-traccion": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "categoryHeroRow"
+    },
+    "children": ["flex-layout.col#category-hero-content-baterias-traccion"]
+  },
+  "flex-layout.col#category-hero-content-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroCol"
+    },
+    "children": [
+      "flex-layout.col#category-hero-slot-image-baterias-traccion",
+      "flex-layout.col#category-hero-slot-title-baterias-traccion",
+      "flex-layout.col#category-hero-slot-description-baterias-traccion",
+      "flex-layout.col#category-hero-slot-cta-baterias-traccion"
+    ]
+  },
+  "flex-layout.col#category-hero-slot-image-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroSlotImage",
+      "width": "100%"
+    },
+    "children": ["image#category-hero-image-baterias-traccion"]
+  },
+  "flex-layout.col#category-hero-slot-title-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroSlotTitle",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-title-baterias-traccion"]
+  },
+  "flex-layout.col#category-hero-slot-description-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroSlotDescription",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-description-baterias-traccion"]
+  },
+  "flex-layout.col#category-hero-slot-cta-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroSlotCta",
+      "width": "100%"
+    },
+    "children": ["rich-text#category-hero-cta-baterias-traccion"]
+  },
+  "image#category-hero-image-baterias-traccion": {
+    "props": {
+      "blockClass": "categoryHeroImage",
+      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0c95a74e-d4ba-427b-aab7-71d21229a958___0375867a055bd6ecd6a15bec5bbeff10.png",
+      "alt": "Baterias de traccion"
+    }
+  },
+  "rich-text#category-hero-title-baterias-traccion": {
+    "props": {
+      "text": "# Baterías de tracción",
+      "blockClass": "categoryHeroTitle"
+    }
+  },
+  "rich-text#category-hero-description-baterias-traccion": {
+    "props": {
+      "text": "Aqui ira el texto descriptivo de esta categoria para actualizarlo en el futuro.",
+      "blockClass": "categoryHeroDescription"
+    }
+  },
+  "rich-text#category-hero-cta-baterias-traccion": {
+    "props": {
+      "text": "[Quiero conocer más](/contact-us)",
+      "blockClass": "categoryHeroButton"
+    }
+  },
+
+  "rich-text#category-offer-title": {
+    "props": {
+      "text": "## En Coéxito te ofrecemos",
+      "textAlignment": "CENTER",
+      "blockClass": "categoryOfferTitle"
+    }
+  },
+  "rich-text#category-offer-subtitle": {
+    "props": {
+      "text": "Marcas líderes en innovación, tecnología y calidad, para que comercialices a todo tipo de clientes. +65 años en el mercado nacional las respaldan.",
+      "textAlignment": "CENTER",
+      "blockClass": "categoryOfferSubtitle"
+    }
+  }
+}

@@ -8,7 +8,6 @@
   "header-layout.desktop": {
     "children": [
       "flex-layout.row#1-desktop",
-      "flex-layout.row#3-desktop",
       "sticky-layout#4-desktop"
     ]
   },
@@ -19,21 +18,7 @@
       "fullWidth": true
     }
   },
-  
-  "flex-layout.row#3-desktop": {
-    "props": {
-      "blockClass": "menu-link",
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": [
-      "vtex.menu@2.x:menu#websites",
-      "flex-layout.col#spacer",
-      "vtex.menu@2.x:menu#institutional"
-    ]
-  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -56,13 +41,25 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#category-menu",
       "flex-layout.col#spacer",
-      "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      "flex-layout.col#category-menu",
+      "flex-layout.row#header-actions"
     ]
+  },
+  "flex-layout.row#header-actions": {
+    "props": {
+      "verticalAlign": "middle",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "blockClass": "headerActions"
+    },
+    "children": ["login", "minicart.v2"]
+  },
+  "login": {
+    "props": {
+      "iconLabel": "ingreso de clientes",
+      "showIconProfile": false
+    }
   },
   "flex-layout.col#logo-desktop": {
     "props": {
@@ -72,17 +69,18 @@
   },
   "flex-layout.col#category-menu": {
     "props": {
-      "verticalAlign": "middle"
+      "verticalAlign": "middle",
+      "blockClass": "headerNavLinks"
     },
     "children": ["vtex.menu@2.x:menu#category-menu"]
   },
   "logo#desktop": {
     "props": {
-      "title": "Logo",
+      "title": "Repuestox",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
+      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
       "width": "180",
-      "height": "12"
+      "height": "54"
     }
   },
   "header-layout.mobile": {
@@ -93,11 +91,10 @@
   },
   "flex-layout.row#1-mobile": {
     "children": [
-      "drawer",
+      "flex-layout.col#drawer-mobile",
       "logo#mobile",
       "flex-layout.col#spacer",
-      "login",
-      "minicart.v2"
+      "flex-layout.col#header-actions-mobile"
     ],
     "props": {
       "blockClass": "main-header-mobile",
@@ -106,15 +103,29 @@
       "fullWidth": true
     }
   },
+  "flex-layout.col#drawer-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "headerDrawerMobile"
+    },
+    "children": ["drawer"]
+  },
+  "flex-layout.col#header-actions-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "headerActionsMobile"
+    },
+    "children": ["login", "minicart.v2"]
+  },
   "drawer": {
     "children": ["menu#drawer"]
   },
 
   "menu#drawer": {
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
+      "menu-item#nav-product-info",
+      "menu-item#nav-where-buy",
+      "menu-item#nav-contact"
     ],
     "props": {
       "orientation": "vertical"
@@ -123,11 +134,11 @@
 
   "logo#mobile": {
     "props": {
-      "title": "Logo",
+      "title": "Repuestox",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
-      "width": "77.5",
-      "height": "27.5"
+      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
+      "width": "130",
+      "height": "40"
     }
   }
 }

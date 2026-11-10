@@ -1,0 +1,287 @@
+[
+ {
+  "departamento": "Carros",
+  "antes": "Kits de sincronización (afinación)",
+  "ahora": "Kits de afinación (sincronización)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Rampas (rieles) de inyectores",
+  "ahora": "Rampas de inyectores"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Reguladores de presión",
+  "ahora": "Reguladores de presión de combustible"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Bombines de clutch",
+  "ahora": "Bombas y balibombas de clutch"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Volantes de motor (flywheel)",
+  "ahora": "Volantes de motor"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Campanas (tambores) de freno",
+  "ahora": "Campanas de freno"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Mordazas / calipers",
+  "ahora": "Mordazas (calipers)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Bombines de freno",
+  "ahora": "Cilindros de freno"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Bombas de freno (cilindro maestro)",
+  "ahora": "Bombas de freno"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Servo-freno (booster)",
+  "ahora": "Servofreno (booster)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Cañerías y mangueras de freno",
+  "ahora": "Mangueras y líneas de freno"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Resortes / espirales",
+  "ahora": "Resortes (espirales)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Terminales",
+  "ahora": "ELIMINADA (duplicada de Terminales de dirección)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Axiales",
+  "ahora": "Axiales (brazos axiales)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Links",
+  "ahora": "Links de estabilizadora"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Manzanas / cubos de rueda",
+  "ahora": "Manzanas de rueda (cubos)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Cremalleras (caja de dirección)",
+  "ahora": "Cajas de dirección (cremalleras)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Copas de amortiguador",
+  "ahora": "Copas (bases) de amortiguador"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Copas",
+  "ahora": "Copas (tapacubos)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Tapacubos",
+  "ahora": "ELIMINADA (duplicada de Copas (tapacubos))"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Fundas (forros de sillas)",
+  "ahora": "Forros de sillas"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "TPMS",
+  "ahora": "Sensores de presión de llantas (TPMS)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Cargadores",
+  "ahora": "Cargadores de celular para carro"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Llaves y dados",
+  "ahora": "Llaves y copas"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Bómperes (parachoques)",
+  "ahora": "Bómperes (bumper)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Retrovisores",
+  "ahora": "Espejos retrovisores"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Elevavidrios (alza cristales)",
+  "ahora": "Elevavidrios"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Limpiaparabrisas (plumillas)",
+  "ahora": "Plumillas (limpiaparabrisas)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Asientos y tapizados",
+  "ahora": "Sillas y tapizados"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Retrovisores interiores",
+  "ahora": "Espejos retrovisores interiores"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Ventiladores de AC",
+  "ahora": "Blowers (ventiladores de AC)"
+ },
+ {
+  "departamento": "Carros",
+  "antes": "Motores de ventilación",
+  "ahora": "ELIMINADA (duplicada de Blowers (ventiladores de AC))"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Cadenas de repartición",
+  "ahora": "Cadenillas (cadenas de repartición)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Tensores y guías",
+  "ahora": "Tensores y guías de cadenilla"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Kits de repartición",
+  "ahora": "Kits de cadenilla"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Piñones (sprocket)",
+  "ahora": "Piñones"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Catalinas",
+  "ahora": "Catalinas (sprocket trasero)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Pedales de arranque (kick)",
+  "ahora": "Pedales de arranque (crank)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Exhostos",
+  "ahora": "Exostos"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Empaques de exhosto",
+  "ahora": "Empaques de exosto"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Guayas de ahogador",
+  "ahora": "Guayas de choke (ahogador)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Guardafangos",
+  "ahora": "Guardabarros"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Caballetes (patas)",
+  "ahora": "Patas y caballetes"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Mordazas / calipers",
+  "ahora": "Mordazas (calipers)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Bombas de freno (cilindro maestro)",
+  "ahora": "Bombas de freno"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Bombines de freno",
+  "ahora": "Cilindros de freno"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Palancas (maniguetas) y pedales de freno",
+  "ahora": "Maniguetas y pedales de freno"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Kits de suspensión delantera (retenedores, guardapolvos)",
+  "ahora": "Kits de barras (retenedores y guardapolvos)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Manzanas de dirección (rodamientos)",
+  "ahora": "Cunas de dirección"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Reguladores / rectificadores",
+  "ahora": "Reguladores (rectificadores)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "CDI / módulos de encendido",
+  "ahora": "CDI (módulos de encendido)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Estatores (bobina de carga)",
+  "ahora": "Estatores (platos de bobinas)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Manzanas (cubos) de rueda",
+  "ahora": "Manzanas de rueda"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Cubremotos (pijamas)",
+  "ahora": "Pijamas (cubremotos)"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Parabrisas y soportes",
+  "ahora": "Cúpulas (parabrisas) y soportes"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Cargadores USB",
+  "ahora": "ELIMINADA (duplicada de Cargadores USB (Accesorios de moto))"
+ },
+ {
+  "departamento": "Motos",
+  "antes": "Llaves y dados",
+  "ahora": "Llaves y copas"
+ }
+]

@@ -77,3 +77,63 @@
   color: #FFFFFF;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
+
+/* ============================================================
+   PRECIOS — tarjeta rxCard
+   Venta en rojo, lista tachada en gris debajo, y pildora
+   "Ahorra X%" flotando sobre la foto.
+   ============================================================ */
+.sellingPrice--rxCard {
+  margin: 0;
+  color: var(--rx-red);
+  font-family: var(--rx-font);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* El valor lleva regla global propia (2.25rem/700): se pisa aqui. */
+.sellingPriceValue--rxCard {
+  color: var(--rx-red);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.listPrice--rxCard {
+  margin: 0;
+  color: var(--rx-muted);
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: line-through;
+}
+
+.listPriceValue--rxCard {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.savings--rxCard {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: inline-block;
+  margin: 0;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background-color: var(--rx-red);
+  color: #ffffff;
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.savingsPercentage--rxCard {
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}

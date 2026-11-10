@@ -1,0 +1,3882 @@
+/* ============================================================
+   CUADRICULAS DE HIJOS — Herramientas
+   ------------------------------------------------------------
+   Para cada macro y subcategoria, la cuadricula (rxLineasGrid) con
+   una tarjeta por hijo IGUAL a la de las macros del rail: espacio de
+   imagen arriba y el nombre abajo.
+
+   IMAGENES: los src son PLACEHOLDERS en SVG ("REEMPLAZAR" + nombre).
+   Para poner la real solo se cambia "src" en
+   image#rx-g-<pagina>-<hijo>-img. Recomendado: PNG con fondo blanco
+   o transparente, producto centrado, ~800x500.
+   (Los iconos SVG anteriores siguen en catalogo/iconos-categorias.json
+   por si se quieren usar como imagen de alguna tarjeta.)
+
+   GENERADO por scripts/gen-categorias.py — no editar a mano;
+   cambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.
+   ============================================================ */
+{
+  "rich-text#rx-cats-heading-herramientas": {
+    "props": {
+      "text": "Categorías",
+      "blockClass": "rxLineasHeading"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-y-copas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-y-copas-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-y-copas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-y-copas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-llaves-y-copas-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-llaves-y-copas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Llaves y copas</text></svg>",
+      "alt": "Llaves y copas",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/llaves-y-copas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-y-copas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-y-copas-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-y-copas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-y-copas-txt": {
+    "props": {
+      "text": "[Llaves y copas](/herramientas/herramientas-manuales/llaves-y-copas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-y-copas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/llaves-y-copas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-de-cruz": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Llaves de cruz</text></svg>",
+      "alt": "Llaves de cruz",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/llaves-de-cruz",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-txt": {
+    "props": {
+      "text": "[Llaves de cruz](/herramientas/herramientas-manuales/llaves-de-cruz)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-de-cruz-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/llaves-de-cruz)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-torquimetros": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-torquimetros-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-torquimetros-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-torquimetros-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-torquimetros-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-torquimetros-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Torquímetros</text></svg>",
+      "alt": "Torquímetros",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/torquimetros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-torquimetros-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-torquimetros-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-torquimetros-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-torquimetros-txt": {
+    "props": {
+      "text": "[Torquímetros](/herramientas/herramientas-manuales/torquimetros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-torquimetros-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/torquimetros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-destornilladores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-destornilladores-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-destornilladores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-destornilladores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-destornilladores-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-destornilladores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Destornilladores</text></svg>",
+      "alt": "Destornilladores",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/destornilladores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-destornilladores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-destornilladores-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-destornilladores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-destornilladores-txt": {
+    "props": {
+      "text": "[Destornilladores](/herramientas/herramientas-manuales/destornilladores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-destornilladores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/destornilladores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Alicates y pinzas</text></svg>",
+      "alt": "Alicates y pinzas",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/alicates-y-pinzas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-txt": {
+    "props": {
+      "text": "[Alicates y pinzas](/herramientas/herramientas-manuales/alicates-y-pinzas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/alicates-y-pinzas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Martillos y cinceles</text></svg>",
+      "alt": "Martillos y cinceles",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/martillos-y-cinceles",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-txt": {
+    "props": {
+      "text": "[Martillos y cinceles](/herramientas/herramientas-manuales/martillos-y-cinceles)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/martillos-y-cinceles)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Extractores y herramientas especiales</text></svg>",
+      "alt": "Extractores y herramientas especiales",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/extractores-y-herramientas-especiales",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-txt": {
+    "props": {
+      "text": "[Extractores y herramientas especiales](/herramientas/herramientas-manuales/extractores-y-herramientas-especiales)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/extractores-y-herramientas-especiales)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-para-filtros": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Llaves para filtros</text></svg>",
+      "alt": "Llaves para filtros",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/llaves-para-filtros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-txt": {
+    "props": {
+      "text": "[Llaves para filtros](/herramientas/herramientas-manuales/llaves-para-filtros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-llaves-para-filtros-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/llaves-para-filtros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-kits-de-herramientas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Kits de herramientas</text></svg>",
+      "alt": "Kits de herramientas",
+      "link": {
+        "url": "/herramientas/herramientas-manuales/kits-de-herramientas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-txt",
+      "rich-text#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-txt": {
+    "props": {
+      "text": "[Kits de herramientas](/herramientas/herramientas-manuales/kits-de-herramientas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-manuales-kits-de-herramientas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales/kits-de-herramientas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-manuales": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-y-copas",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-de-cruz",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-torquimetros",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-destornilladores",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-alicates-y-pinzas",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-martillos-y-cinceles",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-extractores-y-herramientas-especiales",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-llaves-para-filtros",
+      "flex-layout.col#rx-g-herramientas-herramientas-manuales-kits-de-herramientas"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Taladros</text></svg>",
+      "alt": "Taladros",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/taladros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-txt": {
+    "props": {
+      "text": "[Taladros](/herramientas/herramientas-electricas-y-neumaticas/taladros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/taladros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Esmeriles y lijadoras</text></svg>",
+      "alt": "Esmeriles y lijadoras",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-txt": {
+    "props": {
+      "text": "[Esmeriles y lijadoras](/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pistolas de impacto</text></svg>",
+      "alt": "Pistolas de impacto",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-txt": {
+    "props": {
+      "text": "[Pistolas de impacto](/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Herramientas neumáticas</text></svg>",
+      "alt": "Herramientas neumáticas",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-txt": {
+    "props": {
+      "text": "[Herramientas neumáticas](/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Compresores de aire</text></svg>",
+      "alt": "Compresores de aire",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-txt": {
+    "props": {
+      "text": "[Compresores de aire](/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-media",
+      "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-img"
+    ]
+  },
+  "image#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pistolas de calor y cautines</text></svg>",
+      "alt": "Pistolas de calor y cautines",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-txt",
+      "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-txt": {
+    "props": {
+      "text": "[Pistolas de calor y cautines](/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-herramientas-electricas-y-neumaticas": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-taladros",
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras",
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto",
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas",
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire",
+      "flex-layout.col#rx-g-herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-gatos-y-torres": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-gatos-y-torres-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-gatos-y-torres-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-gatos-y-torres-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-gatos-y-torres-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-gatos-y-torres-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Gatos y torres</text></svg>",
+      "alt": "Gatos y torres",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/gatos-y-torres",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-gatos-y-torres-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-gatos-y-torres-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-gatos-y-torres-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-gatos-y-torres-txt": {
+    "props": {
+      "text": "[Gatos y torres](/herramientas/equipos-de-taller/gatos-y-torres)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-gatos-y-torres-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/gatos-y-torres)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-elevadores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-elevadores-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-elevadores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-elevadores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-elevadores-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-elevadores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Elevadores</text></svg>",
+      "alt": "Elevadores",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/elevadores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-elevadores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-elevadores-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-elevadores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-elevadores-txt": {
+    "props": {
+      "text": "[Elevadores](/herramientas/equipos-de-taller/elevadores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-elevadores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/elevadores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Camillas de mecánico</text></svg>",
+      "alt": "Camillas de mecánico",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/camillas-de-mecanico",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-txt": {
+    "props": {
+      "text": "[Camillas de mecánico](/herramientas/equipos-de-taller/camillas-de-mecanico)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/camillas-de-mecanico)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Prensas hidráulicas</text></svg>",
+      "alt": "Prensas hidráulicas",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/prensas-hidraulicas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-txt": {
+    "props": {
+      "text": "[Prensas hidráulicas](/herramientas/equipos-de-taller/prensas-hidraulicas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/prensas-hidraulicas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-gruas-de-motor": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-gruas-de-motor-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-gruas-de-motor-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-gruas-de-motor-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-gruas-de-motor-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-gruas-de-motor-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Grúas de motor</text></svg>",
+      "alt": "Grúas de motor",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/gruas-de-motor",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-gruas-de-motor-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-gruas-de-motor-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-gruas-de-motor-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-gruas-de-motor-txt": {
+    "props": {
+      "text": "[Grúas de motor](/herramientas/equipos-de-taller/gruas-de-motor)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-gruas-de-motor-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/gruas-de-motor)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-winches": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-winches-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-winches-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-winches-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-winches-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-winches-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Winches</text></svg>",
+      "alt": "Winches",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/winches",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-winches-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-winches-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-winches-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-winches-txt": {
+    "props": {
+      "text": "[Winches](/herramientas/equipos-de-taller/winches)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-winches-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/winches)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Cargadores y arrancadores de batería</text></svg>",
+      "alt": "Cargadores y arrancadores de batería",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-txt": {
+    "props": {
+      "text": "[Cargadores y arrancadores de batería](/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Infladores y manómetros de llanta</text></svg>",
+      "alt": "Infladores y manómetros de llanta",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-txt": {
+    "props": {
+      "text": "[Infladores y manómetros de llanta](/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Montallantas y despinche</text></svg>",
+      "alt": "Montallantas y despinche",
+      "link": {
+        "url": "/herramientas/equipos-de-taller/montallantas-y-despinche",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-txt",
+      "rich-text#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-txt": {
+    "props": {
+      "text": "[Montallantas y despinche](/herramientas/equipos-de-taller/montallantas-y-despinche)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller/montallantas-y-despinche)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-taller": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-gatos-y-torres",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-elevadores",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-camillas-de-mecanico",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-prensas-hidraulicas",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-gruas-de-motor",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-winches",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-infladores-y-manometros-de-llanta",
+      "flex-layout.col#rx-g-herramientas-equipos-de-taller-montallantas-y-despinche"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-media",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-img"
+    ]
+  },
+  "image#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Escáneres y equipos de diagnóstico</text></svg>",
+      "alt": "Escáneres y equipos de diagnóstico",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-txt",
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-txt": {
+    "props": {
+      "text": "[Escáneres y equipos de diagnóstico](/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-media",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-img"
+    ]
+  },
+  "image#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Multímetros y probadores eléctricos</text></svg>",
+      "alt": "Multímetros y probadores eléctricos",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-txt",
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-txt": {
+    "props": {
+      "text": "[Multímetros y probadores eléctricos](/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-media",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-img"
+    ]
+  },
+  "image#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Calibradores y micrómetros</text></svg>",
+      "alt": "Calibradores y micrómetros",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion/calibradores-y-micrometros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-txt",
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-txt": {
+    "props": {
+      "text": "[Calibradores y micrómetros](/herramientas/diagnostico-y-medicion/calibradores-y-micrometros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion/calibradores-y-micrometros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-media",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-img"
+    ]
+  },
+  "image#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Lámparas de tiempo</text></svg>",
+      "alt": "Lámparas de tiempo",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion/lamparas-de-tiempo",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-txt",
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-txt": {
+    "props": {
+      "text": "[Lámparas de tiempo](/herramientas/diagnostico-y-medicion/lamparas-de-tiempo)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion/lamparas-de-tiempo)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-compresimetros": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-compresimetros-media",
+      "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-compresimetros-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-compresimetros-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-diagnostico-y-medicion-compresimetros-img"
+    ]
+  },
+  "image#rx-g-herramientas-diagnostico-y-medicion-compresimetros-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Compresímetros</text></svg>",
+      "alt": "Compresímetros",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion/compresimetros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion-compresimetros-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-compresimetros-txt",
+      "rich-text#rx-g-herramientas-diagnostico-y-medicion-compresimetros-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-compresimetros-txt": {
+    "props": {
+      "text": "[Compresímetros](/herramientas/diagnostico-y-medicion/compresimetros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-diagnostico-y-medicion-compresimetros-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion/compresimetros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-diagnostico-y-medicion": {
+    "props": {
+      "blockClass": [
+        "rxLineasGrid",
+        "rxLineasGrid5"
+      ]
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico",
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos",
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-calibradores-y-micrometros",
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-lamparas-de-tiempo",
+      "flex-layout.col#rx-g-herramientas-diagnostico-y-medicion-compresimetros"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-shampoo": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-shampoo-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-shampoo-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-shampoo-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-shampoo-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-shampoo-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Shampoo</text></svg>",
+      "alt": "Shampoo",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/shampoo",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-shampoo-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-shampoo-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-shampoo-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-shampoo-txt": {
+    "props": {
+      "text": "[Shampoo](/herramientas/cuidado-y-limpieza/shampoo)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-shampoo-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/shampoo)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-desengrasantes": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Desengrasantes</text></svg>",
+      "alt": "Desengrasantes",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/desengrasantes",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-txt": {
+    "props": {
+      "text": "[Desengrasantes](/herramientas/cuidado-y-limpieza/desengrasantes)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-desengrasantes-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/desengrasantes)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiavidrios</text></svg>",
+      "alt": "Limpiavidrios",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiavidrios",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-txt": {
+    "props": {
+      "text": "[Limpiavidrios](/herramientas/cuidado-y-limpieza/limpiavidrios)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiavidrios)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores interiores</text></svg>",
+      "alt": "Limpiadores interiores",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiadores-interiores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-txt": {
+    "props": {
+      "text": "[Limpiadores interiores](/herramientas/cuidado-y-limpieza/limpiadores-interiores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiadores-interiores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores de tapicería y cuero</text></svg>",
+      "alt": "Limpiadores de tapicería y cuero",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-txt": {
+    "props": {
+      "text": "[Limpiadores de tapicería y cuero](/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores de motor</text></svg>",
+      "alt": "Limpiadores de motor",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiadores-de-motor",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-txt": {
+    "props": {
+      "text": "[Limpiadores de motor](/herramientas/cuidado-y-limpieza/limpiadores-de-motor)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiadores-de-motor)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores de rines</text></svg>",
+      "alt": "Limpiadores de rines",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiadores-de-rines",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-txt": {
+    "props": {
+      "text": "[Limpiadores de rines](/herramientas/cuidado-y-limpieza/limpiadores-de-rines)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiadores-de-rines)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Siliconas y renovadores de llantas</text></svg>",
+      "alt": "Siliconas y renovadores de llantas",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-txt": {
+    "props": {
+      "text": "[Siliconas y renovadores de llantas](/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ceras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ceras-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-ceras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ceras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-ceras-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-ceras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Ceras</text></svg>",
+      "alt": "Ceras",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/ceras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-ceras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-ceras-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-ceras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-ceras-txt": {
+    "props": {
+      "text": "[Ceras](/herramientas/cuidado-y-limpieza/ceras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-ceras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/ceras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-selladores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-selladores-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-selladores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-selladores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-selladores-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-selladores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Selladores</text></svg>",
+      "alt": "Selladores",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/selladores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-selladores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-selladores-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-selladores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-selladores-txt": {
+    "props": {
+      "text": "[Selladores](/herramientas/cuidado-y-limpieza/selladores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-selladores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/selladores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-coatings": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-coatings-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-coatings-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-coatings-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-coatings-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-coatings-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Coatings</text></svg>",
+      "alt": "Coatings",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/coatings",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-coatings-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-coatings-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-coatings-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-coatings-txt": {
+    "props": {
+      "text": "[Coatings](/herramientas/cuidado-y-limpieza/coatings)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-coatings-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/coatings)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Hidrofóbicos</text></svg>",
+      "alt": "Hidrofóbicos",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/hidrofobicos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-txt": {
+    "props": {
+      "text": "[Hidrofóbicos](/herramientas/cuidado-y-limpieza/hidrofobicos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/hidrofobicos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-protectores-uv": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Protectores UV</text></svg>",
+      "alt": "Protectores UV",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/protectores-uv",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-txt": {
+    "props": {
+      "text": "[Protectores UV](/herramientas/cuidado-y-limpieza/protectores-uv)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-protectores-uv-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/protectores-uv)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Quita rayones y restauradores de pintura</text></svg>",
+      "alt": "Quita rayones y restauradores de pintura",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-txt": {
+    "props": {
+      "text": "[Quita rayones y restauradores de pintura](/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-microfibras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-microfibras-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-microfibras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-microfibras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-microfibras-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-microfibras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Microfibras</text></svg>",
+      "alt": "Microfibras",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/microfibras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-microfibras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-microfibras-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-microfibras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-microfibras-txt": {
+    "props": {
+      "text": "[Microfibras](/herramientas/cuidado-y-limpieza/microfibras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-microfibras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/microfibras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Cepillos y aplicadores</text></svg>",
+      "alt": "Cepillos y aplicadores",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-txt": {
+    "props": {
+      "text": "[Cepillos y aplicadores](/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pulimentos y compuestos (rubbing)</text></svg>",
+      "alt": "Pulimentos y compuestos (rubbing)",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-txt": {
+    "props": {
+      "text": "[Pulimentos y compuestos (rubbing)](/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pads": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pads-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-pads-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pads-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-pads-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-pads-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pads</text></svg>",
+      "alt": "Pads",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/pads",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-pads-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-pads-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-pads-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-pads-txt": {
+    "props": {
+      "text": "[Pads](/herramientas/cuidado-y-limpieza/pads)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-pads-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/pads)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-abrillantadores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Abrillantadores</text></svg>",
+      "alt": "Abrillantadores",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/abrillantadores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-txt": {
+    "props": {
+      "text": "[Abrillantadores](/herramientas/cuidado-y-limpieza/abrillantadores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-abrillantadores-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/abrillantadores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Ambientadores y perfumes</text></svg>",
+      "alt": "Ambientadores y perfumes",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-txt": {
+    "props": {
+      "text": "[Ambientadores y perfumes](/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Anticorrosivos</text></svg>",
+      "alt": "Anticorrosivos",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/anticorrosivos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-txt": {
+    "props": {
+      "text": "[Anticorrosivos](/herramientas/cuidado-y-limpieza/anticorrosivos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/anticorrosivos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Kits de limpieza</text></svg>",
+      "alt": "Kits de limpieza",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/kits-de-limpieza",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-txt": {
+    "props": {
+      "text": "[Kits de limpieza](/herramientas/cuidado-y-limpieza/kits-de-limpieza)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/kits-de-limpieza)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-media",
+      "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-img"
+    ]
+  },
+  "image#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores de cadena</text></svg>",
+      "alt": "Limpiadores de cadena",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza/limpiadores-de-cadena",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-txt",
+      "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-txt": {
+    "props": {
+      "text": "[Limpiadores de cadena](/herramientas/cuidado-y-limpieza/limpiadores-de-cadena)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza/limpiadores-de-cadena)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-cuidado-y-limpieza": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-shampoo",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-desengrasantes",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiavidrios",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-interiores",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-motor",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-rines",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ceras",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-selladores",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-coatings",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-hidrofobicos",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-protectores-uv",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-microfibras",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-cepillos-y-aplicadores",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-pads",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-abrillantadores",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-ambientadores-y-perfumes",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-anticorrosivos",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-kits-de-limpieza",
+      "flex-layout.col#rx-g-herramientas-cuidado-y-limpieza-limpiadores-de-cadena"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-guantes": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-guantes-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-guantes-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-guantes-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-guantes-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-guantes-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Guantes</text></svg>",
+      "alt": "Guantes",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/guantes",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-guantes-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-guantes-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-guantes-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-guantes-txt": {
+    "props": {
+      "text": "[Guantes](/herramientas/consumibles-de-taller/guantes)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-guantes-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/guantes)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-panos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-panos-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-panos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-panos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-panos-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-panos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Paños</text></svg>",
+      "alt": "Paños",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/panos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-panos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-panos-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-panos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-panos-txt": {
+    "props": {
+      "text": "[Paños](/herramientas/consumibles-de-taller/panos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-panos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/panos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-cintas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-cintas-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-cintas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-cintas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-cintas-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-cintas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Cintas</text></svg>",
+      "alt": "Cintas",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/cintas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-cintas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-cintas-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-cintas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-cintas-txt": {
+    "props": {
+      "text": "[Cintas](/herramientas/consumibles-de-taller/cintas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-cintas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/cintas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-abrazaderas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-abrazaderas-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-abrazaderas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-abrazaderas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-abrazaderas-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-abrazaderas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Abrazaderas</text></svg>",
+      "alt": "Abrazaderas",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/abrazaderas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-abrazaderas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-abrazaderas-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-abrazaderas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-abrazaderas-txt": {
+    "props": {
+      "text": "[Abrazaderas](/herramientas/consumibles-de-taller/abrazaderas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-abrazaderas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/abrazaderas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-tornilleria": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-tornilleria-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-tornilleria-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-tornilleria-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-tornilleria-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-tornilleria-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Tornillería</text></svg>",
+      "alt": "Tornillería",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/tornilleria",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-tornilleria-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-tornilleria-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-tornilleria-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-tornilleria-txt": {
+    "props": {
+      "text": "[Tornillería](/herramientas/consumibles-de-taller/tornilleria)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-tornilleria-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/tornilleria)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-bridas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-bridas-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-bridas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-bridas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-bridas-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-bridas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Bridas</text></svg>",
+      "alt": "Bridas",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/bridas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-bridas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-bridas-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-bridas-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-bridas-txt": {
+    "props": {
+      "text": "[Bridas](/herramientas/consumibles-de-taller/bridas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-bridas-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/bridas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Siliconas y pegantes</text></svg>",
+      "alt": "Siliconas y pegantes",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/siliconas-y-pegantes",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-txt": {
+    "props": {
+      "text": "[Siliconas y pegantes](/herramientas/consumibles-de-taller/siliconas-y-pegantes)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/siliconas-y-pegantes)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Lubricantes técnicos</text></svg>",
+      "alt": "Lubricantes técnicos",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/lubricantes-tecnicos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-txt": {
+    "props": {
+      "text": "[Lubricantes técnicos](/herramientas/consumibles-de-taller/lubricantes-tecnicos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/lubricantes-tecnicos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Limpiadores técnicos</text></svg>",
+      "alt": "Limpiadores técnicos",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/limpiadores-tecnicos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-txt": {
+    "props": {
+      "text": "[Limpiadores técnicos](/herramientas/consumibles-de-taller/limpiadores-tecnicos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/limpiadores-tecnicos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-aerosoles": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-aerosoles-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-aerosoles-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-aerosoles-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-aerosoles-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-aerosoles-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Aerosoles</text></svg>",
+      "alt": "Aerosoles",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/aerosoles",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-aerosoles-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-aerosoles-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-aerosoles-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-aerosoles-txt": {
+    "props": {
+      "text": "[Aerosoles](/herramientas/consumibles-de-taller/aerosoles)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-aerosoles-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/aerosoles)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-empaques-genericos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-empaques-genericos-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-empaques-genericos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-empaques-genericos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-empaques-genericos-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-empaques-genericos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Empaques genéricos</text></svg>",
+      "alt": "Empaques genéricos",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/empaques-genericos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-empaques-genericos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-empaques-genericos-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-empaques-genericos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-empaques-genericos-txt": {
+    "props": {
+      "text": "[Empaques genéricos](/herramientas/consumibles-de-taller/empaques-genericos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-empaques-genericos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/empaques-genericos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-terminales-electricos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-terminales-electricos-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-terminales-electricos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-terminales-electricos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-terminales-electricos-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-terminales-electricos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Terminales eléctricos</text></svg>",
+      "alt": "Terminales eléctricos",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/terminales-electricos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-terminales-electricos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-terminales-electricos-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-terminales-electricos-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-terminales-electricos-txt": {
+    "props": {
+      "text": "[Terminales eléctricos](/herramientas/consumibles-de-taller/terminales-electricos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-terminales-electricos-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/terminales-electricos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-media",
+      "flex-layout.row#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-img"
+    ]
+  },
+  "image#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pinturas y retoques</text></svg>",
+      "alt": "Pinturas y retoques",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller/pinturas-y-retoques",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-txt",
+      "rich-text#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-txt": {
+    "props": {
+      "text": "[Pinturas y retoques](/herramientas/consumibles-de-taller/pinturas-y-retoques)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller/pinturas-y-retoques)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-consumibles-de-taller": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-guantes",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-panos",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-cintas",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-abrazaderas",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-tornilleria",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-bridas",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-siliconas-y-pegantes",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-lubricantes-tecnicos",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-limpiadores-tecnicos",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-aerosoles",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-empaques-genericos",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-terminales-electricos",
+      "flex-layout.col#rx-g-herramientas-consumibles-de-taller-pinturas-y-retoques"
+    ]
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-herramientas",
+      "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Hidrolavadoras</text></svg>",
+      "alt": "Hidrolavadoras",
+      "link": {
+        "url": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-txt",
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-txt": {
+    "props": {
+      "text": "[Hidrolavadoras](/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Polichadoras</text></svg>",
+      "alt": "Polichadoras",
+      "link": {
+        "url": "/herramientas/equipos-de-lavado-y-pulido/polichadoras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-txt",
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-txt": {
+    "props": {
+      "text": "[Polichadoras](/herramientas/equipos-de-lavado-y-pulido/polichadoras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-lavado-y-pulido/polichadoras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-media",
+      "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-img"
+    ]
+  },
+  "image#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Aspiradoras</text></svg>",
+      "alt": "Aspiradoras",
+      "link": {
+        "url": "/herramientas/equipos-de-lavado-y-pulido/aspiradoras",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-txt",
+      "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-arrow"
+    ]
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-txt": {
+    "props": {
+      "text": "[Aspiradoras](/herramientas/equipos-de-lavado-y-pulido/aspiradoras)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-lavado-y-pulido/aspiradoras)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-herramientas-equipos-de-lavado-y-pulido": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-hidrolavadoras",
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-polichadoras",
+      "flex-layout.col#rx-g-herramientas-equipos-de-lavado-y-pulido-aspiradoras"
+    ]
+  }
+}

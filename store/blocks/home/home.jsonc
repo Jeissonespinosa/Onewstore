@@ -1,9 +1,13 @@
 {
+  /* El home es el selector Carros | Motos a pantalla completa y,
+     debajo, HERRAMIENTAS a pantalla completa (toda la imagen
+     lleva a /herramientas). El hero y el rail
+     de lineas viven dentro de cada seccion. */
   "store.home": {
     "blocks": [
       "flex-layout.row#repuestox-splash",
-      "flex-layout.row#repuestox-split-hero"
+      "flex-layout.row#repuestox-split-hero",
+      "flex-layout.row#repuestox-tools-hero"
     ]
   }
 }
-

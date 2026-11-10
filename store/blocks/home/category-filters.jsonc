@@ -1,0 +1,185 @@
+/* ============================================================
+   FILTROS — paginas hoja (tipo de producto) de carros y motos
+   ------------------------------------------------------------
+   Escritorio y tablet: columna izquierda (24%) con el panel de
+   filtros y a la derecha "Ordenar por" + productos. Movil: el
+   selector de vehiculo arriba a todo el ancho, luego una barra
+   [Filtros | Ordenar por] (el boton abre los demas filtros en un
+   panel deslizante) y los productos.
+
+   Panel de filtros:
+   - vehicle-selector: componente propio (react/VehicleSelector.js).
+     Sin props query/map toma la categoria base de la RUTA ACTUAL,
+     por eso un solo layout sirve para todas las hojas. Lee
+     Marca vehiculo -> Modelo -> Ano de las especificaciones
+     filtrables y al buscar navega a la categoria con los filtros.
+   - filter-navigator.v3: filtros nativos (aparecen solos cuando los
+     productos tengan especificaciones marcadas como filtro).
+     Marca vehiculo / Ano / Modelo se ocultan porque ya los maneja
+     el selector.
+
+   GENERADO por scripts/gen-categorias.py — no editar a mano;
+   cambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.
+   ============================================================ */
+{
+  "filter-navigator.v3#rx": {
+    "props": {
+      "blockClass": "rx",
+      "layout": "desktop",
+      "priceRangeLayout": "inputAndSlider",
+      "showClearByFilter": true,
+      "showClearAllFiltersOnDesktop": true,
+      "openFiltersMode": "many",
+      "truncateFilters": true,
+      "truncatedFacetsFetch": true,
+      "hiddenFacets": {
+        "categories": true,
+        "brands": false,
+        "priceRange": false,
+        "specificationFilters": {
+          "hideAll": false,
+          "hiddenFilters": [
+            {
+              "name": "Marca vehículo"
+            },
+            {
+              "name": "Año"
+            },
+            {
+              "name": "Modelo"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "filter-navigator.v3#rx-m": {
+    "props": {
+      "blockClass": "rxM",
+      "layout": "phone",
+      "priceRangeLayout": "inputAndSlider",
+      "showClearByFilter": true,
+      "hiddenFacets": {
+        "categories": true,
+        "brands": false,
+        "priceRange": false,
+        "specificationFilters": {
+          "hideAll": false,
+          "hiddenFilters": [
+            {
+              "name": "Marca vehículo"
+            },
+            {
+              "name": "Año"
+            },
+            {
+              "name": "Modelo"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "vehicle-selector#rx-f": {
+    "props": {
+      "buttonLabel": "Buscar repuestos",
+      "brandFacet": "Marca vehículo",
+      "yearFacet": "Año",
+      "modelFacet": "Modelo"
+    }
+  },
+  "search-result-layout.desktop#rx-f": {
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "rxF"
+    },
+    "children": [
+      "flex-layout.row#rx-f-body"
+    ]
+  },
+  "flex-layout.row#rx-f-body": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxFBody",
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#rx-f-side",
+      "flex-layout.col#rx-f-main"
+    ]
+  },
+  "flex-layout.col#rx-f-side": {
+    "props": {
+      "blockClass": "rxFSide",
+      "width": "24%"
+    },
+    "children": [
+      "vehicle-selector#rx-f",
+      "filter-navigator.v3#rx"
+    ]
+  },
+  "flex-layout.col#rx-f-main": {
+    "props": {
+      "blockClass": "rxFMain",
+      "width": "grow"
+    },
+    "children": [
+      "flex-layout.row#rx-filterbar-f",
+      "flex-layout.row#rx-results-f"
+    ]
+  },
+  "flex-layout.row#rx-filterbar-f": {
+    "props": {
+      "blockClass": "rxFilterbarF",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "rich-text#rx-orderby-label",
+      "order-by.v2#rx"
+    ]
+  },
+  "flex-layout.row#rx-results-f": {
+    "props": {
+      "blockClass": "rxResultsF"
+    },
+    "children": [
+      "search-content#rx"
+    ]
+  },
+  "search-result-layout.mobile#rx-f": {
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "rxF"
+    },
+    "children": [
+      "flex-layout.row#rx-f-vehicle-m",
+      "flex-layout.row#rx-filterbar-m",
+      "flex-layout.row#rx-results-f"
+    ]
+  },
+  "flex-layout.row#rx-f-vehicle-m": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxFVehicleM"
+    },
+    "children": [
+      "vehicle-selector#rx-f"
+    ]
+  },
+  "flex-layout.row#rx-filterbar-m": {
+    "props": {
+      "blockClass": "rxFilterbarM",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "filter-navigator.v3#rx-m",
+      "order-by.v2#rx"
+    ]
+  }
+}

@@ -18,14 +18,6 @@
   object-position: center center;
 }
 
-.imageElement--repuestoxCategoryImage {
-  display: block;
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background-color: #f3f4f6;
-}
-
 .imageElement--repuestoxSplitHeroImage {
   display: block;
   width: 100%;
@@ -178,3 +170,99 @@
 .image {
   image-rendering: -webkit-optimize-contrast;
 }
+
+/* ============================================================
+   HERO — imagen del slide
+   object-position se controla con --rxFocus para poder mover
+   el punto focal sin tocar la estructura del bloque.
+   ============================================================ */
+.imageElement--rxSlideImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--rxFocus, 50% 50%);
+}
+
+.imageElementLink--rxSlideImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================
+   LINEAS DE PRODUCTO — imagen de la tarjeta
+   Las fotos reales son grupos de producto apaisados sobre
+   fondo claro: contain + alto fijo evita recortarlos.
+   ============================================================ */
+.imageElement--rxLineaImage {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  object-position: center center;
+  /* Los PNG de origen traen mucho margen blanco dentro del
+     lienzo: con contain a secas el producto se ve diminuto.
+     El scale compensa ese margen sin recortar nada. */
+  transform: scale(1.22);
+  transition: transform 0.35s ease;
+  /* Los PNG vienen con fondo blanco: se funden con el gris del
+     panel multiplicando. */
+  mix-blend-mode: multiply;
+}
+
+.imageElementLink--rxLineaImage {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+  .imageElement--rxLineaImage {
+    height: 12rem;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--rxLineaCard):hover .imageElement--rxLineaImage {
+  transform: scale(1.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageElement--rxLineaImage {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   MARCA — eyebrow del panel de producto
+   ============================================================ */
+.productBrandContainer--rxCard {
+  margin: 0;
+  padding: 0;
+}
+
+.productBrandName--rxCard {
+  color: var(--rx-muted);
+  font-family: var(--rx-font);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Ilustracion mas baja en la cuadricula de lineas. */
+:global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) .imageElement--rxLineaImage {
+  height: 6.5rem;
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 64em) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) .imageElement--rxLineaImage {
+    height: 7.5rem;
+  }
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) :global(.vtex-flex-layout-0-x-flexCol--rxLineaCard):hover .imageElement--rxLineaImage {
+  transform: scale(1.16);
+}
+

@@ -20,3 +20,285 @@
 .galleryItem--list {
   border-bottom: 1px #E7E9EE solid;
 }
+
+/* ============================================================
+   ORDENAR POR — barra de filtro de las subpaginas (rx)
+   Pildora con borde rojo suave (referencias/Filtros) y menu
+   desplegable limpio. La barra vive en flex-layout (rxFilterbar).
+   ============================================================ */
+.orderByButton--rx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0 1.1rem 0 1.25rem;
+  border: 2px solid rgba(255, 55, 30, 0.35);
+  border-radius: 999px;
+  background-color: var(--rx-paper);
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+
+.orderByButton--rx:hover {
+  border-color: rgba(255, 55, 30, 0.7);
+  box-shadow: 0 0 0 4px rgba(255, 55, 30, 0.08);
+}
+
+/* El prefijo "Ordenar por" nativo se oculta (la barra tiene su
+   propia etiqueta) y el titulo pierde las mayusculas del Styleguide. */
+.orderByText--rx {
+  display: none;
+}
+
+.filterPopupTitle--rx {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.filterPopupArrowIcon--rx {
+  padding: 0 0 0 0.25rem;
+  color: var(--rx-ink);
+}
+
+.orderByDropdown--rx {
+  position: relative;
+}
+
+/* El contenedor de opciones no recibe el blockClass: se apunta
+   desde el dropdown. Las utilitarias top-0/right-0 se pisan. */
+.orderByDropdown--rx .orderByOptionsContainer {
+  position: absolute;
+  top: 100% !important;
+  left: 0;
+  right: auto !important;
+  z-index: 5;
+  min-width: 14rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border: 1px solid var(--rx-line);
+  border-radius: 16px;
+  background-color: var(--rx-paper);
+  box-shadow: 0 12px 32px rgba(1, 1, 1, 0.12);
+}
+
+.orderByOptionItem--rx {
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.orderByOptionItem--rx:hover {
+  background-color: var(--rx-surface);
+  color: var(--rx-red);
+}
+
+/* Listado con la tarjeta del home: 4 columnas, sin bordes. */
+.gallery--rx {
+  padding: 0;
+}
+
+.galleryItem--rx {
+  padding: 0 0.75rem 2rem;
+}
+
+/* Estado vacio: el not-found nativo como panel gris sobrio.
+   Se ocultan el "OOPS!" y la lista de consejos de busqueda. */
+.searchNotFound--rx {
+  display: block;
+  width: 100%;
+  margin: 0 0 clamp(3rem, 6vw, 5rem);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--rx-radius);
+  background-color: var(--rx-surface);
+  text-align: center;
+}
+
+.searchNotFoundOops--rx,
+.searchNotFoundWhatDoIDo--rx,
+.searchNotFoundWhatToDoDotsContainer--rx {
+  display: none;
+}
+
+.searchNotFoundInfo--rx {
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  color: var(--rx-muted);
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ============================================================
+   FILTROS NATIVOS — panel lateral (rx) y boton movil (rxM)
+   ============================================================ */
+.filter__container--rx {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Separador entre el selector de vehiculo y los filtros. */
+.filtersWrapper--rx {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(1, 1, 1, 0.1);
+}
+
+.clearAllFilters--rx {
+  color: var(--rx-red);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.filterTitle--rx {
+  padding: 0.9rem 0;
+  border: 0;
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.filter--rx {
+  padding: 0;
+  border: 0;
+}
+
+.filterContent--rx {
+  padding: 0 0 0.75rem;
+}
+
+.filterItem--rx {
+  padding: 0.35rem 0;
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  color: var(--rx-ink);
+}
+
+.filterItem--rx:hover {
+  color: var(--rx-red);
+}
+
+.filterSelected--rx {
+  color: var(--rx-red);
+  font-weight: 600;
+}
+
+.filterSelectedFilters--rx {
+  padding: 0 0 0.75rem;
+}
+
+.selectedFilterItem--rx {
+  border-radius: 999px;
+  background-color: #ffffff;
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+}
+
+.priceRangeInputsWrapper--rx {
+  font-family: var(--rx-font);
+}
+
+/* Movil: boton "Filtrar" como pildora con borde rojo suave. */
+.filterPopupButton--rxM {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  border: 2px solid rgba(255, 55, 30, 0.35);
+  border-radius: 999px;
+  background-color: var(--rx-paper);
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.filterPopupTitle--rxM {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.filterPopupContent--rxM {
+  font-family: var(--rx-font);
+}
+
+
+/* ============================================================
+   MOVIL — pildora flotante de filtros y orden
+   La barra vive en flex-layout (.flexRowContent--rxFilterbarM);
+   aqui solo se aclara el contenido para que lea sobre el fondo
+   oscuro de la pildora.
+   ============================================================ */
+@media screen and (max-width: 48em) {
+  .filterPopupButton--rxM,
+  .filterPopupTitle--rxM,
+  .filterPopupArrowIcon--rxM,
+  .orderByButton--rx,
+  .orderByText--rx,
+  .orderByDropdown--rx,
+  .filterPopupTitle--rx,
+  .filterPopupArrowIcon--rx {
+    color: #ffffff;
+  }
+
+  /* dentro de la pildora sobra el "Ordenar por: " y el valor: basta "Ordenar" */
+  .orderByText--rx {
+    display: none;
+  }
+
+  .orderByDropdown--rx {
+    position: relative;
+  }
+
+  .filterPopupButton--rxM,
+  .orderByButton--rx {
+    background: transparent;
+    border: 0;
+    font-family: var(--rx-font);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 0;
+    min-height: 2.25rem;
+  }
+
+  .filterPopupArrowIcon--rxM,
+  .filterPopupArrowIcon--rx {
+    fill: #ffffff;
+    stroke: #ffffff;
+  }
+
+  /* En la pildora no cabe "Ordenar por: Relevancia": se deja solo el
+     valor, corto y legible (VTEX no admite pseudo-elementos aqui). */
+  .orderByButton--rx .filterPopupTitle--rx {
+    max-width: 7.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

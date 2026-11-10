@@ -106,26 +106,6 @@
   }
 }
 
-.container--repuestoxCategoryCardTitle {
-  justify-content: center;
-  padding: 1rem 0.75rem 1.25rem;
-}
-
-.container--repuestoxCategoryCardTitle .paragraph {
-  margin: 0;
-}
-
-.container--repuestoxCategoryCardTitle .link {
-  color: #1f2d3d;
-  font-weight: 600;
-  font-size: 1.75rem;
-  text-decoration: none;
-}
-
-.container--repuestoxCategoryCardTitle .link:hover {
-  text-decoration: underline;
-}
-
 .container--categoryHeroTitle {
   justify-content: flex-start;
 }
@@ -178,54 +158,6 @@
 }
 
 /* --- Carros landing: hero text --- */
-.container--carrosHeroH1 .headingLevel1 {
-  color: #ffffff;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
-  margin: 0;
-  text-align: center;
-}
-
-.container--carrosHeroSubheading .paragraph {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.55;
-  max-width: 600px;
-  text-align: center;
-  margin: 0;
-}
-
-.container--carrosHeroCta {
-  justify-content: center;
-}
-
-.container--carrosHeroCta .paragraph {
-  margin: 0;
-}
-
-.container--carrosHeroCta .link {
-  display: inline-block;
-  background-color: #FF371E;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0.9rem 2.5rem;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-.container--carrosHeroCta .link:hover {
-  background-color: #e02a14;
-  transform: translateY(-2px);
-}
-
-.container--carrosHeroCta .strong {
-  color: inherit;
-  font-weight: inherit;
-}
 
 /* --- Carros landing: CTA banner text + button --- */
 .container--carrosCtaBannerTitle {
@@ -321,3 +253,346 @@
   }
 }
 
+/* ============================================================
+   HERO — tipografia
+   Una sola familia (Montserrat). La jerarquia la carga el
+   contraste de peso: 300 para el cuerpo, 800 para el titular.
+   ============================================================ */
+/* "Volver": pildora roja de marca con flecha, en la barra bajo el
+   banner de cada pagina de categoria. */
+.container--rxBack {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxBack .paragraph {
+  margin: 0;
+  line-height: 1;
+}
+
+.container--rxBack .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1.4rem;
+  border: 1.5px solid var(--rx-red);
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: var(--rx-red);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.container--rxBack .link:hover {
+  background-color: var(--rx-red);
+  color: #ffffff;
+}
+
+.container--rxEyebrow {
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.container--rxEyebrow .paragraph {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+/* Bajo el H1 de una vitrina de filtros: enumera lo que trae la pagina
+   (Tipo de vehiculo: Automovil · SUV...) sin ocupar una tarjeta por cada uno. */
+.container--rxBannerSub {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.container--rxBannerSub .paragraph {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.container--rxTitle {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxTitle .paragraph,
+.container--rxTitle .headingLevel1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--rx-font);
+  font-size: clamp(2rem, 5.2vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.container--rxBody {
+  width: 100%;
+  max-width: 28rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.container--rxBody .paragraph {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* CTA principal: pildora blanca (referencias/home). */
+.container--rxCtaPrimary {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxCtaPrimary .paragraph {
+  margin: 0;
+}
+
+.container--rxCtaPrimary .link {
+  display: inline-block;
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.container--rxCtaPrimary .link:hover {
+  background-color: var(--rx-red);
+  color: #ffffff;
+}
+
+.container--rxCtaGhost {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxCtaGhost .paragraph {
+  margin: 0;
+}
+
+.container--rxCtaGhost .link {
+  display: inline-block;
+  padding: 0 0 0.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+  color: #ffffff;
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 0.18s ease;
+}
+
+.container--rxCtaGhost .link:hover {
+  border-bottom-color: #ffffff;
+}
+
+/* Pildoras de confianza: vidrio claro sobre la foto. */
+.container--rxTrustPill {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxTrustPill .paragraph {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   TITULOS DE SECCION — misma voz para lineas y productos
+   ============================================================ */
+.container--rxLineasHeading {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  padding: 0 var(--rx-gutter);
+}
+
+.container--rxProductosHeading {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxLineasHeading .paragraph,
+.container--rxProductosHeading .paragraph {
+  margin: 0;
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+/* ----- tarjetas de lineas ----- */
+.container--rxLineaLabel {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxLineaLabel .paragraph {
+  margin: 0;
+}
+
+.container--rxLineaLabel .link {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.container--rxLineaArrow {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxLineaArrow .paragraph {
+  margin: 0;
+}
+
+.container--rxLineaArrow .link {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.container--rxLineaArrow .link:hover {
+  color: var(--rx-red);
+}
+
+/* ============================================================
+   BANNER CTA — titulo y pildora blanca (pisa el estilo viejo)
+   ============================================================ */
+.container--carrosCtaBannerTitle .headingLevel2 {
+  color: #ffffff;
+  font-family: var(--rx-font);
+  font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-shadow: none;
+  text-wrap: balance;
+}
+
+.container--carrosCtaBannerButton .link {
+  background-color: #ffffff;
+  color: var(--rx-ink);
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.container--carrosCtaBannerButton .link:hover {
+  background-color: var(--rx-red);
+  color: #ffffff;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Titulo de marcas: misma voz que el resto de secciones. */
+.container--repuestoxSectionHeading .headingLevel2 {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* Detalle bajo el nombre en tarjetas de linea (llantas). */
+
+/* Nombre y flecha mas pequenos en la cuadricula de lineas. */
+:global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) .container--rxLineaLabel .link {
+  font-size: 0.9375rem;
+  line-height: 1.25;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) .container--rxLineaArrow .link {
+  font-size: 1.05rem;
+}
+
+/* "Ordenar por:" y mensaje de listado vacio. */
+.container--rxOrderByLabel {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container--rxOrderByLabel .paragraph {
+  margin: 0;
+  color: var(--rx-muted);
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.container--rxEmptyText {
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--rx-radius);
+  background-color: var(--rx-surface);
+  text-align: center;
+}
+
+.container--rxEmptyText .paragraph {
+  margin: 0;
+  color: var(--rx-muted);
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  font-weight: 500;
+}

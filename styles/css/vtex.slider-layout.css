@@ -30,24 +30,207 @@
   min-height: 550px;
 }
 
-.sliderLayoutContainer--repuestoxCategories {
+/* ============================================================
+   HERO — contenedor y controles del slideshow
+   Tarjeta redondeada separada del borde (referencias/home).
+   Puntos al centro y flechas finas a la derecha, sobre la
+   banda inferior que comparten con las pildoras de confianza.
+   ============================================================ */
+.sliderLayoutContainer--rxHero {
+  position: relative;
+  width: auto;
   max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 0.5rem 2rem;
+  margin: 0.75rem var(--rx-gutter) 0;
+  padding: 0;
+  border-radius: var(--rx-radius);
+  overflow: hidden;
+  background-color: var(--rx-ink);
 }
 
-@media screen and (min-width: 40em) {
-  .sliderLayoutContainer--repuestoxCategories {
-    padding: 0 1rem 2.5rem;
+@media screen and (min-width: 100em) {
+  .sliderLayoutContainer--rxHero {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.sliderTrackContainer--repuestoxCategories {
-  padding-bottom: 0.5rem;
+.sliderTrackContainer--rxHero {
+  width: 100%;
+  max-width: none;
+  padding: 0;
 }
 
-.sliderLeftArrow--repuestoxCategories,
-.sliderRightArrow--repuestoxCategories,
-.paginationDotsContainer--repuestoxCategories {
-  display: none;
+.slide--rxHero {
+  padding: 0;
+}
+
+.slideChildrenContainer--rxHero {
+  height: 100%;
+}
+
+.paginationDotsContainer--rxHero {
+  position: absolute;
+  left: 50%;
+  /* VTEX aplica right-0 y justify-center por utilitarias:
+     hay que anular ambas o los puntos quedan centrados. */
+  right: auto;
+  bottom: 1.85rem;
+  z-index: 3;
+  margin: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.paginationDot--rxHero {
+  width: 0.4rem;
+  height: 0.4rem;
+  min-width: 0;
+  margin: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.45);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.paginationDot--rxHero--isActive {
+  background-color: #ffffff;
+  transform: scale(1.35);
+}
+
+.sliderLeftArrow--rxHero,
+.sliderRightArrow--rxHero {
+  position: absolute;
+  bottom: 1.2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sliderLeftArrow--rxHero {
+  right: calc(var(--rx-hero-pad) + 2.5rem);
+  left: auto;
+}
+
+.sliderRightArrow--rxHero {
+  right: calc(var(--rx-hero-pad) - 0.5rem);
+}
+
+.sliderLeftArrow--rxHero:hover,
+.sliderRightArrow--rxHero:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* En pantallas angostas las flechas estorban: el swipe manda,
+   y los puntos se van a la derecha para no chocar con las
+   pildoras. */
+@media screen and (max-width: 47.99em) {
+  .sliderLeftArrow--rxHero,
+  .sliderRightArrow--rxHero {
+    display: none;
+  }
+
+  .paginationDotsContainer--rxHero {
+    left: auto;
+    right: var(--rx-hero-pad);
+    transform: none;
+  }
+}
+
+/* ============================================================
+   PRODUCTOS — slider del rail de catalogo
+   ============================================================ */
+.sliderLayoutContainer--rxProductos {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sliderTrackContainer--rxProductos {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+/* VTEX pone justify-around en la pista: con menos tarjetas que
+   columnas las reparte por todo el ancho. Se alinean al inicio. */
+.sliderTrack--rxProductos {
+  justify-content: flex-start !important;
+}
+
+.slide--rxProductos {
+  padding: 0 0.5rem;
+  min-height: 0;
+}
+
+@media screen and (min-width: 48em) {
+  .slide--rxProductos {
+    padding: 0 0.75rem;
+  }
+}
+
+.slideChildrenContainer--rxProductos {
+  height: 100%;
+  align-items: stretch;
+}
+
+.sliderLeftArrow--rxProductos,
+.sliderRightArrow--rxProductos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--rx-surface);
+  color: var(--rx-ink);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sliderLeftArrow--rxProductos {
+  left: -1.375rem;
+}
+
+.sliderRightArrow--rxProductos {
+  right: -1.375rem;
+}
+
+.sliderLeftArrow--rxProductos:hover,
+.sliderRightArrow--rxProductos:hover {
+  background-color: var(--rx-ink);
+  color: #ffffff;
+}
+
+@media screen and (max-width: 47.99em) {
+  .sliderLeftArrow--rxProductos,
+  .sliderRightArrow--rxProductos {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sliderTrack--rxHero {
+    transition: none !important;
+  }
+
+  .paginationDot--rxHero,
+  .sliderLeftArrow--rxHero,
+  .sliderRightArrow--rxHero {
+    transition: none;
+  }
 }

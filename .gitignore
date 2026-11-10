@@ -35,3 +35,6 @@ npm-debug.log
 lib
 *.orig
 react/package-lock.json
+
+# Backups del generador de categorias
+catalogo/.bak-*.json

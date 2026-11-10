@@ -1,0 +1,15 @@
+query VehicleFacets($selectedFacets: [SelectedFacetInput]) {
+  facets(selectedFacets: $selectedFacets, hideUnavailableItems: true)
+    @context(provider: "vtex.search-graphql") {
+    facets {
+      name
+      type
+      values {
+        name
+        key
+        value
+        quantity
+      }
+    }
+  }
+}

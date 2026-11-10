@@ -1,0 +1,58 @@
+Departamento,Antes,Ahora
+Carros,Kits de sincronización (afinación),Kits de afinación (sincronización)
+Carros,Rampas (rieles) de inyectores,Rampas de inyectores
+Carros,Reguladores de presión,Reguladores de presión de combustible
+Carros,Bombines de clutch,Bombas y balibombas de clutch
+Carros,Volantes de motor (flywheel),Volantes de motor
+Carros,Campanas (tambores) de freno,Campanas de freno
+Carros,Mordazas / calipers,Mordazas (calipers)
+Carros,Bombines de freno,Cilindros de freno
+Carros,Bombas de freno (cilindro maestro),Bombas de freno
+Carros,Servo-freno (booster),Servofreno (booster)
+Carros,Cañerías y mangueras de freno,Mangueras y líneas de freno
+Carros,Resortes / espirales,Resortes (espirales)
+Carros,Terminales,ELIMINADA (duplicada de Terminales de dirección)
+Carros,Axiales,Axiales (brazos axiales)
+Carros,Links,Links de estabilizadora
+Carros,Manzanas / cubos de rueda,Manzanas de rueda (cubos)
+Carros,Cremalleras (caja de dirección),Cajas de dirección (cremalleras)
+Carros,Copas de amortiguador,Copas (bases) de amortiguador
+Carros,Copas,Copas (tapacubos)
+Carros,Tapacubos,ELIMINADA (duplicada de Copas (tapacubos))
+Carros,Fundas (forros de sillas),Forros de sillas
+Carros,TPMS,Sensores de presión de llantas (TPMS)
+Carros,Cargadores,Cargadores de celular para carro
+Carros,Llaves y dados,Llaves y copas
+Carros,Bómperes (parachoques),Bómperes (bumper)
+Carros,Retrovisores,Espejos retrovisores
+Carros,Elevavidrios (alza cristales),Elevavidrios
+Carros,Limpiaparabrisas (plumillas),Plumillas (limpiaparabrisas)
+Carros,Asientos y tapizados,Sillas y tapizados
+Carros,Retrovisores interiores,Espejos retrovisores interiores
+Carros,Ventiladores de AC,Blowers (ventiladores de AC)
+Carros,Motores de ventilación,ELIMINADA (duplicada de Blowers (ventiladores de AC))
+Motos,Cadenas de repartición,Cadenillas (cadenas de repartición)
+Motos,Tensores y guías,Tensores y guías de cadenilla
+Motos,Kits de repartición,Kits de cadenilla
+Motos,Piñones (sprocket),Piñones
+Motos,Catalinas,Catalinas (sprocket trasero)
+Motos,Pedales de arranque (kick),Pedales de arranque (crank)
+Motos,Exhostos,Exostos
+Motos,Empaques de exhosto,Empaques de exosto
+Motos,Guayas de ahogador,Guayas de choke (ahogador)
+Motos,Guardafangos,Guardabarros
+Motos,Caballetes (patas),Patas y caballetes
+Motos,Mordazas / calipers,Mordazas (calipers)
+Motos,Bombas de freno (cilindro maestro),Bombas de freno
+Motos,Bombines de freno,Cilindros de freno
+Motos,Palancas (maniguetas) y pedales de freno,Maniguetas y pedales de freno
+Motos,"Kits de suspensión delantera (retenedores, guardapolvos)",Kits de barras (retenedores y guardapolvos)
+Motos,Manzanas de dirección (rodamientos),Cunas de dirección
+Motos,Reguladores / rectificadores,Reguladores (rectificadores)
+Motos,CDI / módulos de encendido,CDI (módulos de encendido)
+Motos,Estatores (bobina de carga),Estatores (platos de bobinas)
+Motos,Manzanas (cubos) de rueda,Manzanas de rueda
+Motos,Cubremotos (pijamas),Pijamas (cubremotos)
+Motos,Parabrisas y soportes,Cúpulas (parabrisas) y soportes
+Motos,Cargadores USB,ELIMINADA (duplicada de Cargadores USB (Accesorios de moto))
+Motos,Llaves y dados,Llaves y copas

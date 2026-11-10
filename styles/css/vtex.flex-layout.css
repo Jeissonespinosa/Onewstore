@@ -108,9 +108,11 @@
   padding-bottom: 1rem;
 }
 
-/* --- Home Repuestox: split hero (Carros | Motos) --- */
+/* --- Home Repuestox: entrada (Carros | Motos) --- */
+
+/* Dos imagenes full-bleed, sin padding ni separacion entre ellas. */
 .flexRow--repuestoxSplitHero {
-  padding: 2.5rem 1rem;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -119,47 +121,64 @@
 .flexRowContent--repuestoxSplitHero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  width: min(92vw, 38rem);
-  max-width: 100%;
-  margin: 0 auto;
+  grid-auto-rows: 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  /* Pantalla completa: el header va superpuesto (sin barra
+     propia), asi que no hay nada que descontar del viewport. */
+  height: 100vh;
+  height: 100svh;
+  min-height: 30rem;
+  margin: 0;
   padding: 0;
 }
 
-.stretchChildrenWidth--repuestoxSplitHero {
+/* El wrapper de cada columna no lleva el modificador del blockClass,
+   por eso se apunta desde el contenedor; pisa el width inline que
+   calcula flex-layout (50%). */
+.flexRowContent--repuestoxSplitHero .stretchChildrenWidth {
   width: 100% !important;
   max-width: none !important;
   padding: 0 !important;
   margin: 0 !important;
   display: block;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
 }
 
 .flexCol--repuestoxSplitCol {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
   background-color: #f5f6f8;
   cursor: pointer;
 }
 
+/* Movil: las dos tarjetas se reparten la pantalla al 50% cada una. */
 @media screen and (min-width: 48em) {
-  .flexRow--repuestoxSplitHero {
-    padding: 3rem 1rem 3.5rem;
-  }
-
   .flexRowContent--repuestoxSplitHero {
     grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-    width: 80vw;
   }
 
-  .flexCol--repuestoxSplitCol {
-    aspect-ratio: auto;
-    height: min(calc(100vh - 11rem), 38rem);
-    min-height: 22rem;
+  /* HERRAMIENTAS: una sola imagen de lado a lado debajo del selector. */
+  .flexRowContent--repuestoxToolsHero {
+    grid-template-columns: 1fr;
   }
 }
+
+/* Franja de HERRAMIENTAS: mas baja que el selector (imagen 1920x600,
+   proporcion 16:5), nunca menos de 18rem. */
+.flexRowContent--repuestoxToolsHero {
+  height: auto;
+  min-height: 18rem;
+  aspect-ratio: 16 / 5;
+}
+
+
 
 .flexCol--repuestoxSplitCol .flexColChild--repuestoxSplitSlotImage,
 .flexCol--repuestoxSplitCol .flexCol--repuestoxSplitSlotImage {
@@ -181,9 +200,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 1rem 1.5rem;
+  padding: 0 1rem 2.5rem;
   margin: 0;
   pointer-events: none;
+}
+
+/* La palabra HERRAMIENTAS va al centro (en Carros | Motos va abajo).
+   Va despues de las reglas del slot y con el contenedor delante para
+   ganar en la cascada. */
+.flexRowContent--repuestoxToolsHero .flexCol--repuestoxSplitCol .flexColChild--repuestoxSplitSlotCopy,
+.flexRowContent--repuestoxToolsHero .flexCol--repuestoxSplitCol .flexCol--repuestoxSplitSlotCopy {
+  justify-content: center;
+  padding-bottom: 0;
 }
 
 .flexCol--repuestoxSplitCol:hover .imageElement--repuestoxSplitHeroImage {
@@ -254,48 +282,6 @@
   bottom: 2rem;
 }
 
-.flexCol--repuestoxCategoryCard {
-  background-color: #ffffff;
-  border: 1px solid #e3e4e6;
-  border-radius: 4px;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  margin-bottom: 0.5rem;
-}
-
-.flexCol--repuestoxCategoryCard:hover {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-}
-
-.flexRow--repuestoxCategoriesGrid {
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 0.5rem 2rem;
-}
-
-.flexRowContent--repuestoxCategoriesGrid {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.25rem;
-}
-
-.stretchChildrenWidth--repuestoxCategoryGridItem {
-  width: 100% !important;
-  max-width: 100% !important;
-  flex: 0 0 100% !important;
-  padding: 0;
-}
-
-.flexRow--repuestoxCategoryGridItem {
-  width: 100%;
-}
-
-.flexRowContent--repuestoxCategoryGridItem {
-  width: 100%;
-}
-
 @media screen and (min-width: 40em) {
   .flexRow--categoryHeroRow {
     padding: 0 1rem 2.5rem;
@@ -309,13 +295,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .flexRow--repuestoxCategoriesGrid {
-    padding: 0 1rem 2.5rem;
-  }
+  
 
-  .stretchChildrenWidth--repuestoxCategoryGridItem {
-    width: 100% !important;
-  }
+  
 }
 
 @media screen and (min-width: 64em) {
@@ -331,9 +313,7 @@
     gap: 1.5rem;
   }
 
-  .flexRowContent--repuestoxCategoriesGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+  
 }
 
 @media screen and (max-width: 56.25em) {
@@ -361,30 +341,6 @@
 }
 
 /* --- Carros landing: hero --- */
-.flexRow--carrosHero {
-  background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center center;
-  min-height: 540px;
-}
-
-.flexRowContent--carrosHero {
-  min-height: 540px;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.52);
-  padding: 4rem 1.5rem;
-  box-sizing: border-box;
-}
-
-.flexCol--carrosHeroContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 800px;
-  width: 100%;
-}
 
 /* --- Carros landing: CTA banner --- */
 .flexRow--carrosCtaBanner {
@@ -462,4 +418,1207 @@
   gap: 1.25rem;
 }
 
+/* ============================================================
+   HERO — estructura de cada slide
+   La fila define la altura; los dos wrappers de columna se
+   apilan en la misma caja (media detras, contenido delante).
+   El radio y la separacion del borde los pone el contenedor
+   del slider (vtex.slider-layout.css).
+   ============================================================ */
+.flexRow--rxSlide {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--rx-ink);
+}
 
+.flexRowContent--rxSlide {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: clamp(30rem, 118vw, 36rem);
+}
+
+@media screen and (min-width: 48em) {
+  .flexRowContent--rxSlide {
+    height: min(76vh, 40rem);
+    height: min(76svh, 40rem);
+  }
+}
+
+/* Los dos wrappers ocupan la misma caja. El contenido va
+   despues en el DOM, asi que pinta encima sin z-index. */
+.flexRowContent--rxSlide .stretchChildrenWidth {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexCol--rxSlideMedia {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Contenido: texto centrado verticalmente; abajo queda una
+   banda de 5.5rem reservada para pildoras, puntos y flechas. */
+.flexCol--rxSlideContent {
+  width: 100%;
+  height: 100%;
+  padding: 2rem var(--rx-hero-pad) 6.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* Velo direccional: protege la legibilidad del texto sin
+     apagar la mitad derecha de la foto. */
+  background-image: linear-gradient(
+    100deg,
+    rgba(1, 1, 1, 0.78) 0%,
+    rgba(1, 1, 1, 0.55) 38%,
+    rgba(1, 1, 1, 0.12) 70%,
+    rgba(1, 1, 1, 0) 90%
+  );
+}
+
+/* Los hijos del contenido no deben estirarse a todo el ancho:
+   la medida corta es lo que mantiene el bloque legible. */
+.flexColChild--rxSlideContent {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 64em) {
+  .flexColChild--rxSlideContent {
+    max-width: 36rem;
+  }
+}
+
+.flexRow--rxCtas {
+  width: 100%;
+  margin: 1.75rem 0 0;
+  padding: 0;
+}
+
+.flexRowContent--rxCtas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxCtas .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Banda inferior: linea fina de lado a lado y pildoras de
+   confianza a la izquierda. Puntos y flechas del slider se
+   colocan sobre la misma banda desde vtex.slider-layout.css. */
+.flexRow--rxTrust {
+  position: absolute;
+  left: var(--rx-hero-pad);
+  right: var(--rx-hero-pad);
+  bottom: 0;
+  width: auto;
+  margin: 0;
+  padding: 1.1rem 0 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.flexRowContent--rxTrust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxTrust .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ============================================================
+   TARJETAS DE CATEGORIA — seccion, contenedor y tarjeta
+   Tarjetas grises redondeadas (referencias/home): sin borde, la
+   imagen flota en la mitad superior y el nombre va abajo. Se
+   usan en el rail de macros y en todas las cuadriculas.
+   ============================================================ */
+.flexRow--rxLineasSection {
+  width: 100%;
+  margin: 0;
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(1.5rem, 3vw, 2.5rem);
+  background-color: var(--rx-paper);
+}
+
+.flexRowContent--rxLineasSection {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxLineasSection .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexCol--rxLineasInner {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.flexCol--rxLineaCard {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--rx-surface);
+  border: 0;
+  border-radius: var(--rx-radius);
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.flexCol--rxLineaCard:hover {
+  background-color: var(--rx-surface-2);
+}
+
+/* La foto flota centrada en la mitad superior. */
+.flexCol--rxLineaMedia {
+  width: 100%;
+  min-height: 15rem;
+  padding: 2rem 1.5rem 0.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48em) {
+  .flexCol--rxLineaMedia {
+    min-height: 17rem;
+  }
+}
+
+.flexRow--rxLineaFoot {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxLineaFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.flexRowContent--rxLineaFoot .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ============================================================
+   PRODUCTOS — seccion y cabecera del rail de catalogo
+   ============================================================ */
+.flexRow--rxProductosSection {
+  width: 100%;
+  margin: 0;
+  padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem);
+  background-color: var(--rx-paper);
+}
+
+.flexRowContent--rxProductosSection {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxProductosSection .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexCol--rxProductosInner {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRow--rxProductosHead {
+  width: 100%;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.flexRowContent--rxProductosHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxProductosHead .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ----- panel inferior de la tarjeta de producto ----- */
+.flexCol--rxCardInfo {
+  width: 100%;
+  margin: 0.75rem 0 0;
+  padding: 0.9rem 1.1rem 1.1rem;
+  background-color: var(--rx-surface);
+  border-radius: 14px;
+}
+
+.flexColChild--rxCardInfo {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nombre a la izquierda, precio a la derecha: grid de dos
+   columnas sobre los wrappers de flex-layout. */
+.flexRow--rxCardMain {
+  width: 100%;
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.flexRowContent--rxCardMain {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 0.75rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxCardMain .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexCol--rxCardPrice {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
+
+.flexColChild--rxCardPrice {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* En movil la tarjeta va a media pantalla: el nombre y el precio no
+   caben en dos columnas y se montaban uno sobre otro. */
+@media screen and (max-width: 40em) {
+  .flexRowContent--rxCardMain {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.35rem;
+  }
+
+  .flexCol--rxCardPrice {
+    align-items: flex-start;
+  }
+
+  .flexCol--rxCardInfo {
+    padding: 0.75rem 0.85rem 0.9rem;
+  }
+}
+
+/* ============================================================
+   BANNER CTA — misma tarjeta redondeada del hero, mas baja
+   ============================================================ */
+.flexRow--carrosCtaBanner {
+  width: auto;
+  min-height: 0;
+  margin: 0 var(--rx-gutter) clamp(3rem, 6vw, 5rem);
+  border-radius: var(--rx-radius);
+  overflow: hidden;
+  background-image: linear-gradient(rgba(1, 1, 1, 0.62), rgba(1, 1, 1, 0.62)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center center;
+}
+
+.flexRowContent--carrosCtaBanner {
+  min-height: 20rem;
+  max-width: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem var(--rx-hero-pad);
+  box-sizing: border-box;
+}
+
+.flexCol--carrosCtaBannerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 44rem;
+  width: 100%;
+}
+
+/* ============================================================
+   PAGINA DE CATEGORIA — /carros/<...>, /motos/<...>
+   Banner de apertura: misma tarjeta redondeada del hero, mas
+   baja. La imagen de campana (1600x400, rxLineaBannerMedia +
+   rxSlideImage) va de fondo y el texto encima con un velo
+   oscuro a la izquierda. Debajo, la barra "Volver" (rxBackBar).
+   ============================================================ */
+.flexRow--rxLineaBanner {
+  position: relative;
+  width: auto;
+  max-width: 96rem;
+  margin: 0.75rem var(--rx-gutter) 0;
+  padding: 0;
+  border-radius: var(--rx-radius);
+  overflow: hidden;
+  background-color: var(--rx-ink);
+  background-image: linear-gradient(
+    115deg,
+    rgba(255, 55, 30, 0) 55%,
+    rgba(255, 55, 30, 0.16) 55.2%,
+    rgba(255, 55, 30, 0.16) 72%,
+    rgba(255, 55, 30, 0) 72.2%
+  );
+}
+
+@media screen and (min-width: 100em) {
+  .flexRow--rxLineaBanner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flexRowContent--rxLineaBanner {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  min-height: clamp(13rem, 34vw, 15rem);
+}
+
+@media screen and (min-width: 48em) {
+  .flexRowContent--rxLineaBanner {
+    min-height: min(40vh, 20rem);
+    min-height: min(40svh, 20rem);
+  }
+}
+
+/* Imagen y contenido apilados: ambos ocupan todo el banner; el
+   contenido va despues en el DOM y pinta encima de la foto. */
+.flexRowContent--rxLineaBanner .stretchChildrenWidth {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+}
+
+.flexCol--rxLineaBannerMedia {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.flexCol--rxLineaBannerContent {
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem var(--rx-hero-pad);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* Velo para que el texto se lea sobre cualquier foto. */
+  background-image: linear-gradient(
+    100deg,
+    rgba(1, 1, 1, 0.82) 0%,
+    rgba(1, 1, 1, 0.55) 42%,
+    rgba(1, 1, 1, 0.1) 74%,
+    rgba(1, 1, 1, 0) 92%
+  );
+}
+
+/* Fila del selector de medida (react/TyreSizeSelector.js). */
+.flexRow--rxSizeRow {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1rem, 2vw, 1.5rem) var(--rx-gutter) 0;
+}
+
+.flexRowContent--rxSizeRow {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Movil: la barra de filtros flota abajo como pildora --- */
+@media screen and (max-width: 48em) {
+  .flexRow--rxFilterbarM {
+    position: fixed;
+    left: 50%;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 60;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .flexRowContent--rxFilterbarM {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    background-color: var(--rx-ink);
+    border-radius: 999px;
+    box-shadow: 0 14px 34px rgba(1, 1, 1, 0.32);
+    pointer-events: auto;
+  }
+
+  .flexRowContent--rxFilterbarM .stretchChildrenWidth {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0.35rem 1.15rem !important;
+  }
+
+  /* raya divisoria entre "Filtrar" y "Ordenar" (VTEX no admite el
+     combinador "+", asi que la linea va en el borde derecho del primero
+     y se apaga en el ultimo con :last-child) */
+  .flexRowContent--rxFilterbarM .stretchChildrenWidth {
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .flexRowContent--rxFilterbarM .stretchChildrenWidth:last-child {
+    border-right: 0;
+  }
+
+  /* los productos no pueden quedar debajo de la pildora */
+  .flexRow--rxResultsF {
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* Cabecera de la pagina nativa de categoria (miga de pan + titulo). */
+.flexRow--rxCatHead {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 0;
+}
+
+.flexRowContent--rxCatHead {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexCol--rxCatHeadInner {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+  gap: 0.5rem;
+}
+
+/* Barra "Volver" entre el banner y la cuadricula. */
+.flexRow--rxBackBar {
+  width: auto;
+  max-width: 96rem;
+  margin: 1.25rem var(--rx-gutter) 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 100em) {
+  .flexRow--rxBackBar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.flexRowContent--rxBackBar {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flexRowContent--rxBackBar .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexColChild--rxLineaBannerContent {
+  width: 100%;
+  max-width: 36rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cuerpo de la pagina de linea: vacio mientras se define. */
+
+/* Tarjeta de linea con subtitulo: nombre y detalle apilados. */
+
+/* ============================================================
+   LINEAS DE PRODUCTO — cuadricula compacta (landings)
+   Todas las lineas a la vista: 6 / 4 / 3 columnas. La tarjeta
+   es la misma (rxLineaCard) pero mas baja.
+   ============================================================ */
+.flexRow--rxLineasGrid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex con salto en vez de grid: asi la ultima fila incompleta
+   (11 lineas en carros) queda centrada. El ancho de cada tarjeta
+   se calcula para que quepan 3 / 4 / 6 por fila. */
+.flexRowContent--rxLineasGrid {
+  --rx-cols: 3;
+  --rx-gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--rx-gap);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 var(--rx-gutter) 1rem;
+}
+
+.flexRowContent--rxLineasGrid .stretchChildrenWidth {
+  flex: 0 0 auto;
+  width: calc((100% - (var(--rx-cols) - 1) * var(--rx-gap)) / var(--rx-cols)) !important;
+  max-width: none !important;
+  min-width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--rxLineasGrid {
+    --rx-cols: 4;
+    --rx-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .flexRowContent--rxLineasGrid {
+    --rx-cols: 6;
+    --rx-gap: 1.25rem;
+  }
+}
+
+/* Tarjeta compacta dentro de la cuadricula. */
+.flexRowContent--rxLineasGrid .flexCol--rxLineaMedia {
+  min-height: 0;
+  padding: 1.25rem 1rem 0.25rem;
+}
+
+.flexRowContent--rxLineasGrid .flexRowContent--rxLineaFoot {
+  padding: 0.6rem 1rem 1rem;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 64em) {
+  .flexRowContent--rxLineasGrid .flexCol--rxLineaMedia {
+    padding: 1.5rem 1.25rem 0.25rem;
+  }
+
+  .flexRowContent--rxLineasGrid .flexRowContent--rxLineaFoot {
+    padding: 0.75rem 1.25rem 1.1rem;
+  }
+}
+
+/* ============================================================
+   FILTRO Y LISTADO — paginas de tipo de producto
+   ============================================================ */
+.flexRow--rxFilterbar {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 1.25rem;
+}
+
+.flexRowContent--rxFilterbar {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFilterbar .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexRow--rxResults {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.flexRowContent--rxResults {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRow--rxEmpty {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 clamp(3rem, 6vw, 5rem);
+}
+
+.flexRowContent--rxEmpty {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+/* ============================================================
+   FILTROS — layout con columna izquierda (subpaginas de frenos)
+   ============================================================ */
+.flexRow--rxFBody {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.flexRowContent--rxFBody {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFBody .stretchChildrenWidth {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* El ancho del panel lo fija la prop width del col (24%); el
+   wrapper de flex-layout no recibe modificador propio. */
+
+/* Panel de filtros: tarjeta gris redondeada de la referencia. */
+.flexCol--rxFSide {
+  position: sticky;
+  top: 6rem;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+.flexColChild--rxFSide {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.flexCol--rxFMain {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRow--rxFilterbarF {
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.flexRowContent--rxFilterbarF {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxFilterbarF .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexRow--rxResultsF {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxResultsF {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Movil: selector de vehiculo arriba, en tarjeta gris. */
+.flexRow--rxFVehicleM {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem 0 0;
+}
+
+.flexRowContent--rxFVehicleM {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFVehicleM .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 1.25rem !important;
+  margin: 0 !important;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+.flexRow--rxFilterbarM {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem 0 1rem;
+}
+
+.flexRowContent--rxFilterbarM {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFilterbarM .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 47.99em) {
+  .flexRowContent--rxResultsF {
+    padding: 0 var(--rx-gutter);
+  }
+}
+
+/* ============================================================
+   HERRAMIENTAS DE SECCION — buscador y "Busca por tu carro/moto"
+   ============================================================ */
+.flexRow--rxToolsSearch {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+}
+
+.flexRowContent--rxToolsSearch {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRow--rxSearchInner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxSearchInner {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+  transition: padding 0.2s ease;
+}
+
+.flexRowContent--rxSearchInner .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: 56rem !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* Panel "Busca por tu carro/moto": tarjeta gris con el selector en fila. */
+.flexRow--rxToolsVehicle {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
+}
+
+.flexRowContent--rxToolsVehicle {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxToolsVehicle .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1.25rem 1.5rem !important;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+@media screen and (min-width: 48em) {
+  .flexRowContent--rxToolsVehicle .stretchChildrenWidth {
+    padding: 2.75rem 2.5rem 2rem !important;
+  }
+}
+
+/* Variante de 5 columnas (carros, 9 lineas): 5+4 en escritorio y
+   3+3+3 en tablet/movil, filas proporcionadas. */
+.flexRowContent--rxLineasGrid5 {
+  --rx-cols: 3;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--rxLineasGrid5 {
+    --rx-cols: 3;
+    --rx-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .flexRowContent--rxLineasGrid5 {
+    --rx-cols: 5;
+    --rx-gap: 1.25rem;
+  }
+}
+
+/* ============================================================
+   FILTROS — layout con columna izquierda (subpaginas de frenos)
+   ============================================================ */
+.flexRow--rxFBody {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.flexRowContent--rxFBody {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFBody .stretchChildrenWidth {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* El ancho del panel lo fija la prop width del col (24%); el
+   wrapper de flex-layout no recibe modificador propio. */
+
+/* Panel de filtros: tarjeta gris redondeada de la referencia. */
+.flexCol--rxFSide {
+  position: sticky;
+  top: 6rem;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+.flexColChild--rxFSide {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.flexCol--rxFMain {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRow--rxFilterbarF {
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.flexRowContent--rxFilterbarF {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxFilterbarF .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flexRow--rxResultsF {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxResultsF {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Movil: selector de vehiculo arriba, en tarjeta gris. */
+.flexRow--rxFVehicleM {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem 0 0;
+}
+
+.flexRowContent--rxFVehicleM {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFVehicleM .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 1.25rem !important;
+  margin: 0 !important;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+.flexRow--rxFilterbarM {
+  width: 100%;
+  margin: 0;
+  padding: 1.25rem 0 1rem;
+}
+
+.flexRowContent--rxFilterbarM {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxFilterbarM .stretchChildrenWidth {
+  width: auto !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 47.99em) {
+  .flexRowContent--rxResultsF {
+    padding: 0 var(--rx-gutter);
+  }
+}
+
+/* ============================================================
+   HERRAMIENTAS DE SECCION — buscador y "Busca por tu carro/moto"
+   ============================================================ */
+.flexRow--rxToolsSearch {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+}
+
+.flexRowContent--rxToolsSearch {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRow--rxSearchInner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flexRowContent--rxSearchInner {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+  transition: padding 0.2s ease;
+}
+
+.flexRowContent--rxSearchInner .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: 56rem !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* Panel "Busca por tu carro/moto": tarjeta gris con el selector en fila. */
+.flexRow--rxToolsVehicle {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
+}
+
+.flexRowContent--rxToolsVehicle {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+.flexRowContent--rxToolsVehicle .stretchChildrenWidth {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1.25rem 1.5rem !important;
+  background-color: var(--rx-surface);
+  border-radius: var(--rx-radius);
+}
+
+@media screen and (min-width: 48em) {
+  .flexRowContent--rxToolsVehicle .stretchChildrenWidth {
+    padding: 2.75rem 2.5rem 2rem !important;
+  }
+}
+
+/* Variante de 5 columnas (carros, 9 lineas): 5+4 en escritorio y
+   3+3+3 en tablet/movil, filas proporcionadas. */
+.flexRowContent--rxLineasGrid5 {
+  --rx-cols: 3;
+}
+
+@media screen and (min-width: 40em) {
+  .flexRowContent--rxLineasGrid5 {
+    --rx-cols: 3;
+    --rx-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .flexRowContent--rxLineasGrid5 {
+    --rx-cols: 5;
+    --rx-gap: 1.25rem;
+  }
+}
+
+/* Tarjeta compacta solo de texto (categorias sin icono): misma
+   tarjeta gris, sin la zona de imagen; el nombre y la flecha van
+   centrados en vertical para alinearse con las tarjetas con icono
+   de la misma fila. */
+
+.flexRowContent--rxLineasGrid .flexCol--rxLineaCardText .flexRowContent--rxLineaFoot {
+  padding: 1rem 1rem;
+}
+
+@media screen and (min-width: 64em) {
+  .flexRowContent--rxLineasGrid .flexCol--rxLineaCardText .flexRowContent--rxLineaFoot {
+    padding: 1.1rem 1.25rem;
+  }
+}

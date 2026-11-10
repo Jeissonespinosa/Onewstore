@@ -67,7 +67,8 @@ store/
   blocks/
     header/            Header, menú de categorías
     footer/            Footer y su menú
-    home/              Home, home de Repuestox y landings (carros / motos)
+    home/              Home, landings (carros / motos) y páginas de categoría
+                       (category-*.jsonc: GENERADAS, ver abajo)
     pdp/               Página de producto: assembly, gifts, tabla de especificaciones
     product-summary/   Tarjeta de producto, quickview, listas
     categories.jsonc   Plantillas de las páginas de línea de producto
@@ -77,7 +78,68 @@ styles/
   css/                 Overrides de CSS por app (vtex.store-header.css, vtex.flex-layout.css, ...)
 sitemap/               Configuración del sitemap
 docs/                  Documentación y assets de apoyo (contact-schema.json, Buton.png)
+catalogo/              Estructura de categorías (CSV + JSON) e íconos SVG por categoría
+scripts/               gen-categorias.py (páginas de categoría) y gen-sinonimos.py
+                       (CSV de sinónimos para Intelligent Search); tests en scripts/tests/
 ```
+
+### Páginas de categoría (generadas)
+
+Las rutas `/carros/...`, `/motos/...` y `/herramientas/...` (macro → subcategoría →
+tipo de producto, ~600 páginas) **no se editan a mano**: salen de
+`catalogo/estructura-categorias-v2.json` (la fuente; el orden de las macros es el
+orden en que se muestran) con
+
+```bash
+python3 scripts/gen-categorias.py            # listados vacíos (placeholder)
+python3 scripts/gen-categorias.py --real     # cuando las categorías ya existan en el catálogo
+python3 scripts/gen-categorias.py --dry-run  # enumera lo que escribiría, sin tocar nada
+python3 scripts/gen-categorias.py --force    # escribe aunque haya enlaces rotos o rutas manuales
+python3 -m unittest scripts/tests/test_gen_categorias.py
+```
+
+Valida las entradas antes de escribir, escribe de forma atómica (temporal + `os.replace`,
+así un fallo no deja el theme a medias), aborta si un enlace interno apunta a una ruta
+inexistente o si se perdería una ruta hecha a mano (queda registrada en
+`catalogo/rutas-eliminadas.txt`).
+
+Escribe `store/routes.json` (conserva las rutas que no son de categoría), exporta
+`catalogo/estructura-categorias-v2.csv` (rutas + sinónimos, para el admin) y, en
+`store/blocks/home/`: `category-rail.jsonc` (cuadrícula "Explora por categoría" de
+las landings y la landing `/herramientas`), `category-pages-<sección>.jsonc` (banner,
+"Volver" de cada página), `category-grids-<sección>.jsonc` (cuadrícula de hijos),
+`category-listing.jsonc` (listado + consulta por página) y `category-filters.jsonc`
+(filtros + selector de vehículo en las hojas de carros y motos). Para cambiar una
+categoría, edita el JSON y vuelve a correr el script (valida solo que ningún enlace interno apunte a una ruta inexistente);
+después reinicia `vtex link`
+(el relink incremental rechaza los archivos grandes).
+
+### Medidas de las imágenes
+
+| Dónde | Bloque (`src`) | Medida | Notas |
+|---|---|---|---|
+| Hero de `/carros` y `/motos` (slider) | `image#rx-<sec>-slide-N-img` | 1600×700 JPG | El texto va a la izquierda con velo oscuro; motivo a la derecha |
+| Banner de cada categoría (campaña) | `image#rx-p-<página>-banner-img` | 1600×400 JPG/PNG | Igual: texto a la izquierda, motivo a la derecha. Se recorta (cover) según el ancho |
+| Tarjetas del rail de macros | `image#rx-<sec>-linea-NN-img` | 800×500 PNG | Fondo blanco o transparente, producto centrado |
+| Tarjetas de subcategorías y tipos | `image#rx-g-<página>-<hijo>-img` | 800×500 PNG | Misma tarjeta que las macros |
+| Home: mitad Carros / Motos | `image#repuestox-split-*-bg` | 1200×1400 JPG | Vertical, se recorta a la mitad de la pantalla |
+| Home: franja HERRAMIENTAS (bajo el selector) | `image#repuestox-split-herramientas-bg` | 1920×600 JPG | De lado a lado, proporción 16:5; la palabra va centrada, dejar el centro despejado. Hoy lleva una ilustración vectorial |
+| Marcas (logos) | `image#repuestox-brand-N-*` | 360×112 PNG | Se muestra a 180×56, fondo transparente |
+
+### Sinónimos de Intelligent Search
+
+```bash
+python3 scripts/gen-sinonimos.py            # escribe los CSV
+python3 scripts/gen-sinonimos.py --dry-run  # solo informa
+python3 -m unittest scripts/tests/test_sinonimos.py
+```
+
+Lee `_sinonimos` del mismo JSON del catálogo y escribe
+`catalogo/sinonimos-intelligent-search-N.csv` (formato bidireccional de VTEX,
+`términos,separados,por,coma;true`, máximo 20 KB por archivo — el script corta en 16 KB)
+y `catalogo/sinonimos-conflictos.txt` con los términos descartados y las decisiones que
+debe tomar el negocio. Se importan en *Admin › Storefront › Intelligent Search ›
+Sinónimos › Importar*, un archivo a la vez; tardan hasta 2 horas en aplicar.
 
 ### Rutas personalizadas
 
@@ -97,6 +159,9 @@ Definidas en `store/routes.json`:
 | `/linea-productos/equipos-de-diagnostico` | `store.custom#categoria-equipos-diagnostico` |
 | `/linea-productos/sistemas-de-respaldo` | `store.custom#categoria-sistemas-respaldo` |
 | `/linea-productos/baterias-de-traccion` | `store.custom#categoria-baterias-traccion` |
+| `/carros/<macro>[/<sub>][/<hoja>]` | `store.custom#carros-...` (generadas) |
+| `/motos/<macro>[/<sub>][/<hoja>]` | `store.custom#motos-...` (generadas) |
+| `/herramientas` y `/herramientas/<macro>[/<hoja>]` | `store.custom#landing-herramientas`, `store.custom#herramientas-...` (generadas) |
 
 ---
 

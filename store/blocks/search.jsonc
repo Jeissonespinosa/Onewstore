@@ -1,6 +1,23 @@
+/* ============================================================
+   BUSQUEDA Y PAGINAS NATIVAS DE CATEGORIA
+   ------------------------------------------------------------
+   store.search#department / #category / #subcategory son las
+   paginas que VTEX sirve cuando la categoria EXISTE en el
+   catalogo. Usan el mismo layout con filtros y selector de
+   vehiculo de las paginas generadas (bloques #rx-f de
+   category-filters.jsonc), asi la vitrina se ve igual venga de
+   donde venga. Las categorias marcadas "catalogo": true en
+   catalogo/estructura-categorias-v2.json ya no generan pagina
+   propia: las sirve VTEX con estos bloques.
+
+   store.search (busqueda por texto) conserva el layout del
+   theme base.
+   ============================================================ */
 {
   "store.search": {
-    "blocks": ["search-result-layout"],
+    "blocks": [
+      "search-result-layout"
+    ],
     "props": {
       "context": {
         "skusFilter": "ALL",
@@ -8,9 +25,10 @@
       }
     }
   },
-
   "store.search#brand": {
-    "blocks": ["search-result-layout"],
+    "blocks": [
+      "search-result-layout"
+    ],
     "props": {
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
@@ -21,37 +39,39 @@
       }
     }
   },
-
   "store.search#department": {
-    "blocks": ["search-result-layout"],
+    "blocks": [
+      "search-result-layout#rx-cat"
+    ],
     "props": {
       "context": {
-        "skusFilter": "ALL",
+        "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip"
       }
     }
   },
-
   "store.search#category": {
-    "blocks": ["search-result-layout"],
+    "blocks": [
+      "search-result-layout#rx-cat"
+    ],
     "props": {
       "context": {
-        "skusFilter": "ALL",
+        "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip"
       }
     }
   },
-
   "store.search#subcategory": {
-    "blocks": ["search-result-layout"],
+    "blocks": [
+      "search-result-layout#rx-cat"
+    ],
     "props": {
       "context": {
-        "skusFilter": "ALL",
+        "skusFilter": "FIRST_AVAILABLE",
         "simulationBehavior": "skip"
       }
     }
   },
-
   "search-result-layout": {
     "blocks": [
       "search-result-layout.desktop",
@@ -59,7 +79,6 @@
       "search-not-found-layout"
     ]
   },
-
   "search-result-layout.desktop": {
     "children": [
       "flex-layout.row#searchbread",
@@ -73,24 +92,33 @@
     }
   },
   "flex-layout.row#searchbread": {
-    "children": ["breadcrumb.search"],
+    "children": [
+      "breadcrumb.search"
+    ],
     "props": {
       "preserveLayoutOnMobile": true,
       "fullWidth": true
     }
   },
   "flex-layout.row#searchtitle": {
-    "children": ["search-title.v2"]
+    "children": [
+      "search-title.v2"
+    ]
   },
   "flex-layout.row#result": {
-    "children": ["flex-layout.col#filter", "flex-layout.col#content"],
+    "children": [
+      "flex-layout.col#filter",
+      "flex-layout.col#content"
+    ],
     "props": {
       "preventHorizontalStretch": true,
       "fullWidth": true
     }
   },
   "flex-layout.col#filter": {
-    "children": ["filter-navigator.v3"],
+    "children": [
+      "filter-navigator.v3"
+    ],
     "props": {
       "blockClass": "filterCol"
     }
@@ -108,10 +136,16 @@
     }
   },
   "flex-layout.row#searchinfo": {
-    "children": ["flex-layout.col#productCount", "flex-layout.row#orderByAndSwitcher"]
+    "children": [
+      "flex-layout.col#productCount",
+      "flex-layout.row#orderByAndSwitcher"
+    ]
   },
   "flex-layout.row#orderByAndSwitcher": {
-    "children": ["order-by.v2", "gallery-layout-switcher"],
+    "children": [
+      "order-by.v2",
+      "gallery-layout-switcher"
+    ],
     "props": {
       "horizontalAlign": "right",
       "preventHorizontalStretch": true,
@@ -120,7 +154,9 @@
     }
   },
   "flex-layout.col#productCount": {
-    "children": ["total-products.v2"],
+    "children": [
+      "total-products.v2"
+    ],
     "props": {
       "blockClass": "productCountCol"
     }
@@ -129,13 +165,17 @@
     "props": {
       "marginBottom": 3
     },
-    "children": ["search-fetch-previous"]
+    "children": [
+      "search-fetch-previous"
+    ]
   },
   "flex-layout.row#fetchmore": {
     "props": {
       "marginTop": 3
     },
-    "children": ["search-fetch-more"]
+    "children": [
+      "search-fetch-more"
+    ]
   },
   "search-fetch-previous": {
     "props": {
@@ -148,12 +188,16 @@
     }
   },
   "flex-layout.row#products": {
-    "children": ["search-content"]
+    "children": [
+      "search-content"
+    ]
   },
   "search-content": {
-    "blocks": ["gallery", "not-found"]
+    "blocks": [
+      "gallery",
+      "not-found"
+    ]
   },
-
   "search-result-layout.mobile": {
     "children": [
       "flex-layout.row#searchinfomobile",
@@ -173,12 +217,13 @@
     }
   },
   "flex-layout.row#contentmobile": {
-    "children": ["search-content"],
+    "children": [
+      "search-content"
+    ],
     "props": {
       "preserveLayoutOnMobile": true
     }
   },
-
   "flex-layout.row#searchinfomobile": {
     "children": [
       "flex-layout.col#orderByMobile",
@@ -191,50 +236,57 @@
       "colJustify": "around"
     }
   },
-
   "flex-layout.col#orderByMobile": {
-    "children": ["order-by.v2"],
+    "children": [
+      "order-by.v2"
+    ],
     "props": {
       "blockClass": "orderByMobileCol"
     }
   },
-
   "flex-layout.row#productCountMobile": {
-    "children": ["total-products.v2"],
+    "children": [
+      "total-products.v2"
+    ],
     "props": {
       "blockClass": "productCountMobileRow"
     }
   },
-
   "flex-layout.col#filterMobile": {
-    "children": ["filter-navigator.v3"],
+    "children": [
+      "filter-navigator.v3"
+    ],
     "props": {
       "blockClass": "filterMobileCol"
     }
   },
   "flex-layout.col#switcherMobile": {
-    "children": ["gallery-layout-switcher"],
+    "children": [
+      "gallery-layout-switcher"
+    ],
     "props": {
       "verticalAlign": "middle"
     }
   },
   "search-not-found-layout": {
-    "children": ["flex-layout.row#searchbread", "flex-layout.row#notfound"]
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#notfound"
+    ]
   },
-
   "flex-layout.row#notfound": {
-    "children": ["not-found"],
+    "children": [
+      "not-found"
+    ],
     "props": {
       "fullWidth": true
     }
   },
-
   "breadcrumb": {
     "props": {
       "showOnMobile": true
     }
   },
-
   "gallery": {
     "props": {
       "layouts": [
@@ -260,10 +312,6 @@
   },
   "gallery-layout-switcher": {
     "children": [
-      /*
-       * For accessbility to work properly,
-       * It's important to define the options in the same order as the layouts
-       */
       "gallery-layout-option#grid",
       "gallery-layout-option#list"
     ]
@@ -308,6 +356,74 @@
       "text": "List",
       "textColor": "c-auto",
       "blockClass": "layout-option"
+    }
+  },
+  "search-result-layout#rx-cat": {
+    "blocks": [
+      "search-result-layout.desktop#rx-cat",
+      "search-result-layout.mobile#rx-cat",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.desktop#rx-cat": {
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "rxF"
+    },
+    "children": [
+      "flex-layout.row#rx-cat-head",
+      "flex-layout.row#rx-size",
+      "flex-layout.row#rx-f-body"
+    ]
+  },
+  "search-result-layout.mobile#rx-cat": {
+    "props": {
+      "pagination": "show-more",
+      "preventRouteChange": true,
+      "defaultGalleryLayout": "grid",
+      "blockClass": "rxF"
+    },
+    "children": [
+      "flex-layout.row#rx-cat-head",
+      "flex-layout.row#rx-size",
+      "flex-layout.row#rx-f-vehicle-m",
+      "flex-layout.row#rx-results-f",
+      "flex-layout.row#rx-filterbar-m"
+    ]
+  },
+  "flex-layout.row#rx-cat-head": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxCatHead"
+    },
+    "children": [
+      "flex-layout.col#rx-cat-head-inner"
+    ]
+  },
+  "flex-layout.col#rx-cat-head-inner": {
+    "props": {
+      "blockClass": "rxCatHeadInner",
+      "width": "100%"
+    },
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2"
+    ]
+  },
+  "flex-layout.row#rx-size": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSizeRow"
+    },
+    "children": [
+      "tyre-size-selector#rx"
+    ]
+  },
+  "tyre-size-selector#rx": {
+    "props": {
+      "showOn": "llantas"
     }
   }
 }

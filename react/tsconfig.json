@@ -1,0 +1,10 @@
+{
+  "extends": "@vtex/tsconfig",
+  "compilerOptions": {
+    "lib": ["es2017", "dom"],
+    "jsx": "react",
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["./**/*"]
+}

@@ -1,0 +1,594 @@
+Departamento,Nivel,Categoría (macro),Subcategoría,Tipo de producto (hoja),URL propuesta,Sinónimos (palabras clave)
+Carros,Categoría,Llantas y rines,,,/carros/llantas-y-rines,
+Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas de automóvil,/carros/llantas-y-rines/llantas,llantas para carro; llanta; neumáticos; cauchos; llantas sedán; llanta 175; llanta 185; llanta 195; llanta 205
+Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas SUV y 4x4,/carros/llantas-y-rines/llantas,llantas camioneta; llantas 4x4; llantas todoterreno; llantas AT; llantas MT; llanta 265; llanta 245; llantas de camioneta
+Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,"Llantas de van, camión y transporte",/carros/llantas-y-rines/llantas,llantas comerciales; llantas de carga; llantas de camión; llantas de van; llantas de furgón; llantas de bus; llantas de transporte; llanta 195r15; llanta 700-16; llanta 1100-20
+Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas OTR e industriales,/carros/llantas-y-rines/llantas,llantas industriales; llantas de montacargas; llantas agrícolas; otr
+Carros,Subcategoría,Llantas y rines,Llantas,,/carros/llantas-y-rines/llantas,
+Carros,Subcategoría,Llantas y rines,Rines,,/carros/llantas-y-rines/rines,aros
+Carros,Tipo de producto,Llantas y rines,Rines,Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,rines de hierro; rines originales de acero; aros de acero
+Carros,Tipo de producto,Llantas y rines,Rines,Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,rines de lujo; rines de magnesio; aros de aluminio; rines 15; rines 16; rines 17; rines deportivos; rines originales; rines aftermarket
+Carros,Subcategoría,Llantas y rines,Accesorios de rueda,,/carros/llantas-y-rines/accesorios-de-rueda,
+Carros,Tipo de producto,Llantas y rines,Accesorios de rueda,Copas (tapacubos),/carros/llantas-y-rines/accesorios-de-rueda/copas-tapacubos,copas de rin; tapas de rin; tapacubos; embellecedores; copas
+Carros,Tipo de producto,Llantas y rines,Accesorios de rueda,Tuercas y pernos de rueda,/carros/llantas-y-rines/accesorios-de-rueda/tuercas-y-pernos-de-rueda,tuercas de rin; tuercas de seguridad; pernos de rueda; espárragos; tuercas y pernos; pernos de seguridad; tuercas antirrobo
+Carros,Tipo de producto,Llantas y rines,Accesorios de rueda,Separadores y espaciadores de rin,/carros/llantas-y-rines/accesorios-de-rueda/separadores-y-espaciadores-de-rin,separadores; espaciadores de rines; separadores de rueda
+Carros,Categoría,Lubricantes y mantenimiento,,,/carros/lubricantes-y-mantenimiento,
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,aceite; aceite de carro; lubricante de motor; 20w50; 10w30; 10w40; 5w30; 5w40; aceite sintético; aceite mineral; aceite semisintético
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,aceite de caja; valvulina; atf; aceite de caja automática; dexron; aceite 80w90
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,aceite de diferencial; valvulina 85w140; aceite de transmisión trasera
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,coolant; refrigerante; agua de radiador
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,líquido de freno; DOT 3; DOT 4
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,aceite de dirección; atf de dirección; líquido hidráulico
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Aditivos,/carros/lubricantes-y-mantenimiento/aditivos,aditivo; potenciador; limpia inyectores; aditivo para gasolina; stop leak
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Grasas,/carros/lubricantes-y-mantenimiento/grasas,grasa; grasa multiusos; grasa de litio; grasa de rodamientos
+Carros,Tipo de producto,Lubricantes y mantenimiento,,Limpiadores de sistemas,/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas,limpiador de sistema; flush de motor
+Carros,Categoría,Filtros,,,/carros/filtros,
+Carros,Tipo de producto,Filtros,,Filtros de aceite,/carros/filtros/filtros-de-aceite,filtro de aceite
+Carros,Tipo de producto,Filtros,,Filtros de aire,/carros/filtros/filtros-de-aire,filtro de aire
+Carros,Tipo de producto,Filtros,,Filtros de combustible,/carros/filtros/filtros-de-combustible,filtro de combustible; filtro de gasolina
+Carros,Tipo de producto,Filtros,,Filtros de cabina,/carros/filtros/filtros-de-cabina,filtro de aire acondicionado; filtro de polen; filtro de habitáculo; filtro de cabina
+Carros,Tipo de producto,Filtros,,Filtros de transmisión,/carros/filtros/filtros-de-transmision,filtro de caja; filtro de transmisión automática; filtro de transmisión
+Carros,Categoría,Baterías,,,/carros/baterias,
+Carros,Tipo de producto,Baterías,,Baterías para carro,/carros/baterias/baterias-para-carro,batería; batería de carro; acumulador; batería 12v; batería mac; batería willard; baterías agm y start-stop; batería agm; batería start stop; batería efb
+Carros,Tipo de producto,Baterías,,"Baterías para furgón, camión y bus",/carros/baterias/baterias-para-furgon-camion-y-bus,batería de camión; batería de furgón; batería de bus; batería 24v; batería pesada; batería de carga; batería 27 placas; batería 31t
+Carros,Tipo de producto,Baterías,,Bornes y cables de batería,/carros/baterias/bornes-y-cables-de-bateria,bornes; terminales de batería; cable de batería; protector de bornes
+Carros,Categoría,Frenos,,,/carros/frenos,
+Carros,Tipo de producto,Frenos,,Pastillas de freno,/carros/frenos/pastillas-de-freno,pastas de freno; brake pads
+Carros,Tipo de producto,Frenos,,Discos de freno,/carros/frenos/discos-de-freno,disco de freno; discos; discos ventilados; discos perforados; rotor
+Carros,Tipo de producto,Frenos,,Campanas de freno,/carros/frenos/campanas-de-freno,tambores; campanas; tambores de freno; campanas (tambores) de freno
+Carros,Tipo de producto,Frenos,,Bandas de freno,/carros/frenos/bandas-de-freno,zapatas; zapatas de freno
+Carros,Tipo de producto,Frenos,,Mordazas (calipers),/carros/frenos/mordazas-calipers,caliper; cálipers; pinzas de freno; mordazas / calipers
+Carros,Tipo de producto,Frenos,,Pistones y kits de caliper,/carros/frenos/pistones-y-kits-de-caliper,kit de caliper; pistón de caliper; kit de mordaza
+Carros,Tipo de producto,Frenos,,Cilindros de freno,/carros/frenos/cilindros-de-freno,bombines de freno; cilindros de rueda; bombín de freno
+Carros,Tipo de producto,Frenos,,Bombas de freno,/carros/frenos/bombas-de-freno,cilindro maestro; bomba principal de freno; bombas de freno (cilindro maestro)
+Carros,Tipo de producto,Frenos,,Servofreno (booster),/carros/frenos/servofreno-booster,booster; hidrovac; servofreno; servo freno; servo-freno (booster)
+Carros,Tipo de producto,Frenos,,Bombas de vacío,/carros/frenos/bombas-de-vacio,bomba de vacío; bomba de freno de vacío
+Carros,Tipo de producto,Frenos,,Sensores ABS,/carros/frenos/sensores-abs,sensor abs; sensor de rueda; sensor de velocidad de rueda
+Carros,Tipo de producto,Frenos,,Módulos y unidades ABS,/carros/frenos/modulos-y-unidades-abs,módulo abs; unidad hidráulica; bomba abs
+Carros,Tipo de producto,Frenos,,Mangueras y líneas de freno,/carros/frenos/mangueras-y-lineas-de-freno,líneas de freno; tuberías de freno; flexibles de freno; cañerías de freno; cañerías y mangueras de freno
+Carros,Tipo de producto,Frenos,,Depósitos de líquido de frenos,/carros/frenos/depositos-de-liquido-de-frenos,depósito de líquido de frenos; tanque de líquido de frenos
+Carros,Tipo de producto,Frenos,,Guayas de freno de mano,/carros/frenos/guayas-de-freno-de-mano,cable de freno de mano; guaya freno de parqueo
+Carros,Tipo de producto,Frenos,,Herrajes y pernos de pastillas,/carros/frenos/herrajes-y-pernos-de-pastillas,herrajes; clips de pastillas; pernos de caliper; pines de caliper
+Carros,Tipo de producto,Frenos,,Kits de reparación de frenos,/carros/frenos/kits-de-reparacion-de-frenos,kit de frenos; kit de reparación; empaques de bomba
+Carros,Tipo de producto,Frenos,,Sensores de desgaste de pastillas,/carros/frenos/sensores-de-desgaste-de-pastillas,sensor de desgaste; testigo de pastillas; avisador de pastillas
+Carros,Categoría,Suspensión y dirección,,,/carros/suspension-y-direccion,
+Carros,Tipo de producto,Suspensión y dirección,,Amortiguadores,/carros/suspension-y-direccion/amortiguadores,amortiguador; shock; shocks
+Carros,Tipo de producto,Suspensión y dirección,,Resortes (espirales),/carros/suspension-y-direccion/resortes-espirales,espirales; resortes; muelles; resortes de suspensión; resortes / espirales
+Carros,Tipo de producto,Suspensión y dirección,,Rótulas,/carros/suspension-y-direccion/rotulas,rótula; rótula de suspensión; ball joint
+Carros,Tipo de producto,Suspensión y dirección,,Axiales (brazos axiales),/carros/suspension-y-direccion/axiales-brazos-axiales,axial; barra axial; terminal axial; brazo axial; axiales
+Carros,Tipo de producto,Suspensión y dirección,,Bujes,/carros/suspension-y-direccion/bujes,buje; bujes de suspensión; bujes de tijera; bujes de barra
+Carros,Tipo de producto,Suspensión y dirección,,Tijeras,/carros/suspension-y-direccion/tijeras,tijera; tijera de suspensión; brazo inferior; mesa; brazos de suspensión; brazo de suspensión; brazo oscilante; control arm; parrilla de suspensión
+Carros,Tipo de producto,Suspensión y dirección,,Barras estabilizadoras,/carros/suspension-y-direccion/barras-estabilizadoras,barra estabilizadora; estabilizadora; barra de torsión
+Carros,Tipo de producto,Suspensión y dirección,,Links de estabilizadora,/carros/suspension-y-direccion/links-de-estabilizadora,link; bieleta; link de estabilizadora; tornillo estabilizador; bieletas; muñecos; tensores de estabilizadora; links
+Carros,Tipo de producto,Suspensión y dirección,,Balineras de rueda,/carros/suspension-y-direccion/balineras-de-rueda,rodamientos de rueda; balineras; rulemanes
+Carros,Tipo de producto,Suspensión y dirección,,Manzanas de rueda (cubos),/carros/suspension-y-direccion/manzanas-de-rueda-cubos,mazas; cubos; hubs; cubos de rueda; bocines; manzanas / cubos de rueda
+Carros,Tipo de producto,Suspensión y dirección,,Puntas de eje (manguetas),/carros/suspension-y-direccion/puntas-de-eje-manguetas,mangueta; punta de eje; portamanzana
+Carros,Tipo de producto,Suspensión y dirección,,Cajas de dirección (cremalleras),/carros/suspension-y-direccion/cajas-de-direccion-cremalleras,caja de dirección; cremallera de dirección; cremallera; cremalleras (caja de dirección)
+Carros,Tipo de producto,Suspensión y dirección,,Bombas de dirección hidráulica,/carros/suspension-y-direccion/bombas-de-direccion-hidraulica,bomba de dirección; bomba hidráulica
+Carros,Tipo de producto,Suspensión y dirección,,Mangueras de dirección hidráulica,/carros/suspension-y-direccion/mangueras-de-direccion-hidraulica,manguera de dirección; manguera hidráulica; tubo de dirección
+Carros,Tipo de producto,Suspensión y dirección,,Columnas y crucetas de dirección,/carros/suspension-y-direccion/columnas-y-crucetas-de-direccion,columna de dirección; cruceta de dirección; cardán de dirección
+Carros,Tipo de producto,Suspensión y dirección,,Terminales de dirección,/carros/suspension-y-direccion/terminales-de-direccion,terminal; terminal de dirección; tie rod
+Carros,Tipo de producto,Suspensión y dirección,,Copas (bases) de amortiguador,/carros/suspension-y-direccion/copas-bases-de-amortiguador,copa; copa de amortiguador; soporte de amortiguador; strut mount; bases de amortiguador; soportes de amortiguador; copas de amortiguador
+Carros,Tipo de producto,Suspensión y dirección,,Guardapolvos y fuelles,/carros/suspension-y-direccion/guardapolvos-y-fuelles,guardapolvo; fuelle; fuelle de cremallera; fuelle de homocinética
+Carros,Tipo de producto,Suspensión y dirección,,Topes de amortiguador,/carros/suspension-y-direccion/topes-de-amortiguador,tope; tope de suspensión; bumper de amortiguador; caucho de tope
+Carros,Tipo de producto,Suspensión y dirección,,Kits de tren delantero,/carros/suspension-y-direccion/kits-de-tren-delantero,tren delantero; kit tren delantero
+Carros,Tipo de producto,Suspensión y dirección,,Suspensión neumática (bolsas de aire),/carros/suspension-y-direccion/suspension-neumatica-bolsas-de-aire,suspensión de aire; air suspension
+Carros,Tipo de producto,Suspensión y dirección,,Coilovers y suspensión deportiva,/carros/suspension-y-direccion/coilovers-y-suspension-deportiva,coilover; suspensión deportiva; suspensión regulable
+Carros,Tipo de producto,Suspensión y dirección,,Ballestas (muelles de hoja),/carros/suspension-y-direccion/ballestas-muelles-de-hoja,ballesta; ballestas; muelles de hoja; hojas de resorte; elásticos; paquete de ballestas
+Carros,Categoría,Eléctrico y electrónico,,,/carros/electrico-y-electronico,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bobinas,/carros/electrico-y-electronico/encendido,bobina de encendido; bobina de chispa; coil
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Módulos y distribuidores de encendido,/carros/electrico-y-electronico/encendido,distribuidor; tapa de distribuidor; módulo de encendido
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bujías,/carros/electrico-y-electronico/encendido,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Cables de alta,/carros/electrico-y-electronico/encendido,cables de bujía; cables de encendido; juego de cables
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bujías de precalentamiento,/carros/electrico-y-electronico/encendido,bujía de precalentamiento; bujías diésel; bujía incandescente; calentadores
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Kits de sincronización (afinación),/carros/electrico-y-electronico/encendido,kit de sincronización; afinación; sincronización; tune up; kit de mantenimiento; kits de afinación (sincronización)
+Carros,Subcategoría,Eléctrico y electrónico,Encendido,,/carros/electrico-y-electronico/encendido,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Motores de arranque,/carros/electrico-y-electronico/arranque-y-carga,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Bendix y automáticos de arranque,/carros/electrico-y-electronico/arranque-y-carga,bendix; automático de arranque; solenoide de arranque; piñón de arranque
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Alternadores,/carros/electrico-y-electronico/arranque-y-carga,alternador; generador; dinamo
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Reguladores de voltaje,/carros/electrico-y-electronico/arranque-y-carga,regulador de voltaje; regulador de alternador; rectificador
+Carros,Subcategoría,Eléctrico y electrónico,Arranque y carga,,/carros/electrico-y-electronico/arranque-y-carga,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Computadores ECU,/carros/electrico-y-electronico/gestion-electronica,ecu; computador; módulo de motor; pcm; ecm
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Módulos electrónicos,/carros/electrico-y-electronico/gestion-electronica,módulo; módulo de control; caja electrónica
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Actuadores,/carros/electrico-y-electronico/gestion-electronica,actuador; actuador de ralentí; actuador iac
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,"Sensores de motor (CKP, CMP, temperatura)",/carros/electrico-y-electronico/gestion-electronica,sensor; sensor de cigüeñal; sensor ckp; sensor de temperatura; sensor de detonación; sensores de motor; sensor de motor; sensor cmp; sensor de árbol de levas
+Carros,Subcategoría,Eléctrico y electrónico,Gestión electrónica,,/carros/electrico-y-electronico/gestion-electronica,
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Fusibles,/carros/electrico-y-electronico/electrico-general,fusible; caja de fusibles; portafusibles
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Relés,/carros/electrico-y-electronico/electrico-general,relay; rele; relevador
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Suiches de encendido y cilindros de llave,/carros/electrico-y-electronico/electrico-general,suiche de encendido; switch de arranque; cilindro de llave; chapa de encendido
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Suiches e interruptores,/carros/electrico-y-electronico/electrico-general,switch; suiche; interruptor; botón; control de vidrios
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,"Llaves y controles (carcasas, chips)",/carros/electrico-y-electronico/electrico-general,llave; carcasa de llave; control de alarma; chip de llave; llave con control
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Cableado,/carros/electrico-y-electronico/electrico-general,arnés; ramal; cable; instalación eléctrica
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Conectores,/carros/electrico-y-electronico/electrico-general,conector; pacha; socket; terminal eléctrico
+Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Pitos,/carros/electrico-y-electronico/electrico-general,
+Carros,Subcategoría,Eléctrico y electrónico,Eléctrico general,,/carros/electrico-y-electronico/electrico-general,
+Carros,Categoría,Iluminación,,,/carros/iluminacion,
+Carros,Tipo de producto,Iluminación,,Farolas,/carros/iluminacion/farolas,faros; luces delanteras; headlights; farola delantera; unidad de farola; luz delantera
+Carros,Tipo de producto,Iluminación,,Stops,/carros/iluminacion/stops,luces traseras; stop; calaveras; luz de freno; farola trasera; luz trasera
+Carros,Tipo de producto,Iluminación,,Direccionales,/carros/iluminacion/direccionales,luces direccionales; intermitentes; cocuyos; luz direccional
+Carros,Tipo de producto,Iluminación,,Exploradoras,/carros/iluminacion/exploradoras,luces auxiliares; antiniebla; exploradoras led; neblineros; halógenos auxiliares
+Carros,Tipo de producto,Iluminación,,Luces LED,/carros/iluminacion/luces-led,led; luces led; bombillos led; bombillas led; focos led; luz led; kit led; led h4; led h7; led h11
+Carros,Tipo de producto,Iluminación,,Bombillos halógenos,/carros/iluminacion/bombillos-halogenos,bombillos; bombillas; focos; halógeno; h1; h3; h4; h7; h11; 9005; 9006; luz halógena
+Carros,Tipo de producto,Iluminación,,Xenón (HID),/carros/iluminacion/xenon-hid,xenon; hid; kit xenón; bi-xenón; balastro
+Carros,Tipo de producto,Iluminación,,Barras LED,/carros/iluminacion/barras-led,barra led; barra de luces; light bar; barra off road
+Carros,Tipo de producto,Iluminación,,Luces interiores,/carros/iluminacion/luces-interiores,luz de techo; luz interior; plafón; luz de cabina
+Carros,Tipo de producto,Iluminación,,Luces DRL (diurnas),/carros/iluminacion/luces-drl-diurnas,drl; luces diurnas; luz de día; daytime
+Carros,Tipo de producto,Iluminación,,Luces de placa y cortesía,/carros/iluminacion/luces-de-placa-y-cortesia,luz de placa; luz de cortesía; luz de puerta
+Carros,Categoría,Motor y transmisión,,,/carros/motor-y-transmision,
+Carros,Subcategoría,Motor y transmisión,Bloque y culata,,/carros/motor-y-transmision/bloque-y-culata,
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Pistones,/carros/motor-y-transmision/bloque-y-culata/pistones,pistón; pistones; kit de pistones
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Anillos,/carros/motor-y-transmision/bloque-y-culata/anillos,anillos de pistón; rines de pistón; segmentos
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Bielas,/carros/motor-y-transmision/bloque-y-culata/bielas,biela; bielas
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Cigüeñales,/carros/motor-y-transmision/bloque-y-culata/ciguenales,cigüeñal
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Árboles de levas,/carros/motor-y-transmision/bloque-y-culata/arboles-de-levas,árbol de levas; eje de levas
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Culatas,/carros/motor-y-transmision/bloque-y-culata/culatas,culata; cabezote; cabeza de motor
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Válvulas y guías,/carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias,guías de válvula; válvula de admisión; válvula de escape; válvula de motor; guía de válvula
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Camisas,/carros/motor-y-transmision/bloque-y-culata/camisas,camisas de cilindro; cilindros
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Retenedores de motor,/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor,retenedor; retén; sello de cigüeñal; retenedor de árbol de levas
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Bombas de aceite,/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite,bomba de aceite
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Soportes de motor,/carros/motor-y-transmision/bloque-y-culata/soportes-de-motor,soporte de motor; base de motor; cojín de motor
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Motores completos,/carros/motor-y-transmision/bloque-y-culata/motores-completos,motor completo; motor usado; motor reconstruido; motor 3/4
+Carros,Subcategoría,Motor y transmisión,Correas y tensores,,/carros/motor-y-transmision/correas-y-tensores,
+Carros,Tipo de producto,Motor y transmisión,Correas y tensores,Correas de accesorios,/carros/motor-y-transmision/correas-y-tensores/correas-de-accesorios,correa; correa de alternador; correa multicanal; correa poly v; banda
+Carros,Tipo de producto,Motor y transmisión,Correas y tensores,Tensores de correa,/carros/motor-y-transmision/correas-y-tensores/tensores-de-correa,tensor; tensor de correa; polea tensora
+Carros,Tipo de producto,Motor y transmisión,Correas y tensores,Poleas,/carros/motor-y-transmision/correas-y-tensores/poleas,polea; polea de cigüeñal; damper; polea loca
+Carros,Subcategoría,Motor y transmisión,Repartición (distribución),,/carros/motor-y-transmision/reparticion-distribucion,distribución; tiempo
+Carros,Tipo de producto,Motor y transmisión,Repartición (distribución),Correas de repartición,/carros/motor-y-transmision/reparticion-distribucion/correas-de-reparticion,correa de distribución; correa de tiempo; timing belt
+Carros,Tipo de producto,Motor y transmisión,Repartición (distribución),Cadenas de repartición,/carros/motor-y-transmision/reparticion-distribucion/cadenas-de-reparticion,cadena de distribución; cadena de tiempo; cadenilla
+Carros,Tipo de producto,Motor y transmisión,Repartición (distribución),Kits de repartición,/carros/motor-y-transmision/reparticion-distribucion/kits-de-reparticion,kit de distribución; kit de tiempo; kit de repartición
+Carros,Tipo de producto,Motor y transmisión,Repartición (distribución),Tensores y guías de repartición,/carros/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-reparticion,tensor de distribución; guía de cadena; patín de distribución
+Carros,Subcategoría,Motor y transmisión,Refrigeración,,/carros/motor-y-transmision/refrigeracion,
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Radiadores,/carros/motor-y-transmision/refrigeracion/radiadores,radiador; panal de radiador; radiador de agua
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Bombas de agua,/carros/motor-y-transmision/refrigeracion/bombas-de-agua,bomba de agua; water pump
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Termostatos,/carros/motor-y-transmision/refrigeracion/termostatos,termostato; termostato de agua
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Electroventiladores,/carros/motor-y-transmision/refrigeracion/electroventiladores,ventilador de radiador; electroventilador; ventiladores de radiador
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Mangueras de refrigeración,/carros/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion,manguera de radiador; manguera de agua; manguera superior; manguera inferior
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Depósitos de refrigerante,/carros/motor-y-transmision/refrigeracion/depositos-de-refrigerante,depósito de agua; tanque de expansión; recipiente de refrigerante
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Tapas de radiador,/carros/motor-y-transmision/refrigeracion/tapas-de-radiador,tapa de radiador; tapa de presión
+Carros,Tipo de producto,Motor y transmisión,Refrigeración,Radiadores de aceite,/carros/motor-y-transmision/refrigeracion/radiadores-de-aceite,enfriador de aceite; radiador de aceite; oil cooler
+Carros,Subcategoría,Motor y transmisión,Turbo e intercooler,,/carros/motor-y-transmision/turbo-e-intercooler,
+Carros,Tipo de producto,Motor y transmisión,Turbo e intercooler,Turbos,/carros/motor-y-transmision/turbo-e-intercooler/turbos,turbo; turbocargador; turbina; turbo cartucho
+Carros,Tipo de producto,Motor y transmisión,Turbo e intercooler,Intercoolers,/carros/motor-y-transmision/turbo-e-intercooler/intercoolers,intercooler; enfriador de aire
+Carros,Tipo de producto,Motor y transmisión,Turbo e intercooler,Mangueras de turbo e intercooler,/carros/motor-y-transmision/turbo-e-intercooler/mangueras-de-turbo-e-intercooler,manguera de turbo; manguera de intercooler; ducto de turbo
+Carros,Tipo de producto,Motor y transmisión,Turbo e intercooler,Válvulas de alivio (blow-off),/carros/motor-y-transmision/turbo-e-intercooler/valvulas-de-alivio-blow-off,blow off; válvula de alivio; pop off; wastegate
+Carros,Subcategoría,Motor y transmisión,Combustible e inyección,,/carros/motor-y-transmision/combustible-e-inyeccion,
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Bombas de gasolina,/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina,bomba de combustible; bomba de gasolina eléctrica; módulo de bomba
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Inyectores,/carros/motor-y-transmision/combustible-e-inyeccion/inyectores,inyector; inyectores de gasolina; boquillas; inyector diésel; inyectores common rail; inyectores de acpm
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Rampas de inyectores,/carros/motor-y-transmision/combustible-e-inyeccion/rampas-de-inyectores,riel de inyectores; flauta de inyectores; rampas (rieles) de inyectores
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Reguladores de presión de combustible,/carros/motor-y-transmision/combustible-e-inyeccion/reguladores-de-presion-de-combustible,regulador de presión; regulador de gasolina; reguladores de presión
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Cuerpos de aceleración,/carros/motor-y-transmision/combustible-e-inyeccion/cuerpos-de-aceleracion,cuerpo de aceleración; throttle body; mariposa
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Sensores de oxígeno,/carros/motor-y-transmision/combustible-e-inyeccion/sensores-de-oxigeno,sensor de oxígeno; sonda lambda; sensor o2
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Sensores MAP,/carros/motor-y-transmision/combustible-e-inyeccion/sensores-map,sensor map; map; sensor de presión del múltiple; sensor de presión absoluta; sensor de vacío
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Válvulas EGR y canister,/carros/motor-y-transmision/combustible-e-inyeccion/valvulas-egr-y-canister,egr; canister; válvula pcv
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Carburadores,/carros/motor-y-transmision/combustible-e-inyeccion/carburadores,carburador; carburador weber; kit de carburador
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Guayas de acelerador,/carros/motor-y-transmision/combustible-e-inyeccion/guayas-de-acelerador,cable de acelerador; chicote de acelerador
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Tanques de gasolina,/carros/motor-y-transmision/combustible-e-inyeccion/tanques-de-gasolina,tanque de gasolina; tanque de combustible; depósito de combustible
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Bombas de inyección diésel,/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-inyeccion-diesel,bomba de inyección; bomba diésel; bomba de acpm; bomba lineal; bomba rotativa
+Carros,Tipo de producto,Motor y transmisión,Combustible e inyección,Filtros separadores de agua,/carros/motor-y-transmision/combustible-e-inyeccion/filtros-separadores-de-agua,separador de agua; trampa de agua; filtro racor
+Carros,Subcategoría,Motor y transmisión,Clutch (embrague),,/carros/motor-y-transmision/clutch-embrague,
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Kits de clutch,/carros/motor-y-transmision/clutch-embrague/kits-de-clutch,kit de embrague; kit clutch; clutch; embrague
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Discos de clutch,/carros/motor-y-transmision/clutch-embrague/discos-de-clutch,disco de embrague
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Prensas de clutch,/carros/motor-y-transmision/clutch-embrague/prensas-de-clutch,prensa de embrague; plato de presión
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Balineras de clutch (collarín),/carros/motor-y-transmision/clutch-embrague/balineras-de-clutch-collarin,collarín; rodamiento de embrague; balinera de clutch
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Bombas y balibombas de clutch,/carros/motor-y-transmision/clutch-embrague/bombas-y-balibombas-de-clutch,bombín de embrague; cilindro esclavo; bombín de clutch; bomba de embrague; balibomba; bombines de clutch
+Carros,Tipo de producto,Motor y transmisión,Clutch (embrague),Guayas de clutch,/carros/motor-y-transmision/clutch-embrague/guayas-de-clutch,cable de clutch; cable de embrague; chicote de clutch
+Carros,Subcategoría,Motor y transmisión,Admisión y escape,,/carros/motor-y-transmision/admision-y-escape,
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Múltiples de admisión,/carros/motor-y-transmision/admision-y-escape/multiples-de-admision,múltiple de admisión; manifold de admisión; intake
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Múltiples de escape,/carros/motor-y-transmision/admision-y-escape/multiples-de-escape,múltiple de escape; header; manifold de escape
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Catalizadores,/carros/motor-y-transmision/admision-y-escape/catalizadores,catalizador; convertidor catalítico
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Mofles (silenciadores),/carros/motor-y-transmision/admision-y-escape/mofles-silenciadores,silenciador
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Resonadores,/carros/motor-y-transmision/admision-y-escape/resonadores,resonador; pre-silenciador
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Flexibles de escape,/carros/motor-y-transmision/admision-y-escape/flexibles-de-escape,flexible; flexible de exhosto; fuelle de escape
+Carros,Tipo de producto,Motor y transmisión,Admisión y escape,Tubos y puntas de escape,/carros/motor-y-transmision/admision-y-escape/tubos-y-puntas-de-escape,tubo de escape; punta de exhosto; cola de escape
+Carros,Subcategoría,Motor y transmisión,Transmisión y caja,,/carros/motor-y-transmision/transmision-y-caja,caja; transmisión
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Cajas de cambios,/carros/motor-y-transmision/transmision-y-caja/cajas-de-cambios,caja de cambios; caja manual; caja de velocidades; transmisión manual
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Cajas automáticas y convertidores,/carros/motor-y-transmision/transmision-y-caja/cajas-automaticas-y-convertidores,caja automática; transmisión automática; convertidor de par; torque
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Diferenciales,/carros/motor-y-transmision/transmision-y-caja/diferenciales,diferencial; corona y piñón; transmisión trasera
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Cardanes y crucetas,/carros/motor-y-transmision/transmision-y-caja/cardanes-y-crucetas,cardán; cruceta; eje cardán
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Ejes y homocinéticas,/carros/motor-y-transmision/transmision-y-caja/ejes-y-homocineticas,homocinética; junta homocinética; semieje; eje de tracción; palier; copa homocinética
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Sincronizadores y piñones,/carros/motor-y-transmision/transmision-y-caja/sincronizadores-y-pinones,sincronizador; piñón de caja; engranaje de caja
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Retenedores de caja,/carros/motor-y-transmision/transmision-y-caja/retenedores-de-caja,retenedor de caja; retén de caja; sello de caja
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Soportes de caja,/carros/motor-y-transmision/transmision-y-caja/soportes-de-caja,soporte de caja; base de caja; cojín de caja
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Selectoras y guayas de cambios,/carros/motor-y-transmision/transmision-y-caja/selectoras-y-guayas-de-cambios,selectora; guaya de cambios; varillaje de cambios
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Volantes de motor,/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor,volante; flywheel; volante de inercia; volante bimasa; volantes de motor (flywheel)
+Carros,Tipo de producto,Motor y transmisión,Transmisión y caja,Cajas de transferencia 4x4,/carros/motor-y-transmision/transmision-y-caja/cajas-de-transferencia-4x4,caja de transferencia; transfer; 4x4
+Carros,Subcategoría,Motor y transmisión,Partes plásticas de motor,,/carros/motor-y-transmision/partes-plasticas-de-motor,
+Carros,Tipo de producto,Motor y transmisión,Partes plásticas de motor,Tapas y cubiertas de motor,/carros/motor-y-transmision/partes-plasticas-de-motor/tapas-y-cubiertas-de-motor,cubierta de motor; tapa decorativa de motor; cover de motor
+Carros,Tipo de producto,Motor y transmisión,Partes plásticas de motor,Guardapolvos y protectores de motor,/carros/motor-y-transmision/partes-plasticas-de-motor/guardapolvos-y-protectores-de-motor,protector de motor; guardapolvo de motor; pasarrueda de motor; cubre motor
+Carros,Tipo de producto,Motor y transmisión,Partes plásticas de motor,Carcasas de correa y ductos,/carros/motor-y-transmision/partes-plasticas-de-motor/carcasas-de-correa-y-ductos,carcasa de correa; ducto de aire; tapa de repartición
+Carros,Subcategoría,Motor y transmisión,GNV (gas vehicular),,/carros/motor-y-transmision/gnv-gas-vehicular,
+Carros,Tipo de producto,Motor y transmisión,GNV (gas vehicular),Kits de conversión a GNV,/carros/motor-y-transmision/gnv-gas-vehicular/kits-de-conversion-a-gnv,kit de gas; conversión a gas; kit gnv; equipo de gas
+Carros,Tipo de producto,Motor y transmisión,GNV (gas vehicular),Reguladores GNV,/carros/motor-y-transmision/gnv-gas-vehicular/reguladores-gnv,regulador de gas; reductor gnv
+Carros,Tipo de producto,Motor y transmisión,GNV (gas vehicular),Inyectores y rieles GNV,/carros/motor-y-transmision/gnv-gas-vehicular/inyectores-y-rieles-gnv,riel de gas; inyectores de gas; flauta gnv
+Carros,Tipo de producto,Motor y transmisión,GNV (gas vehicular),Cilindros GNV,/carros/motor-y-transmision/gnv-gas-vehicular/cilindros-gnv,cilindro de gas; tanque de gas; pipeta gnv
+Carros,Tipo de producto,Motor y transmisión,GNV (gas vehicular),Mangueras y válvulas GNV,/carros/motor-y-transmision/gnv-gas-vehicular/mangueras-y-valvulas-gnv,manguera de gas; válvula de gas; llave de gas
+Carros,Categoría,Accesorios,,,/carros/accesorios,
+Carros,Subcategoría,Accesorios,Accesorios exteriores,,/carros/accesorios/accesorios-exteriores,
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Estribos,/carros/accesorios/accesorios-exteriores/estribos,estribo; estribos laterales; pisaderas
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Barras de techo,/carros/accesorios/accesorios-exteriores/barras-de-techo,barra de techo; rieles de techo; portaequipaje de techo
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Portaequipajes,/carros/accesorios/accesorios-exteriores/portaequipajes,portaequipaje; canastilla; maletero de techo; cofre de techo
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Portabicicletas,/carros/accesorios/accesorios-exteriores/portabicicletas,portabicicleta; rack de bicicleta; porta bici
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Portallantas,/carros/accesorios/accesorios-exteriores/portallantas,portallanta; porta llanta; soporte de llanta de repuesto
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Enganches de remolque (tiros),/carros/accesorios/accesorios-exteriores/enganches-de-remolque-tiros,tiro; enganche; tiro de remolque; bola de remolque
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Deflectores,/carros/accesorios/accesorios-exteriores/deflectores,deflector; visera de ventana; deflector de capó; bug deflector
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Protectores exteriores,/carros/accesorios/accesorios-exteriores/protectores-exteriores,protector; protector de bómper; protector lateral
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Molduras,/carros/accesorios/accesorios-exteriores/molduras,moldura; moldura lateral; friso
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Spoilers y alerones,/carros/accesorios/accesorios-exteriores/spoilers-y-alerones,spoiler; alerón; ala
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Parrillas decorativas,/carros/accesorios/accesorios-exteriores/parrillas-decorativas,parrilla deportiva; rejilla decorativa
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Protectores de puertas,/carros/accesorios/accesorios-exteriores/protectores-de-puertas,protector de puerta; bordes de puerta; protector de filo
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Marcos y portaplacas,/carros/accesorios/accesorios-exteriores/marcos-y-portaplacas,portaplacas; marco de placa; porta placa
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Cubrecarros (forros),/carros/accesorios/accesorios-exteriores/cubrecarros-forros,cubrecarro; forro para carro; funda de carro; pijama para carro; carpa para carro
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Snorkels,/carros/accesorios/accesorios-exteriores/snorkels,snorkel; toma de aire alta
+Carros,Tipo de producto,Accesorios,Accesorios exteriores,Polarizado y películas,/carros/accesorios/accesorios-exteriores/polarizado-y-peliculas,polarizado; película de seguridad; papel polarizado
+Carros,Subcategoría,Accesorios,Accesorios interiores,,/carros/accesorios/accesorios-interiores,
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Tapetes,/carros/accesorios/accesorios-interiores/tapetes,tapetes de carro; alfombras; pisos; tapetes de caucho; tapetes 3D
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Forros de sillas,/carros/accesorios/accesorios-interiores/forros-de-sillas,forros de asientos; fundas de asiento; cubreasientos; cubre sillas; fundas de asientos; fundas (forros de sillas)
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Forros de timón,/carros/accesorios/accesorios-interiores/forros-de-timon,forro de timón; cubrevolante; cubre volante; forro de volante
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Cojines,/carros/accesorios/accesorios-interiores/cojines,cojín; cojines de carro; soporte lumbar
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Organizadores,/carros/accesorios/accesorios-interiores/organizadores,organizador; organizador de baúl; maletero organizador
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Cortasoles de parabrisas,/carros/accesorios/accesorios-interiores/cortasoles-de-parabrisas,cortasol; parasol de parabrisas; protector solar de parabrisas
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Cortinas,/carros/accesorios/accesorios-interiores/cortinas,cortina; cortina para carro; cortina solar
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Percheros,/carros/accesorios/accesorios-interiores/percheros,perchero; gancho para ropa; colgador
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Portaobjetos,/carros/accesorios/accesorios-interiores/portaobjetos,portaobjeto; bandeja; organizador de consola
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Portavasos,/carros/accesorios/accesorios-interiores/portavasos,portavasos; porta vasos
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Apoyabrazos,/carros/accesorios/accesorios-interiores/apoyabrazos,apoyabrazos; descansabrazos; consola apoyabrazos
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Volantes deportivos,/carros/accesorios/accesorios-interiores/volantes-deportivos,volante deportivo; timón deportivo; volante de lujo
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Pedales deportivos (cubrepedales),/carros/accesorios/accesorios-interiores/pedales-deportivos-cubrepedales,cubrepedales; pedales de lujo
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Protectores interiores,/carros/accesorios/accesorios-interiores/protectores-interiores,protector interior; protector de tapicería; cubre consola
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Sillas para bebé,/carros/accesorios/accesorios-interiores/sillas-para-bebe,silla para bebé; silla de carro para bebé; silla infantil; base isofix
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Neveras portátiles,/carros/accesorios/accesorios-interiores/neveras-portatiles,nevera para carro; nevera portátil; cooler
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Cargadores e inversores 12V,/carros/accesorios/accesorios-interiores/cargadores-e-inversores-12v,inversor; convertidor; cargador de carro; cargador 12v; adaptador de corriente; inversores y cargadores 12v; cargadores de celular para carro; cargadores; cargador de celular
+Carros,Tipo de producto,Accesorios,Accesorios interiores,Soportes de celular,/carros/accesorios/accesorios-interiores/soportes-de-celular,soporte de celular; porta celular; holder; soporte magnético
+Carros,Subcategoría,Accesorios,Audio,,/carros/accesorios/audio,
+Carros,Tipo de producto,Accesorios,Audio,Radios,/carros/accesorios/audio/radios,radio; radio de carro; estéreo; autoradio; radio 1 din; radio 2 din
+Carros,Tipo de producto,Accesorios,Audio,Pantallas multimedia,/carros/accesorios/audio/pantallas-multimedia,pantalla; pantalla android; radio con pantalla; pantalla táctil; multimedia
+Carros,Tipo de producto,Accesorios,Audio,Parlantes,/carros/accesorios/audio/parlantes,altavoces; bafles; speakers; parlantes 6x9; parlantes 6.5
+Carros,Tipo de producto,Accesorios,Audio,Subwoofers,/carros/accesorios/audio/subwoofers,subwoofer; bajo; woofer; cajón de bajos
+Carros,Tipo de producto,Accesorios,Audio,Amplificadores,/carros/accesorios/audio/amplificadores,amplificador; planta; amplificador de sonido
+Carros,Tipo de producto,Accesorios,Audio,Procesadores y ecualizadores,/carros/accesorios/audio/procesadores-y-ecualizadores,ecualizador; procesador de audio; dsp
+Carros,Tipo de producto,Accesorios,Audio,Tweeters,/carros/accesorios/audio/tweeters,tweeter; tweeters; driver de agudos
+Carros,Tipo de producto,Accesorios,Audio,Cajas acústicas,/carros/accesorios/audio/cajas-acusticas,caja acústica; cajón; cajón de bajo; bazooka
+Carros,Tipo de producto,Accesorios,Audio,Cables y conectores de audio,/carros/accesorios/audio/cables-y-conectores-de-audio,cable de audio; rca; cable de parlantes; kit de cables
+Carros,Tipo de producto,Accesorios,Audio,Antenas de radio,/carros/accesorios/audio/antenas-de-radio,antenas; antena; antena de radio; antena tiburón
+Carros,Tipo de producto,Accesorios,Audio,Kits de instalación,/carros/accesorios/audio/kits-de-instalacion,kit de instalación; kit de montaje; adaptador de radio; marco de radio
+Carros,Categoría,Carrocería y climatización,,,/carros/carroceria-y-climatizacion,
+Carros,Subcategoría,Carrocería y climatización,Carrocería,,/carros/carroceria-y-climatizacion/carroceria,
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Bómperes (bumper),/carros/carroceria-y-climatizacion/carroceria/bomperes-bumper,parachoques; bumper; bómper; bomper; defensa; paragolpes; bómper delantero; bómper trasero; bómperes (parachoques)
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Capós,/carros/carroceria-y-climatizacion/carroceria/capos,capot; capote; capó; bonete; cofre
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Guardafangos,/carros/carroceria-y-climatizacion/carroceria/guardafangos,guardafango; guardabarros; fender; guardafango delantero; guardafango trasero
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Puertas,/carros/carroceria-y-climatizacion/carroceria/puertas,puerta; puerta delantera; puerta trasera; lámina de puerta
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Baúles y compuertas,/carros/carroceria-y-climatizacion/carroceria/baules-y-compuertas,baúl; tapa de baúl; compuerta; portalón
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Espejos retrovisores,/carros/carroceria-y-climatizacion/carroceria/espejos-retrovisores,espejos; espejo lateral; espejo retrovisor; retrovisor; carcasa de espejo; retrovisores; espejos laterales
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Persianas (parrillas),/carros/carroceria-y-climatizacion/carroceria/persianas-parrillas,persiana; parrilla; parrilla delantera; rejilla frontal
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Rejillas y tomas de aire,/carros/carroceria-y-climatizacion/carroceria/rejillas-y-tomas-de-aire,rejilla; toma de aire; rejilla de bómper
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Soportes y bases de carrocería,/carros/carroceria-y-climatizacion/carroceria/soportes-y-bases-de-carroceria,soporte de bómper; base de farola; soporte de carrocería
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Bisagras,/carros/carroceria-y-climatizacion/carroceria/bisagras,bisagra; bisagra de puerta; bisagra de capó
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Chapas y manijas,/carros/carroceria-y-climatizacion/carroceria/chapas-y-manijas,manijas; manija de puerta; chapa; cerradura; cerradura de puerta
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Cerraduras de capó y baúl,/carros/carroceria-y-climatizacion/carroceria/cerraduras-de-capo-y-baul,cerradura de capó; cerradura de baúl; chapa de baúl; guaya de capó
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Amortiguadores de capó y baúl (resortes a gas),/carros/carroceria-y-climatizacion/carroceria/amortiguadores-de-capo-y-baul-resortes-a-gas,resorte a gas; amortiguador de capó; amortiguador de baúl; pistón de capó
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Vidrios y parabrisas,/carros/carroceria-y-climatizacion/carroceria/vidrios-y-parabrisas,parabrisas; vidrio; panorámico; luneta; vidrio de puerta
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Elevavidrios,/carros/carroceria-y-climatizacion/carroceria/elevavidrios,"alzavidrios; regulador de vidrio; motor de vidrio; eleva vidrios; alza cristales; elevadores de vidrio; motor elevavidrios; elevavidrios (alza cristales); motores eléctricos (vidrios, limpiaparabrisas); motor eleva vidrios"
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Empaques de puertas y molduras (burletes),/carros/carroceria-y-climatizacion/carroceria/empaques-de-puertas-y-molduras-burletes,burlete; empaque de puerta; caucho de puerta; goma de vidrio
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Plumillas (limpiaparabrisas),/carros/carroceria-y-climatizacion/carroceria/plumillas-limpiaparabrisas,plumillas; escobillas; wipers; limpiabrisas; brazos de limpiaparabrisas; limpiaparabrisas; limpiaparabrisas (plumillas)
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Brazos y motores de limpiaparabrisas,/carros/carroceria-y-climatizacion/carroceria/brazos-y-motores-de-limpiaparabrisas,brazo de limpiaparabrisas; motor de limpiaparabrisas; motor limpiabrisas
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Lavaparabrisas (bombas y depósitos),/carros/carroceria-y-climatizacion/carroceria/lavaparabrisas-bombas-y-depositos,bomba de agua de parabrisas; depósito de lavaparabrisas; lava parabrisas
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Guardapolvos y pasarruedas,/carros/carroceria-y-climatizacion/carroceria/guardapolvos-y-pasarruedas,pasarruedas; guardapolvo de rueda; plástico de guardafango
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Zócalos,/carros/carroceria-y-climatizacion/carroceria/zocalos,zócalo; faldón; estribos y zócalos
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Techos corredizos,/carros/carroceria-y-climatizacion/carroceria/techos-corredizos,techo corredizo; sunroof; quemacocos
+Carros,Tipo de producto,Carrocería y climatización,Carrocería,Emblemas de carrocería,/carros/carroceria-y-climatizacion/carroceria/emblemas-de-carroceria,emblemas
+Carros,Subcategoría,Carrocería y climatización,Interior (repuestos),,/carros/carroceria-y-climatizacion/interior-repuestos,interior; repuestos de interior
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Manijas y chapas interiores,/carros/carroceria-y-climatizacion/interior-repuestos/manijas-y-chapas-interiores,manija interior; manilla; chapa interior
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Paneles de puerta,/carros/carroceria-y-climatizacion/interior-repuestos/paneles-de-puerta,panel de puerta; tapizado de puerta; forro de puerta
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Tableros y consolas,/carros/carroceria-y-climatizacion/interior-repuestos/tableros-y-consolas,tablero; consola; dashboard; consola central
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Guanteras,/carros/carroceria-y-climatizacion/interior-repuestos/guanteras,guantera; tapa de guantera
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Palancas de cambios y pomos,/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-cambios-y-pomos,pomo; palanca de cambios; perilla de cambios; fuelle de palanca
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Palancas de freno de mano,/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-freno-de-mano,freno de mano; palanca de freno de mano; freno de parqueo
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Pedales,/carros/carroceria-y-climatizacion/interior-repuestos/pedales,pedal; pedal de freno; pedal de acelerador; pedal de embrague
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Sillas y tapizados,/carros/carroceria-y-climatizacion/interior-repuestos/sillas-y-tapizados,asientos; tapicería; asientos y tapizados
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Cinturones de seguridad,/carros/carroceria-y-climatizacion/interior-repuestos/cinturones-de-seguridad,cinturón; cinturón de seguridad; hebilla de cinturón
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Airbags y módulos,/carros/carroceria-y-climatizacion/interior-repuestos/airbags-y-modulos,airbag; bolsa de aire; módulo de airbag; clock spring; resorte espiral
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Espejos retrovisores interiores,/carros/carroceria-y-climatizacion/interior-repuestos/espejos-retrovisores-interiores,retrovisor interior; espejo interior; retrovisores interiores
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Parasoles,/carros/carroceria-y-climatizacion/interior-repuestos/parasoles,parasol; viseras; visera parasol
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Cielorrasos,/carros/carroceria-y-climatizacion/interior-repuestos/cielorrasos,cielorraso; techo interior; forro de techo
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Tomas 12V y encendedores,/carros/carroceria-y-climatizacion/interior-repuestos/tomas-12v-y-encendedores,encendedor; toma 12v; toma de corriente
+Carros,Tipo de producto,Carrocería y climatización,Interior (repuestos),Manivelas de ventana,/carros/carroceria-y-climatizacion/interior-repuestos/manivelas-de-ventana,manivela; manija de vidrio; manivela de vidrio
+Carros,Subcategoría,Carrocería y climatización,Aire acondicionado y climatización,,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion,
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Compresores de AC,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/compresores-de-ac,compresor; compresor de aire acondicionado; compresor a/c
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Condensadores,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/condensadores,condensador; condensador de aire; radiador de aire acondicionado
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Evaporadores,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/evaporadores,evaporador; evaporador de aire acondicionado
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Blowers (ventiladores de AC),/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/blowers-ventiladores-de-ac,blower; motor de ventilación; ventilador de aire acondicionado; ventiladores de ac
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Resistencias,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/resistencias,resistencia de blower; resistencia de aire; resistor
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Sensores de AC,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/sensores-de-ac,sensor de aire acondicionado; presostato; sensor de presión de ac
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Mangueras de AC,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/mangueras-de-ac,manguera de aire acondicionado; tubería de ac
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Gas refrigerante,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/gas-refrigerante,gas; r134a; r1234yf; gas de aire acondicionado; freón
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Válvulas de expansión,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/valvulas-de-expansion,válvula de expansión; válvula de ac; orificio de expansión
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Radiadores de calefacción,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/radiadores-de-calefaccion,radiador de calefacción; calefacción; heater core
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Comandos y perillas de AC,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/comandos-y-perillas-de-ac,comando de aire; perilla de aire; control de aire acondicionado; switch de aire
+Carros,Tipo de producto,Carrocería y climatización,Aire acondicionado y climatización,Difusores de aire,/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/difusores-de-aire,difusor; rejilla de aire; salida de aire; vent
+Carros,Categoría,Tecnología y seguridad,,,/carros/tecnologia-y-seguridad,
+Carros,Subcategoría,Tecnología y seguridad,Tecnología y conectividad,,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad,
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Sistemas Android y CarPlay,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,sistemas android / carplay; android auto; carplay; sistema android
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Cámaras de reversa,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-de-reversa,cámara de reversa; cámara trasera; cámara de retroceso
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Cámaras DVR y de seguridad,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-dvr-y-de-seguridad,cámaras dvr; cámara dvr; cámara de seguridad; dashcam; cámara testigo; cámaras de seguridad
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Sensores de parqueo,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-parqueo,sensor de parqueo; sensores de reversa; sensor de estacionamiento
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Sensores de presión de llantas (TPMS),/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms,tpms; sensor de presión de llantas
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Adaptadores Bluetooth,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/adaptadores-bluetooth,bluetooth; adaptador bluetooth; transmisor fm
+Carros,Tipo de producto,Tecnología y seguridad,Tecnología y conectividad,Cargadores y cables para eléctricos e híbridos,/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/cargadores-y-cables-para-electricos-e-hibridos,cargador ev; cargador de carro eléctrico; wallbox; cable de carga tipo 2
+Carros,Subcategoría,Tecnología y seguridad,Seguridad,,/carros/tecnologia-y-seguridad/seguridad,
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Alarmas,/carros/tecnologia-y-seguridad/seguridad/alarmas,alarma de carro; alarma; alarma con control
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Inmovilizadores,/carros/tecnologia-y-seguridad/seguridad/inmovilizadores,inmovilizador; corta corriente; bloqueo de motor
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Rastreo GPS,/carros/tecnologia-y-seguridad/seguridad/rastreo-gps,gps para carro; gps; rastreador; localizador
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Cerraduras y bloqueos,/carros/tecnologia-y-seguridad/seguridad/cerraduras-y-bloqueos,bloqueo; cerradura de seguridad; bloqueo de puertas
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Trabavolantes y trabapedales,/carros/tecnologia-y-seguridad/seguridad/trabavolantes-y-trabapedales,trabavolante; traba volante; bastón; trabapedal
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Extintores,/carros/tecnologia-y-seguridad/seguridad/extintores,extintor; extinguidor; extintor de carro
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Triángulos,/carros/tecnologia-y-seguridad/seguridad/triangulos,triángulo; triángulos reflectivos; señal de carretera
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Botiquines,/carros/tecnologia-y-seguridad/seguridad/botiquines,botiquín; botiquín de carretera; kit de primeros auxilios
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Kits de carretera,/carros/tecnologia-y-seguridad/seguridad/kits-de-carretera,kit de carretera; equipo de carretera; kit obligatorio
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Chalecos reflectivos,/carros/tecnologia-y-seguridad/seguridad/chalecos-reflectivos,chaleco reflectivo; chaleco
+Carros,Tipo de producto,Tecnología y seguridad,Seguridad,Alcoholímetros,/carros/tecnologia-y-seguridad/seguridad/alcoholimetros,alcoholímetro
+Motos,Categoría,Llantas y rines,,,/motos/llantas-y-rines,
+Motos,Subcategoría,Llantas y rines,Llantas,,/motos/llantas-y-rines/llantas,llanta de moto; llantas de moto; neumático de moto; caucho de moto
+Motos,Tipo de producto,Llantas y rines,Llantas,Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,llanta delantera; llanta 2.75-18; llanta 90/90-17
+Motos,Tipo de producto,Llantas y rines,Llantas,Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,llanta trasera; llanta 100/90-17; llanta 130/70-17
+Motos,Tipo de producto,Llantas y rines,Llantas,Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,llanta de scooter; llanta 90/90-10; llanta de patineta
+Motos,Tipo de producto,Llantas y rines,Llantas,Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,llanta de enduro; llanta cross; llanta taquera; llanta off road
+Motos,Tipo de producto,Llantas y rines,Llantas,Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,llanta de motocarro; llanta de torito; llanta de triciclo
+Motos,Subcategoría,Llantas y rines,Rines y rayos,,/motos/llantas-y-rines/rines-y-rayos,
+Motos,Tipo de producto,Llantas y rines,Rines y rayos,Rines,/motos/llantas-y-rines/rines-y-rayos/rines,rines de moto; aros
+Motos,Tipo de producto,Llantas y rines,Rines y rayos,Rayos y niples,/motos/llantas-y-rines/rines-y-rayos/rayos-y-niples,radios; rayos de rin
+Motos,Tipo de producto,Llantas y rines,Rines y rayos,Manzanas de rueda,/motos/llantas-y-rines/rines-y-rayos/manzanas-de-rueda,cubos de rueda; hubs; manzana trasera; manzana delantera; cubo de rueda; manzanas (cubos) de rueda
+Motos,Tipo de producto,Llantas y rines,Rines y rayos,Balineras de rueda,/motos/llantas-y-rines/rines-y-rayos/balineras-de-rueda,rodamientos de rueda; balineras; rulemanes
+Motos,Subcategoría,Llantas y rines,Accesorios de rueda,,/motos/llantas-y-rines/accesorios-de-rueda,
+Motos,Tipo de producto,Llantas y rines,Accesorios de rueda,Neumáticos (tripas),/motos/llantas-y-rines/accesorios-de-rueda/neumaticos-tripas,tripas; tubos; cámaras de aire; neumáticos
+Motos,Tipo de producto,Llantas y rines,Accesorios de rueda,Válvulas,/motos/llantas-y-rines/accesorios-de-rueda/valvulas,válvula de rin; válvula de aire; pin de válvula; válvula de llanta
+Motos,Tipo de producto,Llantas y rines,Accesorios de rueda,Tuercas y ejes,/motos/llantas-y-rines/accesorios-de-rueda/tuercas-y-ejes,tuerca de eje; tuerca de rueda de moto
+Motos,Tipo de producto,Llantas y rines,Accesorios de rueda,Protectores de rin,/motos/llantas-y-rines/accesorios-de-rueda/protectores-de-rin,protector de rin; cinta de rin; protector de aro
+Motos,Categoría,Lubricantes y mantenimiento,,,/motos/lubricantes-y-mantenimiento,
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,aceite 4t; aceite de moto; aceite 20w50 moto; aceite 10w40 moto; aceite motul; aceite mobil
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,aceite 2t; aceite de dos tiempos; aceite para mezcla
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,aceite de transmisión / caja; aceite de caja; valvulina
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,aceite de barras; aceite de horquilla; aceite de telescópicos
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,lubricante de cadena; grasa de cadena; aceite de cadena
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Líquido de frenos,/motos/lubricantes-y-mantenimiento/liquido-de-frenos,líquido de freno; DOT 3; DOT 4
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Refrigerante,/motos/lubricantes-y-mantenimiento/refrigerante,refrigerante; coolant; anticongelante
+Motos,Tipo de producto,Lubricantes y mantenimiento,,Aditivos y grasas,/motos/lubricantes-y-mantenimiento/aditivos-y-grasas,aditivo; grasa; grasa de rodamientos
+Motos,Categoría,Filtros,,,/motos/filtros,
+Motos,Tipo de producto,Filtros,,Filtros de aceite,/motos/filtros/filtros-de-aceite,filtro de aceite
+Motos,Tipo de producto,Filtros,,Filtros de aire,/motos/filtros/filtros-de-aire,filtro de aire
+Motos,Tipo de producto,Filtros,,Filtros de combustible,/motos/filtros/filtros-de-combustible,filtro de combustible; filtro de gasolina
+Motos,Categoría,Motor y transmisión,,,/motos/motor-y-transmision,
+Motos,Subcategoría,Motor y transmisión,Bloque y culata,,/motos/motor-y-transmision/bloque-y-culata,
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Kits de cilindro,/motos/motor-y-transmision/bloque-y-culata/kits-de-cilindro,cilindro de moto; kit cilindro pistón
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Pistones y anillos,/motos/motor-y-transmision/bloque-y-culata/pistones-y-anillos,pistón; anillos; kit de pistón; rines de pistón
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Bielas,/motos/motor-y-transmision/bloque-y-culata/bielas,biela; bielas
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Cigüeñales,/motos/motor-y-transmision/bloque-y-culata/ciguenales,cigüeñal
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Rodamientos de cigüeñal,/motos/motor-y-transmision/bloque-y-culata/rodamientos-de-ciguenal,rodamiento de cigüeñal; balinera de cigüeñal; bancada
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Culatas,/motos/motor-y-transmision/bloque-y-culata/culatas,culata; cabezote; cabeza de motor
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Válvulas y guías,/motos/motor-y-transmision/bloque-y-culata/valvulas-y-guias,guías de válvula; válvula de admisión; válvula de escape; válvula de motor; guía de válvula
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Árboles de levas,/motos/motor-y-transmision/bloque-y-culata/arboles-de-levas,árbol de levas; eje de levas
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Balancines,/motos/motor-y-transmision/bloque-y-culata/balancines,balancín; balancines; rocker
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Cárter y tapas de motor,/motos/motor-y-transmision/bloque-y-culata/carter-y-tapas-de-motor,cárter; tapa de motor; tapa lateral de motor; tapa de cárter
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Bombas de aceite,/motos/motor-y-transmision/bloque-y-culata/bombas-de-aceite,bomba de aceite
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Volantes magnéticos,/motos/motor-y-transmision/bloque-y-culata/volantes-magneticos,volante magnético; magneto; rotor de estator
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Motores completos,/motos/motor-y-transmision/bloque-y-culata/motores-completos,motor completo; motor usado; motor reconstruido; motor 3/4
+Motos,Subcategoría,Motor y transmisión,Repartición (distribución),,/motos/motor-y-transmision/reparticion-distribucion,distribución; tiempo
+Motos,Tipo de producto,Motor y transmisión,Repartición (distribución),Cadenillas (cadenas de repartición),/motos/motor-y-transmision/reparticion-distribucion/cadenillas-cadenas-de-reparticion,cadena de distribución; cadena de tiempo; cadenilla; cadenas de repartición
+Motos,Tipo de producto,Motor y transmisión,Repartición (distribución),Tensores y guías de cadenilla,/motos/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-cadenilla,tensor de cadenilla; guía de cadenilla; tensores y guías
+Motos,Tipo de producto,Motor y transmisión,Repartición (distribución),Kits de cadenilla,/motos/motor-y-transmision/reparticion-distribucion/kits-de-cadenilla,kit de distribución; kit de tiempo; kit de repartición; kits de repartición
+Motos,Subcategoría,Motor y transmisión,Refrigeración,,/motos/motor-y-transmision/refrigeracion,
+Motos,Tipo de producto,Motor y transmisión,Refrigeración,Radiadores,/motos/motor-y-transmision/refrigeracion/radiadores,radiador; panal de radiador; radiador de agua
+Motos,Tipo de producto,Motor y transmisión,Refrigeración,Bombas de agua,/motos/motor-y-transmision/refrigeracion/bombas-de-agua,bomba de agua; water pump
+Motos,Tipo de producto,Motor y transmisión,Refrigeración,Termostatos,/motos/motor-y-transmision/refrigeracion/termostatos,termostato; termostato de agua
+Motos,Tipo de producto,Motor y transmisión,Refrigeración,Mangueras de refrigeración,/motos/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion,manguera de radiador; manguera de agua; manguera superior; manguera inferior
+Motos,Tipo de producto,Motor y transmisión,Refrigeración,Electroventiladores,/motos/motor-y-transmision/refrigeracion/electroventiladores,moto ventilador; ventilador de radiador; electroventilador; ventiladores de radiador
+Motos,Subcategoría,Motor y transmisión,Combustible,,/motos/motor-y-transmision/combustible,
+Motos,Tipo de producto,Motor y transmisión,Combustible,Carburadores,/motos/motor-y-transmision/combustible/carburadores,carburador; carburador weber; kit de carburador
+Motos,Tipo de producto,Motor y transmisión,Combustible,Inyectores,/motos/motor-y-transmision/combustible/inyectores,inyector; inyectores de gasolina; boquillas; inyector diésel; inyectores common rail; inyectores de acpm
+Motos,Tipo de producto,Motor y transmisión,Combustible,Bombas de gasolina,/motos/motor-y-transmision/combustible/bombas-de-gasolina,bomba de combustible; bomba de gasolina eléctrica; módulo de bomba
+Motos,Tipo de producto,Motor y transmisión,Combustible,Cuerpos de aceleración,/motos/motor-y-transmision/combustible/cuerpos-de-aceleracion,cuerpo de aceleración; throttle body; mariposa
+Motos,Tipo de producto,Motor y transmisión,Combustible,Llaves de gasolina,/motos/motor-y-transmision/combustible/llaves-de-gasolina,grifo de gasolina; llave de paso
+Motos,Subcategoría,Motor y transmisión,Clutch y transmisión,,/motos/motor-y-transmision/clutch-y-transmision,
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Discos de clutch,/motos/motor-y-transmision/clutch-y-transmision/discos-de-clutch,disco de embrague
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Kits de clutch,/motos/motor-y-transmision/clutch-y-transmision/kits-de-clutch,kit de embrague; kit clutch; clutch; embrague
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Resortes y campanas de clutch,/motos/motor-y-transmision/clutch-y-transmision/resortes-y-campanas-de-clutch,campana de clutch; resorte de clutch; campana de embrague
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Piñones,/motos/motor-y-transmision/clutch-y-transmision/pinones,sprocket; piñón de salida; piñón delantero; sprocket delantero; piñones (sprocket)
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Catalinas (sprocket trasero),/motos/motor-y-transmision/clutch-y-transmision/catalinas-sprocket-trasero,sprocket trasero; piñón trasero; corona; plato; catalinas
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Cadenas de transmisión,/motos/motor-y-transmision/clutch-y-transmision/cadenas-de-transmision,cadena de moto; cadena de tracción
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Kits de arrastre,/motos/motor-y-transmision/clutch-y-transmision/kits-de-arrastre,kit de arrastre; kit de transmisión; kit de tracción; piñón catalina cadena; kit relación
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Correas de transmisión (scooter),/motos/motor-y-transmision/clutch-y-transmision/correas-de-transmision-scooter,correa de scooter; banda de scooter; correa cvt
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,"Variador, rodillos y clutch de scooter",/motos/motor-y-transmision/clutch-y-transmision/variador-rodillos-y-clutch-de-scooter,clutch de scooter (variador); variador; rodillos de variador; clutch de scooter; campana de clutch scooter
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Cajas de cambios y engranajes,/motos/motor-y-transmision/clutch-y-transmision/cajas-de-cambios-y-engranajes,caja de cambios; engranajes; piñonería; caja de moto
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Selectoras y palancas de cambios,/motos/motor-y-transmision/clutch-y-transmision/selectoras-y-palancas-de-cambios,selectora; horquilla selectora
+Motos,Tipo de producto,Motor y transmisión,Clutch y transmisión,Ejes de cambios,/motos/motor-y-transmision/clutch-y-transmision/ejes-de-cambios,eje de cambios; eje selector; eje de palanca
+Motos,Subcategoría,Motor y transmisión,Arranque,,/motos/motor-y-transmision/arranque,
+Motos,Tipo de producto,Motor y transmisión,Arranque,Motores de arranque,/motos/motor-y-transmision/arranque/motores-de-arranque,pisa; motores de arranque (pisa); starter; arranque eléctrico; motor de partida
+Motos,Tipo de producto,Motor y transmisión,Arranque,Bendix,/motos/motor-y-transmision/arranque/bendix,piñón de arranque
+Motos,Tipo de producto,Motor y transmisión,Arranque,Pedales de arranque (crank),/motos/motor-y-transmision/arranque/pedales-de-arranque-crank,patada; kick starter; crank; kick; patada de arranque; pedales de arranque (kick)
+Motos,Tipo de producto,Motor y transmisión,Arranque,Automáticos (relés) de arranque,/motos/motor-y-transmision/arranque/automaticos-reles-de-arranque,automático de arranque; relé de arranque; solenoide de arranque; automático
+Motos,Subcategoría,Motor y transmisión,Escape,,/motos/motor-y-transmision/escape,
+Motos,Tipo de producto,Motor y transmisión,Escape,Exostos,/motos/motor-y-transmision/escape/exostos,escape; tubo de escape; mofle; exhosto; exhostos
+Motos,Tipo de producto,Motor y transmisión,Escape,Mofles (silenciadores),/motos/motor-y-transmision/escape/mofles-silenciadores,silenciador
+Motos,Tipo de producto,Motor y transmisión,Escape,Catalizadores,/motos/motor-y-transmision/escape/catalizadores,catalizador; convertidor catalítico
+Motos,Tipo de producto,Motor y transmisión,Escape,Empaques de exosto,/motos/motor-y-transmision/escape/empaques-de-exosto,empaque de exhosto; empaque de escape; empaques de exhosto
+Motos,Subcategoría,Motor y transmisión,Guayas y cables,,/motos/motor-y-transmision/guayas-y-cables,
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de freno,/motos/motor-y-transmision/guayas-y-cables/guayas-de-freno,cable de freno; chicote de freno
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de clutch,/motos/motor-y-transmision/guayas-y-cables/guayas-de-clutch,cable de clutch; cable de embrague; chicote de clutch
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de acelerador,/motos/motor-y-transmision/guayas-y-cables/guayas-de-acelerador,cable de acelerador; chicote de acelerador
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de velocímetro,/motos/motor-y-transmision/guayas-y-cables/guayas-de-velocimetro,guaya de velocímetro; cable de velocímetro; chicote de velocímetro
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de choke (ahogador),/motos/motor-y-transmision/guayas-y-cables/guayas-de-choke-ahogador,guaya de ahogador; choke; guayas de ahogador
+Motos,Tipo de producto,Motor y transmisión,Guayas y cables,Guayas de tacómetro,/motos/motor-y-transmision/guayas-y-cables/guayas-de-tacometro,guaya de tacómetro; cable de tacómetro
+Motos,Categoría,Baterías,,,/motos/baterias,
+Motos,Tipo de producto,Baterías,,Baterías para moto,/motos/baterias/baterias-para-moto,batería de moto; batería 12v moto; batería yuasa; batería mac moto; baterías de gel y agm; batería de gel; batería agm moto; batería sellada; batería agm; baterías de litio; batería de litio; batería lifepo4; lifepo4
+Motos,Tipo de producto,Baterías,,Bornes y cables de batería,/motos/baterias/bornes-y-cables-de-bateria,bornes; terminales de batería; cable de batería; protector de bornes
+Motos,Categoría,Frenos,,,/motos/frenos,
+Motos,Tipo de producto,Frenos,,Pastillas de freno,/motos/frenos/pastillas-de-freno,pastas de freno; brake pads
+Motos,Tipo de producto,Frenos,,Bandas de freno,/motos/frenos/bandas-de-freno,zapatas; zapatas de freno
+Motos,Tipo de producto,Frenos,,Discos de freno,/motos/frenos/discos-de-freno,disco de freno; discos; discos ventilados; discos perforados; rotor
+Motos,Tipo de producto,Frenos,,Campanas de freno,/motos/frenos/campanas-de-freno,tambores; campanas; tambores de freno; campanas (tambores) de freno
+Motos,Tipo de producto,Frenos,,Mordazas (calipers),/motos/frenos/mordazas-calipers,caliper; cálipers; pinzas de freno; mordazas / calipers
+Motos,Tipo de producto,Frenos,,Bombas de freno,/motos/frenos/bombas-de-freno,cilindro maestro; bomba principal de freno; bombas de freno (cilindro maestro)
+Motos,Tipo de producto,Frenos,,Cilindros de freno,/motos/frenos/cilindros-de-freno,bombines de freno; cilindros de rueda; bombín de freno
+Motos,Tipo de producto,Frenos,,Mangueras de freno,/motos/frenos/mangueras-de-freno,manguera de freno; bandeja de freno; flexible de freno; línea de freno
+Motos,Tipo de producto,Frenos,,Maniguetas de freno,/motos/frenos/maniguetas-de-freno,manigueta; manilla de freno; palanca de freno; manigueta de freno; varilla de freno; palancas (maniguetas) y pedales de freno; maniguetas y pedales de freno
+Motos,Tipo de producto,Frenos,,Kits de reparación de frenos,/motos/frenos/kits-de-reparacion-de-frenos,kit de frenos; kit de reparación; empaques de bomba
+Motos,Tipo de producto,Frenos,,Depósitos de líquido de frenos,/motos/frenos/depositos-de-liquido-de-frenos,depósito de líquido de frenos; tanque de líquido de frenos
+Motos,Categoría,Cascos,,,/motos/cascos,
+Motos,Tipo de producto,Cascos,,Cascos integrales,/motos/cascos/cascos-integrales,casco; casco cerrado; full face; casco integral
+Motos,Tipo de producto,Cascos,,Cascos abatibles,/motos/cascos/cascos-abatibles,casco modular; flip up
+Motos,Tipo de producto,Cascos,,Cascos abiertos,/motos/cascos/cascos-abiertos,casco jet; casco 3/4
+Motos,Tipo de producto,Cascos,,Cascos cross,/motos/cascos/cascos-cross,casco enduro; casco motocross
+Motos,Tipo de producto,Cascos,,Visores y repuestos de casco,/motos/cascos/visores-y-repuestos-de-casco,visor; visor de casco; mica; interior de casco
+Motos,Categoría,Eléctrico y electrónico,,,/motos/electrico-y-electronico,
+Motos,Tipo de producto,Eléctrico y electrónico,,Reguladores (rectificadores),/motos/electrico-y-electronico/reguladores-rectificadores,rectificador; regulador de voltaje; reguladores / rectificadores
+Motos,Tipo de producto,Eléctrico y electrónico,,CDI (módulos de encendido),/motos/electrico-y-electronico/cdi-modulos-de-encendido,cdi; unidad de encendido; ECU moto; módulo de encendido; caja cdi; cdi / módulos de encendido
+Motos,Tipo de producto,Eléctrico y electrónico,,Bobinas de alta,/motos/electrico-y-electronico/bobinas-de-alta,bobina de encendido; bobina de chispa
+Motos,Tipo de producto,Eléctrico y electrónico,,Estatores (platos de bobinas),/motos/electrico-y-electronico/estatores-platos-de-bobinas,bobina de carga; estator; plato de bobinas; stator; estatores (bobina de carga)
+Motos,Tipo de producto,Eléctrico y electrónico,,Bujías,/motos/electrico-y-electronico/bujias,bujía; spark plug; chispa; bujías iridium; bujías platino
+Motos,Tipo de producto,Eléctrico y electrónico,,Capuchones de bujía,/motos/electrico-y-electronico/capuchones-de-bujia,capuchón; capuchón de bujía; pipa de bujía
+Motos,Tipo de producto,Eléctrico y electrónico,,Fusibles y relés,/motos/electrico-y-electronico/fusibles-y-reles,fusible; relé; relay; caja de fusibles
+Motos,Tipo de producto,Eléctrico y electrónico,,Suiches y comandos,/motos/electrico-y-electronico/suiches-y-comandos,mandos; switch; comandos de manubrio
+Motos,Tipo de producto,Eléctrico y electrónico,,Flashers,/motos/electrico-y-electronico/flashers,relé de direccionales; destellador
+Motos,Tipo de producto,Eléctrico y electrónico,,Pitos,/motos/electrico-y-electronico/pitos,bocina; claxon; corneta
+Motos,Tipo de producto,Eléctrico y electrónico,,Cableado y conectores,/motos/electrico-y-electronico/cableado-y-conectores,ramal; arnés; cableado; conector
+Motos,Tipo de producto,Eléctrico y electrónico,,"Tableros, tacómetros y velocímetros",/motos/electrico-y-electronico/tableros-tacometros-y-velocimetros,velocímetro; tacómetro; tablero; odómetro; tacómetros y velocímetros; instrumental; instrumental y tableros
+Motos,Tipo de producto,Eléctrico y electrónico,,Sensores,/motos/electrico-y-electronico/sensores,sensor; sensor de velocidad; sensor de posición
+Motos,Categoría,Iluminación,,,/motos/iluminacion,
+Motos,Tipo de producto,Iluminación,,Farolas,/motos/iluminacion/farolas,faros; luces delanteras; headlights; farola delantera; unidad de farola; luz delantera
+Motos,Tipo de producto,Iluminación,,Stops,/motos/iluminacion/stops,luces traseras; stop; calaveras; luz de freno; farola trasera; luz trasera
+Motos,Tipo de producto,Iluminación,,Direccionales,/motos/iluminacion/direccionales,luces direccionales; intermitentes; cocuyos; luz direccional
+Motos,Tipo de producto,Iluminación,,Luces LED,/motos/iluminacion/luces-led,led; luces led; bombillos led; bombillas led; focos led; luz led; kit led; led h4; led h7; led h11
+Motos,Tipo de producto,Iluminación,,Bombillos halógenos,/motos/iluminacion/bombillos-halogenos,bombillos; bombillas; focos; halógeno; h1; h3; h4; h7; h11; 9005; 9006; luz halógena
+Motos,Tipo de producto,Iluminación,,Exploradoras y luces auxiliares,/motos/iluminacion/exploradoras-y-luces-auxiliares,exploradoras; antiniebla; luces auxiliares; luces led auxiliares; luces auxiliares led
+Motos,Categoría,Accesorios,,,/motos/accesorios,
+Motos,Tipo de producto,Accesorios,,Maletas y baúles,/motos/accesorios/maletas-y-baules,baúl; maleta; top case; cajón de moto; baúl de moto
+Motos,Tipo de producto,Accesorios,,Alforjas y mochilas,/motos/accesorios/alforjas-y-mochilas,alforja; alforjas; mochila de moto; bolso de tanque
+Motos,Tipo de producto,Accesorios,,Parrillas y portamaletas,/motos/accesorios/parrillas-y-portamaletas,parrilla; parrilla trasera; portamaletas; soporte de baúl
+Motos,Tipo de producto,Accesorios,,"Sliders, defensas y cubrecárter",/motos/accesorios/sliders-defensas-y-cubrecarter,"slider; defensa; defensas de moto; protector de motor; mataperros; protector de radiador; defensas; sliders y defensas; protectores de radiador y cubrecárter; sliders, defensas y protectores; cubrecárter; protector de cárter; cubrecárter y protectores"
+Motos,Tipo de producto,Accesorios,,Pijamas (cubremotos),/motos/accesorios/pijamas-cubremotos,cubremoto; pijama para moto; forro de moto; carpa de moto; cubremotos (pijamas)
+Motos,Tipo de producto,Accesorios,,Cúpulas (parabrisas) y soportes,/motos/accesorios/cupulas-parabrisas-y-soportes,parabrisas; cúpula; windshield; parabrisas de moto; base para cúpula; parabrisas y soportes
+Motos,Tipo de producto,Accesorios,,Espejos,/motos/accesorios/espejos,espejo; retrovisor; espejo de moto; espejos retrovisores
+Motos,Tipo de producto,Accesorios,,Cubrepuños y cubremanos,/motos/accesorios/cubrepunos-y-cubremanos,cubrepuños; cubremanos; protector de manos
+Motos,Tipo de producto,Accesorios,,Soportes de celular,/motos/accesorios/soportes-de-celular,soporte de celular; porta celular; holder; soporte magnético
+Motos,Tipo de producto,Accesorios,,Forros de sillín,/motos/accesorios/forros-de-sillin,forro de sillín; forro de silla; funda de sillín; cobertor de silla
+Motos,Tipo de producto,Accesorios,,Pulpos y redes,/motos/accesorios/pulpos-y-redes,pulpo; red de pulpo; malla; red elástica
+Motos,Tipo de producto,Accesorios,,Rampas y caballetes,/motos/accesorios/rampas-y-caballetes,rampa; caballete de taller; caballete trasero
+Motos,Tipo de producto,Accesorios,,Cubrerayos y adhesivos,/motos/accesorios/cubrerayos-y-adhesivos,cubrerayos; stickers; calcomanías; adhesivos
+Motos,Tipo de producto,Accesorios,,Cargadores USB,/motos/accesorios/cargadores-usb,cargador usb; toma usb; cargador para moto
+Motos,Tipo de producto,Accesorios,,Intercomunicadores,/motos/accesorios/intercomunicadores,intercomunicador; intercom; manos libres para casco
+Motos,Tipo de producto,Accesorios,,Parlantes,/motos/accesorios/parlantes,altavoces; bafles; speakers; parlantes 6x9; parlantes 6.5
+Motos,Categoría,Ropa,,,/motos/ropa,
+Motos,Tipo de producto,Ropa,,Chaquetas,/motos/ropa/chaquetas,chaqueta; chaqueta de moto; chaqueta con protecciones
+Motos,Tipo de producto,Ropa,,Guantes de moto,/motos/ropa/guantes-de-moto,guantes; guantes para moto; guantes motociclista
+Motos,Tipo de producto,Ropa,,Botas,/motos/ropa/botas,bota; botas de moto; botines
+Motos,Tipo de producto,Ropa,,Pantalones,/motos/ropa/pantalones,pantalón; pantalón de moto; pantalón con protecciones
+Motos,Tipo de producto,Ropa,,Impermeables,/motos/ropa/impermeables,impermeable; traje de lluvia; capa impermeable; pantalonera
+Motos,Tipo de producto,Ropa,,"Protecciones (rodilleras, coderas)",/motos/ropa/protecciones-rodilleras-coderas,rodilleras; coderas; protecciones; pechera; espaldar
+Motos,Tipo de producto,Ropa,,Chalecos reflectivos,/motos/ropa/chalecos-reflectivos,chaleco reflectivo; chaleco
+Motos,Categoría,Chasis y carrocería,,,/motos/chasis-y-carroceria,
+Motos,Tipo de producto,Chasis y carrocería,,Carenajes y plásticos,/motos/chasis-y-carroceria/carenajes-y-plasticos,carenaje; plásticos; plástico de moto; carenaje delantero; carenaje lateral; tapa lateral; cubierta
+Motos,Tipo de producto,Chasis y carrocería,,Tanques de gasolina y tapas,/motos/chasis-y-carroceria/tanques-de-gasolina-y-tapas,tanque; tanque de gasolina; tapa de tanque; tapa de gasolina
+Motos,Tipo de producto,Chasis y carrocería,,Sillines,/motos/chasis-y-carroceria/sillines,sillín; silla; asiento de moto; cojín
+Motos,Tipo de producto,Chasis y carrocería,,Colines y parrillas traseras,/motos/chasis-y-carroceria/colines-y-parrillas-traseras,colín; porta maleta
+Motos,Tipo de producto,Chasis y carrocería,,Guardabarros,/motos/chasis-y-carroceria/guardabarros,guardafango; fender; guardapolvo; guardafango delantero; guardabarro delantero; guardabarro trasero; guardafangos
+Motos,Tipo de producto,Chasis y carrocería,,Portaplacas,/motos/chasis-y-carroceria/portaplacas,portaplaca; porta placa; soporte de placa
+Motos,Tipo de producto,Chasis y carrocería,,Patas y caballetes,/motos/chasis-y-carroceria/patas-y-caballetes,pata; pata lateral; pata central; caballete; gato de moto; caballetes (patas)
+Motos,Tipo de producto,Chasis y carrocería,,Pedalines y soportes,/motos/chasis-y-carroceria/pedalines-y-soportes,pedalín; pedalines; posapiés; estribos de moto; pedalines de lujo; pedalines aluminio; posapiés de lujo
+Motos,Tipo de producto,Chasis y carrocería,,Pedales de cambio y freno,/motos/chasis-y-carroceria/pedales-de-cambio-y-freno,pedal de cambios; pedal de freno; palanca de cambios
+Motos,Tipo de producto,Chasis y carrocería,,Chasis y subchasis,/motos/chasis-y-carroceria/chasis-y-subchasis,chasis; subchasis; marco de moto
+Motos,Tipo de producto,Chasis y carrocería,,Cajas de filtro de aire,/motos/chasis-y-carroceria/cajas-de-filtro-de-aire,caja de filtro; caja de aire; airbox
+Motos,Tipo de producto,Chasis y carrocería,,Agarraderas,/motos/chasis-y-carroceria/agarraderas,agarradera; agarradera trasera; asa
+Motos,Tipo de producto,Chasis y carrocería,,Ejes de rueda,/motos/chasis-y-carroceria/ejes-de-rueda,eje de rueda; eje delantero; eje trasero
+Motos,Categoría,Suspensión y dirección,,,/motos/suspension-y-direccion,
+Motos,Tipo de producto,Suspensión y dirección,,Amortiguadores traseros,/motos/suspension-y-direccion/amortiguadores-traseros,amortiguador; amortiguador de moto; monoshock; amortiguadores dobles
+Motos,Tipo de producto,Suspensión y dirección,,Barras telescópicas (botellas),/motos/suspension-y-direccion/barras-telescopicas-botellas,botellas; telescópicos; barras de suspensión; horquilla
+Motos,Tipo de producto,Suspensión y dirección,,Kits de barras (retenedores y guardapolvos),/motos/suspension-y-direccion/kits-de-barras-retenedores-y-guardapolvos,"retenedores de barra; guardapolvos; kit de barras; sellos de suspensión; retenedores de barras; guardapolvos de barras; kit de suspensión delantera; kits de suspensión delantera (retenedores, guardapolvos)"
+Motos,Tipo de producto,Suspensión y dirección,,Resortes,/motos/suspension-y-direccion/resortes,resorte; espiral; muelle de suspensión
+Motos,Tipo de producto,Suspensión y dirección,,Tijeras (basculantes),/motos/suspension-y-direccion/tijeras-basculantes,basculante; tijera trasera; swingarm
+Motos,Tipo de producto,Suspensión y dirección,,Rodamientos de tijera,/motos/suspension-y-direccion/rodamientos-de-tijera,rodamiento de tijera; balinera de basculante; bocín de tijera
+Motos,Tipo de producto,Suspensión y dirección,,Cunas de dirección,/motos/suspension-y-direccion/cunas-de-direccion,rodamientos de dirección; balineras de dirección; cuna de dirección; cuna direccional; manzana de dirección; manzanas de dirección (rodamientos)
+Motos,Tipo de producto,Suspensión y dirección,,Bujes,/motos/suspension-y-direccion/bujes,buje; bujes de suspensión; bujes de tijera; bujes de barra
+Motos,Tipo de producto,Suspensión y dirección,,Manubrios,/motos/suspension-y-direccion/manubrios,"manillar; timón; manubrio; manubrios y puños de lujo; pad de manubrio; manubrio de lujo; puños de lujo; pads de manubrio; manubrios, puños y pads"
+Motos,Tipo de producto,Suspensión y dirección,,Puños y contrapesos,/motos/suspension-y-direccion/punos-y-contrapesos,puños; manillas; contrapesos; cachas
+Motos,Tipo de producto,Suspensión y dirección,,Tés y triples de dirección,/motos/suspension-y-direccion/tes-y-triples-de-direccion,triple; yugo; tijera de dirección
+Motos,Categoría,Tecnología y seguridad,,,/motos/tecnologia-y-seguridad,
+Motos,Tipo de producto,Tecnología y seguridad,,Rastreo GPS,/motos/tecnologia-y-seguridad/rastreo-gps,gps para moto; gps; rastreador; localizador
+Motos,Tipo de producto,Tecnología y seguridad,,Alarmas,/motos/tecnologia-y-seguridad/alarmas,alarma de moto; alarma; alarma con control
+Motos,Tipo de producto,Tecnología y seguridad,,Candados y bloqueos,/motos/tecnologia-y-seguridad/candados-y-bloqueos,"candados, guayas y alarmas; candado de moto; candado de disco; guaya de seguridad; traba de disco"
+Motos,Tipo de producto,Tecnología y seguridad,,Cámaras,/motos/tecnologia-y-seguridad/camaras,cámara para moto; cámara de seguridad; dashcam de moto
+Herramientas,Categoría,Herramientas manuales,,,/herramientas/herramientas-manuales,
+Herramientas,Tipo de producto,Herramientas manuales,,Llaves y copas,/herramientas/herramientas-manuales/llaves-y-copas,dados; juego de copas; rachet; ratchet; llaves y dados
+Herramientas,Tipo de producto,Herramientas manuales,,Llaves de cruz,/herramientas/herramientas-manuales/llaves-de-cruz,llave de cruz; llave de rueda; cruceta de llantas
+Herramientas,Tipo de producto,Herramientas manuales,,Torquímetros,/herramientas/herramientas-manuales/torquimetros,torquímetro; llave de torque; torcómetro
+Herramientas,Tipo de producto,Herramientas manuales,,Destornilladores,/herramientas/herramientas-manuales/destornilladores,destornillador; desarmador; juego de destornilladores
+Herramientas,Tipo de producto,Herramientas manuales,,Alicates y pinzas,/herramientas/herramientas-manuales/alicates-y-pinzas,alicate; pinza; hombresolo; cortafrío
+Herramientas,Tipo de producto,Herramientas manuales,,Martillos y cinceles,/herramientas/herramientas-manuales/martillos-y-cinceles,martillo; cincel; mazo
+Herramientas,Tipo de producto,Herramientas manuales,,Extractores y herramientas especiales,/herramientas/herramientas-manuales/extractores-y-herramientas-especiales,extractor; extractor de poleas; extractor de rótulas; herramienta especial
+Herramientas,Tipo de producto,Herramientas manuales,,Llaves para filtros,/herramientas/herramientas-manuales/llaves-para-filtros,llave de filtro; extractor de filtro
+Herramientas,Tipo de producto,Herramientas manuales,,Kits de herramientas,/herramientas/herramientas-manuales/kits-de-herramientas,caja de herramientas; set de herramientas; juego de herramientas
+Herramientas,Categoría,Herramientas eléctricas y neumáticas,,,/herramientas/herramientas-electricas-y-neumaticas,
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Taladros,/herramientas/herramientas-electricas-y-neumaticas/taladros,taladro; taladro inalámbrico
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Esmeriles y lijadoras,/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras,esmeril; moto tool; pulidoras y esmeriles; lijadora; amoladora
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Pistolas de impacto,/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto,pistola de impacto; llave de impacto
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Herramientas neumáticas,/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas,herramienta neumática; pistola neumática; ratchet neumático
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Compresores de aire,/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire,compresor; compresor de aire; compresor de taller
+Herramientas,Tipo de producto,Herramientas eléctricas y neumáticas,,Pistolas de calor y cautines,/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines,pistola de calor; cautín; soldador de estaño
+Herramientas,Categoría,Equipos de taller,,,/herramientas/equipos-de-taller,
+Herramientas,Tipo de producto,Equipos de taller,,Gatos y torres,/herramientas/equipos-de-taller/gatos-y-torres,gato; gato hidráulico; gato de carro; gato lagarto; torres
+Herramientas,Tipo de producto,Equipos de taller,,Elevadores,/herramientas/equipos-de-taller/elevadores,elevador; elevador de carro; rampa; rampas
+Herramientas,Tipo de producto,Equipos de taller,,Camillas de mecánico,/herramientas/equipos-de-taller/camillas-de-mecanico,camilla; camilla de mecánico
+Herramientas,Tipo de producto,Equipos de taller,,Prensas hidráulicas,/herramientas/equipos-de-taller/prensas-hidraulicas,prensa hidráulica
+Herramientas,Tipo de producto,Equipos de taller,,Grúas de motor,/herramientas/equipos-de-taller/gruas-de-motor,grúa de motor; pluma
+Herramientas,Tipo de producto,Equipos de taller,,Winches,/herramientas/equipos-de-taller/winches,winche; malacate; winch
+Herramientas,Tipo de producto,Equipos de taller,,Cargadores y arrancadores de batería,/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria,cargador de batería; arrancador; booster; jump starter; cargador
+Herramientas,Tipo de producto,Equipos de taller,,Infladores y manómetros de llanta,/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta,inflador; compresor portátil; medidor de presión; manómetro; inflador 12v; infladores y calibradores; medidor de presión de llantas; manómetro de llanta
+Herramientas,Tipo de producto,Equipos de taller,,Montallantas y despinche,/herramientas/equipos-de-taller/montallantas-y-despinche,montallantas; kit de despinche; parches
+Herramientas,Categoría,Diagnóstico y medición,,,/herramientas/diagnostico-y-medicion,
+Herramientas,Tipo de producto,Diagnóstico y medición,,Escáneres y equipos de diagnóstico,/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico,escáner; scanner; escáner automotriz; obd2; obd; equipo de diagnóstico
+Herramientas,Tipo de producto,Diagnóstico y medición,,Multímetros y probadores eléctricos,/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos,multímetro; tester; probador de corriente
+Herramientas,Tipo de producto,Diagnóstico y medición,,Calibradores y micrómetros,/herramientas/diagnostico-y-medicion/calibradores-y-micrometros,calibrador; vernier; pie de rey; galgas; calibradores y medidores; micrómetro
+Herramientas,Tipo de producto,Diagnóstico y medición,,Lámparas de tiempo,/herramientas/diagnostico-y-medicion/lamparas-de-tiempo,lámpara estroboscópica; lámpara de tiempo
+Herramientas,Tipo de producto,Diagnóstico y medición,,Compresímetros,/herramientas/diagnostico-y-medicion/compresimetros,compresímetro; medidor de compresión; compresímetros y manómetros
+Herramientas,Categoría,Cuidado y limpieza,,,/herramientas/cuidado-y-limpieza,
+Herramientas,Tipo de producto,Cuidado y limpieza,,Shampoo,/herramientas/cuidado-y-limpieza/shampoo,shampoo para carro; jabón para carro; champú; shampoo para moto; jabón para moto
+Herramientas,Tipo de producto,Cuidado y limpieza,,Desengrasantes,/herramientas/cuidado-y-limpieza/desengrasantes,desengrasante
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiavidrios,/herramientas/cuidado-y-limpieza/limpiavidrios,limpiavidrios; limpiador de vidrios; antiempañante
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiadores interiores,/herramientas/cuidado-y-limpieza/limpiadores-interiores,limpiador interior; limpiador de tablero; apc
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiadores de tapicería y cuero,/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero,limpiador de cuero; limpiador de tapicería; acondicionador de cuero
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiadores de motor,/herramientas/cuidado-y-limpieza/limpiadores-de-motor,limpiador de motor; desengrasante de motor; limpia motor
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiadores de rines,/herramientas/cuidado-y-limpieza/limpiadores-de-rines,limpiador de rines; limpia rines; removedor de polvo de freno
+Herramientas,Tipo de producto,Cuidado y limpieza,,Siliconas y renovadores de llantas,/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas,silicona para carro; silicona para llantas; llantax; renovador de llantas; brillo de llantas
+Herramientas,Tipo de producto,Cuidado y limpieza,,Ceras,/herramientas/cuidado-y-limpieza/ceras,cera; cera para carro; cera pulidora; cera líquida; brillo para moto; cera para moto
+Herramientas,Tipo de producto,Cuidado y limpieza,,Selladores,/herramientas/cuidado-y-limpieza/selladores,sellador; sellante; sellador de pintura
+Herramientas,Tipo de producto,Cuidado y limpieza,,Coatings,/herramientas/cuidado-y-limpieza/coatings,coating; recubrimiento cerámico; cerámico
+Herramientas,Tipo de producto,Cuidado y limpieza,,Hidrofóbicos,/herramientas/cuidado-y-limpieza/hidrofobicos,hidrofóbico; repelente de agua; sellador hidrofóbico
+Herramientas,Tipo de producto,Cuidado y limpieza,,Protectores UV,/herramientas/cuidado-y-limpieza/protectores-uv,protector uv; protector solar de tablero; protector de plásticos
+Herramientas,Tipo de producto,Cuidado y limpieza,,Quita rayones y restauradores de pintura,/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura,quita rayones; restaurador de pintura; corrector de rayones
+Herramientas,Tipo de producto,Cuidado y limpieza,,Microfibras,/herramientas/cuidado-y-limpieza/microfibras,microfibra; paños de microfibra; toallas de microfibra; cepillo de limpieza; paño de microfibra
+Herramientas,Tipo de producto,Cuidado y limpieza,,Cepillos y aplicadores,/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores,cepillo; aplicador; brocha de detailing
+Herramientas,Tipo de producto,Cuidado y limpieza,,Pulimentos y compuestos (rubbing),/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing,rubbing; pulimento; compuesto pulidor; pulidor
+Herramientas,Tipo de producto,Cuidado y limpieza,,Pads,/herramientas/cuidado-y-limpieza/pads,pad; pad de pulido; boina; esponja de pulir
+Herramientas,Tipo de producto,Cuidado y limpieza,,Abrillantadores,/herramientas/cuidado-y-limpieza/abrillantadores,abrillantador; brillo; renovador de plásticos
+Herramientas,Tipo de producto,Cuidado y limpieza,,Ambientadores y perfumes,/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes,ambientador; perfume para carro; aromatizante; aromatizador; little trees; pino; aromatizantes
+Herramientas,Tipo de producto,Cuidado y limpieza,,Anticorrosivos,/herramientas/cuidado-y-limpieza/anticorrosivos,anticorrosivo; antioxidante; protector de chasis
+Herramientas,Tipo de producto,Cuidado y limpieza,,Kits de limpieza,/herramientas/cuidado-y-limpieza/kits-de-limpieza,kit de limpieza; kit de lavado; kit de detailing
+Herramientas,Tipo de producto,Cuidado y limpieza,,Limpiadores de cadena,/herramientas/cuidado-y-limpieza/limpiadores-de-cadena,limpiador de cadena; desengrasante de cadena; limpia cadena
+Herramientas,Categoría,Consumibles de taller,,,/herramientas/consumibles-de-taller,
+Herramientas,Tipo de producto,Consumibles de taller,,Guantes,/herramientas/consumibles-de-taller/guantes,guantes de nitrilo; guantes de taller; guantes industriales
+Herramientas,Tipo de producto,Consumibles de taller,,Paños,/herramientas/consumibles-de-taller/panos,paño; trapo; estopa; limpión
+Herramientas,Tipo de producto,Consumibles de taller,,Cintas,/herramientas/consumibles-de-taller/cintas,cinta; cinta aislante; cinta doble faz; teflón
+Herramientas,Tipo de producto,Consumibles de taller,,Abrazaderas,/herramientas/consumibles-de-taller/abrazaderas,abrazadera; clamp; abrazadera de manguera
+Herramientas,Tipo de producto,Consumibles de taller,,Tornillería,/herramientas/consumibles-de-taller/tornilleria,tornillo; tuerca; arandela; tornillería
+Herramientas,Tipo de producto,Consumibles de taller,,Bridas,/herramientas/consumibles-de-taller/bridas,brida; amarre plástico; cincha plástica; zuncho
+Herramientas,Tipo de producto,Consumibles de taller,,Siliconas y pegantes,/herramientas/consumibles-de-taller/siliconas-y-pegantes,silicona; pegante; sellador de empaques; soldadura fría
+Herramientas,Tipo de producto,Consumibles de taller,,Lubricantes técnicos,/herramientas/consumibles-de-taller/lubricantes-tecnicos,lubricante técnico; wd40; penetrante; aflojatodo
+Herramientas,Tipo de producto,Consumibles de taller,,Limpiadores técnicos,/herramientas/consumibles-de-taller/limpiadores-tecnicos,limpiador de contactos; limpiador de frenos; limpiador técnico
+Herramientas,Tipo de producto,Consumibles de taller,,Aerosoles,/herramientas/consumibles-de-taller/aerosoles,aerosol; spray
+Herramientas,Tipo de producto,Consumibles de taller,,Empaques genéricos,/herramientas/consumibles-de-taller/empaques-genericos,empaque; empaquetadura; junta genérica; lámina de empaque
+Herramientas,Tipo de producto,Consumibles de taller,,Terminales eléctricos,/herramientas/consumibles-de-taller/terminales-electricos,terminal eléctrico; terminal de batería; conector eléctrico; ojal
+Herramientas,Tipo de producto,Consumibles de taller,,Pinturas y retoques,/herramientas/consumibles-de-taller/pinturas-y-retoques,pintura para carro; retoque; lápiz de retoque; pintura en aerosol; primer
+Herramientas,Categoría,Equipos de lavado y pulido,,,/herramientas/equipos-de-lavado-y-pulido,equipos de limpieza; lavado; pulido
+Herramientas,Tipo de producto,Equipos de lavado y pulido,,Hidrolavadoras,/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras,hidrolavadora; lavadora a presión; karcher
+Herramientas,Tipo de producto,Equipos de lavado y pulido,,Polichadoras,/herramientas/equipos-de-lavado-y-pulido/polichadoras,polichadora; pulidora; polichadora inalámbrica; pulidora orbital; pulidora de carro; brilladora
+Herramientas,Tipo de producto,Equipos de lavado y pulido,,Aspiradoras,/herramientas/equipos-de-lavado-y-pulido/aspiradoras,aspiradora para carro; aspiradora portátil; aspiradora 12v

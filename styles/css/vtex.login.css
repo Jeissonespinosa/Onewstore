@@ -1,36 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+/* ============================================================
+   HOME SIN BARRA DE HEADER (estilo Pull&Bear)
+   ------------------------------------------------------------
+   El wrapper del sticky-layout ocupaba 94px de flujo y pintaba
+   una franja blanca sobre el hero. Aqui se saca del flujo y se
+   vuelve transparente SOLO en el home, para que el logo quede
+   encima de las imagenes y el selector de vehiculo ocupe el
+   viewport completo. El resto de rutas conserva su header.
+   ============================================================ */
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
+  /* sticky-layout escribe "position: relative; height: 94px"
+     como estilo INLINE desde React, asi que sacarlo del flujo
+     exige !important. Al quedar absolute ya no reserva alto. */
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
+  background-color: transparent;
+}
+
+/* Al hacer scroll el header se pone opaco con blur; en el home
+   eso reintroduce la barra que justamente queremos quitar. */
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Velo muy suave en el borde superior: no es una barra, es un
+   seguro de legibilidad para que el logo se lea sea cual sea
+   la foto que se cargue despues. */
+:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--repuestoxSplitHero) {
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.32) 0,
+    rgba(0, 0, 0, 0.12) 4.5rem,
+    rgba(0, 0, 0, 0) 8rem
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 8rem;
+}
+
+/* ============================================================
+   TOKENS REPUESTOX + ESTADOS DE FOCO
+   ------------------------------------------------------------
+   Este archivo hospeda los tokens globales y los :focus-visible
+   por la misma razon que ya alojaba las reglas de navbar del
+   home: el builder de VTEX SALTA la validacion de CSS para
+   vtex.login@2.x, y es el unico sitio del theme donde se puede
+   usar :global(html) y pseudo-clases que el validador rechaza
+   en los demas archivos.
+
+   Paleta tomada del manual de marca (p.10-11): blanco #FFFFFF,
+   negro #010101, azul #060294 y rojo #FF371E. Son los unicos
+   cuatro colores; los grises son tintes de negro sobre blanco.
+   Tipografia: el manual solo nombra Roboto como base del
+   logotipo y esta compuesto en Montserrat; la UI usa Montserrat.
+   ============================================================ */
+:global(html) {
+  --rx-ink: #010101;
+  --rx-red: #FF371E;
+  --rx-blue: #060294;
+  --rx-paper: #ffffff;
+  --rx-surface: #f5f5f7;
+  --rx-surface-2: #ececef;
+  --rx-line: rgba(1, 1, 1, 0.12);
+  --rx-muted: rgba(1, 1, 1, 0.55);
+  --rx-radius: 20px;
+  --rx-gutter: 1rem;
+  /* Aire interno del hero y del banner (dentro de la tarjeta). */
+  --rx-hero-pad: 1.25rem;
+  --rx-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@media screen and (min-width: 48em) {
+  :global(html) {
+    --rx-radius: 24px;
+    --rx-gutter: clamp(1.5rem, 3.2vw, 3rem);
+    --rx-hero-pad: clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+/* Foco visible por teclado. Se declara aqui porque el
+   validador rechaza :focus-visible en los archivos de otras
+   apps; el handle completo se referencia con :global(). */
+:global(.vtex-rich-text-0-x-link--rxCtaPrimary):focus-visible,
+:global(.vtex-rich-text-0-x-link--rxCtaGhost):focus-visible,
+:global(.vtex-slider-layout-0-x-sliderLeftArrow--rxHero):focus-visible,
+:global(.vtex-slider-layout-0-x-sliderRightArrow--rxHero):focus-visible {
+  outline: 2px solid var(--rx-red);
+  outline-offset: 3px;
+}
+
+:global(.vtex-rich-text-0-x-link--rxLineaLabel):focus-visible,
+:global(.vtex-rich-text-0-x-link--rxLineaArrow):focus-visible,
+:global(.vtex-store-components-3-x-imageElementLink--rxLineaImage):focus-visible {
+  outline: 2px solid #FF371E;
+  outline-offset: 3px;
+}
+
+/* El rail de lineas usa scroll nativo: se oculta la barra en
+   WebKit (Firefox ya va con scrollbar-width: none). */
+
+/* Sin animacion para quien la desactivo en el sistema. */
+@media (prefers-reduced-motion: reduce) {
+  
+
+  :global(.vtex-slider-layout-0-x-sliderTrack--rxHero) {
+    transition: none !important;
+  }
+}
+
 /*
   vtex.login — el header usa Styleguide: <button class="vtex-button bg-transparent ...">
   y el texto <span class="... vtex-login-2-x-label ... gray">.
   Por eso .profile / .buttonLink solos no bastan: hay que pisar .vtex-button y .gray.
 */
 
-/* Botón real (Styleguide) dentro del login */
-.container :global(.vtex-button),
-.profile :global(.vtex-button) {
-  background-color: #FF371E !important;
-  border-color: transparent !important;
-  border-radius: 10px;
+/* Login del header (referencias/header): icono de usuario + dos
+   lineas: "Inicio de sesión" pequeno y "Cuenta" en negrita. Sin
+   fondo ni borde. Este archivo no pasa validacion, por eso puede
+   usar ::after y pseudo-clases. */
+.container > :global(div) > :global(.vtex-button),
+.profile > :global(div) > :global(.vtex-button) {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0;
   min-height: 0;
-  transition: background-color 0.2s ease;
+  padding: 0 !important;
 }
 
-.container :global(.vtex-button):hover,
-.profile :global(.vtex-button):hover {
-  background-color: #d62e18 !important;
-  border-color: transparent !important;
+.container > :global(div) > :global(.vtex-button):hover,
+.profile > :global(div) > :global(.vtex-button):hover {
+  background-color: transparent !important;
 }
 
-/* Texto: gana a utilitarios .gray y .c-action-primary del botón */
+.container > :global(div) > :global(.vtex-button) > :global(.vtex-button__label) {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 !important;
+}
+
+/* Iconos de contorno (referencias/header), en negro: se pinta el
+   SVG propio como fondo y se oculta el relleno de VTEX. */
+.profileIcon,
+:global(.vtex-minicart-2-x-cartIcon) {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent;
+}
+
+.profileIcon {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23010101' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='16' cy='11' r='6'/%3E%3Cpath d='M4.5 29 Q4.5 20 16 20 Q27.5 20 27.5 29'/%3E%3C/svg%3E");
+}
+
+:global(.vtex-minicart-2-x-cartIcon) {
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23010101' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 5 L6.5 5 L9.5 21 L25 21 L28.5 9.5 L8 9.5'/%3E%3Ccircle cx='12' cy='26.5' r='2'/%3E%3Ccircle cx='23' cy='26.5' r='2'/%3E%3C/svg%3E");
+}
+
+.profileIcon :global(use),
+:global(.vtex-minicart-2-x-cartIcon) :global(use) {
+  display: none;
+}
+
+.container > :global(div) > :global(.vtex-button) svg {
+  width: 30px;
+  height: 30px;
+}
+
 .label {
-  color: #ffffff !important;
-  font-size: 0.875rem;
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgba(1, 1, 1, 0.55) !important;
+  font-family: var(--rx-font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0;
   text-transform: none;
-  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.label::after {
+  content: 'Cuenta';
+  color: #010101;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .arrowUp {
   display: none;
+}
+
+/* ============================================================
+   Cuadro de inicio de sesion: tarjeta redondeada con sombra,
+   titulo en Montserrat y opciones como pildoras.
+   ============================================================ */
+.box {
+  margin-top: 0.85rem;
+  min-width: 25rem;
+  padding: 0;
+  border: 1px solid rgba(1, 1, 1, 0.08);
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 18px 48px rgba(1, 1, 1, 0.14);
+  overflow: hidden;
+}
+
+.contentContainer {
+  padding: 0;
+}
+
+.content {
+  padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.formTitle {
+  margin: 0 0 1rem;
+  color: #010101;
+  font-family: var(--rx-font);
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: none;
+}
+
+.optionsList {
+  margin: 0;
+  padding: 0;
+}
+
+.optionsListItem {
+  padding: 0;
+  margin: 0 0 0.6rem;
+}
+
+/* Opciones: pildoras a todo el ancho. La primera en rojo, la
+   segunda en blanco con borde. */
+.button :global(.vtex-button) {
+  width: 100%;
+  min-height: 3rem;
+  border-radius: 999px !important;
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  transition: filter 0.18s ease, background-color 0.18s ease;
+}
+
+.button :global(.vtex-button) :global(.vtex-button__label) {
+  padding: 0 1.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.accessCodeOptionBtn :global(.vtex-button) {
+  background-color: #FF371E !important;
+  border-color: #FF371E !important;
+  color: #ffffff !important;
+}
+
+.accessCodeOptionBtn :global(.vtex-button):hover {
+  filter: brightness(0.92);
+}
+
+.emailPasswordOptionBtn :global(.vtex-button) {
+  background-color: #ffffff !important;
+  border: 1.5px solid rgba(1, 1, 1, 0.14) !important;
+  color: #010101 !important;
+}
+
+.emailPasswordOptionBtn :global(.vtex-button):hover {
+  border-color: #FF371E !important;
+  color: #FF371E !important;
+}
+
+/* Formularios (email, codigo, contrasena): campos en pildora y
+   botones coherentes. */
+.box :global(.vtex-input-prefix__group) {
+  height: 3rem;
+  border: 1px solid rgba(1, 1, 1, 0.12) !important;
+  border-radius: 999px !important;
+  overflow: hidden;
+}
+
+.box :global(.vtex-input-prefix__group):focus-within {
+  border-color: rgba(255, 55, 30, 0.6) !important;
+  box-shadow: 0 0 0 4px rgba(255, 55, 30, 0.1);
+}
+
+.box input {
+  padding-left: 1.25rem !important;
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+}
+
+.box :global(.vtex-input__label),
+.inputContainer :global(label) {
+  font-family: var(--rx-font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(1, 1, 1, 0.55);
+}
+
+.sendButton :global(.vtex-button),
+.formFooter :global(.vtex-button) {
+  min-height: 2.75rem;
+  border-radius: 999px !important;
+  font-family: var(--rx-font);
+  font-weight: 700;
+  text-transform: none;
+}
+
+.sendButton :global(.vtex-button) {
+  background-color: #FF371E !important;
+  border-color: #FF371E !important;
+  color: #ffffff !important;
+}
+
+.backButton :global(.vtex-button) {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: rgba(1, 1, 1, 0.6) !important;
+}
+
+.formLink,
+.formLinks :global(a),
+.termsAndConditions,
+.termsAndConditions :global(a) {
+  font-family: var(--rx-font);
+  font-size: 0.75rem;
+  color: rgba(1, 1, 1, 0.55);
+}
+
+.termsAndConditions :global(a),
+.formLinks :global(a) {
+  color: #FF371E;
+  font-weight: 600;
+}
+
+/* Carrito del header al lado del login. */
+:global(.vtex-flex-layout-0-x-flexRow--headerActions) :global(.vtex-minicart-2-x-minicartIconContainer),
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-minicartIconContainer) {
+  color: #010101;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--headerActions) {
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Movil: solo iconos, mas pequenos y pegados (login + carrito). */
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) .label {
+  display: none !important;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) {
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-flex-layout-0-x-flexColChild) {
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) .profileIcon,
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-cartIcon) {
+  width: 24px;
+  height: 24px;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) .container > :global(div) > :global(.vtex-button) svg {
+  width: 24px;
+  height: 24px;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-openIconContainer) {
+  padding: 0 !important;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button),
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-openIconContainer) :global(.vtex-button__label) {
+  padding: 0 !important;
+  min-height: 0;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) :global(.vtex-minicart-2-x-minicartWrapperContainer) {
+  float: none;
+}
+
+:global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile) .container > :global(div) > :global(.vtex-button) > :global(.vtex-button__label) > :global(span) > :global(div) {
+  margin: 0 !important;
+}
+
+/* ============================================================
+   Buscador de seccion (search-bar#rx): pildora grande.
+   Los handles de store-components no cubren el <input> del
+   Styleguide, por eso se estila aqui.
+   ============================================================ */
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-input-prefix__group) {
+  height: 3.5rem;
+  border: 1.5px solid rgba(255, 55, 30, 0.35) !important;
+  border-radius: 999px !important;
+  background-color: #ffffff;
+  /* Halo rojo de marca: sombra difusa debajo + anillo suave, con
+     una pulsacion lenta para que "alumbre" y llame la atencion. */
+  box-shadow: 0 14px 34px -8px rgba(255, 55, 30, 0.45), 0 0 0 6px rgba(255, 55, 30, 0.07);
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  animation: rx-search-glow 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes rx-search-glow {
+  from {
+    box-shadow: 0 14px 34px -8px rgba(255, 55, 30, 0.42), 0 0 0 6px rgba(255, 55, 30, 0.06);
+    border-color: rgba(255, 55, 30, 0.3);
+  }
+  to {
+    box-shadow: 0 18px 46px -6px rgba(255, 55, 30, 0.62), 0 0 0 10px rgba(255, 55, 30, 0.12);
+    border-color: rgba(255, 55, 30, 0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-input-prefix__group) {
+    animation: none;
+  }
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-input-prefix__group):focus-within {
+  animation: none;
+  border-color: rgba(255, 55, 30, 0.85) !important;
+  box-shadow: 0 18px 46px -6px rgba(255, 55, 30, 0.55), 0 0 0 5px rgba(255, 55, 30, 0.14);
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) input {
+  height: 100%;
+  padding-left: 1.5rem !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #010101;
+  font-family: var(--rx-font);
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) input::placeholder {
+  color: rgba(1, 1, 1, 0.45);
+}
+
+/* Boton de buscar: circulo rojo dentro de la pildora. */
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-store-components-3-x-suffixWrapper) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-store-components-3-x-searchBarIcon) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0 !important;
+  margin: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: #FF371E;
+  color: #ffffff;
+  transition: filter 0.18s ease;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-store-components-3-x-searchBarIcon):hover {
+  filter: brightness(0.9);
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-store-components-3-x-searchIcon) {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+:global(.vtex-store-components-3-x-searchBarInnerContainer--rx) :global(.vtex-input__suffix) {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 0.375rem 0 0.5rem !important;
+}
+
+/* Cuando la barra se pega debajo del header: fondo blanco de
+   lado a lado con sombra suave, y la pildora un poco mas baja. */
+/* El fondo va en el container (es el que queda fixed). */
+:global(.vtex-sticky-layout-0-x-wrapper--rxSearch.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-sticky-layout-0-x-container--rxSearch) {
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(1, 1, 1, 0.08);
+}
+
+:global(.vtex-sticky-layout-0-x-wrapper--rxSearch.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-flex-layout-0-x-flexRowContent--rxSearchInner) {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+:global(.vtex-sticky-layout-0-x-wrapper--rxSearch.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-input-prefix__group) {
+  height: 3rem;
+  animation: none;
+  box-shadow: 0 0 0 4px rgba(255, 55, 30, 0.06);
 }
 
 /* ============================================================

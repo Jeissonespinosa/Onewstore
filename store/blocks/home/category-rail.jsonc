@@ -1,0 +1,1945 @@
+/* ============================================================
+   CATEGORIAS (macros) — cuadricula "Explora por categoria" en las
+   landings /carros y /motos
+   ------------------------------------------------------------
+   carros (12): Llantas y rines, Lubricantes y mantenimiento, Filtros, Baterías, Frenos, Suspensión y dirección, Eléctrico y electrónico, Iluminación, Motor y transmisión, Accesorios, Carrocería y climatización, Tecnología y seguridad
+   motos (14): Llantas y rines, Lubricantes y mantenimiento, Filtros, Motor y transmisión, Baterías, Frenos, Cascos, Eléctrico y electrónico, Iluminación, Accesorios, Ropa, Chasis y carrocería, Suspensión y dirección, Tecnología y seguridad
+   herramientas (7): Herramientas manuales, Herramientas eléctricas y neumáticas, Equipos de taller, Diagnóstico y medición, Cuidado y limpieza, Consumibles de taller, Equipos de lavado y pulido
+
+   Cada tarjeta lleva a /<seccion>/<macro>. Incluye la landing
+   /herramientas (store.custom#landing-herramientas): banner,
+   buscador y rail; sin selector de vehiculo.
+
+   IMAGENES: los src son PLACEHOLDERS en SVG (dicen "REEMPLAZAR"
+   y el nombre de la macro). Para poner la real solo se cambia
+   "src" en image#rx-<seccion>-linea-NN-img. Recomendado: PNG con
+   fondo blanco o transparente, producto centrado, ~800x500.
+   10 macros -> 5 por fila en escritorio (rxLineasGrid5); 12 -> 6.
+
+   GENERADO por scripts/gen-categorias.py — no editar a mano;
+   cambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.
+   ============================================================ */
+{
+  "rich-text#rx-lineas-heading": {
+    "props": {
+      "text": "Explora por categoría",
+      "blockClass": "rxLineasHeading"
+    }
+  },
+  "flex-layout.row#rx-lineas-section-carros": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-lineas-inner-carros"
+    ]
+  },
+  "flex-layout.col#rx-lineas-inner-carros": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-lineas-heading",
+      "flex-layout.row#rx-lineas-carros"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-01": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-01-media",
+      "flex-layout.row#rx-carros-linea-01-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-01-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-01-img"
+    ]
+  },
+  "image#rx-carros-linea-01-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 01 / Llantas y rines</text></svg>",
+      "alt": "Llantas y rines",
+      "link": {
+        "url": "/carros/llantas-y-rines",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-01-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-01-txt",
+      "rich-text#rx-carros-linea-01-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-01-txt": {
+    "props": {
+      "text": "[Llantas y rines](/carros/llantas-y-rines)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-01-arrow": {
+    "props": {
+      "text": "[→](/carros/llantas-y-rines)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-02": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-02-media",
+      "flex-layout.row#rx-carros-linea-02-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-02-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-02-img"
+    ]
+  },
+  "image#rx-carros-linea-02-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 02 / Lubricantes y mantenimiento</text></svg>",
+      "alt": "Lubricantes y mantenimiento",
+      "link": {
+        "url": "/carros/lubricantes-y-mantenimiento",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-02-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-02-txt",
+      "rich-text#rx-carros-linea-02-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-02-txt": {
+    "props": {
+      "text": "[Lubricantes y mantenimiento](/carros/lubricantes-y-mantenimiento)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-02-arrow": {
+    "props": {
+      "text": "[→](/carros/lubricantes-y-mantenimiento)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-03": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-03-media",
+      "flex-layout.row#rx-carros-linea-03-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-03-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-03-img"
+    ]
+  },
+  "image#rx-carros-linea-03-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 03 / Filtros</text></svg>",
+      "alt": "Filtros",
+      "link": {
+        "url": "/carros/filtros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-03-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-03-txt",
+      "rich-text#rx-carros-linea-03-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-03-txt": {
+    "props": {
+      "text": "[Filtros](/carros/filtros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-03-arrow": {
+    "props": {
+      "text": "[→](/carros/filtros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-04": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-04-media",
+      "flex-layout.row#rx-carros-linea-04-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-04-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-04-img"
+    ]
+  },
+  "image#rx-carros-linea-04-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 04 / Baterías</text></svg>",
+      "alt": "Baterías",
+      "link": {
+        "url": "/carros/baterias",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-04-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-04-txt",
+      "rich-text#rx-carros-linea-04-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-04-txt": {
+    "props": {
+      "text": "[Baterías](/carros/baterias)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-04-arrow": {
+    "props": {
+      "text": "[→](/carros/baterias)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-05": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-05-media",
+      "flex-layout.row#rx-carros-linea-05-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-05-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-05-img"
+    ]
+  },
+  "image#rx-carros-linea-05-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 05 / Frenos</text></svg>",
+      "alt": "Frenos",
+      "link": {
+        "url": "/carros/frenos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-05-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-05-txt",
+      "rich-text#rx-carros-linea-05-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-05-txt": {
+    "props": {
+      "text": "[Frenos](/carros/frenos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-05-arrow": {
+    "props": {
+      "text": "[→](/carros/frenos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-06": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-06-media",
+      "flex-layout.row#rx-carros-linea-06-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-06-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-06-img"
+    ]
+  },
+  "image#rx-carros-linea-06-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 06 / Suspensión y dirección</text></svg>",
+      "alt": "Suspensión y dirección",
+      "link": {
+        "url": "/carros/suspension-y-direccion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-06-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-06-txt",
+      "rich-text#rx-carros-linea-06-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-06-txt": {
+    "props": {
+      "text": "[Suspensión y dirección](/carros/suspension-y-direccion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-06-arrow": {
+    "props": {
+      "text": "[→](/carros/suspension-y-direccion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-07": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-07-media",
+      "flex-layout.row#rx-carros-linea-07-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-07-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-07-img"
+    ]
+  },
+  "image#rx-carros-linea-07-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 07 / Eléctrico y electrónico</text></svg>",
+      "alt": "Eléctrico y electrónico",
+      "link": {
+        "url": "/carros/electrico-y-electronico",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-07-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-07-txt",
+      "rich-text#rx-carros-linea-07-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-07-txt": {
+    "props": {
+      "text": "[Eléctrico y electrónico](/carros/electrico-y-electronico)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-07-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-08": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-08-media",
+      "flex-layout.row#rx-carros-linea-08-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-08-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-08-img"
+    ]
+  },
+  "image#rx-carros-linea-08-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 08 / Iluminación</text></svg>",
+      "alt": "Iluminación",
+      "link": {
+        "url": "/carros/iluminacion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-08-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-08-txt",
+      "rich-text#rx-carros-linea-08-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-08-txt": {
+    "props": {
+      "text": "[Iluminación](/carros/iluminacion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-08-arrow": {
+    "props": {
+      "text": "[→](/carros/iluminacion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-09": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-09-media",
+      "flex-layout.row#rx-carros-linea-09-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-09-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-09-img"
+    ]
+  },
+  "image#rx-carros-linea-09-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 09 / Motor y transmisión</text></svg>",
+      "alt": "Motor y transmisión",
+      "link": {
+        "url": "/carros/motor-y-transmision",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-09-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-09-txt",
+      "rich-text#rx-carros-linea-09-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-09-txt": {
+    "props": {
+      "text": "[Motor y transmisión](/carros/motor-y-transmision)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-09-arrow": {
+    "props": {
+      "text": "[→](/carros/motor-y-transmision)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-10": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-10-media",
+      "flex-layout.row#rx-carros-linea-10-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-10-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-10-img"
+    ]
+  },
+  "image#rx-carros-linea-10-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 10 / Accesorios</text></svg>",
+      "alt": "Accesorios",
+      "link": {
+        "url": "/carros/accesorios",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-10-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-10-txt",
+      "rich-text#rx-carros-linea-10-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-10-txt": {
+    "props": {
+      "text": "[Accesorios](/carros/accesorios)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-10-arrow": {
+    "props": {
+      "text": "[→](/carros/accesorios)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-11": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-11-media",
+      "flex-layout.row#rx-carros-linea-11-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-11-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-11-img"
+    ]
+  },
+  "image#rx-carros-linea-11-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 11 / Carrocería y climatización</text></svg>",
+      "alt": "Carrocería y climatización",
+      "link": {
+        "url": "/carros/carroceria-y-climatizacion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-11-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-11-txt",
+      "rich-text#rx-carros-linea-11-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-11-txt": {
+    "props": {
+      "text": "[Carrocería y climatización](/carros/carroceria-y-climatizacion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-11-arrow": {
+    "props": {
+      "text": "[→](/carros/carroceria-y-climatizacion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-carros-linea-12": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-12-media",
+      "flex-layout.row#rx-carros-linea-12-foot"
+    ]
+  },
+  "flex-layout.col#rx-carros-linea-12-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-linea-12-img"
+    ]
+  },
+  "image#rx-carros-linea-12-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>carros 12 / Tecnología y seguridad</text></svg>",
+      "alt": "Tecnología y seguridad",
+      "link": {
+        "url": "/carros/tecnologia-y-seguridad",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-carros-linea-12-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-linea-12-txt",
+      "rich-text#rx-carros-linea-12-arrow"
+    ]
+  },
+  "rich-text#rx-carros-linea-12-txt": {
+    "props": {
+      "text": "[Tecnología y seguridad](/carros/tecnologia-y-seguridad)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-carros-linea-12-arrow": {
+    "props": {
+      "text": "[→](/carros/tecnologia-y-seguridad)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-lineas-carros": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-linea-01",
+      "flex-layout.col#rx-carros-linea-02",
+      "flex-layout.col#rx-carros-linea-03",
+      "flex-layout.col#rx-carros-linea-04",
+      "flex-layout.col#rx-carros-linea-05",
+      "flex-layout.col#rx-carros-linea-06",
+      "flex-layout.col#rx-carros-linea-07",
+      "flex-layout.col#rx-carros-linea-08",
+      "flex-layout.col#rx-carros-linea-09",
+      "flex-layout.col#rx-carros-linea-10",
+      "flex-layout.col#rx-carros-linea-11",
+      "flex-layout.col#rx-carros-linea-12"
+    ]
+  },
+  "flex-layout.row#rx-lineas-section-motos": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-lineas-inner-motos"
+    ]
+  },
+  "flex-layout.col#rx-lineas-inner-motos": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-lineas-heading",
+      "flex-layout.row#rx-lineas-motos"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-01": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-01-media",
+      "flex-layout.row#rx-motos-linea-01-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-01-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-01-img"
+    ]
+  },
+  "image#rx-motos-linea-01-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 01 / Llantas y rines</text></svg>",
+      "alt": "Llantas y rines",
+      "link": {
+        "url": "/motos/llantas-y-rines",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-01-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-01-txt",
+      "rich-text#rx-motos-linea-01-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-01-txt": {
+    "props": {
+      "text": "[Llantas y rines](/motos/llantas-y-rines)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-01-arrow": {
+    "props": {
+      "text": "[→](/motos/llantas-y-rines)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-02": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-02-media",
+      "flex-layout.row#rx-motos-linea-02-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-02-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-02-img"
+    ]
+  },
+  "image#rx-motos-linea-02-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 02 / Lubricantes y mantenimiento</text></svg>",
+      "alt": "Lubricantes y mantenimiento",
+      "link": {
+        "url": "/motos/lubricantes-y-mantenimiento",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-02-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-02-txt",
+      "rich-text#rx-motos-linea-02-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-02-txt": {
+    "props": {
+      "text": "[Lubricantes y mantenimiento](/motos/lubricantes-y-mantenimiento)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-02-arrow": {
+    "props": {
+      "text": "[→](/motos/lubricantes-y-mantenimiento)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-03": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-03-media",
+      "flex-layout.row#rx-motos-linea-03-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-03-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-03-img"
+    ]
+  },
+  "image#rx-motos-linea-03-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 03 / Filtros</text></svg>",
+      "alt": "Filtros",
+      "link": {
+        "url": "/motos/filtros",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-03-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-03-txt",
+      "rich-text#rx-motos-linea-03-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-03-txt": {
+    "props": {
+      "text": "[Filtros](/motos/filtros)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-03-arrow": {
+    "props": {
+      "text": "[→](/motos/filtros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-04": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-04-media",
+      "flex-layout.row#rx-motos-linea-04-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-04-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-04-img"
+    ]
+  },
+  "image#rx-motos-linea-04-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 04 / Motor y transmisión</text></svg>",
+      "alt": "Motor y transmisión",
+      "link": {
+        "url": "/motos/motor-y-transmision",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-04-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-04-txt",
+      "rich-text#rx-motos-linea-04-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-04-txt": {
+    "props": {
+      "text": "[Motor y transmisión](/motos/motor-y-transmision)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-04-arrow": {
+    "props": {
+      "text": "[→](/motos/motor-y-transmision)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-05": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-05-media",
+      "flex-layout.row#rx-motos-linea-05-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-05-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-05-img"
+    ]
+  },
+  "image#rx-motos-linea-05-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 05 / Baterías</text></svg>",
+      "alt": "Baterías",
+      "link": {
+        "url": "/motos/baterias",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-05-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-05-txt",
+      "rich-text#rx-motos-linea-05-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-05-txt": {
+    "props": {
+      "text": "[Baterías](/motos/baterias)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-05-arrow": {
+    "props": {
+      "text": "[→](/motos/baterias)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-06": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-06-media",
+      "flex-layout.row#rx-motos-linea-06-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-06-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-06-img"
+    ]
+  },
+  "image#rx-motos-linea-06-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 06 / Frenos</text></svg>",
+      "alt": "Frenos",
+      "link": {
+        "url": "/motos/frenos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-06-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-06-txt",
+      "rich-text#rx-motos-linea-06-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-06-txt": {
+    "props": {
+      "text": "[Frenos](/motos/frenos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-06-arrow": {
+    "props": {
+      "text": "[→](/motos/frenos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-07": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-07-media",
+      "flex-layout.row#rx-motos-linea-07-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-07-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-07-img"
+    ]
+  },
+  "image#rx-motos-linea-07-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 07 / Cascos</text></svg>",
+      "alt": "Cascos",
+      "link": {
+        "url": "/motos/cascos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-07-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-07-txt",
+      "rich-text#rx-motos-linea-07-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-07-txt": {
+    "props": {
+      "text": "[Cascos](/motos/cascos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-07-arrow": {
+    "props": {
+      "text": "[→](/motos/cascos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-08": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-08-media",
+      "flex-layout.row#rx-motos-linea-08-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-08-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-08-img"
+    ]
+  },
+  "image#rx-motos-linea-08-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 08 / Eléctrico y electrónico</text></svg>",
+      "alt": "Eléctrico y electrónico",
+      "link": {
+        "url": "/motos/electrico-y-electronico",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-08-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-08-txt",
+      "rich-text#rx-motos-linea-08-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-08-txt": {
+    "props": {
+      "text": "[Eléctrico y electrónico](/motos/electrico-y-electronico)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-08-arrow": {
+    "props": {
+      "text": "[→](/motos/electrico-y-electronico)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-09": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-09-media",
+      "flex-layout.row#rx-motos-linea-09-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-09-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-09-img"
+    ]
+  },
+  "image#rx-motos-linea-09-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 09 / Iluminación</text></svg>",
+      "alt": "Iluminación",
+      "link": {
+        "url": "/motos/iluminacion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-09-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-09-txt",
+      "rich-text#rx-motos-linea-09-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-09-txt": {
+    "props": {
+      "text": "[Iluminación](/motos/iluminacion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-09-arrow": {
+    "props": {
+      "text": "[→](/motos/iluminacion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-10": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-10-media",
+      "flex-layout.row#rx-motos-linea-10-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-10-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-10-img"
+    ]
+  },
+  "image#rx-motos-linea-10-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 10 / Accesorios</text></svg>",
+      "alt": "Accesorios",
+      "link": {
+        "url": "/motos/accesorios",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-10-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-10-txt",
+      "rich-text#rx-motos-linea-10-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-10-txt": {
+    "props": {
+      "text": "[Accesorios](/motos/accesorios)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-10-arrow": {
+    "props": {
+      "text": "[→](/motos/accesorios)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-11": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-11-media",
+      "flex-layout.row#rx-motos-linea-11-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-11-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-11-img"
+    ]
+  },
+  "image#rx-motos-linea-11-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 11 / Ropa</text></svg>",
+      "alt": "Ropa",
+      "link": {
+        "url": "/motos/ropa",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-11-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-11-txt",
+      "rich-text#rx-motos-linea-11-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-11-txt": {
+    "props": {
+      "text": "[Ropa](/motos/ropa)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-11-arrow": {
+    "props": {
+      "text": "[→](/motos/ropa)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-12": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-12-media",
+      "flex-layout.row#rx-motos-linea-12-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-12-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-12-img"
+    ]
+  },
+  "image#rx-motos-linea-12-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 12 / Chasis y carrocería</text></svg>",
+      "alt": "Chasis y carrocería",
+      "link": {
+        "url": "/motos/chasis-y-carroceria",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-12-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-12-txt",
+      "rich-text#rx-motos-linea-12-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-12-txt": {
+    "props": {
+      "text": "[Chasis y carrocería](/motos/chasis-y-carroceria)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-12-arrow": {
+    "props": {
+      "text": "[→](/motos/chasis-y-carroceria)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-13": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-13-media",
+      "flex-layout.row#rx-motos-linea-13-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-13-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-13-img"
+    ]
+  },
+  "image#rx-motos-linea-13-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 13 / Suspensión y dirección</text></svg>",
+      "alt": "Suspensión y dirección",
+      "link": {
+        "url": "/motos/suspension-y-direccion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-13-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-13-txt",
+      "rich-text#rx-motos-linea-13-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-13-txt": {
+    "props": {
+      "text": "[Suspensión y dirección](/motos/suspension-y-direccion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-13-arrow": {
+    "props": {
+      "text": "[→](/motos/suspension-y-direccion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-motos-linea-14": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-14-media",
+      "flex-layout.row#rx-motos-linea-14-foot"
+    ]
+  },
+  "flex-layout.col#rx-motos-linea-14-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-linea-14-img"
+    ]
+  },
+  "image#rx-motos-linea-14-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>motos 14 / Tecnología y seguridad</text></svg>",
+      "alt": "Tecnología y seguridad",
+      "link": {
+        "url": "/motos/tecnologia-y-seguridad",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-motos-linea-14-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-linea-14-txt",
+      "rich-text#rx-motos-linea-14-arrow"
+    ]
+  },
+  "rich-text#rx-motos-linea-14-txt": {
+    "props": {
+      "text": "[Tecnología y seguridad](/motos/tecnologia-y-seguridad)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-motos-linea-14-arrow": {
+    "props": {
+      "text": "[→](/motos/tecnologia-y-seguridad)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-lineas-motos": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-linea-01",
+      "flex-layout.col#rx-motos-linea-02",
+      "flex-layout.col#rx-motos-linea-03",
+      "flex-layout.col#rx-motos-linea-04",
+      "flex-layout.col#rx-motos-linea-05",
+      "flex-layout.col#rx-motos-linea-06",
+      "flex-layout.col#rx-motos-linea-07",
+      "flex-layout.col#rx-motos-linea-08",
+      "flex-layout.col#rx-motos-linea-09",
+      "flex-layout.col#rx-motos-linea-10",
+      "flex-layout.col#rx-motos-linea-11",
+      "flex-layout.col#rx-motos-linea-12",
+      "flex-layout.col#rx-motos-linea-13",
+      "flex-layout.col#rx-motos-linea-14"
+    ]
+  },
+  "flex-layout.row#rx-lineas-section-herramientas": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-lineas-inner-herramientas"
+    ]
+  },
+  "flex-layout.col#rx-lineas-inner-herramientas": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-lineas-heading",
+      "flex-layout.row#rx-lineas-herramientas"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-01": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-01-media",
+      "flex-layout.row#rx-herramientas-linea-01-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-01-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-01-img"
+    ]
+  },
+  "image#rx-herramientas-linea-01-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 01 / Herramientas manuales</text></svg>",
+      "alt": "Herramientas manuales",
+      "link": {
+        "url": "/herramientas/herramientas-manuales",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-01-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-01-txt",
+      "rich-text#rx-herramientas-linea-01-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-01-txt": {
+    "props": {
+      "text": "[Herramientas manuales](/herramientas/herramientas-manuales)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-01-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-manuales)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-02": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-02-media",
+      "flex-layout.row#rx-herramientas-linea-02-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-02-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-02-img"
+    ]
+  },
+  "image#rx-herramientas-linea-02-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 02 / Herramientas eléctricas y neumáticas</text></svg>",
+      "alt": "Herramientas eléctricas y neumáticas",
+      "link": {
+        "url": "/herramientas/herramientas-electricas-y-neumaticas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-02-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-02-txt",
+      "rich-text#rx-herramientas-linea-02-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-02-txt": {
+    "props": {
+      "text": "[Herramientas eléctricas y neumáticas](/herramientas/herramientas-electricas-y-neumaticas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-02-arrow": {
+    "props": {
+      "text": "[→](/herramientas/herramientas-electricas-y-neumaticas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-03": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-03-media",
+      "flex-layout.row#rx-herramientas-linea-03-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-03-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-03-img"
+    ]
+  },
+  "image#rx-herramientas-linea-03-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 03 / Equipos de taller</text></svg>",
+      "alt": "Equipos de taller",
+      "link": {
+        "url": "/herramientas/equipos-de-taller",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-03-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-03-txt",
+      "rich-text#rx-herramientas-linea-03-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-03-txt": {
+    "props": {
+      "text": "[Equipos de taller](/herramientas/equipos-de-taller)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-03-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-taller)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-04": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-04-media",
+      "flex-layout.row#rx-herramientas-linea-04-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-04-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-04-img"
+    ]
+  },
+  "image#rx-herramientas-linea-04-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 04 / Diagnóstico y medición</text></svg>",
+      "alt": "Diagnóstico y medición",
+      "link": {
+        "url": "/herramientas/diagnostico-y-medicion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-04-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-04-txt",
+      "rich-text#rx-herramientas-linea-04-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-04-txt": {
+    "props": {
+      "text": "[Diagnóstico y medición](/herramientas/diagnostico-y-medicion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-04-arrow": {
+    "props": {
+      "text": "[→](/herramientas/diagnostico-y-medicion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-05": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-05-media",
+      "flex-layout.row#rx-herramientas-linea-05-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-05-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-05-img"
+    ]
+  },
+  "image#rx-herramientas-linea-05-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 05 / Cuidado y limpieza</text></svg>",
+      "alt": "Cuidado y limpieza",
+      "link": {
+        "url": "/herramientas/cuidado-y-limpieza",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-05-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-05-txt",
+      "rich-text#rx-herramientas-linea-05-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-05-txt": {
+    "props": {
+      "text": "[Cuidado y limpieza](/herramientas/cuidado-y-limpieza)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-05-arrow": {
+    "props": {
+      "text": "[→](/herramientas/cuidado-y-limpieza)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-06": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-06-media",
+      "flex-layout.row#rx-herramientas-linea-06-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-06-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-06-img"
+    ]
+  },
+  "image#rx-herramientas-linea-06-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 06 / Consumibles de taller</text></svg>",
+      "alt": "Consumibles de taller",
+      "link": {
+        "url": "/herramientas/consumibles-de-taller",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-06-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-06-txt",
+      "rich-text#rx-herramientas-linea-06-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-06-txt": {
+    "props": {
+      "text": "[Consumibles de taller](/herramientas/consumibles-de-taller)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-06-arrow": {
+    "props": {
+      "text": "[→](/herramientas/consumibles-de-taller)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-herramientas-linea-07": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-07-media",
+      "flex-layout.row#rx-herramientas-linea-07-foot"
+    ]
+  },
+  "flex-layout.col#rx-herramientas-linea-07-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-herramientas-linea-07-img"
+    ]
+  },
+  "image#rx-herramientas-linea-07-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>herramientas 07 / Equipos de lavado y pulido</text></svg>",
+      "alt": "Equipos de lavado y pulido",
+      "link": {
+        "url": "/herramientas/equipos-de-lavado-y-pulido",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-herramientas-linea-07-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-herramientas-linea-07-txt",
+      "rich-text#rx-herramientas-linea-07-arrow"
+    ]
+  },
+  "rich-text#rx-herramientas-linea-07-txt": {
+    "props": {
+      "text": "[Equipos de lavado y pulido](/herramientas/equipos-de-lavado-y-pulido)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-herramientas-linea-07-arrow": {
+    "props": {
+      "text": "[→](/herramientas/equipos-de-lavado-y-pulido)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-lineas-herramientas": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-herramientas-linea-01",
+      "flex-layout.col#rx-herramientas-linea-02",
+      "flex-layout.col#rx-herramientas-linea-03",
+      "flex-layout.col#rx-herramientas-linea-04",
+      "flex-layout.col#rx-herramientas-linea-05",
+      "flex-layout.col#rx-herramientas-linea-06",
+      "flex-layout.col#rx-herramientas-linea-07"
+    ]
+  },
+  "store.custom#landing-herramientas": {
+    "blocks": [
+      "flex-layout.row#rx-p-landing-herramientas-banner",
+      "flex-layout.row#rx-tools-search",
+      "flex-layout.row#rx-lineas-section-herramientas",
+      "flex-layout.row#carros-cta-banner"
+    ]
+  },
+  "flex-layout.row#rx-p-landing-herramientas-banner": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineaBanner"
+    },
+    "children": [
+      "flex-layout.col#rx-p-landing-herramientas-banner-media",
+      "flex-layout.col#rx-p-landing-herramientas-banner-content"
+    ]
+  },
+  "flex-layout.col#rx-p-landing-herramientas-banner-media": {
+    "props": {
+      "blockClass": "rxLineaBannerMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-p-landing-herramientas-banner-img"
+    ]
+  },
+  "image#rx-p-landing-herramientas-banner-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400'><rect width='1600' height='400' fill='%23010101'/><path d='M880 400 L1130 0 L1400 0 L1150 400 Z' fill='%23FF371E' opacity='.16'/><text x='1540' y='330' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%23ffffff' fill-opacity='.35'>REEMPLAZAR</text><text x='1540' y='366' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='20' fill='%23ffffff' fill-opacity='.4'>herramientas / landing / 1600x400</text></svg>",
+      "alt": ""
+    }
+  },
+  "flex-layout.col#rx-p-landing-herramientas-banner-content": {
+    "props": {
+      "blockClass": "rxLineaBannerContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-p-landing-herramientas-eyebrow",
+      "rich-text#rx-p-landing-herramientas-title"
+    ]
+  },
+  "rich-text#rx-p-landing-herramientas-eyebrow": {
+    "props": {
+      "text": "Para carros y motos",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-p-landing-herramientas-title": {
+    "props": {
+      "text": "# Herramientas, cuidado y taller",
+      "blockClass": "rxTitle"
+    }
+  }
+}

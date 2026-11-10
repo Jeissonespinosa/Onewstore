@@ -1,0 +1,118 @@
+/* ============================================================
+   PRODUCTOS POR SECCION — rail de productos del catalogo
+   ------------------------------------------------------------
+   Lee los productos reales de VTEX por categoria (list-context)
+   y los muestra en un slider de 4 columnas.
+
+   Tarjeta (referencias/Producto): foto sobre blanco sin borde,
+   pildora roja "Ahorra X%" arriba a la izquierda solo si hay
+   descuento, y un panel gris abajo con marca, nombre y precio
+   (venta en rojo, lista tachada). La tarjeta entera lleva al PDP;
+   no hay boton de carrito en el rail.
+
+   Categoria "Carros" = id 1 en el arbol del catalogo. Para
+   apuntar a otra categoria o a una coleccion, cambia "category"
+   (o usa "collection") en list-context.product-list#rx-carros.
+   Los ids salen de Catalogo > Categorias en el admin.
+
+   El htmlId "carros-produtos" se conserva como ancla.
+   ============================================================ */
+{
+  "flex-layout.row#rx-productos-carros": {
+    "props": {
+      "fullWidth": true,
+      "htmlId": "carros-produtos",
+      "blockClass": "rxProductosSection"
+    },
+    "children": ["flex-layout.col#rx-productos-carros-inner"]
+  },
+  "flex-layout.col#rx-productos-carros-inner": {
+    "props": { "blockClass": "rxProductosInner", "width": "100%" },
+    "children": [
+      "flex-layout.row#rx-productos-carros-head",
+      "list-context.product-list#rx-carros"
+    ]
+  },
+
+  /* Cabecera. Sin enlace "Ver todos" por ahora: la categoria
+     "Carros" del catalogo tiene el mismo slug (/carros) que esta
+     landing, asi que no hay a donde mandar al usuario. */
+  "flex-layout.row#rx-productos-carros-head": {
+    "props": { "blockClass": "rxProductosHead", "preventHorizontalStretch": true },
+    "children": ["rich-text#rx-productos-carros-heading"]
+  },
+  "rich-text#rx-productos-carros-heading": {
+    "props": { "text": "Productos para carros", "blockClass": "rxProductosHeading" }
+  },
+
+  "list-context.product-list#rx-carros": {
+    "props": {
+      "category": "1",
+      "orderBy": "OrderByReleaseDateDESC",
+      "maxItems": 12,
+      "hideUnavailableItems": true,
+      "skusFilter": "FIRST_AVAILABLE"
+    },
+    "blocks": ["product-summary.shelf#rx"],
+    "children": ["slider-layout#rx-productos"]
+  },
+
+  "slider-layout#rx-productos": {
+    "props": {
+      "blockClass": "rxProductos",
+      "itemsPerPage": { "desktop": 4, "tablet": 3, "phone": 2 },
+      "infinite": false,
+      "fullWidth": false,
+      "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
+      "centerMode": "disabled"
+    }
+  },
+
+  /* ----- tarjeta de producto ----- */
+  "product-summary.shelf#rx": {
+    "props": { "blockClass": "rxCard" },
+    "children": [
+      "product-price-savings#rx",
+      "product-summary-image#rx",
+      "flex-layout.col#rx-card-info"
+    ]
+  },
+  "product-price-savings#rx": {
+    "props": { "blockClass": "rxCard", "message": "Ahorra {savingsPercentage}", "percentageStyle": "locale" }
+  },
+  "product-summary-image#rx": {
+    "props": {
+      "blockClass": "rxCard",
+      "showBadge": false,
+      "aspectRatio": "1:1",
+      "maxHeight": 240
+    }
+  },
+
+  /* Panel gris: marca arriba; nombre a la izquierda y precio a la derecha. */
+  "flex-layout.col#rx-card-info": {
+    "props": { "blockClass": "rxCardInfo", "width": "100%" },
+    "children": ["vtex.store-components:product-brand#rx", "flex-layout.row#rx-card-main"]
+  },
+  "vtex.store-components:product-brand#rx": {
+    "props": { "blockClass": "rxCard", "displayMode": "text" }
+  },
+  "flex-layout.row#rx-card-main": {
+    "props": { "blockClass": "rxCardMain", "preventHorizontalStretch": true, "preserveLayoutOnMobile": true },
+    "children": ["product-summary-name#rx", "flex-layout.col#rx-card-price"]
+  },
+  "product-summary-name#rx": {
+    "props": { "blockClass": "rxCard", "showBrandName": false, "showSku": false, "showProductReference": false }
+  },
+  "flex-layout.col#rx-card-price": {
+    "props": { "blockClass": "rxCardPrice", "width": "100%" },
+    "children": ["product-selling-price#rx", "product-list-price#rx"]
+  },
+  "product-selling-price#rx": {
+    "props": { "blockClass": "rxCard", "message": "{sellingPriceValue}" }
+  },
+  "product-list-price#rx": {
+    "props": { "blockClass": "rxCard", "message": "{listPriceValue}" }
+  }
+}

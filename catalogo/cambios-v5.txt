@@ -1,0 +1,148 @@
+SINONIMOS POR SECCION (v5)
+Antes: _sinonimos era {nombre: [terminos]} y las 69 categorias con el mismo
+nombre en dos secciones recibian la misma lista: la pagina de carros llevaba
+"alarma de moto" y la de motos "alarma de carro". Ahora _sinonimos es
+{Carros:{...}, Motos:{...}, Herramientas:{...}, _comunes:{...}}: cada seccion
+tiene lo suyo y _comunes guarda lo que de verdad aplica a todas (codigos de
+bombillo, dexron, r134a...).
+
+_comunes: "Pastillas de freno" comparte pastas de freno, brake pads (esta en Carros y Motos)
+_comunes: "Bandas de freno" comparte zapatas, zapatas de freno (esta en Carros y Motos)
+_comunes: "Campanas de freno" comparte tambores, campanas, tambores de freno, campanas (tambores) de freno (esta en Carros y Motos)
+_comunes: "Guayas de clutch" comparte cable de clutch, cable de embrague, chicote de clutch (esta en Carros y Motos)
+_comunes: "Guayas de acelerador" comparte cable de acelerador, chicote de acelerador (esta en Carros y Motos)
+_comunes: "Kits de clutch" comparte kit de embrague, kit clutch, clutch, embrague (esta en Carros y Motos)
+_comunes: "Discos de clutch" comparte disco de embrague (esta en Carros y Motos)
+_comunes: "Balineras de rueda" comparte rodamientos de rueda, balineras, rulemanes (esta en Carros y Motos)
+_comunes: "Repartición (distribución)" comparte distribución, tiempo (esta en Carros y Motos)
+_comunes: "Mofles (silenciadores)" comparte silenciador (esta en Carros y Motos)
+_comunes: "Bombas de gasolina" comparte bomba de combustible, bomba de gasolina eléctrica, módulo de bomba (esta en Carros y Motos)
+Motos: "Electroventiladores" recibe moto ventilador
+_comunes: "Electroventiladores" comparte ventilador de radiador, electroventilador, ventiladores de radiador (esta en Carros y Motos)
+_comunes: "Farolas" comparte faros, luces delanteras, headlights, farola delantera, unidad de farola, luz delantera (esta en Carros y Motos)
+_comunes: "Stops" comparte luces traseras, stop, calaveras, luz de freno, farola trasera, luz trasera (esta en Carros y Motos)
+_comunes: "Bombillos halógenos" comparte bombillos, bombillas, focos, halógeno, h1, h3, h4, h7, h11, 9005, 9006, luz halógena (esta en Carros y Motos)
+Motos: "Motores de arranque" recibe pisa, motores de arranque (pisa)
+_comunes: "Motores de arranque" comparte starter, arranque eléctrico, motor de partida (esta en Carros y Motos)
+_comunes: "Pitos" comparte bocina, claxon, corneta (esta en Carros y Motos)
+_comunes: "Culatas" comparte culata, cabezote, cabeza de motor (esta en Carros y Motos)
+_comunes: "Empaques y retenedores de motor" comparte juntas, empaquetadura, retenedores, empaques y sellos de motor, empaques, sellos de motor (esta en Carros y Motos)
+Motos: "Rines" recibe rines de moto
+_comunes: "Rines" comparte aros (esta en Carros y Motos)
+_comunes: "Parlantes" comparte altavoces, bafles, speakers, parlantes 6x9, parlantes 6.5 (esta en Carros y Motos)
+_comunes: "Líquido de frenos" comparte líquido de freno, DOT 3, DOT 4 (esta en Carros y Motos)
+_comunes: "Radiadores" comparte radiador, panal de radiador, radiador de agua (esta en Carros y Motos)
+_comunes: "Bujías" comparte bujía, spark plug, chispa, bujías iridium, bujías platino (esta en Carros y Motos)
+_comunes: "Cuerpos de aceleración" comparte cuerpo de aceleración, throttle body, mariposa (esta en Carros y Motos)
+_comunes: "Bombas de aceite" comparte bomba de aceite (esta en Carros y Motos)
+_comunes: "Soportes de celular" comparte soporte de celular, porta celular, holder, soporte magnético (esta en Carros y Motos)
+_comunes: "Chalecos reflectivos" comparte chaleco reflectivo, chaleco (esta en Carros y Motos)
+_comunes: "Luces LED" comparte led, luces led, bombillos led, bombillas led, focos led, luz led, kit led, led h4, led h7, led h11 (esta en Carros y Motos)
+_comunes: "Direccionales" comparte luces direccionales, intermitentes, cocuyos, luz direccional (esta en Carros y Motos)
+_comunes: "Inyectores" comparte inyector, inyectores de gasolina, boquillas, inyector diésel, inyectores common rail, inyectores de acpm (esta en Carros y Motos)
+_comunes: "Carburadores" comparte carburador, carburador weber, kit de carburador (esta en Carros y Motos)
+_comunes: "Bombas de agua" comparte bomba de agua, water pump (esta en Carros y Motos)
+_comunes: "Termostatos" comparte termostato, termostato de agua (esta en Carros y Motos)
+_comunes: "Mangueras de refrigeración" comparte manguera de radiador, manguera de agua, manguera superior, manguera inferior (esta en Carros y Motos)
+_comunes: "Bielas" comparte biela, bielas (esta en Carros y Motos)
+_comunes: "Válvulas y guías" comparte guías de válvula, válvula de admisión, válvula de escape, válvula de motor, guía de válvula (esta en Carros y Motos)
+_comunes: "Motores completos" comparte motor completo, motor usado, motor reconstruido, motor 3/4 (esta en Carros y Motos)
+_comunes: "Catalizadores" comparte catalizador, convertidor catalítico (esta en Carros y Motos)
+_comunes: "Discos de freno" comparte disco de freno, discos, discos ventilados, discos perforados, rotor (esta en Carros y Motos)
+_comunes: "Kits de reparación de frenos" comparte kit de frenos, kit de reparación, empaques de bomba (esta en Carros y Motos)
+_comunes: "Bujes" comparte buje, bujes de suspensión, bujes de tijera, bujes de barra (esta en Carros y Motos)
+Carros: "Alarmas" recibe alarma de carro
+Motos: "Alarmas" recibe alarma de moto
+_comunes: "Alarmas" comparte alarma, alarma con control (esta en Carros y Motos)
+Carros: "Rastreo GPS" recibe gps para carro
+Motos: "Rastreo GPS" recibe gps para moto
+_comunes: "Rastreo GPS" comparte gps, rastreador, localizador (esta en Carros y Motos)
+_comunes: "Mordazas (calipers)" comparte caliper, cálipers, pinzas de freno, mordazas / calipers (esta en Carros y Motos)
+_comunes: "Cilindros de freno" comparte bombines de freno, cilindros de rueda, bombín de freno (esta en Carros y Motos)
+_comunes: "Bombas de freno" comparte cilindro maestro, bomba principal de freno, bombas de freno (cilindro maestro) (esta en Carros y Motos)
+_comunes: "Bornes y cables de batería" comparte bornes, terminales de batería, cable de batería, protector de bornes (esta en Carros y Motos)
+_comunes: "Depósitos de líquido de frenos" comparte depósito de líquido de frenos, tanque de líquido de frenos (esta en Carros y Motos)
+_comunes: "Cigüeñales" comparte cigüeñal (esta en Carros y Motos)
+_comunes: "Árboles de levas" comparte árbol de levas, eje de levas (esta en Carros y Motos)
+Motos: "Llantas" recibe llanta de moto, llantas de moto, neumático de moto, caucho de moto
+_comunes: "Filtros de aceite" comparte filtro de aceite (esta en Carros y Motos)
+_comunes: "Filtros de aire" comparte filtro de aire (esta en Carros y Motos)
+_comunes: "Filtros de combustible" comparte filtro de combustible, filtro de gasolina (esta en Carros y Motos)
+
+
+PENDIENTE DE REVISION HUMANA
+
+A. Nombres que existen en dos secciones y cuyos sinonimos quedaron TODOS en
+   _comunes (49 de 69): no habia ningun termino propio de carro o de moto.
+   En la mayoria es correcto ("pastas de freno" se dice igual en las dos), pero
+   conviene mirarlos por si alguno deberia repartirse:
+
+   Balineras de rueda -> rodamientos de rueda, balineras, rulemanes
+   Bandas de freno -> zapatas, zapatas de freno
+   Bielas -> biela, bielas
+   Bombas de aceite -> bomba de aceite
+   Bombas de agua -> bomba de agua, water pump
+   Bombas de freno -> cilindro maestro, bomba principal de freno, bombas de freno (cilindro maestro)
+   Bombas de gasolina -> bomba de combustible, bomba de gasolina eléctrica, módulo de bomba
+   Bombillos halógenos -> bombillos, bombillas, focos, halógeno, h1, h3, h4, h7, h11, 9005, 9006, luz halógena
+   Bornes y cables de batería -> bornes, terminales de batería, cable de batería, protector de bornes
+   Bujes -> buje, bujes de suspensión, bujes de tijera, bujes de barra
+   Bujías -> bujía, spark plug, chispa, bujías iridium, bujías platino
+   Campanas de freno -> tambores, campanas, tambores de freno, campanas (tambores) de freno
+   Carburadores -> carburador, carburador weber, kit de carburador
+   Catalizadores -> catalizador, convertidor catalítico
+   Chalecos reflectivos -> chaleco reflectivo, chaleco
+   Cigüeñales -> cigüeñal
+   Cilindros de freno -> bombines de freno, cilindros de rueda, bombín de freno
+   Cuerpos de aceleración -> cuerpo de aceleración, throttle body, mariposa
+   Culatas -> culata, cabezote, cabeza de motor
+   Depósitos de líquido de frenos -> depósito de líquido de frenos, tanque de líquido de frenos
+   Direccionales -> luces direccionales, intermitentes, cocuyos, luz direccional
+   Discos de clutch -> disco de embrague
+   Discos de freno -> disco de freno, discos, discos ventilados, discos perforados, rotor
+   Empaques y retenedores de motor -> juntas, empaquetadura, retenedores, empaques y sellos de motor, empaques, sellos de motor
+   Farolas -> faros, luces delanteras, headlights, farola delantera, unidad de farola, luz delantera
+   Filtros de aceite -> filtro de aceite
+   Filtros de aire -> filtro de aire
+   Filtros de combustible -> filtro de combustible, filtro de gasolina
+   Guayas de acelerador -> cable de acelerador, chicote de acelerador
+   Guayas de clutch -> cable de clutch, cable de embrague, chicote de clutch
+   Inyectores -> inyector, inyectores de gasolina, boquillas, inyector diésel, inyectores common rail, inye
+   Kits de clutch -> kit de embrague, kit clutch, clutch, embrague
+   Kits de reparación de frenos -> kit de frenos, kit de reparación, empaques de bomba
+   Luces LED -> led, luces led, bombillos led, bombillas led, focos led, luz led, kit led, led h4, led h7,
+   Líquido de frenos -> líquido de freno, DOT 3, DOT 4
+   Mangueras de refrigeración -> manguera de radiador, manguera de agua, manguera superior, manguera inferior
+   Mofles (silenciadores) -> silenciador
+   Mordazas (calipers) -> caliper, cálipers, pinzas de freno, mordazas / calipers
+   Motores completos -> motor completo, motor usado, motor reconstruido, motor 3/4
+   Parlantes -> altavoces, bafles, speakers, parlantes 6x9, parlantes 6.5
+   Pastillas de freno -> pastas de freno, brake pads
+   Pitos -> bocina, claxon, corneta
+   Radiadores -> radiador, panal de radiador, radiador de agua
+   Repartición (distribución) -> distribución, tiempo
+   Soportes de celular -> soporte de celular, porta celular, holder, soporte magnético
+   Stops -> luces traseras, stop, calaveras, luz de freno, farola trasera, luz trasera
+   Termostatos -> termostato, termostato de agua
+   Válvulas y guías -> guías de válvula, válvula de admisión, válvula de escape, válvula de motor, guía de válvul
+   Árboles de levas -> árbol de levas, eje de levas
+
+B. Marcas comerciales como sinonimo (decision comercial: se venden?):
+
+   Carros       Baterías para carro          batería mac
+   Carros       Baterías para carro          batería willard
+   Herramientas Hidrolavadoras               karcher
+   Motos        Aceite de motor 4T           aceite mobil
+   Motos        Aceite de motor 4T           aceite motul
+   Motos        Baterías para moto           batería mac moto
+   Motos        Baterías para moto           batería yuasa
+
+Carros: Sensores MAP -> nueva hoja en Motor y transmisión > Combustible e inyección (antes solo era sinónimo de "Sensores de motor (MAP, CKP, temperatura)")
+Carros: Sensores de motor (MAP, CKP, temperatura) -> Sensores de motor (CKP, CMP, temperatura) (el MAP sale de eléctrico y queda en inyección)
+
+Carros: Llantas y rines > Llantas -> vitrina de filtros (Llantas de automóvil, Llantas SUV y 4x4, Llantas de van, camión y transporte, Llantas OTR e industriales dejan de ser categoria y pasan a valores de "Tipo de vehiculo")
+Carros: Kits de sincronización (afinación) -> de Motor y transmision > Bloque y culata a Electrico y electronico > Encendido
+Carros: Electrico y electronico > Encendido (vitrina de filtros) <- Bobinas, Módulos y distribuidores de encendido, Bujías, Cables de alta, Bujías de precalentamiento, Kits de sincronización (afinación)
+Carros: Electrico y electronico > Arranque y carga (vitrina de filtros) <- Motores de arranque, Bendix y automáticos de arranque, Alternadores, Reguladores de voltaje
+Carros: Electrico y electronico > Gestión electrónica (vitrina de filtros) <- Computadores ECU, Módulos electrónicos, Actuadores, Sensores de motor (CKP, CMP, temperatura)
+Carros: Electrico y electronico > Eléctrico general (vitrina de filtros) <- Fusibles, Relés, Suiches de encendido y cilindros de llave, Suiches e interruptores, Llaves y controles (carcasas, chips), Cableado, Conectores, Pitos

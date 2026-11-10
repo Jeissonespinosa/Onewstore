@@ -4,7 +4,9 @@
       "fullWidth": true,
       "blockClass": "repuestoxSplash"
     },
-    "children": ["image#repuestox-splash-logo"]
+    "children": [
+      "image#repuestox-splash-logo"
+    ]
   },
   "image#repuestox-splash-logo": {
     "props": {
@@ -13,7 +15,6 @@
       "blockClass": "repuestoxSplashLogo"
     }
   },
-
   "flex-layout.row#repuestox-split-hero": {
     "props": {
       "fullWidth": true,
@@ -24,7 +25,6 @@
       "flex-layout.col#repuestox-split-motos"
     ]
   },
-
   "flex-layout.col#repuestox-split-carros": {
     "props": {
       "blockClass": "repuestoxSplitCol",
@@ -40,7 +40,9 @@
       "blockClass": "repuestoxSplitSlotImage",
       "width": "100%"
     },
-    "children": ["image#repuestox-split-carros-bg"]
+    "children": [
+      "image#repuestox-split-carros-bg"
+    ]
   },
   "image#repuestox-split-carros-bg": {
     "props": {
@@ -59,7 +61,9 @@
       "blockClass": "repuestoxSplitSlotCopy",
       "width": "100%"
     },
-    "children": ["rich-text#repuestox-split-carros-title"]
+    "children": [
+      "rich-text#repuestox-split-carros-title"
+    ]
   },
   "rich-text#repuestox-split-carros-title": {
     "props": {
@@ -68,7 +72,6 @@
       "blockClass": "repuestoxSplitHeroTitle"
     }
   },
-
   "flex-layout.col#repuestox-split-motos": {
     "props": {
       "blockClass": "repuestoxSplitCol",
@@ -84,7 +87,9 @@
       "blockClass": "repuestoxSplitSlotImage",
       "width": "100%"
     },
-    "children": ["image#repuestox-split-motos-bg"]
+    "children": [
+      "image#repuestox-split-motos-bg"
+    ]
   },
   "image#repuestox-split-motos-bg": {
     "props": {
@@ -103,11 +108,75 @@
       "blockClass": "repuestoxSplitSlotCopy",
       "width": "100%"
     },
-    "children": ["rich-text#repuestox-split-motos-title"]
+    "children": [
+      "rich-text#repuestox-split-motos-title"
+    ]
   },
   "rich-text#repuestox-split-motos-title": {
     "props": {
       "text": "[**MOTOS**](/motos)",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxSplitHeroTitle"
+    }
+  },
+  "flex-layout.row#repuestox-tools-hero": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": [
+        "repuestoxSplitHero",
+        "repuestoxToolsHero"
+      ]
+    },
+    "children": [
+      "flex-layout.col#repuestox-split-herramientas"
+    ]
+  },
+  "flex-layout.col#repuestox-split-herramientas": {
+    "props": {
+      "blockClass": "repuestoxSplitCol",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#repuestox-split-herramientas-image-slot",
+      "flex-layout.col#repuestox-split-herramientas-copy-slot"
+    ]
+  },
+  "flex-layout.col#repuestox-split-herramientas-image-slot": {
+    "props": {
+      "blockClass": "repuestoxSplitSlotImage",
+      "width": "100%"
+    },
+    "children": [
+      "image#repuestox-split-herramientas-bg"
+    ]
+  },
+  "image#repuestox-split-herramientas-bg": {
+    "props": {
+      "blockClass": "repuestoxSplitHeroImage",
+      "src": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 600'%3E%0A%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23161616'/%3E%3Cstop offset='1' stop-color='%23010101'/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect width='1920' height='600' fill='url(%23g)'/%3E%0A%3Cpolygon points='1180,600 1400,0 1650,0 1430,600' fill='%23FF371E' opacity='.16'/%3E%0A%3Cpolygon points='1330,600 1550,0 1605,0 1385,600' fill='%23FF371E' opacity='.22'/%3E%0A%3Cg fill='none' stroke='%23ffffff' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' opacity='.92'%3E%0A%3Cg transform='translate(330 320) rotate(-40) scale(.82)'%3E%3Cpath d='M-250 -22 H190 V22 H-250 Z'/%3E%3Cpath d='M190 -22 L250 -22 L282 -60 L326 -60 L300 0 L326 60 L282 60 L250 22 L190 22'/%3E%3Ccircle cx='-300' cy='0' r='62'/%3E%3Cpolygon points='-300,-26 -277,-13 -277,13 -300,26 -323,13 -323,-13' stroke-width='8'/%3E%3C/g%3E%0A%3Cg transform='translate(640 250) rotate(32) scale(.72)'%3E%3Crect x='-42' y='-330' width='84' height='200' rx='38'/%3E%3Cpath d='M0 -130 V150 M-16 150 L0 192 L16 150'/%3E%3Cpath d='M-42 -290 H42 M-42 -250 H42 M-42 -210 H42' stroke-width='6' opacity='.7'/%3E%3C/g%3E%0A%3Cg transform='translate(1310 420) rotate(-18) scale(.8)'%3E%3Crect x='-60' y='-60' width='120' height='120' rx='22'/%3E%3Crect x='-28' y='-28' width='56' height='56' rx='8' stroke-width='8'/%3E%3Cpath d='M60 0 H360'/%3E%3Crect x='360' y='-30' width='130' height='60' rx='30'/%3E%3C/g%3E%0A%3Cg transform='translate(1660 150)' stroke-width='9'%3E%3Cpolygon points='0,-60 52,-30 52,30 0,60 -52,30 -52,-30'/%3E%3Ccircle cx='0' cy='0' r='22'/%3E%3C/g%3E%0A%3Cg transform='translate(760 500)' stroke-width='9'%3E%3Cpolygon points='0,-44 38,-22 38,22 0,44 -38,22 -38,-22'/%3E%3Ccircle cx='0' cy='0' r='16'/%3E%3C/g%3E%0A%3Cg transform='translate(1560 500) rotate(12) scale(.85)' stroke-width='9'%3E%3Cpath d='M-120 40 H120 L80 -30 H-80 Z'/%3E%3Cpath d='M-40 -30 L-10 -110 H10 L40 -30'/%3E%3Cpath d='M-140 40 H140' stroke-width='12'/%3E%3C/g%3E%0A%3C/g%3E%0A%3Cg fill='%23FF371E' opacity='.9'%3E%3Ccircle cx='1780' cy='470' r='8'/%3E%3Ccircle cx='180' cy='110' r='8'/%3E%3Ccircle cx='1000' cy='530' r='6'/%3E%3C/g%3E%0A%3C/svg%3E",
+      "alt": "Herramientas y equipos",
+      "link": {
+        "url": "/herramientas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.col#repuestox-split-herramientas-copy-slot": {
+    "props": {
+      "blockClass": [
+        "repuestoxSplitSlotCopy",
+        "repuestoxSplitSlotCopyCenter"
+      ],
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#repuestox-split-herramientas-title"
+    ]
+  },
+  "rich-text#repuestox-split-herramientas-title": {
+    "props": {
+      "text": "[**HERRAMIENTAS**](/herramientas)",
       "textAlignment": "CENTER",
       "blockClass": "repuestoxSplitHeroTitle"
     }

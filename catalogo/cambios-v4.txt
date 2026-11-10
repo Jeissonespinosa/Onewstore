@@ -1,0 +1,75 @@
+Carros: Llantas de camioneta y comercial -> Llantas de carga y comerciales
+Carros: Rines deportivos eliminada (a Rines de aluminio)
+Carros: Rines originales eliminada (a Rines de aluminio)
+Carros: Rines aftermarket eliminada (a Rines de aluminio)
+Carros: Separadores -> Separadores y espaciadores de rin
+Carros: Tuercas y pernos -> Tuercas y pernos de rueda
+Carros: Espaciadores de rines eliminada (a Separadores y espaciadores de rin)
+Carros: Tuercas de seguridad eliminada (a Tuercas y pernos de rueda)
+Carros/Lubricantes y mantenimiento: nivel "Lubricantes y fluidos" eliminado (tipos cuelgan de la macro)
+Carros: "Filtros" pasa a macro propia
+Carros: Baterías AGM y Start-Stop eliminada (a Baterías para carro)
+Carros: + Sensores de desgaste de pastillas
+Carros: Brazos de suspensión eliminada (a Tijeras)
+Carros: + Ballestas (muelles de hoja)
+Carros: Motores eléctricos (vidrios, limpiaparabrisas) eliminada (a Elevavidrios)
+Carros: + Bujías de precalentamiento
+Carros/Eléctrico y electrónico: nivel "Eléctricos y electrónicos" eliminado (tipos cuelgan de la macro)
+Carros: "Iluminación" pasa a macro propia
+Carros: Kits de afinación (sincronización) -> Kits de sincronización (afinación)
+Carros: Cigüeñal -> Cigüeñales
+Carros: Árbol de levas -> Árboles de levas
+Carros: + Bombas de inyección diésel, Filtros separadores de agua
+Carros: + subcategoría GNV (gas vehicular) con 5 tipos
+Carros: Snorkel -> Snorkels
+Carros: Inversores y cargadores 12V -> Cargadores e inversores 12V
+Carros: Cargadores de celular para carro eliminada (a Cargadores e inversores 12V)
+Carros: Sistemas Android / CarPlay -> Sistemas Android y CarPlay
+Carros: Cámaras DVR -> Cámaras DVR y de seguridad
+Carros: Cámaras de seguridad eliminada (a Cámaras DVR y de seguridad)
+Carros/Cuidado vehicular: nivel "Cuidado y estética vehicular" eliminado (tipos cuelgan de la macro)
+Motos: Rodamientos de rueda -> Balineras de rueda
+Motos/Lubricantes: nivel "Lubricantes y fluidos" eliminado (tipos cuelgan de la macro)
+Motos: "Filtros" pasa a macro propia
+Motos: Aceite de transmisión / caja -> Aceite de transmisión (caja)
+Motos: Baterías de gel y AGM eliminada (a Baterías para moto)
+Motos: Baterías de litio eliminada (a Baterías para moto)
+Motos: Cigüeñal -> Cigüeñales
+Motos: Árbol de levas -> Árboles de levas
+Motos: Motores de arranque (pisa) -> Motores de arranque
+Motos: + Automáticos (relés) de arranque
+Motos: Clutch de scooter (variador) -> Variador, rodillos y clutch de scooter
+Motos: todas las guayas quedan juntas en Motor y transmisión > Guayas y cables
+Motos: Tacómetros y velocímetros -> Tableros, tacómetros y velocímetros
+Motos: Instrumental y tableros eliminada (a Tableros, tacómetros y velocímetros)
+Motos/Eléctrico: nivel "Eléctricos y electrónicos" eliminado (tipos cuelgan de la macro)
+Motos: "Iluminación" pasa a macro propia
+Motos: Pedalines de lujo eliminada (a Pedalines y soportes)
+Motos: Manubrios y puños de lujo eliminada (a Manubrios)
+Motos: Sliders, defensas y protectores -> Sliders, defensas y cubrecárter
+Motos: Cubrecárter y protectores eliminada (a Sliders, defensas y cubrecárter)
+Motos/Accesorios: nivel "Accesorios de moto" eliminado (tipos cuelgan de la macro)
+Motos: Maniguetas y pedales de freno -> Maniguetas de freno
+Motos/Cuidado vehicular: nivel "Cuidado y estética" eliminado (tipos cuelgan de la macro)
+Motos: Consumibles de taller pasa a Herramientas (transversal)
+Herramientas: + macro Consumibles de taller (13 tipos, antes duplicada en carros y motos)
+Herramientas: Calibradores y medidores -> Calibradores y micrómetros
+Herramientas: Compresímetros y manómetros -> Compresímetros
+Herramientas: Infladores y calibradores -> Infladores y manómetros de llanta
+Herramientas: Pulidoras y esmeriles -> Esmeriles y lijadoras
+Carros: Filtro de aceite -> Filtros de aceite
+Carros: Filtro de aire -> Filtros de aire
+Carros: Filtro de combustible -> Filtros de combustible
+Carros: Filtro de cabina -> Filtros de cabina
+Carros: Filtro de transmisión -> Filtros de transmisión
+Motos: Filtro de aceite -> Filtros de aceite
+Motos: Filtro de aire -> Filtros de aire
+Motos: Filtro de gasolina -> Filtros de combustible
+Carros: Empaques y sellos de motor -> Empaques y retenedores de motor
+Motos: Ventiladores de radiador -> Electroventiladores
+Carros: Sensores de motor -> Sensores de motor (MAP, CKP, temperatura)
+Cuidado vehicular pasa a la sección transversal (Herramientas) como "Cuidado y limpieza": 23 tipos, sin duplicados entre carros y motos
+Carros: Baterías para camión y bus eliminada (sus términos quedan como sinónimo de Baterías para carro)
+Carros: Llantas de carga y comerciales eliminada (sus términos quedan como sinónimo de Llantas SUV y 4x4)
+Línea pesada (camión y bus) queda FUERA del catálogo por ahora; es decisión estratégica pendiente.
+Se mantienen las lineas comerciales dentro de carros: Llantas de van, camion y transporte (Llantas y rines) y Baterias para furgon, camion y bus (Baterias). La seccion propia de linea pesada queda como decision estrategica futura.

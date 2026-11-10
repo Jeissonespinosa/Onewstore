@@ -1,0 +1,292 @@
+PROFUNDIDAD DEL ARBOL — 4 niveles (A12)
+
+Niveles: {1: 1, 2: 33, 3: 290, 4: 265}
+
+VTEX no impone un limite duro de niveles y Intelligent Search tampoco, pero la
+documentacion recomienda un maximo de 3 y el admin del catalogo esta construido
+alrededor de eso (https://help.vtex.com/en/docs/tracks/categories-concept-definition).
+Hoy 265 hojas cuelgan de un 4o nivel: su ruta y su queryField son
+departamento/macro/subcategoria/hoja (mapField c,c,c,c).
+
+PREGUNTA PARA EL NEGOCIO: se crea el 4o nivel en el catalogo de VTEX, o esas 265
+hojas se aplanan a 3 niveles (la subcategoria pasa a ser una especificacion o se
+fusiona con la macro)? Hasta resolverlo, --real deja esas paginas con un
+queryField que puede no resolver.
+
+HOJAS DE 4 NIVELES POR SUBCATEGORIA (265):
+
+  Carros > Motor y transmisión                                77
+  Motos > Motor y transmisión                                 53
+  Carros > Carrocería y climatización                         50
+  Carros > Accesorios                                         45
+  Carros > Tecnología y seguridad                             18
+  Motos > Llantas y rines                                     13
+  Carros > Llantas y rines                                     9
+
+DETALLE (ruta -> hoja):
+
+  Carros > Llantas y rines > Llantas > Llantas de automóvil
+  Carros > Llantas y rines > Llantas > Llantas SUV y 4x4
+  Carros > Llantas y rines > Llantas > Llantas de van, camión y transporte
+  Carros > Llantas y rines > Llantas > Llantas OTR e industriales
+  Carros > Llantas y rines > Rines > Rines de acero
+  Carros > Llantas y rines > Rines > Rines de aluminio
+  Carros > Llantas y rines > Accesorios de rueda > Copas (tapacubos)
+  Carros > Llantas y rines > Accesorios de rueda > Tuercas y pernos de rueda
+  Carros > Llantas y rines > Accesorios de rueda > Separadores y espaciadores de rin
+  Carros > Motor y transmisión > Bloque y culata > Pistones
+  Carros > Motor y transmisión > Bloque y culata > Anillos
+  Carros > Motor y transmisión > Bloque y culata > Bielas
+  Carros > Motor y transmisión > Bloque y culata > Cigüeñales
+  Carros > Motor y transmisión > Bloque y culata > Árboles de levas
+  Carros > Motor y transmisión > Bloque y culata > Culatas
+  Carros > Motor y transmisión > Bloque y culata > Válvulas y guías
+  Carros > Motor y transmisión > Bloque y culata > Camisas
+  Carros > Motor y transmisión > Bloque y culata > Empaques y retenedores de motor
+  Carros > Motor y transmisión > Bloque y culata > Retenedores de motor
+  Carros > Motor y transmisión > Bloque y culata > Bombas de aceite
+  Carros > Motor y transmisión > Bloque y culata > Soportes de motor
+  Carros > Motor y transmisión > Bloque y culata > Motores completos
+  Carros > Motor y transmisión > Bloque y culata > Kits de sincronización (afinación)
+  Carros > Motor y transmisión > Correas y tensores > Correas de accesorios
+  Carros > Motor y transmisión > Correas y tensores > Tensores de correa
+  Carros > Motor y transmisión > Correas y tensores > Poleas
+  Carros > Motor y transmisión > Repartición (distribución) > Correas de repartición
+  Carros > Motor y transmisión > Repartición (distribución) > Cadenas de repartición
+  Carros > Motor y transmisión > Repartición (distribución) > Kits de repartición
+  Carros > Motor y transmisión > Repartición (distribución) > Tensores y guías de repartición
+  Carros > Motor y transmisión > Refrigeración > Radiadores
+  Carros > Motor y transmisión > Refrigeración > Bombas de agua
+  Carros > Motor y transmisión > Refrigeración > Termostatos
+  Carros > Motor y transmisión > Refrigeración > Electroventiladores
+  Carros > Motor y transmisión > Refrigeración > Mangueras de refrigeración
+  Carros > Motor y transmisión > Refrigeración > Depósitos de refrigerante
+  Carros > Motor y transmisión > Refrigeración > Tapas de radiador
+  Carros > Motor y transmisión > Refrigeración > Radiadores de aceite
+  Carros > Motor y transmisión > Turbo e intercooler > Turbos
+  Carros > Motor y transmisión > Turbo e intercooler > Intercoolers
+  Carros > Motor y transmisión > Turbo e intercooler > Mangueras de turbo e intercooler
+  Carros > Motor y transmisión > Turbo e intercooler > Válvulas de alivio (blow-off)
+  Carros > Motor y transmisión > Combustible e inyección > Bombas de gasolina
+  Carros > Motor y transmisión > Combustible e inyección > Inyectores
+  Carros > Motor y transmisión > Combustible e inyección > Rampas de inyectores
+  Carros > Motor y transmisión > Combustible e inyección > Reguladores de presión de combustible
+  Carros > Motor y transmisión > Combustible e inyección > Cuerpos de aceleración
+  Carros > Motor y transmisión > Combustible e inyección > Sensores de oxígeno
+  Carros > Motor y transmisión > Combustible e inyección > Válvulas EGR y canister
+  Carros > Motor y transmisión > Combustible e inyección > Carburadores
+  Carros > Motor y transmisión > Combustible e inyección > Guayas de acelerador
+  Carros > Motor y transmisión > Combustible e inyección > Tanques de gasolina
+  Carros > Motor y transmisión > Combustible e inyección > Bombas de inyección diésel
+  Carros > Motor y transmisión > Combustible e inyección > Filtros separadores de agua
+  Carros > Motor y transmisión > Clutch (embrague) > Kits de clutch
+  Carros > Motor y transmisión > Clutch (embrague) > Discos de clutch
+  Carros > Motor y transmisión > Clutch (embrague) > Prensas de clutch
+  Carros > Motor y transmisión > Clutch (embrague) > Balineras de clutch (collarín)
+  Carros > Motor y transmisión > Clutch (embrague) > Bombas y balibombas de clutch
+  Carros > Motor y transmisión > Clutch (embrague) > Guayas de clutch
+  Carros > Motor y transmisión > Admisión y escape > Múltiples de admisión
+  Carros > Motor y transmisión > Admisión y escape > Múltiples de escape
+  Carros > Motor y transmisión > Admisión y escape > Catalizadores
+  Carros > Motor y transmisión > Admisión y escape > Mofles (silenciadores)
+  Carros > Motor y transmisión > Admisión y escape > Resonadores
+  Carros > Motor y transmisión > Admisión y escape > Flexibles de escape
+  Carros > Motor y transmisión > Admisión y escape > Tubos y puntas de escape
+  Carros > Motor y transmisión > Transmisión y caja > Cajas de cambios
+  Carros > Motor y transmisión > Transmisión y caja > Cajas automáticas y convertidores
+  Carros > Motor y transmisión > Transmisión y caja > Diferenciales
+  Carros > Motor y transmisión > Transmisión y caja > Cardanes y crucetas
+  Carros > Motor y transmisión > Transmisión y caja > Ejes y homocinéticas
+  Carros > Motor y transmisión > Transmisión y caja > Sincronizadores y piñones
+  Carros > Motor y transmisión > Transmisión y caja > Retenedores de caja
+  Carros > Motor y transmisión > Transmisión y caja > Soportes de caja
+  Carros > Motor y transmisión > Transmisión y caja > Selectoras y guayas de cambios
+  Carros > Motor y transmisión > Transmisión y caja > Volantes de motor
+  Carros > Motor y transmisión > Transmisión y caja > Cajas de transferencia 4x4
+  Carros > Motor y transmisión > Partes plásticas de motor > Tapas y cubiertas de motor
+  Carros > Motor y transmisión > Partes plásticas de motor > Guardapolvos y protectores de motor
+  Carros > Motor y transmisión > Partes plásticas de motor > Carcasas de correa y ductos
+  Carros > Motor y transmisión > GNV (gas vehicular) > Kits de conversión a GNV
+  Carros > Motor y transmisión > GNV (gas vehicular) > Reguladores GNV
+  Carros > Motor y transmisión > GNV (gas vehicular) > Inyectores y rieles GNV
+  Carros > Motor y transmisión > GNV (gas vehicular) > Cilindros GNV
+  Carros > Motor y transmisión > GNV (gas vehicular) > Mangueras y válvulas GNV
+  Carros > Accesorios > Accesorios exteriores > Estribos
+  Carros > Accesorios > Accesorios exteriores > Barras de techo
+  Carros > Accesorios > Accesorios exteriores > Portaequipajes
+  Carros > Accesorios > Accesorios exteriores > Portabicicletas
+  Carros > Accesorios > Accesorios exteriores > Portallantas
+  Carros > Accesorios > Accesorios exteriores > Enganches de remolque (tiros)
+  Carros > Accesorios > Accesorios exteriores > Deflectores
+  Carros > Accesorios > Accesorios exteriores > Protectores exteriores
+  Carros > Accesorios > Accesorios exteriores > Molduras
+  Carros > Accesorios > Accesorios exteriores > Spoilers y alerones
+  Carros > Accesorios > Accesorios exteriores > Parrillas decorativas
+  Carros > Accesorios > Accesorios exteriores > Protectores de puertas
+  Carros > Accesorios > Accesorios exteriores > Marcos y portaplacas
+  Carros > Accesorios > Accesorios exteriores > Cubrecarros (forros)
+  Carros > Accesorios > Accesorios exteriores > Snorkels
+  Carros > Accesorios > Accesorios exteriores > Polarizado y películas
+  Carros > Accesorios > Accesorios interiores > Tapetes
+  Carros > Accesorios > Accesorios interiores > Forros de sillas
+  Carros > Accesorios > Accesorios interiores > Forros de timón
+  Carros > Accesorios > Accesorios interiores > Cojines
+  Carros > Accesorios > Accesorios interiores > Organizadores
+  Carros > Accesorios > Accesorios interiores > Cortasoles de parabrisas
+  Carros > Accesorios > Accesorios interiores > Cortinas
+  Carros > Accesorios > Accesorios interiores > Percheros
+  Carros > Accesorios > Accesorios interiores > Portaobjetos
+  Carros > Accesorios > Accesorios interiores > Portavasos
+  Carros > Accesorios > Accesorios interiores > Apoyabrazos
+  Carros > Accesorios > Accesorios interiores > Volantes deportivos
+  Carros > Accesorios > Accesorios interiores > Pedales deportivos (cubrepedales)
+  Carros > Accesorios > Accesorios interiores > Protectores interiores
+  Carros > Accesorios > Accesorios interiores > Sillas para bebé
+  Carros > Accesorios > Accesorios interiores > Neveras portátiles
+  Carros > Accesorios > Accesorios interiores > Cargadores e inversores 12V
+  Carros > Accesorios > Accesorios interiores > Soportes de celular
+  Carros > Accesorios > Audio > Radios
+  Carros > Accesorios > Audio > Pantallas multimedia
+  Carros > Accesorios > Audio > Parlantes
+  Carros > Accesorios > Audio > Subwoofers
+  Carros > Accesorios > Audio > Amplificadores
+  Carros > Accesorios > Audio > Procesadores y ecualizadores
+  Carros > Accesorios > Audio > Tweeters
+  Carros > Accesorios > Audio > Cajas acústicas
+  Carros > Accesorios > Audio > Cables y conectores de audio
+  Carros > Accesorios > Audio > Antenas de radio
+  Carros > Accesorios > Audio > Kits de instalación
+  Carros > Carrocería y climatización > Carrocería > Bómperes (bumper)
+  Carros > Carrocería y climatización > Carrocería > Capós
+  Carros > Carrocería y climatización > Carrocería > Guardafangos
+  Carros > Carrocería y climatización > Carrocería > Puertas
+  Carros > Carrocería y climatización > Carrocería > Baúles y compuertas
+  Carros > Carrocería y climatización > Carrocería > Espejos retrovisores
+  Carros > Carrocería y climatización > Carrocería > Persianas (parrillas)
+  Carros > Carrocería y climatización > Carrocería > Rejillas y tomas de aire
+  Carros > Carrocería y climatización > Carrocería > Soportes y bases de carrocería
+  Carros > Carrocería y climatización > Carrocería > Bisagras
+  Carros > Carrocería y climatización > Carrocería > Chapas y manijas
+  Carros > Carrocería y climatización > Carrocería > Cerraduras de capó y baúl
+  Carros > Carrocería y climatización > Carrocería > Amortiguadores de capó y baúl (resortes a gas)
+  Carros > Carrocería y climatización > Carrocería > Vidrios y parabrisas
+  Carros > Carrocería y climatización > Carrocería > Elevavidrios
+  Carros > Carrocería y climatización > Carrocería > Empaques de puertas y molduras (burletes)
+  Carros > Carrocería y climatización > Carrocería > Plumillas (limpiaparabrisas)
+  Carros > Carrocería y climatización > Carrocería > Brazos y motores de limpiaparabrisas
+  Carros > Carrocería y climatización > Carrocería > Lavaparabrisas (bombas y depósitos)
+  Carros > Carrocería y climatización > Carrocería > Guardapolvos y pasarruedas
+  Carros > Carrocería y climatización > Carrocería > Zócalos
+  Carros > Carrocería y climatización > Carrocería > Techos corredizos
+  Carros > Carrocería y climatización > Carrocería > Emblemas de carrocería
+  Carros > Carrocería y climatización > Interior (repuestos) > Manijas y chapas interiores
+  Carros > Carrocería y climatización > Interior (repuestos) > Paneles de puerta
+  Carros > Carrocería y climatización > Interior (repuestos) > Tableros y consolas
+  Carros > Carrocería y climatización > Interior (repuestos) > Guanteras
+  Carros > Carrocería y climatización > Interior (repuestos) > Palancas de cambios y pomos
+  Carros > Carrocería y climatización > Interior (repuestos) > Palancas de freno de mano
+  Carros > Carrocería y climatización > Interior (repuestos) > Pedales
+  Carros > Carrocería y climatización > Interior (repuestos) > Sillas y tapizados
+  Carros > Carrocería y climatización > Interior (repuestos) > Cinturones de seguridad
+  Carros > Carrocería y climatización > Interior (repuestos) > Airbags y módulos
+  Carros > Carrocería y climatización > Interior (repuestos) > Espejos retrovisores interiores
+  Carros > Carrocería y climatización > Interior (repuestos) > Parasoles
+  Carros > Carrocería y climatización > Interior (repuestos) > Cielorrasos
+  Carros > Carrocería y climatización > Interior (repuestos) > Tomas 12V y encendedores
+  Carros > Carrocería y climatización > Interior (repuestos) > Manivelas de ventana
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Compresores de AC
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Condensadores
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Evaporadores
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Blowers (ventiladores de AC)
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Resistencias
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Sensores de AC
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Mangueras de AC
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Gas refrigerante
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Válvulas de expansión
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Radiadores de calefacción
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Comandos y perillas de AC
+  Carros > Carrocería y climatización > Aire acondicionado y climatización > Difusores de aire
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Sistemas Android y CarPlay
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Cámaras de reversa
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Cámaras DVR y de seguridad
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Sensores de parqueo
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Sensores de presión de llantas (TPMS)
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Adaptadores Bluetooth
+  Carros > Tecnología y seguridad > Tecnología y conectividad > Cargadores y cables para eléctricos e híbridos
+  Carros > Tecnología y seguridad > Seguridad > Alarmas
+  Carros > Tecnología y seguridad > Seguridad > Inmovilizadores
+  Carros > Tecnología y seguridad > Seguridad > Rastreo GPS
+  Carros > Tecnología y seguridad > Seguridad > Cerraduras y bloqueos
+  Carros > Tecnología y seguridad > Seguridad > Trabavolantes y trabapedales
+  Carros > Tecnología y seguridad > Seguridad > Extintores
+  Carros > Tecnología y seguridad > Seguridad > Triángulos
+  Carros > Tecnología y seguridad > Seguridad > Botiquines
+  Carros > Tecnología y seguridad > Seguridad > Kits de carretera
+  Carros > Tecnología y seguridad > Seguridad > Chalecos reflectivos
+  Carros > Tecnología y seguridad > Seguridad > Alcoholímetros
+  Motos > Llantas y rines > Llantas > Llantas delanteras
+  Motos > Llantas y rines > Llantas > Llantas traseras
+  Motos > Llantas y rines > Llantas > Llantas de scooter
+  Motos > Llantas y rines > Llantas > Llantas de enduro y cross
+  Motos > Llantas y rines > Llantas > Llantas para motocarro
+  Motos > Llantas y rines > Rines y rayos > Rines
+  Motos > Llantas y rines > Rines y rayos > Rayos y niples
+  Motos > Llantas y rines > Rines y rayos > Manzanas de rueda
+  Motos > Llantas y rines > Rines y rayos > Balineras de rueda
+  Motos > Llantas y rines > Accesorios de rueda > Neumáticos (tripas)
+  Motos > Llantas y rines > Accesorios de rueda > Válvulas
+  Motos > Llantas y rines > Accesorios de rueda > Tuercas y ejes
+  Motos > Llantas y rines > Accesorios de rueda > Protectores de rin
+  Motos > Motor y transmisión > Bloque y culata > Kits de cilindro
+  Motos > Motor y transmisión > Bloque y culata > Pistones y anillos
+  Motos > Motor y transmisión > Bloque y culata > Bielas
+  Motos > Motor y transmisión > Bloque y culata > Cigüeñales
+  Motos > Motor y transmisión > Bloque y culata > Rodamientos de cigüeñal
+  Motos > Motor y transmisión > Bloque y culata > Culatas
+  Motos > Motor y transmisión > Bloque y culata > Válvulas y guías
+  Motos > Motor y transmisión > Bloque y culata > Árboles de levas
+  Motos > Motor y transmisión > Bloque y culata > Balancines
+  Motos > Motor y transmisión > Bloque y culata > Empaques y retenedores de motor
+  Motos > Motor y transmisión > Bloque y culata > Cárter y tapas de motor
+  Motos > Motor y transmisión > Bloque y culata > Bombas de aceite
+  Motos > Motor y transmisión > Bloque y culata > Volantes magnéticos
+  Motos > Motor y transmisión > Bloque y culata > Motores completos
+  Motos > Motor y transmisión > Repartición (distribución) > Cadenillas (cadenas de repartición)
+  Motos > Motor y transmisión > Repartición (distribución) > Tensores y guías de cadenilla
+  Motos > Motor y transmisión > Repartición (distribución) > Kits de cadenilla
+  Motos > Motor y transmisión > Refrigeración > Radiadores
+  Motos > Motor y transmisión > Refrigeración > Bombas de agua
+  Motos > Motor y transmisión > Refrigeración > Termostatos
+  Motos > Motor y transmisión > Refrigeración > Mangueras de refrigeración
+  Motos > Motor y transmisión > Refrigeración > Electroventiladores
+  Motos > Motor y transmisión > Combustible > Carburadores
+  Motos > Motor y transmisión > Combustible > Inyectores
+  Motos > Motor y transmisión > Combustible > Bombas de gasolina
+  Motos > Motor y transmisión > Combustible > Cuerpos de aceleración
+  Motos > Motor y transmisión > Combustible > Llaves de gasolina
+  Motos > Motor y transmisión > Clutch y transmisión > Discos de clutch
+  Motos > Motor y transmisión > Clutch y transmisión > Kits de clutch
+  Motos > Motor y transmisión > Clutch y transmisión > Resortes y campanas de clutch
+  Motos > Motor y transmisión > Clutch y transmisión > Piñones
+  Motos > Motor y transmisión > Clutch y transmisión > Catalinas (sprocket trasero)
+  Motos > Motor y transmisión > Clutch y transmisión > Cadenas de transmisión
+  Motos > Motor y transmisión > Clutch y transmisión > Kits de arrastre
+  Motos > Motor y transmisión > Clutch y transmisión > Correas de transmisión (scooter)
+  Motos > Motor y transmisión > Clutch y transmisión > Variador, rodillos y clutch de scooter
+  Motos > Motor y transmisión > Clutch y transmisión > Cajas de cambios y engranajes
+  Motos > Motor y transmisión > Clutch y transmisión > Selectoras y palancas de cambios
+  Motos > Motor y transmisión > Clutch y transmisión > Ejes de cambios
+  Motos > Motor y transmisión > Arranque > Motores de arranque
+  Motos > Motor y transmisión > Arranque > Bendix
+  Motos > Motor y transmisión > Arranque > Pedales de arranque (crank)
+  Motos > Motor y transmisión > Arranque > Automáticos (relés) de arranque
+  Motos > Motor y transmisión > Escape > Exostos
+  Motos > Motor y transmisión > Escape > Mofles (silenciadores)
+  Motos > Motor y transmisión > Escape > Catalizadores
+  Motos > Motor y transmisión > Escape > Empaques de exosto
+  Motos > Motor y transmisión > Guayas y cables > Guayas de freno
+  Motos > Motor y transmisión > Guayas y cables > Guayas de clutch
+  Motos > Motor y transmisión > Guayas y cables > Guayas de acelerador
+  Motos > Motor y transmisión > Guayas y cables > Guayas de velocímetro
+  Motos > Motor y transmisión > Guayas y cables > Guayas de choke (ahogador)
+  Motos > Motor y transmisión > Guayas y cables > Guayas de tacómetro

@@ -1,9 +1,15 @@
 {
   "header": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header.full": {
-    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
   },
   "header-layout.desktop": {
     "children": [
@@ -11,14 +17,14 @@
       "sticky-layout#4-desktop"
     ]
   },
-
   "flex-layout.row#1-desktop": {
-    "children": ["telemarketing"],
+    "children": [
+      "telemarketing"
+    ],
     "props": {
       "fullWidth": true
     }
   },
-
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -28,7 +34,9 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#4-desktop"]
+    "children": [
+      "flex-layout.row#4-desktop"
+    ]
   },
   "flex-layout.row#4-desktop": {
     "props": {
@@ -42,7 +50,6 @@
     "children": [
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
-      "flex-layout.col#category-menu",
       "flex-layout.row#header-actions"
     ]
   },
@@ -53,26 +60,25 @@
       "preventHorizontalStretch": true,
       "blockClass": "headerActions"
     },
-    "children": ["login", "minicart.v2"]
+    "children": [
+      "login",
+      "minicart.v2"
+    ]
   },
   "login": {
     "props": {
-      "iconLabel": "ingreso de clientes",
-      "showIconProfile": false
+      "iconLabel": "Inicio de sesión",
+      "showIconProfile": true,
+      "labelInitialIcon": "Inicio de sesión"
     }
   },
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["logo#desktop"]
-  },
-  "flex-layout.col#category-menu": {
-    "props": {
-      "verticalAlign": "middle",
-      "blockClass": "headerNavLinks"
-    },
-    "children": ["vtex.menu@2.x:menu#category-menu"]
+    "children": [
+      "logo#desktop"
+    ]
   },
   "logo#desktop": {
     "props": {
@@ -84,14 +90,17 @@
     }
   },
   "header-layout.mobile": {
-    "children": ["sticky-layout#1-mobile"]
+    "children": [
+      "sticky-layout#1-mobile"
+    ]
   },
   "sticky-layout#1-mobile": {
-    "children": ["flex-layout.row#1-mobile"]
+    "children": [
+      "flex-layout.row#1-mobile"
+    ]
   },
   "flex-layout.row#1-mobile": {
     "children": [
-      "flex-layout.col#drawer-mobile",
       "logo#mobile",
       "flex-layout.col#spacer",
       "flex-layout.col#header-actions-mobile"
@@ -103,35 +112,16 @@
       "fullWidth": true
     }
   },
-  "flex-layout.col#drawer-mobile": {
-    "props": {
-      "verticalAlign": "middle",
-      "blockClass": "headerDrawerMobile"
-    },
-    "children": ["drawer"]
-  },
   "flex-layout.col#header-actions-mobile": {
     "props": {
       "verticalAlign": "middle",
       "blockClass": "headerActionsMobile"
     },
-    "children": ["login", "minicart.v2"]
-  },
-  "drawer": {
-    "children": ["menu#drawer"]
-  },
-
-  "menu#drawer": {
     "children": [
-      "menu-item#nav-product-info",
-      "menu-item#nav-where-buy",
-      "menu-item#nav-contact"
-    ],
-    "props": {
-      "orientation": "vertical"
-    }
+      "login",
+      "minicart.v2"
+    ]
   },
-
   "logo#mobile": {
     "props": {
       "title": "Repuestox",

@@ -1,0 +1,688 @@
+/* ============================================================
+   HERO POR SECCION — slideshow independiente para /carros y /motos
+   ------------------------------------------------------------
+   3 slides por seccion. Cada seccion tiene su propio slider y
+   sus propios slides, asi que se pueden editar por separado.
+   El home NO lleva hero: ahi va el selector carros | motos.
+
+   Diseno (referencias/home): tarjeta con esquinas redondeadas
+   separada del borde, texto a la izquierda, CTA en pildora
+   blanca, pildoras de confianza abajo a la izquierda, puntos al
+   centro y flechas a la derecha sobre una linea fina.
+
+   IMAGENES: los src son PLACEHOLDERS en SVG embebido que dicen
+   "REEMPLAZAR". Para poner la real solo se cambia "src" en
+   image#rx-<seccion>-slide-N-img. Tamano recomendado 1600x700.
+   Encuadre: --rxFocus en el CSS.
+
+   Para agregar un slide: duplica el bloque rx-<seccion>-slide-N
+   y agregalo a children del slider de esa seccion.
+   ============================================================ */
+{
+  "slider-layout#rx-hero-carros": {
+    "props": {
+      "blockClass": "rxHero",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "usePagination": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "always",
+      "autoplay": {
+        "timeout": 6500,
+        "stopOnHover": true
+      }
+    },
+    "children": [
+      "flex-layout.row#rx-carros-slide-1",
+      "flex-layout.row#rx-carros-slide-2",
+      "flex-layout.row#rx-carros-slide-3"
+    ]
+  },
+  "flex-layout.row#rx-carros-slide-1": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-slide-1-media",
+      "flex-layout.col#rx-carros-slide-1-content"
+    ]
+  },
+  "flex-layout.col#rx-carros-slide-1-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-slide-1-img"
+    ]
+  },
+  "image#rx-carros-slide-1-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23010101'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23FF371E' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>carros-slide-1 / baterias / 1600x700</text></svg>",
+      "alt": "Baterías para carro",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-carros-slide-1-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-carros-slide-1-eyebrow",
+      "rich-text#rx-carros-slide-1-title",
+      "rich-text#rx-carros-slide-1-body",
+      "flex-layout.row#rx-carros-slide-1-ctas",
+      "flex-layout.row#rx-carros-slide-1-trust"
+    ]
+  },
+  "rich-text#rx-carros-slide-1-eyebrow": {
+    "props": {
+      "text": "Baterías",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-carros-slide-1-title": {
+    "props": {
+      "text": "Arranca hoy, arranca mañana",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-carros-slide-1-body": {
+    "props": {
+      "text": "Baterías para carro con respaldo de fábrica y asesoría para elegir la referencia correcta.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-1-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-1-cta1",
+      "rich-text#rx-carros-slide-1-cta2"
+    ]
+  },
+  "rich-text#rx-carros-slide-1-cta1": {
+    "props": {
+      "text": "[Ver baterías](/carros/electrico-y-electronico)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-carros-slide-1-cta2": {
+    "props": {
+      "text": "[Motor](/carros/motor-y-transmision)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-1-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-1-trust-1",
+      "rich-text#rx-carros-slide-1-trust-2"
+    ]
+  },
+  "rich-text#rx-carros-slide-1-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-carros-slide-1-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-2": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-slide-2-media",
+      "flex-layout.col#rx-carros-slide-2-content"
+    ]
+  },
+  "flex-layout.col#rx-carros-slide-2-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-slide-2-img"
+    ]
+  },
+  "image#rx-carros-slide-2-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23060294'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23FF371E' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>carros-slide-2 / autopartes / 1600x700</text></svg>",
+      "alt": "Motor para carro",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-carros-slide-2-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-carros-slide-2-eyebrow",
+      "rich-text#rx-carros-slide-2-title",
+      "rich-text#rx-carros-slide-2-body",
+      "flex-layout.row#rx-carros-slide-2-ctas",
+      "flex-layout.row#rx-carros-slide-2-trust"
+    ]
+  },
+  "rich-text#rx-carros-slide-2-eyebrow": {
+    "props": {
+      "text": "Motor",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-carros-slide-2-title": {
+    "props": {
+      "text": "La pieza exacta, sin adivinar",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-carros-slide-2-body": {
+    "props": {
+      "text": "Frenos, filtros, suspensión y transmisión para las marcas que más ruedan en Colombia.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-2-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-2-cta1",
+      "rich-text#rx-carros-slide-2-cta2"
+    ]
+  },
+  "rich-text#rx-carros-slide-2-cta1": {
+    "props": {
+      "text": "[Ver motor](/carros/motor-y-transmision)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-carros-slide-2-cta2": {
+    "props": {
+      "text": "[Ver lubricantes](/carros/lubricantes-y-mantenimiento)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-2-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-2-trust-1",
+      "rich-text#rx-carros-slide-2-trust-2"
+    ]
+  },
+  "rich-text#rx-carros-slide-2-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-carros-slide-2-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-3": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-carros-slide-3-media",
+      "flex-layout.col#rx-carros-slide-3-content"
+    ]
+  },
+  "flex-layout.col#rx-carros-slide-3-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-carros-slide-3-img"
+    ]
+  },
+  "image#rx-carros-slide-3-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23010101'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23060294' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>carros-slide-3 / tecnologia / 1600x700</text></svg>",
+      "alt": "Tecnología y seguridad automotriz",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-carros-slide-3-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-carros-slide-3-eyebrow",
+      "rich-text#rx-carros-slide-3-title",
+      "rich-text#rx-carros-slide-3-body",
+      "flex-layout.row#rx-carros-slide-3-ctas",
+      "flex-layout.row#rx-carros-slide-3-trust"
+    ]
+  },
+  "rich-text#rx-carros-slide-3-eyebrow": {
+    "props": {
+      "text": "Tecnología y seguridad",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-carros-slide-3-title": {
+    "props": {
+      "text": "Diagnostica antes de cambiar",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-carros-slide-3-body": {
+    "props": {
+      "text": "Escáneres, probadores de batería y herramienta profesional para que el taller trabaje sobre datos.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-3-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-3-cta1",
+      "rich-text#rx-carros-slide-3-cta2"
+    ]
+  },
+  "rich-text#rx-carros-slide-3-cta1": {
+    "props": {
+      "text": "[Ver tecnología](/carros/tecnologia-y-seguridad)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-carros-slide-3-cta2": {
+    "props": {
+      "text": "[Ver cuidado vehicular](/herramientas/cuidado-y-limpieza)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-carros-slide-3-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-carros-slide-3-trust-1",
+      "rich-text#rx-carros-slide-3-trust-2"
+    ]
+  },
+  "rich-text#rx-carros-slide-3-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-carros-slide-3-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "slider-layout#rx-hero-motos": {
+    "props": {
+      "blockClass": "rxHero",
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "usePagination": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "always",
+      "autoplay": {
+        "timeout": 6500,
+        "stopOnHover": true
+      }
+    },
+    "children": [
+      "flex-layout.row#rx-motos-slide-1",
+      "flex-layout.row#rx-motos-slide-2",
+      "flex-layout.row#rx-motos-slide-3"
+    ]
+  },
+  "flex-layout.row#rx-motos-slide-1": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-slide-1-media",
+      "flex-layout.col#rx-motos-slide-1-content"
+    ]
+  },
+  "flex-layout.col#rx-motos-slide-1-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-slide-1-img"
+    ]
+  },
+  "image#rx-motos-slide-1-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23010101'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23FF371E' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>motos-slide-1 / repuestos / 1600x700</text></svg>",
+      "alt": "Motor para moto",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-motos-slide-1-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-motos-slide-1-eyebrow",
+      "rich-text#rx-motos-slide-1-title",
+      "rich-text#rx-motos-slide-1-body",
+      "flex-layout.row#rx-motos-slide-1-ctas",
+      "flex-layout.row#rx-motos-slide-1-trust"
+    ]
+  },
+  "rich-text#rx-motos-slide-1-eyebrow": {
+    "props": {
+      "text": "Motor",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-motos-slide-1-title": {
+    "props": {
+      "text": "Tu moto, lista para rodar",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-motos-slide-1-body": {
+    "props": {
+      "text": "Frenos, transmisión, filtros y accesorios para las motos que más circulan en el país.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-1-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-1-cta1",
+      "rich-text#rx-motos-slide-1-cta2"
+    ]
+  },
+  "rich-text#rx-motos-slide-1-cta1": {
+    "props": {
+      "text": "[Ver motor](/motos/motor-y-transmision)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-motos-slide-1-cta2": {
+    "props": {
+      "text": "[Ver lubricantes](/motos/lubricantes-y-mantenimiento)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-1-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-1-trust-1",
+      "rich-text#rx-motos-slide-1-trust-2"
+    ]
+  },
+  "rich-text#rx-motos-slide-1-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-motos-slide-1-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-2": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-slide-2-media",
+      "flex-layout.col#rx-motos-slide-2-content"
+    ]
+  },
+  "flex-layout.col#rx-motos-slide-2-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-slide-2-img"
+    ]
+  },
+  "image#rx-motos-slide-2-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23060294'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23FF371E' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>motos-slide-2 / lubricantes / 1600x700</text></svg>",
+      "alt": "Lubricantes para moto",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-motos-slide-2-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-motos-slide-2-eyebrow",
+      "rich-text#rx-motos-slide-2-title",
+      "rich-text#rx-motos-slide-2-body",
+      "flex-layout.row#rx-motos-slide-2-ctas",
+      "flex-layout.row#rx-motos-slide-2-trust"
+    ]
+  },
+  "rich-text#rx-motos-slide-2-eyebrow": {
+    "props": {
+      "text": "Lubricantes",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-motos-slide-2-title": {
+    "props": {
+      "text": "Aceite que aguanta el trancón",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-motos-slide-2-body": {
+    "props": {
+      "text": "Lubricantes de marcas reconocidas para motor, transmisión y cadena.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-2-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-2-cta1",
+      "rich-text#rx-motos-slide-2-cta2"
+    ]
+  },
+  "rich-text#rx-motos-slide-2-cta1": {
+    "props": {
+      "text": "[Ver lubricantes](/motos/lubricantes-y-mantenimiento)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-motos-slide-2-cta2": {
+    "props": {
+      "text": "[Ver frenos](/motos/frenos)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-2-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-2-trust-1",
+      "rich-text#rx-motos-slide-2-trust-2"
+    ]
+  },
+  "rich-text#rx-motos-slide-2-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-motos-slide-2-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-3": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxSlide"
+    },
+    "children": [
+      "flex-layout.col#rx-motos-slide-3-media",
+      "flex-layout.col#rx-motos-slide-3-content"
+    ]
+  },
+  "flex-layout.col#rx-motos-slide-3-media": {
+    "props": {
+      "blockClass": "rxSlideMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-motos-slide-3-img"
+    ]
+  },
+  "image#rx-motos-slide-3-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 700'><rect width='1600' height='700' fill='%23010101'/><path d='M0 700 L1600 0 L1600 150 L330 700 Z' fill='%23060294' opacity='.16'/><text x='760' y='330' font-family='Montserrat,Helvetica,sans-serif' font-size='46' font-weight='800' fill='%23ffffff'>REEMPLAZAR</text><text x='760' y='390' font-family='Montserrat,Helvetica,sans-serif' font-size='28' fill='%23ffffff' opacity='.65'>motos-slide-3 / electrico / 1600x700</text></svg>",
+      "alt": "Baterías para moto",
+      "width": "1600",
+      "height": "700"
+    }
+  },
+  "flex-layout.col#rx-motos-slide-3-content": {
+    "props": {
+      "blockClass": "rxSlideContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-motos-slide-3-eyebrow",
+      "rich-text#rx-motos-slide-3-title",
+      "rich-text#rx-motos-slide-3-body",
+      "flex-layout.row#rx-motos-slide-3-ctas",
+      "flex-layout.row#rx-motos-slide-3-trust"
+    ]
+  },
+  "rich-text#rx-motos-slide-3-eyebrow": {
+    "props": {
+      "text": "Eléctrico",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-motos-slide-3-title": {
+    "props": {
+      "text": "Enciende al primer toque",
+      "blockClass": "rxTitle"
+    }
+  },
+  "rich-text#rx-motos-slide-3-body": {
+    "props": {
+      "text": "Baterías para moto con la referencia correcta y respaldo de fábrica.",
+      "blockClass": "rxBody"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-3-ctas": {
+    "props": {
+      "blockClass": "rxCtas",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-3-cta1",
+      "rich-text#rx-motos-slide-3-cta2"
+    ]
+  },
+  "rich-text#rx-motos-slide-3-cta1": {
+    "props": {
+      "text": "[Ver eléctrico](/motos/electrico-y-electronico)",
+      "blockClass": "rxCtaPrimary"
+    }
+  },
+  "rich-text#rx-motos-slide-3-cta2": {
+    "props": {
+      "text": "[Llantas y ruedas](/motos/llantas-y-rines)",
+      "blockClass": "rxCtaGhost"
+    }
+  },
+  "flex-layout.row#rx-motos-slide-3-trust": {
+    "props": {
+      "blockClass": "rxTrust",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-motos-slide-3-trust-1",
+      "rich-text#rx-motos-slide-3-trust-2"
+    ]
+  },
+  "rich-text#rx-motos-slide-3-trust-1": {
+    "props": {
+      "text": "Envíos a toda Colombia",
+      "blockClass": "rxTrustPill"
+    }
+  },
+  "rich-text#rx-motos-slide-3-trust-2": {
+    "props": {
+      "text": "Pago seguro",
+      "blockClass": "rxTrustPill"
+    }
+  }
+}

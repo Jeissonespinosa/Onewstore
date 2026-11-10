@@ -34,5 +34,1706 @@
   },
   "store.custom#categoria-baterias-traccion": {
     "path": "/linea-productos/baterias-de-traccion"
+  },
+  "store.custom#landing-herramientas": {
+    "path": "/herramientas"
+  },
+  "store.custom#carros-llantas-y-rines": {
+    "path": "/carros/llantas-y-rines"
+  },
+  "store.custom#carros-llantas-y-rines-rines": {
+    "path": "/carros/llantas-y-rines/rines"
+  },
+  "store.custom#carros-llantas-y-rines-rines-rines-de-acero": {
+    "path": "/carros/llantas-y-rines/rines/rines-de-acero"
+  },
+  "store.custom#carros-llantas-y-rines-rines-rines-de-aluminio": {
+    "path": "/carros/llantas-y-rines/rines/rines-de-aluminio"
+  },
+  "store.custom#carros-llantas-y-rines-accesorios-de-rueda": {
+    "path": "/carros/llantas-y-rines/accesorios-de-rueda"
+  },
+  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-copas-tapacubos": {
+    "path": "/carros/llantas-y-rines/accesorios-de-rueda/copas-tapacubos"
+  },
+  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-tuercas-y-pernos-de-rueda": {
+    "path": "/carros/llantas-y-rines/accesorios-de-rueda/tuercas-y-pernos-de-rueda"
+  },
+  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-separadores-y-espaciadores-de-rin": {
+    "path": "/carros/llantas-y-rines/accesorios-de-rueda/separadores-y-espaciadores-de-rin"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento": {
+    "path": "/carros/lubricantes-y-mantenimiento"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-aceite-de-motor": {
+    "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-aceite-de-transmision": {
+    "path": "/carros/lubricantes-y-mantenimiento/aceite-de-transmision"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-aceite-diferencial": {
+    "path": "/carros/lubricantes-y-mantenimiento/aceite-diferencial"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-refrigerante-y-anticongelante": {
+    "path": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-liquido-de-frenos": {
+    "path": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-liquido-de-direccion-hidraulica": {
+    "path": "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-aditivos": {
+    "path": "/carros/lubricantes-y-mantenimiento/aditivos"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-grasas": {
+    "path": "/carros/lubricantes-y-mantenimiento/grasas"
+  },
+  "store.custom#carros-lubricantes-y-mantenimiento-limpiadores-de-sistemas": {
+    "path": "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas"
+  },
+  "store.custom#carros-filtros": {
+    "path": "/carros/filtros"
+  },
+  "store.custom#carros-filtros-filtros-de-aceite": {
+    "path": "/carros/filtros/filtros-de-aceite"
+  },
+  "store.custom#carros-filtros-filtros-de-aire": {
+    "path": "/carros/filtros/filtros-de-aire"
+  },
+  "store.custom#carros-filtros-filtros-de-combustible": {
+    "path": "/carros/filtros/filtros-de-combustible"
+  },
+  "store.custom#carros-filtros-filtros-de-cabina": {
+    "path": "/carros/filtros/filtros-de-cabina"
+  },
+  "store.custom#carros-filtros-filtros-de-transmision": {
+    "path": "/carros/filtros/filtros-de-transmision"
+  },
+  "store.custom#carros-baterias": {
+    "path": "/carros/baterias"
+  },
+  "store.custom#carros-baterias-baterias-para-carro": {
+    "path": "/carros/baterias/baterias-para-carro"
+  },
+  "store.custom#carros-baterias-baterias-para-furgon-camion-y-bus": {
+    "path": "/carros/baterias/baterias-para-furgon-camion-y-bus"
+  },
+  "store.custom#carros-baterias-bornes-y-cables-de-bateria": {
+    "path": "/carros/baterias/bornes-y-cables-de-bateria"
+  },
+  "store.custom#carros-frenos": {
+    "path": "/carros/frenos"
+  },
+  "store.custom#carros-frenos-pastillas-de-freno": {
+    "path": "/carros/frenos/pastillas-de-freno"
+  },
+  "store.custom#carros-frenos-discos-de-freno": {
+    "path": "/carros/frenos/discos-de-freno"
+  },
+  "store.custom#carros-frenos-campanas-de-freno": {
+    "path": "/carros/frenos/campanas-de-freno"
+  },
+  "store.custom#carros-frenos-bandas-de-freno": {
+    "path": "/carros/frenos/bandas-de-freno"
+  },
+  "store.custom#carros-frenos-mordazas-calipers": {
+    "path": "/carros/frenos/mordazas-calipers"
+  },
+  "store.custom#carros-frenos-pistones-y-kits-de-caliper": {
+    "path": "/carros/frenos/pistones-y-kits-de-caliper"
+  },
+  "store.custom#carros-frenos-cilindros-de-freno": {
+    "path": "/carros/frenos/cilindros-de-freno"
+  },
+  "store.custom#carros-frenos-bombas-de-freno": {
+    "path": "/carros/frenos/bombas-de-freno"
+  },
+  "store.custom#carros-frenos-servofreno-booster": {
+    "path": "/carros/frenos/servofreno-booster"
+  },
+  "store.custom#carros-frenos-bombas-de-vacio": {
+    "path": "/carros/frenos/bombas-de-vacio"
+  },
+  "store.custom#carros-frenos-sensores-abs": {
+    "path": "/carros/frenos/sensores-abs"
+  },
+  "store.custom#carros-frenos-modulos-y-unidades-abs": {
+    "path": "/carros/frenos/modulos-y-unidades-abs"
+  },
+  "store.custom#carros-frenos-mangueras-y-lineas-de-freno": {
+    "path": "/carros/frenos/mangueras-y-lineas-de-freno"
+  },
+  "store.custom#carros-frenos-depositos-de-liquido-de-frenos": {
+    "path": "/carros/frenos/depositos-de-liquido-de-frenos"
+  },
+  "store.custom#carros-frenos-guayas-de-freno-de-mano": {
+    "path": "/carros/frenos/guayas-de-freno-de-mano"
+  },
+  "store.custom#carros-frenos-herrajes-y-pernos-de-pastillas": {
+    "path": "/carros/frenos/herrajes-y-pernos-de-pastillas"
+  },
+  "store.custom#carros-frenos-kits-de-reparacion-de-frenos": {
+    "path": "/carros/frenos/kits-de-reparacion-de-frenos"
+  },
+  "store.custom#carros-frenos-sensores-de-desgaste-de-pastillas": {
+    "path": "/carros/frenos/sensores-de-desgaste-de-pastillas"
+  },
+  "store.custom#carros-suspension-y-direccion": {
+    "path": "/carros/suspension-y-direccion"
+  },
+  "store.custom#carros-suspension-y-direccion-amortiguadores": {
+    "path": "/carros/suspension-y-direccion/amortiguadores"
+  },
+  "store.custom#carros-suspension-y-direccion-resortes-espirales": {
+    "path": "/carros/suspension-y-direccion/resortes-espirales"
+  },
+  "store.custom#carros-suspension-y-direccion-rotulas": {
+    "path": "/carros/suspension-y-direccion/rotulas"
+  },
+  "store.custom#carros-suspension-y-direccion-axiales-brazos-axiales": {
+    "path": "/carros/suspension-y-direccion/axiales-brazos-axiales"
+  },
+  "store.custom#carros-suspension-y-direccion-bujes": {
+    "path": "/carros/suspension-y-direccion/bujes"
+  },
+  "store.custom#carros-suspension-y-direccion-tijeras": {
+    "path": "/carros/suspension-y-direccion/tijeras"
+  },
+  "store.custom#carros-suspension-y-direccion-barras-estabilizadoras": {
+    "path": "/carros/suspension-y-direccion/barras-estabilizadoras"
+  },
+  "store.custom#carros-suspension-y-direccion-links-de-estabilizadora": {
+    "path": "/carros/suspension-y-direccion/links-de-estabilizadora"
+  },
+  "store.custom#carros-suspension-y-direccion-balineras-de-rueda": {
+    "path": "/carros/suspension-y-direccion/balineras-de-rueda"
+  },
+  "store.custom#carros-suspension-y-direccion-manzanas-de-rueda-cubos": {
+    "path": "/carros/suspension-y-direccion/manzanas-de-rueda-cubos"
+  },
+  "store.custom#carros-suspension-y-direccion-puntas-de-eje-manguetas": {
+    "path": "/carros/suspension-y-direccion/puntas-de-eje-manguetas"
+  },
+  "store.custom#carros-suspension-y-direccion-cajas-de-direccion-cremalleras": {
+    "path": "/carros/suspension-y-direccion/cajas-de-direccion-cremalleras"
+  },
+  "store.custom#carros-suspension-y-direccion-bombas-de-direccion-hidraulica": {
+    "path": "/carros/suspension-y-direccion/bombas-de-direccion-hidraulica"
+  },
+  "store.custom#carros-suspension-y-direccion-mangueras-de-direccion-hidraulica": {
+    "path": "/carros/suspension-y-direccion/mangueras-de-direccion-hidraulica"
+  },
+  "store.custom#carros-suspension-y-direccion-columnas-y-crucetas-de-direccion": {
+    "path": "/carros/suspension-y-direccion/columnas-y-crucetas-de-direccion"
+  },
+  "store.custom#carros-suspension-y-direccion-terminales-de-direccion": {
+    "path": "/carros/suspension-y-direccion/terminales-de-direccion"
+  },
+  "store.custom#carros-suspension-y-direccion-copas-bases-de-amortiguador": {
+    "path": "/carros/suspension-y-direccion/copas-bases-de-amortiguador"
+  },
+  "store.custom#carros-suspension-y-direccion-guardapolvos-y-fuelles": {
+    "path": "/carros/suspension-y-direccion/guardapolvos-y-fuelles"
+  },
+  "store.custom#carros-suspension-y-direccion-topes-de-amortiguador": {
+    "path": "/carros/suspension-y-direccion/topes-de-amortiguador"
+  },
+  "store.custom#carros-suspension-y-direccion-kits-de-tren-delantero": {
+    "path": "/carros/suspension-y-direccion/kits-de-tren-delantero"
+  },
+  "store.custom#carros-suspension-y-direccion-suspension-neumatica-bolsas-de-aire": {
+    "path": "/carros/suspension-y-direccion/suspension-neumatica-bolsas-de-aire"
+  },
+  "store.custom#carros-suspension-y-direccion-coilovers-y-suspension-deportiva": {
+    "path": "/carros/suspension-y-direccion/coilovers-y-suspension-deportiva"
+  },
+  "store.custom#carros-suspension-y-direccion-ballestas-muelles-de-hoja": {
+    "path": "/carros/suspension-y-direccion/ballestas-muelles-de-hoja"
+  },
+  "store.custom#carros-electrico-y-electronico": {
+    "path": "/carros/electrico-y-electronico"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido": {
+    "path": "/carros/electrico-y-electronico/encendido"
+  },
+  "store.custom#carros-electrico-y-electronico-arranque-y-carga": {
+    "path": "/carros/electrico-y-electronico/arranque-y-carga"
+  },
+  "store.custom#carros-electrico-y-electronico-gestion-electronica": {
+    "path": "/carros/electrico-y-electronico/gestion-electronica"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general": {
+    "path": "/carros/electrico-y-electronico/electrico-general"
+  },
+  "store.custom#carros-iluminacion": {
+    "path": "/carros/iluminacion"
+  },
+  "store.custom#carros-iluminacion-farolas": {
+    "path": "/carros/iluminacion/farolas"
+  },
+  "store.custom#carros-iluminacion-stops": {
+    "path": "/carros/iluminacion/stops"
+  },
+  "store.custom#carros-iluminacion-direccionales": {
+    "path": "/carros/iluminacion/direccionales"
+  },
+  "store.custom#carros-iluminacion-exploradoras": {
+    "path": "/carros/iluminacion/exploradoras"
+  },
+  "store.custom#carros-iluminacion-luces-led": {
+    "path": "/carros/iluminacion/luces-led"
+  },
+  "store.custom#carros-iluminacion-bombillos-halogenos": {
+    "path": "/carros/iluminacion/bombillos-halogenos"
+  },
+  "store.custom#carros-iluminacion-xenon-hid": {
+    "path": "/carros/iluminacion/xenon-hid"
+  },
+  "store.custom#carros-iluminacion-barras-led": {
+    "path": "/carros/iluminacion/barras-led"
+  },
+  "store.custom#carros-iluminacion-luces-interiores": {
+    "path": "/carros/iluminacion/luces-interiores"
+  },
+  "store.custom#carros-iluminacion-luces-drl-diurnas": {
+    "path": "/carros/iluminacion/luces-drl-diurnas"
+  },
+  "store.custom#carros-iluminacion-luces-de-placa-y-cortesia": {
+    "path": "/carros/iluminacion/luces-de-placa-y-cortesia"
+  },
+  "store.custom#carros-motor-y-transmision": {
+    "path": "/carros/motor-y-transmision"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-pistones": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/pistones"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-anillos": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/anillos"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-bielas": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/bielas"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-ciguenales": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/ciguenales"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-arboles-de-levas": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/arboles-de-levas"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-culatas": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/culatas"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-valvulas-y-guias": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-camisas": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/camisas"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-soportes-de-motor": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/soportes-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-bloque-y-culata-motores-completos": {
+    "path": "/carros/motor-y-transmision/bloque-y-culata/motores-completos"
+  },
+  "store.custom#carros-motor-y-transmision-correas-y-tensores": {
+    "path": "/carros/motor-y-transmision/correas-y-tensores"
+  },
+  "store.custom#carros-motor-y-transmision-correas-y-tensores-correas-de-accesorios": {
+    "path": "/carros/motor-y-transmision/correas-y-tensores/correas-de-accesorios"
+  },
+  "store.custom#carros-motor-y-transmision-correas-y-tensores-tensores-de-correa": {
+    "path": "/carros/motor-y-transmision/correas-y-tensores/tensores-de-correa"
+  },
+  "store.custom#carros-motor-y-transmision-correas-y-tensores-poleas": {
+    "path": "/carros/motor-y-transmision/correas-y-tensores/poleas"
+  },
+  "store.custom#carros-motor-y-transmision-reparticion-distribucion": {
+    "path": "/carros/motor-y-transmision/reparticion-distribucion"
+  },
+  "store.custom#carros-motor-y-transmision-reparticion-distribucion-correas-de-reparticion": {
+    "path": "/carros/motor-y-transmision/reparticion-distribucion/correas-de-reparticion"
+  },
+  "store.custom#carros-motor-y-transmision-reparticion-distribucion-cadenas-de-reparticion": {
+    "path": "/carros/motor-y-transmision/reparticion-distribucion/cadenas-de-reparticion"
+  },
+  "store.custom#carros-motor-y-transmision-reparticion-distribucion-kits-de-reparticion": {
+    "path": "/carros/motor-y-transmision/reparticion-distribucion/kits-de-reparticion"
+  },
+  "store.custom#carros-motor-y-transmision-reparticion-distribucion-tensores-y-guias-de-reparticion": {
+    "path": "/carros/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-reparticion"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion": {
+    "path": "/carros/motor-y-transmision/refrigeracion"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-radiadores": {
+    "path": "/carros/motor-y-transmision/refrigeracion/radiadores"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-bombas-de-agua": {
+    "path": "/carros/motor-y-transmision/refrigeracion/bombas-de-agua"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-termostatos": {
+    "path": "/carros/motor-y-transmision/refrigeracion/termostatos"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-electroventiladores": {
+    "path": "/carros/motor-y-transmision/refrigeracion/electroventiladores"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-mangueras-de-refrigeracion": {
+    "path": "/carros/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-depositos-de-refrigerante": {
+    "path": "/carros/motor-y-transmision/refrigeracion/depositos-de-refrigerante"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-tapas-de-radiador": {
+    "path": "/carros/motor-y-transmision/refrigeracion/tapas-de-radiador"
+  },
+  "store.custom#carros-motor-y-transmision-refrigeracion-radiadores-de-aceite": {
+    "path": "/carros/motor-y-transmision/refrigeracion/radiadores-de-aceite"
+  },
+  "store.custom#carros-motor-y-transmision-turbo-e-intercooler": {
+    "path": "/carros/motor-y-transmision/turbo-e-intercooler"
+  },
+  "store.custom#carros-motor-y-transmision-turbo-e-intercooler-turbos": {
+    "path": "/carros/motor-y-transmision/turbo-e-intercooler/turbos"
+  },
+  "store.custom#carros-motor-y-transmision-turbo-e-intercooler-intercoolers": {
+    "path": "/carros/motor-y-transmision/turbo-e-intercooler/intercoolers"
+  },
+  "store.custom#carros-motor-y-transmision-turbo-e-intercooler-mangueras-de-turbo-e-intercooler": {
+    "path": "/carros/motor-y-transmision/turbo-e-intercooler/mangueras-de-turbo-e-intercooler"
+  },
+  "store.custom#carros-motor-y-transmision-turbo-e-intercooler-valvulas-de-alivio-blow-off": {
+    "path": "/carros/motor-y-transmision/turbo-e-intercooler/valvulas-de-alivio-blow-off"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-bombas-de-gasolina": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-inyectores": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/inyectores"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-rampas-de-inyectores": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/rampas-de-inyectores"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-reguladores-de-presion-de-combustible": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/reguladores-de-presion-de-combustible"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-cuerpos-de-aceleracion": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/cuerpos-de-aceleracion"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-sensores-de-oxigeno": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-de-oxigeno"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-sensores-map": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-map"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-valvulas-egr-y-canister": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/valvulas-egr-y-canister"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-carburadores": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/carburadores"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-guayas-de-acelerador": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/guayas-de-acelerador"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-tanques-de-gasolina": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/tanques-de-gasolina"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-bombas-de-inyeccion-diesel": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-inyeccion-diesel"
+  },
+  "store.custom#carros-motor-y-transmision-combustible-e-inyeccion-filtros-separadores-de-agua": {
+    "path": "/carros/motor-y-transmision/combustible-e-inyeccion/filtros-separadores-de-agua"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague": {
+    "path": "/carros/motor-y-transmision/clutch-embrague"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-kits-de-clutch": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/kits-de-clutch"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-discos-de-clutch": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/discos-de-clutch"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-prensas-de-clutch": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/prensas-de-clutch"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-balineras-de-clutch-collarin": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/balineras-de-clutch-collarin"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-bombas-y-balibombas-de-clutch": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/bombas-y-balibombas-de-clutch"
+  },
+  "store.custom#carros-motor-y-transmision-clutch-embrague-guayas-de-clutch": {
+    "path": "/carros/motor-y-transmision/clutch-embrague/guayas-de-clutch"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape": {
+    "path": "/carros/motor-y-transmision/admision-y-escape"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-multiples-de-admision": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-admision"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-multiples-de-escape": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-escape"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-catalizadores": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/catalizadores"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-mofles-silenciadores": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/mofles-silenciadores"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-resonadores": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/resonadores"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-flexibles-de-escape": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/flexibles-de-escape"
+  },
+  "store.custom#carros-motor-y-transmision-admision-y-escape-tubos-y-puntas-de-escape": {
+    "path": "/carros/motor-y-transmision/admision-y-escape/tubos-y-puntas-de-escape"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-cajas-de-cambios": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-cambios"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-cajas-automaticas-y-convertidores": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-automaticas-y-convertidores"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-diferenciales": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/diferenciales"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-cardanes-y-crucetas": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/cardanes-y-crucetas"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-ejes-y-homocineticas": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/ejes-y-homocineticas"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-sincronizadores-y-pinones": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/sincronizadores-y-pinones"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-retenedores-de-caja": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/retenedores-de-caja"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-soportes-de-caja": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/soportes-de-caja"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-selectoras-y-guayas-de-cambios": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/selectoras-y-guayas-de-cambios"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-volantes-de-motor": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-transmision-y-caja-cajas-de-transferencia-4x4": {
+    "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-transferencia-4x4"
+  },
+  "store.custom#carros-motor-y-transmision-partes-plasticas-de-motor": {
+    "path": "/carros/motor-y-transmision/partes-plasticas-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-partes-plasticas-de-motor-tapas-y-cubiertas-de-motor": {
+    "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/tapas-y-cubiertas-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-partes-plasticas-de-motor-guardapolvos-y-protectores-de-motor": {
+    "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/guardapolvos-y-protectores-de-motor"
+  },
+  "store.custom#carros-motor-y-transmision-partes-plasticas-de-motor-carcasas-de-correa-y-ductos": {
+    "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/carcasas-de-correa-y-ductos"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular-kits-de-conversion-a-gnv": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular/kits-de-conversion-a-gnv"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular-reguladores-gnv": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular/reguladores-gnv"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular-inyectores-y-rieles-gnv": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular/inyectores-y-rieles-gnv"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular-cilindros-gnv": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular/cilindros-gnv"
+  },
+  "store.custom#carros-motor-y-transmision-gnv-gas-vehicular-mangueras-y-valvulas-gnv": {
+    "path": "/carros/motor-y-transmision/gnv-gas-vehicular/mangueras-y-valvulas-gnv"
+  },
+  "store.custom#carros-accesorios": {
+    "path": "/carros/accesorios"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores": {
+    "path": "/carros/accesorios/accesorios-exteriores"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-estribos": {
+    "path": "/carros/accesorios/accesorios-exteriores/estribos"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-barras-de-techo": {
+    "path": "/carros/accesorios/accesorios-exteriores/barras-de-techo"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-portaequipajes": {
+    "path": "/carros/accesorios/accesorios-exteriores/portaequipajes"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-portabicicletas": {
+    "path": "/carros/accesorios/accesorios-exteriores/portabicicletas"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-portallantas": {
+    "path": "/carros/accesorios/accesorios-exteriores/portallantas"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-enganches-de-remolque-tiros": {
+    "path": "/carros/accesorios/accesorios-exteriores/enganches-de-remolque-tiros"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-deflectores": {
+    "path": "/carros/accesorios/accesorios-exteriores/deflectores"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-protectores-exteriores": {
+    "path": "/carros/accesorios/accesorios-exteriores/protectores-exteriores"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-molduras": {
+    "path": "/carros/accesorios/accesorios-exteriores/molduras"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-spoilers-y-alerones": {
+    "path": "/carros/accesorios/accesorios-exteriores/spoilers-y-alerones"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-parrillas-decorativas": {
+    "path": "/carros/accesorios/accesorios-exteriores/parrillas-decorativas"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-protectores-de-puertas": {
+    "path": "/carros/accesorios/accesorios-exteriores/protectores-de-puertas"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-marcos-y-portaplacas": {
+    "path": "/carros/accesorios/accesorios-exteriores/marcos-y-portaplacas"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-cubrecarros-forros": {
+    "path": "/carros/accesorios/accesorios-exteriores/cubrecarros-forros"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-snorkels": {
+    "path": "/carros/accesorios/accesorios-exteriores/snorkels"
+  },
+  "store.custom#carros-accesorios-accesorios-exteriores-polarizado-y-peliculas": {
+    "path": "/carros/accesorios/accesorios-exteriores/polarizado-y-peliculas"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores": {
+    "path": "/carros/accesorios/accesorios-interiores"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-tapetes": {
+    "path": "/carros/accesorios/accesorios-interiores/tapetes"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-forros-de-sillas": {
+    "path": "/carros/accesorios/accesorios-interiores/forros-de-sillas"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-forros-de-timon": {
+    "path": "/carros/accesorios/accesorios-interiores/forros-de-timon"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-cojines": {
+    "path": "/carros/accesorios/accesorios-interiores/cojines"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-organizadores": {
+    "path": "/carros/accesorios/accesorios-interiores/organizadores"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-cortasoles-de-parabrisas": {
+    "path": "/carros/accesorios/accesorios-interiores/cortasoles-de-parabrisas"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-cortinas": {
+    "path": "/carros/accesorios/accesorios-interiores/cortinas"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-percheros": {
+    "path": "/carros/accesorios/accesorios-interiores/percheros"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-portaobjetos": {
+    "path": "/carros/accesorios/accesorios-interiores/portaobjetos"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-portavasos": {
+    "path": "/carros/accesorios/accesorios-interiores/portavasos"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-apoyabrazos": {
+    "path": "/carros/accesorios/accesorios-interiores/apoyabrazos"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-volantes-deportivos": {
+    "path": "/carros/accesorios/accesorios-interiores/volantes-deportivos"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-pedales-deportivos-cubrepedales": {
+    "path": "/carros/accesorios/accesorios-interiores/pedales-deportivos-cubrepedales"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-protectores-interiores": {
+    "path": "/carros/accesorios/accesorios-interiores/protectores-interiores"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-sillas-para-bebe": {
+    "path": "/carros/accesorios/accesorios-interiores/sillas-para-bebe"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-neveras-portatiles": {
+    "path": "/carros/accesorios/accesorios-interiores/neveras-portatiles"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-cargadores-e-inversores-12v": {
+    "path": "/carros/accesorios/accesorios-interiores/cargadores-e-inversores-12v"
+  },
+  "store.custom#carros-accesorios-accesorios-interiores-soportes-de-celular": {
+    "path": "/carros/accesorios/accesorios-interiores/soportes-de-celular"
+  },
+  "store.custom#carros-accesorios-audio": {
+    "path": "/carros/accesorios/audio"
+  },
+  "store.custom#carros-accesorios-audio-radios": {
+    "path": "/carros/accesorios/audio/radios"
+  },
+  "store.custom#carros-accesorios-audio-pantallas-multimedia": {
+    "path": "/carros/accesorios/audio/pantallas-multimedia"
+  },
+  "store.custom#carros-accesorios-audio-parlantes": {
+    "path": "/carros/accesorios/audio/parlantes"
+  },
+  "store.custom#carros-accesorios-audio-subwoofers": {
+    "path": "/carros/accesorios/audio/subwoofers"
+  },
+  "store.custom#carros-accesorios-audio-amplificadores": {
+    "path": "/carros/accesorios/audio/amplificadores"
+  },
+  "store.custom#carros-accesorios-audio-procesadores-y-ecualizadores": {
+    "path": "/carros/accesorios/audio/procesadores-y-ecualizadores"
+  },
+  "store.custom#carros-accesorios-audio-tweeters": {
+    "path": "/carros/accesorios/audio/tweeters"
+  },
+  "store.custom#carros-accesorios-audio-cajas-acusticas": {
+    "path": "/carros/accesorios/audio/cajas-acusticas"
+  },
+  "store.custom#carros-accesorios-audio-cables-y-conectores-de-audio": {
+    "path": "/carros/accesorios/audio/cables-y-conectores-de-audio"
+  },
+  "store.custom#carros-accesorios-audio-antenas-de-radio": {
+    "path": "/carros/accesorios/audio/antenas-de-radio"
+  },
+  "store.custom#carros-accesorios-audio-kits-de-instalacion": {
+    "path": "/carros/accesorios/audio/kits-de-instalacion"
+  },
+  "store.custom#carros-carroceria-y-climatizacion": {
+    "path": "/carros/carroceria-y-climatizacion"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-bomperes-bumper": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/bomperes-bumper"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-capos": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/capos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-guardafangos": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/guardafangos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-puertas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/puertas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-baules-y-compuertas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/baules-y-compuertas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-espejos-retrovisores": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/espejos-retrovisores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-persianas-parrillas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/persianas-parrillas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-rejillas-y-tomas-de-aire": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/rejillas-y-tomas-de-aire"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-soportes-y-bases-de-carroceria": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/soportes-y-bases-de-carroceria"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-bisagras": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/bisagras"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-chapas-y-manijas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/chapas-y-manijas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-cerraduras-de-capo-y-baul": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/cerraduras-de-capo-y-baul"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-amortiguadores-de-capo-y-baul-resortes-a-gas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/amortiguadores-de-capo-y-baul-resortes-a-gas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-vidrios-y-parabrisas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/vidrios-y-parabrisas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-elevavidrios": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/elevavidrios"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-empaques-de-puertas-y-molduras-burletes": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/empaques-de-puertas-y-molduras-burletes"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-plumillas-limpiaparabrisas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/plumillas-limpiaparabrisas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-brazos-y-motores-de-limpiaparabrisas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/brazos-y-motores-de-limpiaparabrisas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-lavaparabrisas-bombas-y-depositos": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/lavaparabrisas-bombas-y-depositos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-guardapolvos-y-pasarruedas": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/guardapolvos-y-pasarruedas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-zocalos": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/zocalos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-techos-corredizos": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/techos-corredizos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-carroceria-emblemas-de-carroceria": {
+    "path": "/carros/carroceria-y-climatizacion/carroceria/emblemas-de-carroceria"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-manijas-y-chapas-interiores": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manijas-y-chapas-interiores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-paneles-de-puerta": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/paneles-de-puerta"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-tableros-y-consolas": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tableros-y-consolas"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-guanteras": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/guanteras"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-palancas-de-cambios-y-pomos": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-cambios-y-pomos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-palancas-de-freno-de-mano": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-freno-de-mano"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-pedales": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/pedales"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-sillas-y-tapizados": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/sillas-y-tapizados"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-cinturones-de-seguridad": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cinturones-de-seguridad"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-airbags-y-modulos": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/airbags-y-modulos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-espejos-retrovisores-interiores": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/espejos-retrovisores-interiores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-parasoles": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/parasoles"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-cielorrasos": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cielorrasos"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-tomas-12v-y-encendedores": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tomas-12v-y-encendedores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-interior-repuestos-manivelas-de-ventana": {
+    "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manivelas-de-ventana"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-compresores-de-ac": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/compresores-de-ac"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-condensadores": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/condensadores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-evaporadores": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/evaporadores"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-blowers-ventiladores-de-ac": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/blowers-ventiladores-de-ac"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-resistencias": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/resistencias"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-sensores-de-ac": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/sensores-de-ac"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-mangueras-de-ac": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/mangueras-de-ac"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-gas-refrigerante": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/gas-refrigerante"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-valvulas-de-expansion": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/valvulas-de-expansion"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-radiadores-de-calefaccion": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/radiadores-de-calefaccion"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-comandos-y-perillas-de-ac": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/comandos-y-perillas-de-ac"
+  },
+  "store.custom#carros-carroceria-y-climatizacion-aire-acondicionado-y-climatizacion-difusores-de-aire": {
+    "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/difusores-de-aire"
+  },
+  "store.custom#carros-tecnologia-y-seguridad": {
+    "path": "/carros/tecnologia-y-seguridad"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-sistemas-android-y-carplay": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-camaras-de-reversa": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-de-reversa"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-camaras-dvr-y-de-seguridad": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-dvr-y-de-seguridad"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-sensores-de-parqueo": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-parqueo"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-sensores-de-presion-de-llantas-tpms": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-adaptadores-bluetooth": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/adaptadores-bluetooth"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-tecnologia-y-conectividad-cargadores-y-cables-para-electricos-e-hibridos": {
+    "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/cargadores-y-cables-para-electricos-e-hibridos"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-alarmas": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/alarmas"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-inmovilizadores": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/inmovilizadores"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-rastreo-gps": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/rastreo-gps"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-cerraduras-y-bloqueos": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/cerraduras-y-bloqueos"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-trabavolantes-y-trabapedales": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/trabavolantes-y-trabapedales"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-extintores": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/extintores"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-triangulos": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/triangulos"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-botiquines": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/botiquines"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-kits-de-carretera": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/kits-de-carretera"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-chalecos-reflectivos": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/chalecos-reflectivos"
+  },
+  "store.custom#carros-tecnologia-y-seguridad-seguridad-alcoholimetros": {
+    "path": "/carros/tecnologia-y-seguridad/seguridad/alcoholimetros"
+  },
+  "store.custom#motos-llantas-y-rines": {
+    "path": "/motos/llantas-y-rines"
+  },
+  "store.custom#motos-llantas-y-rines-llantas": {
+    "path": "/motos/llantas-y-rines/llantas"
+  },
+  "store.custom#motos-llantas-y-rines-llantas-llantas-delanteras": {
+    "path": "/motos/llantas-y-rines/llantas/llantas-delanteras"
+  },
+  "store.custom#motos-llantas-y-rines-llantas-llantas-traseras": {
+    "path": "/motos/llantas-y-rines/llantas/llantas-traseras"
+  },
+  "store.custom#motos-llantas-y-rines-llantas-llantas-de-scooter": {
+    "path": "/motos/llantas-y-rines/llantas/llantas-de-scooter"
+  },
+  "store.custom#motos-llantas-y-rines-llantas-llantas-de-enduro-y-cross": {
+    "path": "/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross"
+  },
+  "store.custom#motos-llantas-y-rines-llantas-llantas-para-motocarro": {
+    "path": "/motos/llantas-y-rines/llantas/llantas-para-motocarro"
+  },
+  "store.custom#motos-llantas-y-rines-rines-y-rayos": {
+    "path": "/motos/llantas-y-rines/rines-y-rayos"
+  },
+  "store.custom#motos-llantas-y-rines-rines-y-rayos-rines": {
+    "path": "/motos/llantas-y-rines/rines-y-rayos/rines"
+  },
+  "store.custom#motos-llantas-y-rines-rines-y-rayos-rayos-y-niples": {
+    "path": "/motos/llantas-y-rines/rines-y-rayos/rayos-y-niples"
+  },
+  "store.custom#motos-llantas-y-rines-rines-y-rayos-manzanas-de-rueda": {
+    "path": "/motos/llantas-y-rines/rines-y-rayos/manzanas-de-rueda"
+  },
+  "store.custom#motos-llantas-y-rines-rines-y-rayos-balineras-de-rueda": {
+    "path": "/motos/llantas-y-rines/rines-y-rayos/balineras-de-rueda"
+  },
+  "store.custom#motos-llantas-y-rines-accesorios-de-rueda": {
+    "path": "/motos/llantas-y-rines/accesorios-de-rueda"
+  },
+  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-neumaticos-tripas": {
+    "path": "/motos/llantas-y-rines/accesorios-de-rueda/neumaticos-tripas"
+  },
+  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-valvulas": {
+    "path": "/motos/llantas-y-rines/accesorios-de-rueda/valvulas"
+  },
+  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-tuercas-y-ejes": {
+    "path": "/motos/llantas-y-rines/accesorios-de-rueda/tuercas-y-ejes"
+  },
+  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-protectores-de-rin": {
+    "path": "/motos/llantas-y-rines/accesorios-de-rueda/protectores-de-rin"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento": {
+    "path": "/motos/lubricantes-y-mantenimiento"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-motor-4t": {
+    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-motor-2t": {
+    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-transmision-caja": {
+    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-suspension": {
+    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-suspension"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-lubricante-de-cadena": {
+    "path": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-liquido-de-frenos": {
+    "path": "/motos/lubricantes-y-mantenimiento/liquido-de-frenos"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-refrigerante": {
+    "path": "/motos/lubricantes-y-mantenimiento/refrigerante"
+  },
+  "store.custom#motos-lubricantes-y-mantenimiento-aditivos-y-grasas": {
+    "path": "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas"
+  },
+  "store.custom#motos-filtros": {
+    "path": "/motos/filtros"
+  },
+  "store.custom#motos-filtros-filtros-de-aceite": {
+    "path": "/motos/filtros/filtros-de-aceite"
+  },
+  "store.custom#motos-filtros-filtros-de-aire": {
+    "path": "/motos/filtros/filtros-de-aire"
+  },
+  "store.custom#motos-filtros-filtros-de-combustible": {
+    "path": "/motos/filtros/filtros-de-combustible"
+  },
+  "store.custom#motos-motor-y-transmision": {
+    "path": "/motos/motor-y-transmision"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-kits-de-cilindro": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/kits-de-cilindro"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-pistones-y-anillos": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/pistones-y-anillos"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-bielas": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/bielas"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-ciguenales": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/ciguenales"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-rodamientos-de-ciguenal": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/rodamientos-de-ciguenal"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-culatas": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/culatas"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-valvulas-y-guias": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/valvulas-y-guias"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-arboles-de-levas": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/arboles-de-levas"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-balancines": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/balancines"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-carter-y-tapas-de-motor": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/carter-y-tapas-de-motor"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-bombas-de-aceite": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/bombas-de-aceite"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-volantes-magneticos": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/volantes-magneticos"
+  },
+  "store.custom#motos-motor-y-transmision-bloque-y-culata-motores-completos": {
+    "path": "/motos/motor-y-transmision/bloque-y-culata/motores-completos"
+  },
+  "store.custom#motos-motor-y-transmision-reparticion-distribucion": {
+    "path": "/motos/motor-y-transmision/reparticion-distribucion"
+  },
+  "store.custom#motos-motor-y-transmision-reparticion-distribucion-cadenillas-cadenas-de-reparticion": {
+    "path": "/motos/motor-y-transmision/reparticion-distribucion/cadenillas-cadenas-de-reparticion"
+  },
+  "store.custom#motos-motor-y-transmision-reparticion-distribucion-tensores-y-guias-de-cadenilla": {
+    "path": "/motos/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-cadenilla"
+  },
+  "store.custom#motos-motor-y-transmision-reparticion-distribucion-kits-de-cadenilla": {
+    "path": "/motos/motor-y-transmision/reparticion-distribucion/kits-de-cadenilla"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion": {
+    "path": "/motos/motor-y-transmision/refrigeracion"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion-radiadores": {
+    "path": "/motos/motor-y-transmision/refrigeracion/radiadores"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion-bombas-de-agua": {
+    "path": "/motos/motor-y-transmision/refrigeracion/bombas-de-agua"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion-termostatos": {
+    "path": "/motos/motor-y-transmision/refrigeracion/termostatos"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion-mangueras-de-refrigeracion": {
+    "path": "/motos/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion"
+  },
+  "store.custom#motos-motor-y-transmision-refrigeracion-electroventiladores": {
+    "path": "/motos/motor-y-transmision/refrigeracion/electroventiladores"
+  },
+  "store.custom#motos-motor-y-transmision-combustible": {
+    "path": "/motos/motor-y-transmision/combustible"
+  },
+  "store.custom#motos-motor-y-transmision-combustible-carburadores": {
+    "path": "/motos/motor-y-transmision/combustible/carburadores"
+  },
+  "store.custom#motos-motor-y-transmision-combustible-inyectores": {
+    "path": "/motos/motor-y-transmision/combustible/inyectores"
+  },
+  "store.custom#motos-motor-y-transmision-combustible-bombas-de-gasolina": {
+    "path": "/motos/motor-y-transmision/combustible/bombas-de-gasolina"
+  },
+  "store.custom#motos-motor-y-transmision-combustible-cuerpos-de-aceleracion": {
+    "path": "/motos/motor-y-transmision/combustible/cuerpos-de-aceleracion"
+  },
+  "store.custom#motos-motor-y-transmision-combustible-llaves-de-gasolina": {
+    "path": "/motos/motor-y-transmision/combustible/llaves-de-gasolina"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-discos-de-clutch": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/discos-de-clutch"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-kits-de-clutch": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-clutch"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-resortes-y-campanas-de-clutch": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/resortes-y-campanas-de-clutch"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-pinones": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/pinones"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-catalinas-sprocket-trasero": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/catalinas-sprocket-trasero"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-cadenas-de-transmision": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/cadenas-de-transmision"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-kits-de-arrastre": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-arrastre"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-correas-de-transmision-scooter": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/correas-de-transmision-scooter"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-variador-rodillos-y-clutch-de-scooter": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/variador-rodillos-y-clutch-de-scooter"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-cajas-de-cambios-y-engranajes": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/cajas-de-cambios-y-engranajes"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-selectoras-y-palancas-de-cambios": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/selectoras-y-palancas-de-cambios"
+  },
+  "store.custom#motos-motor-y-transmision-clutch-y-transmision-ejes-de-cambios": {
+    "path": "/motos/motor-y-transmision/clutch-y-transmision/ejes-de-cambios"
+  },
+  "store.custom#motos-motor-y-transmision-arranque": {
+    "path": "/motos/motor-y-transmision/arranque"
+  },
+  "store.custom#motos-motor-y-transmision-arranque-motores-de-arranque": {
+    "path": "/motos/motor-y-transmision/arranque/motores-de-arranque"
+  },
+  "store.custom#motos-motor-y-transmision-arranque-bendix": {
+    "path": "/motos/motor-y-transmision/arranque/bendix"
+  },
+  "store.custom#motos-motor-y-transmision-arranque-pedales-de-arranque-crank": {
+    "path": "/motos/motor-y-transmision/arranque/pedales-de-arranque-crank"
+  },
+  "store.custom#motos-motor-y-transmision-arranque-automaticos-reles-de-arranque": {
+    "path": "/motos/motor-y-transmision/arranque/automaticos-reles-de-arranque"
+  },
+  "store.custom#motos-motor-y-transmision-escape": {
+    "path": "/motos/motor-y-transmision/escape"
+  },
+  "store.custom#motos-motor-y-transmision-escape-exostos": {
+    "path": "/motos/motor-y-transmision/escape/exostos"
+  },
+  "store.custom#motos-motor-y-transmision-escape-mofles-silenciadores": {
+    "path": "/motos/motor-y-transmision/escape/mofles-silenciadores"
+  },
+  "store.custom#motos-motor-y-transmision-escape-catalizadores": {
+    "path": "/motos/motor-y-transmision/escape/catalizadores"
+  },
+  "store.custom#motos-motor-y-transmision-escape-empaques-de-exosto": {
+    "path": "/motos/motor-y-transmision/escape/empaques-de-exosto"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-freno": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-freno"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-clutch": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-clutch"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-acelerador": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-acelerador"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-velocimetro": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-velocimetro"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-choke-ahogador": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-choke-ahogador"
+  },
+  "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-tacometro": {
+    "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-tacometro"
+  },
+  "store.custom#motos-baterias": {
+    "path": "/motos/baterias"
+  },
+  "store.custom#motos-baterias-baterias-para-moto": {
+    "path": "/motos/baterias/baterias-para-moto"
+  },
+  "store.custom#motos-baterias-bornes-y-cables-de-bateria": {
+    "path": "/motos/baterias/bornes-y-cables-de-bateria"
+  },
+  "store.custom#motos-frenos": {
+    "path": "/motos/frenos"
+  },
+  "store.custom#motos-frenos-pastillas-de-freno": {
+    "path": "/motos/frenos/pastillas-de-freno"
+  },
+  "store.custom#motos-frenos-bandas-de-freno": {
+    "path": "/motos/frenos/bandas-de-freno"
+  },
+  "store.custom#motos-frenos-discos-de-freno": {
+    "path": "/motos/frenos/discos-de-freno"
+  },
+  "store.custom#motos-frenos-campanas-de-freno": {
+    "path": "/motos/frenos/campanas-de-freno"
+  },
+  "store.custom#motos-frenos-mordazas-calipers": {
+    "path": "/motos/frenos/mordazas-calipers"
+  },
+  "store.custom#motos-frenos-bombas-de-freno": {
+    "path": "/motos/frenos/bombas-de-freno"
+  },
+  "store.custom#motos-frenos-cilindros-de-freno": {
+    "path": "/motos/frenos/cilindros-de-freno"
+  },
+  "store.custom#motos-frenos-mangueras-de-freno": {
+    "path": "/motos/frenos/mangueras-de-freno"
+  },
+  "store.custom#motos-frenos-maniguetas-de-freno": {
+    "path": "/motos/frenos/maniguetas-de-freno"
+  },
+  "store.custom#motos-frenos-kits-de-reparacion-de-frenos": {
+    "path": "/motos/frenos/kits-de-reparacion-de-frenos"
+  },
+  "store.custom#motos-frenos-depositos-de-liquido-de-frenos": {
+    "path": "/motos/frenos/depositos-de-liquido-de-frenos"
+  },
+  "store.custom#motos-cascos": {
+    "path": "/motos/cascos"
+  },
+  "store.custom#motos-cascos-cascos-integrales": {
+    "path": "/motos/cascos/cascos-integrales"
+  },
+  "store.custom#motos-cascos-cascos-abatibles": {
+    "path": "/motos/cascos/cascos-abatibles"
+  },
+  "store.custom#motos-cascos-cascos-abiertos": {
+    "path": "/motos/cascos/cascos-abiertos"
+  },
+  "store.custom#motos-cascos-cascos-cross": {
+    "path": "/motos/cascos/cascos-cross"
+  },
+  "store.custom#motos-cascos-visores-y-repuestos-de-casco": {
+    "path": "/motos/cascos/visores-y-repuestos-de-casco"
+  },
+  "store.custom#motos-electrico-y-electronico": {
+    "path": "/motos/electrico-y-electronico"
+  },
+  "store.custom#motos-electrico-y-electronico-reguladores-rectificadores": {
+    "path": "/motos/electrico-y-electronico/reguladores-rectificadores"
+  },
+  "store.custom#motos-electrico-y-electronico-cdi-modulos-de-encendido": {
+    "path": "/motos/electrico-y-electronico/cdi-modulos-de-encendido"
+  },
+  "store.custom#motos-electrico-y-electronico-bobinas-de-alta": {
+    "path": "/motos/electrico-y-electronico/bobinas-de-alta"
+  },
+  "store.custom#motos-electrico-y-electronico-estatores-platos-de-bobinas": {
+    "path": "/motos/electrico-y-electronico/estatores-platos-de-bobinas"
+  },
+  "store.custom#motos-electrico-y-electronico-bujias": {
+    "path": "/motos/electrico-y-electronico/bujias"
+  },
+  "store.custom#motos-electrico-y-electronico-capuchones-de-bujia": {
+    "path": "/motos/electrico-y-electronico/capuchones-de-bujia"
+  },
+  "store.custom#motos-electrico-y-electronico-fusibles-y-reles": {
+    "path": "/motos/electrico-y-electronico/fusibles-y-reles"
+  },
+  "store.custom#motos-electrico-y-electronico-suiches-y-comandos": {
+    "path": "/motos/electrico-y-electronico/suiches-y-comandos"
+  },
+  "store.custom#motos-electrico-y-electronico-flashers": {
+    "path": "/motos/electrico-y-electronico/flashers"
+  },
+  "store.custom#motos-electrico-y-electronico-pitos": {
+    "path": "/motos/electrico-y-electronico/pitos"
+  },
+  "store.custom#motos-electrico-y-electronico-cableado-y-conectores": {
+    "path": "/motos/electrico-y-electronico/cableado-y-conectores"
+  },
+  "store.custom#motos-electrico-y-electronico-tableros-tacometros-y-velocimetros": {
+    "path": "/motos/electrico-y-electronico/tableros-tacometros-y-velocimetros"
+  },
+  "store.custom#motos-electrico-y-electronico-sensores": {
+    "path": "/motos/electrico-y-electronico/sensores"
+  },
+  "store.custom#motos-iluminacion": {
+    "path": "/motos/iluminacion"
+  },
+  "store.custom#motos-iluminacion-farolas": {
+    "path": "/motos/iluminacion/farolas"
+  },
+  "store.custom#motos-iluminacion-stops": {
+    "path": "/motos/iluminacion/stops"
+  },
+  "store.custom#motos-iluminacion-direccionales": {
+    "path": "/motos/iluminacion/direccionales"
+  },
+  "store.custom#motos-iluminacion-luces-led": {
+    "path": "/motos/iluminacion/luces-led"
+  },
+  "store.custom#motos-iluminacion-bombillos-halogenos": {
+    "path": "/motos/iluminacion/bombillos-halogenos"
+  },
+  "store.custom#motos-iluminacion-exploradoras-y-luces-auxiliares": {
+    "path": "/motos/iluminacion/exploradoras-y-luces-auxiliares"
+  },
+  "store.custom#motos-accesorios": {
+    "path": "/motos/accesorios"
+  },
+  "store.custom#motos-accesorios-maletas-y-baules": {
+    "path": "/motos/accesorios/maletas-y-baules"
+  },
+  "store.custom#motos-accesorios-alforjas-y-mochilas": {
+    "path": "/motos/accesorios/alforjas-y-mochilas"
+  },
+  "store.custom#motos-accesorios-parrillas-y-portamaletas": {
+    "path": "/motos/accesorios/parrillas-y-portamaletas"
+  },
+  "store.custom#motos-accesorios-sliders-defensas-y-cubrecarter": {
+    "path": "/motos/accesorios/sliders-defensas-y-cubrecarter"
+  },
+  "store.custom#motos-accesorios-pijamas-cubremotos": {
+    "path": "/motos/accesorios/pijamas-cubremotos"
+  },
+  "store.custom#motos-accesorios-cupulas-parabrisas-y-soportes": {
+    "path": "/motos/accesorios/cupulas-parabrisas-y-soportes"
+  },
+  "store.custom#motos-accesorios-espejos": {
+    "path": "/motos/accesorios/espejos"
+  },
+  "store.custom#motos-accesorios-cubrepunos-y-cubremanos": {
+    "path": "/motos/accesorios/cubrepunos-y-cubremanos"
+  },
+  "store.custom#motos-accesorios-soportes-de-celular": {
+    "path": "/motos/accesorios/soportes-de-celular"
+  },
+  "store.custom#motos-accesorios-forros-de-sillin": {
+    "path": "/motos/accesorios/forros-de-sillin"
+  },
+  "store.custom#motos-accesorios-pulpos-y-redes": {
+    "path": "/motos/accesorios/pulpos-y-redes"
+  },
+  "store.custom#motos-accesorios-rampas-y-caballetes": {
+    "path": "/motos/accesorios/rampas-y-caballetes"
+  },
+  "store.custom#motos-accesorios-cubrerayos-y-adhesivos": {
+    "path": "/motos/accesorios/cubrerayos-y-adhesivos"
+  },
+  "store.custom#motos-accesorios-cargadores-usb": {
+    "path": "/motos/accesorios/cargadores-usb"
+  },
+  "store.custom#motos-accesorios-intercomunicadores": {
+    "path": "/motos/accesorios/intercomunicadores"
+  },
+  "store.custom#motos-accesorios-parlantes": {
+    "path": "/motos/accesorios/parlantes"
+  },
+  "store.custom#motos-ropa": {
+    "path": "/motos/ropa"
+  },
+  "store.custom#motos-ropa-chaquetas": {
+    "path": "/motos/ropa/chaquetas"
+  },
+  "store.custom#motos-ropa-guantes-de-moto": {
+    "path": "/motos/ropa/guantes-de-moto"
+  },
+  "store.custom#motos-ropa-botas": {
+    "path": "/motos/ropa/botas"
+  },
+  "store.custom#motos-ropa-pantalones": {
+    "path": "/motos/ropa/pantalones"
+  },
+  "store.custom#motos-ropa-impermeables": {
+    "path": "/motos/ropa/impermeables"
+  },
+  "store.custom#motos-ropa-protecciones-rodilleras-coderas": {
+    "path": "/motos/ropa/protecciones-rodilleras-coderas"
+  },
+  "store.custom#motos-ropa-chalecos-reflectivos": {
+    "path": "/motos/ropa/chalecos-reflectivos"
+  },
+  "store.custom#motos-chasis-y-carroceria": {
+    "path": "/motos/chasis-y-carroceria"
+  },
+  "store.custom#motos-chasis-y-carroceria-carenajes-y-plasticos": {
+    "path": "/motos/chasis-y-carroceria/carenajes-y-plasticos"
+  },
+  "store.custom#motos-chasis-y-carroceria-tanques-de-gasolina-y-tapas": {
+    "path": "/motos/chasis-y-carroceria/tanques-de-gasolina-y-tapas"
+  },
+  "store.custom#motos-chasis-y-carroceria-sillines": {
+    "path": "/motos/chasis-y-carroceria/sillines"
+  },
+  "store.custom#motos-chasis-y-carroceria-colines-y-parrillas-traseras": {
+    "path": "/motos/chasis-y-carroceria/colines-y-parrillas-traseras"
+  },
+  "store.custom#motos-chasis-y-carroceria-guardabarros": {
+    "path": "/motos/chasis-y-carroceria/guardabarros"
+  },
+  "store.custom#motos-chasis-y-carroceria-portaplacas": {
+    "path": "/motos/chasis-y-carroceria/portaplacas"
+  },
+  "store.custom#motos-chasis-y-carroceria-patas-y-caballetes": {
+    "path": "/motos/chasis-y-carroceria/patas-y-caballetes"
+  },
+  "store.custom#motos-chasis-y-carroceria-pedalines-y-soportes": {
+    "path": "/motos/chasis-y-carroceria/pedalines-y-soportes"
+  },
+  "store.custom#motos-chasis-y-carroceria-pedales-de-cambio-y-freno": {
+    "path": "/motos/chasis-y-carroceria/pedales-de-cambio-y-freno"
+  },
+  "store.custom#motos-chasis-y-carroceria-chasis-y-subchasis": {
+    "path": "/motos/chasis-y-carroceria/chasis-y-subchasis"
+  },
+  "store.custom#motos-chasis-y-carroceria-cajas-de-filtro-de-aire": {
+    "path": "/motos/chasis-y-carroceria/cajas-de-filtro-de-aire"
+  },
+  "store.custom#motos-chasis-y-carroceria-agarraderas": {
+    "path": "/motos/chasis-y-carroceria/agarraderas"
+  },
+  "store.custom#motos-chasis-y-carroceria-ejes-de-rueda": {
+    "path": "/motos/chasis-y-carroceria/ejes-de-rueda"
+  },
+  "store.custom#motos-suspension-y-direccion": {
+    "path": "/motos/suspension-y-direccion"
+  },
+  "store.custom#motos-suspension-y-direccion-amortiguadores-traseros": {
+    "path": "/motos/suspension-y-direccion/amortiguadores-traseros"
+  },
+  "store.custom#motos-suspension-y-direccion-barras-telescopicas-botellas": {
+    "path": "/motos/suspension-y-direccion/barras-telescopicas-botellas"
+  },
+  "store.custom#motos-suspension-y-direccion-kits-de-barras-retenedores-y-guardapolvos": {
+    "path": "/motos/suspension-y-direccion/kits-de-barras-retenedores-y-guardapolvos"
+  },
+  "store.custom#motos-suspension-y-direccion-resortes": {
+    "path": "/motos/suspension-y-direccion/resortes"
+  },
+  "store.custom#motos-suspension-y-direccion-tijeras-basculantes": {
+    "path": "/motos/suspension-y-direccion/tijeras-basculantes"
+  },
+  "store.custom#motos-suspension-y-direccion-rodamientos-de-tijera": {
+    "path": "/motos/suspension-y-direccion/rodamientos-de-tijera"
+  },
+  "store.custom#motos-suspension-y-direccion-cunas-de-direccion": {
+    "path": "/motos/suspension-y-direccion/cunas-de-direccion"
+  },
+  "store.custom#motos-suspension-y-direccion-bujes": {
+    "path": "/motos/suspension-y-direccion/bujes"
+  },
+  "store.custom#motos-suspension-y-direccion-manubrios": {
+    "path": "/motos/suspension-y-direccion/manubrios"
+  },
+  "store.custom#motos-suspension-y-direccion-punos-y-contrapesos": {
+    "path": "/motos/suspension-y-direccion/punos-y-contrapesos"
+  },
+  "store.custom#motos-suspension-y-direccion-tes-y-triples-de-direccion": {
+    "path": "/motos/suspension-y-direccion/tes-y-triples-de-direccion"
+  },
+  "store.custom#motos-tecnologia-y-seguridad": {
+    "path": "/motos/tecnologia-y-seguridad"
+  },
+  "store.custom#motos-tecnologia-y-seguridad-rastreo-gps": {
+    "path": "/motos/tecnologia-y-seguridad/rastreo-gps"
+  },
+  "store.custom#motos-tecnologia-y-seguridad-alarmas": {
+    "path": "/motos/tecnologia-y-seguridad/alarmas"
+  },
+  "store.custom#motos-tecnologia-y-seguridad-candados-y-bloqueos": {
+    "path": "/motos/tecnologia-y-seguridad/candados-y-bloqueos"
+  },
+  "store.custom#motos-tecnologia-y-seguridad-camaras": {
+    "path": "/motos/tecnologia-y-seguridad/camaras"
+  },
+  "store.custom#herramientas-herramientas-manuales": {
+    "path": "/herramientas/herramientas-manuales"
+  },
+  "store.custom#herramientas-herramientas-manuales-llaves-y-copas": {
+    "path": "/herramientas/herramientas-manuales/llaves-y-copas"
+  },
+  "store.custom#herramientas-herramientas-manuales-llaves-de-cruz": {
+    "path": "/herramientas/herramientas-manuales/llaves-de-cruz"
+  },
+  "store.custom#herramientas-herramientas-manuales-torquimetros": {
+    "path": "/herramientas/herramientas-manuales/torquimetros"
+  },
+  "store.custom#herramientas-herramientas-manuales-destornilladores": {
+    "path": "/herramientas/herramientas-manuales/destornilladores"
+  },
+  "store.custom#herramientas-herramientas-manuales-alicates-y-pinzas": {
+    "path": "/herramientas/herramientas-manuales/alicates-y-pinzas"
+  },
+  "store.custom#herramientas-herramientas-manuales-martillos-y-cinceles": {
+    "path": "/herramientas/herramientas-manuales/martillos-y-cinceles"
+  },
+  "store.custom#herramientas-herramientas-manuales-extractores-y-herramientas-especiales": {
+    "path": "/herramientas/herramientas-manuales/extractores-y-herramientas-especiales"
+  },
+  "store.custom#herramientas-herramientas-manuales-llaves-para-filtros": {
+    "path": "/herramientas/herramientas-manuales/llaves-para-filtros"
+  },
+  "store.custom#herramientas-herramientas-manuales-kits-de-herramientas": {
+    "path": "/herramientas/herramientas-manuales/kits-de-herramientas"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-taladros": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/taladros"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-esmeriles-y-lijadoras": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-pistolas-de-impacto": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-herramientas-neumaticas": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-compresores-de-aire": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire"
+  },
+  "store.custom#herramientas-herramientas-electricas-y-neumaticas-pistolas-de-calor-y-cautines": {
+    "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines"
+  },
+  "store.custom#herramientas-equipos-de-taller": {
+    "path": "/herramientas/equipos-de-taller"
+  },
+  "store.custom#herramientas-equipos-de-taller-gatos-y-torres": {
+    "path": "/herramientas/equipos-de-taller/gatos-y-torres"
+  },
+  "store.custom#herramientas-equipos-de-taller-elevadores": {
+    "path": "/herramientas/equipos-de-taller/elevadores"
+  },
+  "store.custom#herramientas-equipos-de-taller-camillas-de-mecanico": {
+    "path": "/herramientas/equipos-de-taller/camillas-de-mecanico"
+  },
+  "store.custom#herramientas-equipos-de-taller-prensas-hidraulicas": {
+    "path": "/herramientas/equipos-de-taller/prensas-hidraulicas"
+  },
+  "store.custom#herramientas-equipos-de-taller-gruas-de-motor": {
+    "path": "/herramientas/equipos-de-taller/gruas-de-motor"
+  },
+  "store.custom#herramientas-equipos-de-taller-winches": {
+    "path": "/herramientas/equipos-de-taller/winches"
+  },
+  "store.custom#herramientas-equipos-de-taller-cargadores-y-arrancadores-de-bateria": {
+    "path": "/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria"
+  },
+  "store.custom#herramientas-equipos-de-taller-infladores-y-manometros-de-llanta": {
+    "path": "/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta"
+  },
+  "store.custom#herramientas-equipos-de-taller-montallantas-y-despinche": {
+    "path": "/herramientas/equipos-de-taller/montallantas-y-despinche"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion": {
+    "path": "/herramientas/diagnostico-y-medicion"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion-escaneres-y-equipos-de-diagnostico": {
+    "path": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion-multimetros-y-probadores-electricos": {
+    "path": "/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion-calibradores-y-micrometros": {
+    "path": "/herramientas/diagnostico-y-medicion/calibradores-y-micrometros"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion-lamparas-de-tiempo": {
+    "path": "/herramientas/diagnostico-y-medicion/lamparas-de-tiempo"
+  },
+  "store.custom#herramientas-diagnostico-y-medicion-compresimetros": {
+    "path": "/herramientas/diagnostico-y-medicion/compresimetros"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza": {
+    "path": "/herramientas/cuidado-y-limpieza"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-shampoo": {
+    "path": "/herramientas/cuidado-y-limpieza/shampoo"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-desengrasantes": {
+    "path": "/herramientas/cuidado-y-limpieza/desengrasantes"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiavidrios": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiavidrios"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiadores-interiores": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiadores-interiores"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiadores-de-tapiceria-y-cuero": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiadores-de-motor": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-motor"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiadores-de-rines": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-rines"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-siliconas-y-renovadores-de-llantas": {
+    "path": "/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-ceras": {
+    "path": "/herramientas/cuidado-y-limpieza/ceras"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-selladores": {
+    "path": "/herramientas/cuidado-y-limpieza/selladores"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-coatings": {
+    "path": "/herramientas/cuidado-y-limpieza/coatings"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-hidrofobicos": {
+    "path": "/herramientas/cuidado-y-limpieza/hidrofobicos"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-protectores-uv": {
+    "path": "/herramientas/cuidado-y-limpieza/protectores-uv"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-quita-rayones-y-restauradores-de-pintura": {
+    "path": "/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-microfibras": {
+    "path": "/herramientas/cuidado-y-limpieza/microfibras"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-cepillos-y-aplicadores": {
+    "path": "/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-pulimentos-y-compuestos-rubbing": {
+    "path": "/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-pads": {
+    "path": "/herramientas/cuidado-y-limpieza/pads"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-abrillantadores": {
+    "path": "/herramientas/cuidado-y-limpieza/abrillantadores"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-ambientadores-y-perfumes": {
+    "path": "/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-anticorrosivos": {
+    "path": "/herramientas/cuidado-y-limpieza/anticorrosivos"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-kits-de-limpieza": {
+    "path": "/herramientas/cuidado-y-limpieza/kits-de-limpieza"
+  },
+  "store.custom#herramientas-cuidado-y-limpieza-limpiadores-de-cadena": {
+    "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-cadena"
+  },
+  "store.custom#herramientas-consumibles-de-taller": {
+    "path": "/herramientas/consumibles-de-taller"
+  },
+  "store.custom#herramientas-consumibles-de-taller-guantes": {
+    "path": "/herramientas/consumibles-de-taller/guantes"
+  },
+  "store.custom#herramientas-consumibles-de-taller-panos": {
+    "path": "/herramientas/consumibles-de-taller/panos"
+  },
+  "store.custom#herramientas-consumibles-de-taller-cintas": {
+    "path": "/herramientas/consumibles-de-taller/cintas"
+  },
+  "store.custom#herramientas-consumibles-de-taller-abrazaderas": {
+    "path": "/herramientas/consumibles-de-taller/abrazaderas"
+  },
+  "store.custom#herramientas-consumibles-de-taller-tornilleria": {
+    "path": "/herramientas/consumibles-de-taller/tornilleria"
+  },
+  "store.custom#herramientas-consumibles-de-taller-bridas": {
+    "path": "/herramientas/consumibles-de-taller/bridas"
+  },
+  "store.custom#herramientas-consumibles-de-taller-siliconas-y-pegantes": {
+    "path": "/herramientas/consumibles-de-taller/siliconas-y-pegantes"
+  },
+  "store.custom#herramientas-consumibles-de-taller-lubricantes-tecnicos": {
+    "path": "/herramientas/consumibles-de-taller/lubricantes-tecnicos"
+  },
+  "store.custom#herramientas-consumibles-de-taller-limpiadores-tecnicos": {
+    "path": "/herramientas/consumibles-de-taller/limpiadores-tecnicos"
+  },
+  "store.custom#herramientas-consumibles-de-taller-aerosoles": {
+    "path": "/herramientas/consumibles-de-taller/aerosoles"
+  },
+  "store.custom#herramientas-consumibles-de-taller-empaques-genericos": {
+    "path": "/herramientas/consumibles-de-taller/empaques-genericos"
+  },
+  "store.custom#herramientas-consumibles-de-taller-terminales-electricos": {
+    "path": "/herramientas/consumibles-de-taller/terminales-electricos"
+  },
+  "store.custom#herramientas-consumibles-de-taller-pinturas-y-retoques": {
+    "path": "/herramientas/consumibles-de-taller/pinturas-y-retoques"
+  },
+  "store.custom#herramientas-equipos-de-lavado-y-pulido": {
+    "path": "/herramientas/equipos-de-lavado-y-pulido"
+  },
+  "store.custom#herramientas-equipos-de-lavado-y-pulido-hidrolavadoras": {
+    "path": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras"
+  },
+  "store.custom#herramientas-equipos-de-lavado-y-pulido-polichadoras": {
+    "path": "/herramientas/equipos-de-lavado-y-pulido/polichadoras"
+  },
+  "store.custom#herramientas-equipos-de-lavado-y-pulido-aspiradoras": {
+    "path": "/herramientas/equipos-de-lavado-y-pulido/aspiradoras"
   }
 }

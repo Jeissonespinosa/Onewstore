@@ -1,0 +1,3844 @@
+{
+ "_sinonimos": {
+  "Carros": {
+   "Guayas de freno de mano": [
+    "cable de freno de mano",
+    "guaya freno de parqueo"
+   ],
+   "Prensas de clutch": [
+    "prensa de embrague",
+    "plato de presión"
+   ],
+   "Balineras de clutch (collarín)": [
+    "collarín",
+    "rodamiento de embrague",
+    "balinera de clutch"
+   ],
+   "Bombas de dirección hidráulica": [
+    "bomba de dirección",
+    "bomba hidráulica"
+   ],
+   "Correas de repartición": [
+    "correa de distribución",
+    "correa de tiempo",
+    "timing belt"
+   ],
+   "Exploradoras": [
+    "luces auxiliares",
+    "antiniebla",
+    "exploradoras led",
+    "neblineros",
+    "halógenos auxiliares"
+   ],
+   "Suiches e interruptores": [
+    "switch",
+    "suiche",
+    "interruptor",
+    "botón",
+    "control de vidrios"
+   ],
+   "Capós": [
+    "capot",
+    "capote",
+    "capó",
+    "bonete",
+    "cofre"
+   ],
+   "Chapas y manijas": [
+    "manijas",
+    "manija de puerta",
+    "chapa",
+    "cerradura",
+    "cerradura de puerta"
+   ],
+   "Llantas de automóvil": [
+    "llantas para carro",
+    "llanta",
+    "neumáticos",
+    "cauchos",
+    "llantas sedán",
+    "llanta 175",
+    "llanta 185",
+    "llanta 195",
+    "llanta 205"
+   ],
+   "Rines de aluminio": [
+    "rines de lujo",
+    "rines de magnesio",
+    "aros de aluminio",
+    "rines 15",
+    "rines 16",
+    "rines 17",
+    "rines deportivos",
+    "rines originales",
+    "rines aftermarket"
+   ],
+   "Tapetes": [
+    "tapetes de carro",
+    "alfombras",
+    "pisos",
+    "tapetes de caucho",
+    "tapetes 3D"
+   ],
+   "Aceite de motor": [
+    "aceite",
+    "aceite de carro",
+    "lubricante de motor",
+    "20w50",
+    "10w30",
+    "10w40",
+    "5w30",
+    "5w40",
+    "aceite sintético",
+    "aceite mineral",
+    "aceite semisintético"
+   ],
+   "Refrigerante y anticongelante": [
+    "coolant",
+    "refrigerante",
+    "agua de radiador"
+   ],
+   "Amortiguadores": [
+    "amortiguador",
+    "shock",
+    "shocks"
+   ],
+   "Alternadores": [
+    "alternador",
+    "generador",
+    "dinamo"
+   ],
+   "Transmisión y caja": [
+    "caja",
+    "transmisión"
+   ],
+   "Cajas de cambios": [
+    "caja de cambios",
+    "caja manual",
+    "caja de velocidades",
+    "transmisión manual"
+   ],
+   "Cajas automáticas y convertidores": [
+    "caja automática",
+    "transmisión automática",
+    "convertidor de par",
+    "torque"
+   ],
+   "Diferenciales": [
+    "diferencial",
+    "corona y piñón",
+    "transmisión trasera"
+   ],
+   "Cardanes y crucetas": [
+    "cardán",
+    "cruceta",
+    "eje cardán"
+   ],
+   "Ejes y homocinéticas": [
+    "homocinética",
+    "junta homocinética",
+    "semieje",
+    "eje de tracción",
+    "palier",
+    "copa homocinética"
+   ],
+   "Turbos": [
+    "turbo",
+    "turbocargador",
+    "turbina",
+    "turbo cartucho"
+   ],
+   "Intercoolers": [
+    "intercooler",
+    "enfriador de aire"
+   ],
+   "Sensores de oxígeno": [
+    "sensor de oxígeno",
+    "sonda lambda",
+    "sensor o2"
+   ],
+   "Válvulas EGR y canister": [
+    "egr",
+    "canister",
+    "válvula pcv"
+   ],
+   "Tanques de gasolina": [
+    "tanque de gasolina",
+    "tanque de combustible",
+    "depósito de combustible"
+   ],
+   "Retenedores de motor": [
+    "retenedor",
+    "retén",
+    "sello de cigüeñal",
+    "retenedor de árbol de levas"
+   ],
+   "Tapas de radiador": [
+    "tapa de radiador",
+    "tapa de presión"
+   ],
+   "Pistones y kits de caliper": [
+    "kit de caliper",
+    "pistón de caliper",
+    "kit de mordaza"
+   ],
+   "Módulos y unidades ABS": [
+    "módulo abs",
+    "unidad hidráulica",
+    "bomba abs"
+   ],
+   "Herrajes y pernos de pastillas": [
+    "herrajes",
+    "clips de pastillas",
+    "pernos de caliper",
+    "pines de caliper"
+   ],
+   "Puntas de eje (manguetas)": [
+    "mangueta",
+    "punta de eje",
+    "portamanzana"
+   ],
+   "Columnas y crucetas de dirección": [
+    "columna de dirección",
+    "cruceta de dirección",
+    "cardán de dirección"
+   ],
+   "Guardapolvos y fuelles": [
+    "guardapolvo",
+    "fuelle",
+    "fuelle de cremallera",
+    "fuelle de homocinética"
+   ],
+   "Kits de tren delantero": [
+    "tren delantero",
+    "kit tren delantero"
+   ],
+   "Suspensión neumática (bolsas de aire)": [
+    "suspensión de aire",
+    "air suspension"
+   ],
+   "Bendix y automáticos de arranque": [
+    "bendix",
+    "automático de arranque",
+    "solenoide de arranque",
+    "piñón de arranque"
+   ],
+   "Suiches de encendido y cilindros de llave": [
+    "suiche de encendido",
+    "switch de arranque",
+    "cilindro de llave",
+    "chapa de encendido"
+   ],
+   "Llaves y controles (carcasas, chips)": [
+    "llave",
+    "carcasa de llave",
+    "control de alarma",
+    "chip de llave",
+    "llave con control"
+   ],
+   "Persianas (parrillas)": [
+    "persiana",
+    "parrilla",
+    "parrilla delantera",
+    "rejilla frontal"
+   ],
+   "Baúles y compuertas": [
+    "baúl",
+    "tapa de baúl",
+    "compuerta",
+    "portalón"
+   ],
+   "Amortiguadores de capó y baúl (resortes a gas)": [
+    "resorte a gas",
+    "amortiguador de capó",
+    "amortiguador de baúl",
+    "pistón de capó"
+   ],
+   "Vidrios y parabrisas": [
+    "parabrisas",
+    "vidrio",
+    "panorámico",
+    "luneta",
+    "vidrio de puerta"
+   ],
+   "Empaques de puertas y molduras (burletes)": [
+    "burlete",
+    "empaque de puerta",
+    "caucho de puerta",
+    "goma de vidrio"
+   ],
+   "Brazos y motores de limpiaparabrisas": [
+    "brazo de limpiaparabrisas",
+    "motor de limpiaparabrisas",
+    "motor limpiabrisas"
+   ],
+   "Lavaparabrisas (bombas y depósitos)": [
+    "bomba de agua de parabrisas",
+    "depósito de lavaparabrisas",
+    "lava parabrisas"
+   ],
+   "Guardapolvos y pasarruedas": [
+    "pasarruedas",
+    "guardapolvo de rueda",
+    "plástico de guardafango"
+   ],
+   "Techos corredizos": [
+    "techo corredizo",
+    "sunroof",
+    "quemacocos"
+   ],
+   "Interior (repuestos)": [
+    "interior",
+    "repuestos de interior"
+   ],
+   "Manijas y chapas interiores": [
+    "manija interior",
+    "manilla",
+    "chapa interior"
+   ],
+   "Paneles de puerta": [
+    "panel de puerta",
+    "tapizado de puerta",
+    "forro de puerta"
+   ],
+   "Tableros y consolas": [
+    "tablero",
+    "consola",
+    "dashboard",
+    "consola central"
+   ],
+   "Palancas de cambios y pomos": [
+    "pomo",
+    "palanca de cambios",
+    "perilla de cambios",
+    "fuelle de palanca"
+   ],
+   "Cinturones de seguridad": [
+    "cinturón",
+    "cinturón de seguridad",
+    "hebilla de cinturón"
+   ],
+   "Airbags y módulos": [
+    "airbag",
+    "bolsa de aire",
+    "módulo de airbag",
+    "clock spring",
+    "resorte espiral"
+   ],
+   "Tomas 12V y encendedores": [
+    "encendedor",
+    "toma 12v",
+    "toma de corriente"
+   ],
+   "Radiadores de calefacción": [
+    "radiador de calefacción",
+    "calefacción",
+    "heater core"
+   ],
+   "Comandos y perillas de AC": [
+    "comando de aire",
+    "perilla de aire",
+    "control de aire acondicionado",
+    "switch de aire"
+   ],
+   "Portallantas": [
+    "portallanta",
+    "porta llanta",
+    "soporte de llanta de repuesto"
+   ],
+   "Enganches de remolque (tiros)": [
+    "tiro",
+    "enganche",
+    "tiro de remolque",
+    "bola de remolque"
+   ],
+   "Spoilers y alerones": [
+    "spoiler",
+    "alerón",
+    "ala"
+   ],
+   "Marcos y portaplacas": [
+    "portaplacas",
+    "marco de placa",
+    "porta placa"
+   ],
+   "Cubrecarros (forros)": [
+    "cubrecarro",
+    "forro para carro",
+    "funda de carro",
+    "pijama para carro",
+    "carpa para carro"
+   ],
+   "Polarizado y películas": [
+    "polarizado",
+    "película de seguridad",
+    "papel polarizado"
+   ],
+   "Forros de timón": [
+    "forro de timón",
+    "cubrevolante",
+    "cubre volante",
+    "forro de volante"
+   ],
+   "Portavasos": [
+    "portavasos",
+    "porta vasos"
+   ],
+   "Sillas para bebé": [
+    "silla para bebé",
+    "silla de carro para bebé",
+    "silla infantil",
+    "base isofix"
+   ],
+   "Neveras portátiles": [
+    "nevera para carro",
+    "nevera portátil",
+    "cooler"
+   ],
+   "Cajas acústicas": [
+    "caja acústica",
+    "cajón",
+    "cajón de bajo",
+    "bazooka"
+   ],
+   "Cargadores y cables para eléctricos e híbridos": [
+    "cargador ev",
+    "cargador de carro eléctrico",
+    "wallbox",
+    "cable de carga tipo 2"
+   ],
+   "Trabavolantes y trabapedales": [
+    "trabavolante",
+    "traba volante",
+    "bastón",
+    "trabapedal"
+   ],
+   "Alcoholímetros": [
+    "alcoholímetro"
+   ],
+   "Xenón (HID)": [
+    "xenon",
+    "hid",
+    "kit xenón",
+    "bi-xenón",
+    "balastro"
+   ],
+   "Barras LED": [
+    "barra led",
+    "barra de luces",
+    "light bar",
+    "barra off road"
+   ],
+   "Luces DRL (diurnas)": [
+    "drl",
+    "luces diurnas",
+    "luz de día",
+    "daytime"
+   ],
+   "Luces interiores": [
+    "luz de techo",
+    "luz interior",
+    "plafón",
+    "luz de cabina"
+   ],
+   "Luces de placa y cortesía": [
+    "luz de placa",
+    "luz de cortesía",
+    "luz de puerta"
+   ],
+   "Cables de alta": [
+    "cables de bujía",
+    "cables de encendido",
+    "juego de cables"
+   ],
+   "Bobinas": [
+    "bobina de encendido",
+    "bobina de chispa",
+    "coil"
+   ],
+   "Fusibles": [
+    "fusible",
+    "caja de fusibles",
+    "portafusibles"
+   ],
+   "Relés": [
+    "relay",
+    "rele",
+    "relevador"
+   ],
+   "Computadores ECU": [
+    "ecu",
+    "computador",
+    "módulo de motor",
+    "pcm",
+    "ecm"
+   ],
+   "Cableado": [
+    "arnés",
+    "ramal",
+    "cable",
+    "instalación eléctrica"
+   ],
+   "Depósitos de refrigerante": [
+    "depósito de agua",
+    "tanque de expansión",
+    "recipiente de refrigerante"
+   ],
+   "Correas de accesorios": [
+    "correa",
+    "correa de alternador",
+    "correa multicanal",
+    "correa poly v",
+    "banda"
+   ],
+   "Tensores de correa": [
+    "tensor",
+    "tensor de correa",
+    "polea tensora"
+   ],
+   "Poleas": [
+    "polea",
+    "polea de cigüeñal",
+    "damper",
+    "polea loca"
+   ],
+   "Soportes de motor": [
+    "soporte de motor",
+    "base de motor",
+    "cojín de motor"
+   ],
+   "Pistones": [
+    "pistón",
+    "pistones",
+    "kit de pistones"
+   ],
+   "Anillos": [
+    "anillos de pistón",
+    "rines de pistón",
+    "segmentos"
+   ],
+   "Camisas": [
+    "camisas de cilindro",
+    "cilindros"
+   ],
+   "Múltiples de admisión": [
+    "múltiple de admisión",
+    "manifold de admisión",
+    "intake"
+   ],
+   "Múltiples de escape": [
+    "múltiple de escape",
+    "header",
+    "manifold de escape"
+   ],
+   "Resonadores": [
+    "resonador",
+    "pre-silenciador"
+   ],
+   "Flexibles de escape": [
+    "flexible",
+    "flexible de exhosto",
+    "fuelle de escape"
+   ],
+   "Sensores ABS": [
+    "sensor abs",
+    "sensor de rueda",
+    "sensor de velocidad de rueda"
+   ],
+   "Rótulas": [
+    "rótula",
+    "rótula de suspensión",
+    "ball joint"
+   ],
+   "Tijeras": [
+    "tijera",
+    "tijera de suspensión",
+    "brazo inferior",
+    "mesa",
+    "brazos de suspensión",
+    "brazo de suspensión",
+    "brazo oscilante",
+    "control arm",
+    "parrilla de suspensión"
+   ],
+   "Barras estabilizadoras": [
+    "barra estabilizadora",
+    "estabilizadora",
+    "barra de torsión"
+   ],
+   "Llantas SUV y 4x4": [
+    "llantas camioneta",
+    "llantas 4x4",
+    "llantas todoterreno",
+    "llantas AT",
+    "llantas MT",
+    "llanta 265",
+    "llanta 245",
+    "llantas de camioneta"
+   ],
+   "Llantas OTR e industriales": [
+    "llantas industriales",
+    "llantas de montacargas",
+    "llantas agrícolas",
+    "otr"
+   ],
+   "Rines de acero": [
+    "rines de hierro",
+    "rines originales de acero",
+    "aros de acero"
+   ],
+   "Aceite de transmisión": [
+    "aceite de caja",
+    "valvulina",
+    "atf",
+    "aceite de caja automática",
+    "dexron",
+    "aceite 80w90"
+   ],
+   "Aceite diferencial": [
+    "aceite de diferencial",
+    "valvulina 85w140",
+    "aceite de transmisión trasera"
+   ],
+   "Aditivos": [
+    "aditivo",
+    "potenciador",
+    "limpia inyectores",
+    "aditivo para gasolina",
+    "stop leak"
+   ],
+   "Grasas": [
+    "grasa",
+    "grasa multiusos",
+    "grasa de litio",
+    "grasa de rodamientos"
+   ],
+   "Radios": [
+    "radio",
+    "radio de carro",
+    "estéreo",
+    "autoradio",
+    "radio 1 din",
+    "radio 2 din"
+   ],
+   "Pantallas multimedia": [
+    "pantalla",
+    "pantalla android",
+    "radio con pantalla",
+    "pantalla táctil",
+    "multimedia"
+   ],
+   "Subwoofers": [
+    "subwoofer",
+    "bajo",
+    "woofer",
+    "cajón de bajos"
+   ],
+   "Amplificadores": [
+    "amplificador",
+    "planta",
+    "amplificador de sonido"
+   ],
+   "Cámaras de reversa": [
+    "cámara de reversa",
+    "cámara trasera",
+    "cámara de retroceso"
+   ],
+   "Sensores de parqueo": [
+    "sensor de parqueo",
+    "sensores de reversa",
+    "sensor de estacionamiento"
+   ],
+   "Alarmas": [
+    "alarma de carro"
+   ],
+   "Rastreo GPS": [
+    "gps para carro"
+   ],
+   "Extintores": [
+    "extintor",
+    "extinguidor",
+    "extintor de carro"
+   ],
+   "Kits de carretera": [
+    "kit de carretera",
+    "equipo de carretera",
+    "kit obligatorio"
+   ],
+   "Bisagras": [
+    "bisagra",
+    "bisagra de puerta",
+    "bisagra de capó"
+   ],
+   "Compresores de AC": [
+    "compresor",
+    "compresor de aire acondicionado",
+    "compresor a/c"
+   ],
+   "Condensadores": [
+    "condensador",
+    "condensador de aire",
+    "radiador de aire acondicionado"
+   ],
+   "Evaporadores": [
+    "evaporador",
+    "evaporador de aire acondicionado"
+   ],
+   "Gas refrigerante": [
+    "gas",
+    "r134a",
+    "r1234yf",
+    "gas de aire acondicionado",
+    "freón"
+   ],
+   "Rampas de inyectores": [
+    "riel de inyectores",
+    "flauta de inyectores",
+    "rampas (rieles) de inyectores"
+   ],
+   "Reguladores de presión de combustible": [
+    "regulador de presión",
+    "regulador de gasolina",
+    "reguladores de presión"
+   ],
+   "Bombas y balibombas de clutch": [
+    "bombín de embrague",
+    "cilindro esclavo",
+    "bombín de clutch",
+    "bomba de embrague",
+    "balibomba",
+    "bombines de clutch"
+   ],
+   "Volantes de motor": [
+    "volante",
+    "flywheel",
+    "volante de inercia",
+    "volante bimasa",
+    "volantes de motor (flywheel)"
+   ],
+   "Servofreno (booster)": [
+    "booster",
+    "hidrovac",
+    "servofreno",
+    "servo freno",
+    "servo-freno (booster)"
+   ],
+   "Mangueras y líneas de freno": [
+    "líneas de freno",
+    "tuberías de freno",
+    "flexibles de freno",
+    "cañerías de freno",
+    "cañerías y mangueras de freno"
+   ],
+   "Resortes (espirales)": [
+    "espirales",
+    "resortes",
+    "muelles",
+    "resortes de suspensión",
+    "resortes / espirales"
+   ],
+   "Axiales (brazos axiales)": [
+    "axial",
+    "barra axial",
+    "terminal axial",
+    "brazo axial",
+    "axiales"
+   ],
+   "Links de estabilizadora": [
+    "link",
+    "bieleta",
+    "link de estabilizadora",
+    "tornillo estabilizador",
+    "bieletas",
+    "muñecos",
+    "tensores de estabilizadora",
+    "links"
+   ],
+   "Manzanas de rueda (cubos)": [
+    "mazas",
+    "cubos",
+    "hubs",
+    "cubos de rueda",
+    "bocines",
+    "manzanas / cubos de rueda"
+   ],
+   "Cajas de dirección (cremalleras)": [
+    "caja de dirección",
+    "cremallera de dirección",
+    "cremallera",
+    "cremalleras (caja de dirección)"
+   ],
+   "Copas (bases) de amortiguador": [
+    "copa",
+    "copa de amortiguador",
+    "soporte de amortiguador",
+    "strut mount",
+    "bases de amortiguador",
+    "soportes de amortiguador",
+    "copas de amortiguador"
+   ],
+   "Copas (tapacubos)": [
+    "copas de rin",
+    "tapas de rin",
+    "tapacubos",
+    "embellecedores",
+    "copas"
+   ],
+   "Forros de sillas": [
+    "forros de asientos",
+    "fundas de asiento",
+    "cubreasientos",
+    "cubre sillas",
+    "fundas de asientos",
+    "fundas (forros de sillas)"
+   ],
+   "Sensores de presión de llantas (TPMS)": [
+    "tpms",
+    "sensor de presión de llantas"
+   ],
+   "Bómperes (bumper)": [
+    "parachoques",
+    "bumper",
+    "bómper",
+    "bomper",
+    "defensa",
+    "paragolpes",
+    "bómper delantero",
+    "bómper trasero",
+    "bómperes (parachoques)"
+   ],
+   "Espejos retrovisores": [
+    "espejos",
+    "espejo lateral",
+    "espejo retrovisor",
+    "retrovisor",
+    "carcasa de espejo",
+    "retrovisores",
+    "espejos laterales"
+   ],
+   "Elevavidrios": [
+    "alzavidrios",
+    "regulador de vidrio",
+    "motor de vidrio",
+    "eleva vidrios",
+    "alza cristales",
+    "elevadores de vidrio",
+    "motor elevavidrios",
+    "elevavidrios (alza cristales)",
+    "motores eléctricos (vidrios, limpiaparabrisas)",
+    "motor eleva vidrios"
+   ],
+   "Plumillas (limpiaparabrisas)": [
+    "plumillas",
+    "escobillas",
+    "wipers",
+    "limpiabrisas",
+    "brazos de limpiaparabrisas",
+    "limpiaparabrisas",
+    "limpiaparabrisas (plumillas)"
+   ],
+   "Sillas y tapizados": [
+    "asientos",
+    "tapicería",
+    "asientos y tapizados"
+   ],
+   "Espejos retrovisores interiores": [
+    "retrovisor interior",
+    "espejo interior",
+    "retrovisores interiores"
+   ],
+   "Blowers (ventiladores de AC)": [
+    "blower",
+    "motor de ventilación",
+    "ventilador de aire acondicionado",
+    "ventiladores de ac"
+   ],
+   "Cortasoles de parabrisas": [
+    "cortasol",
+    "parasol de parabrisas",
+    "protector solar de parabrisas"
+   ],
+   "Pedales deportivos (cubrepedales)": [
+    "cubrepedales",
+    "pedales de lujo"
+   ],
+   "Emblemas de carrocería": [
+    "emblemas"
+   ],
+   "Zócalos": [
+    "zócalo",
+    "faldón",
+    "estribos y zócalos"
+   ],
+   "Antenas de radio": [
+    "antenas",
+    "antena",
+    "antena de radio",
+    "antena tiburón"
+   ],
+   "Tapas y cubiertas de motor": [
+    "cubierta de motor",
+    "tapa decorativa de motor",
+    "cover de motor"
+   ],
+   "Guardapolvos y protectores de motor": [
+    "protector de motor",
+    "guardapolvo de motor",
+    "pasarrueda de motor",
+    "cubre motor"
+   ],
+   "Carcasas de correa y ductos": [
+    "carcasa de correa",
+    "ducto de aire",
+    "tapa de repartición"
+   ],
+   "Baterías para carro": [
+    "batería",
+    "batería de carro",
+    "acumulador",
+    "batería 12v",
+    "batería mac",
+    "batería willard",
+    "baterías agm y start-stop",
+    "batería agm",
+    "batería start stop",
+    "batería efb"
+   ],
+   "Separadores y espaciadores de rin": [
+    "separadores",
+    "espaciadores de rines",
+    "separadores de rueda"
+   ],
+   "Tuercas y pernos de rueda": [
+    "tuercas de rin",
+    "tuercas de seguridad",
+    "pernos de rueda",
+    "espárragos",
+    "tuercas y pernos",
+    "pernos de seguridad",
+    "tuercas antirrobo"
+   ],
+   "Sensores de desgaste de pastillas": [
+    "sensor de desgaste",
+    "testigo de pastillas",
+    "avisador de pastillas"
+   ],
+   "Ballestas (muelles de hoja)": [
+    "ballesta",
+    "ballestas",
+    "muelles de hoja",
+    "hojas de resorte",
+    "elásticos",
+    "paquete de ballestas"
+   ],
+   "Bujías de precalentamiento": [
+    "bujía de precalentamiento",
+    "bujías diésel",
+    "bujía incandescente",
+    "calentadores"
+   ],
+   "Kits de sincronización (afinación)": [
+    "kit de sincronización",
+    "afinación",
+    "sincronización",
+    "tune up",
+    "kit de mantenimiento",
+    "kits de afinación (sincronización)"
+   ],
+   "Bombas de inyección diésel": [
+    "bomba de inyección",
+    "bomba diésel",
+    "bomba de acpm",
+    "bomba lineal",
+    "bomba rotativa"
+   ],
+   "Filtros separadores de agua": [
+    "separador de agua",
+    "trampa de agua",
+    "filtro racor"
+   ],
+   "Kits de conversión a GNV": [
+    "kit de gas",
+    "conversión a gas",
+    "kit gnv",
+    "equipo de gas"
+   ],
+   "Reguladores GNV": [
+    "regulador de gas",
+    "reductor gnv"
+   ],
+   "Inyectores y rieles GNV": [
+    "riel de gas",
+    "inyectores de gas",
+    "flauta gnv"
+   ],
+   "Cilindros GNV": [
+    "cilindro de gas",
+    "tanque de gas",
+    "pipeta gnv"
+   ],
+   "Mangueras y válvulas GNV": [
+    "manguera de gas",
+    "válvula de gas",
+    "llave de gas"
+   ],
+   "Snorkels": [
+    "snorkel",
+    "toma de aire alta"
+   ],
+   "Cargadores e inversores 12V": [
+    "inversor",
+    "convertidor",
+    "cargador de carro",
+    "cargador 12v",
+    "adaptador de corriente",
+    "inversores y cargadores 12v",
+    "cargadores de celular para carro",
+    "cargadores",
+    "cargador de celular"
+   ],
+   "Sistemas Android y CarPlay": [
+    "sistemas android / carplay",
+    "android auto",
+    "carplay",
+    "sistema android"
+   ],
+   "Cámaras DVR y de seguridad": [
+    "cámaras dvr",
+    "cámara dvr",
+    "cámara de seguridad",
+    "dashcam",
+    "cámara testigo",
+    "cámaras de seguridad"
+   ],
+   "Líquido de dirección hidráulica": [
+    "aceite de dirección",
+    "atf de dirección",
+    "líquido hidráulico"
+   ],
+   "Limpiadores de sistemas": [
+    "limpiador de sistema",
+    "flush de motor"
+   ],
+   "Bombas de vacío": [
+    "bomba de vacío",
+    "bomba de freno de vacío"
+   ],
+   "Mangueras de dirección hidráulica": [
+    "manguera de dirección",
+    "manguera hidráulica",
+    "tubo de dirección"
+   ],
+   "Terminales de dirección": [
+    "terminal",
+    "terminal de dirección",
+    "tie rod"
+   ],
+   "Topes de amortiguador": [
+    "tope",
+    "tope de suspensión",
+    "bumper de amortiguador",
+    "caucho de tope"
+   ],
+   "Coilovers y suspensión deportiva": [
+    "coilover",
+    "suspensión deportiva",
+    "suspensión regulable"
+   ],
+   "Actuadores": [
+    "actuador",
+    "actuador de ralentí",
+    "actuador iac"
+   ],
+   "Módulos electrónicos": [
+    "módulo",
+    "módulo de control",
+    "caja electrónica"
+   ],
+   "Módulos y distribuidores de encendido": [
+    "distribuidor",
+    "tapa de distribuidor",
+    "módulo de encendido"
+   ],
+   "Reguladores de voltaje": [
+    "regulador de voltaje",
+    "regulador de alternador",
+    "rectificador"
+   ],
+   "Conectores": [
+    "conector",
+    "pacha",
+    "socket",
+    "terminal eléctrico"
+   ],
+   "Cadenas de repartición": [
+    "cadena de distribución",
+    "cadena de tiempo",
+    "cadenilla"
+   ],
+   "Kits de repartición": [
+    "kit de distribución",
+    "kit de tiempo",
+    "kit de repartición"
+   ],
+   "Tensores y guías de repartición": [
+    "tensor de distribución",
+    "guía de cadena",
+    "patín de distribución"
+   ],
+   "Radiadores de aceite": [
+    "enfriador de aceite",
+    "radiador de aceite",
+    "oil cooler"
+   ],
+   "Mangueras de turbo e intercooler": [
+    "manguera de turbo",
+    "manguera de intercooler",
+    "ducto de turbo"
+   ],
+   "Válvulas de alivio (blow-off)": [
+    "blow off",
+    "válvula de alivio",
+    "pop off",
+    "wastegate"
+   ],
+   "Tubos y puntas de escape": [
+    "tubo de escape",
+    "punta de exhosto",
+    "cola de escape"
+   ],
+   "Sincronizadores y piñones": [
+    "sincronizador",
+    "piñón de caja",
+    "engranaje de caja"
+   ],
+   "Retenedores de caja": [
+    "retenedor de caja",
+    "retén de caja",
+    "sello de caja"
+   ],
+   "Soportes de caja": [
+    "soporte de caja",
+    "base de caja",
+    "cojín de caja"
+   ],
+   "Selectoras y guayas de cambios": [
+    "selectora",
+    "guaya de cambios",
+    "varillaje de cambios"
+   ],
+   "Cajas de transferencia 4x4": [
+    "caja de transferencia",
+    "transfer",
+    "4x4"
+   ],
+   "Estribos": [
+    "estribo",
+    "estribos laterales",
+    "pisaderas"
+   ],
+   "Barras de techo": [
+    "barra de techo",
+    "rieles de techo",
+    "portaequipaje de techo"
+   ],
+   "Portaequipajes": [
+    "portaequipaje",
+    "canastilla",
+    "maletero de techo",
+    "cofre de techo"
+   ],
+   "Portabicicletas": [
+    "portabicicleta",
+    "rack de bicicleta",
+    "porta bici"
+   ],
+   "Deflectores": [
+    "deflector",
+    "visera de ventana",
+    "deflector de capó",
+    "bug deflector"
+   ],
+   "Protectores exteriores": [
+    "protector",
+    "protector de bómper",
+    "protector lateral"
+   ],
+   "Molduras": [
+    "moldura",
+    "moldura lateral",
+    "friso"
+   ],
+   "Parrillas decorativas": [
+    "parrilla deportiva",
+    "rejilla decorativa"
+   ],
+   "Protectores de puertas": [
+    "protector de puerta",
+    "bordes de puerta",
+    "protector de filo"
+   ],
+   "Cojines": [
+    "cojín",
+    "cojines de carro",
+    "soporte lumbar"
+   ],
+   "Organizadores": [
+    "organizador",
+    "organizador de baúl",
+    "maletero organizador"
+   ],
+   "Cortinas": [
+    "cortina",
+    "cortina para carro",
+    "cortina solar"
+   ],
+   "Percheros": [
+    "perchero",
+    "gancho para ropa",
+    "colgador"
+   ],
+   "Portaobjetos": [
+    "portaobjeto",
+    "bandeja",
+    "organizador de consola"
+   ],
+   "Apoyabrazos": [
+    "apoyabrazos",
+    "descansabrazos",
+    "consola apoyabrazos"
+   ],
+   "Volantes deportivos": [
+    "volante deportivo",
+    "timón deportivo",
+    "volante de lujo"
+   ],
+   "Protectores interiores": [
+    "protector interior",
+    "protector de tapicería",
+    "cubre consola"
+   ],
+   "Procesadores y ecualizadores": [
+    "ecualizador",
+    "procesador de audio",
+    "dsp"
+   ],
+   "Tweeters": [
+    "tweeter",
+    "tweeters",
+    "driver de agudos"
+   ],
+   "Cables y conectores de audio": [
+    "cable de audio",
+    "rca",
+    "cable de parlantes",
+    "kit de cables"
+   ],
+   "Kits de instalación": [
+    "kit de instalación",
+    "kit de montaje",
+    "adaptador de radio",
+    "marco de radio"
+   ],
+   "Guardafangos": [
+    "guardafango",
+    "guardabarros",
+    "fender",
+    "guardafango delantero",
+    "guardafango trasero"
+   ],
+   "Puertas": [
+    "puerta",
+    "puerta delantera",
+    "puerta trasera",
+    "lámina de puerta"
+   ],
+   "Rejillas y tomas de aire": [
+    "rejilla",
+    "toma de aire",
+    "rejilla de bómper"
+   ],
+   "Soportes y bases de carrocería": [
+    "soporte de bómper",
+    "base de farola",
+    "soporte de carrocería"
+   ],
+   "Cerraduras de capó y baúl": [
+    "cerradura de capó",
+    "cerradura de baúl",
+    "chapa de baúl",
+    "guaya de capó"
+   ],
+   "Guanteras": [
+    "guantera",
+    "tapa de guantera"
+   ],
+   "Palancas de freno de mano": [
+    "freno de mano",
+    "palanca de freno de mano",
+    "freno de parqueo"
+   ],
+   "Pedales": [
+    "pedal",
+    "pedal de freno",
+    "pedal de acelerador",
+    "pedal de embrague"
+   ],
+   "Parasoles": [
+    "parasol",
+    "viseras",
+    "visera parasol"
+   ],
+   "Cielorrasos": [
+    "cielorraso",
+    "techo interior",
+    "forro de techo"
+   ],
+   "Manivelas de ventana": [
+    "manivela",
+    "manija de vidrio",
+    "manivela de vidrio"
+   ],
+   "Resistencias": [
+    "resistencia de blower",
+    "resistencia de aire",
+    "resistor"
+   ],
+   "Sensores de AC": [
+    "sensor de aire acondicionado",
+    "presostato",
+    "sensor de presión de ac"
+   ],
+   "Mangueras de AC": [
+    "manguera de aire acondicionado",
+    "tubería de ac"
+   ],
+   "Válvulas de expansión": [
+    "válvula de expansión",
+    "válvula de ac",
+    "orificio de expansión"
+   ],
+   "Difusores de aire": [
+    "difusor",
+    "rejilla de aire",
+    "salida de aire",
+    "vent"
+   ],
+   "Adaptadores Bluetooth": [
+    "bluetooth",
+    "adaptador bluetooth",
+    "transmisor fm"
+   ],
+   "Inmovilizadores": [
+    "inmovilizador",
+    "corta corriente",
+    "bloqueo de motor"
+   ],
+   "Cerraduras y bloqueos": [
+    "bloqueo",
+    "cerradura de seguridad",
+    "bloqueo de puertas"
+   ],
+   "Triángulos": [
+    "triángulo",
+    "triángulos reflectivos",
+    "señal de carretera"
+   ],
+   "Botiquines": [
+    "botiquín",
+    "botiquín de carretera",
+    "kit de primeros auxilios"
+   ],
+   "Filtros de cabina": [
+    "filtro de aire acondicionado",
+    "filtro de polen",
+    "filtro de habitáculo",
+    "filtro de cabina"
+   ],
+   "Filtros de transmisión": [
+    "filtro de caja",
+    "filtro de transmisión automática",
+    "filtro de transmisión"
+   ],
+   "Llantas de van, camión y transporte": [
+    "llantas comerciales",
+    "llantas de carga",
+    "llantas de camión",
+    "llantas de van",
+    "llantas de furgón",
+    "llantas de bus",
+    "llantas de transporte",
+    "llanta 195r15",
+    "llanta 700-16",
+    "llanta 1100-20"
+   ],
+   "Baterías para furgón, camión y bus": [
+    "batería de camión",
+    "batería de furgón",
+    "batería de bus",
+    "batería 24v",
+    "batería pesada",
+    "batería de carga",
+    "batería 27 placas",
+    "batería 31t"
+   ],
+   "Sensores MAP": [
+    "sensor map",
+    "map",
+    "sensor de presión del múltiple",
+    "sensor de presión absoluta",
+    "sensor de vacío"
+   ],
+   "Sensores de motor (CKP, CMP, temperatura)": [
+    "sensor",
+    "sensor de cigüeñal",
+    "sensor ckp",
+    "sensor de temperatura",
+    "sensor de detonación",
+    "sensores de motor",
+    "sensor de motor",
+    "sensor cmp",
+    "sensor de árbol de levas"
+   ]
+  },
+  "Motos": {
+   "Guayas de freno": [
+    "cable de freno",
+    "chicote de freno"
+   ],
+   "Electroventiladores": [
+    "moto ventilador"
+   ],
+   "Motores de arranque": [
+    "pisa",
+    "motores de arranque (pisa)"
+   ],
+   "Bendix": [
+    "piñón de arranque"
+   ],
+   "Bobinas de alta": [
+    "bobina de encendido",
+    "bobina de chispa"
+   ],
+   "Suiches y comandos": [
+    "mandos",
+    "switch",
+    "comandos de manubrio"
+   ],
+   "Flashers": [
+    "relé de direccionales",
+    "destellador"
+   ],
+   "Neumáticos (tripas)": [
+    "tripas",
+    "tubos",
+    "cámaras de aire",
+    "neumáticos"
+   ],
+   "Rayos y niples": [
+    "radios",
+    "rayos de rin"
+   ],
+   "Kits de arrastre": [
+    "kit de arrastre",
+    "kit de transmisión",
+    "kit de tracción",
+    "piñón catalina cadena",
+    "kit relación"
+   ],
+   "Cadenas de transmisión": [
+    "cadena de moto",
+    "cadena de tracción"
+   ],
+   "Barras telescópicas (botellas)": [
+    "botellas",
+    "telescópicos",
+    "barras de suspensión",
+    "horquilla"
+   ],
+   "Tijeras (basculantes)": [
+    "basculante",
+    "tijera trasera",
+    "swingarm"
+   ],
+   "Manubrios": [
+    "manillar",
+    "timón",
+    "manubrio",
+    "manubrios y puños de lujo",
+    "pad de manubrio",
+    "manubrio de lujo",
+    "puños de lujo",
+    "pads de manubrio",
+    "manubrios, puños y pads"
+   ],
+   "Tés y triples de dirección": [
+    "triple",
+    "yugo",
+    "tijera de dirección"
+   ],
+   "Kits de cilindro": [
+    "cilindro de moto",
+    "kit cilindro pistón"
+   ],
+   "Llaves de gasolina": [
+    "grifo de gasolina",
+    "llave de paso"
+   ],
+   "Rines": [
+    "rines de moto"
+   ],
+   "Cascos integrales": [
+    "casco",
+    "casco cerrado",
+    "full face",
+    "casco integral"
+   ],
+   "Cascos abatibles": [
+    "casco modular",
+    "flip up"
+   ],
+   "Cascos abiertos": [
+    "casco jet",
+    "casco 3/4"
+   ],
+   "Cascos cross": [
+    "casco enduro",
+    "casco motocross"
+   ],
+   "Chasis y carrocería": [],
+   "Carenajes y plásticos": [
+    "carenaje",
+    "plásticos",
+    "plástico de moto",
+    "carenaje delantero",
+    "carenaje lateral",
+    "tapa lateral",
+    "cubierta"
+   ],
+   "Tanques de gasolina y tapas": [
+    "tanque",
+    "tanque de gasolina",
+    "tapa de tanque",
+    "tapa de gasolina"
+   ],
+   "Sillines": [
+    "sillín",
+    "silla",
+    "asiento de moto",
+    "cojín"
+   ],
+   "Colines y parrillas traseras": [
+    "colín",
+    "porta maleta"
+   ],
+   "Portaplacas": [
+    "portaplaca",
+    "porta placa",
+    "soporte de placa"
+   ],
+   "Pedalines y soportes": [
+    "pedalín",
+    "pedalines",
+    "posapiés",
+    "estribos de moto",
+    "pedalines de lujo",
+    "pedalines aluminio",
+    "posapiés de lujo"
+   ],
+   "Pedales de cambio y freno": [
+    "pedal de cambios",
+    "pedal de freno",
+    "palanca de cambios"
+   ],
+   "Cajas de filtro de aire": [
+    "caja de filtro",
+    "caja de aire",
+    "airbox"
+   ],
+   "Agarraderas": [
+    "agarradera",
+    "agarradera trasera",
+    "asa"
+   ],
+   "Ejes de rueda": [
+    "eje de rueda",
+    "eje delantero",
+    "eje trasero"
+   ],
+   "Cajas de cambios y engranajes": [
+    "caja de cambios",
+    "engranajes",
+    "piñonería",
+    "caja de moto"
+   ],
+   "Selectoras y palancas de cambios": [
+    "selectora",
+    "horquilla selectora"
+   ],
+   "Alforjas y mochilas": [
+    "alforja",
+    "alforjas",
+    "mochila de moto",
+    "bolso de tanque"
+   ],
+   "Cubrepuños y cubremanos": [
+    "cubrepuños",
+    "cubremanos",
+    "protector de manos"
+   ],
+   "Pulpos y redes": [
+    "pulpo",
+    "red de pulpo",
+    "malla",
+    "red elástica"
+   ],
+   "Rampas y caballetes": [
+    "rampa",
+    "caballete de taller",
+    "caballete trasero"
+   ],
+   "Cubrerayos y adhesivos": [
+    "cubrerayos",
+    "stickers",
+    "calcomanías",
+    "adhesivos"
+   ],
+   "Exploradoras y luces auxiliares": [
+    "exploradoras",
+    "antiniebla",
+    "luces auxiliares",
+    "luces led auxiliares",
+    "luces auxiliares led"
+   ],
+   "Alarmas": [
+    "alarma de moto"
+   ],
+   "Rastreo GPS": [
+    "gps para moto"
+   ],
+   "Aceite de motor 4T": [
+    "aceite 4t",
+    "aceite de moto",
+    "aceite 20w50 moto",
+    "aceite 10w40 moto",
+    "aceite motul",
+    "aceite mobil"
+   ],
+   "Aceite de motor 2T": [
+    "aceite 2t",
+    "aceite de dos tiempos",
+    "aceite para mezcla"
+   ],
+   "Lubricante de cadena": [
+    "lubricante de cadena",
+    "grasa de cadena",
+    "aceite de cadena"
+   ],
+   "Llantas delanteras": [
+    "llanta delantera",
+    "llanta 2.75-18",
+    "llanta 90/90-17"
+   ],
+   "Llantas traseras": [
+    "llanta trasera",
+    "llanta 100/90-17",
+    "llanta 130/70-17"
+   ],
+   "Amortiguadores traseros": [
+    "amortiguador",
+    "amortiguador de moto",
+    "monoshock",
+    "amortiguadores dobles"
+   ],
+   "Visores y repuestos de casco": [
+    "visor",
+    "visor de casco",
+    "mica",
+    "interior de casco"
+   ],
+   "Intercomunicadores": [
+    "intercomunicador",
+    "intercom",
+    "manos libres para casco"
+   ],
+   "Cadenillas (cadenas de repartición)": [
+    "cadena de distribución",
+    "cadena de tiempo",
+    "cadenilla",
+    "cadenas de repartición"
+   ],
+   "Tensores y guías de cadenilla": [
+    "tensor de cadenilla",
+    "guía de cadenilla",
+    "tensores y guías"
+   ],
+   "Kits de cadenilla": [
+    "kit de distribución",
+    "kit de tiempo",
+    "kit de repartición",
+    "kits de repartición"
+   ],
+   "Piñones": [
+    "sprocket",
+    "piñón de salida",
+    "piñón delantero",
+    "sprocket delantero",
+    "piñones (sprocket)"
+   ],
+   "Catalinas (sprocket trasero)": [
+    "sprocket trasero",
+    "piñón trasero",
+    "corona",
+    "plato",
+    "catalinas"
+   ],
+   "Pedales de arranque (crank)": [
+    "patada",
+    "kick starter",
+    "crank",
+    "kick",
+    "patada de arranque",
+    "pedales de arranque (kick)"
+   ],
+   "Exostos": [
+    "escape",
+    "tubo de escape",
+    "mofle",
+    "exhosto",
+    "exhostos"
+   ],
+   "Empaques de exosto": [
+    "empaque de exhosto",
+    "empaque de escape",
+    "empaques de exhosto"
+   ],
+   "Guayas de choke (ahogador)": [
+    "guaya de ahogador",
+    "choke",
+    "guayas de ahogador"
+   ],
+   "Guardabarros": [
+    "guardafango",
+    "fender",
+    "guardapolvo",
+    "guardafango delantero",
+    "guardabarro delantero",
+    "guardabarro trasero",
+    "guardafangos"
+   ],
+   "Patas y caballetes": [
+    "pata",
+    "pata lateral",
+    "pata central",
+    "caballete",
+    "gato de moto",
+    "caballetes (patas)"
+   ],
+   "Kits de barras (retenedores y guardapolvos)": [
+    "retenedores de barra",
+    "guardapolvos",
+    "kit de barras",
+    "sellos de suspensión",
+    "retenedores de barras",
+    "guardapolvos de barras",
+    "kit de suspensión delantera",
+    "kits de suspensión delantera (retenedores, guardapolvos)"
+   ],
+   "Cunas de dirección": [
+    "rodamientos de dirección",
+    "balineras de dirección",
+    "cuna de dirección",
+    "cuna direccional",
+    "manzana de dirección",
+    "manzanas de dirección (rodamientos)"
+   ],
+   "Reguladores (rectificadores)": [
+    "rectificador",
+    "regulador de voltaje",
+    "reguladores / rectificadores"
+   ],
+   "CDI (módulos de encendido)": [
+    "cdi",
+    "unidad de encendido",
+    "ECU moto",
+    "módulo de encendido",
+    "caja cdi",
+    "cdi / módulos de encendido"
+   ],
+   "Estatores (platos de bobinas)": [
+    "bobina de carga",
+    "estator",
+    "plato de bobinas",
+    "stator",
+    "estatores (bobina de carga)"
+   ],
+   "Manzanas de rueda": [
+    "cubos de rueda",
+    "hubs",
+    "manzana trasera",
+    "manzana delantera",
+    "cubo de rueda",
+    "manzanas (cubos) de rueda"
+   ],
+   "Pijamas (cubremotos)": [
+    "cubremoto",
+    "pijama para moto",
+    "forro de moto",
+    "carpa de moto",
+    "cubremotos (pijamas)"
+   ],
+   "Cúpulas (parabrisas) y soportes": [
+    "parabrisas",
+    "cúpula",
+    "windshield",
+    "parabrisas de moto",
+    "base para cúpula",
+    "parabrisas y soportes"
+   ],
+   "Guantes de moto": [
+    "guantes",
+    "guantes para moto",
+    "guantes motociclista"
+   ],
+   "Candados y bloqueos": [
+    "candados, guayas y alarmas",
+    "candado de moto",
+    "candado de disco",
+    "guaya de seguridad",
+    "traba de disco"
+   ],
+   "Baterías para moto": [
+    "batería de moto",
+    "batería 12v moto",
+    "batería yuasa",
+    "batería mac moto",
+    "baterías de gel y agm",
+    "batería de gel",
+    "batería agm moto",
+    "batería sellada",
+    "batería agm",
+    "baterías de litio",
+    "batería de litio",
+    "batería lifepo4",
+    "lifepo4"
+   ],
+   "Aceite de transmisión (caja)": [
+    "aceite de transmisión / caja",
+    "aceite de caja",
+    "valvulina"
+   ],
+   "Automáticos (relés) de arranque": [
+    "automático de arranque",
+    "relé de arranque",
+    "solenoide de arranque",
+    "automático"
+   ],
+   "Variador, rodillos y clutch de scooter": [
+    "clutch de scooter (variador)",
+    "variador",
+    "rodillos de variador",
+    "clutch de scooter",
+    "campana de clutch scooter"
+   ],
+   "Tableros, tacómetros y velocímetros": [
+    "velocímetro",
+    "tacómetro",
+    "tablero",
+    "odómetro",
+    "tacómetros y velocímetros",
+    "instrumental",
+    "instrumental y tableros"
+   ],
+   "Sliders, defensas y cubrecárter": [
+    "slider",
+    "defensa",
+    "defensas de moto",
+    "protector de motor",
+    "mataperros",
+    "protector de radiador",
+    "defensas",
+    "sliders y defensas",
+    "protectores de radiador y cubrecárter",
+    "sliders, defensas y protectores",
+    "cubrecárter",
+    "protector de cárter",
+    "cubrecárter y protectores"
+   ],
+   "Maniguetas de freno": [
+    "manigueta",
+    "manilla de freno",
+    "palanca de freno",
+    "manigueta de freno",
+    "varilla de freno",
+    "palancas (maniguetas) y pedales de freno",
+    "maniguetas y pedales de freno"
+   ],
+   "Llantas": [
+    "llanta de moto",
+    "llantas de moto",
+    "neumático de moto",
+    "caucho de moto"
+   ],
+   "Llantas de scooter": [
+    "llanta de scooter",
+    "llanta 90/90-10",
+    "llanta de patineta"
+   ],
+   "Llantas de enduro y cross": [
+    "llanta de enduro",
+    "llanta cross",
+    "llanta taquera",
+    "llanta off road"
+   ],
+   "Llantas para motocarro": [
+    "llanta de motocarro",
+    "llanta de torito",
+    "llanta de triciclo"
+   ],
+   "Válvulas": [
+    "válvula de rin",
+    "válvula de aire",
+    "pin de válvula",
+    "válvula de llanta"
+   ],
+   "Tuercas y ejes": [
+    "tuerca de eje",
+    "tuerca de rueda de moto"
+   ],
+   "Protectores de rin": [
+    "protector de rin",
+    "cinta de rin",
+    "protector de aro"
+   ],
+   "Aceite de suspensión": [
+    "aceite de barras",
+    "aceite de horquilla",
+    "aceite de telescópicos"
+   ],
+   "Refrigerante": [
+    "refrigerante",
+    "coolant",
+    "anticongelante"
+   ],
+   "Aditivos y grasas": [
+    "aditivo",
+    "grasa",
+    "grasa de rodamientos"
+   ],
+   "Pistones y anillos": [
+    "pistón",
+    "anillos",
+    "kit de pistón",
+    "rines de pistón"
+   ],
+   "Rodamientos de cigüeñal": [
+    "rodamiento de cigüeñal",
+    "balinera de cigüeñal",
+    "bancada"
+   ],
+   "Balancines": [
+    "balancín",
+    "balancines",
+    "rocker"
+   ],
+   "Cárter y tapas de motor": [
+    "cárter",
+    "tapa de motor",
+    "tapa lateral de motor",
+    "tapa de cárter"
+   ],
+   "Volantes magnéticos": [
+    "volante magnético",
+    "magneto",
+    "rotor de estator"
+   ],
+   "Resortes y campanas de clutch": [
+    "campana de clutch",
+    "resorte de clutch",
+    "campana de embrague"
+   ],
+   "Correas de transmisión (scooter)": [
+    "correa de scooter",
+    "banda de scooter",
+    "correa cvt"
+   ],
+   "Ejes de cambios": [
+    "eje de cambios",
+    "eje selector",
+    "eje de palanca"
+   ],
+   "Guayas de velocímetro": [
+    "guaya de velocímetro",
+    "cable de velocímetro",
+    "chicote de velocímetro"
+   ],
+   "Guayas de tacómetro": [
+    "guaya de tacómetro",
+    "cable de tacómetro"
+   ],
+   "Mangueras de freno": [
+    "manguera de freno",
+    "bandeja de freno",
+    "flexible de freno",
+    "línea de freno"
+   ],
+   "Capuchones de bujía": [
+    "capuchón",
+    "capuchón de bujía",
+    "pipa de bujía"
+   ],
+   "Fusibles y relés": [
+    "fusible",
+    "relé",
+    "relay",
+    "caja de fusibles"
+   ],
+   "Cableado y conectores": [
+    "ramal",
+    "arnés",
+    "cableado",
+    "conector"
+   ],
+   "Sensores": [
+    "sensor",
+    "sensor de velocidad",
+    "sensor de posición"
+   ],
+   "Maletas y baúles": [
+    "baúl",
+    "maleta",
+    "top case",
+    "cajón de moto",
+    "baúl de moto"
+   ],
+   "Parrillas y portamaletas": [
+    "parrilla",
+    "parrilla trasera",
+    "portamaletas",
+    "soporte de baúl"
+   ],
+   "Espejos": [
+    "espejo",
+    "retrovisor",
+    "espejo de moto",
+    "espejos retrovisores"
+   ],
+   "Forros de sillín": [
+    "forro de sillín",
+    "forro de silla",
+    "funda de sillín",
+    "cobertor de silla"
+   ],
+   "Cargadores USB": [
+    "cargador usb",
+    "toma usb",
+    "cargador para moto"
+   ],
+   "Chaquetas": [
+    "chaqueta",
+    "chaqueta de moto",
+    "chaqueta con protecciones"
+   ],
+   "Botas": [
+    "bota",
+    "botas de moto",
+    "botines"
+   ],
+   "Pantalones": [
+    "pantalón",
+    "pantalón de moto",
+    "pantalón con protecciones"
+   ],
+   "Impermeables": [
+    "impermeable",
+    "traje de lluvia",
+    "capa impermeable",
+    "pantalonera"
+   ],
+   "Protecciones (rodilleras, coderas)": [
+    "rodilleras",
+    "coderas",
+    "protecciones",
+    "pechera",
+    "espaldar"
+   ],
+   "Chasis y subchasis": [
+    "chasis",
+    "subchasis",
+    "marco de moto"
+   ],
+   "Resortes": [
+    "resorte",
+    "espiral",
+    "muelle de suspensión"
+   ],
+   "Rodamientos de tijera": [
+    "rodamiento de tijera",
+    "balinera de basculante",
+    "bocín de tijera"
+   ],
+   "Puños y contrapesos": [
+    "puños",
+    "manillas",
+    "contrapesos",
+    "cachas"
+   ],
+   "Cámaras": [
+    "cámara para moto",
+    "cámara de seguridad",
+    "dashcam de moto"
+   ]
+  },
+  "Herramientas": {
+   "Siliconas y renovadores de llantas": [
+    "silicona para carro",
+    "silicona para llantas",
+    "llantax",
+    "renovador de llantas",
+    "brillo de llantas"
+   ],
+   "Quita rayones y restauradores de pintura": [
+    "quita rayones",
+    "restaurador de pintura",
+    "corrector de rayones"
+   ],
+   "Pulimentos y compuestos (rubbing)": [
+    "rubbing",
+    "pulimento",
+    "compuesto pulidor",
+    "pulidor"
+   ],
+   "Ambientadores y perfumes": [
+    "ambientador",
+    "perfume para carro",
+    "aromatizante",
+    "aromatizador",
+    "little trees",
+    "pino",
+    "aromatizantes"
+   ],
+   "Anticorrosivos": [
+    "anticorrosivo",
+    "antioxidante",
+    "protector de chasis"
+   ],
+   "Kits de limpieza": [
+    "kit de limpieza",
+    "kit de lavado",
+    "kit de detailing"
+   ],
+   "Hidrolavadoras": [
+    "hidrolavadora",
+    "lavadora a presión",
+    "karcher"
+   ],
+   "Polichadoras": [
+    "polichadora",
+    "pulidora",
+    "polichadora inalámbrica",
+    "pulidora orbital",
+    "pulidora de carro",
+    "brilladora"
+   ],
+   "Aspiradoras": [
+    "aspiradora para carro",
+    "aspiradora portátil",
+    "aspiradora 12v"
+   ],
+   "Pinturas y retoques": [
+    "pintura para carro",
+    "retoque",
+    "lápiz de retoque",
+    "pintura en aerosol",
+    "primer"
+   ],
+   "Llaves de cruz": [
+    "llave de cruz",
+    "llave de rueda",
+    "cruceta de llantas"
+   ],
+   "Extractores y herramientas especiales": [
+    "extractor",
+    "extractor de poleas",
+    "extractor de rótulas",
+    "herramienta especial"
+   ],
+   "Camillas de mecánico": [
+    "camilla",
+    "camilla de mecánico"
+   ],
+   "Winches": [
+    "winche",
+    "malacate",
+    "winch"
+   ],
+   "Elevadores": [
+    "elevador",
+    "elevador de carro",
+    "rampa",
+    "rampas"
+   ],
+   "Ceras": [
+    "cera",
+    "cera para carro",
+    "cera pulidora",
+    "cera líquida",
+    "brillo para moto",
+    "cera para moto"
+   ],
+   "Microfibras": [
+    "microfibra",
+    "paños de microfibra",
+    "toallas de microfibra",
+    "cepillo de limpieza",
+    "paño de microfibra"
+   ],
+   "Escáneres y equipos de diagnóstico": [
+    "escáner",
+    "scanner",
+    "escáner automotriz",
+    "obd2",
+    "obd",
+    "equipo de diagnóstico"
+   ],
+   "Cargadores y arrancadores de batería": [
+    "cargador de batería",
+    "arrancador",
+    "booster",
+    "jump starter",
+    "cargador"
+   ],
+   "Gatos y torres": [
+    "gato",
+    "gato hidráulico",
+    "gato de carro",
+    "gato lagarto",
+    "torres"
+   ],
+   "Llaves y copas": [
+    "dados",
+    "juego de copas",
+    "rachet",
+    "ratchet",
+    "llaves y dados"
+   ],
+   "Destornilladores": [
+    "destornillador",
+    "desarmador",
+    "juego de destornilladores"
+   ],
+   "Alicates y pinzas": [
+    "alicate",
+    "pinza",
+    "hombresolo",
+    "cortafrío"
+   ],
+   "Martillos y cinceles": [
+    "martillo",
+    "cincel",
+    "mazo"
+   ],
+   "Llaves para filtros": [
+    "llave de filtro",
+    "extractor de filtro"
+   ],
+   "Kits de herramientas": [
+    "caja de herramientas",
+    "set de herramientas",
+    "juego de herramientas"
+   ],
+   "Taladros": [
+    "taladro",
+    "taladro inalámbrico"
+   ],
+   "Pistolas de impacto": [
+    "pistola de impacto",
+    "llave de impacto"
+   ],
+   "Prensas hidráulicas": [
+    "prensa hidráulica"
+   ],
+   "Grúas de motor": [
+    "grúa de motor",
+    "pluma"
+   ],
+   "Montallantas y despinche": [
+    "montallantas",
+    "kit de despinche",
+    "parches"
+   ],
+   "Multímetros y probadores eléctricos": [
+    "multímetro",
+    "tester",
+    "probador de corriente"
+   ],
+   "Lámparas de tiempo": [
+    "lámpara estroboscópica",
+    "lámpara de tiempo"
+   ],
+   "Calibradores y micrómetros": [
+    "calibrador",
+    "vernier",
+    "pie de rey",
+    "galgas",
+    "calibradores y medidores",
+    "micrómetro"
+   ],
+   "Compresímetros": [
+    "compresímetro",
+    "medidor de compresión",
+    "compresímetros y manómetros"
+   ],
+   "Infladores y manómetros de llanta": [
+    "inflador",
+    "compresor portátil",
+    "medidor de presión",
+    "manómetro",
+    "inflador 12v",
+    "infladores y calibradores",
+    "medidor de presión de llantas",
+    "manómetro de llanta"
+   ],
+   "Esmeriles y lijadoras": [
+    "esmeril",
+    "moto tool",
+    "pulidoras y esmeriles",
+    "lijadora",
+    "amoladora"
+   ],
+   "Limpiavidrios": [
+    "limpiavidrios",
+    "limpiador de vidrios",
+    "antiempañante"
+   ],
+   "Limpiadores interiores": [
+    "limpiador interior",
+    "limpiador de tablero",
+    "apc"
+   ],
+   "Limpiadores de tapicería y cuero": [
+    "limpiador de cuero",
+    "limpiador de tapicería",
+    "acondicionador de cuero"
+   ],
+   "Limpiadores de motor": [
+    "limpiador de motor",
+    "desengrasante de motor",
+    "limpia motor"
+   ],
+   "Limpiadores de rines": [
+    "limpiador de rines",
+    "limpia rines",
+    "removedor de polvo de freno"
+   ],
+   "Selladores": [
+    "sellador",
+    "sellante",
+    "sellador de pintura"
+   ],
+   "Coatings": [
+    "coating",
+    "recubrimiento cerámico",
+    "cerámico"
+   ],
+   "Hidrofóbicos": [
+    "hidrofóbico",
+    "repelente de agua",
+    "sellador hidrofóbico"
+   ],
+   "Protectores UV": [
+    "protector uv",
+    "protector solar de tablero",
+    "protector de plásticos"
+   ],
+   "Cepillos y aplicadores": [
+    "cepillo",
+    "aplicador",
+    "brocha de detailing"
+   ],
+   "Pads": [
+    "pad",
+    "pad de pulido",
+    "boina",
+    "esponja de pulir"
+   ],
+   "Abrillantadores": [
+    "abrillantador",
+    "brillo",
+    "renovador de plásticos"
+   ],
+   "Limpiadores de cadena": [
+    "limpiador de cadena",
+    "desengrasante de cadena",
+    "limpia cadena"
+   ],
+   "Torquímetros": [
+    "torquímetro",
+    "llave de torque",
+    "torcómetro"
+   ],
+   "Herramientas neumáticas": [
+    "herramienta neumática",
+    "pistola neumática",
+    "ratchet neumático"
+   ],
+   "Compresores de aire": [
+    "compresor",
+    "compresor de aire",
+    "compresor de taller"
+   ],
+   "Pistolas de calor y cautines": [
+    "pistola de calor",
+    "cautín",
+    "soldador de estaño"
+   ],
+   "Guantes": [
+    "guantes de nitrilo",
+    "guantes de taller",
+    "guantes industriales"
+   ],
+   "Paños": [
+    "paño",
+    "trapo",
+    "estopa",
+    "limpión"
+   ],
+   "Cintas": [
+    "cinta",
+    "cinta aislante",
+    "cinta doble faz",
+    "teflón"
+   ],
+   "Abrazaderas": [
+    "abrazadera",
+    "clamp",
+    "abrazadera de manguera"
+   ],
+   "Tornillería": [
+    "tornillo",
+    "tuerca",
+    "arandela",
+    "tornillería"
+   ],
+   "Bridas": [
+    "brida",
+    "amarre plástico",
+    "cincha plástica",
+    "zuncho"
+   ],
+   "Siliconas y pegantes": [
+    "silicona",
+    "pegante",
+    "sellador de empaques",
+    "soldadura fría"
+   ],
+   "Lubricantes técnicos": [
+    "lubricante técnico",
+    "wd40",
+    "penetrante",
+    "aflojatodo"
+   ],
+   "Limpiadores técnicos": [
+    "limpiador de contactos",
+    "limpiador de frenos",
+    "limpiador técnico"
+   ],
+   "Aerosoles": [
+    "aerosol",
+    "spray"
+   ],
+   "Empaques genéricos": [
+    "empaque",
+    "empaquetadura",
+    "junta genérica",
+    "lámina de empaque"
+   ],
+   "Terminales eléctricos": [
+    "terminal eléctrico",
+    "terminal de batería",
+    "conector eléctrico",
+    "ojal"
+   ],
+   "Shampoo": [
+    "shampoo para carro",
+    "jabón para carro",
+    "champú",
+    "shampoo para moto",
+    "jabón para moto"
+   ],
+   "Desengrasantes": [
+    "desengrasante"
+   ],
+   "Equipos de lavado y pulido": [
+    "equipos de limpieza",
+    "lavado",
+    "pulido"
+   ]
+  },
+  "_comunes": {
+   "Pastillas de freno": [
+    "pastas de freno",
+    "brake pads"
+   ],
+   "Bandas de freno": [
+    "zapatas",
+    "zapatas de freno"
+   ],
+   "Campanas de freno": [
+    "tambores",
+    "campanas",
+    "tambores de freno",
+    "campanas (tambores) de freno"
+   ],
+   "Guayas de clutch": [
+    "cable de clutch",
+    "cable de embrague",
+    "chicote de clutch"
+   ],
+   "Guayas de acelerador": [
+    "cable de acelerador",
+    "chicote de acelerador"
+   ],
+   "Kits de clutch": [
+    "kit de embrague",
+    "kit clutch",
+    "clutch",
+    "embrague"
+   ],
+   "Discos de clutch": [
+    "disco de embrague"
+   ],
+   "Balineras de rueda": [
+    "rodamientos de rueda",
+    "balineras",
+    "rulemanes"
+   ],
+   "Repartición (distribución)": [
+    "distribución",
+    "tiempo"
+   ],
+   "Mofles (silenciadores)": [
+    "silenciador"
+   ],
+   "Bombas de gasolina": [
+    "bomba de combustible",
+    "bomba de gasolina eléctrica",
+    "módulo de bomba"
+   ],
+   "Electroventiladores": [
+    "ventilador de radiador",
+    "electroventilador",
+    "ventiladores de radiador"
+   ],
+   "Farolas": [
+    "faros",
+    "luces delanteras",
+    "headlights",
+    "farola delantera",
+    "unidad de farola",
+    "luz delantera"
+   ],
+   "Stops": [
+    "luces traseras",
+    "stop",
+    "calaveras",
+    "luz de freno",
+    "farola trasera",
+    "luz trasera"
+   ],
+   "Bombillos halógenos": [
+    "bombillos",
+    "bombillas",
+    "focos",
+    "halógeno",
+    "h1",
+    "h3",
+    "h4",
+    "h7",
+    "h11",
+    "9005",
+    "9006",
+    "luz halógena"
+   ],
+   "Motores de arranque": [
+    "starter",
+    "arranque eléctrico",
+    "motor de partida"
+   ],
+   "Pitos": [
+    "bocina",
+    "claxon",
+    "corneta"
+   ],
+   "Culatas": [
+    "culata",
+    "cabezote",
+    "cabeza de motor"
+   ],
+   "Empaques y retenedores de motor": [
+    "juntas",
+    "empaquetadura",
+    "retenedores",
+    "empaques y sellos de motor",
+    "empaques",
+    "sellos de motor"
+   ],
+   "Rines": [
+    "aros"
+   ],
+   "Parlantes": [
+    "altavoces",
+    "bafles",
+    "speakers",
+    "parlantes 6x9",
+    "parlantes 6.5"
+   ],
+   "Líquido de frenos": [
+    "líquido de freno",
+    "DOT 3",
+    "DOT 4"
+   ],
+   "Radiadores": [
+    "radiador",
+    "panal de radiador",
+    "radiador de agua"
+   ],
+   "Bujías": [
+    "bujía",
+    "spark plug",
+    "chispa",
+    "bujías iridium",
+    "bujías platino"
+   ],
+   "Cuerpos de aceleración": [
+    "cuerpo de aceleración",
+    "throttle body",
+    "mariposa"
+   ],
+   "Bombas de aceite": [
+    "bomba de aceite"
+   ],
+   "Soportes de celular": [
+    "soporte de celular",
+    "porta celular",
+    "holder",
+    "soporte magnético"
+   ],
+   "Chalecos reflectivos": [
+    "chaleco reflectivo",
+    "chaleco"
+   ],
+   "Luces LED": [
+    "led",
+    "luces led",
+    "bombillos led",
+    "bombillas led",
+    "focos led",
+    "luz led",
+    "kit led",
+    "led h4",
+    "led h7",
+    "led h11"
+   ],
+   "Direccionales": [
+    "luces direccionales",
+    "intermitentes",
+    "cocuyos",
+    "luz direccional"
+   ],
+   "Inyectores": [
+    "inyector",
+    "inyectores de gasolina",
+    "boquillas",
+    "inyector diésel",
+    "inyectores common rail",
+    "inyectores de acpm"
+   ],
+   "Carburadores": [
+    "carburador",
+    "carburador weber",
+    "kit de carburador"
+   ],
+   "Bombas de agua": [
+    "bomba de agua",
+    "water pump"
+   ],
+   "Termostatos": [
+    "termostato",
+    "termostato de agua"
+   ],
+   "Mangueras de refrigeración": [
+    "manguera de radiador",
+    "manguera de agua",
+    "manguera superior",
+    "manguera inferior"
+   ],
+   "Bielas": [
+    "biela",
+    "bielas"
+   ],
+   "Válvulas y guías": [
+    "guías de válvula",
+    "válvula de admisión",
+    "válvula de escape",
+    "válvula de motor",
+    "guía de válvula"
+   ],
+   "Motores completos": [
+    "motor completo",
+    "motor usado",
+    "motor reconstruido",
+    "motor 3/4"
+   ],
+   "Catalizadores": [
+    "catalizador",
+    "convertidor catalítico"
+   ],
+   "Discos de freno": [
+    "disco de freno",
+    "discos",
+    "discos ventilados",
+    "discos perforados",
+    "rotor"
+   ],
+   "Kits de reparación de frenos": [
+    "kit de frenos",
+    "kit de reparación",
+    "empaques de bomba"
+   ],
+   "Bujes": [
+    "buje",
+    "bujes de suspensión",
+    "bujes de tijera",
+    "bujes de barra"
+   ],
+   "Alarmas": [
+    "alarma",
+    "alarma con control"
+   ],
+   "Rastreo GPS": [
+    "gps",
+    "rastreador",
+    "localizador"
+   ],
+   "Mordazas (calipers)": [
+    "caliper",
+    "cálipers",
+    "pinzas de freno",
+    "mordazas / calipers"
+   ],
+   "Cilindros de freno": [
+    "bombines de freno",
+    "cilindros de rueda",
+    "bombín de freno"
+   ],
+   "Bombas de freno": [
+    "cilindro maestro",
+    "bomba principal de freno",
+    "bombas de freno (cilindro maestro)"
+   ],
+   "Bornes y cables de batería": [
+    "bornes",
+    "terminales de batería",
+    "cable de batería",
+    "protector de bornes"
+   ],
+   "Depósitos de líquido de frenos": [
+    "depósito de líquido de frenos",
+    "tanque de líquido de frenos"
+   ],
+   "Cigüeñales": [
+    "cigüeñal"
+   ],
+   "Árboles de levas": [
+    "árbol de levas",
+    "eje de levas"
+   ],
+   "Filtros de aceite": [
+    "filtro de aceite"
+   ],
+   "Filtros de aire": [
+    "filtro de aire"
+   ],
+   "Filtros de combustible": [
+    "filtro de combustible",
+    "filtro de gasolina"
+   ]
+  }
+ },
+ "Carros": [
+  {
+   "nombre": "Llantas y rines",
+   "slug": "llantas-y-rines",
+   "subs": [
+    {
+     "nombre": "Llantas",
+     "slug": "llantas",
+     "tipos": [
+      "Llantas de automóvil",
+      "Llantas SUV y 4x4",
+      "Llantas de van, camión y transporte",
+      "Llantas OTR e industriales"
+     ],
+     "vitrina": "filtros",
+     "filtro": "Tipo de vehículo",
+     "catalogo": true
+    },
+    {
+     "nombre": "Rines",
+     "slug": "rines",
+     "tipos": [
+      "Rines de acero",
+      "Rines de aluminio"
+     ]
+    },
+    {
+     "nombre": "Accesorios de rueda",
+     "slug": "accesorios-de-rueda",
+     "tipos": [
+      "Copas (tapacubos)",
+      "Tuercas y pernos de rueda",
+      "Separadores y espaciadores de rin"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Lubricantes y mantenimiento",
+   "slug": "lubricantes-y-mantenimiento",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Aceite de motor",
+      "Aceite de transmisión",
+      "Aceite diferencial",
+      "Refrigerante y anticongelante",
+      "Líquido de frenos",
+      "Líquido de dirección hidráulica",
+      "Aditivos",
+      "Grasas",
+      "Limpiadores de sistemas"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Filtros",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Filtros de aceite",
+      "Filtros de aire",
+      "Filtros de combustible",
+      "Filtros de cabina",
+      "Filtros de transmisión"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Baterías",
+   "slug": "baterias",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Baterías para carro",
+      "Baterías para furgón, camión y bus",
+      "Bornes y cables de batería"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Frenos",
+   "slug": "frenos",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Pastillas de freno",
+      "Discos de freno",
+      "Campanas de freno",
+      "Bandas de freno",
+      "Mordazas (calipers)",
+      "Pistones y kits de caliper",
+      "Cilindros de freno",
+      "Bombas de freno",
+      "Servofreno (booster)",
+      "Bombas de vacío",
+      "Sensores ABS",
+      "Módulos y unidades ABS",
+      "Mangueras y líneas de freno",
+      "Depósitos de líquido de frenos",
+      "Guayas de freno de mano",
+      "Herrajes y pernos de pastillas",
+      "Kits de reparación de frenos",
+      "Sensores de desgaste de pastillas"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Suspensión y dirección",
+   "slug": "suspension-y-direccion",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Amortiguadores",
+      "Resortes (espirales)",
+      "Rótulas",
+      "Axiales (brazos axiales)",
+      "Bujes",
+      "Tijeras",
+      "Barras estabilizadoras",
+      "Links de estabilizadora",
+      "Balineras de rueda",
+      "Manzanas de rueda (cubos)",
+      "Puntas de eje (manguetas)",
+      "Cajas de dirección (cremalleras)",
+      "Bombas de dirección hidráulica",
+      "Mangueras de dirección hidráulica",
+      "Columnas y crucetas de dirección",
+      "Terminales de dirección",
+      "Copas (bases) de amortiguador",
+      "Guardapolvos y fuelles",
+      "Topes de amortiguador",
+      "Kits de tren delantero",
+      "Suspensión neumática (bolsas de aire)",
+      "Coilovers y suspensión deportiva",
+      "Ballestas (muelles de hoja)"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Eléctrico y electrónico",
+   "slug": "electrico-y-electronico",
+   "subs": [
+    {
+     "nombre": "Encendido",
+     "vitrina": "filtros",
+     "filtro": "Tipo de producto",
+     "tipos": [
+      "Bobinas",
+      "Módulos y distribuidores de encendido",
+      "Bujías",
+      "Cables de alta",
+      "Bujías de precalentamiento",
+      "Kits de sincronización (afinación)"
+     ]
+    },
+    {
+     "nombre": "Arranque y carga",
+     "vitrina": "filtros",
+     "filtro": "Tipo de producto",
+     "tipos": [
+      "Motores de arranque",
+      "Bendix y automáticos de arranque",
+      "Alternadores",
+      "Reguladores de voltaje"
+     ]
+    },
+    {
+     "nombre": "Gestión electrónica",
+     "vitrina": "filtros",
+     "filtro": "Tipo de producto",
+     "tipos": [
+      "Computadores ECU",
+      "Módulos electrónicos",
+      "Actuadores",
+      "Sensores de motor (CKP, CMP, temperatura)"
+     ]
+    },
+    {
+     "nombre": "Eléctrico general",
+     "vitrina": "filtros",
+     "filtro": "Tipo de producto",
+     "tipos": [
+      "Fusibles",
+      "Relés",
+      "Suiches de encendido y cilindros de llave",
+      "Suiches e interruptores",
+      "Llaves y controles (carcasas, chips)",
+      "Cableado",
+      "Conectores",
+      "Pitos"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Iluminación",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Farolas",
+      "Stops",
+      "Direccionales",
+      "Exploradoras",
+      "Luces LED",
+      "Bombillos halógenos",
+      "Xenón (HID)",
+      "Barras LED",
+      "Luces interiores",
+      "Luces DRL (diurnas)",
+      "Luces de placa y cortesía"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Motor y transmisión",
+   "slug": "motor-y-transmision",
+   "subs": [
+    {
+     "nombre": "Bloque y culata",
+     "slug": "bloque-y-culata",
+     "tipos": [
+      "Pistones",
+      "Anillos",
+      "Bielas",
+      "Cigüeñales",
+      "Árboles de levas",
+      "Culatas",
+      "Válvulas y guías",
+      "Camisas",
+      "Empaques y retenedores de motor",
+      "Retenedores de motor",
+      "Bombas de aceite",
+      "Soportes de motor",
+      "Motores completos"
+     ]
+    },
+    {
+     "nombre": "Correas y tensores",
+     "slug": "correas-y-tensores",
+     "tipos": [
+      "Correas de accesorios",
+      "Tensores de correa",
+      "Poleas"
+     ]
+    },
+    {
+     "nombre": "Repartición (distribución)",
+     "slug": "reparticion-distribucion",
+     "tipos": [
+      "Correas de repartición",
+      "Cadenas de repartición",
+      "Kits de repartición",
+      "Tensores y guías de repartición"
+     ]
+    },
+    {
+     "nombre": "Refrigeración",
+     "slug": "refrigeracion",
+     "tipos": [
+      "Radiadores",
+      "Bombas de agua",
+      "Termostatos",
+      "Electroventiladores",
+      "Mangueras de refrigeración",
+      "Depósitos de refrigerante",
+      "Tapas de radiador",
+      "Radiadores de aceite"
+     ]
+    },
+    {
+     "nombre": "Turbo e intercooler",
+     "slug": "turbo-e-intercooler",
+     "tipos": [
+      "Turbos",
+      "Intercoolers",
+      "Mangueras de turbo e intercooler",
+      "Válvulas de alivio (blow-off)"
+     ]
+    },
+    {
+     "nombre": "Combustible e inyección",
+     "slug": "combustible-e-inyeccion",
+     "tipos": [
+      "Bombas de gasolina",
+      "Inyectores",
+      "Rampas de inyectores",
+      "Reguladores de presión de combustible",
+      "Cuerpos de aceleración",
+      "Sensores de oxígeno",
+      "Sensores MAP",
+      "Válvulas EGR y canister",
+      "Carburadores",
+      "Guayas de acelerador",
+      "Tanques de gasolina",
+      "Bombas de inyección diésel",
+      "Filtros separadores de agua"
+     ]
+    },
+    {
+     "nombre": "Clutch (embrague)",
+     "slug": "clutch-embrague",
+     "tipos": [
+      "Kits de clutch",
+      "Discos de clutch",
+      "Prensas de clutch",
+      "Balineras de clutch (collarín)",
+      "Bombas y balibombas de clutch",
+      "Guayas de clutch"
+     ]
+    },
+    {
+     "nombre": "Admisión y escape",
+     "slug": "admision-y-escape",
+     "tipos": [
+      "Múltiples de admisión",
+      "Múltiples de escape",
+      "Catalizadores",
+      "Mofles (silenciadores)",
+      "Resonadores",
+      "Flexibles de escape",
+      "Tubos y puntas de escape"
+     ]
+    },
+    {
+     "nombre": "Transmisión y caja",
+     "slug": "transmision-y-caja",
+     "tipos": [
+      "Cajas de cambios",
+      "Cajas automáticas y convertidores",
+      "Diferenciales",
+      "Cardanes y crucetas",
+      "Ejes y homocinéticas",
+      "Sincronizadores y piñones",
+      "Retenedores de caja",
+      "Soportes de caja",
+      "Selectoras y guayas de cambios",
+      "Volantes de motor",
+      "Cajas de transferencia 4x4"
+     ]
+    },
+    {
+     "nombre": "Partes plásticas de motor",
+     "slug": "partes-plasticas-de-motor",
+     "tipos": [
+      "Tapas y cubiertas de motor",
+      "Guardapolvos y protectores de motor",
+      "Carcasas de correa y ductos"
+     ]
+    },
+    {
+     "nombre": "GNV (gas vehicular)",
+     "tipos": [
+      "Kits de conversión a GNV",
+      "Reguladores GNV",
+      "Inyectores y rieles GNV",
+      "Cilindros GNV",
+      "Mangueras y válvulas GNV"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Accesorios",
+   "slug": "accesorios",
+   "subs": [
+    {
+     "nombre": "Accesorios exteriores",
+     "slug": "accesorios-exteriores",
+     "tipos": [
+      "Estribos",
+      "Barras de techo",
+      "Portaequipajes",
+      "Portabicicletas",
+      "Portallantas",
+      "Enganches de remolque (tiros)",
+      "Deflectores",
+      "Protectores exteriores",
+      "Molduras",
+      "Spoilers y alerones",
+      "Parrillas decorativas",
+      "Protectores de puertas",
+      "Marcos y portaplacas",
+      "Cubrecarros (forros)",
+      "Snorkels",
+      "Polarizado y películas"
+     ]
+    },
+    {
+     "nombre": "Accesorios interiores",
+     "slug": "accesorios-interiores",
+     "tipos": [
+      "Tapetes",
+      "Forros de sillas",
+      "Forros de timón",
+      "Cojines",
+      "Organizadores",
+      "Cortasoles de parabrisas",
+      "Cortinas",
+      "Percheros",
+      "Portaobjetos",
+      "Portavasos",
+      "Apoyabrazos",
+      "Volantes deportivos",
+      "Pedales deportivos (cubrepedales)",
+      "Protectores interiores",
+      "Sillas para bebé",
+      "Neveras portátiles",
+      "Cargadores e inversores 12V",
+      "Soportes de celular"
+     ]
+    },
+    {
+     "nombre": "Audio",
+     "slug": "audio",
+     "tipos": [
+      "Radios",
+      "Pantallas multimedia",
+      "Parlantes",
+      "Subwoofers",
+      "Amplificadores",
+      "Procesadores y ecualizadores",
+      "Tweeters",
+      "Cajas acústicas",
+      "Cables y conectores de audio",
+      "Antenas de radio",
+      "Kits de instalación"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Carrocería y climatización",
+   "slug": "carroceria-y-climatizacion",
+   "subs": [
+    {
+     "nombre": "Carrocería",
+     "slug": "carroceria",
+     "tipos": [
+      "Bómperes (bumper)",
+      "Capós",
+      "Guardafangos",
+      "Puertas",
+      "Baúles y compuertas",
+      "Espejos retrovisores",
+      "Persianas (parrillas)",
+      "Rejillas y tomas de aire",
+      "Soportes y bases de carrocería",
+      "Bisagras",
+      "Chapas y manijas",
+      "Cerraduras de capó y baúl",
+      "Amortiguadores de capó y baúl (resortes a gas)",
+      "Vidrios y parabrisas",
+      "Elevavidrios",
+      "Empaques de puertas y molduras (burletes)",
+      "Plumillas (limpiaparabrisas)",
+      "Brazos y motores de limpiaparabrisas",
+      "Lavaparabrisas (bombas y depósitos)",
+      "Guardapolvos y pasarruedas",
+      "Zócalos",
+      "Techos corredizos",
+      "Emblemas de carrocería"
+     ]
+    },
+    {
+     "nombre": "Interior (repuestos)",
+     "slug": "interior-repuestos",
+     "tipos": [
+      "Manijas y chapas interiores",
+      "Paneles de puerta",
+      "Tableros y consolas",
+      "Guanteras",
+      "Palancas de cambios y pomos",
+      "Palancas de freno de mano",
+      "Pedales",
+      "Sillas y tapizados",
+      "Cinturones de seguridad",
+      "Airbags y módulos",
+      "Espejos retrovisores interiores",
+      "Parasoles",
+      "Cielorrasos",
+      "Tomas 12V y encendedores",
+      "Manivelas de ventana"
+     ]
+    },
+    {
+     "nombre": "Aire acondicionado y climatización",
+     "slug": "aire-acondicionado-y-climatizacion",
+     "tipos": [
+      "Compresores de AC",
+      "Condensadores",
+      "Evaporadores",
+      "Blowers (ventiladores de AC)",
+      "Resistencias",
+      "Sensores de AC",
+      "Mangueras de AC",
+      "Gas refrigerante",
+      "Válvulas de expansión",
+      "Radiadores de calefacción",
+      "Comandos y perillas de AC",
+      "Difusores de aire"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Tecnología y seguridad",
+   "slug": "tecnologia-y-seguridad",
+   "subs": [
+    {
+     "nombre": "Tecnología y conectividad",
+     "slug": "tecnologia-y-conectividad",
+     "tipos": [
+      "Sistemas Android y CarPlay",
+      "Cámaras de reversa",
+      "Cámaras DVR y de seguridad",
+      "Sensores de parqueo",
+      "Sensores de presión de llantas (TPMS)",
+      "Adaptadores Bluetooth",
+      "Cargadores y cables para eléctricos e híbridos"
+     ]
+    },
+    {
+     "nombre": "Seguridad",
+     "slug": "seguridad",
+     "tipos": [
+      "Alarmas",
+      "Inmovilizadores",
+      "Rastreo GPS",
+      "Cerraduras y bloqueos",
+      "Trabavolantes y trabapedales",
+      "Extintores",
+      "Triángulos",
+      "Botiquines",
+      "Kits de carretera",
+      "Chalecos reflectivos",
+      "Alcoholímetros"
+     ]
+    }
+   ]
+  }
+ ],
+ "Motos": [
+  {
+   "nombre": "Llantas y rines",
+   "slug": "llantas-y-rines",
+   "subs": [
+    {
+     "nombre": "Llantas",
+     "slug": "llantas",
+     "tipos": [
+      "Llantas delanteras",
+      "Llantas traseras",
+      "Llantas de scooter",
+      "Llantas de enduro y cross",
+      "Llantas para motocarro"
+     ]
+    },
+    {
+     "nombre": "Rines y rayos",
+     "slug": "rines-y-rayos",
+     "tipos": [
+      "Rines",
+      "Rayos y niples",
+      "Manzanas de rueda",
+      "Balineras de rueda"
+     ]
+    },
+    {
+     "nombre": "Accesorios de rueda",
+     "slug": "accesorios-de-rueda",
+     "tipos": [
+      "Neumáticos (tripas)",
+      "Válvulas",
+      "Tuercas y ejes",
+      "Protectores de rin"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Lubricantes y mantenimiento",
+   "slug": "lubricantes",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Aceite de motor 4T",
+      "Aceite de motor 2T",
+      "Aceite de transmisión (caja)",
+      "Aceite de suspensión",
+      "Lubricante de cadena",
+      "Líquido de frenos",
+      "Refrigerante",
+      "Aditivos y grasas"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Filtros",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Filtros de aceite",
+      "Filtros de aire",
+      "Filtros de combustible"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Motor y transmisión",
+   "slug": "motor-y-transmision",
+   "subs": [
+    {
+     "nombre": "Bloque y culata",
+     "slug": "bloque-y-culata",
+     "tipos": [
+      "Kits de cilindro",
+      "Pistones y anillos",
+      "Bielas",
+      "Cigüeñales",
+      "Rodamientos de cigüeñal",
+      "Culatas",
+      "Válvulas y guías",
+      "Árboles de levas",
+      "Balancines",
+      "Empaques y retenedores de motor",
+      "Cárter y tapas de motor",
+      "Bombas de aceite",
+      "Volantes magnéticos",
+      "Motores completos"
+     ]
+    },
+    {
+     "nombre": "Repartición (distribución)",
+     "slug": "reparticion-distribucion",
+     "tipos": [
+      "Cadenillas (cadenas de repartición)",
+      "Tensores y guías de cadenilla",
+      "Kits de cadenilla"
+     ]
+    },
+    {
+     "nombre": "Refrigeración",
+     "slug": "refrigeracion",
+     "tipos": [
+      "Radiadores",
+      "Bombas de agua",
+      "Termostatos",
+      "Mangueras de refrigeración",
+      "Electroventiladores"
+     ]
+    },
+    {
+     "nombre": "Combustible",
+     "slug": "combustible",
+     "tipos": [
+      "Carburadores",
+      "Inyectores",
+      "Bombas de gasolina",
+      "Cuerpos de aceleración",
+      "Llaves de gasolina"
+     ]
+    },
+    {
+     "nombre": "Clutch y transmisión",
+     "slug": "clutch-y-transmision",
+     "tipos": [
+      "Discos de clutch",
+      "Kits de clutch",
+      "Resortes y campanas de clutch",
+      "Piñones",
+      "Catalinas (sprocket trasero)",
+      "Cadenas de transmisión",
+      "Kits de arrastre",
+      "Correas de transmisión (scooter)",
+      "Variador, rodillos y clutch de scooter",
+      "Cajas de cambios y engranajes",
+      "Selectoras y palancas de cambios",
+      "Ejes de cambios"
+     ]
+    },
+    {
+     "nombre": "Arranque",
+     "slug": "arranque",
+     "tipos": [
+      "Motores de arranque",
+      "Bendix",
+      "Pedales de arranque (crank)",
+      "Automáticos (relés) de arranque"
+     ]
+    },
+    {
+     "nombre": "Escape",
+     "slug": "escape",
+     "tipos": [
+      "Exostos",
+      "Mofles (silenciadores)",
+      "Catalizadores",
+      "Empaques de exosto"
+     ]
+    },
+    {
+     "nombre": "Guayas y cables",
+     "slug": "guayas-y-cables",
+     "tipos": [
+      "Guayas de freno",
+      "Guayas de clutch",
+      "Guayas de acelerador",
+      "Guayas de velocímetro",
+      "Guayas de choke (ahogador)",
+      "Guayas de tacómetro"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Baterías",
+   "slug": "baterias",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Baterías para moto",
+      "Bornes y cables de batería"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Frenos",
+   "slug": "frenos",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Pastillas de freno",
+      "Bandas de freno",
+      "Discos de freno",
+      "Campanas de freno",
+      "Mordazas (calipers)",
+      "Bombas de freno",
+      "Cilindros de freno",
+      "Mangueras de freno",
+      "Maniguetas de freno",
+      "Kits de reparación de frenos",
+      "Depósitos de líquido de frenos"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Cascos",
+   "slug": "cascos",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Cascos integrales",
+      "Cascos abatibles",
+      "Cascos abiertos",
+      "Cascos cross",
+      "Visores y repuestos de casco"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Eléctrico y electrónico",
+   "slug": "electrico",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Reguladores (rectificadores)",
+      "CDI (módulos de encendido)",
+      "Bobinas de alta",
+      "Estatores (platos de bobinas)",
+      "Bujías",
+      "Capuchones de bujía",
+      "Fusibles y relés",
+      "Suiches y comandos",
+      "Flashers",
+      "Pitos",
+      "Cableado y conectores",
+      "Tableros, tacómetros y velocímetros",
+      "Sensores"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Iluminación",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Farolas",
+      "Stops",
+      "Direccionales",
+      "Luces LED",
+      "Bombillos halógenos",
+      "Exploradoras y luces auxiliares"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Accesorios",
+   "slug": "accesorios",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Maletas y baúles",
+      "Alforjas y mochilas",
+      "Parrillas y portamaletas",
+      "Sliders, defensas y cubrecárter",
+      "Pijamas (cubremotos)",
+      "Cúpulas (parabrisas) y soportes",
+      "Espejos",
+      "Cubrepuños y cubremanos",
+      "Soportes de celular",
+      "Forros de sillín",
+      "Pulpos y redes",
+      "Rampas y caballetes",
+      "Cubrerayos y adhesivos",
+      "Cargadores USB",
+      "Intercomunicadores",
+      "Parlantes"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Ropa",
+   "slug": "ropa",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Chaquetas",
+      "Guantes de moto",
+      "Botas",
+      "Pantalones",
+      "Impermeables",
+      "Protecciones (rodilleras, coderas)",
+      "Chalecos reflectivos"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Chasis y carrocería",
+   "slug": "chasis-y-carroceria",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Carenajes y plásticos",
+      "Tanques de gasolina y tapas",
+      "Sillines",
+      "Colines y parrillas traseras",
+      "Guardabarros",
+      "Portaplacas",
+      "Patas y caballetes",
+      "Pedalines y soportes",
+      "Pedales de cambio y freno",
+      "Chasis y subchasis",
+      "Cajas de filtro de aire",
+      "Agarraderas",
+      "Ejes de rueda"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Suspensión y dirección",
+   "slug": "suspension-y-direccion",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Amortiguadores traseros",
+      "Barras telescópicas (botellas)",
+      "Kits de barras (retenedores y guardapolvos)",
+      "Resortes",
+      "Tijeras (basculantes)",
+      "Rodamientos de tijera",
+      "Cunas de dirección",
+      "Bujes",
+      "Manubrios",
+      "Puños y contrapesos",
+      "Tés y triples de dirección"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Tecnología y seguridad",
+   "slug": "tecnologia-y-seguridad",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Rastreo GPS",
+      "Alarmas",
+      "Candados y bloqueos",
+      "Cámaras"
+     ]
+    }
+   ]
+  }
+ ],
+ "Herramientas": [
+  {
+   "nombre": "Herramientas manuales",
+   "slug": "herramientas-manuales",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Llaves y copas",
+      "Llaves de cruz",
+      "Torquímetros",
+      "Destornilladores",
+      "Alicates y pinzas",
+      "Martillos y cinceles",
+      "Extractores y herramientas especiales",
+      "Llaves para filtros",
+      "Kits de herramientas"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Herramientas eléctricas y neumáticas",
+   "slug": "herramientas-electricas-y-neumaticas",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Taladros",
+      "Esmeriles y lijadoras",
+      "Pistolas de impacto",
+      "Herramientas neumáticas",
+      "Compresores de aire",
+      "Pistolas de calor y cautines"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Equipos de taller",
+   "slug": "equipos-de-taller",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Gatos y torres",
+      "Elevadores",
+      "Camillas de mecánico",
+      "Prensas hidráulicas",
+      "Grúas de motor",
+      "Winches",
+      "Cargadores y arrancadores de batería",
+      "Infladores y manómetros de llanta",
+      "Montallantas y despinche"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Diagnóstico y medición",
+   "slug": "diagnostico-y-medicion",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Escáneres y equipos de diagnóstico",
+      "Multímetros y probadores eléctricos",
+      "Calibradores y micrómetros",
+      "Lámparas de tiempo",
+      "Compresímetros"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Cuidado y limpieza",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Shampoo",
+      "Desengrasantes",
+      "Limpiavidrios",
+      "Limpiadores interiores",
+      "Limpiadores de tapicería y cuero",
+      "Limpiadores de motor",
+      "Limpiadores de rines",
+      "Siliconas y renovadores de llantas",
+      "Ceras",
+      "Selladores",
+      "Coatings",
+      "Hidrofóbicos",
+      "Protectores UV",
+      "Quita rayones y restauradores de pintura",
+      "Microfibras",
+      "Cepillos y aplicadores",
+      "Pulimentos y compuestos (rubbing)",
+      "Pads",
+      "Abrillantadores",
+      "Ambientadores y perfumes",
+      "Anticorrosivos",
+      "Kits de limpieza",
+      "Limpiadores de cadena"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Consumibles de taller",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Guantes",
+      "Paños",
+      "Cintas",
+      "Abrazaderas",
+      "Tornillería",
+      "Bridas",
+      "Siliconas y pegantes",
+      "Lubricantes técnicos",
+      "Limpiadores técnicos",
+      "Aerosoles",
+      "Empaques genéricos",
+      "Terminales eléctricos",
+      "Pinturas y retoques"
+     ]
+    }
+   ]
+  },
+  {
+   "nombre": "Equipos de lavado y pulido",
+   "slug": "equipos-de-limpieza",
+   "subs": [
+    {
+     "nombre": null,
+     "tipos": [
+      "Hidrolavadoras",
+      "Polichadoras",
+      "Aspiradoras"
+     ]
+    }
+   ]
+  }
+ ]
+}

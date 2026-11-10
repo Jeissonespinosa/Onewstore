@@ -40,3 +40,101 @@
 .image {
   border-radius: 0.25rem;
 }
+
+/* ============================================================
+   TARJETA DE PRODUCTO — rail rxProductos
+   Referencia: foto sobre blanco sin borde; pildora "Ahorra"
+   arriba a la izquierda; panel gris abajo (flex-layout.col
+   rxCardInfo) con marca, nombre y precio. Toda la tarjeta es
+   enlace al PDP.
+   ============================================================ */
+.container--rxCard {
+  position: relative;
+  width: 100%;
+  /* product-summary pone max-width:300px inline en el contenedor. */
+  max-width: none !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  text-align: start;
+}
+
+.element--rxCard {
+  height: 100%;
+  padding: 0;
+}
+
+.clearLink--rxCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imageContainer--rxCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 1.5rem 1.25rem 0.5rem;
+  text-align: center;
+}
+
+.image--rxCard,
+.imageNormal--rxCard {
+  border-radius: 0;
+  transition: transform 0.35s ease;
+}
+
+.container--rxCard:hover .image--rxCard {
+  transform: scale(1.04);
+}
+
+/* El panel gris se pega al fondo para que todas las tarjetas
+   de la fila terminen a la misma altura. */
+.element--rxCard :global(.vtex-flex-layout-0-x-flexCol--rxCardInfo) {
+  margin-top: auto;
+}
+
+.nameContainer--rxCard {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.productBrand--rxCard,
+.productNameContainer--rxCard {
+  color: var(--rx-ink);
+  font-family: var(--rx-font);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image--rxCard,
+  .imageNormal--rxCard {
+    transition: none;
+  }
+
+  .container--rxCard:hover .image--rxCard {
+    transform: none;
+  }
+}
+
+/* En movil la tarjeta ocupa media pantalla: menos aire alrededor de la
+   foto para que el panel de informacion se vea sin bajar tanto. */
+@media screen and (max-width: 40em) {
+  .imageContainer--rxCard {
+    padding: 0.75rem 0.6rem 0.35rem;
+  }
+
+  .productBrand--rxCard,
+  .productNameContainer--rxCard {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+}

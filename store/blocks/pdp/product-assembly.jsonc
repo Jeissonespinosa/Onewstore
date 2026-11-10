@@ -1,10 +1,4 @@
 {
-  "sticky-layout#buy-button": {
-    "props": {
-      "position": "bottom"
-    },
-    "children": ["flex-layout.row#buy-button"]
-  },
   "product-assembly-options": {
     "children": [
       "flex-layout.row#product-assembly-options",

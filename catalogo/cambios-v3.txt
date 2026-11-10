@@ -1,0 +1,20 @@
+Carros: Parasoles (accesorio) -> Cortasoles de parabrisas
+Carros: Pedales (accesorio) -> Pedales deportivos (cubrepedales)
+Carros: Aromatizantes fusionado en Ambientadores y perfumes
+Carros: Emblemas fusionado en Emblemas de carrocería
+Carros: Estribos y zócalos (carrocería) -> Zócalos; Estribos queda en Accesorios exteriores
+Carros: Antenas fusionado en Antenas de radio (Audio)
+Carros: Baterías sale de Eléctricos y pasa a macro propia
+Carros: Partes plásticas de motor ya no está vacía (3 tipos)
+Carros: Herramientas y equipos + hidrolavadoras/polichadoras/aspiradoras pasan a la sección Herramientas
+Carros: macro nueva Baterías (4 tipos)
+Motos: Guantes -> Guantes de moto (Ropa) y Guantes de taller (Consumibles)
+Motos: Líquido de frenos y depósitos -> Depósitos de líquido de frenos (el líquido queda en Lubricantes)
+Motos: Pedalines (accesorio) -> Pedalines de lujo
+Motos: Manubrios, puños y pads -> Manubrios y puños de lujo
+Motos: Protectores de radiador y cubrecárter fusionado en Sliders, defensas y protectores
+Motos: Candados, guayas y alarmas fusionado en Candados y bloqueos (Tecnología y seguridad)
+Motos: Luces auxiliares LED fusionado en Exploradoras y luces auxiliares
+Motos: Baterías sale de Eléctricos y pasa a macro propia
+Motos: macro nueva Baterías (4 tipos)
+Herramientas: sección nueva con 5 macros y 32 tipos

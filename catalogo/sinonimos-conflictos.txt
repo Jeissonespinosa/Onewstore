@@ -1,0 +1,248 @@
+SINONIMOS — conflictos resueltos y decisiones pendientes
+Generado por scripts/gen-sinonimos.py. Con sinonimos bidireccionales
+un termino compartido vuelve equivalentes a los dos grupos, por eso
+cada termino queda en uno solo.
+
+1. GRUPOS FUSIONADOS (misma clave, o absorbidos al quedarse sin sinonimos)
+   Llantas y rines (Motos) + Llantas y rines (Carros)
+   Llantas (Motos) + Llantas (Carros)
+   Rines (Motos) + Rines (Carros)
+   Manzanas de rueda (Motos) + Manzanas de rueda (cubos) (Carros)
+   Balineras de rueda (Motos) + Balineras de rueda (Carros)
+   Accesorios de rueda (Motos) + Accesorios de rueda (Carros)
+   Lubricantes y mantenimiento (Motos) + Lubricantes y mantenimiento (Carros)
+   Aceite de transmisión (caja) (Motos) + Aceite de transmisión (Carros)
+   Líquido de frenos (Motos) + Líquido de frenos (Carros)
+   Filtros (Motos) + Filtros (Carros)
+   Filtros de aceite (Motos) + Filtros de aceite (Carros)
+   Filtros de aire (Motos) + Filtros de aire (Carros)
+   Filtros de combustible (Motos) + Filtros de combustible (Carros)
+   Motor y transmisión (Motos) + Motor y transmisión (Carros)
+   Bloque y culata (Motos) + Bloque y culata (Carros)
+   Bielas (Motos) + Bielas (Carros)
+   Cigüeñales (Motos) + Cigüeñales (Carros)
+   Culatas (Motos) + Culatas (Carros)
+   Válvulas y guías (Motos) + Válvulas y guías (Carros)
+   Árboles de levas (Motos) + Árboles de levas (Carros)
+   Empaques y retenedores de motor (Motos) + Empaques y retenedores de motor (Carros)
+   Bombas de aceite (Motos) + Bombas de aceite (Carros)
+   Motores completos (Motos) + Motores completos (Carros)
+   Repartición (distribución) (Motos) + Repartición (distribución) (Carros)
+   Refrigeración (Motos) + Refrigeración (Carros)
+   Radiadores (Motos) + Radiadores (Carros)
+   Bombas de agua (Motos) + Bombas de agua (Carros)
+   Termostatos (Motos) + Termostatos (Carros)
+   Mangueras de refrigeración (Motos) + Mangueras de refrigeración (Carros)
+   Electroventiladores (Motos) + Electroventiladores (Carros)
+   Carburadores (Motos) + Carburadores (Carros)
+   Inyectores (Motos) + Inyectores (Carros)
+   Bombas de gasolina (Motos) + Bombas de gasolina (Carros)
+   Cuerpos de aceleración (Motos) + Cuerpos de aceleración (Carros)
+   Discos de clutch (Motos) + Discos de clutch (Carros)
+   Kits de clutch (Motos) + Kits de clutch (Carros)
+   Motores de arranque (Motos) + Motores de arranque (Carros)
+   Mofles (silenciadores) (Motos) + Mofles (silenciadores) (Carros)
+   Catalizadores (Motos) + Catalizadores (Carros)
+   Guayas de clutch (Motos) + Guayas de clutch (Carros)
+   Guayas de acelerador (Motos) + Guayas de acelerador (Carros)
+   Baterías (Motos) + Baterías (Carros)
+   Bornes y cables de batería (Motos) + Bornes y cables de batería (Carros)
+   Frenos (Motos) + Frenos (Carros)
+   Pastillas de freno (Motos) + Pastillas de freno (Carros)
+   Bandas de freno (Motos) + Bandas de freno (Carros)
+   Discos de freno (Motos) + Discos de freno (Carros)
+   Campanas de freno (Motos) + Campanas de freno (Carros)
+   Mordazas (calipers) (Motos) + Mordazas (calipers) (Carros)
+   Bombas de freno (Motos) + Bombas de freno (Carros)
+   Cilindros de freno (Motos) + Cilindros de freno (Carros)
+   Kits de reparación de frenos (Motos) + Kits de reparación de frenos (Carros)
+   Depósitos de líquido de frenos (Motos) + Depósitos de líquido de frenos (Carros)
+   Eléctrico y electrónico (Motos) + Eléctrico y electrónico (Carros)
+   Bujías (Motos) + Bujías (Carros)
+   Pitos (Motos) + Pitos (Carros)
+   Iluminación (Motos) + Iluminación (Carros)
+   Farolas (Motos) + Farolas (Carros)
+   Stops (Motos) + Stops (Carros)
+   Direccionales (Motos) + Direccionales (Carros)
+   Luces LED (Motos) + Luces LED (Carros)
+   Bombillos halógenos (Motos) + Bombillos halógenos (Carros)
+   Accesorios (Motos) + Accesorios (Carros)
+   Soportes de celular (Motos) + Soportes de celular (Carros)
+   Parlantes (Motos) + Parlantes (Carros)
+   Chalecos reflectivos (Motos) + Chalecos reflectivos (Carros)
+   Suspensión y dirección (Motos) + Suspensión y dirección (Carros)
+   Resortes (Motos) + Resortes (espirales) (Carros)
+   Tijeras (basculantes) (Motos) + Tijeras (Carros)
+   Bujes (Motos) + Bujes (Carros)
+   Tecnología y seguridad (Motos) + Tecnología y seguridad (Carros)
+   Rastreo GPS (Motos) + Rastreo GPS (Carros)
+   Alarmas (Motos) + Alarmas (Carros)
+   Clutch (embrague) (Carros) + Kits de clutch (Carros)
+   Aditivos y grasas (Motos) + Grasas (Carros)
+   Cadenillas (cadenas de repartición) (Motos) + Cadenas de repartición (Carros)
+   Bendix (Motos) + Bendix y automáticos de arranque (Carros)
+   Fusibles y relés (Motos) + Fusibles (Carros)
+   Cableado y conectores (Motos) + Cableado (Carros)
+
+2. TERMINOS DESCARTADOS (84)
+   "neumáticos": sale de Llantas de automóvil [Carros] y queda en Neumáticos (tripas) [Motos]
+   "camión": sale de Llantas de van, camión y transporte [Carros] y queda en Baterías para furgón, camión y bus [Carros]
+   "caja": sale de Transmisión y caja [Carros] y queda en Aceite de transmisión [Carros]
+   "coolant": sale de Refrigerante y anticongelante [Carros] y queda en Refrigerante [Motos]
+   "refrigerante": sale de Refrigerante y anticongelante [Carros] y queda en Refrigerante [Motos]
+   "aditivo": sale de Aditivos y grasas [Motos] y queda en Aditivos [Carros]
+   "grasa": sale de Aditivos y grasas [Motos] y queda en Grasas [Carros]
+   "grasa de rodamientos": sale de Aditivos y grasas [Motos] y queda en Grasas [Carros]
+   "batería agm": sale de Baterías para carro [Carros] y queda en Baterías para moto [Motos]
+   "booster": sale de Cargadores y arrancadores de batería [Herramientas] y queda en Servofreno (booster) [Carros]
+   "amortiguador": sale de Amortiguadores traseros [Motos] y queda en Amortiguadores [Carros]
+   "guardapolvo": sale de Guardapolvos y fuelles [Carros] y queda en Guardabarros [Motos]
+   "bobina de encendido": sale de Bobinas [Carros] y queda en Bobinas de alta [Motos]
+   "bobina de chispa": sale de Bobinas [Carros] y queda en Bobinas de alta [Motos]
+   "módulo de encendido": sale de Módulos y distribuidores de encendido [Carros] y queda en CDI (módulos de encendido) [Motos]
+   "bendix": sale de Bendix y automáticos de arranque [Carros] y queda en Bendix [Motos]
+   "automático de arranque": sale de Bendix y automáticos de arranque [Carros] y queda en Automáticos (relés) de arranque [Motos]
+   "solenoide de arranque": sale de Bendix y automáticos de arranque [Carros] y queda en Automáticos (relés) de arranque [Motos]
+   "piñón de arranque": sale de Bendix [Motos] y queda en Bendix y automáticos de arranque [Carros]
+   "regulador de voltaje": sale de Reguladores (rectificadores) [Motos] y queda en Reguladores de voltaje [Carros]
+   "rectificador": sale de Reguladores (rectificadores) [Motos] y queda en Reguladores de voltaje [Carros]
+   "sensor": sale de Sensores de motor (CKP, CMP, temperatura) [Carros] y queda en Sensores [Motos]
+   "fusible": sale de Fusibles y relés [Motos] y queda en Fusibles [Carros]
+   "caja de fusibles": sale de Fusibles y relés [Motos] y queda en Fusibles [Carros]
+   "relés": sale de Automáticos (relés) de arranque [Motos] y queda en Relés [Carros]
+   "relay": sale de Fusibles y relés [Motos] y queda en Relés [Carros]
+   "relé": sale de Fusibles y relés [Motos] y queda en Relés [Carros]
+   "switch": sale de Suiches e interruptores [Carros] y queda en Suiches y comandos [Motos]
+   "cableado": sale de Cableado y conectores [Motos] y queda en Cableado [Carros]
+   "arnés": sale de Cableado y conectores [Motos] y queda en Cableado [Carros]
+   "ramal": sale de Cableado y conectores [Motos] y queda en Cableado [Carros]
+   "conector": sale de Cableado y conectores [Motos] y queda en Conectores [Carros]
+   "terminal eléctrico": sale de Terminales eléctricos [Herramientas] y queda en Conectores [Carros]
+   "exploradoras": sale de Exploradoras y luces auxiliares [Motos] y queda en Exploradoras [Carros]
+   "luces auxiliares": sale de Exploradoras [Carros] y queda en Exploradoras y luces auxiliares [Motos]
+   "antiniebla": sale de Exploradoras y luces auxiliares [Motos] y queda en Exploradoras [Carros]
+   "pistón": sale de Pistones y anillos [Motos] y queda en Pistones [Carros]
+   "anillos": sale de Pistones y anillos [Motos] y queda en Anillos [Carros]
+   "rines de pistón": sale de Pistones y anillos [Motos] y queda en Anillos [Carros]
+   "empaquetadura": sale de Empaques y retenedores de motor [Carros] y queda en Empaques genéricos [Herramientas]
+   "retenedores": sale de Kits de barras (retenedores y guardapolvos) [Motos] y queda en Empaques y retenedores de motor [Carros]
+   "cadenas de repartición": sale de Cadenillas (cadenas de repartición) [Motos] y queda en Cadenas de repartición [Carros]
+   "cadena de distribución": sale de Cadenillas (cadenas de repartición) [Motos] y queda en Cadenas de repartición [Carros]
+   "cadena de tiempo": sale de Cadenillas (cadenas de repartición) [Motos] y queda en Cadenas de repartición [Carros]
+   "cadenilla": sale de Cadenillas (cadenas de repartición) [Motos] y queda en Cadenas de repartición [Carros]
+   "kits de repartición": sale de Kits de cadenilla [Motos] y queda en Kits de repartición [Carros]
+   "kit de distribución": sale de Kits de repartición [Carros] y queda en Kits de cadenilla [Motos]
+   "kit de tiempo": sale de Kits de repartición [Carros] y queda en Kits de cadenilla [Motos]
+   "kit de repartición": sale de Kits de cadenilla [Motos] y queda en Kits de repartición [Carros]
+   "tanque de gasolina": sale de Tanques de gasolina y tapas [Motos] y queda en Tanques de gasolina [Carros]
+   "clutch": sale de Kits de clutch [Carros] y queda en Clutch (embrague) [Carros]
+   "embrague": sale de Clutch (embrague) [Carros] y queda en Kits de clutch [Carros]
+   "tubo de escape": sale de Exostos [Motos] y queda en Tubos y puntas de escape [Carros]
+   "caja de cambios": sale de Cajas de cambios y engranajes [Motos] y queda en Cajas de cambios [Carros]
+   "selectora": sale de Selectoras y palancas de cambios [Motos] y queda en Selectoras y guayas de cambios [Carros]
+   "protector de motor": sale de Sliders, defensas y cubrecárter [Motos] y queda en Guardapolvos y protectores de motor [Carros]
+   "portaplacas": sale de Marcos y portaplacas [Carros] y queda en Portaplacas [Motos]
+   "porta placa": sale de Marcos y portaplacas [Carros] y queda en Portaplacas [Motos]
+   "cojín": sale de Sillines [Motos] y queda en Cojines [Carros]
+   "radios": sale de Rayos y niples [Motos] y queda en Radios [Carros]
+   "defensa": sale de Sliders, defensas y cubrecárter [Motos] y queda en Bómperes (bumper) [Carros]
+   "guardafangos": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
+   "guardafango": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
+   "guardabarros": sale de Guardafangos [Carros] y queda en Guardabarros [Motos]
+   "fender": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
+   "guardafango delantero": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
+   "baúl": sale de Baúles y compuertas [Carros] y queda en Maletas y baúles [Motos]
+   "espejos retrovisores": sale de Espejos [Motos] y queda en Espejos retrovisores [Carros]
+   "espejos": sale de Espejos retrovisores [Carros] y queda en Espejos [Motos]
+   "retrovisor": sale de Espejos retrovisores [Carros] y queda en Espejos [Motos]
+   "parrilla": sale de Parrillas y portamaletas [Motos] y queda en Persianas (parrillas) [Carros]
+   "parabrisas": sale de Cúpulas (parabrisas) y soportes [Motos] y queda en Vidrios y parabrisas [Carros]
+   "limpiaparabrisas)": sale de Elevavidrios [Carros] y queda en Plumillas (limpiaparabrisas) [Carros]
+   "tablero": sale de Tableros, tacómetros y velocímetros [Motos] y queda en Tableros y consolas [Carros]
+   "palanca de cambios": sale de Pedales de cambio y freno [Motos] y queda en Palancas de cambios y pomos [Carros]
+   "pedal de freno": sale de Pedales [Carros] y queda en Pedales de cambio y freno [Motos]
+   "compresor": sale de Compresores de aire [Herramientas] y queda en Compresores de AC [Carros]
+   "cámara de seguridad": sale de Cámaras [Motos] y queda en Cámaras DVR y de seguridad [Carros]
+   "alarmas": sale de Candados y bloqueos [Motos] y queda en Alarmas [Carros]
+   "escape": sale de Exostos [Motos] y queda en Escape [Motos]
+   "rampa": sale de Rampas y caballetes [Motos] y queda en Elevadores [Herramientas]
+   "guantes": sale de Guantes de moto [Motos] y queda en Guantes [Herramientas]
+   "puños": sale de Manubrios [Motos] y queda en Puños y contrapesos [Motos]
+   "pads": sale de Manubrios [Motos] y queda en Pads [Herramientas]
+
+3. GRUPOS SIN SINONIMOS UTILES (quedaron con un solo termino)
+   Llantas y rines [Carros]
+   Accesorios de rueda [Carros]
+   Lubricantes y mantenimiento [Carros]
+   Filtros [Carros]
+   Baterías [Carros]
+   Frenos [Carros]
+   Suspensión y dirección [Carros]
+   Eléctrico y electrónico [Carros]
+   Encendido [Carros]
+   Arranque y carga [Carros]
+   Gestión electrónica [Carros]
+   Eléctrico general [Carros]
+   Iluminación [Carros]
+   Motor y transmisión [Carros]
+   Bloque y culata [Carros]
+   Correas y tensores [Carros]
+   Refrigeración [Carros]
+   Turbo e intercooler [Carros]
+   Combustible e inyección [Carros]
+   Admisión y escape [Carros]
+   Partes plásticas de motor [Carros]
+   Accesorios [Carros]
+   Accesorios exteriores [Carros]
+   Accesorios interiores [Carros]
+   Audio [Carros]
+   Carrocería y climatización [Carros]
+   Carrocería [Carros]
+   Aire acondicionado y climatización [Carros]
+   Tecnología y seguridad [Carros]
+   Tecnología y conectividad [Carros]
+   Seguridad [Carros]
+   Rines y rayos [Motos]
+   Combustible [Motos]
+   Clutch y transmisión [Motos]
+   Arranque [Motos]
+   Escape [Motos]
+   Guayas y cables [Motos]
+   Cascos [Motos]
+   Ropa [Motos]
+   Chasis y carrocería [Motos]
+   Herramientas manuales [Herramientas]
+   Herramientas eléctricas y neumáticas [Herramientas]
+   Equipos de taller [Herramientas]
+   Diagnóstico y medición [Herramientas]
+   Cuidado y limpieza [Herramientas]
+   Consumibles de taller [Herramientas]
+
+4. DECIDE EL NEGOCIO — terminos genericos de una palabra
+   (en bidireccional capturan busquedas muy amplias)
+   "baúl" -> Maletas y baúles
+   "caja" -> Aceite de transmisión
+   "cojín" -> Cojines
+   "compresor" -> Compresores de AC
+   "defensa" -> Bómperes (bumper)
+   "fusible" -> Fusibles
+   "lavado" -> Equipos de lavado y pulido
+   "parrilla" -> Persianas (parrillas)
+   "pulido" -> Equipos de lavado y pulido
+   "rampa" -> Elevadores
+   "rele" -> Relés
+   "repuestos" -> Interior (repuestos)
+   "sensor" -> Sensores
+   "switch" -> Suiches y comandos
+   "tablero" -> Tableros y consolas
+   "tiempo" -> Repartición (distribución)
+
+5. DECIDE EL NEGOCIO — marcas comerciales como sinonimo
+   (solo tienen sentido si se venden esas marcas)
+   "aceite mobil" -> Aceite de motor 4T
+   "aceite motul" -> Aceite de motor 4T
+   "batería mac" -> Baterías para carro
+   "batería mac moto" -> Baterías para moto
+   "batería willard" -> Baterías para carro
+   "batería yuasa" -> Baterías para moto
+   "karcher" -> Hidrolavadoras

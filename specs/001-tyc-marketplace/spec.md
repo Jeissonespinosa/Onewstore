@@ -1,0 +1,94 @@
+# 001 — Términos y Condiciones del marketplace (Colombia, referencia UE)
+
+- **Estado:** draft
+- **Responsable:** Diego
+- **Rama:** `feat/001-tyc-marketplace`
+- **Depende de:** — (la redacción final requiere revisión de un abogado colombiano)
+
+## 1. Contexto y problema
+Repuestox vende repuestos y accesorios para carros (y motos/herramientas) y opera como
+marketplace con sellers terceros. Hoy no hay TyC publicados ni aceptados en el checkout.
+Se necesita un marco legal completo. La regulación europea (muy exhaustiva en marketplaces)
+se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colombiana**.
+
+## 2. Objetivos / No-objetivos
+**Objetivos**
+- Investigar y documentar qué exige la regulación UE a un marketplace y mapearlo a la ley colombiana.
+- Producir el set de documentos legales y publicarlos en la tienda.
+- Registrar la aceptación de TyC por parte del usuario.
+
+**No-objetivos**
+- No es asesoría legal: el texto final lo valida un abogado.
+- No se cubre venta fuera de Colombia.
+
+## 3. Entregables
+| # | Documento | Ruta propuesta |
+|---|---|---|
+| D1 | Informe de investigación (UE → Colombia) | `specs/001-tyc-marketplace/research.md` |
+| D2 | TyC generales de uso de la plataforma | `/terminos-y-condiciones` |
+| D3 | TyC de venta al consumidor (compra, envío, pago) | `/terminos-de-venta` |
+| D4 | Condiciones para sellers (contrato marketplace) | `/condiciones-sellers` |
+| D5 | Política de privacidad / tratamiento de datos | `/politica-de-privacidad` |
+| D6 | Política de devoluciones, retracto y garantías | `/devoluciones-y-garantias` |
+| D7 | Política de reseñas y moderación (alimenta spec 002) | `/politica-de-resenas` |
+
+## 4. Matriz de investigación (a completar en D1)
+Las referencias son punto de partida: **cada cita debe verificarse** contra el texto vigente.
+
+| Tema | Referencia UE | Equivalente Colombia (a verificar) |
+|---|---|---|
+| Transparencia del marketplace / identidad del vendedor | DSA (Reg. 2022/2065); Dir. 2019/2161 (Omnibus) | Ley 1480/2011 (Estatuto del Consumidor): información veraz y suficiente |
+| Ranking y criterios de búsqueda | Omnibus, P2B Reg. 2019/1150 | Información clara (Ley 1480) |
+| Derecho de desistimiento (14 días UE) | Dir. 2011/83/UE | Retracto: Ley 1480 art. 47 (5 días hábiles, ventas a distancia) |
+| Reversión del pago | — | Ley 1480 art. 51, Decreto 587/2016 |
+| Garantía legal de productos | Dir. 2019/771 | Ley 1480, capítulo de garantías |
+| Seguridad de productos (repuestos) | GPSR Reg. 2023/988 | Reglamentos técnicos / SIC |
+| Datos personales | GDPR | Ley 1581/2012, Decreto 1377/2013, RNBD |
+| Reseñas de consumidores | Omnibus (verificación de reseñas) | Ley 1480 (publicidad engañosa) |
+| Comercio electrónico | eIDAS | Ley 527/1999, Ley 1480 comercio electrónico |
+| Resolución de conflictos | ODR / ADR | SIC (Superintendencia de Industria y Comercio) |
+| Responsabilidad de intermediario / sellers | DSA | Ley 1480: responsabilidad solidaria productor-expendedor |
+
+Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cumple en Repuestox.
+
+## 5. Contenido mínimo específico de repuestos y autopartes
+- Compatibilidad: el comprador verifica el vehículo (marca/modelo/año/VIN); el seller declara compatibilidad.
+- Repuestos nuevos vs. usados/remanufacturados vs. alternativos: etiquetado obligatorio.
+- Piezas de seguridad (frenos, llantas, airbags): reglas de devolución e instalación profesional.
+- Garantía condicionada a instalación correcta; exclusiones por mal uso.
+- Productos instalados / sin empaque: límites al retracto (a validar legalmente).
+- Importación y origen del producto.
+
+## 6. Requisitos funcionales
+- `RF-1` Las 6 páginas legales (D2-D7) son accesibles por URL propia y enlazadas desde el footer en todas las páginas.
+- `RF-2` En registro/checkout hay un checkbox **no premarcado** de aceptación de TyC y política de privacidad con enlaces.
+- `RF-3` La aceptación guarda usuario, versión del documento y fecha/hora (Master Data o campo de perfil).
+- `RF-4` Cada documento muestra versión y fecha de última actualización.
+- `RF-5` En PDP y checkout se muestra quién vende (seller) y quién envía.
+- `RF-6` El texto legal es editable sin redeploy de código (rich-text / CMS de VTEX).
+
+## 7. Requisitos no funcionales
+- Lenguaje claro (español), legible en móvil.
+- SEO: páginas indexables; canonical correcto.
+- Cumplimiento: revisión legal firmada antes de publicar.
+
+## 8. Criterios de aceptación
+- `AC-1` Dada cualquier página, cuando el usuario baja al footer, ve enlaces a los documentos y cada uno abre su página.
+- `AC-2` Dado un usuario en checkout, cuando intenta pagar sin aceptar TyC, el pago queda bloqueado con mensaje claro.
+- `AC-3` Dado que se acepta TyC, existe un registro con usuario, versión y timestamp consultable.
+- `AC-4` Dada una nueva versión de TyC, cuando el usuario vuelve a comprar, se le pide aceptar la nueva versión.
+- `AC-5` `research.md` incluye la matriz completa con citas y fue revisado por un abogado (evidencia en el PR).
+- `AC-6` Las páginas legales cumplen accesibilidad (contraste, jerarquía de encabezados).
+
+## 9. Preguntas abiertas
+- [ ] ¿Quién es el abogado revisor y cuál es el plazo?
+- [ ] ¿Repuestox es mero intermediario o vendedor directo en algunas ventas? (cambia la responsabilidad)
+- [ ] ¿Quién gestiona pagos a sellers (split de VTEX)? Impacta cláusulas de comisiones.
+- [ ] ¿Existen razón social, NIT y registro para el aviso legal?
+- [ ] ¿El checkbox de TyC se puede forzar nativamente en el checkout de VTEX o requiere app/custom?
+- [ ] ¿Se venden repuestos usados/importados?
+
+## 10. Referencias
+- Colombia: Ley 1480/2011, Ley 1581/2012, Ley 527/1999, Decreto 1074/2015, Decreto 587/2016.
+- UE: DSA (2022/2065), Dir. 2011/83/UE, Dir. 2019/2161 (Omnibus), Reg. 2019/1150 (P2B), GDPR (2016/679), GPSR (2023/988).
+- Benchmarks: TyC de marketplaces europeos (Amazon, Zalando, AUTODOC) y colombianos (Mercado Libre, Éxito).

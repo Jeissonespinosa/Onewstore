@@ -3,13 +3,20 @@
 - **Estado:** draft
 - **Responsable:** Diego
 - **Rama:** `feat/001-tyc-marketplace`
-- **Depende de:** — (la redacción final requiere revisión de un abogado colombiano)
+- **Depende de:** 000 (contexto); 004 y 005 (contacto y "Quiénes somos" para el aviso legal); personalización del checkout (RF-2); revisión de un abogado colombiano
 
 ## 1. Contexto y problema
 Repuestox vende repuestos y accesorios para carros (y motos/herramientas) y opera como
 marketplace con sellers terceros. Hoy no hay TyC publicados ni aceptados en el checkout.
 Se necesita un marco legal completo. La regulación europea (muy exhaustiva en marketplaces)
 se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colombiana**.
+
+**Hallazgos de la spec 000 (workspace `devwilbis`, 2026-11-12):**
+- Ninguna de las 6 rutas legales existe (`/devoluciones-y-garantias` y `/condiciones-sellers` caen en "sin resultados").
+- El checkout es el nativo de VTEX, sin personalizar y sin checkbox de TyC: el RF-2 exige personalizarlo (p. ej. `checkout-ui-custom`), que hoy está fuera del repo.
+- El PDP no muestra quién vende ni quién envía (RF-5).
+- `/about-us` es plantilla en inglés y `/contact-us` está roto: ver specs 004 y 005.
+- Hoy solo existe un seller propio (`Repuestox`, id 1): las condiciones de sellers (D4) anticipan un marketplace que aún no opera.
 
 ## 2. Objetivos / No-objetivos
 **Objetivos**
@@ -66,6 +73,7 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 - `RF-4` Cada documento muestra versión y fecha de última actualización.
 - `RF-5` En PDP y checkout se muestra quién vende (seller) y quién envía.
 - `RF-6` El texto legal es editable sin redeploy de código (rich-text / CMS de VTEX).
+- `RF-7` El checkout se personaliza (logo de marca y checkbox de aceptación) para cumplir el RF-2; si VTEX no permite bloquear el pago nativamente, se documenta la alternativa en `plan.md`.
 
 ## 7. Requisitos no funcionales
 - Lenguaje claro (español), legible en móvil.

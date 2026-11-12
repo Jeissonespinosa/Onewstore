@@ -3,12 +3,18 @@
 - **Estado:** draft
 - **Responsable:** Diego
 - **Rama:** `feat/002-feedback-rating`
-- **Depende de:** 001 (política de reseñas y consentimiento)
+- **Depende de:** 000 (contexto); 001 (política de reseñas y consentimiento); datos reales de producto y pedidos para probar
 
 ## 1. Contexto y problema
 No hay forma de que los compradores califiquen productos o sellers, ni de que los sellers
 den feedback. El rating genera confianza (crítico en repuestos) y datos de calidad.
 Se debe poder **enviar, evaluar (moderar) y editar** feedback.
+
+**Hallazgos de la spec 000 (workspace `devwilbis`, 2026-11-12):**
+- El PDP declara `product-rating-summary` y `product-questions-and-answers`, pero no se renderizan: probablemente la app de reseñas no está instalada. Refuerza el spike de la opción A.
+- Solo existe el seller propio (`Repuestox`, id 1): los flujos de seller (RF-9, RF-10) no se pueden probar de punta a punta hasta que haya sellers terceros. Se pueden construir con el seller 1 y validarlos con datos de prueba.
+- El flujo de pedido (dirección, pago, confirmación) no se ha verificado, y el RF-3 (compra verificada, pedido entregado) depende de él.
+- El catálogo tiene 8 productos de prueba: hacen falta pedidos de prueba entregados para validar AC-2 a AC-8.
 
 ## 2. Objetivos / No-objetivos
 **Objetivos**

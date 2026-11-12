@@ -3,11 +3,14 @@
 - **Estado:** draft
 - **Responsable:** Diego
 - **Rama:** `feat/003-menu-categorias-global`
-- **Depende de:** — (usa `catalogo/estructura-categorias-v2.json` como fuente de categorías)
+- **Depende de:** 000 (contexto) — (usa `catalogo/estructura-categorias-v2.json` como fuente de categorías)
 
 ## 1. Contexto y problema
-Para cambiar de categoría el usuario debe volver al inicio. Con ~600 páginas de categoría
-(carros, motos, herramientas) esto penaliza la navegación. Referentes: **Éxito** y **Mercado Libre**
+Para cambiar de categoría el usuario debe volver al inicio. Con 567 páginas de categoría
+(33 macros, 37 subcategorías y 497 tipos; ver spec 000 §3) esto penaliza la navegación.
+Hallazgos de la spec 000: el header solo tiene login y minicart (no hay menú que reutilizar)
+y el catálogo real de VTEX casi no tiene el árbol cargado (las rutas existen en el theme,
+pero los listados son placeholders). Referentes: **Éxito** y **Mercado Libre**
 (menú "Categorías" siempre visible en el header, con subcategorías desplegables).
 
 ## 2. Objetivos / No-objetivos
@@ -42,7 +45,7 @@ Para cambiar de categoría el usuario debe volver al inicio. Con ~600 páginas d
 
 ## 6. Criterios de aceptación
 - `AC-1` En home, PLP, PDP y carrito el acceso "Categorías" está visible en el header.
-- `AC-2` Desde una PDP, elegir "Frenos" navega a su página de categoría sin pasar por el home.
+- `AC-2` Desde una PDP, elegir una categoría (p. ej. "Llantas") navega a su página sin pasar por el home. Mientras el catálogo no tenga el árbol cargado, basta con que la página de categoría cargue (aunque el listado sea placeholder).
 - `AC-3` En móvil (≤640 px) el menú abre como drawer y permite navegar 3 niveles.
 - `AC-4` Solo con teclado se abre, recorre y cierra el menú (Tab/Enter/Esc).
 - `AC-5` `python3 scripts/gen-categorias.py --dry-run` no reporta enlaces rotos tras el cambio.
@@ -51,9 +54,10 @@ Para cambiar de categoría el usuario debe volver al inicio. Con ~600 páginas d
 
 ## 7. Preguntas abiertas
 - [ ] ¿Mega-menú (`vtex.menu` con submenús) o menú lateral tipo Mercado Libre? (spike con prototipo)
-- [ ] ¿2 o 3 niveles en escritorio? ~600 páginas pueden saturar.
+- [ ] ¿2 o 3 niveles en escritorio? 567 páginas pueden saturar; proponer mostrar macros + subcategorías (33 + 37) y dejar los 497 tipos a las páginas de categoría.
 - [ ] ¿Categorías destacadas/promocionales en el menú?
-- [ ] ¿Qué hay ya en `store/blocks/header/header.jsonc`? (auditar y reutilizar)
+- [x] ¿Qué hay ya en el header? Resuelto (spec 000): solo login y minicart; el menú se construye desde cero.
+- [ ] ¿Se carga el árbol completo en VTEX antes del menú, o primero un subconjunto? (spec 000 §10)
 
 ## 8. Referencias
 - Benchmarks: exito.com, mercadolibre.com.co.

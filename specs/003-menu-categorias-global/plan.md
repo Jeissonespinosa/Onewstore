@@ -24,7 +24,7 @@
 
 ## Decisions
 
-1. **Mega-menú de `vtex.menu` en escritorio, drawer de `vtex.store-drawer` con `vtex.menu` vertical en móvil.** Son apps ya instaladas, evitan código React propio (constitución #1) y comparten la definición de entradas. *Alternativa:* menú lateral permanente tipo Mercado Libre; se descarta porque ocupa espacio en cada página y no encaja con el header actual. *Alternativa:* componente React propio; se descarta mientras `vtex.menu` cubra la necesidad (ver decisión 6).
+1. **Mega-menú de `vtex.menu` en escritorio, drawer de `vtex.store-drawer` con `vtex.menu` vertical en móvil.** Son apps ya instaladas, evitan código React propio (constitución #1) y comparten la definición de entradas. *Actualización:* el drawer ya no usa `vtex.store-drawer` (decisión 10). *Alternativa:* menú lateral permanente tipo Mercado Libre; se descarta porque ocupa espacio en cada página y no encaja con el header actual. *Alternativa:* componente React propio; se descarta mientras `vtex.menu` cubra la necesidad (ver decisión 6).
 
 2. **Tres niveles en el menú: sección → macro → subcategoría.** Con 567 páginas, mostrar solo hasta subcategoría (33 + 37 entradas más las 3 secciones) mantiene el panel manejable; los tipos viven en la página de la subcategoría. Para macros sin subcategorías, el segundo nivel son sus tipos. La spec 003 dejaba esto como pregunta abierta; se asume "3 niveles" y se anota para revisión.
 
@@ -61,6 +61,8 @@ Probado el 2026-11-15 en el workspace `devdiego` (`vtex.menu` 2.x, `vtex.store-d
 **Conclusión provisional:** `vtex.menu` y `vtex.store-drawer` cubren la estructura y el drawer, pero no teclado (Esc, foco), `aria-expanded` ni foco de retorno (RF-7, AC-4 y la sección 5 de la spec). 
 
 **Decisión (tarea 1.3, aprobada por Diego el 2026-11-15):** se construye un **componente React mínimo** con test en `react/__tests__`, en lugar de ajustar la spec. Debe cubrir Esc, apertura y recorrido con teclado, `aria-expanded`, `aria-label` en el `nav` y foco de retorno al disparador, tanto en escritorio como en el drawer. Sigue usando `vtex.menu` / `vtex.store-drawer` para la estructura y los estilos donde sea posible; el alcance exacto (envolver los bloques nativos o renderizar el árbol propio) se define al implementar los grupos 3 y 4 y se anota aquí. La spec no cambia: RF-7, AC-4 y la sección 5 se mantienen.
+
+10. **El drawer móvil es una variante del propio componente (`variant="drawer"`), no `vtex.store-drawer`** (decisión del 2026-11-15, consecuencia de 1.3). `vtex.store-drawer` no cierra con Esc, no devuelve el foco y no expone `aria-modal` (spike), así que el componente propio aporta su drawer: diálogo `role="dialog"` + `aria-modal`, foco que entra al abrir y vuelve al disparador, Tab atrapado dentro, Esc, cierre por overlay y bloqueo del scroll del fondo. Se monta en un **portal** sobre `document.body`: el header fijo usa `backdrop-filter`, y un `position: fixed` dentro de un ancestro con `backdrop-filter` se posiciona respecto a ese ancestro y no a la pantalla. En móvil el árbol es un acordeón de tres niveles (sección → macro → subcategoría), un solo ítem abierto por nivel.
 
 ## Risks / Trade-offs
 

@@ -23,9 +23,9 @@
 
 ## 4. Menú en móvil
 
-- [ ] 4.1 Añadir el `drawer-trigger` y el `drawer` con el menú vertical en `flex-layout.row#1-mobile` de `header.jsonc`. Verificación: a 360 px el botón abre el drawer.
-- [ ] 4.2 Crear `styles/css/vtex.store-drawer.css` y ajustar `vtex.menu.css` para el acordeón. Verificación: revisión visual a 360 y 768 px.
-- [ ] 4.3 Comprobar los tres niveles en móvil, el cierre del drawer y el acceso con el header fijo. Verificación: criterio "Recorrer los tres niveles" pasa a mano en el workspace.
+- [x] 4.1 Añadir la variante `drawer` a `react/CategoryMenu.js` (acordeón de 3 niveles en un portal, ver plan decisión 10) con tests en `react/__tests__`, y poner el bloque en `flex-layout.row#1-mobile` de `header.jsonc`. Verificación: los tests de Jest pasan y, a 360 px, el botón abre el drawer.
+- [x] 4.2 Estilos del drawer y del acordeón en `react/CategoryMenu.css` (plan decisión 9). Verificación: revisión visual a 360 y 768 px.
+- [x] 4.3 Comprobar los tres niveles en móvil, el cierre del drawer y el acceso con el header fijo. Verificación: criterio "Recorrer los tres niveles" pasa a mano en el workspace.
 
 ## 5. Accesibilidad, rendimiento y cierre
 

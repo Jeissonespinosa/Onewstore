@@ -11,7 +11,9 @@
  * blanco) solo va en bordes e iconos; el texto es tinta (contraste AA).
  */
 
-.categoryMenu {
+/* drawerRoot vive en un portal (fuera de .categoryMenu): necesita sus propias variables */
+.categoryMenu,
+.drawerRoot {
   --cm-ink: #010101;
   --cm-red: #FF371E;
   --cm-paper: #ffffff;
@@ -20,6 +22,11 @@
   --cm-line: rgba(1, 1, 1, 0.12);
   --cm-focus: #060294;
 
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--cm-ink);
+}
+
+.categoryMenu {
   position: relative;
   /* alto reservado: abrir el panel no mueve el header (sin CLS) */
   display: flex;
@@ -170,10 +177,199 @@
   border-bottom: 1px solid var(--cm-line);
 }
 
+/* --- variante movil: drawer con acordeon ----------------------------------- */
+
+/* texto solo para lectores de pantalla (el disparador movil muestra solo el icono) */
+.triggerLabelHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* bloquea el scroll del fondo mientras el drawer esta abierto (se agrega al body) */
+.bodyLock {
+  overflow: hidden;
+}
+
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(1, 1, 1, 0.55);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  width: min(86vw, 22rem);
+  background: var(--cm-paper);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.3);
+  animation: cmSlideIn 0.22s ease-out;
+}
+
+@keyframes cmSlideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: var(--cm-ink);
+  color: var(--cm-paper);
+}
+
+.drawerTitle {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.drawerClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cm-paper);
+  cursor: pointer;
+}
+
+.drawerClose:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.drawerClose:focus-visible,
+.accButton:focus-visible,
+.accLink:focus-visible {
+  outline: 3px solid var(--cm-focus);
+  outline-offset: -3px;
+}
+
+/* el foco sobre fondo oscuro del encabezado necesita un contorno claro */
+.drawerClose:focus-visible {
+  outline-color: var(--cm-paper);
+}
+
+.drawerBody {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 1.5rem;
+}
+
+.accItem {
+  margin: 0;
+  border-bottom: 1px solid var(--cm-line);
+}
+
+.accPanel {
+  background: var(--cm-soft);
+}
+
+.accPanel .accItem:last-child {
+  border-bottom: 0;
+}
+
+.accButton,
+.accLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  color: var(--cm-ink);
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* sangria por nivel: seccion, macro, subcategoria */
+.level1 {
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+}
+
+.level2 {
+  padding: 0.625rem 1rem 0.625rem 1.5rem;
+  font-weight: 600;
+}
+
+.level3 {
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  font-weight: 400;
+}
+
+.accButton:hover,
+.accLink:hover {
+  background: var(--cm-hover);
+}
+
+.accButton[aria-expanded="true"] {
+  border-left: 4px solid var(--cm-red);
+}
+
+.accCaret {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.accButton[aria-expanded="true"] > .accCaret {
+  transform: rotate(90deg);
+}
+
+.accSeeAll {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--cm-line);
+  text-underline-offset: 4px;
+}
+
+.accLink[aria-current="page"] {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--cm-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 /* sin animaciones para quien prefiere menos movimiento */
 @media (prefers-reduced-motion: reduce) {
-  .trigger {
+  .trigger,
+  .accCaret {
     transition: none;
+  }
+
+  .drawer {
+    animation: none;
   }
 }
 

@@ -20,6 +20,7 @@
  * Cada elemento lleva el handle (para personalizarlo desde fuera) y su clase del module.
  */
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
@@ -44,6 +45,24 @@ const CSS_HANDLES = [
   'itemLink',
   'itemCaret',
   'seeAll',
+  // variante drawer (movil)
+  'triggerLabelHidden',
+  'drawerRoot',
+  'drawerOverlay',
+  'drawer',
+  'drawerHeader',
+  'drawerTitle',
+  'drawerClose',
+  'drawerBody',
+  'accItem',
+  'accButton',
+  'accLink',
+  'accPanel',
+  'accCaret',
+  'accSeeAll',
+  'level1',
+  'level2',
+  'level3',
 ]
 
 const COL_SECTIONS = 0
@@ -95,7 +114,8 @@ function Hamburger() {
   )
 }
 
-function CategoryMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-category-menu' }) {
+/* Clase de cada elemento = handle de vtex.css-handles + clase del CSS Module. */
+function useClasses() {
   // La app real devuelve { handles, withModifiers }; el mock de los tests, el mapa directo.
   const cssHandles = useCssHandles(CSS_HANDLES)
   const handles = cssHandles.handles || cssHandles
@@ -103,6 +123,11 @@ function CategoryMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-
   CSS_HANDLES.forEach(name => {
     h[name] = cx(handles[name], styles[name])
   })
+  return h
+}
+
+function PanelMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-category-menu' }) {
+  const h = useClasses()
   const { navigate, route } = useRuntime()
   const sections = sectionsProp || (menuData && menuData.sections) || []
   const path = publicPath(route && route.path)
@@ -343,6 +368,236 @@ function CategoryMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-
       )}
     </div>
   )
+}
+
+const FOCUSABLE = 'a[href], button:not([disabled])'
+const slug = value => value.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '')
+
+/*
+ * Variante movil: boton + drawer (dialogo modal) con un acordeon de tres niveles.
+ * Se monta en un portal sobre document.body: el header fijo usa backdrop-filter y un
+ * position:fixed dentro de un ancestro con backdrop-filter se ancla a ese ancestro,
+ * no a la pantalla. Ver plan.md, decision 10.
+ */
+function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-drawer' }) {
+  const h = useClasses()
+  const { navigate, route } = useRuntime()
+  const path = publicPath(route && route.path)
+
+  const [open, setOpen] = useState(false)
+  const [sel, setSel] = useState({ section: null, macro: null })
+
+  const triggerRef = useRef(null)
+  const dialogRef = useRef(null)
+  const closeRef = useRef(null)
+
+  const dialogId = `${id}-dialog`
+
+  const openMenu = () => {
+    // Abre desplegada la rama de la pagina actual, si esta dentro del arbol.
+    const section = sections.findIndex(x => isOnBranch(x, path))
+    const macro =
+      section < 0 ? -1 : (sections[section].children || []).findIndex(m => hasKids(m) && isOnBranch(m, path))
+    setSel({ section: section < 0 ? null : section, macro: macro < 0 ? null : macro })
+    setOpen(true)
+  }
+
+  const closeAndReturnFocus = useCallback(() => {
+    setOpen(false)
+    if (triggerRef.current) triggerRef.current.focus()
+  }, [])
+
+  // Al abrir: el foco entra al drawer, el scroll del fondo se bloquea y Esc cierra.
+  useEffect(() => {
+    if (!open) return undefined
+    const lock = styles.bodyLock || 'rx-body-lock'
+    document.body.classList.add(lock)
+    if (closeRef.current) closeRef.current.focus()
+    const onKey = e => {
+      if (e.key === 'Escape') {
+        e.preventDefault()
+        closeAndReturnFocus()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.body.classList.remove(lock)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [open, closeAndReturnFocus])
+
+  if (!sections.length) return null
+
+  // Tab atrapado dentro del dialogo (aria-modal).
+  const onDialogKeyDown = e => {
+    if (e.key !== 'Tab' || !dialogRef.current) return
+    const items = Array.from(dialogRef.current.querySelectorAll(FOCUSABLE))
+    if (!items.length) return
+    const first = items[0]
+    const last = items[items.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
+
+  const onLinkClick = (e, to) => {
+    setOpen(false)
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+    e.preventDefault()
+    navigate({ to })
+  }
+
+  const renderLink = (item, level, text, extra) => (
+    <a
+      href={item.path}
+      className={cx(h.accLink, h[level], extra)}
+      aria-current={isCurrent(item, path) ? 'page' : undefined}
+      onClick={e => onLinkClick(e, item.path)}
+    >
+      {text || item.nombre}
+    </a>
+  )
+
+  const renderSeeAll = (item, level) =>
+    renderLink(item, level, `Ver todo en ${item.nombre}`, h.accSeeAll)
+
+  // Un nivel del acordeon: boton con aria-expanded + panel (solo montado si esta abierto).
+  const renderAccordion = (item, level, expanded, onToggle, body) => {
+    const panelId = `${id}-${slug(item.path)}`
+    return (
+      <li key={item.path} className={h.accItem}>
+        <button
+          type="button"
+          className={cx(h.accButton, h[level])}
+          aria-expanded={expanded}
+          aria-controls={expanded ? panelId : undefined}
+          onClick={onToggle}
+        >
+          <span>{item.nombre}</span>
+          <span className={h.accCaret}><Caret /></span>
+        </button>
+        {expanded && (
+          <div id={panelId} className={h.accPanel}>
+            {body}
+          </div>
+        )}
+      </li>
+    )
+  }
+
+  const renderSubs = macro => (
+    <>
+      {renderSeeAll(macro, 'level3')}
+      <ul className={h.list}>
+        {macro.children.map(sub => (
+          <li key={sub.path} className={h.accItem}>
+            {renderLink(sub, 'level3')}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+
+  const renderMacros = section => (
+    <>
+      {renderSeeAll(section, 'level2')}
+      <ul className={h.list}>
+        {(section.children || []).map((macro, j) =>
+          hasKids(macro) ? (
+            renderAccordion(
+              macro,
+              'level2',
+              sel.macro === j,
+              () => setSel(prev => ({ ...prev, macro: prev.macro === j ? null : j })),
+              renderSubs(macro)
+            )
+          ) : (
+            <li key={macro.path} className={h.accItem}>
+              {renderLink(macro, 'level2')}
+            </li>
+          )
+        )}
+      </ul>
+    </>
+  )
+
+  const drawer = (
+    <div className={h.drawerRoot}>
+      <div className={h.drawerOverlay} onClick={closeAndReturnFocus} aria-hidden="true" />
+      <div
+        id={dialogId}
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={label}
+        className={h.drawer}
+        onKeyDown={onDialogKeyDown}
+      >
+        <div className={h.drawerHeader}>
+          <span className={h.drawerTitle}>{label}</span>
+          <button
+            type="button"
+            ref={closeRef}
+            className={h.drawerClose}
+            aria-label="Cerrar menú"
+            onClick={closeAndReturnFocus}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M2 2l12 12M14 2 2 14" stroke="currentColor" strokeWidth="2" fill="none" />
+            </svg>
+          </button>
+        </div>
+        <nav aria-label={label} className={h.drawerBody}>
+          <ul className={h.list}>
+            {sections.map((section, i) =>
+              renderAccordion(
+                section,
+                'level1',
+                sel.section === i,
+                () =>
+                  setSel(prev =>
+                    prev.section === i ? { section: null, macro: null } : { section: i, macro: null }
+                  ),
+                renderMacros(section)
+              )
+            )}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  )
+
+  return (
+    <div className={h.categoryMenu}>
+      <button
+        type="button"
+        ref={triggerRef}
+        className={h.trigger}
+        aria-expanded={open}
+        aria-haspopup="dialog"
+        aria-controls={open ? dialogId : undefined}
+        onClick={() => (open ? closeAndReturnFocus() : openMenu())}
+      >
+        <span className={h.triggerIcon}><Hamburger /></span>
+        <span className={h.triggerLabelHidden}>{label}</span>
+      </button>
+      {open && typeof document !== 'undefined' && createPortal(drawer, document.body)}
+    </div>
+  )
+}
+
+/*
+ * variant="panel" (por defecto): escritorio, mega-menu de tres columnas.
+ * variant="drawer": movil, drawer con acordeon.
+ */
+function CategoryMenu({ variant = 'panel', sections: sectionsProp, ...rest }) {
+  const sections = sectionsProp || (menuData && menuData.sections) || []
+  const Variant = variant === 'drawer' ? DrawerMenu : PanelMenu
+  return <Variant {...rest} sections={sections} />
 }
 
 export default CategoryMenu

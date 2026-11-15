@@ -19,7 +19,7 @@ const codigo=corte.split('\n').filter(l=>!l.startsWith('import')).join('\n');
 eval(codigo + '\nglobal.normalize=normalize; global.modelosDeMarca=modelosDeMarca; global.cruzar=cruzar; global.anosDeModelo=anosDeModelo;');
 
 // facets reales de la categoria Llantas (lo que devuelve VTEX hoy)
-const facetModelos=['Accent','Cherokee','Cruze','D-Max','Fluence','Frontier / NP300','Grand Vitara','Hilux','Jetta','Logan','March','NPR','Ranger','Rio','Sail','Vitara'].map(n=>({name:n,value:n.toLowerCase(),key:'modelo'}));
+const facetModelos=['Accent','Cherokee','Cruze','D-Max','Fluence','Frontier - NP300','Grand Vitara','Hilux','Jetta','Logan','March','NPR','Ranger','Rio','Sail','Vitara'].map(n=>({name:n,value:n.toLowerCase(),key:'modelo'}));
 const facetAnios=[]; for(let y=2000;y<=2024;y++) facetAnios.push({name:String(y),value:String(y),key:'ano'});
 
 let fallos=0;
@@ -35,7 +35,7 @@ console.log('=== modelos por marca (cruce base x facet) ===');
 prueba('Toyota   -> solo Hilux',            mods('Toyota'),    ['Hilux']);
 prueba('Chevrolet-> sus 6 modelos',         mods('Chevrolet'), ['Cruze','D-Max','Grand Vitara','NPR','Sail','Vitara']);
 prueba('Chevrolet-> NO trae Cherokee',      mods('Chevrolet').includes('Cherokee'), false);
-prueba('Nissan   -> Frontier/NP300, March', mods('Nissan'),    ['Frontier / NP300','March']);
+prueba('Nissan   -> Frontier/NP300, March', mods('Nissan'),    ['Frontier - NP300','March']);
 prueba('Ford     -> solo Ranger',           mods('Ford'),      ['Ranger']);
 prueba('Renault  -> Fluence, Logan',        mods('Renault'),   ['Fluence','Logan']);
 prueba('Kia      -> solo Rio (no Frontier)',mods('Kia'),       ['Rio']);

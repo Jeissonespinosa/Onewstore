@@ -6,10 +6,14 @@
  * la categoria base: props query/map o, si no se pasan, la ruta de
  * la pagina actual (/carros/frenos/pastillas-de-freno -> map c,c,c),
  * asi un mismo bloque sirve para todas las paginas de categoria.
- * Cada paso filtra al
- * siguiente: al elegir marca se vuelven a pedir los facets con esa
- * marca aplicada (solo quedan sus modelos), y al elegir modelo solo
- * quedan los anos de ese modelo. Al pulsar el boton navega a la
+ * Cada paso filtra al siguiente. Los facets dicen que productos hay,
+ * pero no que modelo pertenece a que marca: el producto lleva dos
+ * listas independientes, asi que al elegir Toyota los facets siguen
+ * ofreciendo modelos de otras marcas del mismo producto. Por eso el
+ * modelo y el ano se cruzan contra la base de vehiculos de Colombia
+ * (data/vehiculos-colombia.json): la base dice que modelos tiene la
+ * marca y en que anos se vendio, y el facet dice cuales de esos
+ * tienen producto. Se muestra la interseccion. Al pulsar el boton navega a la
  * pagina de busqueda de la categoria con los filtros aplicados:
  * /<query>/<marca>/<modelo>/<ano>?map=<map>,<k1>,<k2>,<k3>
  *
@@ -22,6 +26,7 @@ import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
 import vehicleFacets from './queries/vehicleFacets.gql'
+import vehiculos from './data/vehiculos-colombia.json'
 
 const CSS_HANDLES = [
   'vehicleSelector',
@@ -160,6 +165,33 @@ function findFacet(facets, wanted) {
   return (facets || []).find(f => normalize(f.name) === w || normalize(f.values && f.values[0] && f.values[0].key) === w)
 }
 
+/* Modelos que la marca realmente tiene, segun la base de Colombia. */
+function modelosDeMarca(seccion, marca) {
+  const base = vehiculos[seccion] || {}
+  const clave = Object.keys(base).find(m => normalize(m) === normalize(marca))
+  return clave ? base[clave] : null
+}
+
+/* Interseccion base x facet: deja solo las opciones del facet que la
+   base reconoce para esa marca. Si la base no conoce la marca, no
+   filtra nada (mejor mostrar de mas que dejar al cliente sin opciones). */
+function cruzar(opciones, permitidos) {
+  if (!permitidos) return opciones
+  const set = Object.keys(permitidos).map(normalize)
+  const filtradas = opciones.filter(o => set.indexOf(normalize(o.name)) >= 0)
+  return filtradas.length ? filtradas : opciones
+}
+
+/* Anos en que ese modelo se vendio, segun la base. */
+function anosDeModelo(seccion, marca, modelo) {
+  const modelos = modelosDeMarca(seccion, marca)
+  if (!modelos) return null
+  const clave = Object.keys(modelos).find(m => normalize(m) === normalize(modelo))
+  if (!clave) return null
+  const [desde, hasta] = modelos[clave]
+  return desde && hasta ? { desde, hasta } : null
+}
+
 const VehicleSelector = ({
   title = 'Busca por vehículo',
   buttonLabel = 'Buscar repuestos',
@@ -214,7 +246,28 @@ const VehicleSelector = ({
   const modelF = findFacet(facets, modelFacet)
   const yearF = findFacet(facets, yearFacet)
 
+  const seccion = isMoto ? 'motos' : 'carros'
   const options = f => (f && f.values ? f.values : [])
+
+  /* Modelos: solo los que la base reconoce para la marca elegida. */
+  const modelOptions = useMemo(() => {
+    const opts = options(modelF)
+    if (!brand) return opts
+    return cruzar(opts, modelosDeMarca(seccion, brand.value || brand.name))
+  }, [modelF, brand, seccion])
+
+  /* Anos: solo los del periodo en que se vendio ese modelo. */
+  const yearOptions = useMemo(() => {
+    const opts = options(yearF)
+    if (!brand || !model) return opts
+    const r = anosDeModelo(seccion, brand.value || brand.name, model.value || model.name)
+    if (!r) return opts
+    const dentro = opts.filter(o => {
+      const y = parseInt(o.name, 10)
+      return !isNaN(y) && y >= r.desde && y <= r.hasta
+    })
+    return dentro.length ? dentro : opts
+  }, [yearF, brand, model, seccion])
 
   const ready = Boolean(brand)
 
@@ -228,8 +281,7 @@ const VehicleSelector = ({
 
   // Con una sola marca (o un solo modelo) el select mantiene su
   // valor aunque cambie la lista: se preserva la opcion elegida.
-  const renderSelect = (f, value, setValue, placeholder, disabled) => {
-    const opts = options(f)
+  const renderSelect = (opts, value, setValue, placeholder, disabled) => {
     const cur = value ? value.value : ''
     const list = value && !opts.some(o => o.value === cur) ? [value].concat(opts) : opts
     const isDisabled = disabled || list.length === 0
@@ -297,9 +349,9 @@ const VehicleSelector = ({
   `
   const selects = (
     <React.Fragment>
-      {renderSelect(brandF, brand, v => { setBrand(v); setModel(null); setYear(null) }, brandLabel, false)}
-      {renderSelect(modelF, model, v => { setModel(v); setYear(null) }, modelLabel, !brand)}
-      {renderSelect(yearF, year, setYear, yearLabel, !model)}
+      {renderSelect(options(brandF), brand, v => { setBrand(v); setModel(null); setYear(null) }, brandLabel, false)}
+      {renderSelect(modelOptions, model, v => { setModel(v); setYear(null) }, modelLabel, !brand)}
+      {renderSelect(yearOptions, year, setYear, yearLabel, !model)}
     </React.Fragment>
   )
   // La pista se duplica para que el loop no tenga salto.

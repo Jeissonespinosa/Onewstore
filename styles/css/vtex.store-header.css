@@ -64,6 +64,13 @@
   border-bottom: 1px solid #f1f1f1;
 }
 
+/* El header y el buscador de seccion (sticky-layout#rxSearch) son contenedores
+   fixed con el mismo z-index (999) y el buscador va despues en el DOM: tapaba el
+   panel del menu Categorias. El header va un nivel por encima (spec 003). */
+:global(.vtex-sticky-layout-0-x-container--sticky-header) {
+  z-index: 1000;
+}
+
 /* desktop/mobile header background: white with brand */
 :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
 :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {

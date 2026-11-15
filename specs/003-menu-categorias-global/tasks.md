@@ -17,9 +17,9 @@
 
 ## 3. Menú en escritorio
 
-- [ ] 3.1 Añadir en `store/blocks/header/header.jsonc` el disparador "Categorías" en `flex-layout.row#4-desktop`, enlazado al menú generado. Verificación: en el workspace, el acceso aparece en inicio, categoría, ficha de producto, búsqueda y carrito (AC-1).
-- [ ] 3.2 Crear `styles/css/vtex.menu.css` con tokens del theme para el panel, el estado activo y el foco visible; resolver el CSS huérfano `.flexCol--headerNavLinks`. Verificación: revisión visual a 1280 px y navegación por teclado con foco visible.
-- [ ] 3.3 Comprobar el comportamiento en escritorio: abrir, elegir sección → macro → subcategoría, "Ver todo", resaltado de la categoría actual, cierre con Esc y clic fuera, y acceso tras hacer scroll. Verificación: cada escenario de "Mega-menú en escritorio", "Indicación de la categoría actual", "Cierre del menú" y "Acceso global" pasa a mano.
+- [x] 3.1 Añadir en `store/blocks/header/header.jsonc` el disparador "Categorías" en `flex-layout.row#4-desktop`, enlazado al menú generado. Verificación: en el workspace, el acceso aparece en inicio, categoría, ficha de producto y búsqueda (AC-1; el checkout nativo queda fuera, ver spec.md).
+- [x] 3.2 Crear los estilos del menú (CSS Module `react/CategoryMenu.css`, ver plan decisión 9) con tokens del theme para el panel, el estado activo y el foco visible; resolver el CSS huérfano `.flexCol--headerNavLinks` (eliminado de `vtex.flex-layout.css`, `vtex.store-header.css` y `vtex.login.css`). Verificación: revisión visual a 1280 px y navegación por teclado con foco visible.
+- [x] 3.3 Comprobar el comportamiento en escritorio: abrir, elegir sección → macro → subcategoría, "Ver todo", resaltado de la categoría actual, cierre con Esc y clic fuera, y acceso tras hacer scroll. Verificación: cada escenario de "Mega-menú en escritorio", "Indicación de la categoría actual", "Cierre del menú" y "Acceso global" pasa a mano.
 
 ## 4. Menú en móvil
 

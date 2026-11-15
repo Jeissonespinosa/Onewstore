@@ -49,6 +49,7 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
+      "flex-layout.col#categories-desktop",
       "flex-layout.col#spacer",
       "flex-layout.row#header-actions"
     ]
@@ -64,6 +65,20 @@
       "login",
       "minicart.v2"
     ]
+  },
+  "flex-layout.col#categories-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "categoriesDesktop"
+    },
+    "children": [
+      "category-menu#header"
+    ]
+  },
+  "category-menu#header": {
+    "props": {
+      "id": "rx-category-menu-desktop"
+    }
   },
   "login": {
     "props": {

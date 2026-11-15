@@ -1,4 +1,7 @@
 {
+  "category-menu": {
+    "component": "CategoryMenu"
+  },
   "vehicle-selector": {
     "component": "VehicleSelector"
   },

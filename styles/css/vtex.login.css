@@ -546,7 +546,6 @@
    validation, letting us use the render-route class.
    ============================================================ */
 
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerNavLinks),
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActions),
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--headerActions),
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile),

@@ -23,6 +23,7 @@ const mapper = {
   '^vtex\\.css-handles$': '<rootDir>/__tests__/__mocks__/vtex.css-handles.js',
   '^react-apollo$': '<rootDir>/__tests__/__mocks__/react-apollo.js',
   '\\.gql$': '<rootDir>/__tests__/__mocks__/gql.js',
+  '\\.css$': '<rootDir>/__tests__/__mocks__/styles.js',
 }
 if (EXTRA) {
   // Una sola copia de React: el componente y react-dom deben usar la misma.

@@ -38,7 +38,9 @@
 
 7. **Acceso en el header.** Escritorio: nuevo `flex-layout.col` con el disparador entre el logo y el espaciador de `flex-layout.row#4-desktop`. Móvil: `drawer-trigger` antes del logo en `flex-layout.row#1-mobile`.
 
-8. **Rendimiento.** Activar la renderización optimizada de submenús que ofrezca `vtex.menu` y reservar el alto del disparador en CSS para evitar CLS. Estilos en `styles/css/vtex.menu.css` y `styles/css/vtex.store-drawer.css`, con tokens de `styles/configs/style.json` (constitución #4).
+8. **Rendimiento.** Reservar el alto del disparador en CSS para evitar CLS (el panel es `position: absolute`, no mueve el contenido: medido 0 px). El panel solo se monta al abrir, así que no añade ~300 enlaces al HTML inicial.
+
+9. **Estilos como CSS Module en `react/CategoryMenu.css`** (decisión del 2026-11-15, desviación de la letra de la constitución #4). El styles builder de VTEX ignora `styles/css/onewstore.store-theme.css` ("is not a dependency": un theme no puede depender de sí mismo) y rechaza como "selectores deprecados" las reglas `:global(.onewstore-store-theme-5-x-…)` puestas en otro archivo, como `vtex.store-header.css`. Un CSS Module cumple el espíritu de la regla (sin estilos inline, valores alineados con `styles/configs/style.json`) y permite `:hover`, `:focus-visible` y media queries. Cada elemento lleva además su handle de `vtex.css-handles` para poder personalizarlo desde fuera. La constitución #4 debería recoger esta excepción para componentes React propios.
 
 ### Resultados del spike (tarea 1.2)
 

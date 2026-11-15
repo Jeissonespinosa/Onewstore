@@ -4,7 +4,7 @@
 - **Responsable:** Diego
 - **Rama:** `feat/specs`
 - **Depende de:** — (documento base; las specs 001-006 se apoyan en él)
-- **Última actualización:** 2026-11-15 (versión del theme 5.3.0, OpenSpec, idioma de las specs y respuestas del equipo sobre negocio, catálogo y estado; **faltan las de actores y marketplace**)
+- **Última actualización:** 2026-11-15 (versión del theme 5.3.0, OpenSpec descartado, idioma de las specs y respuestas del equipo sobre negocio, catálogo y estado; **faltan las de actores y marketplace**)
 
 > Spec de **contexto**, no de funcionalidad: fija qué es Repuestox, quién interviene, cómo
 > funciona el dominio y qué hay realmente construido. Es el punto de partida para
@@ -172,7 +172,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Checkout, pagos, envíos | **Sin personalizar y sin verificar** | [Hecho·sitio] |
 | Contacto | Roto en el workspace | [Hecho·sitio] |
 | Producción | **No hay tienda en producción con dominio propio: el proyecto está en desarrollo.** El git declara 5.3.0 instalada en `master`, pero eso no equivale a una tienda abierta al público. | [Hecho·equipo] + [Hecho·git] |
-| Proceso de specs | Hay `specs/` (000-006) y OpenSpec inicializado (`openspec/`, esquema `spec-driven`, sin cambios ni specs todavía). Idioma de los artefactos: **español**, fijado en `openspec/config.yaml`. | [Hecho·código] |
+| Proceso de specs | Las specs viven en `specs/` (000-007) y se ejecutan con la skill `implementar-spec`. **OpenSpec se probó y se descartó** (2026-11-15); no hay carpeta `openspec/`. Idioma de las specs y de la documentación: **español**, según la constitución #5. | [Hecho·código] |
 
 ### Hallazgos de calidad a corregir
 Cubiertos por las specs 004 (hallazgo 2), 005 (hallazgo 1) y 006 (hallazgos 3 a 7).
@@ -260,4 +260,4 @@ decisiones de negocio y no se asignan sin confirmación del equipo.
 - Sitio verificado: `https://devwilbis--onewstore.myvtex.com/` (workspace de desarrollo, 2026-11-12).
 - Código: `README.md`, `manifest.json`, `store/`, `react/VehicleSelector.js`, `react/TyreSizeSelector.js`, `react/queries/vehicleFacets.gql`, `catalogo/`, `scripts/gen-categorias.py`, `scripts/gen-sinonimos.py`.
 - Specs: `specs/constitution.md`, `001-tyc-marketplace`, `002-feedback-rating`, `003-menu-categorias-global`, `004-contact-us-roto`, `005-about-us`, `006-ajustes-calidad-tienda`, `catalogo/como-cargan-los-sellers.md`, `catalogo/propuesta-medidas-llanta.md`.
-- Proceso: `openspec/config.yaml` (idioma español), commit `ab08278` (versión 5.3.0).
+- Proceso: `.claude/skills/implementar-spec/SKILL.md`, `specs/constitution.md` (#5, idioma), commit `ab08278` (versión 5.3.0).

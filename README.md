@@ -20,6 +20,7 @@ Es una app de tipo *store-theme*: solo contiene configuración de bloques (JSON/
    npm install -g vtex
    ```
 3. Acceso a la cuenta VTEX de la tienda y un rol con permisos para crear workspaces y hacer `link`.
+4. **Python 3** (solo para regenerar las páginas y el menú de categorías con `scripts/gen-categorias.py` y correr sus tests; en Windows el comando suele ser `python`, no `python3`).
 
 ---
 
@@ -109,7 +110,11 @@ Escribe `store/routes.json` (conserva las rutas que no son de categoría), expor
 las landings y la landing `/herramientas`), `category-pages-<sección>.jsonc` (banner,
 "Volver" de cada página), `category-grids-<sección>.jsonc` (cuadrícula de hijos),
 `category-listing.jsonc` (listado + consulta por página) y `category-filters.jsonc`
-(filtros + selector de vehículo en las hojas de carros y motos). Para cambiar una
+(filtros + selector de vehículo en las hojas de carros y motos). También escribe
+`react/category-menu.json`, el árbol del menú «Categorías» del header (sección → macro →
+subcategoría; las macros sin subcategorías listan sus tipos; la ruta de cada nodo con hijos es
+su enlace «Ver todo»). Es un archivo de datos que consume el componente React del menú, no un
+bloque de `store/`, y tampoco se edita a mano. Para cambiar una
 categoría, edita el JSON y vuelve a correr el script (valida solo que ningún enlace interno apunte a una ruta inexistente);
 después reinicia `vtex link`
 (el relink incremental rechaza los archivos grandes).

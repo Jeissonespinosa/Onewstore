@@ -10,10 +10,10 @@
 
 ## 2. Generador de entradas del menú
 
-- [ ] 2.1 Ampliar `scripts/gen-categorias.py` para generar `store/blocks/header/category-menu.jsonc` con secciones → macros → subcategorías (macros sin subcategorías: sus tipos; subcategorías de tipo filtros: sin hijos), con enlace "Ver todo" por nivel. Verificación: `python3 scripts/gen-categorias.py --dry-run` lista el archivo nuevo y no reporta enlaces rotos.
-- [ ] 2.2 Añadir en `scripts/tests/test_gen_categorias.py` pruebas de: conteo de entradas (3 secciones, 33 macros, 37 subcategorías), macro sin subcategorías, subcategoría de tipo filtros, idempotencia y que el archivo versionado coincida con el JSON. Verificación: `python3 -m unittest scripts/tests/test_gen_categorias.py` en verde.
-- [ ] 2.3 Ejecutar el generador y versionar `category-menu.jsonc`; confirmar que su tamaño permite el relink incremental. Verificación: el archivo está en git y `vtex link` lo acepta sin reiniciar.
-- [ ] 2.4 Documentar en `README.md` la nueva salida del generador y el requisito de Python 3. Verificación: el README lista `category-menu.jsonc` entre las salidas.
+- [x] 2.1 Ampliar `scripts/gen-categorias.py` para generar `react/category-menu.json` (datos para el componente React, ver plan decisión 3) con secciones → macros → subcategorías (macros sin subcategorías: sus tipos; subcategorías de tipo filtros: sin hijos), con enlace "Ver todo" por nivel. Verificación: `python3 scripts/gen-categorias.py --dry-run` lista el archivo nuevo, no reporta enlaces rotos y no deja salida en `store/blocks/`.
+- [x] 2.2 Añadir en `scripts/tests/test_gen_categorias.py` pruebas de: conteo de entradas (3 secciones, 33 macros, 37 subcategorías), macro sin subcategorías, subcategoría de tipo filtros, idempotencia y que el archivo versionado coincida con el JSON. Verificación: `python3 -m unittest scripts/tests/test_gen_categorias.py` en verde.
+- [x] 2.3 Ejecutar el generador y versionar `react/category-menu.json`. Verificación: el archivo está en git, es JSON válido y la prueba de sincronía con el árbol pasa (no usa `vtex link`: no es un bloque).
+- [x] 2.4 Documentar en `README.md` la nueva salida del generador y el requisito de Python 3. Verificación: el README lista `react/category-menu.json` entre las salidas.
 
 ## 3. Menú en escritorio
 

@@ -24,5 +24,5 @@ Ninguna página puede bajar más de 5 puntos respecto de esta tabla, en cada dis
 
 ## Notas
 
-- Se desconoce si cada valor es una sola corrida o la mediana de varias. Lighthouse varía hasta unos 5 puntos entre corridas, que es justo el margen de AC-7; al medir de nuevo en 5.2, repetir tres veces y usar la mediana.
+- Cada valor es la **mediana** de varias corridas (confirmado por Diego). Lighthouse varía hasta unos 5 puntos entre corridas; al medir de nuevo en 5.2, usar el mismo método.
 - Medido con `vtex link` en el workspace de desarrollo, que carga más lento que un theme publicado. Repetir la medición final en las mismas condiciones.

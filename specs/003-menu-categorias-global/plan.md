@@ -28,9 +28,9 @@
 
 2. **Tres niveles en el menú: sección → macro → subcategoría.** Con 567 páginas, mostrar solo hasta subcategoría (33 + 37 entradas más las 3 secciones) mantiene el panel manejable; los tipos viven en la página de la subcategoría. Para macros sin subcategorías, el segundo nivel son sus tipos. La spec 003 dejaba esto como pregunta abierta; se asume "3 niveles" y se anota para revisión.
 
-3. **Ampliar `gen-categorias.py` para escribir `store/blocks/header/category-menu.jsonc`.** Es un archivo generado nuevo, no editado a mano, que define los bloques `menu#...` y `menu-item#...` a partir de `build_tree()`. Se reutiliza `check_links` para validar que cada `href` existe en `routes`. *Alternativa:* un script aparte; se descarta para no duplicar el recorrido ni la validación. Se escribe en `header/` y no en `home/` porque no es contenido de página; el script ya acepta añadir salidas.
+3. **Ampliar `gen-categorias.py` para escribir `react/category-menu.json`.** Es un archivo de datos generado (no un bloque de `store/`): el árbol sección → macro → subcategoría que consume el componente React (decisión de la tarea 1.3). Sale de `build_tree()` y reutiliza `check_links` para validar que cada `path` existe en `routes`. Se escribe en `react/` y no en `store/blocks/` porque un bloque de interfaz desconocida rompería `vtex link` hasta que exista el componente. *Alternativa (descartada, 2026-11-15):* `store/blocks/header/category-menu.jsonc` con bloques `menu#`; no encaja con el componente propio. *Alternativa:* un script aparte; se descarta para no duplicar el recorrido ni la validación.
 
-4. **Bloques de layout a mano, entradas generadas.** `header.jsonc` (a mano) solo referencia un bloque raíz del menú y el `drawer`; los `menu-item` hijos viven en el archivo generado. Así un cambio de categorías nunca obliga a editar el header.
+4. **Bloques de layout a mano, entradas generadas.** `header.jsonc` (a mano) solo referencia el bloque del componente y el `drawer`; el árbol vive en el archivo de datos generado. Así un cambio de categorías nunca obliga a editar el header.
 
 5. **Estado activo con la funcionalidad nativa de `vtex.menu` si existe; si no, con CSS sobre el `href` activo.** Se resuelve en el spike (tarea 1).
 

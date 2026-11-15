@@ -45,7 +45,7 @@ aceptación (`AC-n`) que cubre.
 |---|---|---|---|---|
 | 000 | Contexto global de Repuestox (negocio, actores, dominio, casos de uso, estado) | Diego | draft | — |
 | 001 | TyC para marketplace (Colombia, referencia UE) | Diego | draft | 000, 004, 005 (requiere revisión legal) |
-| 002 | Feedback de la experiencia de compra y del sitio (rating + botón flotante) | Diego | draft | 000, 004 (formularios en Master Data), 001 D5 (privacidad) |
+| 002 | Feedback de la experiencia de compra y del sitio (rating + botón flotante; servicio propio en VTEX IO) | Diego | draft | 000, 001 D5 (privacidad) |
 | 003 | Acceso rápido a categorías desde cualquier página | Diego | done | 000 |
 | 004 | Formulario de contacto roto (`/contact-us`) | Por asignar | draft | 000 |
 | 005 | Página "Quiénes somos" (`/about-us`) | Por asignar | draft | 000 (contenido de negocio) |

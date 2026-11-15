@@ -1,5 +1,5 @@
 import { json } from 'co-body'
-import { originAllowed } from './common'
+import { noStore, originAllowed } from './common'
 
 // El builder masterdata falla en builder-hub ("Schema creation ... failed. undefined"), así que la
 // entidad se crea a mano con la API de Master Data (ver README de feedback-service). Spike: usa el
@@ -8,6 +8,7 @@ const ENTITY = 'onewstore_feedback_service_spiketest'
 const SCHEMA = '0.0.1-devdiego'
 
 export async function spikeWrite(ctx: any, next: () => Promise<any>) {
+  noStore(ctx)
   if (!originAllowed(ctx)) {
     ctx.status = 403
     ctx.body = { error: 'origin' }

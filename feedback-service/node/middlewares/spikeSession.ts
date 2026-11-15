@@ -1,8 +1,9 @@
-import { maskEmail, originAllowed } from './common'
+import { maskEmail, noStore, originAllowed } from './common'
 
 // Spike 1.5(e): el servidor lee la sesión de la tienda (cookie vtex_session) y solo devuelve el
 // correo enmascarado. El correo completo nunca sale del servidor.
 export async function spikeSession(ctx: any, next: () => Promise<any>) {
+  noStore(ctx)
   if (!originAllowed(ctx)) {
     ctx.status = 403
     ctx.body = { error: 'origin' }

@@ -18,3 +18,9 @@ export function maskEmail(email: string): string {
   if (!local || !domain) return ''
   return `${local[0]}***@${domain}`
 }
+
+// Las respuestas del servicio dependen de la sesión y no deben guardarse en el CDN ni en el navegador
+// (sin esto el CDN reutilizó una respuesta durante minutos; spike 1.5, 2026-11-15).
+export function noStore(ctx: any) {
+  ctx.set('Cache-Control', 'no-store, no-cache, private')
+}

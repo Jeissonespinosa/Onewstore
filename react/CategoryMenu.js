@@ -24,7 +24,6 @@ import { createPortal } from 'react-dom'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
-import menuData from './category-menu.json'
 import styles from './CategoryMenu.css'
 
 const CSS_HANDLES = [
@@ -63,6 +62,7 @@ const CSS_HANDLES = [
   'level1',
   'level2',
   'level3',
+  'drawerLoading',
 ]
 
 const COL_SECTIONS = 0
@@ -126,10 +126,9 @@ function useClasses() {
   return h
 }
 
-function PanelMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-category-menu' }) {
+function PanelMenu({ sections, pending, onRequest, label = 'Categorías', id = 'rx-category-menu' }) {
   const h = useClasses()
   const { navigate, route } = useRuntime()
-  const sections = sectionsProp || (menuData && menuData.sections) || []
   const path = publicPath(route && route.path)
 
   const [open, setOpen] = useState(false)
@@ -145,9 +144,16 @@ function PanelMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-cat
   const close = useCallback(() => setOpen(false), [])
 
   const openMenu = useCallback(() => {
+    if (onRequest) onRequest()
     setSel(initialSelection(sections, path))
     setOpen(true)
-  }, [sections, path])
+  }, [sections, path, onRequest])
+
+  // Los datos pueden llegar despues de abrir (carga diferida): se elige la rama actual.
+  useEffect(() => {
+    if (open && sections.length) setSel(initialSelection(sections, path))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sections])
 
   const columnItems = col =>
     panelRef.current ? Array.from(panelRef.current.querySelectorAll(`[data-col="${col}"]`)) : []
@@ -172,9 +178,9 @@ function PanelMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-cat
     return () => document.removeEventListener('mouseup', onUp)
   }, [])
 
-  if (!sections.length) return null
+  if (!sections.length && !pending) return null
 
-  const section = sections[sel.section] || sections[0]
+  const section = sections[sel.section] || sections[0] || {}
   const macros = section.children || []
   const macro = sel.macro != null ? macros[sel.macro] : null
   const subs = hasKids(macro) ? macro.children : null
@@ -314,15 +320,17 @@ function PanelMenu({ sections: sectionsProp, label = 'Categorías', id = 'rx-cat
         ref={triggerRef}
         className={h.trigger}
         aria-expanded={open}
-        aria-controls={open ? panelId : undefined}
+        aria-controls={open && sections.length ? panelId : undefined}
         onClick={() => (open ? close() : openMenu())}
         onKeyDown={onTriggerKeyDown}
+        onMouseEnter={onRequest}
+        onFocus={onRequest}
       >
         <span className={h.triggerIcon}><Hamburger /></span>
         <span className={h.triggerLabel}>{label}</span>
       </button>
 
-      {open && (
+      {open && sections.length > 0 && (
         <nav
           id={panelId}
           ref={panelRef}
@@ -379,7 +387,7 @@ const slug = value => value.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '')
  * position:fixed dentro de un ancestro con backdrop-filter se ancla a ese ancestro,
  * no a la pantalla. Ver plan.md, decision 10.
  */
-function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-drawer' }) {
+function DrawerMenu({ sections, pending, onRequest, label = 'Categorías', id = 'rx-category-menu-drawer' }) {
   const h = useClasses()
   const { navigate, route } = useRuntime()
   const path = publicPath(route && route.path)
@@ -394,6 +402,7 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
   const dialogId = `${id}-dialog`
 
   const openMenu = () => {
+    if (onRequest) onRequest()
     // Abre desplegada la rama de la pagina actual, si esta dentro del arbol.
     const section = sections.findIndex(x => isOnBranch(x, path))
     const macro =
@@ -426,7 +435,17 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
     }
   }, [open, closeAndReturnFocus])
 
-  if (!sections.length) return null
+  // Los datos pueden llegar despues de abrir (carga diferida): se despliega la rama actual.
+  useEffect(() => {
+    if (!open || !sections.length) return
+    const section = sections.findIndex(x => isOnBranch(x, path))
+    const macro =
+      section < 0 ? -1 : (sections[section].children || []).findIndex(m => hasKids(m) && isOnBranch(m, path))
+    setSel({ section: section < 0 ? null : section, macro: macro < 0 ? null : macro })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sections])
+
+  if (!sections.length && !pending) return null
 
   // Tab atrapado dentro del dialogo (aria-modal).
   const onDialogKeyDown = e => {
@@ -552,6 +571,7 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
           </button>
         </div>
         <nav aria-label={label} className={h.drawerBody}>
+          {!sections.length && <p className={h.drawerLoading} role="status">Cargando categorías…</p>}
           <ul className={h.list}>
             {sections.map((section, i) =>
               renderAccordion(
@@ -581,6 +601,8 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
         aria-haspopup="dialog"
         aria-controls={open ? dialogId : undefined}
         onClick={() => (open ? closeAndReturnFocus() : openMenu())}
+        onMouseEnter={onRequest}
+        onFocus={onRequest}
       >
         <span className={h.triggerIcon}><Hamburger /></span>
         <span className={h.triggerLabelHidden}>{label}</span>
@@ -595,9 +617,34 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
  * variant="drawer": movil, drawer con acordeon.
  */
 function CategoryMenu({ variant = 'panel', sections: sectionsProp, ...rest }) {
-  const sections = sectionsProp || (menuData && menuData.sections) || []
+  // Sin `sections` el arbol (46 KB) se descarga al primer uso del menu (hover, foco o clic en
+  // el boton), no con el primer pintado de cada pagina: pesa en Lighthouse (spec 003, AC-7).
+  const [loaded, setLoaded] = useState(null)
+  const inflight = useRef(false)
+  const mounted = useRef(true)
+
+  useEffect(() => {
+    mounted.current = true
+    return () => { mounted.current = false }
+  }, [])
+
+  const onRequest = useCallback(() => {
+    if (sectionsProp || loaded || inflight.current) return
+    inflight.current = true
+    import('./category-menu.json')
+      .then(mod => {
+        const data = mod && mod.default ? mod.default : mod
+        if (mounted.current) setLoaded((data && data.sections) || [])
+      })
+      .catch(() => {
+        inflight.current = false // reintenta en la siguiente interaccion
+      })
+  }, [sectionsProp, loaded])
+
+  const sections = sectionsProp || loaded || []
+  const pending = !sectionsProp && !loaded
   const Variant = variant === 'drawer' ? DrawerMenu : PanelMenu
-  return <Variant {...rest} sections={sections} />
+  return <Variant {...rest} sections={sections} pending={pending} onRequest={sectionsProp ? undefined : onRequest} />
 }
 
 export default CategoryMenu

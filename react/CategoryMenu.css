@@ -279,6 +279,12 @@
   padding-bottom: 1.5rem;
 }
 
+.drawerLoading {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.9375rem;
+}
+
 .accItem {
   margin: 0;
   border-bottom: 1px solid var(--cm-line);

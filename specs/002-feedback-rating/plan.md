@@ -81,6 +81,22 @@ Observado el 2026-11-15 en `devdiego`, como visitante anónimo, solo con lectura
 
 **Pendiente de 1.3** (requiere sesión de administrador o token, que no uso): crear un esquema de prueba, comprobar que una escritura anónima funciona y que una lectura anónima se rechaza (decisión 3). Un esquema público con `v-security.publicJsonSchema: true` solo expone **la definición**; el control de quién escribe y lee los documentos va en los permisos de la entidad, a verificar al crearla.
 
+### Resultados del spike (tarea 1.4, parcial)
+
+Observado el 2026-11-15 en `devdiego`, como visitante anónimo.
+
+| Pregunta | Resultado |
+|---|---|
+| ¿`store.orderplaced` muestra el header y el footer de la tienda? | **Sí.** Con `/checkout/orderPlaced/?og=<número ficticio>` se renderizan el botón "Categorías", el acceso a la cuenta y el pie de página. |
+| ¿Un bloque en el header aparece también en la confirmación del pedido? | **Sí** (se deduce de lo anterior): basta **una** instancia global; no hace falta duplicar en `orderplaced.jsonc` para RF-8c. |
+| ¿Cómo se sabe si hay sesión y cuál es el correo? | `GET /api/sessions?items=profile.email,profile.isAuthenticated` responde 200 con la cookie de la propia sesión. Anónimo: solo `isAuthenticated: "false"`, sin correo. **Con sesión iniciada no probado** (no inicio sesión). |
+| ¿Cómo se obtiene el correo del pedido? | `GET /api/checkout/pub/orders/<og>` existe (404 con un número inexistente). **Qué devuelve y a quién con un pedido real no se verificó**: falta un pedido (tarea 1.2, aplazada por no haber medio de pago). |
+
+**Decisiones actualizadas:**
+- **6 (botón):** una sola instancia en `header.jsonc`, dentro de `header-layout.desktop` y de `header-layout.mobile` (solo se pinta una según el ancho), no en `orderplaced.jsonc`. El lugar queda resuelto; el modal sigue *[asumido]* hasta probar `vtex.modal-layout` en el grupo 4.
+- **5 (correo):** autenticado → API de sesión, cookie del propio usuario, sin pasar por la URL. Pedido → se intenta con el endpoint de pedido o con el contexto de `vtex.order-placed`; **se confirma con un pedido real**. Si no es seguro, el correo del pedido no se rellena y se pide al usuario; en el rating RF-3 lo toma del pedido, así que ese caso queda como riesgo a revisar con el equipo.
+- **4 (unicidad por pedido):** sigue pendiente de la tarea 1.3 (Master Data).
+
 ## Riesgos
 
 | Riesgo | Mitigación |

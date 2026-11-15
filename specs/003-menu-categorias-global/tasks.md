@@ -30,7 +30,7 @@
 ## 5. Accesibilidad, rendimiento y cierre
 
 - [x] 5.1 Probar el recorrido solo con teclado (Tab, Enter, Esc) y con un lector de pantalla, en escritorio y móvil. Verificación: criterios "Recorrido solo con teclado" y "Estado anunciado" pasan; hallazgos corregidos o anotados.
-- [ ] 5.2 Medir Lighthouse otra vez en las tres páginas y comparar con `baseline.md`; comprobar que abrir y cerrar el menú no mueve el contenido (CLS). Verificación: ninguna página baja más de 5 puntos y no hay desplazamiento al abrir.
+- [x] 5.2 Medir Lighthouse otra vez en las tres páginas y comparar con `baseline.md`; comprobar que abrir y cerrar el menú no mueve el contenido (CLS). Verificación: ninguna página baja más de 5 puntos y no hay desplazamiento al abrir.
 - [ ] 5.3 Actualizar el índice de `specs/README.md` y marcar la spec 003 como `implementing` o `done` según corresponda. Verificación: el índice refleja el estado y enlaza a la spec 003.
 
 ## Cierre

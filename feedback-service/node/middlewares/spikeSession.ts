@@ -1,25 +1,35 @@
 import { maskEmail, originAllowed } from './common'
 
+// Spike 1.5(e): el servidor lee la sesión de la tienda (cookie vtex_session) y solo devuelve el
+// correo enmascarado. El correo completo nunca sale del servidor.
 export async function spikeSession(ctx: any, next: () => Promise<any>) {
   if (!originAllowed(ctx)) {
     ctx.status = 403
     ctx.body = { error: 'origin' }
     return
   }
-  const token = ctx.vtex.storeUserAuthToken || ctx.cookies.get('VtexIdclientAutCookie')
-  if (!token) {
+  const sessionToken = ctx.cookies.get('vtex_session')
+  if (!sessionToken) {
     ctx.status = 200
-    ctx.body = { authenticated: false }
+    ctx.body = { authenticated: false, reason: 'no-session-cookie' }
     return
   }
   try {
-    const user = await ctx.clients.vtexId.getAuthenticatedUser(token)
+    const { sessionData } = await ctx.clients.session.getSession(sessionToken, [
+      'profile.isAuthenticated',
+      'profile.email',
+    ])
+    const profile = sessionData?.namespaces?.profile
+    const authenticated = profile?.isAuthenticated?.value === 'true'
+    const email = profile?.email?.value
     ctx.status = 200
-    // Solo se devuelve la versión enmascarada.
-    ctx.body = { authenticated: !!user, maskedEmail: user?.user ? maskEmail(user.user) : null }
+    ctx.body = {
+      authenticated,
+      maskedEmail: authenticated && email ? maskEmail(email) : null,
+    }
   } catch (e: any) {
-    ctx.status = 200
-    ctx.body = { authenticated: false, detail: e?.message }
+    ctx.status = 502
+    ctx.body = { error: 'session', detail: e?.message }
   }
   await next()
 }

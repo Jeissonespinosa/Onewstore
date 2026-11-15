@@ -19,6 +19,7 @@ specs/
   005-about-us/             spec.md (página Quiénes somos)
   006-ajustes-calidad-tienda/ spec.md (checkout, redes, 404, tests)
   007-selector-medida-rines/  spec.md · plan.md · tasks.md (selector Diámetro → Ancho → Huecos → PCD)
+  008 … 016                 borradores `backlog` (ver índice); se detallan cuando se aborden
 ```
 
 Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar la spec
@@ -28,6 +29,7 @@ Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar 
 
 | Estado | Significa | Salida |
 |---|---|---|
+| `backlog` | Tarea registrada y numerada, **sin refinar**: solo qué se pidió, contexto conocido y preguntas | `spec.md` breve; se pasa a `draft` al abordarla |
 | `draft` | Se está escribiendo/investigando | `spec.md` con preguntas abiertas |
 | `review` | Lista para revisión del equipo (y legal en la 001) | Preguntas abiertas resueltas |
 | `approved` | Contrato congelado; cambios requieren nueva revisión | `plan.md` + `tasks.md` |
@@ -49,6 +51,34 @@ aceptación (`AC-n`) que cubre.
 | 005 | Página "Quiénes somos" (`/about-us`) | Por asignar | draft | 000 (contenido de negocio) |
 | 006 | Ajustes de calidad de la tienda | Por asignar | draft | 000 |
 | 007 | Selector de medida de rines | Diego | approved | 000, `catalogo/como-cargan-los-sellers.md` |
+| 008 | Cambio rápido entre Carros, Motos y Herramientas | William | backlog | 003 |
+| 009 | Optimizar el uso por móvil | Diego | backlog | 002, 003 |
+| 010 | Mejorar el tiempo de carga | Diego | backlog | 003 (línea base), 011 |
+| 011 | Diseños, iconos y banners | William | backlog | — |
+| 012 | Ingreso con Apple y Google | William | backlog | respuesta de VTEX |
+| 013 | Mejorar el aspecto de la página de producto | William | backlog | 014 |
+| 014 | Crear productos base desde el seller de pruebas | William | backlog | Q8 de la 000 |
+| 015 | Botón de WhatsApp con chatbot de IA para comprar | William | backlog | respuesta de VTEX, 001, 016 |
+| 016 | Portal de sellers, administradores y asesores (.NET) con tickets | Diego | backlog | 000 (Q2, Q3, Q5), ampliar constitución |
+
+## Mapa: lista de tareas → specs
+
+| Tarea | Descripción | Responsable | Spec |
+|---|---|---|---|
+| 3 | Términos y condiciones | Diego | 001 |
+| 4 | Feedback de clientes | Diego | 002 |
+| 5 | Accesos rápidos al menú y categorías | Diego | 003 |
+| 6 | Botón para cambiar de moto a carro y a herramientas | William | 008 |
+| 7 | Optimizar el uso por móvil | Diego | 009 |
+| 8 | Mejorar el tiempo de carga | Diego | 010 |
+| 9 | Diseños, iconos, banners | William | 011 |
+| 10 | Ingreso con Apple y Google | William | 012 |
+| 11 | Mejorar la página del producto | William | 013 |
+| 12 | Productos base desde el seller de pruebas | William | 014 |
+| 13 | Botón de WhatsApp con chatbot de IA | William | 015 |
+| 14 | Página para seller, administrador y asesores (.NET) | Diego | 016 |
+
+Las specs 004, 005, 006 y 007 salieron de hallazgos y decisiones del proyecto, no de la lista de tareas.
 
 ## Roadmap propuesto
 

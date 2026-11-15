@@ -13,11 +13,12 @@ specs/
   _template.md              plantilla para nuevas specs
   000-contexto-global/      spec.md (contexto: negocio, actores, dominio, estado)
   001-tyc-marketplace/      spec.md · plan.md · tasks.md
-  002-feedback-rating/      spec.md · plan.md · tasks.md
+  002-feedback-rating/      spec.md (feedback de compra y del sitio) · plan.md · tasks.md
   003-menu-categorias-global/ spec.md · plan.md · tasks.md
   004-contact-us-roto/      spec.md (arreglo del formulario de contacto)
   005-about-us/             spec.md (página Quiénes somos)
   006-ajustes-calidad-tienda/ spec.md (checkout, redes, 404, tests)
+  007-selector-medida-rines/  spec.md (selector Diámetro → Ancho → Huecos → PCD)
 ```
 
 Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar la spec
@@ -42,18 +43,19 @@ aceptación (`AC-n`) que cubre.
 |---|---|---|---|---|
 | 000 | Contexto global de Repuestox (negocio, actores, dominio, casos de uso, estado) | Diego | draft | — |
 | 001 | TyC para marketplace (Colombia, referencia UE) | Diego | draft | 000, 004, 005 (requiere revisión legal) |
-| 002 | Feedback y rating de clientes y sellers | Diego | draft | 000, 001 (consentimiento/moderación en TyC) |
+| 002 | Feedback de la experiencia de compra y del sitio (rating + botón flotante) | Diego | draft | 000, 004 (formularios en Master Data), 001 D5 (privacidad) |
 | 003 | Acceso rápido a categorías desde cualquier página | Diego | draft | 000 |
 | 004 | Formulario de contacto roto (`/contact-us`) | Por asignar | draft | 000 |
 | 005 | Página "Quiénes somos" (`/about-us`) | Por asignar | draft | 000 (contenido de negocio) |
 | 006 | Ajustes de calidad de la tienda | Por asignar | draft | 000 |
+| 007 | Selector de medida de rines | Diego | draft | 000, `catalogo/como-cargan-los-sellers.md` |
 
 ## Roadmap propuesto
 
 1. **Semana 0 — Fundaciones:** aprobar `constitution.md` y `_template.md`; decidir preguntas abiertas de las 3 specs.
 2. **Semana 1 — 003 (menú global):** independiente, menor riesgo, entrega valor visible rápido. En paralelo, investigación legal de 001.
 3. **Semana 1-2 — 001 (TyC):** investigación → borrador → revisión legal → publicación de páginas (`/terminos-y-condiciones`, etc.) + checkbox de aceptación.
-4. **Semana 2-4 — 002 (feedback):** primero modelo de datos y moderación, luego UI de compradores, luego sellers.
+4. **Semana 2-3 — 002 (feedback):** spike de 1 día (¿estrellas nativas?, `store.orderplaced`, botón flotante), luego entidades de Master Data, rating de compra y botón flotante. Conviene resolver antes la spec 004, que comparte la infraestructura de formularios.
 
 Orden por dependencias y riesgo: 003 → 001 → 002. Las specs 004-006 (arreglos pequeños) se
 intercalan; conviene cerrar 004 y 005 antes de publicar la 001, porque aportan contacto y aviso

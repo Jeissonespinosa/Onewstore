@@ -3,7 +3,8 @@
 - **Estado:** draft
 - **Responsable:** Diego
 - **Rama:** `feat/specs`
-- **Depende de:** — (documento base; las specs 001-003 se apoyan en él)
+- **Depende de:** — (documento base; las specs 001-006 se apoyan en él)
+- **Última actualización:** 2026-11-15 (versión del theme 5.3.0, OpenSpec, idioma de las specs y respuestas del equipo sobre negocio, catálogo y estado; **faltan las de actores y marketplace**)
 
 > Spec de **contexto**, no de funcionalidad: fija qué es Repuestox, quién interviene, cómo
 > funciona el dominio y qué hay realmente construido. Es el punto de partida para
@@ -17,7 +18,9 @@ Cada afirmación lleva una etiqueta de **base** y, entre corchetes, su fuente:
 |---|---|
 | **[Hecho·sitio]** | Observado el 2026-11-12 en `https://devwilbis--onewstore.myvtex.com/` (workspace `devwilbis`, cuenta `onewstore`). Es un workspace de **desarrollo**, no producción. |
 | **[Hecho·código]** | Verificado leyendo este repositorio (`store/`, `react/`, `catalogo/`, `scripts/`). |
-| **[Hecho·spec]** | Lo dicen las specs 001-003, la constitución o los documentos de `catalogo/`. Es una **intención del equipo**, no prueba de que exista. |
+| **[Hecho·equipo]** | Respuesta dada por el responsable del proyecto (Diego) el 2026-11-15. Es una decisión o dato de negocio declarado, no verificado en el sitio ni en el código. |
+| **[Hecho·git]** | Consta en el historial de git (commits, autores, mensajes). Prueba que algo se hizo o se declaró, **no** que hoy esté así en el sitio. |
+| **[Hecho·spec]** | Lo dicen las specs 001-006, la constitución o los documentos de `catalogo/`. Es una **intención del equipo**, no prueba de que exista. |
 | **[Inferido]** | Conclusión razonable a partir de lo anterior, sin confirmación directa. |
 | **[Sin información]** | No hay rastro en el sitio, el código ni las specs. |
 
@@ -46,7 +49,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 **No-objetivos**
 - No define requisitos nuevos ni cambia código.
 - No sustituye la revisión legal de la spec 001.
-- No describe producción: hay que repetir la verificación allí (ver §8).
+- No describe producción: hay que repetir la verificación allí (ver AC-3 en §9).
 
 ---
 
@@ -55,21 +58,22 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Punto | Contenido | Base |
 |---|---|---|
 | Qué es | Tienda en línea "Repuestox" con tres áreas: **Carros**, **Motos** y **Herramientas**. La home es una portada dividida Carros / Motos con una franja Herramientas. | [Hecho·sitio] [Hecho·código: `repuestox-home.json`] |
+| Condición de lo que se vende | Repuestos **nuevos e importados**, más accesorios y herramientas para mecánica automotriz. **No** se venderán usados ni remanufacturados. | [Hecho·equipo] |
 | Qué vende | Repuestos y accesorios. Árbol de **33 macrocategorías** (Carros 12, Motos 14, Herramientas 7), 37 subcategorías y 497 tipos: **567 páginas** (suma: 33 + 37 + 497). Macros de carros: Eléctrico y electrónico, Motor y transmisión, Lubricantes y mantenimiento, Llantas y rines, Filtros, Baterías, Frenos, Suspensión y dirección, Iluminación, Accesorios, Carrocería y climatización, Tecnología y seguridad. | [Hecho·código: `catalogo/estructura-categorias-v2.json`] [Hecho·sitio: 12 macros de carros en `/carros`] |
 | Qué hay realmente a la venta | **8 productos** en el catálogo del workspace: 5 llantas (Aeolus, Goodyear, 2 Michelin, Bridgestone) y 3 de cuidado del auto con marca genérica "Brand name". La descripción de una llanta dice "Producto de ejemplo para validar los filtros". | [Hecho·sitio] → son **datos de prueba** [Inferido] |
-| A quién | No hay público objetivo declarado. Por el lenguaje y el selector de vehículo se apunta a dueños de carros y motos. | [Inferido] |
-| Dónde | **Colombia**: locale `es-CO`, moneda COP, país COL, copys "Envíos a toda Colombia", selector de departamento y municipio, TyC bajo Ley 1480/1581. Fuera de Colombia no se vende. | [Hecho·sitio] [Hecho·código: `hero-slider.jsonc`] [Hecho·spec: 001 "No se cubre venta fuera de Colombia"] |
-| Relación con Onewstore | `onewstore` es el **vendor/cuenta VTEX** y el nombre del repo de GitHub. "Repuestox" es la marca de cara al cliente (logo, footer, header). El README las junta como "Onewstore / Repuestox". No se sabe si son la misma empresa, empresa y proyecto, o cliente y proveedor. | Cuenta/vendor: [Hecho·código]. Relación societaria: **[Sin información]** |
-| Datos legales | Razón social, NIT y registro: no aparecen. `/about-us` muestra texto de plantilla de VTEX en inglés. | [Sin información] |
+| A quién | **Particulares y talleres** inicialmente; también empresas que compren repuestos para su flota. | [Hecho·equipo] |
+| Dónde | **Todo Colombia**: locale `es-CO`, moneda COP, país COL, copys "Envíos a toda Colombia", selector de departamento y municipio, TyC bajo Ley 1480/1581. Fuera de Colombia no se vende. | [Hecho·equipo] [Hecho·sitio] [Hecho·código: `hero-slider.jsonc`] [Hecho·spec: 001] |
+| Relación con Onewstore | **"Onewstore" es el nombre de una tienda previa**; se solicitará a VTEX cambiarlo. Hoy sigue siendo el vendor/cuenta VTEX (`onewstore`), el nombre del repo de GitHub y parte de las URLs del sitio y de los activos. "Repuestox" es la marca de cara al cliente. | [Hecho·equipo] + [Hecho·código] |
+| Datos legales | Razón social y NIT **por asignar**. En los TyC (spec 001) y en `/about-us` (spec 005) se usan **placeholders** hasta tenerlos. `/about-us` muestra texto de plantilla de VTEX en inglés. | [Hecho·equipo] + [Hecho·sitio] |
 
 ## 4. Actores
 
 | Actor | Hoy | Planeado | Base |
 |---|---|---|---|
 | **Comprador anónimo / invitado** | Existe: navega, filtra, arma carrito y llega al checkout, que pide solo un correo. `loggedIn: false`. | — | [Hecho·sitio] |
-| **Comprador registrado** | Hay botón "Inicio de sesión / Cuenta" (`vtex.login`, `vtex.my-account`). No se probó el flujo. | Reseñas verificadas y edición de las propias (spec 002) | [Hecho·código] / [Hecho·spec] |
-| **Seller propio `Repuestox` (id `1`)** | Único seller activo: los 8 productos y el ítem de prueba salen con `seller: "1"`. | — | [Hecho·sitio] |
-| **Sellers terceros** | **No existen** en este workspace. Solo hay diseño: condiciones para sellers, feedback del seller, rating agregado del seller, plantilla de carga con especificaciones obligatorias. | Sí (specs 001, 002 y `catalogo/como-cargan-los-sellers.md`) | [Hecho·spec] |
+| **Comprador registrado** | Hay botón "Inicio de sesión / Cuenta" (`vtex.login`, `vtex.my-account`). No se probó el flujo. | Calificar su compra y enviar feedback del sitio (spec 002) | [Hecho·código] / [Hecho·spec] |
+| **Seller propio `Repuestox` (id `1`)** | Único seller activo: los 8 productos y el ítem de prueba salen con `seller: "1"`. Como Repuestox será **solo intermediario** (Q2), este seller es **dato de prueba** que no debería existir en producción [Inferido]; falta decidir su destino. | Retirar o reemplazar por sellers reales | [Hecho·sitio] |
+| **Sellers terceros** | **No existen** en este workspace. Solo hay diseño: condiciones para sellers y plantilla de carga con especificaciones obligatorias (la calificación de sellers quedó fuera de la spec 002). | Sí (spec 001 y `catalogo/como-cargan-los-sellers.md`) | [Hecho·spec] |
 | **Administrador / moderador** | Admin de VTEX para catálogo y especificaciones. | Cola de moderación de reseñas (aprobar/rechazar/ocultar) | [Hecho·spec] |
 | **Telemarketing** | El header declara el bloque `telemarketing` (`vtex.telemarketing`), herramienta nativa de VTEX para que un agente compre en nombre del cliente. No se vio en uso. | — | [Hecho·código] |
 | **Abogado revisor** | — | Requerido para publicar la spec 001; nombre y plazo sin definir. | [Hecho·spec] |
@@ -81,13 +85,16 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 
 ### 5.1 Catálogo y categorías
 - La estructura de categorías es la fuente única: `catalogo/estructura-categorias-v2.json`. De ahí `scripts/gen-categorias.py` genera `store/routes.json` y los `category-*.jsonc`, y exporta `estructura-categorias-v2.csv`. Esos archivos **no se editan a mano** (constitución #3). [Hecho·código]
-- Ojo: el árbol **real del API** del workspace solo tiene `Carros` (con 1 hijo) y `Repuestos mecanicos carro`. Es decir, las ~567 páginas existen como rutas del theme, pero el catálogo de VTEX no tiene ese árbol cargado. Los listados de categoría salen de la categoría `Carros > Llantas y rines > Llantas`. [Hecho·sitio]
+- Ojo: el árbol **real del API** del workspace solo tiene `Carros` (con 1 hijo) y `Repuestos mecanicos carro`. Es decir, las ~567 páginas existen como rutas del theme, pero el catálogo de VTEX no tiene ese árbol cargado. Los listados de categoría salen de la categoría `Carros > Llantas y rines > Llantas`. [Hecho·sitio] El equipo confirma que **el árbol completo aún no se carga** en VTEX. [Hecho·equipo]
+- **Por qué son tantas páginas:** cada nodo del árbol (macro, subcategoría y tipo de producto) tiene su propia página y su propia URL (`/carros/frenos/pastillas-de-freno`). Son 33 + 37 + 497 = 567 y no se escriben a mano: las genera el script. [Hecho·código: `gen-categorias.py`]
+- **Cómo validar qué falta cargar** [Inferido, método propuesto]: comparar las rutas del JSON con el árbol real de VTEX (`/api/catalog_system/pub/category/tree/<niveles>`) o con Admin › Catálogo › Categorías. El script ya valida que ningún enlace interno apunte a una ruta inexistente (`gen-categorias.py --dry-run`), pero **no** compara contra el catálogo de VTEX; esa comparación sería una tarea nueva.
 - Las rutas se generan con `--real` solo "cuando las categorías ya existan en el catálogo". Mientras tanto, los listados son placeholders. [Hecho·código: README]
 - Sinónimos de búsqueda: `gen-sinonimos.py` produce 3 CSV (límite 20 KB c/u) para importar en Intelligent Search; los términos conflictivos van a `sinonimos-conflictos.txt` para decisión del negocio. [Hecho·código]
 
 ### 5.2 Selector de vehículo (`react/VehicleSelector.js`)
 - Cascada **Marca → Modelo → Año**, alimentada por los *facets* de `vtex.search-graphql` para la categoría de la ruta actual. Las especificaciones que busca se llaman `Marca vehículo`, `Modelo` y `Año`. Al buscar navega a `/<categoría>/<marca>/<modelo>/<año>?map=...`. [Hecho·código]
 - Si el catálogo no tiene esas especificaciones, los selects quedan vacíos y el botón deshabilitado. Es lo que se ve hoy: `Marca`, `Modelo` y `Año` deshabilitados y sin opciones. **El selector no funciona de punta a punta porque falta cargar la compatibilidad en el catálogo.** [Hecho·código + Hecho·sitio]
+- **Fuente de la compatibilidad (Marca/Modelo/Año):** decisión inicial: **la carga cada seller**, con las tres especificaciones al publicar. [Hecho·equipo, 2026-11-16] Las otras opciones (catálogo maestro de vehículos, datos de proveedor u OEM, VIN) se conservan como alternativas futuras en Q7 (§10). Consecuencia: la calidad del selector de vehículo depende de que los sellers llenen esos campos con listas cerradas; hasta que haya sellers cargando, el selector seguirá vacío (CU-3).
 - Compatibilidad por producto = tres especificaciones; no hay VIN, ni tabla de fitment, ni validación de que un repuesto "sirve" para un vehículo. [Hecho·código] La spec 001 menciona VIN como contenido legal deseado, sin implementación. [Hecho·spec]
 
 ### 5.3 Selector de llantas (`react/TyreSizeSelector.js`)
@@ -95,6 +102,16 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 - Funciona en el workspace: ofrece Ancho 185/205/235/265/1100, Perfil 55/65/70/75, Rin 15/16/20. Filtros adicionales: Tipo de vehículo (Automóvil, SUV y 4x4, Camión y van, OTR e industrial), Uso (Ciudad, Carretera, Todoterreno A/T, Carga), Marca y precio. [Hecho·sitio]
 - Modelo de datos: especificaciones `Tipo de vehículo`, `Ancho`, `Alto (perfil)`, `Rin`, `Uso`, `Medida completa`. La `Medida completa` (`185/65R15`) es la cadena canónica. Los productos Aeolus 1100-20 no tienen `Alto (perfil)` (formato antiguo de camión), lo que el diseño ya prevé. [Hecho·sitio] [Hecho·código: `propuesta-medidas-llanta.md`]
 - Decisión de diseño: las 4 hojas de llantas se fusionan en una sola categoría `Llantas` + especificación `Tipo de vehículo`; igual con los 4 sistemas de Eléctrico y electrónico. [Hecho·spec: `como-cargan-los-sellers.md`]
+- **Decisiones del equipo sobre los 3 puntos pendientes de ese documento** [Hecho·equipo] (actualizadas el 2026-11-16):
+  1. Se **conservan las URLs** actuales (entradas con el filtro puesto).
+  2. El mismo patrón se aplica a **motos**, con sus características propias.
+  3. `Tipo de vehículo` es de **selección múltiple** (decisión del 2026-11-16; la primera respuesta fue selección única). Un producto que sirve para dos o más tipos se marca con todos ellos y aparece en el resultado del filtro de cada tipo que le corresponda, sin duplicar la publicación. [Hecho·equipo]
+  - La tensión que había entre selección única y "un producto en varios tipos" queda **resuelta** (Q12). Implica un cambio en el admin de VTEX: hoy los productos de prueba tienen un solo valor (p. ej. `Automóvil`) y la especificación debe pasar a tipo de campo de selección múltiple (casillas). [Inferido: es el ajuste habitual de VTEX; no se verificó en el admin]
+  - **Rines:** el 2026-11-16 se **aprobaron sus especificaciones**: `Diámetro`, `Ancho de rin`, `Huecos` y `Pernos (PCD)`, como en `propuesta-medidas-llanta.md`. [Hecho·equipo] Aprobarlas no las crea: falta darlas de alta en el admin de VTEX.
+  - **Fusión de hojas de rines de carros** (`Rines de acero` y `Rines de aluminio` pasan a valores de filtro): **aprobada el 2026-11-16**. [Hecho·equipo] Exige una especificación nueva: `Material` con `Acero` y `Aluminio`, **confirmada el 2026-11-16** [Hecho·equipo], y regenerar páginas y sinónimos; esperadas 565 páginas y 495 tipos [Inferido]. La línea base actual de 567 páginas (33 macros, 37 subcategorías, 497 hojas) se comprobó con `gen-categorias.py --dry-run` el 2026-11-16 [Hecho·código]. Detalle en `catalogo/como-cargan-los-sellers.md`, decisión 7.
+  - **Selector de medida de rines: aprobado el 2026-11-16.** [Hecho·equipo] La spec **007** (borrador) lo describe; el componente todavía no existe (hoy solo hay `TyreSizeSelector`). Decisión 8 del mismo documento.
+  - **Rines de motos: decidido el 2026-11-16** [Hecho·equipo]: la hoja `Rines` usa `Diámetro`, `Ancho de rin`, `Material` y `Número de rayos` (nueva), y **no** `Huecos` ni `Pernos (PCD)`. La base de esa decisión es una investigación [Inferido] con fichas de tienda; conviene validarla con un proveedor de repuestos de moto antes de cargar productos reales. Detalle y fuentes en la spec 007 §9.
+  - **Selector de rines:** se muestran **los 4 selects** en carros y será un **componente nuevo** (spec 007). [Hecho·equipo]
 
 ### 5.4 Sellers y comisiones
 - **Seller:** hoy solo existe `Repuestox` (id 1). El PDP **no muestra** quién vende ni quién envía (RF-5 de la spec 001 lo pide). [Hecho·sitio]
@@ -125,14 +142,22 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | CU-7 | **Devolver / retracto / garantía** | **No existe**: `/devoluciones-y-garantias` cae en "no encontramos ningún resultado". Solo hay referencia legal en la spec 001 (Ley 1480, art. 47). | [Hecho·sitio] |
 | CU-8 | **Publicar producto como seller** | **No existe** en el sitio. `/condiciones-sellers` no existe y no se vio portal de seller. Solo hay una propuesta de carga (§5.4). | [Hecho·sitio + spec] |
 | CU-9 | **Contactar a Repuestox** | `/contact-us` muestra "Error al cargar el formulario". | [Hecho·sitio] |
-| CU-10 | **Calificar producto o seller** | **No existe**; spec 002 en `draft`. El PDP tiene declarados `product-rating-summary` y `product-questions-and-answers` pero no se renderizaron. | [Hecho·código + sitio] |
+| CU-10 | **Calificar la compra / enviar feedback del sitio** | **No existe**; spec 002 en `draft` (rating de 5 estrellas al finalizar la compra y botón flotante de feedback). El PDP tiene declarados `product-rating-summary` y `product-questions-and-answers` pero no se renderizaron (reseñas de producto: fuera de alcance de la 002). | [Hecho·código + sitio] |
 | CU-11 | **Aceptar TyC al comprar** | **No existe**; spec 001 en `draft`. | [Hecho·sitio + spec] |
 
 ## 7. Estado actual: producción vs. diseño
 
-> No se verificó **producción**. Todo lo marcado "construido" es lo visto en el workspace
-> `devwilbis`. Lo único que dice el repo sobre producción es el proceso (`vtex release`,
-> `vtex install onewstore.store-theme@<versión>`) y la versión `5.2.0`.
+> No se verificó **producción** en el sitio. Todo lo marcado "construido" es lo visto en el
+> workspace `devwilbis` el 2026-11-12. Sobre producción el repo dice dos cosas: el proceso
+> (`vtex release`, `vtex install onewstore.store-theme@<versión>`) y la versión del
+> `manifest.json`, hoy **5.3.0** (antes 5.2.0). El commit `ab08278` (2026-11-13, de otro
+> miembro del equipo) afirma que esa versión se publicó con `vtex publish` y se instaló en
+> `master`, `release`, `devwilbis` y `devdiego`. [Hecho·git] Es una declaración del
+> commit: no se comprobó en `master` ni existe un dominio propio conocido. **Las
+> observaciones de este documento corresponden al theme 5.2.0 o anterior; hay que
+> revisar si 5.3.0 cambió algo.** El equipo confirma que **5.3.0 no cambió nada respecto
+> de 5.2.0** (solo subió la versión; el commit únicamente toca `manifest.json`), así que
+> las observaciones de este documento siguen vigentes. [Hecho·equipo]
 
 | Área | Estado | Base |
 |---|---|---|
@@ -142,11 +167,12 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Catálogo real (árbol de 567 páginas, productos, imágenes, compatibilidad) | **Sin cargar**: 8 productos de prueba; imágenes y slides con placeholder ("REEMPLAZAR … 1600x700") | [Hecho·sitio] |
 | Marketplace con sellers terceros | **Objetivo**, no operativo. Un solo seller (el propio). Sin condiciones, comisiones ni portal visibles. | [Hecho·sitio] + [Inferido] |
 | TyC y 6 páginas legales (D2-D7) | **Diseño** (spec 001 `draft`); las rutas no existen | [Hecho·sitio + spec] |
-| Feedback y rating | **Diseño** (spec 002 `draft`) | [Hecho·spec] |
+| Feedback de compra y del sitio | **Diseño** (spec 002 `draft`) | [Hecho·spec] |
 | Menú global de categorías | **Diseño** (spec 003 `draft`); el header solo tiene login y minicart | [Hecho·código + spec] |
 | Checkout, pagos, envíos | **Sin personalizar y sin verificar** | [Hecho·sitio] |
 | Contacto | Roto en el workspace | [Hecho·sitio] |
-| Producción | **No verificada** | — |
+| Producción | **No hay tienda en producción con dominio propio: el proyecto está en desarrollo.** El git declara 5.3.0 instalada en `master`, pero eso no equivale a una tienda abierta al público. | [Hecho·equipo] + [Hecho·git] |
+| Proceso de specs | Hay `specs/` (000-006) y OpenSpec inicializado (`openspec/`, esquema `spec-driven`, sin cambios ni specs todavía). Idioma de los artefactos: **español**, fijado en `openspec/config.yaml`. | [Hecho·código] |
 
 ### Hallazgos de calidad a corregir
 Cubiertos por las specs 004 (hallazgo 2), 005 (hallazgo 1) y 006 (hallazgos 3 a 7).
@@ -175,53 +201,63 @@ Cubiertos por las specs 004 (hallazgo 2), 005 (hallazgo 1) y 006 (hallazgos 3 a 
 
 ## 10. Preguntas abiertas
 
-**Negocio**
-- [ ] ¿Qué es "Onewstore" respecto de "Repuestox" (misma empresa, matriz, proveedor)? ¿Razón social y NIT?
-- [ ] ¿Qué ciudades o regiones se atienden en la práctica, o es todo Colombia?
-- [ ] ¿Quién es el comprador objetivo: particular, taller, flotas?
-- [ ] ¿Se venden repuestos usados, remanufacturados o importados? (afecta etiquetado y garantía)
+**Negocio** (respondidas el 2026-11-15)
+- [x] ¿Qué es "Onewstore" respecto de "Repuestox"? → Nombre de una tienda previa; se pedirá a VTEX el cambio. Razón social y NIT **por asignar** (placeholder en TyC). *(Parcial: falta el NIT/razón social y el cambio de cuenta.)*
+- [x] ¿Qué ciudades o regiones se atienden? → Todo Colombia.
+- [x] ¿Quién es el comprador objetivo? → Particulares y talleres; también empresas con flota.
+- [x] ¿Se venden usados, remanufacturados o importados? → Solo nuevos e importados, más accesorios y herramientas de mecánica automotriz.
 
-**Actores y marketplace**
-- [ ] ¿Repuestox es mero intermediario o vendedor directo? ¿El marketplace con sellers terceros está en el roadmap con fecha?
+**Actores y marketplace** (**pendientes: el equipo responderá luego de confirmarlas**)
+- [x] ¿Repuestox es mero intermediario o vendedor directo? → **Intermediario únicamente** (2026-11-15): no vende por cuenta propia; los vendedores son los sellers. *(Parcial: falta saber si el marketplace con sellers terceros tiene fecha, y qué pasa con el seller de prueba `Repuestox` id 1.)*
 - [ ] ¿Cómo se pagan comisiones y se liquida a sellers (split de VTEX o manual)? ¿Qué porcentaje?
 - [ ] ¿Quién envía: el seller, Repuestox o un operador logístico? ¿Hay transportadoras contratadas?
 - [ ] ¿Cuál es la pasarela de pago y qué medios se aceptan?
 - [ ] ¿Quién atiende al cliente y por qué canal (WhatsApp, correo, teléfono)?
 
 **Catálogo y vehículo**
-- [ ] ¿De dónde saldrá la tabla de compatibilidad (Marca/Modelo/Año)? ¿Se necesita VIN?
-- [ ] ¿Se carga el árbol de 567 categorías en VTEX ya, o primero un subconjunto (p. ej. Llantas + Eléctrico)?
-- [ ] ¿Las 4 decisiones pendientes de `como-cargan-los-sellers.md` (URLs con filtro, motos/rines, selección única o múltiple)?
+- [x] ¿De dónde saldrá la tabla de compatibilidad (Marca/Modelo/Año)? ¿Se necesita VIN? → **Inicialmente la carga el seller.** Las otras opciones y el VIN quedan como alternativas futuras (ver Q7).
+- [x] ¿Se carga el árbol de 567 categorías en VTEX ya, o primero un subconjunto? → **No aún.** Falta decidir el subconjunto inicial y cómo validar la carga (ver Q8).
+- [x] Decisiones de `como-cargan-los-sellers.md`: se conservan las URLs; el patrón aplica a motos; `Tipo de vehículo` es de **selección múltiple** (corregido el 2026-11-16; Q12 resuelta). → Rines: especificaciones, fusión de hojas y selector aprobados el 2026-11-16; `Material` (Acero/Aluminio) confirmado; falta ejecutarlos (alta en el admin, fusión en el JSON) y la spec 007 del selector está en borrador.
 
 **Estado**
-- [ ] ¿Existe tienda en producción (dominio propio)? ¿Qué versión de `onewstore.store-theme` está instalada?
-- [ ] ¿Qué se hizo con `/contact-us` en producción?
+- [x] ¿Existe tienda en producción con dominio propio? → **No, está en desarrollo.**
+- [x] ¿Qué cambió en 5.3.0 respecto de 5.2.0? → Nada inicialmente.
+- [x] ¿Qué se hizo con `/contact-us`? → **Se tiene que corregir** (spec 004).
 
 ### Seguimiento de preguntas abiertas
 
-Cada pregunta queda con responsable y fecha límite. **Todos están por asignar**: son
+Cada pregunta queda con responsable y fecha límite. Las abiertas están por asignar: son
 decisiones de negocio y no se asignan sin confirmación del equipo.
 
-| ID | Pregunta (resumen) | Bloquea | Responsable | Fecha límite |
-|---|---|---|---|---|
-| Q1 | Relación Onewstore ↔ Repuestox; razón social y NIT | 001, 005 | Por asignar | Por definir |
-| Q2 | ¿Intermediario o vendedor directo? ¿Marketplace con fecha? | 001, 002 | Por asignar | Por definir |
-| Q3 | Pasarela de pago, comisiones y liquidación a sellers | 001 (D4) | Por asignar | Por definir |
-| Q4 | Quién envía y qué transportadoras hay | 001 (D3, D6) | Por asignar | Por definir |
-| Q5 | Canal y responsable de atención al cliente | 004 | Por asignar | Por definir |
-| Q6 | Abogado revisor y plazo | 001 (AC-5) | Por asignar | Por definir |
-| Q7 | Fuente de la compatibilidad Marca/Modelo/Año y VIN | CU-3 | Por asignar | Por definir |
-| Q8 | ¿Árbol completo o subconjunto en VTEX primero? | 003 | Por asignar | Por definir |
-| Q9 | ¿Hay producción? ¿Qué versión está instalada? | AC-3 (000) | Por asignar | Por definir |
-| Q10 | Comprador objetivo; repuestos usados, remanufacturados o importados | 001, 005 | Por asignar | Por definir |
-| Q11 | Moderación previa o posterior, y quién modera | 002 | Por asignar | Por definir |
+| ID | Pregunta (resumen) | Bloquea | Estado | Responsable | Fecha límite |
+|---|---|---|---|---|---|
+| Q1 | Relación Onewstore ↔ Repuestox; razón social y NIT | 001, 005 | **Parcial**: Onewstore es una tienda previa; NIT y razón social por asignar (placeholder). Falta pedir a VTEX el cambio de cuenta. | Por asignar | Por definir |
+| Q2 | ¿Intermediario o vendedor directo? ¿Marketplace con fecha? | 001 | **Parcial**: Repuestox es **intermediario únicamente** (2026-11-15). Falta la fecha del marketplace con sellers terceros y decidir qué se hace con el seller de prueba `Repuestox` (id 1). | Por asignar | Por definir |
+| Q3 | Pasarela de pago, comisiones y liquidación a sellers | 001 (D4) | **Abierta** (ídem) | Por asignar | Por definir |
+| Q4 | Quién envía y qué transportadoras hay | 001 (D3, D6) | **Abierta** (ídem) | Por asignar | Por definir |
+| Q5 | Canal y responsable de atención al cliente | 004 | **Abierta** (ídem) | Por asignar | Por definir |
+| Q6 | Abogado revisor y plazo | 001 (AC-5) | **Abierta** | Por asignar | Por definir |
+| Q7 | Fuente de la compatibilidad Marca/Modelo/Año y VIN | CU-3 | **Resuelta para la fase inicial**: la carga el seller. Alternativas futuras abajo. | — | — |
+| Q8 | ¿Árbol completo o subconjunto en VTEX primero? | 003 | **Parcial**: aún no se carga. Falta elegir el subconjunto y el método de validación. | Por asignar | Por definir |
+| Q9 | ¿Hay producción? ¿Qué cambió en 5.3.0? | AC-3 (000) | **Resuelta**: no hay tienda en producción (en desarrollo); 5.3.0 no cambió nada. | — | — |
+| Q10 | Comprador objetivo; usados, remanufacturados o importados | 001, 005 | **Resuelta**: particulares y talleres (y flotas); solo nuevos e importados. | — | — |
+| Q11 | ¿Quién lee el feedback (compra y sitio), con qué frecuencia y cómo se entera? *(antes: moderación de reseñas; la 002 ahora es feedback privado)* | 002 | **Abierta** (actores) | Por asignar | Por definir |
+| Q12 | ¿Cómo aparece un producto en varios tipos de vehículo? ¿Y los rines? | `como-cargan-los-sellers.md` | **Resuelta** para llantas: selección múltiple (2026-11-16). **Rines: especificaciones, fusión de hojas y selector aprobados (2026-11-16)**; `Material` confirmado; rines de motos decididos (`Número de rayos`, sin `Huecos` ni PCD). Queda ejecutar: alta de las especificaciones en el admin, fusión en el JSON y avanzar la spec 007 (borrador). | Por asignar | Por definir |
+
+**Q7: decisión y alternativas** (las alternativas son propuestas [Inferido], no verificadas con proveedores):
+1. **ELEGIDA para la fase inicial: carga por el seller** con las tres especificaciones (`Marca vehículo`, `Modelo`, `Año`), como ya propone `como-cargan-los-sellers.md`. Es lo más barato, pero la calidad depende de cada seller; conviene listas cerradas y especificaciones obligatorias en la plantilla de carga.
+   Alternativas futuras, conservadas para cuando la carga por seller se quede corta:
+2. **Catálogo maestro de vehículos** (marcas, modelos y años del parque colombiano) para que el selector ofrezca listas cerradas y los sellers elijan de ahí. Evita errores de escritura; hay que conseguir la fuente.
+3. **Datos de un proveedor de autopartes** con compatibilidad por referencia OEM, o de los propios importadores (suelen tenerla en sus catálogos). Habría que confirmar disponibilidad y licencia.
+4. **VIN:** dejarlo para una fase posterior. Exige una fuente de decodificación y datos personales del vehículo (a revisar con la Ley 1581).
 
 ## 11. Fuera de alcance / futuro
-- Reputación ponderada de sellers, disputas e incentivos por reseñar (spec 002, fase 2).
+- Reseñas públicas de producto, calificación y reputación de sellers (salieron de la spec 002; se retoman cuando el marketplace tenga fecha).
 - Venta fuera de Colombia.
 - Cualquier cambio de código derivado de los hallazgos (cubierto por las specs 004-006).
 
 ## 12. Referencias
 - Sitio verificado: `https://devwilbis--onewstore.myvtex.com/` (workspace de desarrollo, 2026-11-12).
 - Código: `README.md`, `manifest.json`, `store/`, `react/VehicleSelector.js`, `react/TyreSizeSelector.js`, `react/queries/vehicleFacets.gql`, `catalogo/`, `scripts/gen-categorias.py`, `scripts/gen-sinonimos.py`.
-- Specs: `specs/constitution.md`, `001-tyc-marketplace`, `002-feedback-rating`, `003-menu-categorias-global`, `catalogo/como-cargan-los-sellers.md`, `catalogo/propuesta-medidas-llanta.md`.
+- Specs: `specs/constitution.md`, `001-tyc-marketplace`, `002-feedback-rating`, `003-menu-categorias-global`, `004-contact-us-roto`, `005-about-us`, `006-ajustes-calidad-tienda`, `catalogo/como-cargan-los-sellers.md`, `catalogo/propuesta-medidas-llanta.md`.
+- Proceso: `openspec/config.yaml` (idioma español), commit `ab08278` (versión 5.3.0).

@@ -18,6 +18,13 @@ se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colo
 - `/about-us` es plantilla en inglés y `/contact-us` está roto: ver specs 004 y 005.
 - Hoy solo existe un seller propio (`Repuestox`, id 1): las condiciones de sellers (D4) anticipan un marketplace que aún no opera.
 
+**Decisiones del equipo (2026-11-15, registradas en la spec 000):**
+- Se vende en **todo Colombia**, a **particulares y talleres** y también a **empresas con flota**.
+- Solo repuestos **nuevos e importados**, más accesorios y herramientas de mecánica automotriz. **No** se venden usados ni remanufacturados.
+- **Razón social y NIT están por asignar**: los textos legales llevan placeholders (RF-8).
+- "Onewstore" es el nombre de una tienda previa y se pedirá a VTEX cambiarlo: **no debe aparecer como razón social ni como marca en los textos legales**; la marca es Repuestox.
+- La tienda está **en desarrollo**, sin producción con dominio propio: no hay usuarios ni compras reales sujetos a estos textos todavía.
+
 ## 2. Objetivos / No-objetivos
 **Objetivos**
 - Investigar y documentar qué exige la regulación UE a un marketplace y mapearlo a la ley colombiana.
@@ -27,6 +34,7 @@ se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colo
 **No-objetivos**
 - No es asesoría legal: el texto final lo valida un abogado.
 - No se cubre venta fuera de Colombia.
+- No se cubren repuestos usados ni remanufacturados (no se venden). Si se incorporan, se abre una spec nueva.
 
 ## 3. Entregables
 | # | Documento | Ruta propuesta |
@@ -60,11 +68,13 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 
 ## 5. Contenido mínimo específico de repuestos y autopartes
 - Compatibilidad: el comprador verifica el vehículo (marca/modelo/año/VIN); el seller declara compatibilidad.
-- Repuestos nuevos vs. usados/remanufacturados vs. alternativos: etiquetado obligatorio.
+- Condición del producto: **solo nuevos**. El texto debe decirlo y distinguir original (OEM), alternativo/genérico y de marca propia; el etiquetado de usados o remanufacturados no aplica mientras no se vendan.
 - Piezas de seguridad (frenos, llantas, airbags): reglas de devolución e instalación profesional.
 - Garantía condicionada a instalación correcta; exclusiones por mal uso.
 - Productos instalados / sin empaque: límites al retracto (a validar legalmente).
-- Importación y origen del producto.
+- **Importación y origen:** los productos son nuevos e **importados**. El texto debe indicar el origen, quién importa y responde por la garantía, y los plazos de entrega que implique importar. Los requisitos aduaneros y los reglamentos técnicos aplicables a cada categoría los valida el abogado (D1).
+- **Compradores personas jurídicas:** se vende también a talleres y empresas con flota. Las normas de consumidor (retracto, reversión del pago) aplican a **consumidores**; si un comprador empresarial no lo es, puede regir otro régimen. Cómo tratarlo en D3 y D6 lo define el abogado.
+- Accesorios y herramientas para mecánica automotriz: revisar si requieren advertencias o condiciones de garantía distintas a las de los repuestos.
 
 ## 6. Requisitos funcionales
 - `RF-1` Las 6 páginas legales (D2-D7) son accesibles por URL propia y enlazadas desde el footer en todas las páginas.
@@ -74,6 +84,7 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 - `RF-5` En PDP y checkout se muestra quién vende (seller) y quién envía.
 - `RF-6` El texto legal es editable sin redeploy de código (rich-text / CMS de VTEX).
 - `RF-7` El checkout se personaliza (logo de marca y checkbox de aceptación) para cumplir el RF-2; si VTEX no permite bloquear el pago nativamente, se documenta la alternativa en `plan.md`.
+- `RF-8` Mientras no existan razón social y NIT, los textos legales usan placeholders visibles y exactos (`[RAZÓN SOCIAL]`, `[NIT]`), y no se publica en producción ningún documento que los conserve.
 
 ## 7. Requisitos no funcionales
 - Lenguaje claro (español), legible en móvil.
@@ -87,14 +98,17 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 - `AC-4` Dada una nueva versión de TyC, cuando el usuario vuelve a comprar, se le pide aceptar la nueva versión.
 - `AC-5` `research.md` incluye la matriz completa con citas y fue revisado por un abogado (evidencia en el PR).
 - `AC-6` Las páginas legales cumplen accesibilidad (contraste, jerarquía de encabezados).
+- `AC-7` Antes de publicar en producción, una búsqueda de `[RAZÓN SOCIAL]` y `[NIT]` en los documentos D2-D7 no devuelve resultados, y ninguno menciona "Onewstore".
 
 ## 9. Preguntas abiertas
 - [ ] ¿Quién es el abogado revisor y cuál es el plazo?
-- [ ] ¿Repuestox es mero intermediario o vendedor directo en algunas ventas? (cambia la responsabilidad)
+- [x] ¿Repuestox es mero intermediario o vendedor directo? → **Intermediario únicamente** (2026-11-15). Los TyC deben decir con claridad que el contrato de compraventa es entre comprador y seller, e identificar al seller (RF-5). El abogado debe confirmar qué obligaciones conserva Repuestox como intermediario en Colombia (p. ej. las de los portales de contacto del Estatuto del Consumidor, y la reversión del pago, art. 51) [Inferido, a verificar].
 - [ ] ¿Quién gestiona pagos a sellers (split de VTEX)? Impacta cláusulas de comisiones.
-- [ ] ¿Existen razón social, NIT y registro para el aviso legal?
+- [ ] Razón social, NIT y registro para el aviso legal: **por asignar** (2026-11-15). Se usan placeholders (RF-8); falta la fecha en que existirán.
 - [ ] ¿El checkbox de TyC se puede forzar nativamente en el checkout de VTEX o requiere app/custom?
-- [ ] ¿Se venden repuestos usados/importados?
+- [x] ¿Se venden repuestos usados/importados? → **Solo nuevos e importados** (2026-11-15). No se venden usados ni remanufacturados.
+- [ ] ¿Cómo se trata al comprador empresarial (flotas, talleres) frente al régimen de consumidor? (lo define el abogado)
+- [ ] Pagos a sellers (Q3): **sigue abierta**; el equipo responderá luego. Q2 quedó parcialmente resuelta: falta la fecha del marketplace con sellers terceros (ver spec 000).
 
 ## 10. Referencias
 - Colombia: Ley 1480/2011, Ley 1581/2012, Ley 527/1999, Decreto 1074/2015, Decreto 587/2016.

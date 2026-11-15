@@ -11,7 +11,7 @@
       "public": true
     },
     "spikeSession": {
-      "path": "/_v/feedback-spike/session",
+      "path": "/_v/feedback-spike/whoami",
       "public": true
     }
   }

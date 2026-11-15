@@ -22,6 +22,6 @@ Crear productos base desde el seller de pruebas.
 - [ ] ¿Los productos base deben cumplir ya las especificaciones obligatorias de `como-cargan-los-sellers.md`?
 
 ## 4. Relaciones
-- 007 (selector de rines), 013 (PDP), 003 (menú; listados con datos), 010 (medir con datos reales), 016 (portal de sellers a futuro). Preguntas Q7 y Q8 de la spec 000.
+- 007 (selector de rines), 013 (PDP), 003 (menú; listados con datos), 010 (medir con datos reales). Preguntas Q7 y Q8 de la spec 000.
 
 > Esta spec se detallará cuando se aborde. Entregable típico: inventario de productos con categoría, especificaciones, compatibilidad e imágenes.

@@ -18,11 +18,11 @@ Incluir un botón de WhatsApp para que, mediante un **chatbot potenciado con IA*
 ## 3. Preguntas abiertas (para cuando se aborde)
 - [ ] **Pendiente de William:** ¿qué ofrece VTEX para venta conversacional por WhatsApp (nativo, app de terceros, API)? ¿Costos y requisitos (cuenta de WhatsApp Business)?
 - [ ] ¿La IA solo asesora (recomienda, resuelve dudas) o llega a **cerrar la compra**? Si cierra la compra, ¿cómo se paga?
-- [ ] ¿Quién responde cuando el bot no puede resolver (asesores, spec 016)? ¿En qué horario?
+- [ ] ¿Quién responde cuando el bot no puede resolver (asesores humanos)? ¿En qué horario?
 - [ ] ¿Qué datos del cliente maneja el bot y dónde se guardan (Ley 1581)? ¿Cómo se informa que habla con una IA?
 - [ ] ¿Cómo se evita que el bot venda algo incompatible con el vehículo del cliente?
 
 ## 4. Relaciones
-- 001 (TyC y privacidad), 002 (botón flotante), 009 y 010 (móvil y carga), 016 (asesores y tickets), preguntas Q3 y Q5 de la spec 000.
+- 001 (TyC y privacidad), 002 (botón flotante), 009 y 010 (móvil y carga), preguntas Q3 y Q5 de la spec 000.
 
 > Esta spec se detallará cuando William tenga la respuesta de VTEX. Es la de mayor incertidumbre técnica y legal de la lista.

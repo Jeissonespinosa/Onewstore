@@ -19,7 +19,7 @@ specs/
   005-about-us/             spec.md (página Quiénes somos)
   006-ajustes-calidad-tienda/ spec.md (checkout, redes, 404, tests)
   007-selector-medida-rines/  spec.md · plan.md · tasks.md (selector Diámetro → Ancho → Huecos → PCD)
-  008 … 016                 borradores `backlog` (ver índice); se detallan cuando se aborden
+  008 … 015                 borradores `backlog` (ver índice); se detallan cuando se aborden
 ```
 
 Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar la spec
@@ -58,8 +58,7 @@ aceptación (`AC-n`) que cubre.
 | 012 | Ingreso con Apple y Google | William | backlog | respuesta de VTEX |
 | 013 | Mejorar el aspecto de la página de producto | William | backlog | 014 |
 | 014 | Crear productos base desde el seller de pruebas | William | backlog | Q8 de la 000 |
-| 015 | Botón de WhatsApp con chatbot de IA para comprar | William | backlog | respuesta de VTEX, 001, 016 |
-| 016 | Portal de sellers, administradores y asesores (.NET) con tickets | Diego | backlog | 000 (Q2, Q3, Q5), ampliar constitución |
+| 015 | Botón de WhatsApp con chatbot de IA para comprar | William | backlog | respuesta de VTEX, 001 |
 
 ## Mapa: lista de tareas → specs
 
@@ -76,7 +75,6 @@ aceptación (`AC-n`) que cubre.
 | 11 | Mejorar la página del producto | William | 013 |
 | 12 | Productos base desde el seller de pruebas | William | 014 |
 | 13 | Botón de WhatsApp con chatbot de IA | William | 015 |
-| 14 | Página para seller, administrador y asesores (.NET) | Diego | 016 |
 
 Las specs 004, 005, 006 y 007 salieron de hallazgos y decisiones del proyecto, no de la lista de tareas.
 

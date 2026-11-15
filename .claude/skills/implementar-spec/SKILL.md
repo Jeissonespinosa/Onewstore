@@ -24,8 +24,9 @@ Los archivos pueden haber cambiado desde la última sesión: no te fíes de lo q
 - **Estado de la spec:** si es `draft` con preguntas abiertas que bloquean el trabajo (revisa la
   sección "Preguntas abiertas" y la tabla Q1-Q11 de la spec 000), dilo y pregunta antes de seguir.
   Una pregunta abierta de negocio **no se resuelve suponiendo**: se pregunta al usuario.
-- **Rama:** debe ser `feat/<NNN>-<slug>` (o `fix/`, `chore/` según la spec). Si estás en `master`
-  o en otra rama, propón crearla; no trabajes sobre `master`.
+- **Rama:** debe ser `feat/<NNN>-<slug>` (o `fix/`, `chore/` según la spec), creada **desde `release`**
+  (la rama base del proyecto; no `master`). Si estás en `release`, `master` o en otra rama, propón
+  crearla; no trabajes directamente sobre `release` ni `master`. Las fusiones van a `release`.
 - **Cambios ajenos:** si hay cambios sin commit que no son tuyos, déjalos intactos. No los
   incluyas en tus commits (`git add` solo de rutas concretas, nunca `git add -A`).
 - **Faltan `plan.md` o `tasks.md`:** ve al paso 3. Si existen, ve al paso 4.
@@ -57,10 +58,19 @@ Los archivos pueden haber cambiado desde la última sesión: no te fíes de lo q
 - **Puedes** comprobar: tests (`python -m unittest scripts/tests/…`, `react/__tests__`), el
   generador (`python scripts/gen-categorias.py --dry-run`), enlaces rotos, JSON válido,
   búsquedas en el código.
-- **No puedes** comprobar sin ayuda: lo que requiere `vtex link`, un workspace VTEX, Lighthouse,
-  lector de pantalla o el aspecto visual. Para esas tareas, deja el cambio listo, **dile al
-  usuario exactamente qué probar** (URL, pasos, resultado esperado) y deja la tarea **sin marcar**
-  hasta que confirme. Marca en el resumen qué quedó sin verificar.
+- **Puedes comprobar en el navegador** lo que se ve en el sitio (carga de la página, menús,
+  formularios, consola, red, aspecto a distintos anchos) usando la extensión de Claude para
+  Chrome (herramientas `mcp__claude-in-chrome__*`; carga el skill `claude-in-chrome` antes) o el
+  navegador integrado. Pide a `vtex link` en el workspace de Diego si no está corriendo: **no
+  inicies sesión con credenciales ni publiques nada**; la URL es
+  `https://<workspace>--onewstore.myvtex.com/`. Reglas del navegador: abre una pestaña nueva, no
+  uses diálogos `alert/confirm`, y no envíes formularios que guarden datos reales ni hagas
+  pagos; para pruebas de envío usa datos ficticios y avisa antes.
+- **Aun así puedes necesitar al usuario** para: iniciar `vtex link` / elegir el workspace,
+  sesiones autenticadas, Lighthouse con métricas fiables, lector de pantalla y cualquier cosa que
+  el navegador no alcance. Deja la tarea **sin marcar**, dile exactamente qué probar (URL, pasos,
+  resultado esperado) y anota en el resumen qué quedó sin verificar.
+- Si verificas en el navegador, deja constancia en el resumen (URL, qué viste, ancho de pantalla).
 - Nunca declares "funciona" por haber editado el archivo.
 
 ## 6. Reglas del repositorio
@@ -82,7 +92,7 @@ Los archivos pueden haber cambiado desde la última sesión: no te fíes de lo q
 - Un commit por grupo de tareas, rutas explícitas en `git add`.
 - Mensaje: `<tipo>(<spec>): <qué>` en inglés o español, cuerpo con las tareas cubiertas
   (p. ej. `Tareas 2.1-2.3 de specs/003`). Termina con la línea de coautoría que indique la sesión.
-- No hagas push ni abras PR salvo que el usuario lo pida.
+- No hagas push ni abras PR salvo que el usuario lo pida. Al fusionar, la rama destino es `release`.
 
 ## 8. Cierre de una spec
 Cuando todas las tareas estén `[x]` y los criterios `AC-n` verificados:

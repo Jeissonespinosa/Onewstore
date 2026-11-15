@@ -31,8 +31,25 @@
 
 - [x] 5.1 Probar el recorrido solo con teclado (Tab, Enter, Esc) y con un lector de pantalla, en escritorio y móvil. Verificación: criterios "Recorrido solo con teclado" y "Estado anunciado" pasan; hallazgos corregidos o anotados.
 - [x] 5.2 Medir Lighthouse otra vez en las tres páginas y comparar con `baseline.md`; comprobar que abrir y cerrar el menú no mueve el contenido (CLS). Verificación: ninguna página baja más de 5 puntos y no hay desplazamiento al abrir.
-- [ ] 5.3 Actualizar el índice de `specs/README.md` y marcar la spec 003 como `implementing` o `done` según corresponda. Verificación: el índice refleja el estado y enlaza a la spec 003.
+- [x] 5.3 Actualizar el índice de `specs/README.md` y marcar la spec 003 como `implementing` o `done` según corresponda. Verificación: el índice refleja el estado y enlaza a la spec 003.
 
 ## Cierre
 
 - Marcar la spec 003 como `done` en `specs/README.md` tras la revisión del equipo.
+
+## Resultado del cierre
+
+Verificado por Claude en el workspace `devdiego` (no publicado):
+- `AC-1` botón visible en home, listado, ficha y búsqueda (escritorio 1280 px; en móvil, ficha y listado a 360 y 768 px). El checkout nativo queda excluido (decisión del plan).
+- `AC-2` desde una ficha, Carros → Llantas y rines → Llantas navega a `/carros/llantas-y-rines/llantas`.
+- `AC-3` drawer en móvil con 3 niveles, a 360 y 768 px.
+- `AC-4` teclado real: Enter, flechas, Tab atrapado en el drawer y Esc con retorno del foco.
+- `AC-5` el generador no reporta enlaces rotos ("enlaces del menú: todos válidos").
+- `AC-6` el acceso sigue disponible con scroll (header fijo). Corregido el solapamiento con el buscador de sección.
+
+Del lado del equipo / aceptado:
+- `AC-7` Lighthouse en escritorio bajó −8 (inicio) y −10 (ficha): excepción aceptada por Diego, ver `baseline.md`.
+- Lector de pantalla: NVDA aprobado por Diego; sin probar en móvil real (VoiceOver/TalkBack).
+- Header transparente de la home: el botón negro se confunde con la foto oscura; aceptado por Diego.
+- Revisión del equipo antes de fusionar a `release`; sin push ni PR.
+- Verificación en producción tras publicar.

@@ -1,6 +1,6 @@
 # 003 — Acceso rápido a menú y categorías desde cualquier página
 
-- **Estado:** implementing
+- **Estado:** done
 - **Responsable:** Diego
 - **Rama:** `feat/003-menu-categorias-global`
 - **Depende de:** 000 (contexto) — (usa `catalogo/estructura-categorias-v2.json` como fuente de categorías)

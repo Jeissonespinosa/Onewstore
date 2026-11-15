@@ -1,6 +1,6 @@
 # 001 — Términos y Condiciones del marketplace (Colombia, referencia UE)
 
-- **Estado:** draft
+- **Estado:** draft — **en pausa desde 2026-11-15** hasta completar los prerrequisitos de `pendientes.md`
 - **Responsable:** Diego
 - **Rama:** `feat/001-tyc-marketplace`
 - **Depende de:** 000 (contexto); 004 y 005 (contacto y "Quiénes somos" para el aviso legal); personalización del checkout (RF-2); revisión de un abogado colombiano

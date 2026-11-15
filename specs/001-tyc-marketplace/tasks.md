@@ -1,5 +1,8 @@
 # 001 — Tareas
 
+> **EN PAUSA (2026-11-15).** Ninguna tarea está hecha. Los prerrequisitos y cómo completarlos
+> están en `pendientes.md`. Se reanuda con `/implementar-spec 001`, desde la tarea 1.1.
+
 > Cada tarea indica cómo verificarla. Los grupos van en orden de dependencias. Los grupos 4-6
 > producen **borradores con placeholders**: nada se publica en producción hasta la tarea 8.2.
 > Lo que requiere sesión autenticada, `vtex link` o un abogado lo hace el equipo (se indica).

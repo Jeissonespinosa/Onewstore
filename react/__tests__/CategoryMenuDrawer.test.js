@@ -316,23 +316,12 @@ describe('variante por defecto', () => {
     expect(screen.getByRole('navigation', { name: /categor/i })).toBeTruthy()
   })
 
-  it('con los datos reales (sin prop sections) el drawer lista las 3 secciones al cargar', async () => {
+  it('con los datos reales (sin prop sections) el drawer lista las 3 secciones', () => {
     render(<CategoryMenu variant="drawer" />)
     fireEvent.click(screen.getByRole('button', { name: /^categor/i }))
-    expect(within(screen.getByRole('dialog')).getByRole('status').textContent).toMatch(/cargando/i)
     const d = within(screen.getByRole('dialog'))
-    expect(await d.findByRole('button', { name: 'Carros' })).toBeTruthy()
+    expect(d.getByRole('button', { name: 'Carros' })).toBeTruthy()
     expect(d.getByRole('button', { name: 'Motos' })).toBeTruthy()
     expect(d.getByRole('button', { name: 'Herramientas' })).toBeTruthy()
-    expect(d.queryByRole('status')).toBeNull()
-  })
-
-  it('con carga diferida, al llegar los datos despliega la rama de la pagina actual', async () => {
-    runtime.__setRuntime({ route: { path: '/carros/frenos' } })
-    render(<CategoryMenu variant="drawer" />)
-    fireEvent.click(screen.getByRole('button', { name: /^categor/i }))
-    const d = within(screen.getByRole('dialog'))
-    expect((await d.findByRole('button', { name: 'Carros' })).getAttribute('aria-expanded')).toBe('true')
-    expect(d.getByRole('link', { name: 'Ver todo en Frenos' }).getAttribute('aria-current')).toBe('page')
   })
 })

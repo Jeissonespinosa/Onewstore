@@ -332,32 +332,14 @@ describe('datos reales (react/category-menu.json)', () => {
     walk(realMenu.sections)
   })
 
-  it('se pinta con los datos por defecto, sin la prop sections (carga diferida al abrir)', async () => {
+  it('se pinta con los datos por defecto, sin la prop sections', () => {
     render(<CategoryMenu />)
     openMenu()
-    expect(await screen.findByRole('button', { name: 'Carros' })).toBeTruthy()
     const p = within(panel())
+    expect(p.getByRole('button', { name: 'Carros' })).toBeTruthy()
     expect(p.getByRole('button', { name: 'Motos' })).toBeTruthy()
     expect(p.getByRole('button', { name: 'Herramientas' })).toBeTruthy()
     expect(p.getByRole('link', { name: 'Ver todo en Carros' }).getAttribute('href')).toBe('/carros')
-  })
-
-  it('el boton se pinta de inmediato; el panel aparece cuando llegan los datos', async () => {
-    render(<CategoryMenu />)
-    expect(trigger()).toBeTruthy()
-    openMenu()
-    expect(screen.queryByRole('navigation')).toBeNull() // aun sin datos
-    expect(trigger().hasAttribute('aria-controls')).toBe(false)
-    await screen.findByRole('navigation', { name: /categor/i })
-    expect(trigger().getAttribute('aria-controls')).toBe(panel().id)
-  })
-
-  it('al pasar el puntero o dar foco al boton precarga los datos (el panel abre sin espera)', async () => {
-    render(<CategoryMenu />)
-    fireEvent.mouseEnter(trigger())
-    await new Promise(r => setTimeout(r, 50))
-    openMenu()
-    expect(panel()).toBeTruthy() // sincrono: ya estaban cargados
   })
 })
 

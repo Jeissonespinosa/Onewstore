@@ -85,7 +85,3 @@ Probado el 2026-11-15 en el workspace `devdiego` (`vtex.menu` 2.x, `vtex.store-d
 
 - ¿Se destacan categorías promocionales en el menú? Se pospone; no cambia ni la spec ni las tareas.
 - ¿Se mantiene o se elimina el CSS huérfano `.flexCol--headerNavLinks`? Se decide al implementar los estilos nuevos.
-
-## Ajuste por Lighthouse (tarea 5.2)
-
-Primera medición con el menú: escritorio bajó −8 en inicio (86 → 78) y −10 en producto (85 → 75), fuera del piso de AC-7 (−5). Decisión 11: el árbol (`react/category-menu.json`) ya no se empaqueta con el componente; se carga con `import()` dinámico al primer hover, foco o clic en el botón. Con la carga diferida el primer pintado solo lleva el botón; el drawer muestra "Cargando categorías…" si se abre antes de que lleguen los datos. En el workspace el JSON salió a un chunk aparte (0.js, 29 KB sin minificar) y el menú abre bien. Queda repetir Lighthouse.

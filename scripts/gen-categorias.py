@@ -419,6 +419,49 @@ def check_menu(menu, routes):
     return [(os.path.relpath(MENU_DATA, ROOT), p) for p in bad]
 
 
+SEPARADOR_PROHIBIDO = re.compile(r'\s[-/]\s')
+
+
+def check_separadores(tree):
+    """Nombres que VTEX corta al convertirlos en valor de filtro.
+
+    La capa vtex.search-graphql trunca el nombre del facet en cualquier
+    separador rodeado de espacios: "Frontier / NP300" y "Frontier - NP300"
+    llegan a la tienda como "Frontier", con un slug que no corresponde a
+    ningun producto, y el cliente cae en una pagina vacia. La API REST si
+    devuelve el nombre completo, asi que el error no se ve probando contra
+    la API: solo desde la tienda.
+
+    Los guiones pegados (D-Max, F-250, GSX-R600) no dan problema; se
+    revisa unicamente " - " y " / ". Verificado en devwilbis el 15/11/2026
+    con la especificacion Modelo de la categoria Llantas.
+    """
+    bad = []
+
+    def revisar(nombre, donde):
+        if nombre and SEPARADOR_PROHIBIDO.search(nombre):
+            bad.append((donde, nombre))
+
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            revisar(macro.get('nombre'), '%s > macro' % seccion)
+            for sub in macro.get('subs', []):
+                donde = '%s > %s' % (seccion, macro.get('nombre'))
+                revisar(sub.get('nombre'), donde)
+                revisar(sub.get('filtro'), donde + ' (filtro)')
+                for tipo in sub.get('tipos', []):
+                    nombre = tipo.get('nombre') if isinstance(tipo, dict) else tipo
+                    revisar(nombre, '%s > %s' % (donde, sub.get('nombre') or '(directos)'))
+    if bad:
+        print('\n  NOMBRES CON SEPARADOR " - " o " / " (VTEX los corta en el filtro):')
+        for donde, nombre in sorted(set(bad)):
+            print('   %-46s %s' % (donde, nombre))
+        print('   Usa espacio simple: "Frontier NP300", no "Frontier / NP300".')
+    else:
+        print('  separadores en nombres: ninguno problematico')
+    return sorted(set(bad))
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -904,7 +947,8 @@ def main(argv=None):
     REAL_QUERIES, DRY_RUN, FORCE = args.real, args.dry_run, args.force
     PENDING.clear()
 
-    _tree, routes = load_inputs()          # valida TODO antes de escribir
+    tree, routes = load_inputs()           # valida TODO antes de escribir
+    bad_sep = check_separadores(tree)
     try:
         nodes, rails = build_tree()
     except ValueError as exc:
@@ -914,7 +958,12 @@ def main(argv=None):
 
     if DRY_RUN:
         print('\n--dry-run: no se escribio nada.')
-        return 1 if (bad_links and not FORCE) else 0
+        return 1 if ((bad_links or bad_sep) and not FORCE) else 0
+    if bad_sep and not FORCE:
+        raise SystemExit('ERROR: %d nombre(s) llevan " - " o " / ". VTEX los corta al '
+                         'volverlos valor de filtro y el cliente llega a una pagina '
+                         'vacia. Corrigelos (o vuelve a correr con --force). No se '
+                         'escribio nada.' % len(bad_sep))
     if bad_links and not FORCE:
         raise SystemExit('ERROR: %d enlace(s) del theme apuntan a rutas que no existen. '
                          'Corrigelos (o vuelve a correr con --force). No se escribio nada.'

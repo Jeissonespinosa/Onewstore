@@ -601,3 +601,39 @@ class TestMenuCategorias(_Base):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TestSeparadores(unittest.TestCase):
+    """VTEX corta el nombre del facet en " - " y " / ": el generador debe
+    rechazar esos nombres antes de que lleguen al catalogo."""
+
+    def setUp(self):
+        self.check = import_pure_functions()['check_separadores']
+
+    def _arbol(self, nombre_tipo):
+        return {'_sinonimos': {'Carros': {}, '_comunes': {}},
+                'Carros': [{'nombre': 'Frenos', 'slug': 'frenos',
+                            'subs': [{'nombre': 'Pastillas', 'slug': 'pastillas',
+                                      'tipos': [nombre_tipo]}]}]}
+
+    def test_rechaza_barra_con_espacios(self):
+        bad = _quiet(self.check, self._arbol('Frontier / NP300'))
+        self.assertEqual(len(bad), 1)
+        self.assertIn('Frontier / NP300', bad[0][1])
+
+    def test_rechaza_guion_con_espacios(self):
+        bad = _quiet(self.check, self._arbol('Montero - Pajero'))
+        self.assertEqual(len(bad), 1)
+
+    def test_acepta_guion_pegado(self):
+        """D-Max, F-250 y GSX-R600 son nombres reales y validos."""
+        for nombre in ('D-Max', 'F-250', 'GSX-R600', 'Frontier NP300'):
+            self.assertEqual(_quiet(self.check, self._arbol(nombre)), [],
+                             '%s no deberia marcarse' % nombre)
+
+    def test_revisa_macro_sub_y_filtro(self):
+        arbol = {'_sinonimos': {}, 'Carros': [
+            {'nombre': 'Luces / Iluminacion', 'slug': 'luces', 'subs': [
+                {'nombre': 'Farolas - Stops', 'slug': 'farolas',
+                 'filtro': 'Tipo / Clase', 'tipos': []}]}]}
+        self.assertEqual(len(_quiet(self.check, arbol)), 3)

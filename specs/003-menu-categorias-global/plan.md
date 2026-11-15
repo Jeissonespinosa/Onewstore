@@ -24,13 +24,13 @@
 
 ## Decisions
 
-1. **Mega-menú de `vtex.menu` en escritorio, drawer de `vtex.store-drawer` con `vtex.menu` vertical en móvil.** Son apps ya instaladas, evitan código React propio (constitución #1) y comparten la definición de entradas. *Alternativa:* menú lateral permanente tipo Mercado Libre; se descarta porque ocupa espacio en cada página y no encaja con el header actual. *Alternativa:* componente React propio; se descarta mientras `vtex.menu` cubra la necesidad (ver decisión 6).
+1. **Mega-menú de `vtex.menu` en escritorio, drawer de `vtex.store-drawer` con `vtex.menu` vertical en móvil.** Son apps ya instaladas, evitan código React propio (constitución #1) y comparten la definición de entradas. *Actualización:* el drawer ya no usa `vtex.store-drawer` (decisión 10). *Alternativa:* menú lateral permanente tipo Mercado Libre; se descarta porque ocupa espacio en cada página y no encaja con el header actual. *Alternativa:* componente React propio; se descarta mientras `vtex.menu` cubra la necesidad (ver decisión 6).
 
 2. **Tres niveles en el menú: sección → macro → subcategoría.** Con 567 páginas, mostrar solo hasta subcategoría (33 + 37 entradas más las 3 secciones) mantiene el panel manejable; los tipos viven en la página de la subcategoría. Para macros sin subcategorías, el segundo nivel son sus tipos. La spec 003 dejaba esto como pregunta abierta; se asume "3 niveles" y se anota para revisión.
 
-3. **Ampliar `gen-categorias.py` para escribir `store/blocks/header/category-menu.jsonc`.** Es un archivo generado nuevo, no editado a mano, que define los bloques `menu#...` y `menu-item#...` a partir de `build_tree()`. Se reutiliza `check_links` para validar que cada `href` existe en `routes`. *Alternativa:* un script aparte; se descarta para no duplicar el recorrido ni la validación. Se escribe en `header/` y no en `home/` porque no es contenido de página; el script ya acepta añadir salidas.
+3. **Ampliar `gen-categorias.py` para escribir `react/category-menu.json`.** Es un archivo de datos generado (no un bloque de `store/`): el árbol sección → macro → subcategoría que consume el componente React (decisión de la tarea 1.3). Sale de `build_tree()` y reutiliza `check_links` para validar que cada `path` existe en `routes`. Se escribe en `react/` y no en `store/blocks/` porque un bloque de interfaz desconocida rompería `vtex link` hasta que exista el componente. *Alternativa (descartada, 2026-11-15):* `store/blocks/header/category-menu.jsonc` con bloques `menu#`; no encaja con el componente propio. *Alternativa:* un script aparte; se descarta para no duplicar el recorrido ni la validación.
 
-4. **Bloques de layout a mano, entradas generadas.** `header.jsonc` (a mano) solo referencia un bloque raíz del menú y el `drawer`; los `menu-item` hijos viven en el archivo generado. Así un cambio de categorías nunca obliga a editar el header.
+4. **Bloques de layout a mano, entradas generadas.** `header.jsonc` (a mano) solo referencia el bloque del componente y el `drawer`; el árbol vive en el archivo de datos generado. Así un cambio de categorías nunca obliga a editar el header.
 
 5. **Estado activo con la funcionalidad nativa de `vtex.menu` si existe; si no, con CSS sobre el `href` activo.** Se resuelve en el spike (tarea 1).
 
@@ -38,7 +38,31 @@
 
 7. **Acceso en el header.** Escritorio: nuevo `flex-layout.col` con el disparador entre el logo y el espaciador de `flex-layout.row#4-desktop`. Móvil: `drawer-trigger` antes del logo en `flex-layout.row#1-mobile`.
 
-8. **Rendimiento.** Activar la renderización optimizada de submenús que ofrezca `vtex.menu` y reservar el alto del disparador en CSS para evitar CLS. Estilos en `styles/css/vtex.menu.css` y `styles/css/vtex.store-drawer.css`, con tokens de `styles/configs/style.json` (constitución #4).
+8. **Rendimiento.** Reservar el alto del disparador en CSS para evitar CLS (el panel es `position: absolute`, no mueve el contenido: medido 0 px). El panel solo se monta al abrir, así que no añade ~300 enlaces al HTML inicial.
+
+9. **Estilos como CSS Module en `react/CategoryMenu.css`** (decisión del 2026-11-15, desviación de la letra de la constitución #4). El styles builder de VTEX ignora `styles/css/onewstore.store-theme.css` ("is not a dependency": un theme no puede depender de sí mismo) y rechaza como "selectores deprecados" las reglas `:global(.onewstore-store-theme-5-x-…)` puestas en otro archivo, como `vtex.store-header.css`. Un CSS Module cumple el espíritu de la regla (sin estilos inline, valores alineados con `styles/configs/style.json`) y permite `:hover`, `:focus-visible` y media queries. Cada elemento lleva además su handle de `vtex.css-handles` para poder personalizarlo desde fuera. La constitución #4 debería recoger esta excepción para componentes React propios.
+
+### Resultados del spike (tarea 1.2)
+
+Probado el 2026-11-15 en el workspace `devdiego` (`vtex.menu` 2.x, `vtex.store-drawer` 0.x) con un menú de prueba de 2 secciones y 2 niveles. Escritorio a 1536 px; móvil en un iframe de 360 px (la herramienta del navegador no cambia el ancho de la ventana). No se probó con lector de pantalla.
+
+| Requisito | Resultado | Observación |
+|---|---|---|
+| Submenús anidados (escritorio) | **Nativo** | Se renderizan; el ítem alterna `isOpen` / `isClosed`. |
+| Ocultar el submenú cerrado | **No nativo** | Sin CSS propio queda siempre visible; se resuelve con estilos (tarea 3.2). |
+| Apertura | **Solo hover** | Con foco de teclado en el ítem el submenú sigue `isClosed`. |
+| Cierre con Esc (escritorio) | **No nativo** | Esc no cambia el estado ni mueve el foco. |
+| `aria-expanded` en los ítems | **No nativo** | Los ítems son `li` sin atributos; el `nav` no tiene `aria-label`. |
+| Drawer móvil: abrir, overlay, botón de cierre | **Nativo** | Abre desde el `drawer-trigger`. |
+| Acordeón vertical en el drawer | **Parcial** | Aparece el "+" (prop `accordion`), pero los hijos se ven desplegados desde el inicio; hay que confirmarlo y ajustarlo con CSS. |
+| Cierre del drawer con Esc | **No nativo** | El drawer sigue `opened` y el foco queda en `BODY`. |
+| Foco al cerrar | **No nativo** | Tras Esc el foco no vuelve al disparador. |
+
+**Conclusión provisional:** `vtex.menu` y `vtex.store-drawer` cubren la estructura y el drawer, pero no teclado (Esc, foco), `aria-expanded` ni foco de retorno (RF-7, AC-4 y la sección 5 de la spec). 
+
+**Decisión (tarea 1.3, aprobada por Diego el 2026-11-15):** se construye un **componente React mínimo** con test en `react/__tests__`, en lugar de ajustar la spec. Debe cubrir Esc, apertura y recorrido con teclado, `aria-expanded`, `aria-label` en el `nav` y foco de retorno al disparador, tanto en escritorio como en el drawer. Sigue usando `vtex.menu` / `vtex.store-drawer` para la estructura y los estilos donde sea posible; el alcance exacto (envolver los bloques nativos o renderizar el árbol propio) se define al implementar los grupos 3 y 4 y se anota aquí. La spec no cambia: RF-7, AC-4 y la sección 5 se mantienen.
+
+10. **El drawer móvil es una variante del propio componente (`variant="drawer"`), no `vtex.store-drawer`** (decisión del 2026-11-15, consecuencia de 1.3). `vtex.store-drawer` no cierra con Esc, no devuelve el foco y no expone `aria-modal` (spike), así que el componente propio aporta su drawer: diálogo `role="dialog"` + `aria-modal`, foco que entra al abrir y vuelve al disparador, Tab atrapado dentro, Esc, cierre por overlay y bloqueo del scroll del fondo. Se monta en un **portal** sobre `document.body`: el header fijo usa `backdrop-filter`, y un `position: fixed` dentro de un ancestro con `backdrop-filter` se posiciona respecto a ese ancestro y no a la pantalla. En móvil el árbol es un acordeón de tres niveles (sección → macro → subcategoría), un solo ítem abierto por nivel.
 
 ## Risks / Trade-offs
 

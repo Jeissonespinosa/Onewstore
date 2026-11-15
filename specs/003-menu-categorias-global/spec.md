@@ -1,6 +1,6 @@
 # 003 — Acceso rápido a menú y categorías desde cualquier página
 
-- **Estado:** draft
+- **Estado:** done
 - **Responsable:** Diego
 - **Rama:** `feat/003-menu-categorias-global`
 - **Depende de:** 000 (contexto) — (usa `catalogo/estructura-categorias-v2.json` como fuente de categorías)
@@ -15,7 +15,7 @@ pero los listados son placeholders). Referentes: **Éxito** y **Mercado Libre**
 
 ## 2. Objetivos / No-objetivos
 **Objetivos**
-- Menú "Categorías" accesible desde el header en **todas** las páginas (home, PLP, PDP, carrito, cuenta).
+- Menú "Categorías" accesible desde el header en **todas** las páginas del theme (home, PLP, PDP, búsqueda, cuenta). El checkout nativo de VTEX (`/checkout`, incluido el carrito) no usa el header del theme y queda fuera; se aborda con la personalización del checkout (spec 006, hallazgo A).
 - Navegación en 2-3 niveles (macro → subcategoría → tipo) sin pasar por el home.
 - Funciona en móvil (drawer) y escritorio (mega-menú).
 
@@ -44,7 +44,7 @@ pero los listados son placeholders). Referentes: **Éxito** y **Mercado Libre**
 - Sin enlaces internos rotos (lo valida el script).
 
 ## 6. Criterios de aceptación
-- `AC-1` En home, PLP, PDP y carrito el acceso "Categorías" está visible en el header.
+- `AC-1` En home, PLP, PDP y búsqueda el acceso "Categorías" está visible en el header.
 - `AC-2` Desde una PDP, elegir una categoría (p. ej. "Llantas") navega a su página sin pasar por el home. Mientras el catálogo no tenga el árbol cargado, basta con que la página de categoría cargue (aunque el listado sea placeholder).
 - `AC-3` En móvil (≤640 px) el menú abre como drawer y permite navegar 3 niveles.
 - `AC-4` Solo con teclado se abre, recorre y cierra el menú (Tab/Enter/Esc).

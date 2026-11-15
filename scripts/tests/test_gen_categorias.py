@@ -506,5 +506,98 @@ class TestAuditoria(_Base):
         self.assertIn('alarma', filas['Motos'])
 
 
+class TestMenuCategorias(_Base):
+    """react/category-menu.json: arbol del menu "Categorias" del header (spec 003)."""
+
+    def test_conteo_de_entradas_del_arbol_real(self):
+        sb = self.sandbox()
+        _quiet(sb.run)
+        secciones = sb.read_menu()['sections']
+        self.assertEqual([x['nombre'] for x in secciones], ['Carros', 'Motos', 'Herramientas'])
+        macros = [m for x in secciones for m in x['children']]
+        self.assertEqual(len(macros), 33)
+        with open(os.path.join(sb.cat, 'estructura-categorias-v2.json'), encoding='utf-8') as fh:
+            fuente = json.load(fh)
+        fuente_macros = [m for dept in ('Carros', 'Motos', 'Herramientas') for m in fuente[dept]]
+        subs = 0
+        for macro, src in zip(macros, fuente_macros):
+            self.assertEqual(macro['nombre'], src['nombre'])
+            con_sub = [x for x in src['subs'] if x.get('nombre') is not None]
+            if con_sub:
+                subs += len(macro['children'])
+                self.assertEqual(len(macro['children']), len(con_sub))
+            else:                                   # macro sin subcategorias: sus tipos
+                self.assertEqual(len(macro.get('children', [])),
+                                 sum(len(x['tipos']) for x in src['subs']))
+        self.assertEqual(subs, 37)
+
+    def test_macro_sin_subcategorias_muestra_sus_tipos(self):
+        sb = self.sandbox(tree=minimal_tree())
+        _quiet(sb.run)
+        carros = sb.read_menu()['sections'][0]
+        frenos = carros['children'][0]
+        self.assertEqual(frenos['path'], '/carros/frenos')
+        self.assertEqual([c['nombre'] for c in frenos['children']], ['Pastillas de freno'])
+        self.assertEqual(frenos['children'][0]['path'], '/carros/frenos/pastillas-de-freno')
+        self.assertNotIn('children', frenos['children'][0])
+
+    def test_subcategoria_de_filtros_no_tiene_hijos_y_los_tipos_no_entran(self):
+        t = minimal_tree(Carros=[{'nombre': 'Llantas', 'subs': [
+            {'nombre': 'Por vehiculo', 'vitrina': 'filtros', 'filtro': 'Tipo de vehiculo',
+             'tipos': ['Automovil', 'Camion']},
+            {'nombre': 'Rines', 'tipos': ['Rin de acero', 'Rin de aluminio']}]}])
+        sb = self.sandbox(tree=t)
+        _quiet(sb.run)
+        llantas = sb.read_menu()['sections'][0]['children'][0]
+        por_vehiculo, rines = llantas['children']
+        self.assertEqual(por_vehiculo['path'], '/carros/llantas/por-vehiculo')
+        self.assertNotIn('children', por_vehiculo)        # sus valores no son paginas
+        self.assertNotIn('children', rines)               # los tipos viven en su pagina
+        todas = json.dumps(sb.read_menu())
+        self.assertNotIn('rin-de-acero', todas)
+        self.assertNotIn('camion', todas)
+
+    def test_cada_nodo_con_hijos_enlaza_su_ver_todo(self):
+        """El enlace "Ver todo" de un nivel es la ruta del propio nodo: debe existir
+        (en routes.json o como categoria que sirve VTEX)."""
+        sb = self.sandbox()
+        mod = _quiet(sb.run)
+        validas = mod.valid_paths(sb.read_routes())
+
+        def recorre(items):
+            for it in items:
+                self.assertIn(it['path'], validas, it['nombre'])
+                recorre(it.get('children', []))
+        menu = sb.read_menu()
+        recorre(menu['sections'])
+        self.assertTrue(all(x['children'] for x in menu['sections']))
+
+    def test_es_idempotente(self):
+        sb = self.sandbox(tree=minimal_tree())
+        _quiet(sb.run)
+        primero = sb.read_menu()
+        _quiet(sb.run)
+        self.assertEqual(primero, sb.read_menu())
+
+    def test_el_menu_versionado_esta_al_dia_con_el_json(self):
+        from _sandbox import REPO
+        sb = self.sandbox()
+        _quiet(sb.run)
+        with open(os.path.join(REPO, 'react', 'category-menu.json'), encoding='utf-8') as fh:
+            self.assertEqual(sb.read_menu(), json.load(fh),
+                             'react/category-menu.json desactualizado: vuelve a correr gen-categorias.py')
+
+    def test_dry_run_no_escribe_el_menu_ni_toca_store_blocks_header(self):
+        sb = self.sandbox(tree=minimal_tree())
+        _quiet(sb.run, ['--dry-run'])
+        self.assertFalse(os.path.exists(os.path.join(sb.root, 'react', 'category-menu.json')))
+        self.assertFalse(os.path.exists(os.path.join(sb.root, 'store', 'blocks', 'header')))
+
+    def test_una_corrida_normal_no_escribe_bloques_del_menu_en_store(self):
+        sb = self.sandbox(tree=minimal_tree())
+        _quiet(sb.run)
+        self.assertFalse(os.path.exists(os.path.join(sb.root, 'store', 'blocks', 'header')))
+
+
 if __name__ == '__main__':
     unittest.main()

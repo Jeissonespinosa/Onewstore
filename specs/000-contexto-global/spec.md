@@ -133,7 +133,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 
 | # | Flujo | Estado | Evidencia |
 |---|---|---|---|
-| CU-1 | **Navegar por categorías** (Carros → macro → subcategoría → tipo) | Funciona como navegación; los listados dependen de datos de prueba. Sin menú global en el header (spec 003). | [Hecho·sitio] |
+| CU-1 | **Navegar por categorías** (Carros → macro → subcategoría → tipo) | Funciona como navegación; los listados dependen de datos de prueba. Menú «Categorías» global en el header, escritorio y móvil (spec 003, `done`). | [Hecho·sitio] |
 | CU-2 | **Buscar llantas por medida** (Ancho/Perfil/Rin + filtros) | **Funciona** con las 5 llantas de prueba. | [Hecho·sitio] |
 | CU-3 | **Buscar por vehículo** (Marca/Modelo/Año) | **No funciona**: selects vacíos y deshabilitados (faltan especificaciones de compatibilidad). | [Hecho·sitio + código] |
 | CU-4 | **Ver ficha de producto** (precio, referencia, especificaciones, cantidad, envío) | Funciona. Sin reseñas visibles ni seller visible. La imagen es el logo de Repuestox (sin fotos reales). | [Hecho·sitio] |
@@ -168,7 +168,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Marketplace con sellers terceros | **Objetivo**, no operativo. Un solo seller (el propio). Sin condiciones, comisiones ni portal visibles. | [Hecho·sitio] + [Inferido] |
 | TyC y 6 páginas legales (D2-D7) | **Diseño** (spec 001 `draft`); las rutas no existen | [Hecho·sitio + spec] |
 | Feedback de compra y del sitio | **Diseño** (spec 002 `draft`) | [Hecho·spec] |
-| Menú global de categorías | **Diseño** (spec 003 `draft`); el header solo tiene login y minicart | [Hecho·código + spec] |
+| Menú global de categorías | **Construido** (spec 003 `done`): botón «Categorías» en el header de todas las páginas, panel de 3 columnas en escritorio y drawer con acordeón en móvil; datos en `react/category-menu.json`, generado por `scripts/gen-categorias.py`. Probado en workspace `devdiego`, no publicado | [Hecho·código + spec] |
 | Checkout, pagos, envíos | **Sin personalizar y sin verificar** | [Hecho·sitio] |
 | Contacto | Roto en el workspace | [Hecho·sitio] |
 | Producción | **No hay tienda en producción con dominio propio: el proyecto está en desarrollo.** El git declara 5.3.0 instalada en `master`, pero eso no equivale a una tienda abierta al público. | [Hecho·equipo] + [Hecho·git] |

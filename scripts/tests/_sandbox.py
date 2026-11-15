@@ -168,6 +168,12 @@ class Sandbox(object):
         with open(os.path.join(self.cat, 'estructura-categorias-v2.csv'), encoding='utf-8', newline='') as fh:
             return list(csv.reader(fh))
 
+    def read_menu(self):
+        """Datos del menu del header (react/category-menu.json)."""
+        self._ensure_ran()
+        with open(os.path.join(self.root, 'react', 'category-menu.json'), encoding='utf-8') as fh:
+            return json.load(fh)
+
     def outputs(self):
         return sorted(os.listdir(self.blocks))
 

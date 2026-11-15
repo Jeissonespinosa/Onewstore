@@ -49,6 +49,7 @@
     },
     "children": [
       "flex-layout.col#logo-desktop",
+      "flex-layout.col#categories-desktop",
       "flex-layout.col#spacer",
       "flex-layout.row#header-actions"
     ]
@@ -64,6 +65,20 @@
       "login",
       "minicart.v2"
     ]
+  },
+  "flex-layout.col#categories-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "categoriesDesktop"
+    },
+    "children": [
+      "category-menu#header"
+    ]
+  },
+  "category-menu#header": {
+    "props": {
+      "id": "rx-category-menu-desktop"
+    }
   },
   "login": {
     "props": {
@@ -101,6 +116,7 @@
   },
   "flex-layout.row#1-mobile": {
     "children": [
+      "flex-layout.col#categories-mobile",
       "logo#mobile",
       "flex-layout.col#spacer",
       "flex-layout.col#header-actions-mobile"
@@ -121,6 +137,22 @@
       "login",
       "minicart.v2"
     ]
+  },
+  "flex-layout.col#categories-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "blockClass": "categoriesMobile",
+      "width": "auto"
+    },
+    "children": [
+      "category-menu#header-mobile"
+    ]
+  },
+  "category-menu#header-mobile": {
+    "props": {
+      "variant": "drawer",
+      "id": "rx-category-menu-mobile"
+    }
   },
   "logo#mobile": {
     "props": {

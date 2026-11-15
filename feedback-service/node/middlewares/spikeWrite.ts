@@ -1,9 +1,11 @@
 import { json } from 'co-body'
 import { originAllowed } from './common'
 
-// Entidad creada por el builder masterdata: {vendor}_{appName}_{entidad}, con los guiones del
-// nombre de la app convertidos en guiones bajos (confirmado en el log de `vtex link`, 2026-11-15).
+// El builder masterdata falla en builder-hub ("Schema creation ... failed. undefined"), así que la
+// entidad se crea a mano con la API de Master Data (ver README de feedback-service). Spike: usa el
+// esquema que se creó con ese PUT.
 const ENTITY = 'onewstore_feedback_service_spiketest'
+const SCHEMA = '0.0.1-devdiego'
 
 export async function spikeWrite(ctx: any, next: () => Promise<any>) {
   if (!originAllowed(ctx)) {
@@ -22,6 +24,7 @@ export async function spikeWrite(ctx: any, next: () => Promise<any>) {
     const res = await ctx.clients.masterdata.createDocument({
       dataEntity: ENTITY,
       fields: { note, kind: 'a' },
+      schema: SCHEMA,
     })
     ctx.status = 200
     ctx.body = { ok: true, id: res.DocumentId }

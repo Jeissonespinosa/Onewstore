@@ -5,8 +5,7 @@
   "title": "Servicio de feedback de Repuestox",
   "description": "Recibe el feedback de compra y del sitio y lo guarda en Master Data con campos privados (spec 002). Versión de spike.",
   "builders": {
-    "node": "7.x",
-    "masterdata": "1.x"
+    "node": "7.x"
   },
   "policies": [
     {

@@ -50,7 +50,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 **B. Botón flotante de feedback del sitio**
 - `RF-7` Un botón flotante, siempre visible y en la misma esquina, aparece en todas las páginas del theme (no aplica al checkout, que no pertenece al theme).
 - `RF-8` Al activarlo se abre un formulario en modal con: tipo (Problema / Sugerencia de mejora / Otro), mensaje obligatorio (máx. 1000 caracteres) y correo de contacto.
-- `RF-8b` El correo se obtiene así: (1) si el usuario está **autenticado**, el de su cuenta; (2) si no, y el botón se abre desde la **confirmación de un pedido**, el correo del pedido; (3) en cualquier otro caso (usuario **anónimo**), se **solicita** en el formulario. En los casos 1 y 2 el correo se muestra ya rellenado y visible en el formulario, para que el usuario sepa a qué dirección se le responderá.
+- `RF-8b` El correo se obtiene así: (1) si el usuario está **autenticado**, el de su cuenta; (2) si no, y el botón se abre desde la **confirmación de un pedido**, el correo del pedido; (3) en cualquier otro caso (usuario **anónimo**), se **solicita** en el formulario, pero es **opcional**: sin correo el feedback se envía igual y el equipo no podrá responderle. En los casos 1 y 2 el correo se muestra ya rellenado y visible en el formulario, para que el usuario sepa a qué dirección se le responderá.
 - `RF-8c` El botón flotante también se muestra en la confirmación del pedido, junto al bloque de rating de la compra (RF-1).
 - `RF-9` Cada envío guarda automáticamente la URL de la página, la fecha y el tamaño de pantalla (móvil/escritorio). No se guardan más datos técnicos del usuario.
 - `RF-10` Tras enviar, se muestra confirmación y el modal se cierra; si falla el envío se conserva lo escrito y se muestra el error.
@@ -78,7 +78,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 - `AC-7` Enviar el formulario flotante con tipo y mensaje guarda un registro con la URL de la página donde se abrió.
 - `AC-7b` Con sesión iniciada, el formulario flotante muestra el correo de la cuenta; abierto desde la confirmación de un pedido sin sesión, muestra el correo del pedido; como anónimo en otra página, pide el correo.
 - `AC-7c` La confirmación del pedido muestra a la vez el bloque de rating y el botón flotante.
-- `AC-8` Con el mensaje vacío no se puede enviar; como anónimo, con el correo vacío o mal escrito se muestra un error claro.
+- `AC-8` Con el mensaje vacío no se puede enviar; como anónimo, el correo vacío es válido y envía el feedback, pero un correo mal escrito muestra un error claro.
 - `AC-9` Solo con teclado se abre el modal, se llena, se envía y se cierra con Esc, y el foco vuelve al botón.
 - `AC-10` Un comentario con `<script>` o HTML se guarda y se ve como texto plano.
 - `AC-11` Una consulta pública (sin sesión de administrador) a los datos del feedback es rechazada.
@@ -97,7 +97,7 @@ Recomendación inicial: **A**. El spike (1 día) debe comprobar: (1) si `store-f
 - [ ] ¿Quién lee el feedback, con qué frecuencia y cómo se entera (solo admin, o aviso por correo)? *(reemplaza la antigua Q11 de moderación)*
 - [x] ¿El botón flotante se muestra también en la confirmación del pedido? → **Sí** (2026-11-15), RF-8c.
 - [x] ¿Se pide el correo en el rating de compra? → **No**: se toma del usuario autenticado, del pedido en una compra, o se solicita si es anónimo (2026-11-15), RF-3 y RF-8b.
-- [ ] ¿El correo es **obligatorio** para el usuario anónimo, o puede enviar el feedback sin dejarlo? (la spec lo trata como obligatorio cuando se solicita)
+- [x] ¿El correo es obligatorio para el usuario anónimo? → **No, es opcional** (2026-11-15), RF-8b.
 - [ ] ¿Cómo se lee el correo de la cuenta y del pedido sin exponerlo? (a confirmar en el spike)
 - [ ] ¿Esquina del botón y texto ("Feedback", "Ayúdanos a mejorar")? ¿Hay otros elementos flotantes previstos (WhatsApp, chat)?
 - [ ] ¿La entidad de Master Data y su esquema ya existen en la cuenta, o se crean? (se resuelve junto con el diagnóstico de la spec 004)

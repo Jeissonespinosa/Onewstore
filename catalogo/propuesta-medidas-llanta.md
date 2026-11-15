@@ -54,6 +54,9 @@ Para carga/transporte hay que contemplar el formato viejo sin perfil (`700-16`,
 `1100-20`): se modela con `Ancho=700`, `Rin=16`, `Construcción=D` y
 `Medida completa=700-16`.
 
+> **Aprobado el 2026-11-15:** las cuatro especificaciones de este grupo (`Diámetro`,
+> `Ancho de rin`, `Huecos`, `Pernos (PCD)`). Falta crearlas en el admin.
+
 **Grupo "Rin"** (hojas de rines): `Diámetro` (15, 16, 17…), `Ancho de rin` (6J, 7J),
 `Huecos` (4, 5, 6) y `Pernos (PCD)` (`4x100`, `5x114.3`) — sin esto un rin no se puede
 elegir, y hoy solo hay `rines 15/16/17`.

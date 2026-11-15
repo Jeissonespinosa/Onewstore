@@ -18,7 +18,7 @@ specs/
   004-contact-us-roto/      spec.md (arreglo del formulario de contacto)
   005-about-us/             spec.md (página Quiénes somos)
   006-ajustes-calidad-tienda/ spec.md (checkout, redes, 404, tests)
-  007-selector-medida-rines/  spec.md (selector Diámetro → Ancho → Huecos → PCD)
+  007-selector-medida-rines/  spec.md · plan.md · tasks.md (selector Diámetro → Ancho → Huecos → PCD)
 ```
 
 Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar la spec
@@ -48,7 +48,7 @@ aceptación (`AC-n`) que cubre.
 | 004 | Formulario de contacto roto (`/contact-us`) | Por asignar | draft | 000 |
 | 005 | Página "Quiénes somos" (`/about-us`) | Por asignar | draft | 000 (contenido de negocio) |
 | 006 | Ajustes de calidad de la tienda | Por asignar | draft | 000 |
-| 007 | Selector de medida de rines | Diego | draft | 000, `catalogo/como-cargan-los-sellers.md` |
+| 007 | Selector de medida de rines | Diego | approved | 000, `catalogo/como-cargan-los-sellers.md` |
 
 ## Roadmap propuesto
 

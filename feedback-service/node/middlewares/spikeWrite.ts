@@ -1,8 +1,9 @@
 import { json } from 'co-body'
 import { originAllowed } from './common'
 
-// Entidad creada por el builder masterdata: {vendor}_{appName}_{entidad}. A confirmar en el spike.
-const ENTITY = 'onewstore_feedback-service_spiketest'
+// Entidad creada por el builder masterdata: {vendor}_{appName}_{entidad}, con los guiones del
+// nombre de la app convertidos en guiones bajos (confirmado en el log de `vtex link`, 2026-11-15).
+const ENTITY = 'onewstore_feedback_service_spiketest'
 
 export async function spikeWrite(ctx: any, next: () => Promise<any>) {
   if (!originAllowed(ctx)) {

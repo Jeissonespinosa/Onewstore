@@ -29,8 +29,9 @@ export async function spikeSession(ctx: any, next: () => Promise<any>) {
       maskedEmail: authenticated && email ? maskEmail(email) : null,
     }
   } catch (e: any) {
-    ctx.status = 502
-    ctx.body = { error: 'session', detail: e?.message }
+    // Spike: 200 con el detalle porque el CDN sustituye los 5xx por su página de error.
+    ctx.status = 200
+    ctx.body = { error: 'session', detail: String(e?.message ?? e).slice(0, 300) }
   }
   await next()
 }

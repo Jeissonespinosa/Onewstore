@@ -40,6 +40,26 @@
 
 8. **Rendimiento.** Activar la renderización optimizada de submenús que ofrezca `vtex.menu` y reservar el alto del disparador en CSS para evitar CLS. Estilos en `styles/css/vtex.menu.css` y `styles/css/vtex.store-drawer.css`, con tokens de `styles/configs/style.json` (constitución #4).
 
+### Resultados del spike (tarea 1.2)
+
+Probado el 2026-11-15 en el workspace `devdiego` (`vtex.menu` 2.x, `vtex.store-drawer` 0.x) con un menú de prueba de 2 secciones y 2 niveles. Escritorio a 1536 px; móvil en un iframe de 360 px (la herramienta del navegador no cambia el ancho de la ventana). No se probó con lector de pantalla.
+
+| Requisito | Resultado | Observación |
+|---|---|---|
+| Submenús anidados (escritorio) | **Nativo** | Se renderizan; el ítem alterna `isOpen` / `isClosed`. |
+| Ocultar el submenú cerrado | **No nativo** | Sin CSS propio queda siempre visible; se resuelve con estilos (tarea 3.2). |
+| Apertura | **Solo hover** | Con foco de teclado en el ítem el submenú sigue `isClosed`. |
+| Cierre con Esc (escritorio) | **No nativo** | Esc no cambia el estado ni mueve el foco. |
+| `aria-expanded` en los ítems | **No nativo** | Los ítems son `li` sin atributos; el `nav` no tiene `aria-label`. |
+| Drawer móvil: abrir, overlay, botón de cierre | **Nativo** | Abre desde el `drawer-trigger`. |
+| Acordeón vertical en el drawer | **Parcial** | Aparece el "+" (prop `accordion`), pero los hijos se ven desplegados desde el inicio; hay que confirmarlo y ajustarlo con CSS. |
+| Cierre del drawer con Esc | **No nativo** | El drawer sigue `opened` y el foco queda en `BODY`. |
+| Foco al cerrar | **No nativo** | Tras Esc el foco no vuelve al disparador. |
+
+**Conclusión provisional:** `vtex.menu` y `vtex.store-drawer` cubren la estructura y el drawer, pero no teclado (Esc, foco), `aria-expanded` ni foco de retorno (RF-7, AC-4 y la sección 5 de la spec). 
+
+**Decisión (tarea 1.3, aprobada por Diego el 2026-11-15):** se construye un **componente React mínimo** con test en `react/__tests__`, en lugar de ajustar la spec. Debe cubrir Esc, apertura y recorrido con teclado, `aria-expanded`, `aria-label` en el `nav` y foco de retorno al disparador, tanto en escritorio como en el drawer. Sigue usando `vtex.menu` / `vtex.store-drawer` para la estructura y los estilos donde sea posible; el alcance exacto (envolver los bloques nativos o renderizar el árbol propio) se define al implementar los grupos 3 y 4 y se anota aquí. La spec no cambia: RF-7, AC-4 y la sección 5 se mantienen.
+
 ## Risks / Trade-offs
 
 - **`vtex.menu` no cubre un requisito (Esc, foco, ARIA, acordeón)** → el spike lo detecta antes de escribir el generador; plan B: componente React mínimo.

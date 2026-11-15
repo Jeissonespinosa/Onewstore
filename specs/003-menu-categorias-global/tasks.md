@@ -4,9 +4,9 @@
 
 ## 1. Línea base y spike de `vtex.menu`
 
-- [ ] 1.1 Medir Lighthouse (rendimiento) en inicio, un listado de categoría y una ficha de producto del workspace, y guardar los valores en `specs/003-menu-categorias-global/baseline.md`. Verificación: el archivo existe con 3 puntuaciones y la fecha.
-- [ ] 1.2 En un workspace propio con `vtex link`, montar a mano un `menu` de prueba (2 secciones, 2 niveles) en el header de escritorio y en un `drawer` móvil, y comprobar: submenús anidados, acordeón vertical, cierre con Esc y clic fuera, foco al cerrar y `aria-expanded`. Verificación: tabla "requisito → nativo / no nativo" en `plan.md` (sección de decisiones) para cada comportamiento.
-- [ ] 1.3 Si algún requisito obligatorio de la spec no es nativo, decidir con el equipo entre componente React mínimo o ajustar la spec, y registrar la decisión en `plan.md`. Verificación: `plan.md` sin decisiones pendientes sobre el spike.
+- [x] 1.1 Medir Lighthouse (rendimiento) en inicio, un listado de categoría y una ficha de producto del workspace, y guardar los valores en `specs/003-menu-categorias-global/baseline.md`. Verificación: el archivo existe con 3 puntuaciones y la fecha.
+- [x] 1.2 En un workspace propio con `vtex link`, montar a mano un `menu` de prueba (2 secciones, 2 niveles) en el header de escritorio y en un `drawer` móvil, y comprobar: submenús anidados, acordeón vertical, cierre con Esc y clic fuera, foco al cerrar y `aria-expanded`. Verificación: tabla "requisito → nativo / no nativo" en `plan.md` (sección de decisiones) para cada comportamiento.
+- [x] 1.3 Si algún requisito obligatorio de la spec no es nativo, decidir con el equipo entre componente React mínimo o ajustar la spec, y registrar la decisión en `plan.md`. Verificación: `plan.md` sin decisiones pendientes sobre el spike.
 
 ## 2. Generador de entradas del menú
 

@@ -67,6 +67,20 @@ Fuente: README de `vtex.store-form` (rama `master` de `vtex-apps/store-form`, le
 
 **Consecuencia para la decisión 1:** la opción A puede usar `store-form` solo en parte. Como faltan las estrellas y los valores dinámicos, es probable que ambos formularios (rating y botón flotante) se hagan con un componente React propio que escriba en Master Data, y no con `store-form`. Se confirma tras 1.2 y 1.3; hasta entonces la decisión 1 sigue abierta.
 
+### Resultados del spike (tarea 1.3, parcial)
+
+Observado el 2026-11-15 en `devdiego`, como visitante anónimo, solo con lecturas.
+
+| Comprobación | Resultado |
+|---|---|
+| `GET /api/dataentities/contact/schemas[/site-contact]`, `.../search`, y `CL/search` | **403** para todas, incluida `CL` (que siempre existe): desde fuera no se distingue "existe" de "no existe" |
+| Consulta que usa `store-form` (`documentPublicSchema`, `vtex.store-graphql`) para `contact` / `site-contact` | **404** de Master Data: el esquema público `site-contact` **no existe** (o no está marcado público) en la cuenta |
+| `/contact-us` | Se queda en "Cargando formulario..." sin error de consola; la consulta devuelve `documentPublicSchema: null` con el 404 anterior |
+
+**Causa probable del fallo de la spec 004** *[inferido de lo anterior]*: `docs/contact-schema.json` está en el repo pero el esquema nunca se creó en Master Data de la cuenta; el builder `docs` no lo crea solo. Para 002 significa que **hay que crear los esquemas a mano** (API de Master Data con permiso de administrador) y que el repo solo guarda su definición.
+
+**Pendiente de 1.3** (requiere sesión de administrador o token, que no uso): crear un esquema de prueba, comprobar que una escritura anónima funciona y que una lectura anónima se rechaza (decisión 3). Un esquema público con `v-security.publicJsonSchema: true` solo expone **la definición**; el control de quién escribe y lee los documentos va en los permisos de la entidad, a verificar al crearla.
+
 ## Riesgos
 
 | Riesgo | Mitigación |

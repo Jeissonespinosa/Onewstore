@@ -51,6 +51,22 @@
    (misma excepción que la spec 003). Sin estilos inline.
 8. **Antispam:** honeypot + límite de envíos por sesión en el cliente. Es mitigación, no garantía.
 
+### Resultados del spike (tarea 1.1)
+
+Fuente: README de `vtex.store-form` (rama `master` de `vtex-apps/store-form`, leído el 2026-11-15). Solo lectura de documentación; **no probado en el workspace**.
+
+| Requisito | Resultado | Observación |
+|---|---|---|
+| Estrellas / calificación 1-5 | **No nativo** | Bloques disponibles: `form-input.checkbox`, `dropdown`, `radiogroup`, `textarea`, `text`, `upload`, `form-field-group`, `form-submit`, `form-success`. Ningún control de estrellas. |
+| Lista cerrada (tipo, motivo) | **Nativo** | `form-input.dropdown` o `radiogroup`, con valores del esquema. |
+| Comentario largo | **Nativo** | `form-input.textarea`; el límite de 1000 caracteres va en el esquema (`maxLength`), a comprobar. |
+| Campo oculto con valor | **Parcial** | `form-input.text` con `inputType: "hidden"` y `value` fijo en el bloque. El valor es estático: no sirve para URL, pedido o correo, que son dinámicos. |
+| Valores dinámicos (URL, pedido, correo, pantalla) | **No nativo** | `store-form` no los inyecta. Hay que usar un componente React que envíe a Master Data. |
+| Mensaje de éxito / error | **Nativo** | `form-success` y handles `formErrorServer` / `formErrorUserInput`. |
+| Esquema público de solo escritura | **Sin información** | El README no lo cubre; se verifica en la tarea 1.3. |
+
+**Consecuencia para la decisión 1:** la opción A puede usar `store-form` solo en parte. Como faltan las estrellas y los valores dinámicos, es probable que ambos formularios (rating y botón flotante) se hagan con un componente React propio que escriba en Master Data, y no con `store-form`. Se confirma tras 1.2 y 1.3; hasta entonces la decisión 1 sigue abierta.
+
 ## Riesgos
 
 | Riesgo | Mitigación |

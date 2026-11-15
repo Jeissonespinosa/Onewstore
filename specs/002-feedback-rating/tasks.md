@@ -5,7 +5,7 @@
 
 ## 1. Spike (plataforma)
 
-- [ ] 1.1 Comprobar si `vtex.store-form` u otro bloque ya instalado ofrece estrellas o un campo de calificación. Verificación: tabla "requisito → nativo / no nativo" en `plan.md`.
+- [x] 1.1 Comprobar si `vtex.store-form` u otro bloque ya instalado ofrece estrellas o un campo de calificación. Verificación: tabla "requisito → nativo / no nativo" en `plan.md`.
 - [ ] 1.2 Comprobar en `store.orderplaced` (con un pedido de prueba, sin pagar con datos reales) si se puede añadir un bloque propio, obtener el número y el correo del pedido, y si la página muestra el header de la tienda. Verificación: resultado anotado en `plan.md` (decisiones 5 y 6).
 - [ ] 1.3 Diagnosticar Master Data en la cuenta: ¿existen la entidad `contact` y el esquema `site-contact`?, ¿cómo se crean y se declara el acceso público solo de escritura? Verificación: nota en `plan.md` coordinada con la spec 004; una escritura anónima funciona y una lectura anónima se rechaza.
 - [ ] 1.4 Decidir dónde vive el botón flotante (header, `orderplaced` o ambos) y cómo se obtiene el correo sin exponerlo. Verificación: decisiones 4-6 del plan actualizadas y sin "asumido" pendiente del spike.

@@ -1,8 +1,8 @@
-import { SCHEMA, SITE_ENTITY } from '../lib/entities'
-import { guard } from '../lib/guard'
-import { respond } from '../lib/http'
-import { resolveIdentity } from '../lib/identity'
-import { validateSite } from '../lib/validate'
+import { SCHEMA, SITE_ENTITY } from '../src/entities'
+import { guard } from '../src/guard'
+import { respond } from '../src/http'
+import { resolveIdentity } from '../src/identity'
+import { validateSite } from '../src/validate'
 
 // POST /_v/feedback/site — feedback del sitio desde el botón flotante (RF-7..RF-10).
 export async function site(ctx: any, next: () => Promise<any>) {

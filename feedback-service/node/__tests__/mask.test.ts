@@ -1,4 +1,4 @@
-import { maskEmail } from '../lib/mask'
+import { maskEmail } from '../src/mask'
 
 describe('maskEmail', () => {
   it('deja la primera letra y el dominio', () => {

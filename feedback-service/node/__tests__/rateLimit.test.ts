@@ -1,4 +1,4 @@
-import { allow, Counter, CounterStore, rateKey } from '../lib/rateLimit'
+import { allow, Counter, CounterStore, rateKey } from '../src/rateLimit'
 
 function memoryStore(): CounterStore {
   const data = new Map<string, Counter>()

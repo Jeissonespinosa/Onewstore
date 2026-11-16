@@ -1,6 +1,6 @@
-import { noStore, originAllowed, readJson, respond } from '../lib/http'
-import { publicIdentity, resolveIdentity } from '../lib/identity'
-import { isValidOrderId } from '../lib/validate'
+import { noStore, originAllowed, readJson, respond } from '../src/http'
+import { publicIdentity, resolveIdentity } from '../src/identity'
+import { isValidOrderId } from '../src/validate'
 
 // POST /_v/feedback/identity — dice al formulario a qué correo se responderá, siempre enmascarado.
 export async function identity(ctx: any, next: () => Promise<any>) {

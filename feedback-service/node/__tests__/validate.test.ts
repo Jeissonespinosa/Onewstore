@@ -5,7 +5,7 @@ import {
   normalizePath,
   validatePurchase,
   validateSite,
-} from '../lib/validate'
+} from '../src/validate'
 
 describe('validatePurchase', () => {
   const base = { orderId: '1234567890123-01', rating: 4, comment: 'Todo bien' }

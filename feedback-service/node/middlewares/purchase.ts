@@ -1,8 +1,8 @@
-import { PURCHASE_ENTITY, SCHEMA } from '../lib/entities'
-import { guard } from '../lib/guard'
-import { respond } from '../lib/http'
-import { resolveIdentity } from '../lib/identity'
-import { validatePurchase } from '../lib/validate'
+import { PURCHASE_ENTITY, SCHEMA } from '../src/entities'
+import { guard } from '../src/guard'
+import { respond } from '../src/http'
+import { resolveIdentity } from '../src/identity'
+import { validatePurchase } from '../src/validate'
 
 // POST /_v/feedback/purchase — rating de la compra (RF-1..RF-6). Una calificación por pedido (RF-4).
 export async function purchase(ctx: any, next: () => Promise<any>) {

@@ -69,6 +69,6 @@ vtex link       # sirve las rutas en https://<workspace>--onewstore.myvtex.com/_
 
 `ADMIN_DS` (general sobre Master Data: no se puede limitar a una entidad) y salida a
 `api.vtex.com` y `portal.vtexcommercestable.com.br` (este último lo usa el cliente `Session`).
-La lectura del correo de un pedido (`clients/orders.ts`) **no está verificada** (tarea 1.2 de la
+La lectura del correo de un pedido (`node/clients/orderEmail.ts`) **no está verificada** (tarea 1.2 de la
 spec 002): hace falta un pedido real y, probablemente, una política de OMS. Mientras tanto devuelve
 `null` y el servicio sigue funcionando sin ese correo.

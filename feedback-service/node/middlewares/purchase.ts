@@ -21,16 +21,21 @@ export async function purchase(ctx: any, next: () => Promise<any>) {
     // El número de pedido es el id del documento. Leer por id es inmediato; buscar por campo no lo
     // es (Master Data indexa con retraso y un doble clic pasaba, comprobado en devdiego).
     // orderId ya está validado con una lista de caracteres segura.
+    // Un id inexistente puede dar 404 o un objeto vacío (comprobado en devdiego): solo cuenta como
+    // existente si el documento trae su id.
+    let existing: any = null
     try {
-      await ctx.clients.masterdata.getDocument({
+      existing = await ctx.clients.masterdata.getDocument({
         dataEntity: PURCHASE_ENTITY,
         id: orderId,
         fields: ['id'],
       })
-      respond(ctx, 409, { ok: false, code: 'already-rated' })
-      return
     } catch (e: any) {
       if (e?.response?.status !== 404) throw e
+    }
+    if (existing && existing.id) {
+      respond(ctx, 409, { ok: false, code: 'already-rated' })
+      return
     }
     // El correo del pedido se toma en el servidor (RF-3). Si no se puede leer, se guarda sin él.
     const identity = await resolveIdentity(ctx, orderId)

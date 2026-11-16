@@ -15,6 +15,7 @@ interface Options {
   sessionEmail?: string
   orderEmail?: string | null
   existing?: unknown[]
+  emptyDoc?: boolean
   mdFails?: boolean
   vbase?: Map<string, unknown>
 }
@@ -32,6 +33,8 @@ function makeCtx(opts: Options = {}) {
     getDocument: jest.fn(async (_args: any) => {
       if (opts.mdFails) throw new Error('md down')
       if (opts.existing && opts.existing.length > 0) return opts.existing[0]
+      // Master Data puede responder 404 o un objeto vacío para un id inexistente.
+      if (opts.emptyDoc) return {}
       throw Object.assign(new Error('not found'), { response: { status: 404 } })
     }),
     createOrUpdateEntireDocument: jest.fn(async (_args: any) => ({ DocumentId: 'id-1' })),
@@ -179,6 +182,13 @@ describe('POST purchase', () => {
     expect(ctx.status).toBe(409)
     expect(ctx.body.code).toBe('already-rated')
     expect(masterdata.createOrUpdateEntireDocument).not.toHaveBeenCalled()
+  })
+
+  it('un id inexistente que Master Data responde como objeto vacío NO cuenta como ya calificado', async () => {
+    const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 4 }, emptyDoc: true })
+    await run(purchase, ctx)
+    expect(ctx.status).toBe(200)
+    expect(masterdata.createOrUpdateEntireDocument).toHaveBeenCalledTimes(1)
   })
 
   it('si no se puede leer el correo del pedido, guarda igual sin correo', async () => {

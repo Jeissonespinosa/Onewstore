@@ -1,7 +1,8 @@
 import { Service, method } from '@vtex/api'
 import { Clients } from './clients'
-import { spikeSession } from './middlewares/spikeSession'
-import { spikeWrite } from './middlewares/spikeWrite'
+import { identity } from './middlewares/identity'
+import { purchase } from './middlewares/purchase'
+import { site } from './middlewares/site'
 
 export default new Service({
   clients: {
@@ -9,7 +10,8 @@ export default new Service({
     options: { default: { retries: 1, timeout: 10000 } },
   },
   routes: {
-    spikeWrite: method({ POST: [spikeWrite] }),
-    spikeSession: method({ GET: [spikeSession] }),
+    feedbackPurchase: method({ POST: [purchase] }),
+    feedbackSite: method({ POST: [site] }),
+    feedbackIdentity: method({ POST: [identity] }),
   },
 })

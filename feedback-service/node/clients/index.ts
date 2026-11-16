@@ -1,4 +1,9 @@
 import { IOClients } from '@vtex/api'
+import { Orders } from './orders'
 
-// Spike: se usan los clientes que ya trae IOClients (masterdata, vtexId).
-export class Clients extends IOClients {}
+// Además de los clientes de IOClients (masterdata, session, vbase).
+export class Clients extends IOClients {
+  public get orders() {
+    return this.getOrSet('orders', Orders)
+  }
+}

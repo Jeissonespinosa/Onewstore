@@ -115,6 +115,21 @@ describe('seguridad común', () => {
     expect(masterdata.createDocument).not.toHaveBeenCalled()
   })
 
+  it('si el contador de envíos falla, el envío no se pierde y queda un aviso en los logs', async () => {
+    const spy = jest.spyOn(console, 'error').mockImplementation(() => undefined)
+    const { ctx, masterdata } = makeCtx({
+      body: { type: 'problema', message: 'x', viewport: 'movil' },
+    })
+    ctx.clients.vbase.saveJSON = jest.fn(async () => {
+      throw new Error('403 sin politica')
+    })
+    await run(site, ctx)
+    expect(ctx.status).toBe(200)
+    expect(masterdata.createDocument).toHaveBeenCalledTimes(1)
+    expect(spy).toHaveBeenCalled()
+    spy.mockRestore()
+  })
+
   it('AC-13: tras 5 envíos desde la misma sesión/IP el sexto recibe 429', async () => {
     const vbase = new Map<string, unknown>()
     const statuses: number[] = []

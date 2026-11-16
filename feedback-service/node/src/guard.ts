@@ -23,11 +23,14 @@ export async function guard(ctx: any, kind: string, now: number = Date.now()) {
     return undefined
   }
   const { ip, session } = clientKey(ctx)
-  const allowed = await allow(
-    vbaseCounterStore(ctx.clients.vbase),
-    rateKey(kind, ip, session),
-    now
-  )
+  let allowed = true
+  try {
+    allowed = await allow(vbaseCounterStore(ctx.clients.vbase), rateKey(kind, ip, session), now)
+  } catch (e: any) {
+    // Si el contador falla (p. ej. falta la política vbase-read-write) el envío no se pierde, pero
+    // queda constancia en los logs. No se registra nada de la persona.
+    console.error('feedback: límite de envíos no disponible', e?.message)
+  }
   if (!allowed) {
     respond(ctx, 429, { ok: false, code: 'rate-limited' })
     return undefined

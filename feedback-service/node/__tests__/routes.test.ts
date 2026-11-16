@@ -217,7 +217,7 @@ describe('POST purchase', () => {
 describe('POST site', () => {
   const body = { type: 'sugerencia', message: 'Más filtros', viewport: 'escritorio', pageUrl: '/carros' }
 
-  it('RF-8b caso 1: con sesión usa el correo de la cuenta aunque el navegador mande otro', async () => {
+  it('RF-8b caso 1: con sesión y sin pedido usa el correo de la cuenta aunque el navegador mande otro', async () => {
     const { ctx, masterdata } = makeCtx({
       body: { ...body, email: 'otro@example.com' },
       sessionEmail: SECRET_EMAIL,
@@ -232,6 +232,25 @@ describe('POST site', () => {
       viewport: 'escritorio',
     })
     expect(json(ctx)).not.toContain('secreta')
+  })
+
+  it('RF-8b: con sesión Y pedido gana el correo del pedido, no el de la cuenta', async () => {
+    const { ctx, masterdata } = makeCtx({
+      body: { ...body, orderId: ORDER },
+      sessionEmail: 'cuenta@example.com',
+      orderEmail: SECRET_EMAIL,
+    })
+    await run(site, ctx)
+    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe(SECRET_EMAIL)
+  })
+
+  it('RF-8b: con sesión y pedido ilegible cae al correo de la cuenta', async () => {
+    const { ctx, masterdata } = makeCtx({
+      body: { ...body, orderId: ORDER },
+      sessionEmail: 'cuenta@example.com',
+    })
+    await run(site, ctx)
+    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe('cuenta@example.com')
   })
 
   it('RF-8b caso 2: sin sesión y con pedido usa el correo del pedido', async () => {
@@ -272,6 +291,14 @@ describe('POST identity', () => {
       maskedEmail: 'p***@example.com',
     })
     expect(json(ctx)).not.toContain('secreta')
+  })
+
+  it('identity: con sesión y pedido devuelve el del pedido, pero authenticated sigue en true', async () => {
+    const { ctx } = makeCtx({ body: { orderId: ORDER }, sessionEmail: 'cuenta@example.com', orderEmail: SECRET_EMAIL })
+    await run(identity, ctx)
+    expect(ctx.body.source).toBe('order')
+    expect(ctx.body.authenticated).toBe(true)
+    expect(ctx.body.maskedEmail).toBe('p***@example.com')
   })
 
   it('con pedido y sin sesión devuelve el correo del pedido enmascarado', async () => {

@@ -17,7 +17,7 @@ un `code`.
 | Ruta | Cuerpo | Qué hace |
 |---|---|---|
 | `/_v/feedback/purchase` | `orderId`, `rating` (1-5), `comment?` (≤1000), `reason?` (solo con 1-3★) | Guarda la calificación de la compra. Una por pedido. El correo del pedido lo toma el servidor |
-| `/_v/feedback/site` | `type` (`problema`/`sugerencia`/`otro`), `message` (≤1000), `viewport` (`movil`/`escritorio`), `pageUrl?`, `email?`, `orderId?` | Guarda el feedback del botón flotante. Correo: cuenta → pedido → el escrito (opcional) |
+| `/_v/feedback/site` | `type` (`problema`/`sugerencia`/`otro`), `message` (≤1000), `viewport` (`movil`/`escritorio`), `pageUrl?`, `email?`, `orderId?` | Guarda el feedback del botón flotante. Correo: pedido → cuenta → el escrito (opcional) |
 | `/_v/feedback/identity` | `orderId?` | Devuelve `authenticated`, `source` (`account`/`order`/`null`) y `maskedEmail` (`d***@gmail.com`). **Nunca el correo completo** |
 
 Códigos de error: `origin` (403), `bad-json`, `bad-body`, `bad-order`, `bad-rating`, `bad-reason`,

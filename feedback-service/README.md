@@ -103,6 +103,23 @@ Respuesta: una lista JSON. **No se pudo comprobar** el filtro por `pageUrl` (con
 "O filtro informado é inválido"), ni la paginación para más de un puñado de registros: la
 documentación de Master Data usa la cabecera `REST-Range: resources=0-99`, sin verificar aquí.
 
+### Exportar a CSV (verificado)
+
+En Windows PowerShell 5.1 hay que **guardar el resultado antes de exportar**: si se encadena
+`ConvertFrom-Json | Export-Csv` en una sola tubería, el CSV sale con las propiedades del arreglo
+(`Count`, `Length`...) en vez de los registros.
+
+```powershell
+$d = curl.exe -s "https://<workspace>--onewstore.myvtex.com/api/dataentities/purchasefeedback/search?_schema=v1&_fields=id,orderId,rating,reason,comment,email,createdIn" -H "VtexIdclientAutCookie: $t" | ConvertFrom-Json
+$d | Export-Csv -Path "$env:USERPROFILE\Desktopeedback-compras.csv" -NoTypeInformation -Encoding UTF8
+```
+
+Para el feedback del sitio, cambia la entidad a `sitefeedback` y los campos a
+`id,type,message,email,pageUrl,viewport,createdIn` (misma forma, sin probar el CSV de esa entidad).
+Salió bien con 3 registros de prueba. **Sin verificar:** tildes y eñes (los datos de prueba no
+tenían), y una exportación con muchos registros. El archivo lleva correos de personas: no lo
+dejes en carpetas compartidas.
+
 ### En el admin de VTEX (sin verificar)
 
 Master Data (Admin → Store Settings → Storefront → Master Data, abre `onewstore.vtexcrm.com.br`)

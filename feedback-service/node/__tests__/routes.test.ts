@@ -29,10 +29,12 @@ function makeCtx(opts: Options = {}) {
   const cookies = opts.cookies ?? { vtex_session: 'abc' }
 
   const masterdata = {
-    searchDocuments: jest.fn(async (_args: any) => {
+    getDocument: jest.fn(async (_args: any) => {
       if (opts.mdFails) throw new Error('md down')
-      return opts.existing ?? []
+      if (opts.existing && opts.existing.length > 0) return opts.existing[0]
+      throw Object.assign(new Error('not found'), { response: { status: 404 } })
     }),
+    createOrUpdateEntireDocument: jest.fn(async (_args: any) => ({ DocumentId: 'id-1' })),
     createDocument: jest.fn(async (_args: any) => {
       if (opts.mdFails) throw new Error('md down')
       return { DocumentId: 'id-1' }
@@ -153,8 +155,9 @@ describe('POST purchase', () => {
     })
     await run(purchase, ctx)
     expect(ctx.status).toBe(200)
-    expect(masterdata.createDocument).toHaveBeenCalledWith(
+    expect(masterdata.createOrUpdateEntireDocument).toHaveBeenCalledWith(
       expect.objectContaining({
+        id: ORDER,
         fields: {
           orderId: ORDER,
           rating: 2,
@@ -175,14 +178,14 @@ describe('POST purchase', () => {
     await run(purchase, ctx)
     expect(ctx.status).toBe(409)
     expect(ctx.body.code).toBe('already-rated')
-    expect(masterdata.createDocument).not.toHaveBeenCalled()
+    expect(masterdata.createOrUpdateEntireDocument).not.toHaveBeenCalled()
   })
 
   it('si no se puede leer el correo del pedido, guarda igual sin correo', async () => {
     const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 4 }, orderEmail: null })
     await run(purchase, ctx)
     expect(ctx.status).toBe(200)
-    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe('')
+    expect(masterdata.createOrUpdateEntireDocument.mock.calls[0][0].fields.email).toBe('')
   })
 
   it('un cuerpo inválido da 400 con un código y no toca Master Data', async () => {
@@ -190,7 +193,7 @@ describe('POST purchase', () => {
     await run(purchase, ctx)
     expect(ctx.status).toBe(400)
     expect(ctx.body.code).toBe('bad-rating')
-    expect(masterdata.searchDocuments).not.toHaveBeenCalled()
+    expect(masterdata.getDocument).not.toHaveBeenCalled()
   })
 
   it('si Master Data falla responde 502 con un código y sin detalles internos', async () => {

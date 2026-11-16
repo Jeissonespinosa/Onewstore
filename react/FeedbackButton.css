@@ -1,0 +1,256 @@
+/*
+ * Estilos del boton flotante de feedback (react/FeedbackButton.js, spec 002).
+ *
+ * CSS Module, como CategoryMenu.css: no va en styles/css/ porque el builder de estilos de VTEX solo
+ * acepta archivos de apps dependencia. Todo vive en un portal sobre document.body, asi que las
+ * variables se declaran en .feedbackRoot.
+ *
+ * Colores alineados con styles/configs/style.json: tinta #010101, accion #FF371E. El rojo (3,4:1 sobre
+ * blanco) solo va en bordes e iconos; el texto es tinta o blanco sobre tinta (contraste AA).
+ */
+
+/* Las variables van en cada pieza (no solo en la raiz): el portal cuelga de document.body y la
+   clase de la raiz no siempre llega al DOM. */
+.feedbackRoot,
+.feedbackTrigger,
+.feedbackToast,
+.feedbackOverlay {
+  --fb-ink: #010101;
+  --fb-red: #FF371E;
+  --fb-paper: #ffffff;
+  --fb-line: rgba(1, 1, 1, 0.2);
+  --fb-focus: #060294;
+  --fb-danger: #b00020;
+
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--fb-ink);
+}
+
+/* --- boton flotante -------------------------------------------------------- */
+
+.feedbackTrigger {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  /* por debajo del header fijo (999-1000) y del drawer de categorias (1100) */
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: 0 0.85rem;
+  border: 2px solid var(--fb-red);
+  border-radius: 999px;
+  background: var(--fb-ink);
+  color: var(--fb-paper);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+.feedbackLeft .feedbackTrigger {
+  right: auto;
+  left: 1rem;
+}
+
+.feedbackTrigger svg {
+  color: var(--fb-red);
+  flex: none;
+}
+
+.feedbackTrigger:hover {
+  background: #1d1d1d;
+}
+
+.feedbackTrigger:focus-visible,
+.feedbackClose:focus-visible,
+.feedbackSubmit:focus-visible,
+.feedbackField:focus-visible,
+.feedbackOption input:focus-visible {
+  outline: 3px solid var(--fb-focus);
+  outline-offset: 2px;
+}
+
+/* En movil (360 px) solo el icono: 48 px, sin tapar controles de la pagina. El texto sigue en el DOM
+   para el lector de pantalla. */
+.feedbackTriggerLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .feedbackTrigger {
+    padding: 0 1.1rem;
+  }
+
+  .feedbackTriggerLabel {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+/* --- confirmacion ---------------------------------------------------------- */
+
+.feedbackToast {
+  position: fixed;
+  right: 1rem;
+  bottom: 4.75rem;
+  z-index: 901;
+  max-width: min(20rem, calc(100vw - 2rem));
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--fb-red);
+  border-radius: 4px;
+  background: var(--fb-ink);
+  color: var(--fb-paper);
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+.feedbackLeft .feedbackToast {
+  right: auto;
+  left: 1rem;
+}
+
+/* --- modal ----------------------------------------------------------------- */
+
+.bodyLock {
+  overflow: hidden;
+}
+
+.feedbackOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(1, 1, 1, 0.55);
+}
+
+.feedbackDialog {
+  position: relative;
+  box-sizing: border-box;
+  width: min(100%, 30rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--fb-paper);
+  color: var(--fb-ink);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.feedbackTitle {
+  margin: 0 2rem 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.feedbackClose {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: none;
+  color: var(--fb-ink);
+  cursor: pointer;
+}
+
+.feedbackFieldset {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.feedbackLabel {
+  display: block;
+  margin: 0 0 0.35rem;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.feedbackOption {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.feedbackOption input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--fb-ink);
+}
+
+.feedbackField {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 0.75rem;
+  padding: 0.6rem;
+  border: 1px solid var(--fb-line);
+  border-radius: 4px;
+  background: var(--fb-paper);
+  color: var(--fb-ink);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.feedbackCounter {
+  margin: -0.4rem 0 0.75rem;
+  font-size: 0.75rem;
+  color: #4a4a4a;
+}
+
+.feedbackSubmit {
+  min-height: 2.75rem;
+  padding: 0 1.75rem;
+  border: 2px solid var(--fb-red);
+  border-radius: 4px;
+  background: var(--fb-ink);
+  color: var(--fb-paper);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feedbackSubmit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feedbackError {
+  margin: 0 0 0.75rem;
+  color: var(--fb-danger);
+  font-size: 0.875rem;
+}
+
+/* campo trampa: fuera de pantalla, sin ocupar espacio */
+.feedbackHidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

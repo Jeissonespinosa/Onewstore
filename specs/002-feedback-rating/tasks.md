@@ -38,10 +38,13 @@
 
 ## 4. Botón flotante del sitio (RF-7 a RF-12)
 
-- [ ] 4.1 Disparador flotante y modal con tipo, mensaje (máx. 1000) y correo según RF-8b (escrito por la persona; precargado con el de la cuenta si hay sesión); formulario cargado al abrir; una instancia en `header.jsonc` (escritorio y móvil). Verificación: AC-6, AC-7, AC-7b, AC-7c.
+- [x] 4.1 Disparador flotante y modal con tipo, mensaje (máx. 1000) y correo según RF-8b (escrito por la persona; precargado con el de la cuenta si hay sesión); formulario cargado al abrir; una instancia en `header.jsonc` (escritorio y móvil). Verificación: AC-6, AC-7, AC-7b, AC-7c.
+  - Hecho 2026-11-16: una sola instancia, como hijo de `header-layout.desktop` y `header-layout.mobile` (en `header.blocks` no se renderiza: el header solo muestra el layout del dispositivo). Visible en inicio, `/carros` y la confirmación del pedido junto al rating (AC-7c); con sesión el correo arranca con el de la cuenta (AC-7b). **Falta mirar a mano** ficha de producto y búsqueda (AC-6); carrito y cuenta no aplican (checkout fuera del theme).
 - [ ] 4.2 Enviar al servicio URL, tamaño de pantalla (RF-9); la fecha la pone el servidor; conservar lo escrito si falla el envío (RF-10). Verificación: AC-7 y un fallo simulado conserva el texto.
-- [ ] 4.3 Validaciones del formulario y mensajes de los límites del servidor. Verificación: AC-8 y AC-13 (mensaje claro).
-- [ ] 4.4 Estilos con tokens; el botón no tapa el minicart ni el selector de vehículo a 360 px (RF-12). Verificación: AC-12 (parte visual) a 360 y 1280 px.
+- [x] 4.3 Validaciones del formulario y mensajes de los límites del servidor. Verificación: AC-8 y AC-13 (mensaje claro).
+  - Hecho 2026-11-16: validaciones en el navegador (tipo, mensaje, correo) y mensajes para 400/429/errores de red o respuestas que no son JSON, cubiertos por 17 tests en `react/__tests__/FeedbackButton.test.js`; el servidor ya rechazaba lo mismo (AC-8, AC-13).
+- [x] 4.4 Estilos con tokens; el botón no tapa el minicart ni el selector de vehículo a 360 px (RF-12). Verificación: AC-12 (parte visual) a 360 y 1280 px.
+  - Hecho 2026-11-16 en `devdiego`: a 360 px (iframe de 360x740; la ventana de Chrome no cambia el viewport) el botón queda solo con icono (52x48) abajo a la derecha, sin solapar controles ni scroll horizontal en `/carros`, y el modal cabe entero con el carrito del header libre; a 1280 px lleva icono y texto. Estilos con los colores del theme (tinta, rojo solo en borde/icono). **Falta**: la parte de Lighthouse de AC-12 (grupo 6) y mirar el selector de vehículo en una página que lo tenga.
 
 ## 5. Privacidad, seguridad y accesibilidad
 

@@ -159,6 +159,18 @@ Observado el 2026-11-15 en `devdiego`, como visitante anónimo.
 
 **Efecto en las decisiones:** el lugar del botón (decisión 6) queda resuelto. La resolución del correo ya no se hace en el navegador sino en el servidor (decisión 5); lo que falta por verificar (sesión iniciada y pedido real) pasa a la tarea 1.5.
 
+## Workspace de trabajo (cambio del 2026-11-16)
+
+El workspace `devdiego`, donde se hicieron los spikes y casi todas las verificaciones de esta spec,
+**se borró el 2026-11-16** y se sigue en `pruebatema`. Motivo: en `devdiego` el listado de carros
+(`/carros/llantas-y-rines/llantas`) y la ficha de producto se resolvían como `store.home`, aunque el tema
+era el mismo que en `pruebatema`, donde sí funcionan (`store.search#subcategory`, `store.product`).
+Se descartaron, con pruebas, el botón del header, las interfaces nuevas, la confirmación del pedido, el
+servicio enlazado, un build base roto, el service worker, las cachés y las cookies del dominio, y un
+`vtex workspace reset`. **La causa no se identificó.** Las menciones a `devdiego` en esta spec y en las
+tareas son registro de dónde se verificó cada cosa; no son instrucciones. Los datos de Master Data, los
+pedidos y la condición de pago de prueba son de la cuenta y no se vieron afectados.
+
 ## Riesgos
 
 | Riesgo | Mitigación |

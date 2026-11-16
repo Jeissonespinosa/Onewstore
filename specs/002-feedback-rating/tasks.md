@@ -40,7 +40,8 @@
 
 - [x] 4.1 Disparador flotante y modal con tipo, mensaje (máx. 1000) y correo según RF-8b (escrito por la persona; precargado con el de la cuenta si hay sesión); formulario cargado al abrir; una instancia en `header.jsonc` (escritorio y móvil). Verificación: AC-6, AC-7, AC-7b, AC-7c.
   - Hecho 2026-11-16: una sola instancia, como hijo de `header-layout.desktop` y `header-layout.mobile` (en `header.blocks` no se renderiza: el header solo muestra el layout del dispositivo). Visible en inicio, `/carros` y la confirmación del pedido junto al rating (AC-7c); con sesión el correo arranca con el de la cuenta (AC-7b). **Falta mirar a mano** ficha de producto y búsqueda (AC-6); carrito y cuenta no aplican (checkout fuera del theme).
-- [ ] 4.2 Enviar al servicio URL, tamaño de pantalla (RF-9); la fecha la pone el servidor; conservar lo escrito si falla el envío (RF-10). Verificación: AC-7 y un fallo simulado conserva el texto.
+- [x] 4.2 Enviar al servicio URL, tamaño de pantalla (RF-9); la fecha la pone el servidor; conservar lo escrito si falla el envío (RF-10). Verificación: AC-7 y un fallo simulado conserva el texto.
+  - Hecho 2026-11-16: registro verificado en `sitefeedback` (tipo `sugerencia`, mensaje, correo escrito, `pageUrl: /`, `viewport: escritorio`, fecha del servidor). Lo escrito se conserva si falla el envío: cubierto por test (error de red, 429 y 504); no se simuló un fallo real en el navegador.
 - [x] 4.3 Validaciones del formulario y mensajes de los límites del servidor. Verificación: AC-8 y AC-13 (mensaje claro).
   - Hecho 2026-11-16: validaciones en el navegador (tipo, mensaje, correo) y mensajes para 400/429/errores de red o respuestas que no son JSON, cubiertos por 17 tests en `react/__tests__/FeedbackButton.test.js`; el servidor ya rechazaba lo mismo (AC-8, AC-13).
 - [x] 4.4 Estilos con tokens; el botón no tapa el minicart ni el selector de vehículo a 360 px (RF-12). Verificación: AC-12 (parte visual) a 360 y 1280 px.

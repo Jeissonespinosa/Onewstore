@@ -25,7 +25,8 @@
 
 ## 3. Rating al finalizar la compra (RF-1 a RF-6)
 
-- [ ] 3.1 Componente de estrellas (React, con tests en `react/__tests__`: selección, teclado, `aria-label` "N de 5 estrellas", "Enviar" deshabilitado sin calificación). Verificación: Jest en verde.
+- [x] 3.1 Componente de estrellas (React, con tests en `react/__tests__`: selección, teclado, `aria-label` "N de 5 estrellas", "Enviar" deshabilitado sin calificación). Verificación: Jest en verde.
+  - Hecho 2026-11-16: `react/PurchaseRating.js` + `react/__tests__/PurchaseRating.test.js` (16 tests en verde). El número de pedido sale de `?og=` de la URL; el bloque no se muestra sin él. Aún sin registrar en `store/interfaces.json` (3.2).
 - [ ] 3.2 Bloque "¿Cómo fue tu compra?" en `store/blocks/orderplaced.jsonc` con comentario (máx. 1000), motivo para 1-3★ y agradecimiento, enviando al servicio. Verificación: AC-1, AC-2, AC-5 a mano en el workspace.
 - [ ] 3.3 Guardado con número de pedido, calificación, comentario, fecha y correo del pedido (resuelto por el servicio); una calificación por pedido. Verificación: AC-3 y AC-4 (recarga y segundo envío forzado). Necesita un pedido real (ver 1.2).
 - [ ] 3.4 Probar como invitado y como registrado (RF-5). Verificación: ambos flujos guardan el registro.

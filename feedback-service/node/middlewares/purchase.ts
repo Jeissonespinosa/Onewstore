@@ -1,7 +1,6 @@
 import { PURCHASE_ENTITY, SCHEMA } from '../src/entities'
 import { guard } from '../src/guard'
 import { respond } from '../src/http'
-import { resolveIdentity } from '../src/identity'
 import { validatePurchase } from '../src/validate'
 
 // POST /_v/feedback/purchase — rating de la compra (RF-1..RF-6). Una calificación por pedido (RF-4):
@@ -15,7 +14,7 @@ export async function purchase(ctx: any, next: () => Promise<any>) {
     respond(ctx, 400, { ok: false, code: parsed.code })
     return
   }
-  const { orderId, rating, comment, reason } = parsed.value
+  const { orderId, rating, comment, reason, email } = parsed.value
 
   try {
     // El número de pedido es el id del documento. Leer por id es inmediato; buscar por campo no lo
@@ -37,13 +36,11 @@ export async function purchase(ctx: any, next: () => Promise<any>) {
       respond(ctx, 409, { ok: false, code: 'already-rated' })
       return
     }
-    // El correo del pedido se toma en el servidor (RF-3). Si no se puede leer, se guarda sin él.
-    const identity = await resolveIdentity(ctx, orderId)
     await ctx.clients.masterdata.createOrUpdateEntireDocument({
       dataEntity: PURCHASE_ENTITY,
       schema: SCHEMA,
       id: orderId,
-      fields: { orderId, rating, comment, reason, email: identity.email },
+      fields: { orderId, rating, comment, reason, email },
     })
     respond(ctx, 200, { ok: true })
   } catch {

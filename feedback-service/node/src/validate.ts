@@ -20,6 +20,7 @@ export interface PurchaseInput {
   rating: number
   comment: string
   reason: Reason | ''
+  email: string
 }
 
 export interface SiteInput {
@@ -78,13 +79,17 @@ export function validatePurchase(body: unknown): Result<PurchaseInput> {
   const comment = cleanText(body.comment)
   if (comment.length > MAX_TEXT) return { ok: false, code: 'comment-too-long' }
 
+  // El correo es opcional y lo escribe la persona (RF-3); si viene, debe ser válido.
+  const email = cleanText(body.email)
+  if (email && !isValidEmail(email)) return { ok: false, code: 'bad-email' }
+
   // El motivo solo aplica de 1 a 3 estrellas (RF-6); con más, se ignora.
   let reason: Reason | '' = ''
   if (rating <= 3 && body.reason !== undefined && body.reason !== '') {
     if (!REASONS.includes(body.reason as Reason)) return { ok: false, code: 'bad-reason' }
     reason = body.reason as Reason
   }
-  return { ok: true, value: { orderId: body.orderId, rating, comment, reason } }
+  return { ok: true, value: { orderId: body.orderId, rating, comment, reason, email } }
 }
 
 export function validateSite(body: unknown): Result<SiteInput> {

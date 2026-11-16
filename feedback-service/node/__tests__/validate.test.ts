@@ -13,7 +13,7 @@ describe('validatePurchase', () => {
   it('acepta una calificación válida (AC-2: sin comentario también)', () => {
     expect(validatePurchase(base)).toEqual({
       ok: true,
-      value: { orderId: '1234567890123-01', rating: 4, comment: 'Todo bien', reason: '' },
+      value: { orderId: '1234567890123-01', rating: 4, comment: 'Todo bien', reason: '', email: '' },
     })
     expect(validatePurchase({ orderId: base.orderId, rating: 5 }).ok).toBe(true)
   })

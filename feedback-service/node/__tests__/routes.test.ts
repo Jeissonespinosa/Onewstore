@@ -13,7 +13,6 @@ interface Options {
   rawBody?: string
   cookies?: Record<string, string>
   sessionEmail?: string
-  orderEmail?: string | null
   existing?: unknown[]
   emptyDoc?: boolean
   mdFails?: boolean
@@ -75,7 +74,6 @@ function makeCtx(opts: Options = {}) {
           },
         })),
       },
-      orders: { getEmail: jest.fn(async () => opts.orderEmail ?? null) },
     },
   }
   return { ctx, masterdata, headers, store }
@@ -151,10 +149,10 @@ describe('seguridad común', () => {
 })
 
 describe('POST purchase', () => {
-  it('guarda la calificación con el correo del pedido, sin devolverlo', async () => {
+  it('guarda la calificación con el correo que la persona escribió, sin devolverlo', async () => {
     const { ctx, masterdata } = makeCtx({
-      body: { orderId: ORDER, rating: 2, comment: 'Tardó', reason: 'envio' },
-      orderEmail: SECRET_EMAIL,
+      body: { orderId: ORDER, rating: 2, comment: 'Tardó', reason: 'envio', email: SECRET_EMAIL },
+      sessionEmail: 'cuenta@example.com',
     })
     await run(purchase, ctx)
     expect(ctx.status).toBe(200)
@@ -172,6 +170,15 @@ describe('POST purchase', () => {
     )
     expect(json(ctx)).not.toContain('secreta')
   })
+
+  it('un correo mal escrito da 400 y no guarda', async () => {
+    const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 4, email: 'x@y' } })
+    await run(purchase, ctx)
+    expect(ctx.status).toBe(400)
+    expect(ctx.body.code).toBe('bad-email')
+    expect(masterdata.createOrUpdateEntireDocument).not.toHaveBeenCalled()
+  })
+
 
   it('AC-4: un segundo envío para el mismo pedido da 409 y no guarda', async () => {
     const { ctx, masterdata } = makeCtx({
@@ -191,12 +198,13 @@ describe('POST purchase', () => {
     expect(masterdata.createOrUpdateEntireDocument).toHaveBeenCalledTimes(1)
   })
 
-  it('si no se puede leer el correo del pedido, guarda igual sin correo', async () => {
-    const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 4 }, orderEmail: null })
+  it('sin correo escrito guarda igual, con el correo vacío', async () => {
+    const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 4 } })
     await run(purchase, ctx)
     expect(ctx.status).toBe(200)
     expect(masterdata.createOrUpdateEntireDocument.mock.calls[0][0].fields.email).toBe('')
   })
+
 
   it('un cuerpo inválido da 400 con un código y no toca Master Data', async () => {
     const { ctx, masterdata } = makeCtx({ body: { orderId: ORDER, rating: 9 } })
@@ -217,61 +225,43 @@ describe('POST purchase', () => {
 describe('POST site', () => {
   const body = { type: 'sugerencia', message: 'Más filtros', viewport: 'escritorio', pageUrl: '/carros' }
 
-  it('RF-8b caso 1: con sesión y sin pedido usa el correo de la cuenta aunque el navegador mande otro', async () => {
-    const { ctx, masterdata } = makeCtx({
-      body: { ...body, email: 'otro@example.com' },
-      sessionEmail: SECRET_EMAIL,
-    })
+  it('RF-8b: se guarda el correo que la persona escribió, tal cual', async () => {
+    const { ctx, masterdata } = makeCtx({ body: { ...body, email: 'quien@example.com' } })
     await run(site, ctx)
     expect(ctx.status).toBe(200)
     expect(masterdata.createDocument.mock.calls[0][0].fields).toEqual({
       type: 'sugerencia',
       message: 'Más filtros',
-      email: SECRET_EMAIL,
+      email: 'quien@example.com',
       pageUrl: '/carros',
       viewport: 'escritorio',
     })
-    expect(json(ctx)).not.toContain('secreta')
   })
 
-  it('RF-8b: con sesión Y pedido gana el correo del pedido, no el de la cuenta', async () => {
+  it('RF-8b: con sesión NO se sustituye lo escrito por el correo de la cuenta', async () => {
     const { ctx, masterdata } = makeCtx({
-      body: { ...body, orderId: ORDER },
-      sessionEmail: 'cuenta@example.com',
-      orderEmail: SECRET_EMAIL,
-    })
-    await run(site, ctx)
-    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe(SECRET_EMAIL)
-  })
-
-  it('RF-8b: con sesión y pedido ilegible cae al correo de la cuenta', async () => {
-    const { ctx, masterdata } = makeCtx({
-      body: { ...body, orderId: ORDER },
+      body: { ...body, email: 'otro@example.com' },
       sessionEmail: 'cuenta@example.com',
     })
     await run(site, ctx)
-    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe('cuenta@example.com')
+    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe('otro@example.com')
   })
 
-  it('RF-8b caso 2: sin sesión y con pedido usa el correo del pedido', async () => {
-    const { ctx, masterdata } = makeCtx({
-      body: { ...body, orderId: ORDER },
-      orderEmail: SECRET_EMAIL,
-    })
+  it('RF-8b: sin correo escrito se guarda vacío, aunque haya sesión', async () => {
+    const { ctx, masterdata } = makeCtx({ body, sessionEmail: 'cuenta@example.com' })
     await run(site, ctx)
-    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe(SECRET_EMAIL)
+    expect(ctx.status).toBe(200)
+    expect(masterdata.createDocument.mock.calls[0][0].fields.email).toBe('')
   })
 
-  it('RF-8b caso 3: anónimo escribe su correo (o lo deja vacío) y el envío funciona', async () => {
-    const withEmail = makeCtx({ body: { ...body, email: 'yo@example.com' } })
-    await run(site, withEmail.ctx)
-    expect(withEmail.masterdata.createDocument.mock.calls[0][0].fields.email).toBe('yo@example.com')
-
-    const without = makeCtx({ body })
-    await run(site, without.ctx)
-    expect(without.ctx.status).toBe(200)
-    expect(without.masterdata.createDocument.mock.calls[0][0].fields.email).toBe('')
+  it('AC-8: un correo mal escrito da 400 y no guarda', async () => {
+    const { ctx, masterdata } = makeCtx({ body: { ...body, email: 'no-es-correo' } })
+    await run(site, ctx)
+    expect(ctx.status).toBe(400)
+    expect(ctx.body.code).toBe('bad-email')
+    expect(masterdata.createDocument).not.toHaveBeenCalled()
   })
+
 
   it('AC-10: un mensaje con HTML se guarda tal cual, como texto', async () => {
     const { ctx, masterdata } = makeCtx({ body: { ...body, message: '<script>alert(1)</script>' } })
@@ -281,42 +271,29 @@ describe('POST site', () => {
 })
 
 describe('POST identity', () => {
-  it('con sesión devuelve solo el correo enmascarado', async () => {
+  it('con sesión devuelve el correo de la cuenta (solo para precargar el formulario)', async () => {
     const { ctx } = makeCtx({ body: {}, sessionEmail: SECRET_EMAIL })
     await run(identity, ctx)
-    expect(ctx.body).toEqual({
-      ok: true,
-      authenticated: true,
-      source: 'account',
-      maskedEmail: 'p***@example.com',
-    })
-    expect(json(ctx)).not.toContain('secreta')
+    expect(ctx.body).toEqual({ ok: true, authenticated: true, email: SECRET_EMAIL })
   })
 
-  it('identity: con sesión y pedido devuelve el del pedido, pero authenticated sigue en true', async () => {
-    const { ctx } = makeCtx({ body: { orderId: ORDER }, sessionEmail: 'cuenta@example.com', orderEmail: SECRET_EMAIL })
-    await run(identity, ctx)
-    expect(ctx.body.source).toBe('order')
-    expect(ctx.body.authenticated).toBe(true)
-    expect(ctx.body.maskedEmail).toBe('p***@example.com')
-  })
-
-  it('con pedido y sin sesión devuelve el correo del pedido enmascarado', async () => {
-    const { ctx } = makeCtx({ body: { orderId: ORDER }, orderEmail: SECRET_EMAIL })
-    await run(identity, ctx)
-    expect(ctx.body.source).toBe('order')
-    expect(ctx.body.maskedEmail).toBe('p***@example.com')
-  })
-
-  it('anónimo sin pedido: sin correo', async () => {
+  it('anónimo: sin correo', async () => {
     const { ctx } = makeCtx({ body: {} })
     await run(identity, ctx)
-    expect(ctx.body).toEqual({ ok: true, authenticated: false, source: null, maskedEmail: null })
+    expect(ctx.body).toEqual({ ok: true, authenticated: false, email: null })
   })
 
-  it('ignora un número de pedido con formato inválido', async () => {
-    const { ctx } = makeCtx({ body: { orderId: "x' OR 1=1" }, orderEmail: SECRET_EMAIL })
+  it('sin cookie de sesión: anónimo y sin consultar a Session', async () => {
+    const { ctx } = makeCtx({ body: {}, cookies: {}, sessionEmail: SECRET_EMAIL })
     await run(identity, ctx)
-    expect(ctx.body.source).toBe(null)
+    expect(ctx.body.authenticated).toBe(false)
+    expect(ctx.body.email).toBe(null)
+  })
+
+  it('origen ajeno: 403 y no devuelve el correo', async () => {
+    const { ctx } = makeCtx({ body: {}, sessionEmail: SECRET_EMAIL, origin: 'https://evil.example' })
+    await run(identity, ctx)
+    expect(ctx.status).toBe(403)
+    expect(JSON.stringify(ctx.body)).not.toContain('secreta')
   })
 })

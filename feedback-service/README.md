@@ -16,9 +16,9 @@ un `code`.
 
 | Ruta | Cuerpo | Qué hace |
 |---|---|---|
-| `/_v/feedback/purchase` | `orderId`, `rating` (1-5), `comment?` (≤1000), `reason?` (solo con 1-3★) | Guarda la calificación de la compra. Una por pedido. El correo del pedido lo toma el servidor |
-| `/_v/feedback/site` | `type` (`problema`/`sugerencia`/`otro`), `message` (≤1000), `viewport` (`movil`/`escritorio`), `pageUrl?`, `email?`, `orderId?` | Guarda el feedback del botón flotante. Correo: pedido → cuenta → el escrito (opcional) |
-| `/_v/feedback/identity` | `orderId?` | Devuelve `authenticated`, `source` (`account`/`order`/`null`) y `maskedEmail` (`d***@gmail.com`). **Nunca el correo completo** |
+| `/_v/feedback/purchase` | `orderId`, `rating` (1-5), `comment?` (≤1000), `reason?` (solo con 1-3★), `email?` | Guarda la calificación de la compra. Una por pedido. El correo es el que escribió la persona |
+| `/_v/feedback/site` | `type` (`problema`/`sugerencia`/`otro`), `message` (≤1000), `viewport` (`movil`/`escritorio`), `pageUrl?`, `email?`, `orderId?` | Guarda el feedback del botón flotante. Correo: el que escribió la persona (opcional) |
+| `/_v/feedback/identity` | (vacío) | Devuelve `authenticated` y `email` (el de la cuenta de la sesión, o `null`) para **precargar** el formulario. Solo a la propia sesión, `no-store` |
 
 Códigos de error: `origin` (403), `bad-json`, `bad-body`, `bad-order`, `bad-rating`, `bad-reason`,
 `bad-type`, `bad-viewport`, `bad-email`, `message-required`, `message-too-long`,
@@ -67,8 +67,7 @@ vtex link       # sirve las rutas en https://<workspace>--onewstore.myvtex.com/_
 
 ## Políticas del manifest
 
-`ADMIN_DS` (general sobre Master Data: no se puede limitar a una entidad) y salida a
-`api.vtex.com` y `portal.vtexcommercestable.com.br` (este último lo usa el cliente `Session`).
-La lectura del correo de un pedido (`node/clients/orderEmail.ts`) **no está verificada** (tarea 1.2 de la
-spec 002): hace falta un pedido real y, probablemente, una política de OMS. Mientras tanto devuelve
-`null` y el servicio sigue funcionando sin ese correo.
+`ADMIN_DS` (general sobre Master Data: no se puede limitar a una entidad), `vbase-read-write` (contador
+de envíos) y salida a `api.vtex.com` y `portal.vtexcommercestable.com.br` (este último lo usa el
+cliente `Session`). **No hay políticas de pedidos**: el correo del pedido se descartó (OMS devuelve un
+alias `…@ct.vtex.com.br` y exigía permisos amplios), ver `plan.md`, decisión 5.

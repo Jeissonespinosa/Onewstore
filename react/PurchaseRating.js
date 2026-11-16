@@ -4,12 +4,14 @@
  * - 5 estrellas (grupo de radios: flechas, Inicio/Fin, Tab) + comentario opcional (max 1000).
  * - Con 1-3 estrellas pide un motivo opcional (RF-6).
  * - Envia a /_v/feedback/purchase (servicio onewstore.feedback-service); el navegador nunca
- *   escribe en Master Data. El correo lo resuelve el servidor (RF-3).
+ *   escribe en Master Data.
+ * - Correo opcional (RF-3): lo escribe la persona. Con sesion iniciada el campo arranca con el
+ *   correo de la cuenta (/_v/feedback/identity) y se puede editar o borrar.
  * - El numero de pedido sale del parametro `og` de la URL de confirmacion (comprobado en el
  *   spike 1.1). Sin el, el bloque no se muestra.
  * - Campo trampa `website` oculto: un humano no lo ve ni lo rellena.
  */
-import React, { useMemo, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 const CSS_HANDLES = [
@@ -23,6 +25,8 @@ const CSS_HANDLES = [
 ]
 
 const ENDPOINT = '/_v/feedback/purchase'
+const IDENTITY_ENDPOINT = '/_v/feedback/identity'
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MAX_COMMENT = 1000
 const RED = '#FF371E'
 const INK = '#010101'
@@ -39,6 +43,7 @@ export const REASONS = [
 const ERRORS = {
   'already-rated': 'Ya recibimos tu calificación de este pedido. ¡Gracias!',
   'rate-limited': 'Has enviado demasiados mensajes seguidos. Inténtalo de nuevo en unos minutos.',
+  'bad-email': 'Revisa el correo: no parece válido.',
 }
 const GENERIC_ERROR = 'No pudimos enviar tu calificación. Inténtalo de nuevo en un momento.'
 
@@ -97,10 +102,34 @@ export default function PurchaseRating() {
   const [rating, setRating] = useState(0)
   const [comment, setComment] = useState('')
   const [reason, setReason] = useState('')
+  const [email, setEmail] = useState('')
   const [website, setWebsite] = useState('')
   const [status, setStatus] = useState('idle') // idle | sending | done | error
   const [errorText, setErrorText] = useState('')
   const refs = useRef([])
+  const emailTouchedRef = useRef(false)
+
+  // Precarga el correo de la cuenta si hay sesion. Si la persona ya escribio, no se le pisa.
+  useEffect(() => {
+    if (!orderId) return undefined
+    let cancelled = false
+    fetch(IDENTITY_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: '{}',
+    })
+      .then(r => r.json())
+      .then(d => {
+        if (!cancelled && d && typeof d.email === 'string' && d.email && !emailTouchedRef.current) {
+          setEmail(d.email)
+        }
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [orderId])
 
   if (!orderId) return null
 
@@ -137,6 +166,11 @@ export default function PurchaseRating() {
   const submit = async e => {
     e.preventDefault()
     if (rating < 1 || status === 'sending') return
+    if (email.trim() && !EMAIL_RE.test(email.trim())) {
+      setErrorText(ERRORS['bad-email'])
+      setStatus('error')
+      return
+    }
     setStatus('sending')
     setErrorText('')
     try {
@@ -144,7 +178,7 @@ export default function PurchaseRating() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
-        body: JSON.stringify({ orderId, rating, comment: comment.trim(), reason, website }),
+        body: JSON.stringify({ orderId, rating, comment: comment.trim(), reason, email: email.trim(), website }),
       })
       let body = {}
       try {
@@ -241,6 +275,23 @@ export default function PurchaseRating() {
         <p style={{ margin: '0 0 12px', fontSize: 12 }} aria-live="off">
           {comment.length}/{MAX_COMMENT}
         </p>
+
+        <label htmlFor="purchase-rating-email" style={styles.label}>
+          Tu correo, si quieres que te respondamos (opcional)
+        </label>
+        <input
+          id="purchase-rating-email"
+          type="email"
+          autoComplete="email"
+          value={email}
+          maxLength={254}
+          onChange={ev => {
+            emailTouchedRef.current = true
+            setEmail(ev.target.value)
+          }}
+          className={handles.purchaseRatingField}
+          style={styles.field}
+        />
 
         {/* Campo trampa: fuera de pantalla y fuera del orden de tabulación. */}
         <div style={styles.hidden} aria-hidden="true">

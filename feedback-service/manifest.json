@@ -23,23 +23,10 @@
       }
     },
     {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "{{account}}.vtexcommercestable.com.br",
-        "path": "/api/oms/pvt/orders/*"
-      }
-    },
-    {
       "name": "ADMIN_DS"
     },
     {
       "name": "vbase-read-write"
-    },
-    {
-      "name": "OMSViewer"
-    },
-    {
-      "name": "AcessaTodosPedidos"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

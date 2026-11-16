@@ -67,12 +67,14 @@
    antes de crear y rechaza el segundo envío (lectura privada con las credenciales de la app). Es
    una comprobación, no una restricción de la base de datos: dos envíos simultáneos podrían pasar;
    se acepta y se documenta, a menos que 1.5 muestre un mecanismo atómico.
-5. **Correo (RF-3, RF-8b, RF-15):** se resuelve en el servidor. Usuario autenticado: **verificado en
-   el spike**: el servicio lee la sesión de la tienda con el cliente `Session` de `@vtex/api` y la
-   cookie `vtex_session`, y devuelve solo el correo enmascarado. Pedido: el servicio lee el pedido con las
-   credenciales de la app a partir del número de pedido que envía la página, y toma el correo de ahí
-   *[asumido: el número de pedido de la URL es la prueba de pertenencia; se valora en 1.5]*. Al
-   navegador solo vuelve el correo **enmascarado**. El servicio no registra correos en sus logs.
+5. **Correo (RF-3, RF-8b, RF-15) — cambiado el 2026-11-16:** el correo es **siempre el que la persona
+   escribe** (opcional). Con sesión, el servicio lee la sesión de la tienda con el cliente `Session` de
+   `@vtex/api` y la cookie `vtex_session` (**verificado**) y `/_v/feedback/identity` devuelve el correo de
+   la cuenta **solo a la propia sesión** para precargar el campo (`no-store`). **Se descartó leer el
+   correo del pedido:** en `devdiego` OMS devuelve un alias `…@ct.vtex.com.br`, no el correo real, y leerlo
+   exigió la política `AcessaTodosPedidos` (lectura y escritura de pedidos) tras un 403 con `OMSViewer`; la
+   alternativa (leerlo de `CL`) se descartó por coste. Se retiraron esas políticas y el cliente. El
+   servicio no registra correos en sus logs.
 6. **Botón flotante y modal:** una sola instancia en `header.jsonc`, dentro de
    `header-layout.desktop` y `header-layout.mobile` (la confirmación del pedido también muestra el
    header: RF-8c cubierto sin duplicar). El modal usa `vtex.modal-layout` con disparador fijo por CSS
@@ -101,7 +103,7 @@ Probado el 2026-11-15/16 en `devdiego` con la app `onewstore.feedback-service@0.
 | (c) ¿Escribe el servicio y se rechaza el acceso directo? | **Sí.** Servicio: 200 con id de documento. Escritura directa anónima a la entidad: **403** `Cannot write in private fields`. Lectura directa anónima: **403** `Forbidden` |
 | (d) ¿Qué política hace falta? | `ADMIN_DS` + `outbound-access` a `api.vtex.com` (`/api/*`) y a `portal.vtexcommercestable.com.br` (`/api/*`, host que usa el cliente `Session`). `ADMIN_DS` es general: no se puede limitar a una entidad |
 | (e) ¿Correo del autenticado? | **Sí.** Anónimo: `{"authenticated":false,"maskedEmail":null}`. Con sesión de comprador: `{"authenticated":true,"maskedEmail":"d***@gmail.com"}`; el correo completo no llega al navegador. `ctx.clients.vtexId` no existe en `@vtex/api` 7: se usa `ctx.clients.session` |
-| (f) ¿Correo de un pedido? | **Sin verificar**: falta un pedido real; se hace con la tarea 1.2. Probable política `OMSViewer` (nombre sin confirmar) |
+| (f) ¿Correo de un pedido? | **Verificado y descartado (2026-11-16)**, con pedidos reales en `devdiego`: con `OMSViewer` da 403; con `AcessaTodosPedidos` lee, pero el correo es un alias `…@ct.vtex.com.br` y la respuesta fue intermitente. Ver decisión 5 |
 
 **Hallazgos de operación (aplicables a las rutas reales):**
 - **Caché del CDN:** una respuesta GET sin `Cache-Control` se sirvió desde la caché durante minutos (`age` > 200 s) con código antiguo. Todas las respuestas del servicio llevan `Cache-Control: no-store, no-cache, private` (importante: una ruta con datos de sesión no puede cachearse). Cambiar la ruta (`/session` → `/whoami`) fue la forma de saltarse una entrada ya cacheada.
@@ -163,8 +165,8 @@ Observado el 2026-11-15 en `devdiego`, como visitante anónimo.
 |---|---|
 | La app de servicio es código nuevo que mantener, con permisos sobre Master Data | Superficie mínima: dos rutas, sin lectura; pruebas unitarias; política de Master Data limitada a las dos entidades si la plataforma lo permite |
 | Rutas públicas abiertas a spam o abuso | Honeypot, límite por sesión/IP en el servidor, validación estricta, comprobación de origen (AC-13) |
-| Exponer el correo del usuario | Se resuelve en el servidor; el navegador recibe solo la versión enmascarada; sin correos en logs (grupo 5) |
-| Un `orderGroup` conocido por un tercero permite calificar o ver el correo enmascarado de ese pedido | Riesgo bajo y aceptado (solo se puede crear una calificación y solo se ve el correo enmascarado); se valora en 1.5 |
+| Exponer el correo del usuario | Solo se devuelve el de la cuenta, a la propia sesión y con `no-store`; el origen se comprueba; sin correos en logs (grupo 5). Ya no se lee ningún correo de pedidos |
+| Un `orderGroup` conocido por un tercero permite calificar ese pedido | Riesgo bajo y aceptado: solo se puede crear una calificación (una por pedido) y no se ve ningún dato del pedido |
 | VTEX restringe más Master Data o cambia las políticas de una app `node` | Fallo visible en el spike 1.5; la lógica queda aislada en el servicio |
 | Se pisa el trabajo con otra spec (004 usa el mismo problema) | Coordinar con la 004 antes del grupo 2 |
 | El botón tapa el minicart u otros flotantes (015 WhatsApp) | Esquina definida con el equipo; prueba a 360 px (AC-12) |

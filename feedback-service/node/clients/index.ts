@@ -1,9 +1,4 @@
 import { IOClients } from '@vtex/api'
-import { Orders } from './orderEmail'
 
-// Además de los clientes de IOClients (masterdata, session, vbase).
-export class Clients extends IOClients {
-  public get orders() {
-    return this.getOrSet('orders', Orders)
-  }
-}
+// Solo los clientes de IOClients (masterdata, session, vbase). El correo ya no se lee de pedidos.
+export class Clients extends IOClients {}

@@ -71,3 +71,52 @@ vtex link       # sirve las rutas en https://<workspace>--onewstore.myvtex.com/_
 de envíos) y salida a `api.vtex.com` y `portal.vtexcommercestable.com.br` (este último lo usa el
 cliente `Session`). **No hay políticas de pedidos**: el correo del pedido se descartó (OMS devuelve un
 alias `…@ct.vtex.com.br` y exigía permisos amplios), ver `plan.md`, decisión 5.
+
+## Leer el feedback (equipo)
+
+Los datos están en dos entidades de Master Data, ambas con campos privados:
+
+| Entidad | Qué guarda | Campos |
+|---|---|---|
+| `purchasefeedback` | Calificación de la compra (una por pedido; el `id` es el número de pedido) | `orderId`, `rating`, `reason`, `comment`, `email`, `createdIn` |
+| `sitefeedback` | Feedback del botón flotante | `type`, `message`, `email`, `pageUrl`, `viewport`, `createdIn` |
+
+**Siempre trata `comment` y `message` como texto**: se guardan tal cual, también si traen HTML o
+`<script>` (verificado en la 002, AC-10). No los pegues en una página sin escaparlos.
+
+### Por la API (verificado)
+
+Con la sesión de administrador (PowerShell, tras `vtex use <workspace>`; las entidades son de la
+cuenta, así que ves los mismos datos en cualquier workspace):
+
+```powershell
+$t = (vtex local token).Trim()
+# Compras: todas
+curl.exe -s "https://<workspace>--onewstore.myvtex.com/api/dataentities/purchasefeedback/search?_schema=v1&_fields=id,orderId,rating,reason,comment,email,createdIn" -H "VtexIdclientAutCookie: $t"
+# Una compra por número de pedido (el filtro por `orderId` funciona)
+curl.exe -s "https://<workspace>--onewstore.myvtex.com/api/dataentities/purchasefeedback/search?_schema=v1&_fields=id,rating,comment,email&_where=orderId=<pedido>" -H "VtexIdclientAutCookie: $t"
+# Sitio: todos
+curl.exe -s "https://<workspace>--onewstore.myvtex.com/api/dataentities/sitefeedback/search?_schema=v1&_fields=id,type,message,email,pageUrl,viewport,createdIn" -H "VtexIdclientAutCookie: $t"
+```
+
+Respuesta: una lista JSON. **No se pudo comprobar** el filtro por `pageUrl` (con una ruta que lleva `/` devolvió
+"O filtro informado é inválido"), ni la paginación para más de un puñado de registros: la
+documentación de Master Data usa la cabecera `REST-Range: resources=0-99`, sin verificar aquí.
+
+### En el admin de VTEX (sin verificar)
+
+Master Data (Admin → Store Settings → Storefront → Master Data, abre `onewstore.vtexcrm.com.br`)
+es la vía natural para ver, filtrar y exportar sin código. **El 2026-11-16 no se pudo verificar**:
+la cuenta mostraba "admin bloqueado por facturas sin pagar" y la pantalla no dejaba pasar. Cuando se
+regularice, comprobar si `purchasefeedback` y `sitefeedback` aparecen (se crearon por API, no por el
+admin) y anotar aquí los pasos reales de filtro y exportación.
+
+### Quién lo lee y cómo se entera (Q11)
+
+**Sin decidir** (Q11 de la spec 000). Hoy no hay aviso: alguien tiene que consultar los datos. Si se
+quiere un aviso por correo al llegar feedback negativo, es trabajo nuevo en este servicio.
+
+### Borrar datos de prueba
+
+`DELETE https://<workspace>--onewstore.myvtex.com/api/dataentities/<entidad>/documents/<id>` con el
+mismo `VtexIdclientAutCookie`. Los datos son de la cuenta: cuidado con borrar feedback real.

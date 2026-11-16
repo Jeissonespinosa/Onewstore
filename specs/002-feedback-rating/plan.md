@@ -171,6 +171,13 @@ servicio enlazado, un build base roto, el service worker, las cachés y las cook
 tareas son registro de dónde se verificó cada cosa; no son instrucciones. Los datos de Master Data, los
 pedidos y la condición de pago de prueba son de la cuenta y no se vieron afectados.
 
+## Datos de prueba que se conservan (2026-11-16)
+
+Tras las verificaciones se cancelaron los pedidos de prueba (`1676760500001`, `…03` y `1676780500005`) y se
+borraron sus registros en `purchasefeedback` y `sitefeedback`. **Se conservan a propósito** la condición de
+pago ID 17 y el proveedor `Promissory` (Notes Payable) de la cuenta: sirven para crear pedidos de prueba
+en futuras specs. No son basura; no borrarlos sin preguntar. Cada pedido de prueba se cancela después.
+
 ## Riesgos
 
 | Riesgo | Mitigación |

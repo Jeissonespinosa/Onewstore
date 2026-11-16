@@ -111,7 +111,7 @@ En Windows PowerShell 5.1 hay que **guardar el resultado antes de exportar**: si
 
 ```powershell
 $d = curl.exe -s "https://<workspace>--onewstore.myvtex.com/api/dataentities/purchasefeedback/search?_schema=v1&_fields=id,orderId,rating,reason,comment,email,createdIn" -H "VtexIdclientAutCookie: $t" | ConvertFrom-Json
-$d | Export-Csv -Path "$env:USERPROFILE\Desktopfeedback-compras.csv" -NoTypeInformation -Encoding UTF8
+$d | Export-Csv -Path "$env:USERPROFILE\Desktop\feedback-compras.csv" -NoTypeInformation -Encoding UTF8
 ```
 
 Para el feedback del sitio, cambia la entidad a `sitefeedback` y los campos a

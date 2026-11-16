@@ -107,9 +107,9 @@ documentación de Master Data usa la cabecera `REST-Range: resources=0-99`, sin 
 
 Master Data (Admin → Store Settings → Storefront → Master Data, abre `onewstore.vtexcrm.com.br`)
 es la vía natural para ver, filtrar y exportar sin código. **El 2026-11-16 no se pudo verificar**:
-en la sesión de Chrome que se usó, la aplicación «Master Data» (MD) cargó una pantalla de «admin
-bloqueado por facturas sin pagar» en vez de la lista de entidades; el menú de aplicaciones sí abría.
-Pendiente: confirmar la ruta por la que se llega a la lista, si `purchasefeedback` y `sitefeedback`
+la aplicación «Master Data» (MD) cargó una pantalla de «admin bloqueado por facturas sin pagar» en
+vez de la lista de entidades (Diego confirmó que la cuenta está bloqueada; la tienda y el menú de
+aplicaciones sí funcionan). Mientras siga así, el equipo lee por la API. Al regularizar, comprobar si `purchasefeedback` y `sitefeedback`
 aparecen (se crearon por API, no por el admin) y anotar aquí los pasos reales de filtro y exportación.
 
 ### Quién lo lee y cómo se entera (Q11)

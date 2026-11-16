@@ -142,7 +142,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | CU-7 | **Devolver / retracto / garantía** | **No existe**: `/devoluciones-y-garantias` cae en "no encontramos ningún resultado". Solo hay referencia legal en la spec 001 (Ley 1480, art. 47). | [Hecho·sitio] |
 | CU-8 | **Publicar producto como seller** | **No existe** en el sitio. `/condiciones-sellers` no existe y no se vio portal de seller. Solo hay una propuesta de carga (§5.4). | [Hecho·sitio + spec] |
 | CU-9 | **Contactar a Repuestox** | `/contact-us` muestra "Error al cargar el formulario". | [Hecho·sitio] |
-| CU-10 | **Calificar la compra / enviar feedback del sitio** | **No existe**; spec 002 en `draft` (rating de 5 estrellas al finalizar la compra y botón flotante de feedback). El PDP tiene declarados `product-rating-summary` y `product-questions-and-answers` pero no se renderizaron (reseñas de producto: fuera de alcance de la 002). | [Hecho·código + sitio] |
+| CU-10 | **Calificar la compra / enviar feedback del sitio** | **Implementado en `devdiego`, no publicado**; spec 002 en `implementing` (rating de 5 estrellas en la confirmación del pedido y botón flotante de feedback, con servicio propio `onewstore.feedback-service`). El PDP tiene declarados `product-rating-summary` y `product-questions-and-answers` pero no se renderizaron (reseñas de producto: fuera de alcance de la 002). | [Hecho·código + sitio] |
 | CU-11 | **Aceptar TyC al comprar** | **No existe**; spec 001 en `draft`. | [Hecho·sitio + spec] |
 
 ## 7. Estado actual: producción vs. diseño
@@ -167,7 +167,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Catálogo real (árbol de 567 páginas, productos, imágenes, compatibilidad) | **Sin cargar**: 8 productos de prueba; imágenes y slides con placeholder ("REEMPLAZAR … 1600x700") | [Hecho·sitio] |
 | Marketplace con sellers terceros | **Objetivo**, no operativo. Un solo seller (el propio). Sin condiciones, comisiones ni portal visibles. | [Hecho·sitio] + [Inferido] |
 | TyC y 6 páginas legales (D2-D7) | **Diseño** (spec 001 `draft`); las rutas no existen | [Hecho·sitio + spec] |
-| Feedback de compra y del sitio | **Diseño** (spec 002 `draft`) | [Hecho·spec] |
+| Feedback de compra y del sitio | **Implementado en `devdiego`, sin publicar** (spec 002 `implementing`) | [Hecho·código] |
 | Menú global de categorías | **Construido** (spec 003 `done`): botón «Categorías» en el header de todas las páginas, panel de 3 columnas en escritorio y drawer con acordeón en móvil; datos en `react/category-menu.json`, generado por `scripts/gen-categorias.py`. Probado en workspace `devdiego`, no publicado | [Hecho·código + spec] |
 | Checkout, pagos, envíos | **Sin personalizar y sin verificar** | [Hecho·sitio] |
 | Contacto | Roto en el workspace | [Hecho·sitio] |

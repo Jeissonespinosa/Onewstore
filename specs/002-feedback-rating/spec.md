@@ -1,6 +1,6 @@
 # 002 — Feedback de la experiencia de compra y del sitio
 
-- **Estado:** draft
+- **Estado:** implementing (2026-11-16: grupos 1-4 y 5.2/5.3 hechos y verificados en `devdiego`; falta 5.1 por el aviso de privacidad y la retención, y el cierre del grupo 6)
 - **Responsable:** Diego
 - **Rama:** `feat/002-feedback`
 - **Depende de:** 000 (contexto); 001 D5 (aviso de privacidad que se enlaza en los formularios). Ya **no** depende de la infraestructura de formularios de la 004 (ver el cambio de 2026-11-15 abajo); la 004 debería adoptar el mismo servicio.

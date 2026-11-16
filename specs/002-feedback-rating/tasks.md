@@ -59,4 +59,5 @@
 
 - [ ] 6.1 Documentar en `README.md` cómo ver, filtrar y exportar el feedback en el admin, y resolver Q11. Verificación: README con los pasos y Q11 respondida en la spec 000.
 - [ ] 6.2 Lighthouse en inicio, categoría y producto contra la línea base (`specs/003-menu-categorias-global/baseline.md` como referencia). Verificación: ninguna página baja más de 5 puntos (AC-12) y sin CLS.
-- [ ] 6.3 Actualizar `specs/README.md` (índice y dependencias de la 002) y el estado de la spec. Verificación: índice coherente.
+- [x] 6.3 Actualizar `specs/README.md` (índice y dependencias de la 002) y el estado de la spec. Verificación: índice coherente.
+  - Hecho 2026-11-16: `specs/README.md` (002 → `implementing`), estado de la spec, `000` (CU-10 y fila de estado) y `CHANGELOG.md` coherentes. **No** se marca `done`: faltan 5.1, 6.1 y 6.2, y el DoD pide enlace al PR (no hay PR todavía).

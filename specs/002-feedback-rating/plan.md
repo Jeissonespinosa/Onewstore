@@ -45,9 +45,8 @@
    provisional `feedback-service`) con los builders `node` y `masterdata`. Justificación frente a la
    constitución #1 ("bloques nativos antes que código propio"): las opciones nativas no sirven
    (`store-form` sin estrellas ni valores dinámicos y dependiente de campos públicos bloqueados;
-   `reviews-and-ratings` es para reseñas públicas). *Ubicación:* carpeta `feedback-service/` en
-   este repo, con su propio `manifest.json`, enlazada con `vtex link` desde esa carpeta *[asumido;
-   alternativa: repositorio aparte; pendiente de confirmar, spec §8]*. *Alternativas descartadas:*
+   `reviews-and-ratings` es para reseñas públicas). *Ubicación (confirmada por Diego el 2026-11-16):* carpeta `feedback-service/` en
+   este repo, con su propio `manifest.json`, enlazada con `vtex link` desde esa carpeta. *Alternativas descartadas:*
    A (campos públicos, bloqueado), D (servicio externo, datos fuera de VTEX), E (ticket a VTEX,
    puede abrirse en paralelo sin depender de él).
 2. **Dos entidades de Master Data separadas** (`purchasefeedback`, `sitefeedback`): campos y ciclo
@@ -183,8 +182,8 @@ se conservan o se borran según la política de retención. Sin migraciones sobr
 |---|---|---|
 | Q11: quién lee el feedback y cómo se entera (¿aviso por correo?) | Grupo 6 | Equipo |
 | Esquina y texto del botón; otros flotantes previstos | Grupo 4 | Equipo |
-| Ubicación del servicio (carpeta de este repo o repo aparte), nombre de la app y quién la mantiene | Grupo 2 (tarea 2.1) | Equipo |
+| Ubicación del servicio: **resuelta**, carpeta `feedback-service/` de este repo (2026-11-16). Queda confirmar quién lo mantiene (Diego, por defecto) | Grupo 2 | Equipo |
 | Retención de datos y aviso de privacidad (001 D5) | Grupo 5 | Equipo / spec 001 |
 | Nombres definitivos de las entidades y su límite de longitud | Tarea 2.2 | Spike 1.5 |
-| ¿Se reutiliza el servicio para `/contact-us` (spec 004)? | Fin del grupo 2 | Equipo |
+| ¿Se reutiliza el servicio para `/contact-us` (spec 004)? **Resuelta: sí** (2026-11-16); la 004 usará este servicio con su propia ruta y entidad | Spec 004 | — |
 | ¿Ticket a VTEX por campos públicos (opción E)? | Opcional, sin dependencia | Diego |

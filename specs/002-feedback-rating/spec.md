@@ -110,9 +110,9 @@ Decisión: **B**. El spike debe comprobar: (1) que `store.orderplaced` muestra e
 - [x] ¿Se pide el correo en el rating de compra? → **No**: se toma del usuario autenticado, del pedido en una compra, o se solicita si es anónimo (2026-11-15), RF-3 y RF-8b.
 - [x] ¿El correo es obligatorio para el usuario anónimo? → **No, es opcional** (2026-11-15), RF-8b.
 - [x] ¿Cómo se lee el correo de la cuenta y del pedido sin exponerlo? → En el servidor; el navegador recibe solo una versión enmascarada (2026-11-15), RF-8b y RF-15. A confirmar en el spike.
-- [ ] ¿Dónde vive el servicio (carpeta `feedback-service/` de este repo o un repositorio aparte), cómo se llama la app y quién la mantiene e instala? (decisión 1 del plan)
+- [x] ¿Dónde vive el servicio? → Carpeta `feedback-service/` de este repo, app `onewstore.feedback-service` (2026-11-16). Falta confirmar quién la mantiene e instala (por defecto, Diego).
 - [ ] ¿Se abre un ticket a VTEX por campos públicos en paralelo (opción E)? No bloquea esta spec.
-- [ ] Impacto en la spec 004: `/contact-us` con `store-form` y Master Data público probablemente falle por el mismo motivo; ¿se reutiliza el servicio?
+- [x] Impacto en la spec 004: `/contact-us` con `store-form` y Master Data público probablemente falle por el mismo motivo → **se reutiliza este servicio** (2026-11-16). La 004 deberá añadir su ruta y su entidad privada.
 - [ ] ¿Esquina del botón y texto ("Feedback", "Ayúdanos a mejorar")? ¿Hay otros elementos flotantes previstos (WhatsApp, chat)?
 - [x] ¿La entidad de Master Data y su esquema ya existen en la cuenta, o se crean? → No existen (spike 1.3: `site-contact` da 404); se crean con el servicio como entidades de campos privados (2026-11-15).
 - [ ] ¿Cuánto tiempo se conservan los datos? (política de datos, spec 001)

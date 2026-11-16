@@ -50,7 +50,8 @@
 ## 5. Privacidad, seguridad y accesibilidad
 
 - [ ] 5.1 Aviso de privacidad enlazado y finalidad del correo en ambos formularios (RF-11), tras resolver 001 D5 y la retención. Verificación: enlace funcional y texto presente también con el correo enmascarado.
-- [ ] 5.2 Comentarios con HTML/`<script>` guardados y mostrados como texto, y revisión de que ni el servicio ni el navegador envían o registran el correo completo. Verificación: AC-10 y revisión de las respuestas del servicio y de sus logs.
+- [x] 5.2 Comentarios con HTML/`<script>` guardados y mostrados como texto, y revisión de que ni el servicio ni el navegador envían o registran el correo completo. Verificación: AC-10 y revisión de las respuestas del servicio y de sus logs.
+  - Hecho 2026-11-16 en `devdiego`: un mensaje con `<script>` e `<img onerror>` (`site`) y un comentario con `<b>` (`purchase`) se guardaron como texto, tal cual (AC-10). Ninguna página del theme pinta lo guardado. Logs: el servicio solo registra el mensaje de error del contador de VBase, nunca cuerpo ni correo. Respuestas de `purchase`/`site`: solo `{ok}` o un código; `identity` da 403 sin origen válido y devuelve el correo solo a la propia sesión (`no-store`), que es el cambio deliberado del 2026-11-16 (RF-8b). Pendiente en el admin (6.1): que el equipo lea el feedback como texto, no como HTML.
 - [x] 5.3 Recorrido solo con teclado y foco del modal (Esc, foco al botón). Verificación: AC-9; lector de pantalla a cargo de Diego.
   - Hecho 2026-11-16 con teclas reales en `devdiego` (botón flotante): Enter abre y el foco entra al primer control; Tab da la vuelta dentro del modal (10 Tab = vuelta completa, sin escapar); Esc cierra, devuelve el foco a «Tu opinión» y libera el scroll. Las estrellas (flechas, Inicio/Fin, un solo Tab) están cubiertas por tests, **no** se repitió a mano porque el pedido de prueba ya está calificado. **Lector de pantalla: a cargo de Diego**, sin hacer.
 

@@ -51,7 +51,8 @@
 
 - [ ] 5.1 Aviso de privacidad enlazado y finalidad del correo en ambos formularios (RF-11), tras resolver 001 D5 y la retención. Verificación: enlace funcional y texto presente también con el correo enmascarado.
 - [ ] 5.2 Comentarios con HTML/`<script>` guardados y mostrados como texto, y revisión de que ni el servicio ni el navegador envían o registran el correo completo. Verificación: AC-10 y revisión de las respuestas del servicio y de sus logs.
-- [ ] 5.3 Recorrido solo con teclado y foco del modal (Esc, foco al botón). Verificación: AC-9; lector de pantalla a cargo de Diego.
+- [x] 5.3 Recorrido solo con teclado y foco del modal (Esc, foco al botón). Verificación: AC-9; lector de pantalla a cargo de Diego.
+  - Hecho 2026-11-16 con teclas reales en `devdiego` (botón flotante): Enter abre y el foco entra al primer control; Tab da la vuelta dentro del modal (10 Tab = vuelta completa, sin escapar); Esc cierra, devuelve el foco a «Tu opinión» y libera el scroll. Las estrellas (flechas, Inicio/Fin, un solo Tab) están cubiertas por tests, **no** se repitió a mano porque el pedido de prueba ya está calificado. **Lector de pantalla: a cargo de Diego**, sin hacer.
 
 ## 6. Lectura por el equipo y cierre
 

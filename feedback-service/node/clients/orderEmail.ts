@@ -1,8 +1,8 @@
 import { ExternalClient, InstanceOptions, IOContext } from '@vtex/api'
 
-// Lectura del correo de un pedido en OMS. SIN VERIFICAR (tarea 1.2 del spike (f)): hace falta un
-// pedido real para confirmar la ruta, el identificador (`<orderGroup>-01`) y la política de acceso.
-// Mientras no se verifique, cualquier fallo devuelve null y el servicio sigue funcionando.
+// Lectura del correo de un pedido en OMS (tarea 1.2 f). Necesita la política OMSViewer y salida a
+// `<cuenta>.vtexcommercestable.com.br`. Cualquier fallo devuelve null y el servicio sigue
+// funcionando, pero deja en el log el código HTTP (nunca el correo ni el número de pedido).
 export class Orders extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
     super(`http://${context.account}.vtexcommercestable.com.br`, context, {
@@ -22,7 +22,8 @@ export class Orders extends ExternalClient {
       })
       const email = order?.clientProfileData?.email
       return typeof email === 'string' && email ? email : null
-    } catch {
+    } catch (e: any) {
+      console.error('feedback: no se pudo leer el pedido en OMS', e?.response?.status ?? e?.code ?? e?.message)
       return null
     }
   }

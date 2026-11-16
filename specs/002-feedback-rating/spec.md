@@ -65,7 +65,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 - `RF-12` El botón no tapa el minicart, el selector de vehículo ni los controles de la página en móvil (360 px).
 
 **C. Lectura por el equipo**
-- `RF-13` El feedback queda en entidades de Master Data con **campos privados**, consultables, filtrables y exportables desde el admin de VTEX. Los nombres de entidad no admiten guiones (p. ej. `purchasefeedback` y `sitefeedback`, a confirmar).
+- `RF-13` El feedback queda en entidades de Master Data con **campos privados**, consultables, filtrables y exportables desde el admin de VTEX. Los nombres de entidad no admiten guiones (p. ej. `purchasefeedback` y `sitefeedback`, a confirmar en la tarea 2.2); las entidades se crean con la API de Master Data, no con el builder `masterdata` (falla en `builder-hub`, spike 1.5).
 - `RF-14` Los datos del feedback **no** son legibles ni escribibles directamente por el público. El navegador solo habla con un **servicio propio** que valida, aplica límites y guarda en Master Data con las credenciales de la app; no existe ningún campo público.
 - `RF-15` El servicio resuelve en el servidor lo que el navegador no debe conocer: el correo de la cuenta o del pedido, y si un pedido ya fue calificado (RF-4).
 

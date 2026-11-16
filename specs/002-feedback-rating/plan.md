@@ -50,21 +50,27 @@
    alternativa: repositorio aparte; pendiente de confirmar, spec §8]*. *Alternativas descartadas:*
    A (campos públicos, bloqueado), D (servicio externo, datos fuera de VTEX), E (ticket a VTEX,
    puede abrirse en paralelo sin depender de él).
-2. **Dos entidades de Master Data separadas**, sin guiones en el nombre (`purchasefeedback`,
-   `sitefeedback`; a confirmar, también el límite de longitud): campos y ciclo de vida distintos y
-   cada esquema pide solo lo necesario (constitución #6). Todos los campos **privados**. Se
-   declaran en la carpeta `masterdata/` de la app, para que se creen al instalarla en lugar de
-   hacerlo a mano con un token *[asumido: se comprueba en 1.5]*.
+2. **Dos entidades de Master Data separadas** (`purchasefeedback`, `sitefeedback`): campos y ciclo
+   de vida distintos y cada esquema pide solo lo necesario (constitución #6). Todos los campos
+   **privados**. **Se crean a mano con la API de Master Data** (`PUT /api/dataentities/<entidad>/schemas/<esquema>`,
+   con el token de un administrador), no con el builder `masterdata`: en el spike 1.5 `builder-hub`
+   falló al crear el esquema (`Schema creation ... failed. undefined`) aunque el mismo `PUT` a mano
+   devolvió 200. Los nombres de entidad no admiten guiones (`Invalid data entity name`). Se
+   guardan las definiciones en `feedback-service/schemas/` y el comando va en el README. Nombre
+   usado en el spike: `onewstore_feedback_service_spiketest` (esquema `0.0.1-devdiego`); el nombre
+   definitivo de las entidades reales se fija en 2.2.
 3. **Seguridad por diseño, no por permisos públicos (RF-14, AC-11):** el navegador solo llama a las
-   rutas públicas del servicio; el servicio escribe con las credenciales de la app (política de
-   Master Data en el manifest, nombre exacto a confirmar en 1.5). Sin campos públicos, una consulta
-   o escritura directa anónima a Master Data se rechaza por construcción.
+   rutas públicas del servicio; el servicio escribe con las credenciales de la app (política
+   `ADMIN_DS`, que es general sobre Master Data y **no se puede limitar a una entidad**; riesgo
+   aceptado, mitigado con superficie mínima del servicio). Sin campos públicos, una consulta o
+   escritura directa anónima a Master Data se rechaza por construcción (**verificado en el spike**).
 4. **Unicidad por pedido (RF-4):** el servicio busca un registro previo con ese número de pedido
    antes de crear y rechaza el segundo envío (lectura privada con las credenciales de la app). Es
    una comprobación, no una restricción de la base de datos: dos envíos simultáneos podrían pasar;
    se acepta y se documenta, a menos que 1.5 muestre un mecanismo atómico.
-5. **Correo (RF-3, RF-8b, RF-15):** se resuelve en el servidor. Usuario autenticado: el servicio
-   valida la cookie de sesión de VTEX ID y lee el correo. Pedido: el servicio lee el pedido con las
+5. **Correo (RF-3, RF-8b, RF-15):** se resuelve en el servidor. Usuario autenticado: **verificado en
+   el spike**: el servicio lee la sesión de la tienda con el cliente `Session` de `@vtex/api` y la
+   cookie `vtex_session`, y devuelve solo el correo enmascarado. Pedido: el servicio lee el pedido con las
    credenciales de la app a partir del número de pedido que envía la página, y toma el correo de ahí
    *[asumido: el número de pedido de la URL es la prueba de pertenencia; se valora en 1.5]*. Al
    navegador solo vuelve el correo **enmascarado**. El servicio no registra correos en sus logs.
@@ -84,6 +90,27 @@
     enmascarado de correo); el componente React lleva tests en `react/__tests__` (constitución #2).
 11. **Despliegue:** solo en el workspace propio con `vtex link`. Nada de `vtex publish` ni `vtex
     install` en producción sin pedirlo explícitamente (regla del repositorio).
+
+### Resultados del spike (tarea 1.5)
+
+Probado el 2026-11-15/16 en `devdiego` con la app `onewstore.feedback-service@0.0.1` (carpeta `feedback-service/`, `vtex link`) y una entidad de prueba privada. Escritura con el servicio y lecturas anónimas desde el navegador y con curl; la prueba con cuenta la hizo Diego en su sesión.
+
+| Pregunta | Resultado |
+|---|---|
+| (a) ¿Se instala y crea la entidad? | La app se instala con solo el builder `node`. **El builder `masterdata` falló** en `builder-hub` (`Schema creation ... failed. undefined`) aunque el esquema es válido (mismo `PUT` a mano: 200). Las entidades se crean a mano (decisión 2). `builder-hub` fuerza `@vtex/api` 7, TypeScript 5.5.3 y `@types/node` 20. El `tsconfig.json` no debe llevar `noEmit` |
+| (b) ¿Responde la ruta pública a un anónimo desde la tienda? | **Sí**, 200. Origen ajeno o sin origen: **403** del servicio |
+| (c) ¿Escribe el servicio y se rechaza el acceso directo? | **Sí.** Servicio: 200 con id de documento. Escritura directa anónima a la entidad: **403** `Cannot write in private fields`. Lectura directa anónima: **403** `Forbidden` |
+| (d) ¿Qué política hace falta? | `ADMIN_DS` + `outbound-access` a `api.vtex.com` (`/api/*`) y a `portal.vtexcommercestable.com.br` (`/api/*`, host que usa el cliente `Session`). `ADMIN_DS` es general: no se puede limitar a una entidad |
+| (e) ¿Correo del autenticado? | **Sí.** Anónimo: `{"authenticated":false,"maskedEmail":null}`. Con sesión de comprador: `{"authenticated":true,"maskedEmail":"d***@gmail.com"}`; el correo completo no llega al navegador. `ctx.clients.vtexId` no existe en `@vtex/api` 7: se usa `ctx.clients.session` |
+| (f) ¿Correo de un pedido? | **Sin verificar**: falta un pedido real; se hace con la tarea 1.2. Probable política `OMSViewer` (nombre sin confirmar) |
+
+**Hallazgos de operación (aplicables a las rutas reales):**
+- **Caché del CDN:** una respuesta GET sin `Cache-Control` se sirvió desde la caché durante minutos (`age` > 200 s) con código antiguo. Todas las respuestas del servicio llevan `Cache-Control: no-store, no-cache, private` (importante: una ruta con datos de sesión no puede cachearse). Cambiar la ruta (`/session` → `/whoami`) fue la forma de saltarse una entrada ya cacheada.
+- **Errores 5xx:** el CDN sustituye los 5xx por su página de error (se ve como un 404 de la tienda), lo que oculta el fallo real al navegador. Las rutas reales devolverán errores controlados con 4xx/200 más un código en el cuerpo, y los 5xx solo para fallos inesperados.
+- **Query string:** las rutas del servicio no aceptan `?param` (devuelven la página 404 de la tienda); los datos van en el cuerpo POST o en la ruta.
+- **Cookies sin sesión:** sin cookie `vtex_session` el servicio responde `authenticated:false` sin llamar a Janus.
+
+Quedan en la entidad de prueba dos registros de prueba (ids `971dae76-…` y `c7393944-…`) para borrar desde el admin.
 
 ### Resultados del spike (tarea 1.1)
 

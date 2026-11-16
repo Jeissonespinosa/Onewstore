@@ -5,6 +5,8 @@
 import React from 'react'
 import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react'
 
+import { renderToString } from 'react-dom/server'
+
 import FeedbackButton from '../FeedbackButton'
 
 function mockFetch(status, body, identity = { ok: true, authenticated: false, email: null }) {
@@ -223,5 +225,9 @@ describe('FeedbackButton', () => {
     open()
     fireEvent.mouseDown(screen.getByRole('dialog').parentElement)
     expect(screen.queryByRole('dialog')).toBeNull()
+  })
+
+  it('el portal no se crea en el servidor ni en la primera pasada (evita descuadrar la hidratación)', () => {
+    expect(renderToString(<FeedbackButton />)).toBe('')
   })
 })

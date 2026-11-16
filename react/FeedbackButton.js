@@ -5,6 +5,9 @@
  *   renderiza tambien en la confirmacion del pedido (RF-8c), asi que no hay que duplicarla.
  * - El boton y el modal viven en un portal sobre document.body: el header fijo usa
  *   backdrop-filter y un position:fixed dentro de ese ancestro se ancla a el, no a la pantalla.
+ * - El portal NO se crea hasta que el componente esta montado en el navegador. Crearlo durante la
+ *   hidratacion de React 16 descuadra el DOM que vino del servidor: la home perdio su contenido
+ *   (2026-11-16) cuando el boton estaba en el header.
  * - Envia a /_v/feedback/site (servicio onewstore.feedback-service). El navegador nunca escribe
  *   en Master Data. La fecha la pone el servidor; aqui solo viajan la RUTA de la pagina (sin
  *   consulta ni fragmento) y el tamano de pantalla (movil/escritorio).
@@ -108,6 +111,7 @@ export default function FeedbackButton({ label = 'Tu opinión', position = 'righ
   const [status, setStatus] = useState('idle') // idle | sending
   const [error, setError] = useState('')
   const [toast, setToast] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const triggerRef = useRef(null)
   const dialogRef = useRef(null)
@@ -116,7 +120,10 @@ export default function FeedbackButton({ label = 'Tu opinión', position = 'righ
   const identityLoaded = useRef(false)
   const toastTimer = useRef(null)
 
-  useEffect(() => () => clearTimeout(toastTimer.current), [])
+  useEffect(() => {
+    setMounted(true)
+    return () => clearTimeout(toastTimer.current)
+  }, [])
 
   // Formulario cargado al abrir (RF-8): la precarga del correo se pide una sola vez, al abrir.
   useEffect(() => {
@@ -228,7 +235,8 @@ export default function FeedbackButton({ label = 'Tu opinión', position = 'righ
     setStatus('idle')
   }
 
-  if (typeof document === 'undefined') return null
+  // Servidor y primera pasada del navegador: nada. El portal aparece ya hidratado.
+  if (!mounted || typeof document === 'undefined') return null
 
   const side = position === 'left' ? styles.feedbackLeft || 'feedbackLeft' : ''
 

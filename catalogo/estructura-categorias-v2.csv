@@ -1,10 +1,10 @@
 Departamento,Nivel,Categoría (macro),Subcategoría,Tipo de producto (hoja),URL propuesta,Sinónimos (palabras clave)
 Carros,Categoría,Llantas y rines,,,/carros/llantas-y-rines,
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas de automóvil,/carros/llantas-y-rines/llantas,llantas para carro; llanta; neumáticos; cauchos; llantas sedán; llanta 175; llanta 185; llanta 195; llanta 205
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas SUV y 4x4,/carros/llantas-y-rines/llantas,llantas camioneta; llantas 4x4; llantas todoterreno; llantas AT; llantas MT; llanta 265; llanta 245; llantas de camioneta
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,"Llantas de van, camión y transporte",/carros/llantas-y-rines/llantas,llantas comerciales; llantas de carga; llantas de camión; llantas de van; llantas de furgón; llantas de bus; llantas de transporte; llanta 195r15; llanta 700-16; llanta 1100-20
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas OTR e industriales,/carros/llantas-y-rines/llantas,llantas industriales; llantas de montacargas; llantas agrícolas; otr
 Carros,Subcategoría,Llantas y rines,Llantas,,/carros/llantas-y-rines/llantas,
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,llantas para carro; llanta; neumáticos; cauchos; llantas sedán; llanta 175; llanta 185; llanta 195; llanta 205
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,llantas camioneta; llantas 4x4; llantas todoterreno; llantas AT; llantas MT; llanta 265; llanta 245; llantas de camioneta
+Carros,Tipo de producto,Llantas y rines,Llantas,"Llantas de van, camión y transporte",/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,llantas comerciales; llantas de carga; llantas de camión; llantas de van; llantas de furgón; llantas de bus; llantas de transporte; llanta 195r15; llanta 700-16; llanta 1100-20
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,llantas industriales; llantas de montacargas; llantas agrícolas; otr
 Carros,Subcategoría,Llantas y rines,Rines,,/carros/llantas-y-rines/rines,aros
 Carros,Tipo de producto,Llantas y rines,Rines,Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,rines de hierro; rines originales de acero; aros de acero
 Carros,Tipo de producto,Llantas y rines,Rines,Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,rines de lujo; rines de magnesio; aros de aluminio; rines 15; rines 16; rines 17; rines deportivos; rines originales; rines aftermarket

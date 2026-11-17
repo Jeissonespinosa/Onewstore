@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "purchasefeedback",
+  "type": "object",
+  "properties": {
+    "orderId": { "type": "string", "maxLength": 40 },
+    "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "comment": { "type": "string", "maxLength": 1000 },
+    "reason": {
+      "type": "string",
+      "enum": ["", "envio", "producto", "precio", "uso del sitio", "pago", "otro"]
+    },
+    "email": { "type": "string", "maxLength": 254 }
+  },
+  "required": ["orderId", "rating"],
+  "v-indexed": ["orderId", "rating", "reason"],
+  "v-default-fields": ["orderId", "rating", "reason", "comment", "email"]
+}

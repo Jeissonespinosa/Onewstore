@@ -1,8 +1,17 @@
 {
+  "category-menu": {
+    "component": "CategoryMenu"
+  },
   "vehicle-selector": {
     "component": "VehicleSelector"
   },
   "tyre-size-selector": {
     "component": "TyreSizeSelector"
+  },
+  "purchase-rating": {
+    "component": "PurchaseRating"
+  },
+  "feedback-button": {
+    "component": "FeedbackButton"
   }
 }

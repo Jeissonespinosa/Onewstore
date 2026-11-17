@@ -1,0 +1,381 @@
+/*
+ * Estilos del menu "Categorias" del header (react/CategoryMenu.js, spec 003).
+ *
+ * CSS Module: las clases se importan en el componente (`styles.trigger`, ...).
+ * No va en styles/css/ porque el builder de estilos de VTEX solo acepta archivos
+ * de apps dependencia (un theme no puede depender de si mismo) y valida que los
+ * selectores sean de esa app; ver plan.md de la spec 003.
+ *
+ * Los colores y medidas son variables del propio menu (--cm-*), alineadas con
+ * styles/configs/style.json: tinta #010101, accion #FF371E. El rojo (3,4:1 sobre
+ * blanco) solo va en bordes e iconos; el texto es tinta (contraste AA).
+ */
+
+/* drawerRoot vive en un portal (fuera de .categoryMenu): necesita sus propias variables */
+.categoryMenu,
+.drawerRoot {
+  --cm-ink: #010101;
+  --cm-red: #FF371E;
+  --cm-paper: #ffffff;
+  --cm-soft: #f4f4f4;
+  --cm-hover: #ebebeb;
+  --cm-line: rgba(1, 1, 1, 0.12);
+  --cm-focus: #060294;
+
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--cm-ink);
+}
+
+.categoryMenu {
+  position: relative;
+  /* alto reservado: abrir el panel no mueve el header (sin CLS) */
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  color: var(--cm-ink);
+}
+
+/* --- boton disparador ------------------------------------------------------ */
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--cm-ink);
+  color: var(--cm-paper);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  background: var(--cm-red);
+  color: var(--cm-ink);
+}
+
+.triggerIcon {
+  display: inline-flex;
+}
+
+/* --- foco visible (teclado) ------------------------------------------------ */
+
+.trigger:focus-visible,
+.itemButton:focus-visible,
+.itemLink:focus-visible {
+  outline: 3px solid var(--cm-focus);
+  outline-offset: 2px;
+}
+
+/* --- panel ----------------------------------------------------------------- */
+
+.panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 13rem 17rem minmax(14rem, 1fr);
+  width: min(58rem, 92vw);
+  max-height: min(34rem, 75vh);
+  overflow: hidden;
+  background: var(--cm-paper);
+  border-radius: 0.75rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  outline: none;
+}
+
+.column {
+  min-width: 0;
+  max-height: min(34rem, 75vh);
+  overflow-y: auto;
+  padding: 0.75rem 0;
+}
+
+.column + .column {
+  border-left: 1px solid var(--cm-line);
+}
+
+.columnSections {
+  background: var(--cm-soft);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- items ----------------------------------------------------------------- */
+
+.item {
+  margin: 0;
+  border-left: 4px solid transparent;
+}
+
+.itemActive {
+  background: var(--cm-paper);
+  border-left-color: var(--cm-red);
+}
+
+/* rama de la pagina actual */
+.itemCurrent > .itemButton,
+.itemCurrent > .itemLink {
+  font-weight: 800;
+}
+
+.itemButton,
+.itemLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.625rem 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--cm-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.itemButton:hover,
+.itemLink:hover {
+  background: var(--cm-hover);
+}
+
+.itemLink[aria-current="page"] {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--cm-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.itemCaret {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  color: var(--cm-ink);
+}
+
+/* enlace "Ver todo en ..." al inicio de cada columna */
+.seeAll {
+  margin: 0 0 0.25rem;
+  font-weight: 800;
+  border-bottom: 1px solid var(--cm-line);
+}
+
+/* --- variante movil: drawer con acordeon ----------------------------------- */
+
+/* texto solo para lectores de pantalla (el disparador movil muestra solo el icono) */
+.triggerLabelHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* bloquea el scroll del fondo mientras el drawer esta abierto (se agrega al body) */
+.bodyLock {
+  overflow: hidden;
+}
+
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(1, 1, 1, 0.55);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1101;
+  display: flex;
+  flex-direction: column;
+  width: min(86vw, 22rem);
+  background: var(--cm-paper);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.3);
+  animation: cmSlideIn 0.22s ease-out;
+}
+
+@keyframes cmSlideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: var(--cm-ink);
+  color: var(--cm-paper);
+}
+
+.drawerTitle {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.drawerClose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cm-paper);
+  cursor: pointer;
+}
+
+.drawerClose:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.drawerClose:focus-visible,
+.accButton:focus-visible,
+.accLink:focus-visible {
+  outline: 3px solid var(--cm-focus);
+  outline-offset: -3px;
+}
+
+/* el foco sobre fondo oscuro del encabezado necesita un contorno claro */
+.drawerClose:focus-visible {
+  outline-color: var(--cm-paper);
+}
+
+.drawerBody {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 1.5rem;
+}
+
+.accItem {
+  margin: 0;
+  border-bottom: 1px solid var(--cm-line);
+}
+
+.accPanel {
+  background: var(--cm-soft);
+}
+
+.accPanel .accItem:last-child {
+  border-bottom: 0;
+}
+
+.accButton,
+.accLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  color: var(--cm-ink);
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* sangria por nivel: seccion, macro, subcategoria */
+.level1 {
+  padding: 0.75rem 1rem;
+  font-weight: 800;
+}
+
+.level2 {
+  padding: 0.625rem 1rem 0.625rem 1.5rem;
+  font-weight: 600;
+}
+
+.level3 {
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  font-weight: 400;
+}
+
+.accButton:hover,
+.accLink:hover {
+  background: var(--cm-hover);
+}
+
+.accButton[aria-expanded="true"] {
+  border-left: 4px solid var(--cm-red);
+}
+
+.accCaret {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.accButton[aria-expanded="true"] > .accCaret {
+  transform: rotate(90deg);
+}
+
+.accSeeAll {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--cm-line);
+  text-underline-offset: 4px;
+}
+
+.accLink[aria-current="page"] {
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--cm-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* sin animaciones para quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .trigger,
+  .accCaret {
+    transition: none;
+  }
+
+  .drawer {
+    animation: none;
+  }
+}
+
+/* pantallas medianas: columnas mas estrechas para que el panel quepa */
+@media screen and (max-width: 64em) {
+  .panel {
+    grid-template-columns: 11rem 14rem minmax(10rem, 1fr);
+  }
+}

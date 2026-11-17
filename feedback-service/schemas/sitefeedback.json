@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "sitefeedback",
+  "type": "object",
+  "properties": {
+    "type": { "type": "string", "enum": ["problema", "sugerencia", "otro"] },
+    "message": { "type": "string", "maxLength": 1000 },
+    "email": { "type": "string", "maxLength": 254 },
+    "pageUrl": { "type": "string", "maxLength": 500 },
+    "viewport": { "type": "string", "enum": ["movil", "escritorio"] }
+  },
+  "required": ["type", "message"],
+  "v-indexed": ["type", "viewport"],
+  "v-default-fields": ["type", "message", "email", "pageUrl", "viewport"]
+}

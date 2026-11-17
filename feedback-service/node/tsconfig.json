@@ -1,0 +1,15 @@
+{
+  "extends": "@vtex/tsconfig",
+  "compilerOptions": {
+    "outDir": "../dist",
+    "skipLibCheck": true
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "jest.config.js"
+  ]
+}

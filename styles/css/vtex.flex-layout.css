@@ -29,14 +29,6 @@
   flex-wrap: nowrap;
 }
 
-/* Logo a la izquierda; menú + login + carrito agrupados a la derecha */
-.flexRow--main-header .flexCol--headerNavLinks {
-  flex: 0 0 auto;
-  width: auto;
-  max-width: none;
-  padding-right: 0.5rem;
-}
-
 .flexRowContent--main-header-mobile {
   align-items: center;
   padding: 0.625rem 0.5rem;

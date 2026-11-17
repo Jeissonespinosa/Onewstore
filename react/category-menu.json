@@ -1,0 +1,1313 @@
+{
+  "_generado": "GENERADO por scripts/gen-categorias.py — no editar a mano; cambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.",
+  "sections": [
+    {
+      "nombre": "Carros",
+      "path": "/carros",
+      "children": [
+        {
+          "nombre": "Llantas y rines",
+          "path": "/carros/llantas-y-rines",
+          "children": [
+            {
+              "nombre": "Llantas",
+              "path": "/carros/llantas-y-rines/llantas"
+            },
+            {
+              "nombre": "Rines",
+              "path": "/carros/llantas-y-rines/rines"
+            },
+            {
+              "nombre": "Accesorios de rueda",
+              "path": "/carros/llantas-y-rines/accesorios-de-rueda"
+            }
+          ]
+        },
+        {
+          "nombre": "Lubricantes y mantenimiento",
+          "path": "/carros/lubricantes-y-mantenimiento",
+          "children": [
+            {
+              "nombre": "Aceite de motor",
+              "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor"
+            },
+            {
+              "nombre": "Aceite de transmisión",
+              "path": "/carros/lubricantes-y-mantenimiento/aceite-de-transmision"
+            },
+            {
+              "nombre": "Aceite diferencial",
+              "path": "/carros/lubricantes-y-mantenimiento/aceite-diferencial"
+            },
+            {
+              "nombre": "Refrigerante y anticongelante",
+              "path": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante"
+            },
+            {
+              "nombre": "Líquido de frenos",
+              "path": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos"
+            },
+            {
+              "nombre": "Líquido de dirección hidráulica",
+              "path": "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica"
+            },
+            {
+              "nombre": "Aditivos",
+              "path": "/carros/lubricantes-y-mantenimiento/aditivos"
+            },
+            {
+              "nombre": "Grasas",
+              "path": "/carros/lubricantes-y-mantenimiento/grasas"
+            },
+            {
+              "nombre": "Limpiadores de sistemas",
+              "path": "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas"
+            }
+          ]
+        },
+        {
+          "nombre": "Filtros",
+          "path": "/carros/filtros",
+          "children": [
+            {
+              "nombre": "Filtros de aceite",
+              "path": "/carros/filtros/filtros-de-aceite"
+            },
+            {
+              "nombre": "Filtros de aire",
+              "path": "/carros/filtros/filtros-de-aire"
+            },
+            {
+              "nombre": "Filtros de combustible",
+              "path": "/carros/filtros/filtros-de-combustible"
+            },
+            {
+              "nombre": "Filtros de cabina",
+              "path": "/carros/filtros/filtros-de-cabina"
+            },
+            {
+              "nombre": "Filtros de transmisión",
+              "path": "/carros/filtros/filtros-de-transmision"
+            }
+          ]
+        },
+        {
+          "nombre": "Baterías",
+          "path": "/carros/baterias",
+          "children": [
+            {
+              "nombre": "Baterías para carro",
+              "path": "/carros/baterias/baterias-para-carro"
+            },
+            {
+              "nombre": "Baterías para furgón, camión y bus",
+              "path": "/carros/baterias/baterias-para-furgon-camion-y-bus"
+            },
+            {
+              "nombre": "Bornes y cables de batería",
+              "path": "/carros/baterias/bornes-y-cables-de-bateria"
+            }
+          ]
+        },
+        {
+          "nombre": "Frenos",
+          "path": "/carros/frenos",
+          "children": [
+            {
+              "nombre": "Pastillas de freno",
+              "path": "/carros/frenos/pastillas-de-freno"
+            },
+            {
+              "nombre": "Discos de freno",
+              "path": "/carros/frenos/discos-de-freno"
+            },
+            {
+              "nombre": "Campanas de freno",
+              "path": "/carros/frenos/campanas-de-freno"
+            },
+            {
+              "nombre": "Bandas de freno",
+              "path": "/carros/frenos/bandas-de-freno"
+            },
+            {
+              "nombre": "Mordazas (calipers)",
+              "path": "/carros/frenos/mordazas-calipers"
+            },
+            {
+              "nombre": "Pistones y kits de caliper",
+              "path": "/carros/frenos/pistones-y-kits-de-caliper"
+            },
+            {
+              "nombre": "Cilindros de freno",
+              "path": "/carros/frenos/cilindros-de-freno"
+            },
+            {
+              "nombre": "Bombas de freno",
+              "path": "/carros/frenos/bombas-de-freno"
+            },
+            {
+              "nombre": "Servofreno (booster)",
+              "path": "/carros/frenos/servofreno-booster"
+            },
+            {
+              "nombre": "Bombas de vacío",
+              "path": "/carros/frenos/bombas-de-vacio"
+            },
+            {
+              "nombre": "Sensores ABS",
+              "path": "/carros/frenos/sensores-abs"
+            },
+            {
+              "nombre": "Módulos y unidades ABS",
+              "path": "/carros/frenos/modulos-y-unidades-abs"
+            },
+            {
+              "nombre": "Mangueras y líneas de freno",
+              "path": "/carros/frenos/mangueras-y-lineas-de-freno"
+            },
+            {
+              "nombre": "Depósitos de líquido de frenos",
+              "path": "/carros/frenos/depositos-de-liquido-de-frenos"
+            },
+            {
+              "nombre": "Guayas de freno de mano",
+              "path": "/carros/frenos/guayas-de-freno-de-mano"
+            },
+            {
+              "nombre": "Herrajes y pernos de pastillas",
+              "path": "/carros/frenos/herrajes-y-pernos-de-pastillas"
+            },
+            {
+              "nombre": "Kits de reparación de frenos",
+              "path": "/carros/frenos/kits-de-reparacion-de-frenos"
+            },
+            {
+              "nombre": "Sensores de desgaste de pastillas",
+              "path": "/carros/frenos/sensores-de-desgaste-de-pastillas"
+            }
+          ]
+        },
+        {
+          "nombre": "Suspensión y dirección",
+          "path": "/carros/suspension-y-direccion",
+          "children": [
+            {
+              "nombre": "Amortiguadores",
+              "path": "/carros/suspension-y-direccion/amortiguadores"
+            },
+            {
+              "nombre": "Resortes (espirales)",
+              "path": "/carros/suspension-y-direccion/resortes-espirales"
+            },
+            {
+              "nombre": "Rótulas",
+              "path": "/carros/suspension-y-direccion/rotulas"
+            },
+            {
+              "nombre": "Axiales (brazos axiales)",
+              "path": "/carros/suspension-y-direccion/axiales-brazos-axiales"
+            },
+            {
+              "nombre": "Bujes",
+              "path": "/carros/suspension-y-direccion/bujes"
+            },
+            {
+              "nombre": "Tijeras",
+              "path": "/carros/suspension-y-direccion/tijeras"
+            },
+            {
+              "nombre": "Barras estabilizadoras",
+              "path": "/carros/suspension-y-direccion/barras-estabilizadoras"
+            },
+            {
+              "nombre": "Links de estabilizadora",
+              "path": "/carros/suspension-y-direccion/links-de-estabilizadora"
+            },
+            {
+              "nombre": "Balineras de rueda",
+              "path": "/carros/suspension-y-direccion/balineras-de-rueda"
+            },
+            {
+              "nombre": "Manzanas de rueda (cubos)",
+              "path": "/carros/suspension-y-direccion/manzanas-de-rueda-cubos"
+            },
+            {
+              "nombre": "Puntas de eje (manguetas)",
+              "path": "/carros/suspension-y-direccion/puntas-de-eje-manguetas"
+            },
+            {
+              "nombre": "Cajas de dirección (cremalleras)",
+              "path": "/carros/suspension-y-direccion/cajas-de-direccion-cremalleras"
+            },
+            {
+              "nombre": "Bombas de dirección hidráulica",
+              "path": "/carros/suspension-y-direccion/bombas-de-direccion-hidraulica"
+            },
+            {
+              "nombre": "Mangueras de dirección hidráulica",
+              "path": "/carros/suspension-y-direccion/mangueras-de-direccion-hidraulica"
+            },
+            {
+              "nombre": "Columnas y crucetas de dirección",
+              "path": "/carros/suspension-y-direccion/columnas-y-crucetas-de-direccion"
+            },
+            {
+              "nombre": "Terminales de dirección",
+              "path": "/carros/suspension-y-direccion/terminales-de-direccion"
+            },
+            {
+              "nombre": "Copas (bases) de amortiguador",
+              "path": "/carros/suspension-y-direccion/copas-bases-de-amortiguador"
+            },
+            {
+              "nombre": "Guardapolvos y fuelles",
+              "path": "/carros/suspension-y-direccion/guardapolvos-y-fuelles"
+            },
+            {
+              "nombre": "Topes de amortiguador",
+              "path": "/carros/suspension-y-direccion/topes-de-amortiguador"
+            },
+            {
+              "nombre": "Kits de tren delantero",
+              "path": "/carros/suspension-y-direccion/kits-de-tren-delantero"
+            },
+            {
+              "nombre": "Suspensión neumática (bolsas de aire)",
+              "path": "/carros/suspension-y-direccion/suspension-neumatica-bolsas-de-aire"
+            },
+            {
+              "nombre": "Coilovers y suspensión deportiva",
+              "path": "/carros/suspension-y-direccion/coilovers-y-suspension-deportiva"
+            },
+            {
+              "nombre": "Ballestas (muelles de hoja)",
+              "path": "/carros/suspension-y-direccion/ballestas-muelles-de-hoja"
+            }
+          ]
+        },
+        {
+          "nombre": "Eléctrico y electrónico",
+          "path": "/carros/electrico-y-electronico",
+          "children": [
+            {
+              "nombre": "Encendido",
+              "path": "/carros/electrico-y-electronico/encendido"
+            },
+            {
+              "nombre": "Arranque y carga",
+              "path": "/carros/electrico-y-electronico/arranque-y-carga"
+            },
+            {
+              "nombre": "Gestión electrónica",
+              "path": "/carros/electrico-y-electronico/gestion-electronica"
+            },
+            {
+              "nombre": "Eléctrico general",
+              "path": "/carros/electrico-y-electronico/electrico-general"
+            }
+          ]
+        },
+        {
+          "nombre": "Iluminación",
+          "path": "/carros/iluminacion",
+          "children": [
+            {
+              "nombre": "Farolas",
+              "path": "/carros/iluminacion/farolas"
+            },
+            {
+              "nombre": "Stops",
+              "path": "/carros/iluminacion/stops"
+            },
+            {
+              "nombre": "Direccionales",
+              "path": "/carros/iluminacion/direccionales"
+            },
+            {
+              "nombre": "Exploradoras",
+              "path": "/carros/iluminacion/exploradoras"
+            },
+            {
+              "nombre": "Luces LED",
+              "path": "/carros/iluminacion/luces-led"
+            },
+            {
+              "nombre": "Bombillos halógenos",
+              "path": "/carros/iluminacion/bombillos-halogenos"
+            },
+            {
+              "nombre": "Xenón (HID)",
+              "path": "/carros/iluminacion/xenon-hid"
+            },
+            {
+              "nombre": "Barras LED",
+              "path": "/carros/iluminacion/barras-led"
+            },
+            {
+              "nombre": "Luces interiores",
+              "path": "/carros/iluminacion/luces-interiores"
+            },
+            {
+              "nombre": "Luces DRL (diurnas)",
+              "path": "/carros/iluminacion/luces-drl-diurnas"
+            },
+            {
+              "nombre": "Luces de placa y cortesía",
+              "path": "/carros/iluminacion/luces-de-placa-y-cortesia"
+            }
+          ]
+        },
+        {
+          "nombre": "Motor y transmisión",
+          "path": "/carros/motor-y-transmision",
+          "children": [
+            {
+              "nombre": "Bloque y culata",
+              "path": "/carros/motor-y-transmision/bloque-y-culata"
+            },
+            {
+              "nombre": "Correas y tensores",
+              "path": "/carros/motor-y-transmision/correas-y-tensores"
+            },
+            {
+              "nombre": "Repartición (distribución)",
+              "path": "/carros/motor-y-transmision/reparticion-distribucion"
+            },
+            {
+              "nombre": "Refrigeración",
+              "path": "/carros/motor-y-transmision/refrigeracion"
+            },
+            {
+              "nombre": "Turbo e intercooler",
+              "path": "/carros/motor-y-transmision/turbo-e-intercooler"
+            },
+            {
+              "nombre": "Combustible e inyección",
+              "path": "/carros/motor-y-transmision/combustible-e-inyeccion"
+            },
+            {
+              "nombre": "Clutch (embrague)",
+              "path": "/carros/motor-y-transmision/clutch-embrague"
+            },
+            {
+              "nombre": "Admisión y escape",
+              "path": "/carros/motor-y-transmision/admision-y-escape"
+            },
+            {
+              "nombre": "Transmisión y caja",
+              "path": "/carros/motor-y-transmision/transmision-y-caja"
+            },
+            {
+              "nombre": "Partes plásticas de motor",
+              "path": "/carros/motor-y-transmision/partes-plasticas-de-motor"
+            },
+            {
+              "nombre": "GNV (gas vehicular)",
+              "path": "/carros/motor-y-transmision/gnv-gas-vehicular"
+            }
+          ]
+        },
+        {
+          "nombre": "Accesorios",
+          "path": "/carros/accesorios",
+          "children": [
+            {
+              "nombre": "Accesorios exteriores",
+              "path": "/carros/accesorios/accesorios-exteriores"
+            },
+            {
+              "nombre": "Accesorios interiores",
+              "path": "/carros/accesorios/accesorios-interiores"
+            },
+            {
+              "nombre": "Audio",
+              "path": "/carros/accesorios/audio"
+            }
+          ]
+        },
+        {
+          "nombre": "Carrocería y climatización",
+          "path": "/carros/carroceria-y-climatizacion",
+          "children": [
+            {
+              "nombre": "Carrocería",
+              "path": "/carros/carroceria-y-climatizacion/carroceria"
+            },
+            {
+              "nombre": "Interior (repuestos)",
+              "path": "/carros/carroceria-y-climatizacion/interior-repuestos"
+            },
+            {
+              "nombre": "Aire acondicionado y climatización",
+              "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion"
+            }
+          ]
+        },
+        {
+          "nombre": "Tecnología y seguridad",
+          "path": "/carros/tecnologia-y-seguridad",
+          "children": [
+            {
+              "nombre": "Tecnología y conectividad",
+              "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad"
+            },
+            {
+              "nombre": "Seguridad",
+              "path": "/carros/tecnologia-y-seguridad/seguridad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Motos",
+      "path": "/motos",
+      "children": [
+        {
+          "nombre": "Llantas y rines",
+          "path": "/motos/llantas-y-rines",
+          "children": [
+            {
+              "nombre": "Llantas",
+              "path": "/motos/llantas-y-rines/llantas"
+            },
+            {
+              "nombre": "Rines y rayos",
+              "path": "/motos/llantas-y-rines/rines-y-rayos"
+            },
+            {
+              "nombre": "Accesorios de rueda",
+              "path": "/motos/llantas-y-rines/accesorios-de-rueda"
+            }
+          ]
+        },
+        {
+          "nombre": "Lubricantes y mantenimiento",
+          "path": "/motos/lubricantes-y-mantenimiento",
+          "children": [
+            {
+              "nombre": "Aceite de motor 4T",
+              "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t"
+            },
+            {
+              "nombre": "Aceite de motor 2T",
+              "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t"
+            },
+            {
+              "nombre": "Aceite de transmisión (caja)",
+              "path": "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja"
+            },
+            {
+              "nombre": "Aceite de suspensión",
+              "path": "/motos/lubricantes-y-mantenimiento/aceite-de-suspension"
+            },
+            {
+              "nombre": "Lubricante de cadena",
+              "path": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena"
+            },
+            {
+              "nombre": "Líquido de frenos",
+              "path": "/motos/lubricantes-y-mantenimiento/liquido-de-frenos"
+            },
+            {
+              "nombre": "Refrigerante",
+              "path": "/motos/lubricantes-y-mantenimiento/refrigerante"
+            },
+            {
+              "nombre": "Aditivos y grasas",
+              "path": "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas"
+            }
+          ]
+        },
+        {
+          "nombre": "Filtros",
+          "path": "/motos/filtros",
+          "children": [
+            {
+              "nombre": "Filtros de aceite",
+              "path": "/motos/filtros/filtros-de-aceite"
+            },
+            {
+              "nombre": "Filtros de aire",
+              "path": "/motos/filtros/filtros-de-aire"
+            },
+            {
+              "nombre": "Filtros de combustible",
+              "path": "/motos/filtros/filtros-de-combustible"
+            }
+          ]
+        },
+        {
+          "nombre": "Motor y transmisión",
+          "path": "/motos/motor-y-transmision",
+          "children": [
+            {
+              "nombre": "Bloque y culata",
+              "path": "/motos/motor-y-transmision/bloque-y-culata"
+            },
+            {
+              "nombre": "Repartición (distribución)",
+              "path": "/motos/motor-y-transmision/reparticion-distribucion"
+            },
+            {
+              "nombre": "Refrigeración",
+              "path": "/motos/motor-y-transmision/refrigeracion"
+            },
+            {
+              "nombre": "Combustible",
+              "path": "/motos/motor-y-transmision/combustible"
+            },
+            {
+              "nombre": "Clutch y transmisión",
+              "path": "/motos/motor-y-transmision/clutch-y-transmision"
+            },
+            {
+              "nombre": "Arranque",
+              "path": "/motos/motor-y-transmision/arranque"
+            },
+            {
+              "nombre": "Escape",
+              "path": "/motos/motor-y-transmision/escape"
+            },
+            {
+              "nombre": "Guayas y cables",
+              "path": "/motos/motor-y-transmision/guayas-y-cables"
+            }
+          ]
+        },
+        {
+          "nombre": "Baterías",
+          "path": "/motos/baterias",
+          "children": [
+            {
+              "nombre": "Baterías para moto",
+              "path": "/motos/baterias/baterias-para-moto"
+            },
+            {
+              "nombre": "Bornes y cables de batería",
+              "path": "/motos/baterias/bornes-y-cables-de-bateria"
+            }
+          ]
+        },
+        {
+          "nombre": "Frenos",
+          "path": "/motos/frenos",
+          "children": [
+            {
+              "nombre": "Pastillas de freno",
+              "path": "/motos/frenos/pastillas-de-freno"
+            },
+            {
+              "nombre": "Bandas de freno",
+              "path": "/motos/frenos/bandas-de-freno"
+            },
+            {
+              "nombre": "Discos de freno",
+              "path": "/motos/frenos/discos-de-freno"
+            },
+            {
+              "nombre": "Campanas de freno",
+              "path": "/motos/frenos/campanas-de-freno"
+            },
+            {
+              "nombre": "Mordazas (calipers)",
+              "path": "/motos/frenos/mordazas-calipers"
+            },
+            {
+              "nombre": "Bombas de freno",
+              "path": "/motos/frenos/bombas-de-freno"
+            },
+            {
+              "nombre": "Cilindros de freno",
+              "path": "/motos/frenos/cilindros-de-freno"
+            },
+            {
+              "nombre": "Mangueras de freno",
+              "path": "/motos/frenos/mangueras-de-freno"
+            },
+            {
+              "nombre": "Maniguetas de freno",
+              "path": "/motos/frenos/maniguetas-de-freno"
+            },
+            {
+              "nombre": "Kits de reparación de frenos",
+              "path": "/motos/frenos/kits-de-reparacion-de-frenos"
+            },
+            {
+              "nombre": "Depósitos de líquido de frenos",
+              "path": "/motos/frenos/depositos-de-liquido-de-frenos"
+            }
+          ]
+        },
+        {
+          "nombre": "Cascos",
+          "path": "/motos/cascos",
+          "children": [
+            {
+              "nombre": "Cascos integrales",
+              "path": "/motos/cascos/cascos-integrales"
+            },
+            {
+              "nombre": "Cascos abatibles",
+              "path": "/motos/cascos/cascos-abatibles"
+            },
+            {
+              "nombre": "Cascos abiertos",
+              "path": "/motos/cascos/cascos-abiertos"
+            },
+            {
+              "nombre": "Cascos cross",
+              "path": "/motos/cascos/cascos-cross"
+            },
+            {
+              "nombre": "Visores y repuestos de casco",
+              "path": "/motos/cascos/visores-y-repuestos-de-casco"
+            }
+          ]
+        },
+        {
+          "nombre": "Eléctrico y electrónico",
+          "path": "/motos/electrico-y-electronico",
+          "children": [
+            {
+              "nombre": "Reguladores (rectificadores)",
+              "path": "/motos/electrico-y-electronico/reguladores-rectificadores"
+            },
+            {
+              "nombre": "CDI (módulos de encendido)",
+              "path": "/motos/electrico-y-electronico/cdi-modulos-de-encendido"
+            },
+            {
+              "nombre": "Bobinas de alta",
+              "path": "/motos/electrico-y-electronico/bobinas-de-alta"
+            },
+            {
+              "nombre": "Estatores (platos de bobinas)",
+              "path": "/motos/electrico-y-electronico/estatores-platos-de-bobinas"
+            },
+            {
+              "nombre": "Bujías",
+              "path": "/motos/electrico-y-electronico/bujias"
+            },
+            {
+              "nombre": "Capuchones de bujía",
+              "path": "/motos/electrico-y-electronico/capuchones-de-bujia"
+            },
+            {
+              "nombre": "Fusibles y relés",
+              "path": "/motos/electrico-y-electronico/fusibles-y-reles"
+            },
+            {
+              "nombre": "Suiches y comandos",
+              "path": "/motos/electrico-y-electronico/suiches-y-comandos"
+            },
+            {
+              "nombre": "Flashers",
+              "path": "/motos/electrico-y-electronico/flashers"
+            },
+            {
+              "nombre": "Pitos",
+              "path": "/motos/electrico-y-electronico/pitos"
+            },
+            {
+              "nombre": "Cableado y conectores",
+              "path": "/motos/electrico-y-electronico/cableado-y-conectores"
+            },
+            {
+              "nombre": "Tableros, tacómetros y velocímetros",
+              "path": "/motos/electrico-y-electronico/tableros-tacometros-y-velocimetros"
+            },
+            {
+              "nombre": "Sensores",
+              "path": "/motos/electrico-y-electronico/sensores"
+            }
+          ]
+        },
+        {
+          "nombre": "Iluminación",
+          "path": "/motos/iluminacion",
+          "children": [
+            {
+              "nombre": "Farolas",
+              "path": "/motos/iluminacion/farolas"
+            },
+            {
+              "nombre": "Stops",
+              "path": "/motos/iluminacion/stops"
+            },
+            {
+              "nombre": "Direccionales",
+              "path": "/motos/iluminacion/direccionales"
+            },
+            {
+              "nombre": "Luces LED",
+              "path": "/motos/iluminacion/luces-led"
+            },
+            {
+              "nombre": "Bombillos halógenos",
+              "path": "/motos/iluminacion/bombillos-halogenos"
+            },
+            {
+              "nombre": "Exploradoras y luces auxiliares",
+              "path": "/motos/iluminacion/exploradoras-y-luces-auxiliares"
+            }
+          ]
+        },
+        {
+          "nombre": "Accesorios",
+          "path": "/motos/accesorios",
+          "children": [
+            {
+              "nombre": "Maletas y baúles",
+              "path": "/motos/accesorios/maletas-y-baules"
+            },
+            {
+              "nombre": "Alforjas y mochilas",
+              "path": "/motos/accesorios/alforjas-y-mochilas"
+            },
+            {
+              "nombre": "Parrillas y portamaletas",
+              "path": "/motos/accesorios/parrillas-y-portamaletas"
+            },
+            {
+              "nombre": "Sliders, defensas y cubrecárter",
+              "path": "/motos/accesorios/sliders-defensas-y-cubrecarter"
+            },
+            {
+              "nombre": "Pijamas (cubremotos)",
+              "path": "/motos/accesorios/pijamas-cubremotos"
+            },
+            {
+              "nombre": "Cúpulas (parabrisas) y soportes",
+              "path": "/motos/accesorios/cupulas-parabrisas-y-soportes"
+            },
+            {
+              "nombre": "Espejos",
+              "path": "/motos/accesorios/espejos"
+            },
+            {
+              "nombre": "Cubrepuños y cubremanos",
+              "path": "/motos/accesorios/cubrepunos-y-cubremanos"
+            },
+            {
+              "nombre": "Soportes de celular",
+              "path": "/motos/accesorios/soportes-de-celular"
+            },
+            {
+              "nombre": "Forros de sillín",
+              "path": "/motos/accesorios/forros-de-sillin"
+            },
+            {
+              "nombre": "Pulpos y redes",
+              "path": "/motos/accesorios/pulpos-y-redes"
+            },
+            {
+              "nombre": "Rampas y caballetes",
+              "path": "/motos/accesorios/rampas-y-caballetes"
+            },
+            {
+              "nombre": "Cubrerayos y adhesivos",
+              "path": "/motos/accesorios/cubrerayos-y-adhesivos"
+            },
+            {
+              "nombre": "Cargadores USB",
+              "path": "/motos/accesorios/cargadores-usb"
+            },
+            {
+              "nombre": "Intercomunicadores",
+              "path": "/motos/accesorios/intercomunicadores"
+            },
+            {
+              "nombre": "Parlantes",
+              "path": "/motos/accesorios/parlantes"
+            }
+          ]
+        },
+        {
+          "nombre": "Ropa",
+          "path": "/motos/ropa",
+          "children": [
+            {
+              "nombre": "Chaquetas",
+              "path": "/motos/ropa/chaquetas"
+            },
+            {
+              "nombre": "Guantes de moto",
+              "path": "/motos/ropa/guantes-de-moto"
+            },
+            {
+              "nombre": "Botas",
+              "path": "/motos/ropa/botas"
+            },
+            {
+              "nombre": "Pantalones",
+              "path": "/motos/ropa/pantalones"
+            },
+            {
+              "nombre": "Impermeables",
+              "path": "/motos/ropa/impermeables"
+            },
+            {
+              "nombre": "Protecciones (rodilleras, coderas)",
+              "path": "/motos/ropa/protecciones-rodilleras-coderas"
+            },
+            {
+              "nombre": "Chalecos reflectivos",
+              "path": "/motos/ropa/chalecos-reflectivos"
+            }
+          ]
+        },
+        {
+          "nombre": "Chasis y carrocería",
+          "path": "/motos/chasis-y-carroceria",
+          "children": [
+            {
+              "nombre": "Carenajes y plásticos",
+              "path": "/motos/chasis-y-carroceria/carenajes-y-plasticos"
+            },
+            {
+              "nombre": "Tanques de gasolina y tapas",
+              "path": "/motos/chasis-y-carroceria/tanques-de-gasolina-y-tapas"
+            },
+            {
+              "nombre": "Sillines",
+              "path": "/motos/chasis-y-carroceria/sillines"
+            },
+            {
+              "nombre": "Colines y parrillas traseras",
+              "path": "/motos/chasis-y-carroceria/colines-y-parrillas-traseras"
+            },
+            {
+              "nombre": "Guardabarros",
+              "path": "/motos/chasis-y-carroceria/guardabarros"
+            },
+            {
+              "nombre": "Portaplacas",
+              "path": "/motos/chasis-y-carroceria/portaplacas"
+            },
+            {
+              "nombre": "Patas y caballetes",
+              "path": "/motos/chasis-y-carroceria/patas-y-caballetes"
+            },
+            {
+              "nombre": "Pedalines y soportes",
+              "path": "/motos/chasis-y-carroceria/pedalines-y-soportes"
+            },
+            {
+              "nombre": "Pedales de cambio y freno",
+              "path": "/motos/chasis-y-carroceria/pedales-de-cambio-y-freno"
+            },
+            {
+              "nombre": "Chasis y subchasis",
+              "path": "/motos/chasis-y-carroceria/chasis-y-subchasis"
+            },
+            {
+              "nombre": "Cajas de filtro de aire",
+              "path": "/motos/chasis-y-carroceria/cajas-de-filtro-de-aire"
+            },
+            {
+              "nombre": "Agarraderas",
+              "path": "/motos/chasis-y-carroceria/agarraderas"
+            },
+            {
+              "nombre": "Ejes de rueda",
+              "path": "/motos/chasis-y-carroceria/ejes-de-rueda"
+            }
+          ]
+        },
+        {
+          "nombre": "Suspensión y dirección",
+          "path": "/motos/suspension-y-direccion",
+          "children": [
+            {
+              "nombre": "Amortiguadores traseros",
+              "path": "/motos/suspension-y-direccion/amortiguadores-traseros"
+            },
+            {
+              "nombre": "Barras telescópicas (botellas)",
+              "path": "/motos/suspension-y-direccion/barras-telescopicas-botellas"
+            },
+            {
+              "nombre": "Kits de barras (retenedores y guardapolvos)",
+              "path": "/motos/suspension-y-direccion/kits-de-barras-retenedores-y-guardapolvos"
+            },
+            {
+              "nombre": "Resortes",
+              "path": "/motos/suspension-y-direccion/resortes"
+            },
+            {
+              "nombre": "Tijeras (basculantes)",
+              "path": "/motos/suspension-y-direccion/tijeras-basculantes"
+            },
+            {
+              "nombre": "Rodamientos de tijera",
+              "path": "/motos/suspension-y-direccion/rodamientos-de-tijera"
+            },
+            {
+              "nombre": "Cunas de dirección",
+              "path": "/motos/suspension-y-direccion/cunas-de-direccion"
+            },
+            {
+              "nombre": "Bujes",
+              "path": "/motos/suspension-y-direccion/bujes"
+            },
+            {
+              "nombre": "Manubrios",
+              "path": "/motos/suspension-y-direccion/manubrios"
+            },
+            {
+              "nombre": "Puños y contrapesos",
+              "path": "/motos/suspension-y-direccion/punos-y-contrapesos"
+            },
+            {
+              "nombre": "Tés y triples de dirección",
+              "path": "/motos/suspension-y-direccion/tes-y-triples-de-direccion"
+            }
+          ]
+        },
+        {
+          "nombre": "Tecnología y seguridad",
+          "path": "/motos/tecnologia-y-seguridad",
+          "children": [
+            {
+              "nombre": "Rastreo GPS",
+              "path": "/motos/tecnologia-y-seguridad/rastreo-gps"
+            },
+            {
+              "nombre": "Alarmas",
+              "path": "/motos/tecnologia-y-seguridad/alarmas"
+            },
+            {
+              "nombre": "Candados y bloqueos",
+              "path": "/motos/tecnologia-y-seguridad/candados-y-bloqueos"
+            },
+            {
+              "nombre": "Cámaras",
+              "path": "/motos/tecnologia-y-seguridad/camaras"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Herramientas",
+      "path": "/herramientas",
+      "children": [
+        {
+          "nombre": "Herramientas manuales",
+          "path": "/herramientas/herramientas-manuales",
+          "children": [
+            {
+              "nombre": "Llaves y copas",
+              "path": "/herramientas/herramientas-manuales/llaves-y-copas"
+            },
+            {
+              "nombre": "Llaves de cruz",
+              "path": "/herramientas/herramientas-manuales/llaves-de-cruz"
+            },
+            {
+              "nombre": "Torquímetros",
+              "path": "/herramientas/herramientas-manuales/torquimetros"
+            },
+            {
+              "nombre": "Destornilladores",
+              "path": "/herramientas/herramientas-manuales/destornilladores"
+            },
+            {
+              "nombre": "Alicates y pinzas",
+              "path": "/herramientas/herramientas-manuales/alicates-y-pinzas"
+            },
+            {
+              "nombre": "Martillos y cinceles",
+              "path": "/herramientas/herramientas-manuales/martillos-y-cinceles"
+            },
+            {
+              "nombre": "Extractores y herramientas especiales",
+              "path": "/herramientas/herramientas-manuales/extractores-y-herramientas-especiales"
+            },
+            {
+              "nombre": "Llaves para filtros",
+              "path": "/herramientas/herramientas-manuales/llaves-para-filtros"
+            },
+            {
+              "nombre": "Kits de herramientas",
+              "path": "/herramientas/herramientas-manuales/kits-de-herramientas"
+            }
+          ]
+        },
+        {
+          "nombre": "Herramientas eléctricas y neumáticas",
+          "path": "/herramientas/herramientas-electricas-y-neumaticas",
+          "children": [
+            {
+              "nombre": "Taladros",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/taladros"
+            },
+            {
+              "nombre": "Esmeriles y lijadoras",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras"
+            },
+            {
+              "nombre": "Pistolas de impacto",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto"
+            },
+            {
+              "nombre": "Herramientas neumáticas",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas"
+            },
+            {
+              "nombre": "Compresores de aire",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire"
+            },
+            {
+              "nombre": "Pistolas de calor y cautines",
+              "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines"
+            }
+          ]
+        },
+        {
+          "nombre": "Equipos de taller",
+          "path": "/herramientas/equipos-de-taller",
+          "children": [
+            {
+              "nombre": "Gatos y torres",
+              "path": "/herramientas/equipos-de-taller/gatos-y-torres"
+            },
+            {
+              "nombre": "Elevadores",
+              "path": "/herramientas/equipos-de-taller/elevadores"
+            },
+            {
+              "nombre": "Camillas de mecánico",
+              "path": "/herramientas/equipos-de-taller/camillas-de-mecanico"
+            },
+            {
+              "nombre": "Prensas hidráulicas",
+              "path": "/herramientas/equipos-de-taller/prensas-hidraulicas"
+            },
+            {
+              "nombre": "Grúas de motor",
+              "path": "/herramientas/equipos-de-taller/gruas-de-motor"
+            },
+            {
+              "nombre": "Winches",
+              "path": "/herramientas/equipos-de-taller/winches"
+            },
+            {
+              "nombre": "Cargadores y arrancadores de batería",
+              "path": "/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria"
+            },
+            {
+              "nombre": "Infladores y manómetros de llanta",
+              "path": "/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta"
+            },
+            {
+              "nombre": "Montallantas y despinche",
+              "path": "/herramientas/equipos-de-taller/montallantas-y-despinche"
+            }
+          ]
+        },
+        {
+          "nombre": "Diagnóstico y medición",
+          "path": "/herramientas/diagnostico-y-medicion",
+          "children": [
+            {
+              "nombre": "Escáneres y equipos de diagnóstico",
+              "path": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico"
+            },
+            {
+              "nombre": "Multímetros y probadores eléctricos",
+              "path": "/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos"
+            },
+            {
+              "nombre": "Calibradores y micrómetros",
+              "path": "/herramientas/diagnostico-y-medicion/calibradores-y-micrometros"
+            },
+            {
+              "nombre": "Lámparas de tiempo",
+              "path": "/herramientas/diagnostico-y-medicion/lamparas-de-tiempo"
+            },
+            {
+              "nombre": "Compresímetros",
+              "path": "/herramientas/diagnostico-y-medicion/compresimetros"
+            }
+          ]
+        },
+        {
+          "nombre": "Cuidado y limpieza",
+          "path": "/herramientas/cuidado-y-limpieza",
+          "children": [
+            {
+              "nombre": "Shampoo",
+              "path": "/herramientas/cuidado-y-limpieza/shampoo"
+            },
+            {
+              "nombre": "Desengrasantes",
+              "path": "/herramientas/cuidado-y-limpieza/desengrasantes"
+            },
+            {
+              "nombre": "Limpiavidrios",
+              "path": "/herramientas/cuidado-y-limpieza/limpiavidrios"
+            },
+            {
+              "nombre": "Limpiadores interiores",
+              "path": "/herramientas/cuidado-y-limpieza/limpiadores-interiores"
+            },
+            {
+              "nombre": "Limpiadores de tapicería y cuero",
+              "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero"
+            },
+            {
+              "nombre": "Limpiadores de motor",
+              "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-motor"
+            },
+            {
+              "nombre": "Limpiadores de rines",
+              "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-rines"
+            },
+            {
+              "nombre": "Siliconas y renovadores de llantas",
+              "path": "/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas"
+            },
+            {
+              "nombre": "Ceras",
+              "path": "/herramientas/cuidado-y-limpieza/ceras"
+            },
+            {
+              "nombre": "Selladores",
+              "path": "/herramientas/cuidado-y-limpieza/selladores"
+            },
+            {
+              "nombre": "Coatings",
+              "path": "/herramientas/cuidado-y-limpieza/coatings"
+            },
+            {
+              "nombre": "Hidrofóbicos",
+              "path": "/herramientas/cuidado-y-limpieza/hidrofobicos"
+            },
+            {
+              "nombre": "Protectores UV",
+              "path": "/herramientas/cuidado-y-limpieza/protectores-uv"
+            },
+            {
+              "nombre": "Quita rayones y restauradores de pintura",
+              "path": "/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura"
+            },
+            {
+              "nombre": "Microfibras",
+              "path": "/herramientas/cuidado-y-limpieza/microfibras"
+            },
+            {
+              "nombre": "Cepillos y aplicadores",
+              "path": "/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores"
+            },
+            {
+              "nombre": "Pulimentos y compuestos (rubbing)",
+              "path": "/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing"
+            },
+            {
+              "nombre": "Pads",
+              "path": "/herramientas/cuidado-y-limpieza/pads"
+            },
+            {
+              "nombre": "Abrillantadores",
+              "path": "/herramientas/cuidado-y-limpieza/abrillantadores"
+            },
+            {
+              "nombre": "Ambientadores y perfumes",
+              "path": "/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes"
+            },
+            {
+              "nombre": "Anticorrosivos",
+              "path": "/herramientas/cuidado-y-limpieza/anticorrosivos"
+            },
+            {
+              "nombre": "Kits de limpieza",
+              "path": "/herramientas/cuidado-y-limpieza/kits-de-limpieza"
+            },
+            {
+              "nombre": "Limpiadores de cadena",
+              "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-cadena"
+            }
+          ]
+        },
+        {
+          "nombre": "Consumibles de taller",
+          "path": "/herramientas/consumibles-de-taller",
+          "children": [
+            {
+              "nombre": "Guantes",
+              "path": "/herramientas/consumibles-de-taller/guantes"
+            },
+            {
+              "nombre": "Paños",
+              "path": "/herramientas/consumibles-de-taller/panos"
+            },
+            {
+              "nombre": "Cintas",
+              "path": "/herramientas/consumibles-de-taller/cintas"
+            },
+            {
+              "nombre": "Abrazaderas",
+              "path": "/herramientas/consumibles-de-taller/abrazaderas"
+            },
+            {
+              "nombre": "Tornillería",
+              "path": "/herramientas/consumibles-de-taller/tornilleria"
+            },
+            {
+              "nombre": "Bridas",
+              "path": "/herramientas/consumibles-de-taller/bridas"
+            },
+            {
+              "nombre": "Siliconas y pegantes",
+              "path": "/herramientas/consumibles-de-taller/siliconas-y-pegantes"
+            },
+            {
+              "nombre": "Lubricantes técnicos",
+              "path": "/herramientas/consumibles-de-taller/lubricantes-tecnicos"
+            },
+            {
+              "nombre": "Limpiadores técnicos",
+              "path": "/herramientas/consumibles-de-taller/limpiadores-tecnicos"
+            },
+            {
+              "nombre": "Aerosoles",
+              "path": "/herramientas/consumibles-de-taller/aerosoles"
+            },
+            {
+              "nombre": "Empaques genéricos",
+              "path": "/herramientas/consumibles-de-taller/empaques-genericos"
+            },
+            {
+              "nombre": "Terminales eléctricos",
+              "path": "/herramientas/consumibles-de-taller/terminales-electricos"
+            },
+            {
+              "nombre": "Pinturas y retoques",
+              "path": "/herramientas/consumibles-de-taller/pinturas-y-retoques"
+            }
+          ]
+        },
+        {
+          "nombre": "Equipos de lavado y pulido",
+          "path": "/herramientas/equipos-de-lavado-y-pulido",
+          "children": [
+            {
+              "nombre": "Hidrolavadoras",
+              "path": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras"
+            },
+            {
+              "nombre": "Polichadoras",
+              "path": "/herramientas/equipos-de-lavado-y-pulido/polichadoras"
+            },
+            {
+              "nombre": "Aspiradoras",
+              "path": "/herramientas/equipos-de-lavado-y-pulido/aspiradoras"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

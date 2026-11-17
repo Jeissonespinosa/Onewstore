@@ -18,6 +18,8 @@ Escribe:
                                              por pagina
   store/blocks/home/category-filters.jsonc   layout con filtros + selector de
                                              vehiculo (hojas)
+  react/category-menu.json                   arbol del menu "Categorias" del header
+                                             (seccion > macro > subcategoria; spec 003)
 
 Uso:
   python3 scripts/gen-categorias.py            # queries placeholder (listado vacio)
@@ -41,6 +43,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = os.path.join(ROOT, 'catalogo')
 BLOCKS = os.path.join(ROOT, 'store', 'blocks', 'home')
 ROUTES = os.path.join(ROOT, 'store', 'routes.json')
+MENU_DATA = os.path.join(ROOT, 'react', 'category-menu.json')
 
 SECTIONS = OrderedDict([('carros', 'Carros'), ('motos', 'Motos'), ('herramientas', 'Herramientas')])
 # secciones con vehiculo (selector + filtros por marca/modelo/ano en las hojas)
@@ -322,6 +325,7 @@ def commit():
     written = []
     try:
         for path, text in PENDING.items():
+            os.makedirs(os.path.dirname(path), exist_ok=True)
             tmp = path + '.tmp'
             with open(tmp, 'w', encoding='utf-8') as fh:
                 fh.write(text)
@@ -361,6 +365,60 @@ NATIVE_PATHS = {'/', '/login', '/account', '/cart', '/checkout', '/search', '/s'
 CATALOG_PATHS = []          # nodos que sirve VTEX (marcados "catalogo": true)
 
 
+def valid_paths(routes):
+    """Rutas a las que puede apuntar un enlace interno del theme."""
+    return ({v['path'].rstrip('/') or '/' for v in routes.values()} | NATIVE_PATHS
+            | {n['path'] for n in CATALOG_PATHS})
+
+
+def build_menu(rails):
+    """Arbol del menu del header: seccion > macro > subcategoria.
+
+    - La ruta de cada nodo con hijos es el enlace "Ver todo" de ese nivel.
+    - Las macros sin subcategorias muestran sus tipos como segundo nivel.
+    - Los tipos de una subcategoria no entran (se llega a ellos desde la pagina
+      de la subcategoria), y las subcategorias de tipo "filtros" no tienen hijos:
+      sus valores no son paginas (ver build_tree)."""
+    sections = []
+    for sec, macros in rails.items():
+        items = []
+        for macro in macros:
+            item = OrderedDict([('nombre', macro['nombre']), ('path', macro['path'])])
+            if macro['children']:
+                item['children'] = []
+                for child in macro['children']:
+                    entry = OrderedDict([('nombre', child['nombre']), ('path', child['path'])])
+                    item['children'].append(entry)
+            items.append(item)
+        sections.append(OrderedDict([('nombre', SECTIONS[sec]), ('path', '/' + sec),
+                                     ('children', items)]))
+    return OrderedDict([('_generado', ' '.join(GEN_NOTE.split())), ('sections', sections)])
+
+
+def menu_paths(menu):
+    out = []
+
+    def walk(items):
+        for it in items:
+            out.append(it['path'])
+            walk(it.get('children', []))
+    walk(menu['sections'])
+    return out
+
+
+def check_menu(menu, routes):
+    """Rutas del menu que no existen. Devuelve la lista de rotas."""
+    ok = valid_paths(routes)
+    bad = sorted({p for p in menu_paths(menu) if p not in ok})
+    if bad:
+        print('\n  ENLACES ROTOS EN EL MENU:')
+        for p in bad:
+            print('   %-46s %s' % (os.path.relpath(MENU_DATA, ROOT), p))
+    else:
+        print('  enlaces del menu: todos validos')
+    return [(os.path.relpath(MENU_DATA, ROOT), p) for p in bad]
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -369,8 +427,7 @@ def check_links(routes, pending=None):
     escribir, no lo que quedo de la corrida anterior."""
     import glob
     pending = pending or {}
-    paths = ({v['path'].rstrip('/') or '/' for v in routes.values()} | NATIVE_PATHS
-             | {n['path'] for n in CATALOG_PATHS})
+    paths = valid_paths(routes)
     bad = []
     files = sorted(glob.glob(os.path.join(ROOT, 'store', 'blocks', '**', '*.json*'), recursive=True))
     for f in sorted(set(files) | set(pending)):
@@ -812,6 +869,16 @@ def build_and_write(NODES, RAILS, routes):
         print('  %-13s %3d paginas' % (sec, sum(1 for n in NODES if n['section'] == sec)))
     CATALOG_PATHS[:] = [n for n in NODES if n.get('catalogo')]
     bad_links = check_links(kept, PENDING)
+
+    # --- 7. menu "Categorias" del header (datos para el componente React) -------
+    menu = build_menu(RAILS)
+    n_entries = len(menu_paths(menu))
+    if DRY_RUN:
+        print('  [dry-run] %-36s %5d entradas' % (os.path.relpath(MENU_DATA, ROOT), n_entries))
+    else:
+        stage(MENU_DATA, json.dumps(menu, ensure_ascii=False, indent=2) + '\n')
+        print('  %-46s %5d entradas' % (os.path.relpath(MENU_DATA, ROOT), n_entries))
+    bad_links = sorted(set(bad_links) | set(check_menu(menu, kept)))
 
     print('\nPaginas: %d (macros %d, subcategorias %d, hojas %d) · tarjetas: %d' % (
         len(NODES),

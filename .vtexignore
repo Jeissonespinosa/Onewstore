@@ -16,3 +16,6 @@ react/.eslintrc
 react/setupTests.js
 catalogo/
 scripts/
+
+feedback-service/
+specs/

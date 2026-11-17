@@ -1,7 +1,7 @@
 # 001 — Tareas
 
-> **EN PAUSA (2026-11-15).** Ninguna tarea está hecha. Los prerrequisitos y cómo completarlos
-> están en `pendientes.md`. Se reanuda con `/implementar-spec 001`, desde la tarea 1.1.
+> **Retomada el 2026-11-17** (estuvo en pausa desde el 2026-11-15). Los prerrequisitos y
+> bloqueos de negocio están en `pendientes.md`. Workspace de trabajo: `pruebatema`.
 
 > Cada tarea indica cómo verificarla. Los grupos van en orden de dependencias. Los grupos 4-6
 > producen **borradores con placeholders**: nada se publica en producción hasta la tarea 8.2.

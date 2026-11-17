@@ -1,6 +1,7 @@
-# 001 — Pendientes y prerrequisitos (spec en pausa)
+# 001 — Pendientes y prerrequisitos
 
-- **Pausada el:** 2026-11-15
+- **Pausada el:** 2026-11-15. **Reanudada el 2026-11-17** (los prerrequisitos P1 a P3 se resuelven ahora con el grupo 1; Q1, Q3-Q6 siguen abiertas).
+- **Actualización 2026-11-17:** el workspace de trabajo es **`pruebatema`**; `devdiego` se borró el 2026-11-16. La spec 002 se fusionó en esta rama y **ya no depende de la 004**; la 001 sí sigue necesitando la 004 (canal de atención) y la 005 (identidad).
 - **Motivo:** el spike del grupo 1 necesita un `vtex link` que sirva los cambios y acceso al admin de VTEX, y los grupos 4-8 dependen de decisiones de negocio y de un abogado que aún no existen.
 - **Estado del trabajo:** `plan.md` y `tasks.md` aprobados (commit `81b680e`). **Ninguna tarea está marcada**: no se implementó nada. La página de prueba del spike 1.2 se retiró del árbol.
 - **Cómo reanudar:** cuando los prerrequisitos P1 a P4 estén listos, ejecuta `/implementar-spec 001`. Retomará el grupo 1 desde la tarea 1.1.
@@ -12,19 +13,19 @@ Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decision
 ## A. Prerrequisitos técnicos para reanudar (bloquean el grupo 1)
 
 ### P1. Reiniciar `vtex link` — Diego
-- **Por qué:** `vtex link` (iniciado a las 10:07, antes de cambiar de rama) no sirvió una ruta nueva ni una carpeta nueva: `/legal-prueba` respondió "No encontramos ningún resultado" tras esperar y recargar. El README ya advierte que hay que reiniciarlo cuando se añaden archivos.
+- **Por qué:** `vtex link` (iniciado a las 10:07, antes de cambiar de rama) no sirvió una ruta nueva ni una carpeta nueva: `/legal-prueba` (en el `devdiego` de entonces) respondió "No encontramos ningún resultado" tras esperar y recargar. El README ya advierte que hay que reiniciarlo cuando se añaden archivos.
 - **Cómo:**
   1. Detén el `vtex link` actual (Ctrl+C en su terminal).
   2. `cd D:\repos\vtex\Repuestox` y confirma `git branch --show-current` → `feat/001-tyc-marketplace`.
-  3. `vtex use devdiego` (o el workspace que prefieras) y `vtex link`.
-  4. Espera "App linked" y abre `https://devdiego--onewstore.myvtex.com/`.
+  3. `vtex use pruebatema` y `vtex link`.
+  4. Espera "App linked" y abre `https://pruebatema--onewstore.myvtex.com/`.
 - **Listo cuando:** el sitio carga con el link nuevo. Avísame y repito la prueba de `/legal-prueba`.
 - **Desbloquea:** tareas 1.2 y 1.3 (y 7.x más adelante).
 
 ### P2. Revisar el checkout en el admin de VTEX — Diego o el equipo
 - **Por qué (tarea 1.1):** hay que saber si VTEX ofrece un campo nativo de TyC y cómo se personaliza el checkout. Hallazgo preliminar de documentación, **sin verificar**: la app `vtex.checkout-ui-custom` figura sin mantenimiento desde jun-2023 y la vía vigente son los archivos `checkout6-custom.js` y `.css`, que VTEX no soporta oficialmente. Esto cuestiona la decisión 7 del plan.
 - **Cómo (las rutas del menú son aproximadas; confírmalas):**
-  1. Entra al admin de `onewstore` en el workspace `devdiego` (`https://devdiego--onewstore.myvtex.com/admin`).
+  1. Entra al admin de `onewstore` en el workspace `pruebatema` (`https://pruebatema--onewstore.myvtex.com/admin`).
   2. Busca en la configuración del checkout (Configuración de la tienda → Checkout) cualquier opción de **términos y condiciones / términos de uso** y anota si existe.
   3. En la misma sección, busca la pestaña de **código** o de archivos personalizados (`checkout6-custom.js`, `checkout6-custom.css`) y anota si existe y si hoy tiene contenido.
   4. No guardes ni publiques nada. Toma capturas.

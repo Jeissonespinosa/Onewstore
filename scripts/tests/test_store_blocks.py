@@ -81,6 +81,8 @@ NATIVE_INTERFACES = {
     'op-notices', 'op-order-split-notice', 'op-order-customer', 'op-order-takeaway-packages',
     'op-order-total', 'op-order-number', 'op-order-datetime', 'op-order-seller', 'op-order-options',
     'op-order-payment', 'op-order-pickup-packages', 'op-order-delivery-packages',
+    # interfaces propias de store/interfaces.json (spec 002) usadas sin '#'
+    'feedback-button', 'purchase-rating',
 }
 
 BLOCK_REF = re.compile(r'^[a-z][A-Za-z0-9.\-:@]*(#[\w\-]+)?$')

@@ -123,6 +123,18 @@
   left: 1rem;
 }
 
+/* En movil el listado trae una barra fija "Filtrar / Relevancia" abajo (89 px); el boton y el aviso
+   se suben para quedar encima y no taparla. */
+@media (max-width: 767px) {
+  .feedbackTrigger {
+    bottom: 5.75rem;
+  }
+
+  .feedbackToast {
+    bottom: 9.5rem;
+  }
+}
+
 /* --- modal ----------------------------------------------------------------- */
 
 .bodyLock {

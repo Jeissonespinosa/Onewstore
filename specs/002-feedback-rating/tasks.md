@@ -67,3 +67,17 @@
   - Medias de Lighthouse de Diego, 2026-11-17, en `pruebatema` (no en `devdiego`, donde se midió la línea base), móvil/escritorio: inicio 45/83, categoría 53/80, producto 52/82. Frente a los pisos (50/81, 52/65, 47/80): categoría y producto cumplen; escritorio de inicio cumple; **el móvil de inicio queda en 45, 5 puntos bajo el piso de 50** y 7 bajo el valor final de la 003 (52). No se marca `[x]`: falta repetir el móvil de inicio y comparar contra `master` o con el botón desactivado para saber si lo causa la 002 o la variación entre corridas (hasta ~5 puntos). Sin regresión de CLS (0,0043 en categoría, en Chrome DevTools).
 - [x] 6.3 Actualizar `specs/README.md` (índice y dependencias de la 002) y el estado de la spec. Verificación: índice coherente.
   - Hecho 2026-11-16: `specs/README.md` (002 → `implementing`), estado de la spec, `000` (CU-10 y fila de estado) y `CHANGELOG.md` coherentes. **No** se marca `done`: faltan 5.1, 6.1 y 6.2, y el DoD pide enlace al PR (no hay PR todavía).
+
+## Pendientes al abrir el PR (2026-11-17)
+
+La spec sigue en `implementing`: no se marca `done` hasta cerrar esto.
+
+- [ ] **6.2 Lighthouse, móvil de inicio:** 45 frente al piso de 50 (medias de Diego en `pruebatema`: inicio 45/83, categoría 53/80, producto 52/82). Repetir el móvil de inicio y compararlo contra `master` o con el botón quitado del header, para separar el efecto de la 002 de la variación entre corridas (~5 puntos). Recordar que la línea base de la 003 se midió en `devdiego`, ya borrado.
+- [ ] **5.1 Privacidad (RF-11):** falta la URL del aviso de privacidad, la retención de los datos y resolver 001 D5. Después, enlazar el aviso y la finalidad del correo en ambos formularios.
+- [ ] **6.1 README y Q11:** falta decidir quién lee el feedback (Q11, spec 000) y documentar los pasos del admin de Master Data. Siguen sin verificarse mientras el admin esté bloqueado por facturas; mientras tanto se lee por la API (documentado).
+- [ ] **Spec 004:** actualizarla para reutilizar el servicio `onewstore.feedback-service`.
+- [ ] **Responsable del servicio:** definir quién lo mantiene.
+- [ ] **Tests de `VehicleSelector`:** 6 en rojo desde antes de la 002 (no son de esta spec).
+- [ ] **Causa de `devdiego`:** no se identificó por qué ese workspace resolvía el catálogo como `store.home`; se borró y se trabaja en `pruebatema`.
+- [ ] **Datos de prueba:** se conservan la condición de pago (ID 17) y el proveedor `Promissory` para pedidos de prueba; cancelar cada pedido de prueba al terminar. Borrar el workspace `pruebatema` al cerrar la spec, si ya no hace falta.
+- [ ] **Fallos reales en el navegador:** el fallo de envío del botón flotante solo está cubierto por tests (error de red, 429 y 504), no se simuló en el navegador.

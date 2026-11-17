@@ -206,9 +206,9 @@ integración definitiva es la tarea 7.4.
 
 Deferibles (no bloquean empezar; se resuelven antes de la tarea indicada):
 
-- **A.** ¿Se exige aceptación también en el **registro** (`vtex.login`)? El login lo gestiona
+- **A.** **RESUELTA 2026-11-17 (Diego): sí, solo checkout.** ¿Se exige aceptación también en el **registro** (`vtex.login`)? El login lo gestiona
   VTEX y personalizarlo es otro trabajo. Propuesta: solo checkout en esta spec. *Antes de la 7.1.*
-- **B.** ¿El abogado acepta "se pide en cada compra" (decisión 8) y un registro solo con
+- **B.** **RESUELTA 2026-11-17 (Diego): sí**; se pide en cada compra y se registra versión y fecha (el abogado lo confirma aparte). ¿El abogado acepta "se pide en cada compra" (decisión 8) y un registro solo con
   versión y fecha dentro del pedido (decisión 7)? *Antes de cerrar el grupo 7.*
 - **C.** ¿Se difiere D7 y se ajustan `RF-1`/`AC-1` a 5 páginas (decisión 11)? Requiere cambio
   en `spec.md`; no se hace sin tu aprobación. *Antes del grupo 4.*

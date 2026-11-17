@@ -209,10 +209,10 @@ Cubiertos por las specs 004 (hallazgo 2), 005 (hallazgo 1) y 006 (hallazgos 3 a 
 
 **Actores y marketplace** (**pendientes: el equipo responderá luego de confirmarlas**)
 - [x] ¿Repuestox es mero intermediario o vendedor directo? → **Intermediario únicamente** (2026-11-15): no vende por cuenta propia; los vendedores son los sellers. *(Parcial: falta saber si el marketplace con sellers terceros tiene fecha, y qué pasa con el seller de prueba `Repuestox` id 1.)*
-- [ ] ¿Cómo se pagan comisiones y se liquida a sellers (split de VTEX o manual)? ¿Qué porcentaje?
-- [ ] ¿Quién envía: el seller, Repuestox o un operador logístico? ¿Hay transportadoras contratadas?
-- [ ] ¿Cuál es la pasarela de pago y qué medios se aceptan?
-- [ ] ¿Quién atiende al cliente y por qué canal (WhatsApp, correo, teléfono)?
+- [x] ¿Cómo se pagan comisiones y se liquida a sellers (split de VTEX o manual)? ¿Qué porcentaje? → **Liquidación manual, por entrega realizada** (2026-11-17): así se garantiza que el seller entregó y vendió el producto. *(Parcial: falta el porcentaje de comisión.)*
+- [x] ¿Quién envía: el seller, Repuestox o un operador logístico? ¿Hay transportadoras contratadas? → **Envía Repuestox** (2026-11-17), con la idea de ser también operador logístico y ganar por envío realizado. **No hay transportadora contratada**; hay conversaciones con alguien que tiene contrato con Envía para asesorar. *(Parcial: falta la transportadora, tarifas y plazos; y revisar con el abogado qué implica enviar frente a «solo intermediario».)*
+- [x] ¿Cuál es la pasarela de pago y qué medios se aceptan? → **Wompi** es la preferida (2026-11-17; se integra directamente con VTEX); después, Addi y Sistecrédito. *(Parcial: falta confirmar el contrato con Wompi y los medios que se activarán; hoy el footer muestra Visa, MasterCard y Diners sin respaldo.)*
+- [x] ¿Quién atiende al cliente y por qué canal (WhatsApp, correo, teléfono)? → **Los tres canales** (2026-11-17), para resolución y toma de casos. *(Parcial: falta el responsable y los datos de contacto: número, correo y teléfono.)*
 
 **Catálogo y vehículo**
 - [x] ¿De dónde saldrá la tabla de compatibilidad (Marca/Modelo/Año)? ¿Se necesita VIN? → **Inicialmente la carga el seller.** Las otras opciones y el VIN quedan como alternativas futuras (ver Q7).
@@ -233,9 +233,9 @@ decisiones de negocio y no se asignan sin confirmación del equipo.
 |---|---|---|---|---|---|
 | Q1 | Relación Onewstore ↔ Repuestox; razón social y NIT | 001, 005 | **Parcial**: Onewstore es una tienda previa; NIT y razón social por asignar (placeholder). Falta pedir a VTEX el cambio de cuenta. | Por asignar | Por definir |
 | Q2 | ¿Intermediario o vendedor directo? ¿Marketplace con fecha? | 001 | **Parcial**: Repuestox es **intermediario únicamente** (2026-11-15). Falta la fecha del marketplace con sellers terceros y decidir qué se hace con el seller de prueba `Repuestox` (id 1). | Por asignar | Por definir |
-| Q3 | Pasarela de pago, comisiones y liquidación a sellers | 001 (D4) | **Abierta** (ídem) | Por asignar | Por definir |
-| Q4 | Quién envía y qué transportadoras hay | 001 (D3, D6) | **Abierta** (ídem) | Por asignar | Por definir |
-| Q5 | Canal y responsable de atención al cliente | 004 | **Abierta** (ídem) | Por asignar | Por definir |
+| Q3 | Pasarela de pago, comisiones y liquidación a sellers | 001 (D4) | **Parcial** (2026-11-17): liquidación manual por entrega realizada; pasarela preferida Wompi, luego Addi y Sistecrédito. Falta el % de comisión y confirmar Wompi. | Por asignar | Por definir |
+| Q4 | Quién envía y qué transportadoras hay | 001 (D3, D6) | **Parcial** (2026-11-17): envía Repuestox y quiere ser operador logístico; sin transportadora aún (posible aliada vía Envía). Falta transportadora, tarifas y plazos. | Por asignar | Por definir |
+| Q5 | Canal y responsable de atención al cliente | 004 | **Parcial** (2026-11-17): WhatsApp, correo y teléfono. Falta el responsable y los datos de contacto. | Por asignar | Por definir |
 | Q6 | Abogado revisor y plazo | 001 (AC-5) | **Abierta** | Por asignar | Por definir |
 | Q7 | Fuente de la compatibilidad Marca/Modelo/Año y VIN | CU-3 | **Resuelta para la fase inicial**: la carga el seller. Alternativas futuras abajo. | — | — |
 | Q8 | ¿Árbol completo o subconjunto en VTEX primero? | 003 | **Parcial**: aún no se carga. Falta elegir el subconjunto y el método de validación. | Por asignar | Por definir |

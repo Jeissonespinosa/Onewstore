@@ -87,9 +87,9 @@
    |---|---|---|
    | `[RAZÓN SOCIAL]`, `[NIT]` | Q1 | D2-D6 |
    | `[DOMICILIO]` | Q1 | D2, D5 |
-   | `[CANAL DE ATENCIÓN]` | Q5 (y 004) | D2, D3, D5, D6 |
-   | `[PASARELA DE PAGO]`, `[COMISIÓN]` | Q3 | D3, D4 |
-   | `[QUIÉN ENVÍA]`, `[TRANSPORTADORA]` | Q4 | D3, D6 |
+   | `[CANAL DE ATENCIÓN]` | Q5 (parcial: WhatsApp, correo y teléfono; faltan datos) (y 004) | D2, D3, D5, D6 |
+   | `[PASARELA DE PAGO]`, `[COMISIÓN]` | Q3 (parcial: Wompi preferida; falta % y confirmación) | D3, D4 |
+   | `[QUIÉN ENVÍA]`, `[TRANSPORTADORA]` | Q4 (parcial: envía Repuestox; falta transportadora) | D3, D6 |
    | `[A CONFIRMAR POR ABOGADO]` | Q6 y puntos de la spec §9 | cualquiera |
 
    `check-legal.py` busca esta lista y la imprime con conteos: así se ve cuánto falta.

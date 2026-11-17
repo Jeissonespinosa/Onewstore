@@ -1,0 +1,206 @@
+Tipo de producto,Ruta,Especificacion,Campo,Valor
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,0W20
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,5W30
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,5W40
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,10W30
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,10W40
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,15W40
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,20W50
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Viscosidad,Unico,25W60
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Tipo de aceite,Unico,Sintético
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Tipo de aceite,Unico,Semisintético
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Tipo de aceite,Unico,Mineral
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Presentación,Unico,1 L
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Presentación,Unico,4 L
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Presentación,Unico,5 L
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Presentación,Unico,Galón
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Presentación,Unico,Cuñete
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Norma API,Multiple,SN
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Norma API,Multiple,SP
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Norma API,Multiple,CJ-4
+Aceite de motor,/carros/lubricantes-y-mantenimiento/aceite-de-motor,Norma API,Multiple,CK-4
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Tipo de caja,Multiple,Mecánica (manual)
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Tipo de caja,Multiple,Automática
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Tipo de caja,Multiple,CVT
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Tipo de caja,Multiple,DSG (doble embrague)
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Especificación,Multiple,ATF Dexron
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Especificación,Multiple,ATF Mercon
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Especificación,Multiple,80W90
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Especificación,Multiple,75W90
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Especificación,Multiple,85W140
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Presentación,Unico,1 L
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Presentación,Unico,4 L
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Presentación,Unico,Galón
+Aceite de transmisión,/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Presentación,Unico,Cuñete
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Viscosidad,Unico,80W90
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Viscosidad,Unico,85W140
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Viscosidad,Unico,75W90
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Presentación,Unico,1 L
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Presentación,Unico,4 L
+Aceite diferencial,/carros/lubricantes-y-mantenimiento/aceite-diferencial,Presentación,Unico,Galón
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Color,Unico,Verde
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Color,Unico,Rojo
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Color,Unico,Rosado
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Color,Unico,Azul
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Color,Unico,Naranja
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Concentración,Unico,Listo para usar
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Concentración,Unico,Concentrado
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Presentación,Unico,1 L
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Presentación,Unico,4 L
+Refrigerante y anticongelante,/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Presentación,Unico,Galón
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Norma DOT,Unico,DOT 3
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Norma DOT,Unico,DOT 4
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Norma DOT,Unico,DOT 5.1
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Presentación,Unico,300 ml
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Presentación,Unico,500 ml
+Líquido de frenos,/carros/lubricantes-y-mantenimiento/liquido-de-frenos,Presentación,Unico,1 L
+Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Especificación,Multiple,ATF Dexron
+Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Especificación,Multiple,Hidráulico mineral
+Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Presentación,Unico,300 ml
+Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Presentación,Unico,500 ml
+Líquido de dirección hidráulica,/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Presentación,Unico,1 L
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Tipo de grasa,Unico,Multiusos
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Tipo de grasa,Unico,Litio
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Tipo de grasa,Unico,Rodamientos
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Tipo de grasa,Unico,Chasis
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Tipo de grasa,Unico,Alta temperatura
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Presentación,Unico,250 g
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Presentación,Unico,500 g
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Presentación,Unico,1 kg
+Grasas,/carros/lubricantes-y-mantenimiento/grasas,Presentación,Unico,Cartucho
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Viscosidad,Unico,10W30
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Viscosidad,Unico,10W40
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Viscosidad,Unico,15W50
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Viscosidad,Unico,20W50
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Tipo de aceite,Unico,Sintético
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Tipo de aceite,Unico,Semisintético
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Tipo de aceite,Unico,Mineral
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Presentación,Unico,350 ml
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Presentación,Unico,1 L
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Presentación,Unico,4 L
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Norma JASO,Multiple,MA
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Norma JASO,Multiple,MA2
+Aceite de motor 4T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t,Norma JASO,Multiple,MB
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Tipo de aceite,Unico,Sintético
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Tipo de aceite,Unico,Semisintético
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Tipo de aceite,Unico,Mineral
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Presentación,Unico,120 ml
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Presentación,Unico,350 ml
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Presentación,Unico,500 ml
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Presentación,Unico,1 L
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Norma JASO,Multiple,FC
+Aceite de motor 2T,/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t,Norma JASO,Multiple,FD
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Viscosidad,Unico,10W30
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Viscosidad,Unico,10W40
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Viscosidad,Unico,80W90
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Presentación,Unico,350 ml
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Presentación,Unico,500 ml
+Aceite de transmisión (caja),/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja,Presentación,Unico,1 L
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Viscosidad,Unico,SAE 5
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Viscosidad,Unico,SAE 10
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Viscosidad,Unico,SAE 15
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Viscosidad,Unico,SAE 20
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Presentación,Unico,350 ml
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Presentación,Unico,500 ml
+Aceite de suspensión,/motos/lubricantes-y-mantenimiento/aceite-de-suspension,Presentación,Unico,1 L
+Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Presentación,Unico,200 ml
+Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Presentación,Unico,400 ml
+Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Presentación,Unico,500 ml
+Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Tipo de cadena,Multiple,Con reten (O-ring)
+Lubricante de cadena,/motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Tipo de cadena,Multiple,Sin reten
+Filtros de aceite,/carros/filtros/filtros-de-aceite,Tipo de filtro,Unico,Enroscable
+Filtros de aceite,/carros/filtros/filtros-de-aceite,Tipo de filtro,Unico,Cartucho
+Filtros de aceite,/carros/filtros/filtros-de-aceite,Marca del filtro,Unico,(abierto)
+Filtros de aire,/carros/filtros/filtros-de-aire,Tipo de filtro,Unico,Panel
+Filtros de aire,/carros/filtros/filtros-de-aire,Tipo de filtro,Unico,Redondo
+Filtros de aire,/carros/filtros/filtros-de-aire,Tipo de filtro,Unico,Cónico deportivo
+Filtros de aire,/carros/filtros/filtros-de-aire,Material,Unico,Papel
+Filtros de aire,/carros/filtros/filtros-de-aire,Material,Unico,Algodón lavable
+Filtros de combustible,/carros/filtros/filtros-de-combustible,Tipo de filtro,Unico,En línea
+Filtros de combustible,/carros/filtros/filtros-de-combustible,Tipo de filtro,Unico,Enroscable
+Filtros de combustible,/carros/filtros/filtros-de-combustible,Tipo de filtro,Unico,De canastilla
+Filtros de combustible,/carros/filtros/filtros-de-combustible,Combustible,Unico,Gasolina
+Filtros de combustible,/carros/filtros/filtros-de-combustible,Combustible,Unico,Diésel
+Filtros de cabina,/carros/filtros/filtros-de-cabina,Tipo de filtro,Unico,Estándar
+Filtros de cabina,/carros/filtros/filtros-de-cabina,Tipo de filtro,Unico,Con carbón activado
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,450
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,550
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,650
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,750
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,850
+Baterías para carro,/carros/baterias/baterias-para-carro,Amperaje de arranque (CCA),Unico,950
+Baterías para carro,/carros/baterias/baterias-para-carro,Tipo de batería,Unico,Convencional
+Baterías para carro,/carros/baterias/baterias-para-carro,Tipo de batería,Unico,AGM
+Baterías para carro,/carros/baterias/baterias-para-carro,Tipo de batería,Unico,EFB
+Baterías para carro,/carros/baterias/baterias-para-carro,Tipo de batería,Unico,Libre mantenimiento
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,11
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,13
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,15
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,17
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,19
+Baterías para carro,/carros/baterias/baterias-para-carro,Placas,Unico,21
+Baterías para carro,/carros/baterias/baterias-para-carro,Polaridad,Unico,Izquierda
+Baterías para carro,/carros/baterias/baterias-para-carro,Polaridad,Unico,Derecha
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Amperaje de arranque (CCA),Unico,750
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Amperaje de arranque (CCA),Unico,950
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Amperaje de arranque (CCA),Unico,1100
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Amperaje de arranque (CCA),Unico,1300
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Placas,Unico,27
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Placas,Unico,31
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Placas,Unico,4D
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Placas,Unico,8D
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Polaridad,Unico,Izquierda
+Baterías para furgón, camión y bus,/carros/baterias/baterias-para-furgon-camion-y-bus,Polaridad,Unico,Derecha
+Baterías para moto,/motos/baterias/baterias-para-moto,Voltaje,Unico,6 V
+Baterías para moto,/motos/baterias/baterias-para-moto,Voltaje,Unico,12 V
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,2.5
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,4
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,5
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,7
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,9
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,12
+Baterías para moto,/motos/baterias/baterias-para-moto,Amperaje (Ah),Unico,14
+Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Convencional
+Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Sellada (AGM)
+Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Gel
+Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Litio
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Medida,Unico,(abierto)
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Calle
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Mixta
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Trocha
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Pista
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo,Unico,Con neumático
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo,Unico,Tubeless
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Medida,Unico,(abierto)
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Calle
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Mixta
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Trocha
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Pista
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo,Unico,Con neumático
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo,Unico,Tubeless
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Medida,Unico,(abierto)
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo,Unico,Con neumático
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo,Unico,Tubeless
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Medida,Unico,(abierto)
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Enduro
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Cross
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Trial
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,13
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,14
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,15
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,16
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,17
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Huecos,Unico,4
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Huecos,Unico,5
+Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Huecos,Unico,6
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,14
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,15
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,16
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,17
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,18
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,19
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Diámetro,Unico,20
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,4
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,5
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,6
+Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Ancho,Unico,(abierto)

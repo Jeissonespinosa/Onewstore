@@ -28,8 +28,8 @@ No depende de Q1-Q5. Las fuentes se consultan en la web y cada cita se verifica 
 
 Va antes que los documentos para usarla desde el primero.
 
-- [ ] 3.1 Crear `scripts/check-legal.py` (decisión 5): placeholders (lista de la decisión 6) con conteo, "Onewstore", falta de línea de versión y desajuste ruta ↔ bloque; `--prod` sale con 1 si hay hallazgos. Verificación: `python scripts/check-legal.py` corre en el repo sin documentos y sale con 0.
-- [ ] 3.2 Tests en `scripts/tests/test_check_legal.py` con una carpeta de prueba (patrón de `scripts/tests/_sandbox.py`): detecta cada placeholder, "ONEWSTORE" en mayúsculas, documento sin versión y ruta sin bloque; `--prod` falla con hallazgos y pasa sin ellos. Verificación: `python -m unittest scripts/tests/test_check_legal.py` en verde, sin `__pycache__` en el árbol.
+- [x] 3.1 Crear `scripts/check-legal.py` (decisión 5): placeholders (lista de la decisión 6) con conteo, "Onewstore", falta de línea de versión y desajuste ruta ↔ bloque; `--prod` sale con 1 si hay hallazgos. Verificación: `python scripts/check-legal.py` corre en el repo sin documentos y sale con 0.
+- [x] 3.2 Tests en `scripts/tests/test_check_legal.py` con una carpeta de prueba (patrón de `scripts/tests/_sandbox.py`): detecta cada placeholder, "ONEWSTORE" en mayúsculas, documento sin versión y ruta sin bloque; `--prod` falla con hallazgos y pasa sin ellos. Verificación: `python -m unittest scripts/tests/test_check_legal.py` en verde, sin `__pycache__` en el árbol.
 
 ## 4. Páginas legales: estructura, footer y D2
 

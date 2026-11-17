@@ -146,6 +146,35 @@ y `catalogo/sinonimos-conflictos.txt` con los términos descartados y las decisi
 debe tomar el negocio. Se importan en *Admin › Storefront › Intelligent Search ›
 Sinónimos › Importar*, un archivo a la vez; tardan hasta 2 horas en aplicar.
 
+### Páginas legales (spec 001)
+
+Los textos legales (términos de uso y de venta, condiciones para sellers, privacidad y
+devoluciones) se **redactan como borradores en Markdown**, que es lo que revisa el abogado, y de
+ahí se **generan** los bloques que se publican. Los bloques de `store/blocks/legal/*.jsonc` no se
+editan a mano.
+
+```bash
+python scripts/gen-legal.py            # borradores -> store/blocks/legal/<slug>.jsonc
+python scripts/gen-legal.py --check    # sale con 1 si los bloques no coinciden con los borradores
+python scripts/check-legal.py          # informa placeholders, "Onewstore" y versión (sale con 0)
+python scripts/check-legal.py --prod   # ANTES de publicar: sale con 1 si queda algún hallazgo
+python -m unittest scripts/tests/test_gen_legal.py scripts/tests/test_check_legal.py
+```
+
+- **Dónde:** `specs/001-tyc-marketplace/borradores/D<n>-<slug>.md`. La primera línea es el
+  título (`# …`), la segunda la versión (`Versión AAAA.MM.DD · Actualizado: AAAA-MM-DD`) y cada
+  sección empieza con `## `. Cada sección es un `rich-text` propio.
+  `alternativas.md` (redacciones alternativas para el abogado) no genera nada.
+- **Rutas:** a mano en `store/routes.json` (`/terminos-y-condiciones`, `/terminos-de-venta`,
+  `/condiciones-sellers`, `/politica-de-privacidad`, `/devoluciones-y-garantias`). Estilos del
+  texto y del enlace del footer: `styles/css/vtex.rich-text.css` (`blockClass` `legal` y `footerLegal`).
+- **Placeholders:** los datos que aún no existen (`[RAZÓN SOCIAL]`, `[NIT]`, `[CANAL DE ATENCIÓN]`,
+  `[A CONFIRMAR POR ABOGADO]`…) se escriben en MAYÚSCULAS entre corchetes. `check-legal.py` los
+  cuenta por documento; con `--prod` bloquean la publicación.
+- **Cambiar un texto:** edita el borrador, corre `gen-legal.py` y haz commit de ambos. Evita
+  editarlo en el Site Editor: esa edición vive solo en el workspace y no vuelve al repositorio.
+- Tras crear o borrar un documento, **reinicia `vtex link`** (no recoge archivos ni rutas nuevos).
+
 ### Rutas personalizadas
 
 Definidas en `store/routes.json`:
@@ -157,6 +186,7 @@ Definidas en `store/routes.json`:
 | `/about-us` | `store.custom#about-us` |
 | `/faq` | `store.custom#faq` |
 | `/contact-us` | `store.custom#contact-us` |
+| `/terminos-y-condiciones`, `/terminos-de-venta`, `/condiciones-sellers`, `/politica-de-privacidad`, `/devoluciones-y-garantias` | `store.custom#legal-<nombre>` (bloques generados, ver «Páginas legales») |
 | `/linea-productos/baterias` | `store.custom#categoria-baterias` |
 | `/linea-productos/lubricantes` | `store.custom#categoria-lubricantes` |
 | `/linea-productos/autopartes` | `store.custom#categoria-autopartes` |

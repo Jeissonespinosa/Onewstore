@@ -14,6 +14,21 @@
   "store.custom#contact-us": {
     "path": "/contact-us"
   },
+  "store.custom#legal-terminos-y-condiciones": {
+    "path": "/terminos-y-condiciones"
+  },
+  "store.custom#legal-terminos-de-venta": {
+    "path": "/terminos-de-venta"
+  },
+  "store.custom#legal-condiciones-sellers": {
+    "path": "/condiciones-sellers"
+  },
+  "store.custom#legal-politica-de-privacidad": {
+    "path": "/politica-de-privacidad"
+  },
+  "store.custom#legal-devoluciones-y-garantias": {
+    "path": "/devoluciones-y-garantias"
+  },
   "store.custom#categoria-baterias": {
     "path": "/linea-productos/baterias"
   },

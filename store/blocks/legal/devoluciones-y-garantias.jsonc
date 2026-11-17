@@ -1,0 +1,22 @@
+// GENERADO por scripts/gen-legal.py desde specs/001-tyc-marketplace/borradores/D6-devoluciones-y-garantias.md.
+// No se edita a mano: cambia el borrador y vuelve a correr el script.
+{
+  "store.custom#legal-devoluciones-y-garantias": {
+    "children": [
+      "rich-text#legal-devoluciones-y-garantias-0",
+      "rich-text#legal-devoluciones-y-garantias-1"
+    ]
+  },
+  "rich-text#legal-devoluciones-y-garantias-0": {
+    "props": {
+      "text": "# Devoluciones, retracto y garantías\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-1": {
+    "props": {
+      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "blockClass": "legal"
+    }
+  }
+}

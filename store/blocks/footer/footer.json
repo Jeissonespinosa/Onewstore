@@ -7,6 +7,7 @@
     "children": [
       "flex-layout.row#repuestox-footer-socials",
       "flex-layout.row#footer-payments",
+      "flex-layout.row#footer-legal",
       "flex-layout.row#footer-credits"
     ]
   },
@@ -15,6 +16,7 @@
     "children": [
       "flex-layout.row#repuestox-footer-socials",
       "flex-layout.row#footer-payments",
+      "flex-layout.row#footer-legal",
       "flex-layout.row#footer-credits"
     ]
   },
@@ -83,6 +85,22 @@
   "accepted-payment-methods": {
     "props": {
       "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
+    }
+  },
+
+  "flex-layout.row#footer-legal": {
+    "children": ["rich-text#footer-legal"],
+    "props": {
+      "blockClass": "legal-links",
+      "paddingBottom": 3,
+      "horizontalAlign": "center"
+    }
+  },
+  "rich-text#footer-legal": {
+    "props": {
+      "text": "[Términos y condiciones](/terminos-y-condiciones) · [Términos de venta](/terminos-de-venta) · [Condiciones para sellers](/condiciones-sellers) · [Política de privacidad](/politica-de-privacidad) · [Devoluciones y garantías](/devoluciones-y-garantias)",
+      "textAlignment": "CENTER",
+      "blockClass": "footerLegal"
     }
   },
 

@@ -33,10 +33,10 @@ Va antes que los documentos para usarla desde el primero.
 
 ## 4. Páginas legales: estructura, footer y D2
 
-- [ ] 4.1 Crear `store/blocks/legal/` con la plantilla compartida y las rutas `/terminos-y-condiciones`, `/terminos-de-venta`, `/condiciones-sellers`, `/politica-de-privacidad` y `/devoluciones-y-garantias` en `store/routes.json` (sin tocar las rutas generadas). Verificación: `python -m unittest scripts/tests/test_store_blocks.py` y `python scripts/gen-categorias.py --dry-run` en verde, y `check-legal.py` sin desajustes ruta ↔ bloque.
-- [ ] 4.2 Fila de enlaces legales en el footer (`flex-layout.row#footer-legal`, decisión 4) y sus estilos en `styles/css/vtex.store-footer.css`. Verificación: en el workspace, a 1280 y 360 px, el footer muestra los enlaces en inicio, categoría y ficha, y cada uno abre su página (AC-1); contraste AA (AC-6).
-- [ ] 4.3 Redactar D2 (TyC generales de uso) en `borradores/D2-terminos-y-condiciones.md` y pasarlo al bloque. Verificación: `check-legal.py` no reporta falta de versión; encabezados sin saltos de nivel (un `#`, luego `##`…; AC-6); el texto distingue intermediario y seller (spec §9) y cada hueco es un placeholder; el bloque coincide con el borrador.
-- [ ] 4.4 Documentar en `README.md` cómo editar los textos legales y cómo correr `check-legal.py`, y registrar en el CHANGELOG. Verificación: el README explica el flujo borrador → bloque → comprobación.
+- [x] 4.1 Crear `store/blocks/legal/` con la plantilla compartida y las rutas `/terminos-y-condiciones`, `/terminos-de-venta`, `/condiciones-sellers`, `/politica-de-privacidad` y `/devoluciones-y-garantias` en `store/routes.json` (sin tocar las rutas generadas). Verificación: `python -m unittest scripts/tests/test_store_blocks.py` y `python scripts/gen-categorias.py --dry-run` en verde, y `check-legal.py` sin desajustes ruta ↔ bloque.
+- [x] 4.2 Fila de enlaces legales en el footer (`flex-layout.row#footer-legal`, decisión 4) y sus estilos en `styles/css/vtex.store-footer.css`. Verificación: en el workspace, a 1280 y 360 px, el footer muestra los enlaces en inicio, categoría y ficha, y cada uno abre su página (AC-1); contraste AA (AC-6).
+- [x] 4.3 Redactar D2 (TyC generales de uso) en `borradores/D2-terminos-y-condiciones.md` y pasarlo al bloque. Verificación: `check-legal.py` no reporta falta de versión; encabezados sin saltos de nivel (un `#`, luego `##`…; AC-6); el texto distingue intermediario y seller (spec §9) y cada hueco es un placeholder; el bloque coincide con el borrador.
+- [x] 4.4 Documentar en `README.md` cómo editar los textos legales y cómo correr `check-legal.py`, y registrar en el CHANGELOG. Verificación: el README explica el flujo borrador → bloque → comprobación.
 
 ## 5. D3 y D6 — Venta y devoluciones
 

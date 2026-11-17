@@ -596,3 +596,58 @@
   font-size: 1rem;
   font-weight: 500;
 }
+
+/* Paginas legales (spec 001): texto en una columna legible. Generadas por scripts/gen-legal.py */
+.wrapper--legal {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.headingLevel1--legal {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.headingLevel2--legal {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.paragraph--legal {
+  line-height: 1.625;
+}
+
+@media only screen and (min-width: 640px) {
+  .headingLevel1--legal {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+/* Enlaces legales del footer */
+.container--footerLegal {
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.container--footerLegal .paragraph {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.container--footerLegal .link {
+  color: #1f2937;
+  text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+// GENERADO por scripts/gen-legal.py desde specs/001-tyc-marketplace/borradores/D3-terminos-de-venta.md.
+// No se edita a mano: cambia el borrador y vuelve a correr el script.
+{
+  "store.custom#legal-terminos-de-venta": {
+    "children": [
+      "rich-text#legal-terminos-de-venta-0",
+      "rich-text#legal-terminos-de-venta-1"
+    ]
+  },
+  "rich-text#legal-terminos-de-venta-0": {
+    "props": {
+      "text": "# Términos de venta\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-1": {
+    "props": {
+      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "blockClass": "legal"
+    }
+  }
+}

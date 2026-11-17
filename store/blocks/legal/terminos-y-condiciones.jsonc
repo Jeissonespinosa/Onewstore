@@ -1,0 +1,106 @@
+// GENERADO por scripts/gen-legal.py desde specs/001-tyc-marketplace/borradores/D2-terminos-y-condiciones.md.
+// No se edita a mano: cambia el borrador y vuelve a correr el script.
+{
+  "store.custom#legal-terminos-y-condiciones": {
+    "children": [
+      "rich-text#legal-terminos-y-condiciones-0",
+      "rich-text#legal-terminos-y-condiciones-1",
+      "rich-text#legal-terminos-y-condiciones-2",
+      "rich-text#legal-terminos-y-condiciones-3",
+      "rich-text#legal-terminos-y-condiciones-4",
+      "rich-text#legal-terminos-y-condiciones-5",
+      "rich-text#legal-terminos-y-condiciones-6",
+      "rich-text#legal-terminos-y-condiciones-7",
+      "rich-text#legal-terminos-y-condiciones-8",
+      "rich-text#legal-terminos-y-condiciones-9",
+      "rich-text#legal-terminos-y-condiciones-10",
+      "rich-text#legal-terminos-y-condiciones-11",
+      "rich-text#legal-terminos-y-condiciones-12",
+      "rich-text#legal-terminos-y-condiciones-13"
+    ]
+  },
+  "rich-text#legal-terminos-y-condiciones-0": {
+    "props": {
+      "text": "# Términos y condiciones de uso\n\nVersión 2026.11.17 · Actualizado: 2026-11-17\n\nEstos términos regulan el uso del sitio web de Repuestox. Al navegar, crear una cuenta o comprar, aceptas estos términos. Si no estás de acuerdo con ellos, no uses el sitio.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-1": {
+    "props": {
+      "text": "## 1. Quiénes somos\n\nRepuestox es operado por [RAZÓN SOCIAL], con NIT [NIT] y domicilio en [DOMICILIO]. Puedes escribirnos por [CANAL DE ATENCIÓN].",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-2": {
+    "props": {
+      "text": "## 2. Qué es Repuestox\n\nRepuestox es una plataforma de comercio electrónico para comprar repuestos, accesorios y herramientas para carros y motos. En ella, vendedores independientes (los «sellers») publican sus productos y Repuestox gestiona el cobro, el envío en todo Colombia y la atención a los compradores.\n\n[A CONFIRMAR POR ABOGADO] Contrato de compraventa: el contrato de compra de cada producto se celebra entre el comprador y [A CONFIRMAR POR ABOGADO: el seller / Repuestox]. En cada producto y en el pago te mostramos quién vende y quién envía.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-3": {
+    "props": {
+      "text": "## 3. Quién puede usar el sitio\n\nPuedes comprar si eres mayor de edad y tienes capacidad legal para obligarte. Los talleres y las empresas pueden comprar a través de su representante. [A CONFIRMAR POR ABOGADO] Condiciones aplicables a compradores que son personas jurídicas.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-4": {
+    "props": {
+      "text": "## 4. Qué productos se venden\n\nVendemos productos **nuevos e importados**. No vendemos productos usados ni remanufacturados. Las fotos pueden ser ilustrativas.\n\nAntes de comprar, verifica que el repuesto sirve para tu vehículo (marca, modelo y año). La compatibilidad la informa el seller de cada producto; si tienes dudas, escríbenos antes de comprar.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-5": {
+    "props": {
+      "text": "## 5. Precios, pagos y envíos\n\nLos precios están en pesos colombianos (COP) y se muestran antes de pagar. Vendemos y enviamos únicamente dentro de Colombia. Las condiciones de compra, pago y envío están en los [Términos de venta](/terminos-de-venta).",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-6": {
+    "props": {
+      "text": "## 6. Retracto, reversión del pago y garantías\n\nTus derechos de retracto, reversión del pago y garantía, y cómo ejercerlos, están en [Devoluciones, retracto y garantías](/devoluciones-y-garantias). Estos términos no limitan los derechos que la ley te da como consumidor.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-7": {
+    "props": {
+      "text": "## 7. Tu cuenta y tu conducta\n\nDebes dar información veraz y mantener segura tu cuenta. No puedes usar el sitio para fines ilegales, para suplantar a otra persona, ni para interferir con su funcionamiento.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-8": {
+    "props": {
+      "text": "## 8. Propiedad intelectual\n\nLas marcas, los logos, los textos y el diseño del sitio son de Repuestox o de sus titulares y no puedes usarlos sin autorización. Las marcas de los productos pertenecen a sus fabricantes.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-9": {
+    "props": {
+      "text": "## 9. Responsabilidad\n\nRepuestox responde por lo que la ley le exige frente a los consumidores. En lo demás, y en la medida que la ley permita, no respondemos por interrupciones del sitio ni por usos indebidos de los productos. [A CONFIRMAR POR ABOGADO] Alcance y límites de esta cláusula.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-10": {
+    "props": {
+      "text": "## 10. Datos personales\n\nTratamos tus datos según la [Política de privacidad](/politica-de-privacidad).",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-11": {
+    "props": {
+      "text": "## 11. Cambios en estos términos\n\nPodemos actualizar estos términos. Cada versión lleva un número y una fecha al inicio. Al comprar te pedimos que aceptes la versión vigente en ese momento.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-12": {
+    "props": {
+      "text": "## 12. Peticiones, quejas y reclamos\n\nPuedes presentar peticiones, quejas y reclamos por [CANAL DE ATENCIÓN]. Si no quedas conforme, puedes acudir a la Superintendencia de Industria y Comercio (SIC).",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-y-condiciones-13": {
+    "props": {
+      "text": "## 13. Ley aplicable\n\nEstos términos se rigen por las leyes de Colombia. [A CONFIRMAR POR ABOGADO] Jurisdicción y competencia.",
+      "blockClass": "legal"
+    }
+  }
+}

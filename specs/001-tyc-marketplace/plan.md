@@ -61,7 +61,9 @@
 
 2. **Dónde vive el texto.** Los borradores para el abogado se escriben en Markdown en
    `specs/001-tyc-marketplace/borradores/Dn-<slug>.md` (se revisan con diff y sin ruido de
-   JSON). Al aprobarlos se pasan al `text` del `rich-text` del bloque. El bloque es la fuente
+   JSON). **Actualización 2026-11-17:** los bloques de `store/blocks/legal/` se **generan** desde
+   los borradores con `scripts/gen-legal.py` (un `rich-text` por sección), no se transcriben a
+   mano, y un test comprueba que coinciden. Así se elimina el riesgo de divergencia. El bloque es la fuente
    de lo publicado; el borrador, la de lo revisado. *Riesgo:* que diverjan (ver Riesgos).
 
 3. **Versión y fecha (RF-4)** como primera línea de cada documento:

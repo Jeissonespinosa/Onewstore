@@ -1,0 +1,22 @@
+// GENERADO por scripts/gen-legal.py desde specs/001-tyc-marketplace/borradores/D5-politica-de-privacidad.md.
+// No se edita a mano: cambia el borrador y vuelve a correr el script.
+{
+  "store.custom#legal-politica-de-privacidad": {
+    "children": [
+      "rich-text#legal-politica-de-privacidad-0",
+      "rich-text#legal-politica-de-privacidad-1"
+    ]
+  },
+  "rich-text#legal-politica-de-privacidad-0": {
+    "props": {
+      "text": "# Política de privacidad y tratamiento de datos personales\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-politica-de-privacidad-1": {
+    "props": {
+      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "blockClass": "legal"
+    }
+  }
+}

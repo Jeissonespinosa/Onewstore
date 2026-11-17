@@ -1,0 +1,22 @@
+// GENERADO por scripts/gen-legal.py desde specs/001-tyc-marketplace/borradores/D4-condiciones-sellers.md.
+// No se edita a mano: cambia el borrador y vuelve a correr el script.
+{
+  "store.custom#legal-condiciones-sellers": {
+    "children": [
+      "rich-text#legal-condiciones-sellers-0",
+      "rich-text#legal-condiciones-sellers-1"
+    ]
+  },
+  "rich-text#legal-condiciones-sellers-0": {
+    "props": {
+      "text": "# Condiciones para sellers\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-condiciones-sellers-1": {
+    "props": {
+      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "blockClass": "legal"
+    }
+  }
+}

@@ -37,7 +37,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   min-width: 3rem;
   min-height: 3rem;
   padding: 0 0.85rem;
@@ -75,28 +74,29 @@
   outline-offset: 2px;
 }
 
-/* En movil (360 px) solo el icono: 48 px, sin tapar controles de la pagina. El texto sigue en el DOM
-   para el lector de pantalla. */
+/* En reposo solo el icono (48 px, sin tapar controles de la pagina). Con hover o foco de teclado el
+   texto se despliega con una transicion. El texto siempre esta en el DOM (ancho 0, no display:none),
+   asi que el lector de pantalla lo anuncia como nombre del boton. */
 .feedbackTriggerLabel {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  display: inline-block;
+  max-width: 0;
+  margin-left: 0;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  opacity: 0;
   white-space: nowrap;
+  transition: max-width 0.25s ease, margin-left 0.25s ease, opacity 0.2s ease;
 }
 
-@media (min-width: 768px) {
-  .feedbackTrigger {
-    padding: 0 1.1rem;
-  }
+.feedbackTrigger:hover .feedbackTriggerLabel,
+.feedbackTrigger:focus-visible .feedbackTriggerLabel {
+  max-width: 10rem;
+  margin-left: 0.5rem;
+  opacity: 1;
+}
 
+@media (prefers-reduced-motion: reduce) {
   .feedbackTriggerLabel {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: auto;
+    transition: none;
   }
 }
 

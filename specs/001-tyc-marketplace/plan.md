@@ -120,7 +120,7 @@
     entregue el `orderForm` por ítem. "Quién envía" depende de Q4: texto con
     `[QUIÉN ENVÍA]` hasta que se responda.
 
-11. **D7 (política de reseñas) se difiere** *(propuesta de cambio a la spec, pregunta C)*.
+11. **D7 (política de reseñas) se difiere** *(aprobado por Diego el 2026-11-17; `spec.md` ya ajustado)*.
     La spec 002 pasó a feedback privado y las reseñas públicas salieron del alcance
     (spec 000 §11). Una política de moderación de reseñas que no existen sería un texto
     sin objeto y con riesgo de prometer algo falso. Se propone: D7 queda como **entregable
@@ -210,9 +210,9 @@ Deferibles (no bloquean empezar; se resuelven antes de la tarea indicada):
   VTEX y personalizarlo es otro trabajo. Propuesta: solo checkout en esta spec. *Antes de la 7.1.*
 - **B.** **RESUELTA 2026-11-17 (Diego): sí**; se pide en cada compra y se registra versión y fecha (el abogado lo confirma aparte). ¿El abogado acepta "se pide en cada compra" (decisión 8) y un registro solo con
   versión y fecha dentro del pedido (decisión 7)? *Antes de cerrar el grupo 7.*
-- **C.** ¿Se difiere D7 y se ajustan `RF-1`/`AC-1` a 5 páginas (decisión 11)? Requiere cambio
+- **C.** **RESUELTA 2026-11-17 (Diego): se difiere D7**; `RF-1`, `AC-7` y la tabla de entregables ya cambiaron. ¿Se difiere D7 y se ajustan `RF-1`/`AC-1` a 5 páginas (decisión 11)? Requiere cambio
   en `spec.md`; no se hace sin tu aprobación. *Antes del grupo 4.*
-- **D.** ¿El logo del checkout lo pone la 006 o esta spec (decisión 12)? *Antes de la 7.1.*
+- **D.** **RESUELTA 2026-11-17 (Diego): opción 1; el logo lo hace la spec 006** y esta spec solo pone el checkbox. ¿El logo del checkout lo pone la 006 o esta spec (decisión 12)? *Antes de la 7.1.*
 - **E.** ¿Compradores empresariales: texto aparte o el mismo régimen? Lo define el abogado;
   mientras tanto, `[A CONFIRMAR POR ABOGADO]` en D3 y D6.
 

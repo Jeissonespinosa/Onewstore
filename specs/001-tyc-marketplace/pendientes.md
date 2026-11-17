@@ -33,7 +33,7 @@ Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decision
 - **Entrega:** cuéntame (o pega las capturas) qué ves en cada punto; yo registro la tabla "capacidad → nativo / personalizado / no posible" en `plan.md`.
 - **Desbloquea:** tarea 1.1 y la decisión 7 del plan; después, el grupo 7.
 
-### P3. Responder las preguntas A, B, C y D de `plan.md` — Diego
+### P3. Responder las preguntas A, B, C y D de `plan.md` — Diego *(resuelto el 2026-11-17: A sí, B sí, C diferir D7, D logo en la spec 006)*
 Aprobaste el plan, pero no respondiste estas cuatro. Responde cada una con sí o no (y la alternativa si es no):
 
 | # | Pregunta | Recomendación del plan |

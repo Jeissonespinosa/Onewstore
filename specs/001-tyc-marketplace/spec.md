@@ -12,11 +12,13 @@ Se necesita un marco legal completo. La regulación europea (muy exhaustiva en m
 se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colombiana**.
 
 **Hallazgos de la spec 000 (workspace `devwilbis`, 2026-11-12):**
-- Ninguna de las 6 rutas legales existe (`/devoluciones-y-garantias` y `/condiciones-sellers` caen en "sin resultados").
+- Ninguna de las rutas legales (D2-D6) existe (`/devoluciones-y-garantias` y `/condiciones-sellers` caen en "sin resultados").
 - El checkout es el nativo de VTEX, sin personalizar y sin checkbox de TyC: el RF-2 exige personalizarlo (p. ej. `checkout-ui-custom`), que hoy está fuera del repo.
 - El PDP no muestra quién vende ni quién envía (RF-5).
 - `/about-us` es plantilla en inglés y `/contact-us` está roto: ver specs 004 y 005.
 - Hoy solo existe un seller propio (`Repuestox`, id 1): las condiciones de sellers (D4) anticipan un marketplace que aún no opera.
+
+**Cambio de alcance (2026-11-17, Diego):** se **difiere D7** (política de reseñas). Las páginas legales pasan de 6 a 5 (D2-D6) y cambian `RF-1` y `AC-7`; `AC-1` no cambia de texto, pero ahora cubre 5 documentos. El feedback privado de la spec 002 se cubre en la política de privacidad (D5). **Checkout:** el logo y los estilos de marca los hace la spec 006; esta spec solo añade el checkbox de TyC y el registro de la aceptación (RF-7 se limita a eso).
 
 **Decisiones del equipo (2026-11-15, registradas en la spec 000):**
 - Se vende en **todo Colombia**, a **particulares y talleres** y también a **empresas con flota**.
@@ -45,7 +47,7 @@ se usa como **benchmark de buenas prácticas**; la **norma vinculante es la colo
 | D4 | Condiciones para sellers (contrato marketplace) | `/condiciones-sellers` |
 | D5 | Política de privacidad / tratamiento de datos | `/politica-de-privacidad` |
 | D6 | Política de devoluciones, retracto y garantías | `/devoluciones-y-garantias` |
-| D7 | Política de reseñas y moderación (alimenta spec 002) | `/politica-de-resenas` |
+| D7 | ~~Política de reseñas y moderación~~ — **diferido (2026-11-17)**: no hay reseñas públicas (spec 002 es feedback privado); se retoma cuando existan | `/politica-de-resenas` (no se publica) |
 
 ## 4. Matriz de investigación (a completar en D1)
 Las referencias son punto de partida: **cada cita debe verificarse** contra el texto vigente.
@@ -77,13 +79,13 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 - Accesorios y herramientas para mecánica automotriz: revisar si requieren advertencias o condiciones de garantía distintas a las de los repuestos.
 
 ## 6. Requisitos funcionales
-- `RF-1` Las 6 páginas legales (D2-D7) son accesibles por URL propia y enlazadas desde el footer en todas las páginas.
+- `RF-1` Las 5 páginas legales (D2-D6) son accesibles por URL propia y enlazadas desde el footer en todas las páginas.
 - `RF-2` En registro/checkout hay un checkbox **no premarcado** de aceptación de TyC y política de privacidad con enlaces.
 - `RF-3` La aceptación guarda usuario, versión del documento y fecha/hora (Master Data o campo de perfil).
 - `RF-4` Cada documento muestra versión y fecha de última actualización.
 - `RF-5` En PDP y checkout se muestra quién vende (seller) y quién envía.
 - `RF-6` El texto legal es editable sin redeploy de código (rich-text / CMS de VTEX).
-- `RF-7` El checkout se personaliza (logo de marca y checkbox de aceptación) para cumplir el RF-2; si VTEX no permite bloquear el pago nativamente, se documenta la alternativa en `plan.md`.
+- `RF-7` El checkout se personaliza (checkbox de aceptación; el logo de marca lo pone la spec 006) para cumplir el RF-2; si VTEX no permite bloquear el pago nativamente, se documenta la alternativa en `plan.md`.
 - `RF-8` Mientras no existan razón social y NIT, los textos legales usan placeholders visibles y exactos (`[RAZÓN SOCIAL]`, `[NIT]`), y no se publica en producción ningún documento que los conserve.
 
 ## 7. Requisitos no funcionales
@@ -98,7 +100,7 @@ Cada fila debe acabar con: cita exacta del artículo, requisito, y cómo se cump
 - `AC-4` Dada una nueva versión de TyC, cuando el usuario vuelve a comprar, se le pide aceptar la nueva versión.
 - `AC-5` `research.md` incluye la matriz completa con citas y fue revisado por un abogado (evidencia en el PR).
 - `AC-6` Las páginas legales cumplen accesibilidad (contraste, jerarquía de encabezados).
-- `AC-7` Antes de publicar en producción, una búsqueda de `[RAZÓN SOCIAL]` y `[NIT]` en los documentos D2-D7 no devuelve resultados, y ninguno menciona "Onewstore".
+- `AC-7` Antes de publicar en producción, una búsqueda de `[RAZÓN SOCIAL]` y `[NIT]` en los documentos D2-D6 no devuelve resultados, y ninguno menciona "Onewstore".
 
 ## 9. Preguntas abiertas
 - [ ] ¿Quién es el abogado revisor y cuál es el plazo?

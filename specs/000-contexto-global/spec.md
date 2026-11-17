@@ -166,7 +166,7 @@ no en el código. Por eso, sin un documento de contexto, es fácil confundir lo
 | Selector de vehículo | **Construido, sin datos**: inoperante hoy | [Hecho·sitio] |
 | Catálogo real (árbol de 567 páginas, productos, imágenes, compatibilidad) | **Sin cargar**: 8 productos de prueba; imágenes y slides con placeholder ("REEMPLAZAR … 1600x700") | [Hecho·sitio] |
 | Marketplace con sellers terceros | **Objetivo**, no operativo. Un solo seller (el propio). Sin condiciones, comisiones ni portal visibles. | [Hecho·sitio] + [Inferido] |
-| TyC y 6 páginas legales (D2-D7) | **Diseño** (spec 001 `draft`); las rutas no existen | [Hecho·sitio + spec] |
+| TyC y 5 páginas legales (D2-D6; D7 diferido) | **Diseño** (spec 001 `draft`); las rutas no existen | [Hecho·sitio + spec] |
 | Feedback de compra y del sitio | **Implementado en `devdiego`, sin publicar** (spec 002 `implementing`) | [Hecho·código] |
 | Menú global de categorías | **Construido** (spec 003 `done`): botón «Categorías» en el header de todas las páginas, panel de 3 columnas en escritorio y drawer con acordeón en móvil; datos en `react/category-menu.json`, generado por `scripts/gen-categorias.py`. Probado en workspace `devdiego`, no publicado | [Hecho·código + spec] |
 | Checkout, pagos, envíos | **Sin personalizar y sin verificar** | [Hecho·sitio] |

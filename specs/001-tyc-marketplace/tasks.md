@@ -14,7 +14,7 @@ Necesita un workspace con `vtex link` (lo inicia Diego) y, para 1.1, acceso al a
 - [ ] 1.1 Checkout: comprobar si el admin ofrece un campo nativo de TyC y si el builder `checkout-ui-custom` permite añadir un checkbox que bloquee el botón de pago y escribir `customData` en el `orderForm`. Verificación: tabla "capacidad → nativo / con `checkout-ui-custom` / no posible" en `plan.md`, con la decisión 7 confirmada o cambiada. *(Con el navegador solo se puede llegar hasta antes de pagar y sin datos reales; el admin lo mira el equipo.)*
 - [x] 1.2 Páginas legales: crear en el workspace una `store.custom#legal-prueba` con un `rich-text` de ~2.000 palabras (títulos `##`/`###`, listas, enlaces y anclas) y editarla desde el Site Editor. Verificación: tabla en `plan.md` que responda: ¿se edita sin redeploy (RF-6)? ¿qué Markdown renderiza? ¿es legible en 360 px?; se retira la página de prueba.
 - [x] 1.3 Seller visible: buscar un bloque nativo que muestre el seller en PDP y en el resumen del carrito. Verificación: `plan.md` anota el bloque encontrado o la decisión de componente propio (decisión 10).
-- [ ] 1.4 Resolver las preguntas abiertas A, B (adelantar al abogado), C y D de `plan.md`. Verificación: cada una con respuesta y fecha en `plan.md`; si C se aprueba, `spec.md` se ajusta (`RF-1`, `AC-1`) en este mismo grupo.
+- [x] 1.4 Resolver las preguntas abiertas A, B (adelantar al abogado), C y D de `plan.md`. Verificación: cada una con respuesta y fecha en `plan.md`; si C se aprueba, `spec.md` se ajusta (`RF-1`, `AC-1`) en este mismo grupo.
 
 ## 2. D1 — Informe de investigación (UE → Colombia)
 

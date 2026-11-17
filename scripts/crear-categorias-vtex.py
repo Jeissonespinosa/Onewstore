@@ -10,7 +10,7 @@ padre, la reutiliza) y por eso --dry-run es el modo por defecto.
 
 El token sale de `vtex local token`, asi que hay que estar logueado.
 """
-import argparse, json, os, re, subprocess, sys, unicodedata, urllib.request
+import argparse, json, os, re, subprocess, sys, time, unicodedata, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARBOL = os.path.join(ROOT, 'catalogo', 'estructura-categorias-v2.json')
@@ -73,8 +73,15 @@ def call(tk, method, path, body=None):
 
 
 def arbol_vtex(tk):
-    """{(padre_id, nombre_normalizado): id} de lo que ya existe."""
-    st, tree = call(tk, 'GET', '/api/catalog_system/pub/category/tree/50')
+    """{(padre_id, nombre_normalizado): id} de lo que ya existe.
+
+    El endpoint del arbol esta cacheado en el CDN: sin romper la cache, una
+    segunda corrida no ve lo que creo la primera y DUPLICA todo el arbol. Y en
+    VTEX una categoria no se puede borrar. Por eso el parametro anticache no
+    es cosmetico.
+    """
+    st, tree = call(tk, 'GET', '/api/catalog_system/pub/category/tree/50?_=%d'
+                    % int(time.time() * 1000))
     if st != 200:
         sys.exit('ERROR leyendo el arbol de VTEX: %s' % tree)
     existe = {}
@@ -151,8 +158,16 @@ def main():
             nuevas += 1
             print('   [plan]  %-14s %-40s padre=%s' % (nivel, nombre, padre_id))
             continue
+        # VTEX limita Keywords a 200 caracteres: se recorta por termino
+        # completo, no a la mitad de una palabra.
+        kw, largo = [], 0
+        for t in keywords:
+            if largo + len(t) + 2 > 200:
+                break
+            kw.append(t)
+            largo += len(t) + 2
         cuerpo = {'Name': nombre, 'FatherCategoryId': padre_id, 'Title': nombre,
-                  'Description': nombre, 'Keywords': ', '.join(keywords[:20]),
+                  'Description': nombre, 'Keywords': ', '.join(kw),
                   'IsActive': True, 'ShowInStoreFront': True, 'ShowBrandFilter': True,
                   'ActiveStoreFrontLink': True, 'GlobalCategoryId': 711,
                   'StockKeepingUnitSelectionMode': 'SPECIFICATION',

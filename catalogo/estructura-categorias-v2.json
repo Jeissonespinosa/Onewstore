@@ -4350,19 +4350,34 @@
         "nombre": "Uso",
         "tipo": "multi",
         "valores": [
-          "Calle",
-          "Mixta",
-          "Trocha",
+          "Ciudad",
+          "Multipropósito",
+          "Todoterreno (trocha)",
+          "Deportiva",
+          "Touring",
           "Pista"
         ]
       },
       {
-        "nombre": "Tipo",
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
         "tipo": "unico",
         "valores": [
           "Con neumático",
           "Tubeless"
         ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
       }
     ],
     "Llantas traseras": [
@@ -4375,19 +4390,34 @@
         "nombre": "Uso",
         "tipo": "multi",
         "valores": [
-          "Calle",
-          "Mixta",
-          "Trocha",
+          "Ciudad",
+          "Multipropósito",
+          "Todoterreno (trocha)",
+          "Deportiva",
+          "Touring",
           "Pista"
         ]
       },
       {
-        "nombre": "Tipo",
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
         "tipo": "unico",
         "valores": [
           "Con neumático",
           "Tubeless"
         ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
       }
     ],
     "Llantas de scooter": [
@@ -4397,7 +4427,15 @@
         "valores": []
       },
       {
-        "nombre": "Tipo",
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Multipropósito"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
         "tipo": "unico",
         "valores": [
           "Con neumático",
@@ -4417,7 +4455,17 @@
         "valores": [
           "Enduro",
           "Cross",
-          "Trial"
+          "Trial",
+          "Rally"
+        ]
+      },
+      {
+        "nombre": "Tipo de taco",
+        "tipo": "unico",
+        "valores": [
+          "Taco bajo",
+          "Taco medio",
+          "Taco alto"
         ]
       }
     ],
@@ -4468,6 +4516,245 @@
       },
       {
         "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "Llantas para motocarro": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Carga",
+          "Pasajeros"
+        ]
+      }
+    ],
+    "Llantas de automóvil": [
+      {
+        "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Alto (perfil)",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Rin",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Carretera",
+          "Multipropósito",
+          "Todoterreno (A/T)",
+          "Barro (M/T)",
+          "Carga"
+        ]
+      },
+      {
+        "nombre": "Características",
+        "tipo": "multi",
+        "valores": [
+          "Runflat",
+          "Reforzada (XL)",
+          "M+S (barro y nieve)",
+          "All Season",
+          "Baja resistencia (eco)",
+          "Silenciosa"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "Llantas SUV y 4x4": [
+      {
+        "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Alto (perfil)",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Rin",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Carretera",
+          "Multipropósito",
+          "Todoterreno (A/T)",
+          "Barro (M/T)",
+          "Carga"
+        ]
+      },
+      {
+        "nombre": "Características",
+        "tipo": "multi",
+        "valores": [
+          "Runflat",
+          "Reforzada (XL)",
+          "M+S (barro y nieve)",
+          "All Season",
+          "Baja resistencia (eco)",
+          "Silenciosa"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "Llantas de van, camión y transporte": [
+      {
+        "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Alto (perfil)",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Rin",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Carretera",
+          "Multipropósito",
+          "Todoterreno (A/T)",
+          "Barro (M/T)",
+          "Carga"
+        ]
+      },
+      {
+        "nombre": "Características",
+        "tipo": "multi",
+        "valores": [
+          "Runflat",
+          "Reforzada (XL)",
+          "M+S (barro y nieve)",
+          "All Season",
+          "Baja resistencia (eco)",
+          "Silenciosa"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "Llantas OTR e industriales": [
+      {
+        "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Alto (perfil)",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Rin",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Carretera",
+          "Multipropósito",
+          "Todoterreno (A/T)",
+          "Barro (M/T)",
+          "Carga"
+        ]
+      },
+      {
+        "nombre": "Características",
+        "tipo": "multi",
+        "valores": [
+          "Runflat",
+          "Reforzada (XL)",
+          "M+S (barro y nieve)",
+          "All Season",
+          "Baja resistencia (eco)",
+          "Silenciosa"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
         "tipo": "unico",
         "valores": []
       }

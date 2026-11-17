@@ -165,26 +165,42 @@ Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Se
 Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Gel
 Baterías para moto,/motos/baterias/baterias-para-moto,Tipo de batería,Unico,Litio
 Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Medida,Unico,(abierto)
-Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Calle
-Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Mixta
-Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Trocha
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Ciudad
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Multipropósito
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Todoterreno (trocha)
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Deportiva
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Touring
 Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Uso,Multiple,Pista
-Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo,Unico,Con neumático
-Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo,Unico,Tubeless
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Construcción,Unico,Radial
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Construcción,Unico,Diagonal (convencional)
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo de montaje,Unico,Con neumático
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Tipo de montaje,Unico,Tubeless
+Llantas delanteras,/motos/llantas-y-rines/llantas/llantas-delanteras,Índice de carga y velocidad,Unico,(abierto)
 Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Medida,Unico,(abierto)
-Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Calle
-Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Mixta
-Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Trocha
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Ciudad
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Multipropósito
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Todoterreno (trocha)
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Deportiva
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Touring
 Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Uso,Multiple,Pista
-Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo,Unico,Con neumático
-Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo,Unico,Tubeless
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Construcción,Unico,Radial
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Construcción,Unico,Diagonal (convencional)
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo de montaje,Unico,Con neumático
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Tipo de montaje,Unico,Tubeless
+Llantas traseras,/motos/llantas-y-rines/llantas/llantas-traseras,Índice de carga y velocidad,Unico,(abierto)
 Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Medida,Unico,(abierto)
-Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo,Unico,Con neumático
-Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo,Unico,Tubeless
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Uso,Multiple,Ciudad
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Uso,Multiple,Multipropósito
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo de montaje,Unico,Con neumático
+Llantas de scooter,/motos/llantas-y-rines/llantas/llantas-de-scooter,Tipo de montaje,Unico,Tubeless
 Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Medida,Unico,(abierto)
 Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Enduro
 Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Cross
 Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Trial
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Uso,Multiple,Rally
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Tipo de taco,Unico,Taco bajo
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Tipo de taco,Unico,Taco medio
+Llantas de enduro y cross,/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Tipo de taco,Unico,Taco alto
 Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,13
 Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,14
 Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,Diámetro,Unico,15
@@ -204,3 +220,80 @@ Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,4
 Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,5
 Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Huecos,Unico,6
 Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,Ancho,Unico,(abierto)
+Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,Medida,Unico,(abierto)
+Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,Construcción,Unico,Radial
+Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,Construcción,Unico,Diagonal (convencional)
+Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,Uso,Multiple,Carga
+Llantas para motocarro,/motos/llantas-y-rines/llantas/llantas-para-motocarro,Uso,Multiple,Pasajeros
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Ancho,Unico,(abierto)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Alto (perfil),Unico,(abierto)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Rin,Unico,(abierto)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Ciudad
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Carretera
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Multipropósito
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Todoterreno (A/T)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Barro (M/T)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Uso,Multiple,Carga
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,Runflat
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,Reforzada (XL)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,M+S (barro y nieve)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,All Season
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,Baja resistencia (eco)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Características,Multiple,Silenciosa
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Construcción,Unico,Radial
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Construcción,Unico,Diagonal (convencional)
+Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,Índice de carga y velocidad,Unico,(abierto)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Ancho,Unico,(abierto)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Alto (perfil),Unico,(abierto)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Rin,Unico,(abierto)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Ciudad
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Carretera
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Multipropósito
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Todoterreno (A/T)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Barro (M/T)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Uso,Multiple,Carga
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,Runflat
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,Reforzada (XL)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,M+S (barro y nieve)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,All Season
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,Baja resistencia (eco)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Características,Multiple,Silenciosa
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Construcción,Unico,Radial
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Construcción,Unico,Diagonal (convencional)
+Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,Índice de carga y velocidad,Unico,(abierto)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Ancho,Unico,(abierto)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Alto (perfil),Unico,(abierto)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Rin,Unico,(abierto)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Ciudad
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Carretera
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Multipropósito
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Todoterreno (A/T)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Barro (M/T)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Uso,Multiple,Carga
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,Runflat
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,Reforzada (XL)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,M+S (barro y nieve)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,All Season
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,Baja resistencia (eco)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Características,Multiple,Silenciosa
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Construcción,Unico,Radial
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Construcción,Unico,Diagonal (convencional)
+Llantas de van, camión y transporte,/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,Índice de carga y velocidad,Unico,(abierto)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Ancho,Unico,(abierto)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Alto (perfil),Unico,(abierto)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Rin,Unico,(abierto)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Ciudad
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Carretera
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Multipropósito
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Todoterreno (A/T)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Barro (M/T)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Uso,Multiple,Carga
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,Runflat
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,Reforzada (XL)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,M+S (barro y nieve)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,All Season
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,Baja resistencia (eco)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Características,Multiple,Silenciosa
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Construcción,Unico,Radial
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Construcción,Unico,Diagonal (convencional)
+Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,Índice de carga y velocidad,Unico,(abierto)

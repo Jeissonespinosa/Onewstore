@@ -4039,6 +4039,1298 @@
       "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general"
     ]
   },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-carros",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bobinas": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bobinas-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bobinas-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bobinas-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-bobinas-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-bobinas-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Bobinas</text></svg>",
+      "alt": "Bobinas",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/bobinas",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bobinas-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bobinas-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bobinas-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bobinas-txt": {
+    "props": {
+      "text": "[Bobinas](/carros/electrico-y-electronico/encendido/bobinas)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bobinas-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/bobinas)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Módulos y distribuidores de encendido</text></svg>",
+      "alt": "Módulos y distribuidores de encendido",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-txt": {
+    "props": {
+      "text": "[Módulos y distribuidores de encendido](/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Bujías de encendido</text></svg>",
+      "alt": "Bujías de encendido",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/bujias-de-encendido",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-txt": {
+    "props": {
+      "text": "[Bujías de encendido](/carros/electrico-y-electronico/encendido/bujias-de-encendido)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/bujias-de-encendido)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Cables de alta</text></svg>",
+      "alt": "Cables de alta",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/cables-de-alta",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-txt": {
+    "props": {
+      "text": "[Cables de alta](/carros/electrico-y-electronico/encendido/cables-de-alta)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/cables-de-alta)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Bujías de precalentamiento</text></svg>",
+      "alt": "Bujías de precalentamiento",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-txt": {
+    "props": {
+      "text": "[Bujías de precalentamiento](/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Kits de sincronización (afinación)</text></svg>",
+      "alt": "Kits de sincronización (afinación)",
+      "link": {
+        "url": "/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-txt": {
+    "props": {
+      "text": "[Kits de sincronización (afinación)](/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-encendido": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bobinas",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-encendido",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-cables-de-alta",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion"
+    ]
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-carros",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Motores de arranque</text></svg>",
+      "alt": "Motores de arranque",
+      "link": {
+        "url": "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-txt": {
+    "props": {
+      "text": "[Motores de arranque](/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Bendix y automáticos de arranque</text></svg>",
+      "alt": "Bendix y automáticos de arranque",
+      "link": {
+        "url": "/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-txt": {
+    "props": {
+      "text": "[Bendix y automáticos de arranque](/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Alternadores</text></svg>",
+      "alt": "Alternadores",
+      "link": {
+        "url": "/carros/electrico-y-electronico/arranque-y-carga/alternadores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-txt": {
+    "props": {
+      "text": "[Alternadores](/carros/electrico-y-electronico/arranque-y-carga/alternadores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/arranque-y-carga/alternadores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Reguladores de voltaje</text></svg>",
+      "alt": "Reguladores de voltaje",
+      "link": {
+        "url": "/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-txt": {
+    "props": {
+      "text": "[Reguladores de voltaje](/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-arranque-y-carga": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-alternadores",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje"
+    ]
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-carros",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Computadores ECU</text></svg>",
+      "alt": "Computadores ECU",
+      "link": {
+        "url": "/carros/electrico-y-electronico/gestion-electronica/computadores-ecu",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-txt": {
+    "props": {
+      "text": "[Computadores ECU](/carros/electrico-y-electronico/gestion-electronica/computadores-ecu)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/gestion-electronica/computadores-ecu)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Módulos electrónicos</text></svg>",
+      "alt": "Módulos electrónicos",
+      "link": {
+        "url": "/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-txt": {
+    "props": {
+      "text": "[Módulos electrónicos](/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Actuadores</text></svg>",
+      "alt": "Actuadores",
+      "link": {
+        "url": "/carros/electrico-y-electronico/gestion-electronica/actuadores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-txt": {
+    "props": {
+      "text": "[Actuadores](/carros/electrico-y-electronico/gestion-electronica/actuadores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/gestion-electronica/actuadores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Sensores de motor (CKP, CMP, temperatura)</text></svg>",
+      "alt": "Sensores de motor (CKP, CMP, temperatura)",
+      "link": {
+        "url": "/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-txt": {
+    "props": {
+      "text": "[Sensores de motor (CKP, CMP, temperatura)](/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-gestion-electronica": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-computadores-ecu",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-actuadores",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura"
+    ]
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-section": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineasSection"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-inner"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-inner": {
+    "props": {
+      "blockClass": "rxLineasInner",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-cats-heading-carros",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-fusibles": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Fusibles</text></svg>",
+      "alt": "Fusibles",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/fusibles",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-txt": {
+    "props": {
+      "text": "[Fusibles](/carros/electrico-y-electronico/electrico-general/fusibles)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-fusibles-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/fusibles)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-reles": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-reles-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-reles-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-reles-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-reles-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-reles-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Relés</text></svg>",
+      "alt": "Relés",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/reles",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-reles-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-reles-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-reles-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-reles-txt": {
+    "props": {
+      "text": "[Relés](/carros/electrico-y-electronico/electrico-general/reles)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-reles-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/reles)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Suiches de encendido y cilindros de llave</text></svg>",
+      "alt": "Suiches de encendido y cilindros de llave",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-txt": {
+    "props": {
+      "text": "[Suiches de encendido y cilindros de llave](/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Suiches e interruptores</text></svg>",
+      "alt": "Suiches e interruptores",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-txt": {
+    "props": {
+      "text": "[Suiches e interruptores](/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Llaves y controles (carcasas, chips)</text></svg>",
+      "alt": "Llaves y controles (carcasas, chips)",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-txt": {
+    "props": {
+      "text": "[Llaves y controles (carcasas, chips)](/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-cableado": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-cableado-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-cableado-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-cableado-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-cableado-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-cableado-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Cableado</text></svg>",
+      "alt": "Cableado",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/cableado",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-cableado-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-cableado-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-cableado-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-cableado-txt": {
+    "props": {
+      "text": "[Cableado](/carros/electrico-y-electronico/electrico-general/cableado)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-cableado-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/cableado)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-conectores": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-conectores-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-conectores-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-conectores-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-conectores-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-conectores-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Conectores</text></svg>",
+      "alt": "Conectores",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/conectores",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-conectores-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-conectores-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-conectores-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-conectores-txt": {
+    "props": {
+      "text": "[Conectores](/carros/electrico-y-electronico/electrico-general/conectores)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-conectores-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/conectores)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-pitos": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-pitos-media",
+      "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-pitos-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-pitos-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-carros-electrico-y-electronico-electrico-general-pitos-img"
+    ]
+  },
+  "image#rx-g-carros-electrico-y-electronico-electrico-general-pitos-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Pitos</text></svg>",
+      "alt": "Pitos",
+      "link": {
+        "url": "/carros/electrico-y-electronico/electrico-general/pitos",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general-pitos-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-pitos-txt",
+      "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-pitos-arrow"
+    ]
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-pitos-txt": {
+    "props": {
+      "text": "[Pitos](/carros/electrico-y-electronico/electrico-general/pitos)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-carros-electrico-y-electronico-electrico-general-pitos-arrow": {
+    "props": {
+      "text": "[→](/carros/electrico-y-electronico/electrico-general/pitos)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.row#rx-g-carros-electrico-y-electronico-electrico-general": {
+    "props": {
+      "blockClass": "rxLineasGrid"
+    },
+    "children": [
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-fusibles",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-reles",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-cableado",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-conectores",
+      "flex-layout.col#rx-g-carros-electrico-y-electronico-electrico-general-pitos"
+    ]
+  },
   "flex-layout.row#rx-g-carros-iluminacion-section": {
     "props": {
       "fullWidth": true,
@@ -5775,59 +7067,6 @@
       "blockClass": "rxLineaArrow"
     }
   },
-  "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor": {
-    "props": {
-      "blockClass": "rxLineaCard",
-      "width": "100%"
-    },
-    "children": [
-      "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-media",
-      "flex-layout.row#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-foot"
-    ]
-  },
-  "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-media": {
-    "props": {
-      "blockClass": "rxLineaMedia",
-      "width": "100%"
-    },
-    "children": [
-      "image#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-img"
-    ]
-  },
-  "image#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-img": {
-    "props": {
-      "blockClass": "rxLineaImage",
-      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Retenedores de motor</text></svg>",
-      "alt": "Retenedores de motor",
-      "link": {
-        "url": "/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor",
-        "newTab": false,
-        "attributeNofollow": false
-      }
-    }
-  },
-  "flex-layout.row#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-foot": {
-    "props": {
-      "blockClass": "rxLineaFoot",
-      "preventHorizontalStretch": true
-    },
-    "children": [
-      "rich-text#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-txt",
-      "rich-text#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-arrow"
-    ]
-  },
-  "rich-text#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-txt": {
-    "props": {
-      "text": "[Retenedores de motor](/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor)",
-      "blockClass": "rxLineaLabel"
-    }
-  },
-  "rich-text#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor-arrow": {
-    "props": {
-      "text": "[→](/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor)",
-      "blockClass": "rxLineaArrow"
-    }
-  },
   "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite": {
     "props": {
       "blockClass": "rxLineaCard",
@@ -6001,7 +7240,6 @@
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-valvulas-y-guias",
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-camisas",
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor",
-      "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor",
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite",
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-soportes-de-motor",
       "flex-layout.col#rx-g-carros-motor-y-transmision-bloque-y-culata-motores-completos"

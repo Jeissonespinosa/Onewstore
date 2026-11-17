@@ -770,8 +770,12 @@
               "path": "/motos/accesorios/parrillas-y-portamaletas"
             },
             {
-              "nombre": "Sliders, defensas y cubrecárter",
-              "path": "/motos/accesorios/sliders-defensas-y-cubrecarter"
+              "nombre": "Defensas (mataperros)",
+              "path": "/motos/accesorios/defensas-mataperros"
+            },
+            {
+              "nombre": "Sliders y cubrecárter",
+              "path": "/motos/accesorios/sliders-y-cubrecarter"
             },
             {
               "nombre": "Pijamas (cubremotos)",

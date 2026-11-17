@@ -58,7 +58,6 @@ cada termino queda en uno solo.
    Kits de reparación de frenos (Motos) + Kits de reparación de frenos (Carros)
    Depósitos de líquido de frenos (Motos) + Depósitos de líquido de frenos (Carros)
    Eléctrico y electrónico (Motos) + Eléctrico y electrónico (Carros)
-   Bujías (Motos) + Bujías (Carros)
    Pitos (Motos) + Pitos (Carros)
    Iluminación (Motos) + Iluminación (Carros)
    Farolas (Motos) + Farolas (Carros)
@@ -77,6 +76,7 @@ cada termino queda en uno solo.
    Tecnología y seguridad (Motos) + Tecnología y seguridad (Carros)
    Rastreo GPS (Motos) + Rastreo GPS (Carros)
    Alarmas (Motos) + Alarmas (Carros)
+   Bujías de encendido (Carros) + Bujías (Motos)
    Clutch (embrague) (Carros) + Kits de clutch (Carros)
    Aditivos y grasas (Motos) + Grasas (Carros)
    Cadenillas (cadenas de repartición) (Motos) + Cadenas de repartición (Carros)
@@ -84,7 +84,7 @@ cada termino queda en uno solo.
    Fusibles y relés (Motos) + Fusibles (Carros)
    Cableado y conectores (Motos) + Cableado (Carros)
 
-2. TERMINOS DESCARTADOS (84)
+2. TERMINOS DESCARTADOS (90)
    "neumáticos": sale de Llantas de automóvil [Carros] y queda en Neumáticos (tripas) [Motos]
    "camión": sale de Llantas de van, camión y transporte [Carros] y queda en Baterías para furgón, camión y bus [Carros]
    "caja": sale de Transmisión y caja [Carros] y queda en Aceite de transmisión [Carros]
@@ -100,6 +100,12 @@ cada termino queda en uno solo.
    "bobina de encendido": sale de Bobinas [Carros] y queda en Bobinas de alta [Motos]
    "bobina de chispa": sale de Bobinas [Carros] y queda en Bobinas de alta [Motos]
    "módulo de encendido": sale de Módulos y distribuidores de encendido [Carros] y queda en CDI (módulos de encendido) [Motos]
+   "bujías": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
+   "bujía": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
+   "spark plug": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
+   "chispa": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
+   "bujías iridium": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
+   "bujías platino": sale de Bujías de encendido [Carros] y queda en Bujías [Motos]
    "bendix": sale de Bendix y automáticos de arranque [Carros] y queda en Bendix [Motos]
    "automático de arranque": sale de Bendix y automáticos de arranque [Carros] y queda en Automáticos (relés) de arranque [Motos]
    "solenoide de arranque": sale de Bendix y automáticos de arranque [Carros] y queda en Automáticos (relés) de arranque [Motos]
@@ -140,12 +146,12 @@ cada termino queda en uno solo.
    "tubo de escape": sale de Exostos [Motos] y queda en Tubos y puntas de escape [Carros]
    "caja de cambios": sale de Cajas de cambios y engranajes [Motos] y queda en Cajas de cambios [Carros]
    "selectora": sale de Selectoras y palancas de cambios [Motos] y queda en Selectoras y guayas de cambios [Carros]
-   "protector de motor": sale de Sliders, defensas y cubrecárter [Motos] y queda en Guardapolvos y protectores de motor [Carros]
+   "protector de motor": sale de Sliders y cubrecárter [Motos] y queda en Guardapolvos y protectores de motor [Carros]
    "portaplacas": sale de Marcos y portaplacas [Carros] y queda en Portaplacas [Motos]
    "porta placa": sale de Marcos y portaplacas [Carros] y queda en Portaplacas [Motos]
    "cojín": sale de Sillines [Motos] y queda en Cojines [Carros]
    "radios": sale de Rayos y niples [Motos] y queda en Radios [Carros]
-   "defensa": sale de Sliders, defensas y cubrecárter [Motos] y queda en Bómperes (bumper) [Carros]
+   "defensa": sale de Defensas (mataperros) [Motos] y queda en Bómperes (bumper) [Carros]
    "guardafangos": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
    "guardafango": sale de Guardabarros [Motos] y queda en Guardafangos [Carros]
    "guardabarros": sale de Guardafangos [Carros] y queda en Guardabarros [Motos]
@@ -179,10 +185,6 @@ cada termino queda en uno solo.
    Frenos [Carros]
    Suspensión y dirección [Carros]
    Eléctrico y electrónico [Carros]
-   Encendido [Carros]
-   Arranque y carga [Carros]
-   Gestión electrónica [Carros]
-   Eléctrico general [Carros]
    Iluminación [Carros]
    Motor y transmisión [Carros]
    Bloque y culata [Carros]

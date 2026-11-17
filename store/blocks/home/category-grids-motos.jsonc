@@ -7482,56 +7482,109 @@
       "blockClass": "rxLineaArrow"
     }
   },
-  "flex-layout.col#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter": {
+  "flex-layout.col#rx-g-motos-accesorios-defensas-mataperros": {
     "props": {
       "blockClass": "rxLineaCard",
       "width": "100%"
     },
     "children": [
-      "flex-layout.col#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-media",
-      "flex-layout.row#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-foot"
+      "flex-layout.col#rx-g-motos-accesorios-defensas-mataperros-media",
+      "flex-layout.row#rx-g-motos-accesorios-defensas-mataperros-foot"
     ]
   },
-  "flex-layout.col#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-media": {
+  "flex-layout.col#rx-g-motos-accesorios-defensas-mataperros-media": {
     "props": {
       "blockClass": "rxLineaMedia",
       "width": "100%"
     },
     "children": [
-      "image#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-img"
+      "image#rx-g-motos-accesorios-defensas-mataperros-img"
     ]
   },
-  "image#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-img": {
+  "image#rx-g-motos-accesorios-defensas-mataperros-img": {
     "props": {
       "blockClass": "rxLineaImage",
-      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Sliders, defensas y cubrecárter</text></svg>",
-      "alt": "Sliders, defensas y cubrecárter",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Defensas (mataperros)</text></svg>",
+      "alt": "Defensas (mataperros)",
       "link": {
-        "url": "/motos/accesorios/sliders-defensas-y-cubrecarter",
+        "url": "/motos/accesorios/defensas-mataperros",
         "newTab": false,
         "attributeNofollow": false
       }
     }
   },
-  "flex-layout.row#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-foot": {
+  "flex-layout.row#rx-g-motos-accesorios-defensas-mataperros-foot": {
     "props": {
       "blockClass": "rxLineaFoot",
       "preventHorizontalStretch": true
     },
     "children": [
-      "rich-text#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-txt",
-      "rich-text#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-arrow"
+      "rich-text#rx-g-motos-accesorios-defensas-mataperros-txt",
+      "rich-text#rx-g-motos-accesorios-defensas-mataperros-arrow"
     ]
   },
-  "rich-text#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-txt": {
+  "rich-text#rx-g-motos-accesorios-defensas-mataperros-txt": {
     "props": {
-      "text": "[Sliders, defensas y cubrecárter](/motos/accesorios/sliders-defensas-y-cubrecarter)",
+      "text": "[Defensas (mataperros)](/motos/accesorios/defensas-mataperros)",
       "blockClass": "rxLineaLabel"
     }
   },
-  "rich-text#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter-arrow": {
+  "rich-text#rx-g-motos-accesorios-defensas-mataperros-arrow": {
     "props": {
-      "text": "[→](/motos/accesorios/sliders-defensas-y-cubrecarter)",
+      "text": "[→](/motos/accesorios/defensas-mataperros)",
+      "blockClass": "rxLineaArrow"
+    }
+  },
+  "flex-layout.col#rx-g-motos-accesorios-sliders-y-cubrecarter": {
+    "props": {
+      "blockClass": "rxLineaCard",
+      "width": "100%"
+    },
+    "children": [
+      "flex-layout.col#rx-g-motos-accesorios-sliders-y-cubrecarter-media",
+      "flex-layout.row#rx-g-motos-accesorios-sliders-y-cubrecarter-foot"
+    ]
+  },
+  "flex-layout.col#rx-g-motos-accesorios-sliders-y-cubrecarter-media": {
+    "props": {
+      "blockClass": "rxLineaMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-g-motos-accesorios-sliders-y-cubrecarter-img"
+    ]
+  },
+  "image#rx-g-motos-accesorios-sliders-y-cubrecarter-img": {
+    "props": {
+      "blockClass": "rxLineaImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'><rect x='60' y='60' width='680' height='380' rx='24' fill='none' stroke='%23010101' stroke-opacity='.18' stroke-width='3' stroke-dasharray='14 12'/><text x='400' y='240' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='40' font-weight='800' fill='%23010101' fill-opacity='.35'>REEMPLAZAR</text><text x='400' y='290' text-anchor='middle' font-family='Montserrat,Helvetica,sans-serif' font-size='24' fill='%23010101' fill-opacity='.45'>Sliders y cubrecárter</text></svg>",
+      "alt": "Sliders y cubrecárter",
+      "link": {
+        "url": "/motos/accesorios/sliders-y-cubrecarter",
+        "newTab": false,
+        "attributeNofollow": false
+      }
+    }
+  },
+  "flex-layout.row#rx-g-motos-accesorios-sliders-y-cubrecarter-foot": {
+    "props": {
+      "blockClass": "rxLineaFoot",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-g-motos-accesorios-sliders-y-cubrecarter-txt",
+      "rich-text#rx-g-motos-accesorios-sliders-y-cubrecarter-arrow"
+    ]
+  },
+  "rich-text#rx-g-motos-accesorios-sliders-y-cubrecarter-txt": {
+    "props": {
+      "text": "[Sliders y cubrecárter](/motos/accesorios/sliders-y-cubrecarter)",
+      "blockClass": "rxLineaLabel"
+    }
+  },
+  "rich-text#rx-g-motos-accesorios-sliders-y-cubrecarter-arrow": {
+    "props": {
+      "text": "[→](/motos/accesorios/sliders-y-cubrecarter)",
       "blockClass": "rxLineaArrow"
     }
   },
@@ -8179,7 +8232,8 @@
       "flex-layout.col#rx-g-motos-accesorios-maletas-y-baules",
       "flex-layout.col#rx-g-motos-accesorios-alforjas-y-mochilas",
       "flex-layout.col#rx-g-motos-accesorios-parrillas-y-portamaletas",
-      "flex-layout.col#rx-g-motos-accesorios-sliders-defensas-y-cubrecarter",
+      "flex-layout.col#rx-g-motos-accesorios-defensas-mataperros",
+      "flex-layout.col#rx-g-motos-accesorios-sliders-y-cubrecarter",
       "flex-layout.col#rx-g-motos-accesorios-pijamas-cubremotos",
       "flex-layout.col#rx-g-motos-accesorios-cupulas-parabrisas-y-soportes",
       "flex-layout.col#rx-g-motos-accesorios-espejos",

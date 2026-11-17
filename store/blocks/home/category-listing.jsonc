@@ -1210,7 +1210,7 @@
       "search-not-found-layout#rx"
     ]
   },
-  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido": {
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-bobinas": {
     "props": {
       "querySchema": {
         "queryField": "999999",
@@ -1227,7 +1227,7 @@
       "search-not-found-layout#rx"
     ]
   },
-  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-arranque-y-carga": {
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido": {
     "props": {
       "querySchema": {
         "queryField": "999999",
@@ -1244,7 +1244,7 @@
       "search-not-found-layout#rx"
     ]
   },
-  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-gestion-electronica": {
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-bujias-de-encendido": {
     "props": {
       "querySchema": {
         "queryField": "999999",
@@ -1261,7 +1261,313 @@
       "search-not-found-layout#rx"
     ]
   },
-  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general": {
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-cables-de-alta": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-bujias-de-precalentamiento": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-arranque-y-carga-alternadores": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-gestion-electronica-computadores-ecu": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-gestion-electronica-modulos-electronicos": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-gestion-electronica-actuadores": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-fusibles": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-reles": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-suiches-e-interruptores": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-cableado": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-conectores": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-carros-electrico-y-electronico-electrico-general-pitos": {
     "props": {
       "querySchema": {
         "queryField": "999999",
@@ -1602,23 +1908,6 @@
     ]
   },
   "search-result-layout.customQuery#rx-carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor": {
-    "props": {
-      "querySchema": {
-        "queryField": "999999",
-        "mapField": "productClusterIds",
-        "orderByField": "OrderByNameASC",
-        "hideUnavailableItems": true,
-        "skusFilter": "FIRST_AVAILABLE",
-        "maxItemsPerPage": 24
-      }
-    },
-    "blocks": [
-      "search-result-layout.desktop#rx-f",
-      "search-result-layout.mobile#rx-f",
-      "search-not-found-layout#rx"
-    ]
-  },
-  "search-result-layout.customQuery#rx-carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor": {
     "props": {
       "querySchema": {
         "queryField": "999999",
@@ -6684,7 +6973,24 @@
       "search-not-found-layout#rx"
     ]
   },
-  "search-result-layout.customQuery#rx-motos-accesorios-sliders-defensas-y-cubrecarter": {
+  "search-result-layout.customQuery#rx-motos-accesorios-defensas-mataperros": {
+    "props": {
+      "querySchema": {
+        "queryField": "999999",
+        "mapField": "productClusterIds",
+        "orderByField": "OrderByNameASC",
+        "hideUnavailableItems": true,
+        "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 24
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#rx-f",
+      "search-result-layout.mobile#rx-f",
+      "search-not-found-layout#rx"
+    ]
+  },
+  "search-result-layout.customQuery#rx-motos-accesorios-sliders-y-cubrecarter": {
     "props": {
       "querySchema": {
         "queryField": "999999",

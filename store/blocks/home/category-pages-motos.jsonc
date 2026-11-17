@@ -1,5 +1,5 @@
 /* ============================================================
-   PAGINAS DE CATEGORIA — Motos (14 macros, 11 subcategorias, 165 hojas)
+   PAGINAS DE CATEGORIA — Motos (14 macros, 11 subcategorias, 166 hojas)
    ------------------------------------------------------------
    Una pagina por cada nivel del arbol: /motos/<macro>,
    /motos/<macro>/<sub> y /motos/<macro>/<sub>/<hoja> (en las macros sin
@@ -9822,74 +9822,145 @@
       "blockClass": "rxTitle"
     }
   },
-  "store.custom#motos-accesorios-sliders-defensas-y-cubrecarter": {
+  "store.custom#motos-accesorios-defensas-mataperros": {
     "blocks": [
-      "flex-layout.row#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner",
-      "flex-layout.row#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-nav",
-      "search-result-layout.customQuery#rx-motos-accesorios-sliders-defensas-y-cubrecarter"
+      "flex-layout.row#rx-p-motos-accesorios-defensas-mataperros-banner",
+      "flex-layout.row#rx-p-motos-accesorios-defensas-mataperros-nav",
+      "search-result-layout.customQuery#rx-motos-accesorios-defensas-mataperros"
     ]
   },
-  "flex-layout.row#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner": {
+  "flex-layout.row#rx-p-motos-accesorios-defensas-mataperros-banner": {
     "props": {
       "fullWidth": true,
       "blockClass": "rxLineaBanner"
     },
     "children": [
-      "flex-layout.col#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-media",
-      "flex-layout.col#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-content"
+      "flex-layout.col#rx-p-motos-accesorios-defensas-mataperros-banner-media",
+      "flex-layout.col#rx-p-motos-accesorios-defensas-mataperros-banner-content"
     ]
   },
-  "flex-layout.col#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-media": {
+  "flex-layout.col#rx-p-motos-accesorios-defensas-mataperros-banner-media": {
     "props": {
       "blockClass": "rxLineaBannerMedia",
       "width": "100%"
     },
     "children": [
-      "image#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-img"
+      "image#rx-p-motos-accesorios-defensas-mataperros-banner-img"
     ]
   },
-  "image#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-img": {
+  "image#rx-p-motos-accesorios-defensas-mataperros-banner-img": {
     "props": {
       "blockClass": "rxSlideImage",
-      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400'><rect width='1600' height='400' fill='%23010101'/><path d='M880 400 L1130 0 L1400 0 L1150 400 Z' fill='%23FF371E' opacity='.16'/><text x='1540' y='330' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%23ffffff' fill-opacity='.35'>REEMPLAZAR</text><text x='1540' y='366' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='20' fill='%23ffffff' fill-opacity='.4'>motos / Sliders, defensas y cubrecárter / 1600x400</text></svg>",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400'><rect width='1600' height='400' fill='%23010101'/><path d='M880 400 L1130 0 L1400 0 L1150 400 Z' fill='%23FF371E' opacity='.16'/><text x='1540' y='330' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%23ffffff' fill-opacity='.35'>REEMPLAZAR</text><text x='1540' y='366' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='20' fill='%23ffffff' fill-opacity='.4'>motos / Defensas (mataperros) / 1600x400</text></svg>",
       "alt": ""
     }
   },
-  "flex-layout.col#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-banner-content": {
+  "flex-layout.col#rx-p-motos-accesorios-defensas-mataperros-banner-content": {
     "props": {
       "blockClass": "rxLineaBannerContent",
       "width": "100%"
     },
     "children": [
-      "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-eyebrow",
-      "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-title"
+      "rich-text#rx-p-motos-accesorios-defensas-mataperros-eyebrow",
+      "rich-text#rx-p-motos-accesorios-defensas-mataperros-title"
     ]
   },
-  "flex-layout.row#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-nav": {
+  "flex-layout.row#rx-p-motos-accesorios-defensas-mataperros-nav": {
     "props": {
       "fullWidth": true,
       "blockClass": "rxBackBar",
       "preventHorizontalStretch": true
     },
     "children": [
-      "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-back"
+      "rich-text#rx-p-motos-accesorios-defensas-mataperros-back"
     ]
   },
-  "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-back": {
+  "rich-text#rx-p-motos-accesorios-defensas-mataperros-back": {
     "props": {
       "text": "[← Volver a Accesorios](/motos/accesorios)",
       "blockClass": "rxBack"
     }
   },
-  "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-eyebrow": {
+  "rich-text#rx-p-motos-accesorios-defensas-mataperros-eyebrow": {
     "props": {
       "text": "Motos · Accesorios",
       "blockClass": "rxEyebrow"
     }
   },
-  "rich-text#rx-p-motos-accesorios-sliders-defensas-y-cubrecarter-title": {
+  "rich-text#rx-p-motos-accesorios-defensas-mataperros-title": {
     "props": {
-      "text": "# Sliders, defensas y cubrecárter",
+      "text": "# Defensas (mataperros)",
+      "blockClass": "rxTitle"
+    }
+  },
+  "store.custom#motos-accesorios-sliders-y-cubrecarter": {
+    "blocks": [
+      "flex-layout.row#rx-p-motos-accesorios-sliders-y-cubrecarter-banner",
+      "flex-layout.row#rx-p-motos-accesorios-sliders-y-cubrecarter-nav",
+      "search-result-layout.customQuery#rx-motos-accesorios-sliders-y-cubrecarter"
+    ]
+  },
+  "flex-layout.row#rx-p-motos-accesorios-sliders-y-cubrecarter-banner": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxLineaBanner"
+    },
+    "children": [
+      "flex-layout.col#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-media",
+      "flex-layout.col#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-content"
+    ]
+  },
+  "flex-layout.col#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-media": {
+    "props": {
+      "blockClass": "rxLineaBannerMedia",
+      "width": "100%"
+    },
+    "children": [
+      "image#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-img"
+    ]
+  },
+  "image#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-img": {
+    "props": {
+      "blockClass": "rxSlideImage",
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400'><rect width='1600' height='400' fill='%23010101'/><path d='M880 400 L1130 0 L1400 0 L1150 400 Z' fill='%23FF371E' opacity='.16'/><text x='1540' y='330' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='30' font-weight='800' fill='%23ffffff' fill-opacity='.35'>REEMPLAZAR</text><text x='1540' y='366' text-anchor='end' font-family='Montserrat,Helvetica,sans-serif' font-size='20' fill='%23ffffff' fill-opacity='.4'>motos / Sliders y cubrecárter / 1600x400</text></svg>",
+      "alt": ""
+    }
+  },
+  "flex-layout.col#rx-p-motos-accesorios-sliders-y-cubrecarter-banner-content": {
+    "props": {
+      "blockClass": "rxLineaBannerContent",
+      "width": "100%"
+    },
+    "children": [
+      "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-eyebrow",
+      "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-title"
+    ]
+  },
+  "flex-layout.row#rx-p-motos-accesorios-sliders-y-cubrecarter-nav": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxBackBar",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-back"
+    ]
+  },
+  "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-back": {
+    "props": {
+      "text": "[← Volver a Accesorios](/motos/accesorios)",
+      "blockClass": "rxBack"
+    }
+  },
+  "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-eyebrow": {
+    "props": {
+      "text": "Motos · Accesorios",
+      "blockClass": "rxEyebrow"
+    }
+  },
+  "rich-text#rx-p-motos-accesorios-sliders-y-cubrecarter-title": {
+    "props": {
+      "text": "# Sliders y cubrecárter",
       "blockClass": "rxTitle"
     }
   },

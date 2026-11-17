@@ -5,7 +5,6 @@ store/routes.json (y al bloque store.custom#... correspondiente).
 
 generada   store.custom#landing-herramientas                        /herramientas
 generada   store.custom#carros-llantas-y-rines                      /carros/llantas-y-rines
-generada   store.custom#carros-llantas-y-rines-llantas              /carros/llantas-y-rines/llantas
 generada   store.custom#carros-llantas-y-rines-rines                /carros/llantas-y-rines/rines
 generada   store.custom#carros-llantas-y-rines-rines-rines-de-acero /carros/llantas-y-rines/rines/rines-de-acero
 generada   store.custom#carros-llantas-y-rines-rines-rines-de-aluminio /carros/llantas-y-rines/rines/rines-de-aluminio
@@ -78,9 +77,31 @@ generada   store.custom#carros-suspension-y-direccion-coilovers-y-suspension-dep
 generada   store.custom#carros-suspension-y-direccion-ballestas-muelles-de-hoja /carros/suspension-y-direccion/ballestas-muelles-de-hoja
 generada   store.custom#carros-electrico-y-electronico              /carros/electrico-y-electronico
 generada   store.custom#carros-electrico-y-electronico-encendido    /carros/electrico-y-electronico/encendido
+generada   store.custom#carros-electrico-y-electronico-encendido-bobinas /carros/electrico-y-electronico/encendido/bobinas
+generada   store.custom#carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido /carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido
+generada   store.custom#carros-electrico-y-electronico-encendido-bujias-de-encendido /carros/electrico-y-electronico/encendido/bujias-de-encendido
+generada   store.custom#carros-electrico-y-electronico-encendido-cables-de-alta /carros/electrico-y-electronico/encendido/cables-de-alta
+generada   store.custom#carros-electrico-y-electronico-encendido-bujias-de-precalentamiento /carros/electrico-y-electronico/encendido/bujias-de-precalentamiento
+generada   store.custom#carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion /carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion
 generada   store.custom#carros-electrico-y-electronico-arranque-y-carga /carros/electrico-y-electronico/arranque-y-carga
+generada   store.custom#carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque /carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque
+generada   store.custom#carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque /carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque
+generada   store.custom#carros-electrico-y-electronico-arranque-y-carga-alternadores /carros/electrico-y-electronico/arranque-y-carga/alternadores
+generada   store.custom#carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje /carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje
 generada   store.custom#carros-electrico-y-electronico-gestion-electronica /carros/electrico-y-electronico/gestion-electronica
+generada   store.custom#carros-electrico-y-electronico-gestion-electronica-computadores-ecu /carros/electrico-y-electronico/gestion-electronica/computadores-ecu
+generada   store.custom#carros-electrico-y-electronico-gestion-electronica-modulos-electronicos /carros/electrico-y-electronico/gestion-electronica/modulos-electronicos
+generada   store.custom#carros-electrico-y-electronico-gestion-electronica-actuadores /carros/electrico-y-electronico/gestion-electronica/actuadores
+generada   store.custom#carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura /carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura
 generada   store.custom#carros-electrico-y-electronico-electrico-general /carros/electrico-y-electronico/electrico-general
+generada   store.custom#carros-electrico-y-electronico-electrico-general-fusibles /carros/electrico-y-electronico/electrico-general/fusibles
+generada   store.custom#carros-electrico-y-electronico-electrico-general-reles /carros/electrico-y-electronico/electrico-general/reles
+generada   store.custom#carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave /carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave
+generada   store.custom#carros-electrico-y-electronico-electrico-general-suiches-e-interruptores /carros/electrico-y-electronico/electrico-general/suiches-e-interruptores
+generada   store.custom#carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips /carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips
+generada   store.custom#carros-electrico-y-electronico-electrico-general-cableado /carros/electrico-y-electronico/electrico-general/cableado
+generada   store.custom#carros-electrico-y-electronico-electrico-general-conectores /carros/electrico-y-electronico/electrico-general/conectores
+generada   store.custom#carros-electrico-y-electronico-electrico-general-pitos /carros/electrico-y-electronico/electrico-general/pitos
 generada   store.custom#carros-iluminacion                          /carros/iluminacion
 generada   store.custom#carros-iluminacion-farolas                  /carros/iluminacion/farolas
 generada   store.custom#carros-iluminacion-stops                    /carros/iluminacion/stops
@@ -104,7 +125,6 @@ generada   store.custom#carros-motor-y-transmision-bloque-y-culata-culatas /carr
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-valvulas-y-guias /carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-camisas /carros/motor-y-transmision/bloque-y-culata/camisas
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor /carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor
-generada   store.custom#carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor /carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite /carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-soportes-de-motor /carros/motor-y-transmision/bloque-y-culata/soportes-de-motor
 generada   store.custom#carros-motor-y-transmision-bloque-y-culata-motores-completos /carros/motor-y-transmision/bloque-y-culata/motores-completos
@@ -444,7 +464,8 @@ generada   store.custom#motos-accesorios                            /motos/acces
 generada   store.custom#motos-accesorios-maletas-y-baules           /motos/accesorios/maletas-y-baules
 generada   store.custom#motos-accesorios-alforjas-y-mochilas        /motos/accesorios/alforjas-y-mochilas
 generada   store.custom#motos-accesorios-parrillas-y-portamaletas   /motos/accesorios/parrillas-y-portamaletas
-generada   store.custom#motos-accesorios-sliders-defensas-y-cubrecarter /motos/accesorios/sliders-defensas-y-cubrecarter
+generada   store.custom#motos-accesorios-defensas-mataperros        /motos/accesorios/defensas-mataperros
+generada   store.custom#motos-accesorios-sliders-y-cubrecarter      /motos/accesorios/sliders-y-cubrecarter
 generada   store.custom#motos-accesorios-pijamas-cubremotos         /motos/accesorios/pijamas-cubremotos
 generada   store.custom#motos-accesorios-cupulas-parabrisas-y-soportes /motos/accesorios/cupulas-parabrisas-y-soportes
 generada   store.custom#motos-accesorios-espejos                    /motos/accesorios/espejos

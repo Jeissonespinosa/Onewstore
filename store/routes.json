@@ -257,14 +257,80 @@
   "store.custom#carros-electrico-y-electronico-encendido": {
     "path": "/carros/electrico-y-electronico/encendido"
   },
+  "store.custom#carros-electrico-y-electronico-encendido-bobinas": {
+    "path": "/carros/electrico-y-electronico/encendido/bobinas"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido-modulos-y-distribuidores-de-encendido": {
+    "path": "/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido-bujias-de-encendido": {
+    "path": "/carros/electrico-y-electronico/encendido/bujias-de-encendido"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido-cables-de-alta": {
+    "path": "/carros/electrico-y-electronico/encendido/cables-de-alta"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido-bujias-de-precalentamiento": {
+    "path": "/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento"
+  },
+  "store.custom#carros-electrico-y-electronico-encendido-kits-de-sincronizacion-afinacion": {
+    "path": "/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion"
+  },
   "store.custom#carros-electrico-y-electronico-arranque-y-carga": {
     "path": "/carros/electrico-y-electronico/arranque-y-carga"
+  },
+  "store.custom#carros-electrico-y-electronico-arranque-y-carga-motores-de-arranque": {
+    "path": "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque"
+  },
+  "store.custom#carros-electrico-y-electronico-arranque-y-carga-bendix-y-automaticos-de-arranque": {
+    "path": "/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque"
+  },
+  "store.custom#carros-electrico-y-electronico-arranque-y-carga-alternadores": {
+    "path": "/carros/electrico-y-electronico/arranque-y-carga/alternadores"
+  },
+  "store.custom#carros-electrico-y-electronico-arranque-y-carga-reguladores-de-voltaje": {
+    "path": "/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje"
   },
   "store.custom#carros-electrico-y-electronico-gestion-electronica": {
     "path": "/carros/electrico-y-electronico/gestion-electronica"
   },
+  "store.custom#carros-electrico-y-electronico-gestion-electronica-computadores-ecu": {
+    "path": "/carros/electrico-y-electronico/gestion-electronica/computadores-ecu"
+  },
+  "store.custom#carros-electrico-y-electronico-gestion-electronica-modulos-electronicos": {
+    "path": "/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos"
+  },
+  "store.custom#carros-electrico-y-electronico-gestion-electronica-actuadores": {
+    "path": "/carros/electrico-y-electronico/gestion-electronica/actuadores"
+  },
+  "store.custom#carros-electrico-y-electronico-gestion-electronica-sensores-de-motor-ckp-cmp-temperatura": {
+    "path": "/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura"
+  },
   "store.custom#carros-electrico-y-electronico-electrico-general": {
     "path": "/carros/electrico-y-electronico/electrico-general"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-fusibles": {
+    "path": "/carros/electrico-y-electronico/electrico-general/fusibles"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-reles": {
+    "path": "/carros/electrico-y-electronico/electrico-general/reles"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-suiches-de-encendido-y-cilindros-de-llave": {
+    "path": "/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-suiches-e-interruptores": {
+    "path": "/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-llaves-y-controles-carcasas-chips": {
+    "path": "/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-cableado": {
+    "path": "/carros/electrico-y-electronico/electrico-general/cableado"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-conectores": {
+    "path": "/carros/electrico-y-electronico/electrico-general/conectores"
+  },
+  "store.custom#carros-electrico-y-electronico-electrico-general-pitos": {
+    "path": "/carros/electrico-y-electronico/electrico-general/pitos"
   },
   "store.custom#carros-iluminacion": {
     "path": "/carros/iluminacion"
@@ -334,9 +400,6 @@
   },
   "store.custom#carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor": {
     "path": "/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor"
-  },
-  "store.custom#carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor": {
-    "path": "/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor"
   },
   "store.custom#carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite": {
     "path": "/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite"
@@ -1355,8 +1418,11 @@
   "store.custom#motos-accesorios-parrillas-y-portamaletas": {
     "path": "/motos/accesorios/parrillas-y-portamaletas"
   },
-  "store.custom#motos-accesorios-sliders-defensas-y-cubrecarter": {
-    "path": "/motos/accesorios/sliders-defensas-y-cubrecarter"
+  "store.custom#motos-accesorios-defensas-mataperros": {
+    "path": "/motos/accesorios/defensas-mataperros"
+  },
+  "store.custom#motos-accesorios-sliders-y-cubrecarter": {
+    "path": "/motos/accesorios/sliders-y-cubrecarter"
   },
   "store.custom#motos-accesorios-pijamas-cubremotos": {
     "path": "/motos/accesorios/pijamas-cubremotos"

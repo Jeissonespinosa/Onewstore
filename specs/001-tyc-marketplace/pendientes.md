@@ -12,7 +12,7 @@ Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decision
 
 ## A. Prerrequisitos técnicos para reanudar (bloquean el grupo 1)
 
-### P1. Reiniciar `vtex link` — Diego
+### P1. Reiniciar `vtex link` — Diego *(hecho el 2026-11-17: `/legal-prueba` se sirvió tras reiniciar; hay que repetirlo al añadir páginas o carpetas nuevas)*
 - **Por qué:** `vtex link` (iniciado a las 10:07, antes de cambiar de rama) no sirvió una ruta nueva ni una carpeta nueva: `/legal-prueba` (en el `devdiego` de entonces) respondió "No encontramos ningún resultado" tras esperar y recargar. El README ya advierte que hay que reiniciarlo cuando se añaden archivos.
 - **Cómo:**
   1. Detén el `vtex link` actual (Ctrl+C en su terminal).
@@ -29,6 +29,7 @@ Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decision
   2. Busca en la configuración del checkout (Configuración de la tienda → Checkout) cualquier opción de **términos y condiciones / términos de uso** y anota si existe.
   3. En la misma sección, busca la pestaña de **código** o de archivos personalizados (`checkout6-custom.js`, `checkout6-custom.css`) y anota si existe y si hoy tiene contenido.
   4. No guardes ni publiques nada. Toma capturas.
+- **Bloqueo hallado el 2026-11-17:** al abrir *Store Settings → Storefront → Checkout* en `pruebatema`, el admin muestra "Your admin has been blocked due to unpaid invoices" (en rojo, con enlace "For more information"). No se abrió el enlace ni se tocó nada. **Hay que resolver esto primero** (facturación de la cuenta `onewstore` con VTEX) o la configuración del checkout no se puede revisar. No se probó si el bloqueo afecta a otras secciones del admin ni al sitio (el Site Editor y el sitio sí cargaron).
 - **Entrega:** cuéntame (o pega las capturas) qué ves en cada punto; yo registro la tabla "capacidad → nativo / personalizado / no posible" en `plan.md`.
 - **Desbloquea:** tarea 1.1 y la decisión 7 del plan; después, el grupo 7.
 

@@ -165,6 +165,43 @@
    vuelve al nativo). Los `customData` ya escritos quedan en los pedidos; no hay nada que
    migrar.
 
+## Resultados del spike
+
+### Tarea 1.2 — páginas legales con `rich-text` (2026-11-17)
+
+Probado en el workspace `pruebatema` (`vtex link` reiniciado) con una página temporal
+`/legal-prueba` de 2.749 palabras (1 `h1`, 8 `h2`, 8 `h3`, listas y enlaces). Escritorio a
+1536 px; 360 px con un iframe (la herramienta del navegador no cambia el ancho de la ventana).
+La página y su ruta se retiraron; no se guardó nada en el Site Editor.
+
+| Pregunta | Resultado | Observación |
+|---|---|---|
+| ¿Se sirve una página nueva `store.custom#…`? | **Sí**, pero **solo tras reiniciar `vtex link`** | Con el link iniciado antes de crear la carpeta o la ruta, daba "sin resultados" (2 intentos). Hay que reiniciarlo al añadir cada página legal. |
+| ¿Se edita sin redeploy (RF-6)? | **Sí** | El Site Editor lista el bloque "Rich Text" de la página y expone el campo **Text** con el Markdown fuente, con `VERSIONS` y `SAVE`. En el workspace avisa que los cambios "no van a producción" (modo desarrollo). *No se probó guardar.* |
+| ¿Qué Markdown renderiza? | `#`/`##`/`###`, listas con viñetas, enlaces, párrafos | **Sin probar:** tablas, anclas internas (`#id`), citas y listas numeradas. |
+| ¿Es legible? | **No, tal cual** | Sin `max-width` ni margen: a 1536 px el texto mide 1.521 px (≈230 caracteres por línea) y pega al borde; a 360 px no desborda, pero el `h1` es de 48 px y el `h2` de 36 px y también pega al borde. Hace falta un contenedor con ancho máximo y relleno, y tamaños de título propios (`blockClass: "legal"` + CSS). |
+| ¿Es cómodo editar un documento largo? | **Poco** | El campo "Text" del Site Editor es una caja pequeña para ~2.700 palabras. |
+
+**Decisiones derivadas (cambian el plan):**
+- **Contenedor propio para las páginas legales:** `flex-layout.row`/`col` con `blockClass` legal y CSS (ancho máximo ~72 ch, relleno, tamaños de título). Va en la tarea 4.1; el CSS en `styles/css/vtex.rich-text.css` (ya existe).
+- **Un `rich-text` por sección** de cada documento (confirma el riesgo "texto largo en un solo bloque"): cada sección se edita en su propia caja. Se aplica desde la tarea 4.3.
+- **Riesgo nuevo, sin verificar:** si alguien edita el texto en el Site Editor, esa edición vive en el workspace y no vuelve al repositorio, así que el bloque del código y lo publicado pueden divergir. La regla: el texto se cambia en el repo; el Site Editor solo para correcciones puntuales que luego se copian al borrador. Se anota en el README (tarea 4.4).
+- El feedback flotante de la spec 002 queda sobre el texto en móvil; se revisa en 4.2.
+
+### Tarea 1.3 — seller visible en el PDP (2026-11-17)
+
+Probado en `pruebatema`: se añadió `product-seller-name` (de `vtex.product-price`, ya en el
+manifest) a `flex-layout.col#right-col` de `store/blocks/pdp/product.jsonc`, justo tras el
+precio, y se abrió `/llanta-aeolus-agc28-1100-20/p` a 1536 px. El cambio se revirtió; la
+integración definitiva es la tarea 7.4.
+
+| Pregunta | Resultado | Observación |
+|---|---|---|
+| ¿Hay bloque nativo que muestre al seller en el PDP? | **Sí: `product-seller-name`** | Renderiza "Vendido por: Repuestox" (el texto lo pone la app); el contenedor lleva el modificador `--isDefaultSeller` porque el seller es el 1. |
+| ¿Hace falta código propio? | **No para el PDP** | Decisión 10 resuelta: se usa el bloque nativo. Queda registrar `product-seller-name` en `NATIVE_INTERFACES` de `scripts/tests/test_store_blocks.py` al añadirlo (tarea 7.4). |
+| ¿Y en el resumen del carrito o el checkout? | **Sin probar** | El checkout nativo no usa bloques del theme; lo que muestre sale del `orderForm` o de `checkout-ui-custom` (tarea 1.1 y 7.4). |
+| ¿«Quién envía»? | **No lo da el bloque** | Es una frase de política, no un dato del producto: va en el texto legal con «Repuestox» (Q4, 2026-11-17) y, si se quiere en la ficha, como texto fijo en el PDP. |
+
 ## Open Questions
 
 Deferibles (no bloquean empezar; se resuelven antes de la tarea indicada):

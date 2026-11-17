@@ -1,9 +1,16 @@
 # 002 — Feedback de la experiencia de compra y del sitio
 
-- **Estado:** draft
+- **Estado:** implementing, PR https://github.com/Jeissonespinosa/Onewstore/pull/4 (2026-11-16: grupos 1-4 y 5.2/5.3 hechos y verificados en `devdiego`; falta 5.1 por el aviso de privacidad y la retención, y el cierre del grupo 6)
 - **Responsable:** Diego
 - **Rama:** `feat/002-feedback`
-- **Depende de:** 000 (contexto); 004 (la infraestructura de formularios en Master Data, hoy rota en `/contact-us`); 001 D5 (aviso de privacidad que se enlaza en los formularios)
+- **Depende de:** 000 (contexto); 001 D5 (aviso de privacidad que se enlaza en los formularios). Ya **no** depende de la infraestructura de formularios de la 004 (ver el cambio de 2026-11-15 abajo); la 004 debería adoptar el mismo servicio.
+
+> **Cambio de diseño (2026-11-15):** VTEX bloquea desde el 26-oct-2026 la creación de campos
+> **públicos** en Master Data v1 y v2 ([nota de VTEX](https://developers.vtex.com/updates/release-notes/2026-10-23-master-data-temporary-restriction-on-public-fields)).
+> Un visitante anónimo ya no puede escribir directamente en Master Data, que era la base de la
+> opción A (`store-form` + Master Data público). La spec adopta un **servicio propio en VTEX IO**
+> que recibe el feedback y lo guarda en campos **privados** con credenciales de la app (§7,
+> opción B). Cambian RF-8b, RF-13, RF-14, los requisitos no funcionales, AC-11 y se añade AC-13.
 
 > **Cambio de alcance (2026-11-15):** esta spec antes cubría reseñas públicas de producto y
 > calificación de sellers (versión del commit `bcb6b65`). Ahora cubre feedback **privado**
@@ -42,7 +49,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 **A. Rating al finalizar la compra**
 - `RF-1` En la página de confirmación del pedido (`store.orderplaced`) se muestra un bloque "¿Cómo fue tu compra?" con 5 estrellas seleccionables y un campo de comentario opcional (máx. 1000 caracteres).
 - `RF-2` "Enviar" se habilita solo con una calificación elegida; el comentario es opcional.
-- `RF-3` Se guarda junto con el número de pedido, la calificación, el comentario, la fecha y el **correo del pedido** (se toma del pedido; el usuario no lo escribe).
+- `RF-3` Se guarda junto con el número de pedido, la calificación, el comentario, la fecha y el **correo que la persona escribe** (opcional; ver RF-8b). No se lee del pedido.
 - `RF-4` Un pedido admite una sola calificación: tras enviarla se muestra un agradecimiento y el control no vuelve a ofrecerse para ese pedido.
 - `RF-5` Funciona para compra como invitado y como usuario registrado; no exige iniciar sesión.
 - `RF-6` Si la calificación es de 1 a 3 estrellas se pide, de forma opcional, el motivo (lista cerrada: envío, producto, precio, uso del sitio, pago, otro).
@@ -50,7 +57,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 **B. Botón flotante de feedback del sitio**
 - `RF-7` Un botón flotante, siempre visible y en la misma esquina, aparece en todas las páginas del theme (no aplica al checkout, que no pertenece al theme).
 - `RF-8` Al activarlo se abre un formulario en modal con: tipo (Problema / Sugerencia de mejora / Otro), mensaje obligatorio (máx. 1000 caracteres) y correo de contacto.
-- `RF-8b` El correo se obtiene así: (1) si el usuario está **autenticado**, el de su cuenta; (2) si no, y el botón se abre desde la **confirmación de un pedido**, el correo del pedido; (3) en cualquier otro caso (usuario **anónimo**), se **solicita** en el formulario, pero es **opcional**: sin correo el feedback se envía igual y el equipo no podrá responderle. En los casos 1 y 2 el correo se muestra ya rellenado y visible en el formulario, para que el usuario sepa a qué dirección se le responderá.
+- `RF-8b` **El correo es siempre el que la persona escribe**, en ambos formularios (calificación de la compra y botón flotante), y es **opcional**: sin correo el feedback se envía igual y el equipo no podrá responder. Si el usuario tiene **sesión iniciada**, el campo arranca **precargado con el correo de su cuenta** y puede editarlo o borrarlo; lo que se guarda es lo que quede escrito. No se lee el correo de los pedidos (decisión 2026-11-16: OMS devuelve un alias `…@ct.vtex.com.br` y leerlo exige permisos amplios sobre pedidos). La precarga la hace el servicio en el servidor (RF-15), solo para la propia sesión.
 - `RF-8c` El botón flotante también se muestra en la confirmación del pedido, junto al bloque de rating de la compra (RF-1).
 - `RF-9` Cada envío guarda automáticamente la URL de la página, la fecha y el tamaño de pantalla (móvil/escritorio). No se guardan más datos técnicos del usuario.
 - `RF-10` Tras enviar, se muestra confirmación y el modal se cierra; si falla el envío se conserva lo escrito y se muestra el error.
@@ -58,12 +65,13 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 - `RF-12` El botón no tapa el minicart, el selector de vehículo ni los controles de la página en móvil (360 px).
 
 **C. Lectura por el equipo**
-- `RF-13` El feedback queda en entidades de Master Data consultables, filtrables y exportables desde el admin de VTEX (`purchase-feedback` y `site-feedback`, nombres a confirmar).
-- `RF-14` Los datos del feedback **no** son legibles públicamente: el sitio solo puede crear registros.
+- `RF-13` El feedback queda en entidades de Master Data con **campos privados**, consultables, filtrables y exportables desde el admin de VTEX. Los nombres de entidad no admiten guiones (p. ej. `purchasefeedback` y `sitefeedback`, a confirmar en la tarea 2.2); las entidades se crean con la API de Master Data, no con el builder `masterdata` (falla en `builder-hub`, spike 1.5).
+- `RF-14` Los datos del feedback **no** son legibles ni escribibles directamente por el público. El navegador solo habla con un **servicio propio** que valida, aplica límites y guarda en Master Data con las credenciales de la app; no existe ningún campo público.
+- `RF-15` El servicio resuelve en el servidor lo que el navegador no debe decidir: el correo de la cuenta de la sesión (solo para precargar) y si un pedido ya fue calificado (RF-4).
 
 ## 5. Requisitos no funcionales
-- **Privacidad (Ley 1581):** el correo se usa solo para responder, aunque se rellene automáticamente desde la cuenta o el pedido; no se pide nombre ni teléfono. Aviso de privacidad enlazado. El correo del usuario autenticado no se envía al navegador de otra persona ni se expone en la URL.
-- **Seguridad:** el comentario se guarda y se muestra escapado (sin HTML/script); límite de envíos por sesión y campo trampa (honeypot) contra spam; esquema público de solo escritura.
+- **Privacidad (Ley 1581):** el correo es opcional y se usa solo para responder, aunque se precargue desde la cuenta; no se pide nombre ni teléfono. Aviso de privacidad enlazado. El correo de la cuenta solo se devuelve a la propia sesión (`no-store`) para precargar el campo, no se expone en la URL, y el servicio no lo escribe en sus registros (logs).
+- **Seguridad:** el comentario se guarda y se muestra escapado (sin HTML/script); validación de tamaños y valores en el servidor; límite de envíos por sesión/IP y campo trampa (honeypot) **aplicados en el servidor**; campos de Master Data solo privados (VTEX no permite crear públicos); el servicio rechaza orígenes ajenos a la tienda y expone solo las rutas necesarias.
 - **Accesibilidad:** estrellas operables por teclado con `aria-label` ("3 de 5 estrellas"); el modal atrapa el foco, se cierra con Esc y devuelve el foco al botón; contraste AA.
 - **Rendimiento:** el modal y su formulario se cargan al abrirlos; el botón flotante no genera CLS ni bloquea el LCP.
 - **Idioma:** textos en español (Colombia).
@@ -76,31 +84,37 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 - `AC-5` Una calificación de 2★ ofrece la lista de motivos; una de 5★ no.
 - `AC-6` El botón flotante es visible en inicio, categoría, ficha de producto, búsqueda, carrito y cuenta.
 - `AC-7` Enviar el formulario flotante con tipo y mensaje guarda un registro con la URL de la página donde se abrió.
-- `AC-7b` Con sesión iniciada, el formulario flotante muestra el correo de la cuenta; abierto desde la confirmación de un pedido sin sesión, muestra el correo del pedido; como anónimo en otra página, pide el correo.
+- `AC-7b` Con sesión iniciada, el campo de correo arranca con el correo de la cuenta y se puede editar o borrar; como anónimo arranca vacío. En ambos formularios se guarda lo que quede escrito. Un correo mal escrito se rechaza. El correo de la cuenta solo se devuelve a la propia sesión (`no-store`) y nunca se lee de un pedido.
 - `AC-7c` La confirmación del pedido muestra a la vez el bloque de rating y el botón flotante.
 - `AC-8` Con el mensaje vacío no se puede enviar; como anónimo, el correo vacío es válido y envía el feedback, pero un correo mal escrito muestra un error claro.
 - `AC-9` Solo con teclado se abre el modal, se llena, se envía y se cierra con Esc, y el foco vuelve al botón.
 - `AC-10` Un comentario con `<script>` o HTML se guarda y se ve como texto plano.
-- `AC-11` Una consulta pública (sin sesión de administrador) a los datos del feedback es rechazada.
+- `AC-11` Una consulta o una escritura directa y anónima a Master Data sobre las entidades de feedback es rechazada, y el envío a través del servicio sí guarda el registro. Ninguno de los campos es público.
+- `AC-13` Más de N envíos seguidos desde la misma sesión/IP (N a fijar en el plan) son rechazados por el servidor con un mensaje claro; un envío con el campo trampa lleno se descarta sin guardar.
 - `AC-12` A 360 px el botón no tapa el minicart ni los controles de la página; Lighthouse no baja más de 5 puntos frente a la línea base.
 
-## 7. Opciones técnicas (decisión en `plan.md`, tras un spike corto)
+## 7. Opciones técnicas (decisión en `plan.md`)
 | Opción | Pros | Contras |
 |---|---|---|
-| A. `vtex.store-form` (ya instalado y usado en `/contact-us`) + Master Data v2 + componente React solo para las estrellas | Reutiliza lo existente, sin servicios nuevos, datos en el admin de VTEX | El rating de estrellas probablemente no es nativo de `store-form` (a verificar); hay que mantener un componente |
-| B. App `vtex.reviews-and-ratings` | Nativa | Es para reseñas de **producto** públicas; no encaja con calificar la compra ni con feedback del sitio |
-| C. Servicio externo (Typeform, Hotjar, Google Forms) | Rápido, trae paneles | Datos personales fuera de VTEX, posibles bloqueos por política de contenido, dependencia externa |
+| A. `vtex.store-form` + Master Data con campos públicos de solo escritura | Reutiliza lo existente, sin servicios nuevos | **Descartada (2026-11-15):** VTEX bloquea crear campos públicos (nota del 22-oct-2026); `store-form` tampoco tiene estrellas ni valores dinámicos (spike 1.1) |
+| **B. Servicio propio en VTEX IO (elegida)** + componente React en el theme + Master Data con campos privados | Cumple la política de VTEX; antispam, límites y unicidad por pedido en el servidor; el correo se resuelve en el servidor sin exponerlo | App nueva (`node` no va en el theme): instalación, permisos de Master Data y mantenimiento; más trabajo |
+| C. `vtex.reviews-and-ratings` | Nativa | Es para reseñas **públicas de producto**; no encaja |
+| D. Servicio externo (Typeform, Hotjar, Google Forms) | Rápido, trae paneles | Datos personales fuera de VTEX (Ley 1581), dependencia externa |
+| E. Ticket a VTEX para excepción de campos públicos | Mantendría la opción A | Plazo y resultado inciertos; VTEX orienta a retirar los campos públicos. Puede abrirse en paralelo, sin depender de ella |
 
-Recomendación inicial: **A**. El spike (1 día) debe comprobar: (1) si `store-form` o algún bloque de VTEX ofrece estrellas; (2) que `store.orderplaced` permite añadir el bloque y obtener el número de pedido; (3) cómo obtener el correo del usuario autenticado y del pedido, y cómo se hace el botón flotante (`vtex.modal-layout` con un disparador fijo por CSS); (4) cómo garantizar que el esquema público sea solo de escritura.
+Decisión: **B**. El spike debe comprobar: (1) que `store.orderplaced` muestra el header global (**hecho**: sí) y de dónde sale el número de pedido; (2) que una app con `node` y `masterdata` se instala en el workspace y escribe en campos privados; (3) que una ruta pública del servicio responde a un visitante anónimo desde el origen de la tienda; (4) cómo el servidor identifica al usuario autenticado y lee el correo del pedido.
 
 ## 8. Preguntas abiertas
 - [ ] ¿Quién lee el feedback, con qué frecuencia y cómo se entera (solo admin, o aviso por correo)? *(reemplaza la antigua Q11 de moderación)*
 - [x] ¿El botón flotante se muestra también en la confirmación del pedido? → **Sí** (2026-11-15), RF-8c.
-- [x] ¿Se pide el correo en el rating de compra? → **No**: se toma del usuario autenticado, del pedido en una compra, o se solicita si es anónimo (2026-11-15), RF-3 y RF-8b.
+- [x] ¿Se pide el correo en el rating de compra? → **Sí, opcional y escrito por la persona**, precargado con el de la cuenta si hay sesión (2026-11-16, sustituye a la decisión del 2026-11-15), RF-3 y RF-8b.
 - [x] ¿El correo es obligatorio para el usuario anónimo? → **No, es opcional** (2026-11-15), RF-8b.
-- [ ] ¿Cómo se lee el correo de la cuenta y del pedido sin exponerlo? (a confirmar en el spike)
+- [x] ¿Cómo se lee el correo de la cuenta y del pedido sin exponerlo? → **El del pedido ya no se lee** (alias de OMS + permisos amplios, 2026-11-16). El de la cuenta lo da el servicio solo a la propia sesión para precargar, RF-8b y RF-15.
+- [x] ¿Dónde vive el servicio? → Carpeta `feedback-service/` de este repo, app `onewstore.feedback-service` (2026-11-16). Falta confirmar quién la mantiene e instala (por defecto, Diego).
+- [ ] ¿Se abre un ticket a VTEX por campos públicos en paralelo (opción E)? No bloquea esta spec.
+- [x] Impacto en la spec 004: `/contact-us` con `store-form` y Master Data público probablemente falle por el mismo motivo → **se reutiliza este servicio** (2026-11-16). La 004 deberá añadir su ruta y su entidad privada.
 - [ ] ¿Esquina del botón y texto ("Feedback", "Ayúdanos a mejorar")? ¿Hay otros elementos flotantes previstos (WhatsApp, chat)?
-- [ ] ¿La entidad de Master Data y su esquema ya existen en la cuenta, o se crean? (se resuelve junto con el diagnóstico de la spec 004)
+- [x] ¿La entidad de Master Data y su esquema ya existen en la cuenta, o se crean? → No existen (spike 1.3: `site-contact` da 404); se crean con el servicio como entidades de campos privados (2026-11-15).
 - [ ] ¿Cuánto tiempo se conservan los datos? (política de datos, spec 001)
 
 ## 9. Fuera de alcance / futuro

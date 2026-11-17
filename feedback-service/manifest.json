@@ -1,0 +1,33 @@
+{
+  "vendor": "onewstore",
+  "name": "feedback-service",
+  "version": "0.0.1",
+  "title": "Servicio de feedback de Repuestox",
+  "description": "Recibe el feedback de compra y del sitio y lo guarda en Master Data con campos privados (spec 002). Versión de spike.",
+  "builders": {
+    "node": "7.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

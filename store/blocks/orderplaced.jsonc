@@ -5,6 +5,7 @@
   "op-header": {
     "children": [
       "op-section#confirmation",
+      "purchase-rating",
       "op-section#notices",
       "op-summary-section",
       "op-bank-invoice-section"

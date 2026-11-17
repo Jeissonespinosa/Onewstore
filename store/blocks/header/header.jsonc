@@ -14,7 +14,8 @@
   "header-layout.desktop": {
     "children": [
       "flex-layout.row#1-desktop",
-      "sticky-layout#4-desktop"
+      "sticky-layout#4-desktop",
+      "feedback-button"
     ]
   },
   "flex-layout.row#1-desktop": {
@@ -106,7 +107,8 @@
   },
   "header-layout.mobile": {
     "children": [
-      "sticky-layout#1-mobile"
+      "sticky-layout#1-mobile",
+      "feedback-button"
     ]
   },
   "sticky-layout#1-mobile": {

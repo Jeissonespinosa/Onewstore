@@ -674,3 +674,46 @@ class TestHojasDuplicadas(unittest.TestCase):
 
     def test_lista_con_terminos_no_se_marca(self):
         self.assertEqual(_quiet(self.vacios, self._arbol([], {'Motos': {'X': ['a']}})), [])
+
+
+class TestCaracteresDeSlug(unittest.TestCase):
+    """VTEX translitera las vocales acentuadas y la ñ, pero no los demas no
+    ASCII. "Mazda 3 (3ª gen)" le daba "mazda-3--3ª-gen-" mientras el theme
+    generaba "mazda-3-3-gen": dos rutas, y la del theme no existe."""
+
+    def setUp(self):
+        self.check = import_pure_functions()['check_caracteres']
+
+    def _arbol(self, nombre, filtros=None):
+        d = {'_sinonimos': {'Carros': {}},
+             'Carros': [{'nombre': 'Motor', 'slug': 'motor',
+                         'subs': [{'nombre': 'Bloque', 'slug': 'b', 'tipos': [nombre]}]}]}
+        if filtros:
+            d['_filtros'] = filtros
+        return d
+
+    def test_detecta_el_caso_real(self):
+        bad = _quiet(self.check, self._arbol('Mazda 3 (3ª gen)'))
+        self.assertEqual(len(bad), 1)
+        self.assertIn('ª', bad[0][2])
+
+    def test_detecta_otros_no_ascii(self):
+        for nombre, ch in (('Motor 1º', 'º'), ('Temperatura 90°', '°'),
+                           ('Llave ½', '½'), ('Medida 5×7', '×'),
+                           ('Guion – largo', '–'), ('Comilla ’', '’')):
+            bad = _quiet(self.check, self._arbol(nombre))
+            self.assertTrue(bad, '%r deberia marcarse' % nombre)
+            self.assertIn(ch, bad[0][2])
+
+    def test_no_marca_los_acentos_que_vtex_si_translitera(self):
+        for nombre in ('Cigüeñales', 'Múltiples de admisión',
+                       'Árboles de levas', 'Carrocería y climatización'):
+            self.assertEqual(_quiet(self.check, self._arbol(nombre)), [],
+                             '%r no deberia marcarse' % nombre)
+
+    def test_revisa_tambien_los_valores_de_filtro(self):
+        arbol = self._arbol('Llaves', {'/carros/motor/bloque/llaves': [
+            {'nombre': 'Medida', 'tipo': 'unico', 'valores': ['½ pulgada']}]})
+        bad = _quiet(self.check, arbol)
+        self.assertTrue(bad)
+        self.assertIn('½', bad[0][2])

@@ -1,0 +1,64 @@
+# Chequeos del catalogo, para todo el equipo.
+#
+# Corre en cada push y en cada pull request contra release y master, asi que
+# aplica a cualquiera que trabaje en el repo, no solo a quien lo corre en su
+# maquina. Varios errores de esta clase solo se vieron tarde y en VTEX no se
+# pueden deshacer: una categoria no se borra y un valor de especificacion mal
+# escrito deja el producto invisible sin dar error.
+name: Catálogo
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [release, master]
+
+jobs:
+  arbol:
+    name: Árbol de categorías
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # --dry-run no escribe nada, pero corre TODAS las validaciones y
+      # devuelve != 0 si alguna falla.
+      - name: Validar el árbol
+        run: python3 scripts/gen-categorias.py --dry-run
+
+      # Lo generado tiene que coincidir con lo commiteado: si alguien edita
+      # store/** a mano en vez de cambiar el arbol, aqui se nota.
+      - name: Lo generado coincide con lo commiteado
+        run: |
+          python3 scripts/gen-categorias.py >/dev/null
+          if ! git diff --quiet; then
+            echo "::error::store/** no coincide con el árbol. Corre scripts/gen-categorias.py y commitea el resultado."
+            git --no-pager diff --stat
+            exit 1
+          fi
+
+      - name: Sinónimos
+        run: python3 scripts/gen-sinonimos.py
+
+  pruebas:
+    name: Pruebas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generador y sinónimos
+        run: |
+          cd scripts/tests
+          python3 -m unittest test_gen_categorias -v
+          python3 -m unittest test_sinonimos -v
+
+      - name: Cris
+        run: node scripts/tests/cris.test.js

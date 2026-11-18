@@ -720,6 +720,57 @@ def export_cris(tree):
         print('  %-46s %5d nodos' % ('react/cris-index.json', len(nodos)))
 
 
+# Letras no ASCII que VTEX SI translitera bien (verificado contra las 597
+# categorias y los valores de especificacion reales de la tienda).
+ACENTOS_SEGUROS = set('áéíóúüñÁÉÍÓÚÜÑ')
+
+
+def check_caracteres(tree):
+    """Caracteres donde el slug de VTEX y el nuestro se separan.
+
+    VTEX translitera las vocales acentuadas y la ñ, pero NO los demas no
+    ASCII. "Mazda 3 (3ª gen)" le daba "mazda-3--3ª-gen-" mientras el theme
+    generaba "mazda-3-3-gen": dos rutas distintas para la misma categoria, y
+    la del theme no existe. Ya nos paso tres veces con caracteres distintos
+    ("/", " - " y "ª"), siempre descubierto tarde.
+
+    Se revisa todo lo que termina en una URL o en un valor de filtro: macros,
+    subcategorias, hojas, nombres de especificacion y sus valores.
+    """
+    bad = []
+
+    def revisar(texto, donde):
+        if not texto:
+            return
+        malos = sorted({c for c in str(texto)
+                        if not c.isascii() and c not in ACENTOS_SEGUROS})
+        if malos:
+            bad.append((donde, str(texto), ''.join(malos)))
+
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            revisar(macro.get('nombre'), '%s > macro' % seccion)
+            for sub in macro.get('subs', []):
+                donde = '%s > %s' % (seccion, macro.get('nombre'))
+                revisar(sub.get('nombre'), donde)
+                revisar(sub.get('filtro'), donde + ' (filtro)')
+                for tipo in sub.get('tipos', []):
+                    revisar(tipo.get('nombre') if isinstance(tipo, dict) else tipo, donde)
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        for spec in specs:
+            revisar(spec.get('nombre'), '%s (especificacion)' % ruta)
+            for valor in spec.get('valores') or []:
+                revisar(valor, '%s > %s' % (ruta, spec.get('nombre')))
+    if bad:
+        print('\n  CARACTERES QUE VTEX NO TRANSLITERA (la ruta del theme no coincidiria):')
+        for donde, texto, malos in sorted(set(bad)):
+            print('   %-44s %r lleva %r' % (donde[:44], texto, malos))
+        print('   VTEX solo translitera vocales acentuadas y ñ. Usa ASCII para el resto.')
+    else:
+        print('  caracteres de slug: todos seguros')
+    return sorted(set(bad))
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -1216,8 +1267,9 @@ def main(argv=None):
     PENDING.clear()
 
     tree, routes = load_inputs()           # valida TODO antes de escribir
-    bad_nombres = (check_separadores(tree) + check_hojas_contenidas(tree)
-                   + check_sinonimos_vacios(tree) + check_filtros(tree))
+    bad_nombres = (check_separadores(tree) + check_caracteres(tree)
+                   + check_hojas_contenidas(tree) + check_sinonimos_vacios(tree)
+                   + check_filtros(tree))
     try:
         nodes, rails = build_tree()
     except ValueError as exc:

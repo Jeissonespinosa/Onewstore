@@ -4,7 +4,7 @@ Versión 2026.11.18 · Actualizado: 2026-11-18
 
 Aquí explicamos tus derechos cuando quieres devolver un producto, cuando un pago no corresponde a lo que compraste y cuando un producto falla. Estas reglas no limitan los derechos que la ley te da como consumidor.
 
-[A CONFIRMAR POR ABOGADO] Los artículos 47 y 51 de la Ley 1480 de 2011 se contrastaron con el texto vigente (Función Pública, con las modificaciones de la Ley 2439 de 2024). El Decreto 587 de 2016 (reversión del pago) también se leyó en Función Pública. Quedan por confirmar los artículos 7 a 10.
+[A CONFIRMAR POR ABOGADO] Los artículos 47 y 51 de la Ley 1480 de 2011 se contrastaron con el texto vigente (Función Pública, con las modificaciones de la Ley 2439 de 2024). El Decreto 587 de 2016 (reversión del pago) y los artículos 7 a 11 y 16 de la Ley 1480 (garantía) también se leyeron en Función Pública. Quedan por confirmar los puntos marcados abajo.
 
 ## 1. Derecho de retracto
 
@@ -30,17 +30,25 @@ Tienes **5 días hábiles** desde que supiste del hecho para presentar tu queja 
 
 Todo producto tiene una **garantía legal**: quien lo produce y quien lo vende deben responder por su calidad, idoneidad, seguridad y buen funcionamiento (artículos 7 a 10 de la Ley 1480 de 2011). Responden **de forma solidaria**, es decir, puedes reclamar a cualquiera de los dos.
 
-El plazo de la garantía es el que fije la ley o la autoridad competente y, si no existe, el que se anuncie en el producto; empieza a contar desde la entrega. [A CONFIRMAR POR ABOGADO] Plazo mínimo aplicable a repuestos nuevos e importados, y quién atiende la garantía de un producto importado.
+El plazo de la garantía es el que fije la ley o la autoridad competente y, si no existe, el que anuncie quien vende el producto; empieza a contar desde la entrega (artículo 8). **Si no se indica un plazo, la garantía de un producto nuevo es de un año.** Mientras estés sin poder usar el producto por hacerla efectiva, el plazo se suspende; si se cambia el producto por completo, el plazo empieza de nuevo, y las piezas cambiadas tienen garantía propia (artículo 9).
+
+La garantía cubre, como regla general, la reparación gratuita (incluido el transporte si hace falta) y el suministro oportuno de repuestos. Si no se puede reparar, se repone el producto o se devuelve el dinero. Si la falla se repite, tú eliges entre una nueva reparación, la devolución total o parcial del precio, o el cambio por otro igual o de mejores características (artículo 11). Para reclamarla basta demostrar el defecto (artículo 10).
+
+[A CONFIRMAR POR ABOGADO] Quién atiende la garantía de un producto importado y si el plazo se anuncia por producto.
 
 ## 5. Piezas de seguridad e instalación
 
-Para que la garantía se mantenga, instala el producto según las instrucciones del fabricante. Las piezas de seguridad (frenos, llantas, airbags y similares) deben instalarse por un técnico calificado.
+Instala el producto según las instrucciones de instalación, uso y mantenimiento del manual y de la garantía. Las piezas de seguridad (frenos, llantas, airbags y similares) deben instalarse por un técnico calificado.
+
+No respondemos por un defecto causado por no seguir esas instrucciones, pero solo si te entregamos el manual en castellano: sin manual en castellano esta excepción no se puede invocar (artículo 16).
 
 [A CONFIRMAR POR ABOGADO] Validez de condicionar la garantía a la instalación profesional.
 
 ## 6. Cuándo la garantía no cubre
 
-La garantía no cubre daños por mal uso, instalación incorrecta, golpes, falta de mantenimiento o desgaste normal. [A CONFIRMAR POR ABOGADO] Alcance de estas exclusiones.
+Quien vende o produce solo queda exonerado de la garantía si demuestra que el defecto viene de: fuerza mayor o caso fortuito; el hecho de un tercero; el uso indebido del producto; o no haber seguido las instrucciones de instalación, uso o mantenimiento del manual (artículo 16). En todo caso debe probar la relación entre esa causa y el defecto.
+
+[A CONFIRMAR POR ABOGADO] Cómo se tratan el desgaste normal de piezas de uso y los daños por golpes, que la ley no menciona como causal.
 
 ## 7. Cómo hacer un reclamo
 

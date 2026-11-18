@@ -24,6 +24,7 @@ Cada publicación debe incluir:
 - La **compatibilidad**: marca, modelo y año del vehículo. Son campos de selección múltiple y el modelo debe escribirse exactamente como figura en la lista.
 - Las **especificaciones** de su categoría, elegidas de las listas cerradas de la plantilla, sin texto libre.
 - Fotos reales del producto y los datos de origen e importación que correspondan.
+- El **manual de instrucciones de instalación, uso y mantenimiento en castellano**. Sin él, ni el seller ni Repuestox pueden alegar frente a una garantía que el comprador no siguió las instrucciones.
 
 Un producto sin especificaciones queda invisible en los filtros y en el buscador por vehículo. Repuestox puede rechazar o retirar publicaciones incompletas y revisa que cada producto aparezca al filtrar por lo que el seller llenó.
 

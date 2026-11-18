@@ -3373,7 +3373,7 @@
     },
     {
       "nombre": "Lubricantes y mantenimiento",
-      "slug": "lubricantes",
+      "slug": "lubricantes-y-mantenimiento",
       "subs": [
         {
           "nombre": null,
@@ -3566,7 +3566,7 @@
     },
     {
       "nombre": "Eléctrico y electrónico",
-      "slug": "electrico",
+      "slug": "electrico-y-electronico",
       "subs": [
         {
           "nombre": null,
@@ -3844,7 +3844,7 @@
     },
     {
       "nombre": "Equipos de lavado y pulido",
-      "slug": "equipos-de-limpieza",
+      "slug": "equipos-de-lavado-y-pulido",
       "subs": [
         {
           "nombre": null,
@@ -3856,5 +3856,799 @@
         }
       ]
     }
-  ]
+  ],
+  "_filtros": {
+    "/carros/baterias/baterias-para-carro": [
+      {
+        "nombre": "Amperaje de arranque (CCA)",
+        "tipo": "unico",
+        "valores": [
+          "450",
+          "550",
+          "650",
+          "750",
+          "850",
+          "950"
+        ]
+      },
+      {
+        "nombre": "Tipo de batería",
+        "tipo": "unico",
+        "valores": [
+          "Convencional",
+          "AGM",
+          "EFB",
+          "Libre mantenimiento"
+        ]
+      },
+      {
+        "nombre": "Placas",
+        "tipo": "unico",
+        "valores": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19",
+          "21"
+        ]
+      },
+      {
+        "nombre": "Polaridad",
+        "tipo": "unico",
+        "valores": [
+          "Izquierda",
+          "Derecha"
+        ]
+      }
+    ],
+    "/carros/baterias/baterias-para-furgon-camion-y-bus": [
+      {
+        "nombre": "Amperaje de arranque (CCA)",
+        "tipo": "unico",
+        "valores": [
+          "750",
+          "950",
+          "1100",
+          "1300"
+        ]
+      },
+      {
+        "nombre": "Placas",
+        "tipo": "unico",
+        "valores": [
+          "27",
+          "31",
+          "4D",
+          "8D"
+        ]
+      },
+      {
+        "nombre": "Polaridad",
+        "tipo": "unico",
+        "valores": [
+          "Izquierda",
+          "Derecha"
+        ]
+      }
+    ],
+    "/carros/filtros/filtros-de-aceite": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "Enroscable",
+          "Cartucho"
+        ]
+      },
+      {
+        "nombre": "Marca del filtro",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/carros/filtros/filtros-de-aire": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "Panel",
+          "Redondo",
+          "Cónico deportivo"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Papel",
+          "Algodón lavable"
+        ]
+      }
+    ],
+    "/carros/filtros/filtros-de-cabina": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "Estándar",
+          "Con carbón activado"
+        ]
+      }
+    ],
+    "/carros/filtros/filtros-de-combustible": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "En línea",
+          "Enroscable",
+          "De canastilla"
+        ]
+      },
+      {
+        "nombre": "Combustible",
+        "tipo": "unico",
+        "valores": [
+          "Gasolina",
+          "Diésel"
+        ]
+      }
+    ],
+    "/carros/llantas-y-rines/llantas": [
+      {
+        "nombre": "Características",
+        "tipo": "multi",
+        "valores": [
+          "Runflat",
+          "Reforzada (XL)",
+          "M+S (barro y nieve)",
+          "All Season",
+          "Baja resistencia (eco)",
+          "Silenciosa"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/carros/llantas-y-rines/rines/rines-de-acero": [
+      {
+        "nombre": "Diámetro",
+        "tipo": "unico",
+        "valores": [
+          "13",
+          "14",
+          "15",
+          "16",
+          "17"
+        ]
+      },
+      {
+        "nombre": "Huecos",
+        "tipo": "unico",
+        "valores": [
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
+    "/carros/llantas-y-rines/rines/rines-de-aluminio": [
+      {
+        "nombre": "Diámetro",
+        "tipo": "unico",
+        "valores": [
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20"
+        ]
+      },
+      {
+        "nombre": "Huecos",
+        "tipo": "unico",
+        "valores": [
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "nombre": "Ancho",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/aceite-de-motor": [
+      {
+        "nombre": "Viscosidad",
+        "tipo": "unico",
+        "valores": [
+          "0W20",
+          "5W30",
+          "5W40",
+          "10W30",
+          "10W40",
+          "15W40",
+          "20W50",
+          "25W60"
+        ]
+      },
+      {
+        "nombre": "Tipo de aceite",
+        "tipo": "unico",
+        "valores": [
+          "Sintético",
+          "Semisintético",
+          "Mineral"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "1 L",
+          "4 L",
+          "5 L",
+          "Galón",
+          "Cuñete"
+        ]
+      },
+      {
+        "nombre": "Norma API",
+        "tipo": "multi",
+        "valores": [
+          "SN",
+          "SP",
+          "CJ-4",
+          "CK-4"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/aceite-de-transmision": [
+      {
+        "nombre": "Tipo de caja",
+        "tipo": "multi",
+        "valores": [
+          "Mecánica (manual)",
+          "Automática",
+          "CVT",
+          "DSG (doble embrague)"
+        ]
+      },
+      {
+        "nombre": "Especificación",
+        "tipo": "multi",
+        "valores": [
+          "ATF Dexron",
+          "ATF Mercon",
+          "80W90",
+          "75W90",
+          "85W140"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "1 L",
+          "4 L",
+          "Galón",
+          "Cuñete"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/aceite-diferencial": [
+      {
+        "nombre": "Viscosidad",
+        "tipo": "unico",
+        "valores": [
+          "80W90",
+          "85W140",
+          "75W90"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "1 L",
+          "4 L",
+          "Galón"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/grasas": [
+      {
+        "nombre": "Tipo de grasa",
+        "tipo": "unico",
+        "valores": [
+          "Multiusos",
+          "Litio",
+          "Rodamientos",
+          "Chasis",
+          "Alta temperatura"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "250 g",
+          "500 g",
+          "1 kg",
+          "Cartucho"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica": [
+      {
+        "nombre": "Especificación",
+        "tipo": "multi",
+        "valores": [
+          "ATF Dexron",
+          "Hidráulico mineral"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "300 ml",
+          "500 ml",
+          "1 L"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/liquido-de-frenos": [
+      {
+        "nombre": "Norma DOT",
+        "tipo": "unico",
+        "valores": [
+          "DOT 3",
+          "DOT 4",
+          "DOT 5.1"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "300 ml",
+          "500 ml",
+          "1 L"
+        ]
+      }
+    ],
+    "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante": [
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Verde",
+          "Rojo",
+          "Rosado",
+          "Azul",
+          "Naranja"
+        ]
+      },
+      {
+        "nombre": "Concentración",
+        "tipo": "unico",
+        "valores": [
+          "Listo para usar",
+          "Concentrado"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "1 L",
+          "4 L",
+          "Galón"
+        ]
+      }
+    ],
+    "/motos/baterias/baterias-para-moto": [
+      {
+        "nombre": "Voltaje",
+        "tipo": "unico",
+        "valores": [
+          "6 V",
+          "12 V"
+        ]
+      },
+      {
+        "nombre": "Amperaje (Ah)",
+        "tipo": "unico",
+        "valores": [
+          "2.5",
+          "4",
+          "5",
+          "7",
+          "9",
+          "12",
+          "14"
+        ]
+      },
+      {
+        "nombre": "Tipo de batería",
+        "tipo": "unico",
+        "valores": [
+          "Convencional",
+          "Sellada (AGM)",
+          "Gel",
+          "Litio"
+        ]
+      }
+    ],
+    "/motos/filtros/filtros-de-aceite": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "Enroscable",
+          "Cartucho"
+        ]
+      },
+      {
+        "nombre": "Marca del filtro",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/motos/filtros/filtros-de-aire": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "Panel",
+          "Redondo",
+          "Cónico deportivo"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Papel",
+          "Algodón lavable"
+        ]
+      }
+    ],
+    "/motos/filtros/filtros-de-combustible": [
+      {
+        "nombre": "Tipo de filtro",
+        "tipo": "unico",
+        "valores": [
+          "En línea",
+          "Enroscable",
+          "De canastilla"
+        ]
+      },
+      {
+        "nombre": "Combustible",
+        "tipo": "unico",
+        "valores": [
+          "Gasolina",
+          "Diésel"
+        ]
+      }
+    ],
+    "/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Enduro",
+          "Cross",
+          "Trial",
+          "Rally"
+        ]
+      },
+      {
+        "nombre": "Tipo de taco",
+        "tipo": "unico",
+        "valores": [
+          "Taco bajo",
+          "Taco medio",
+          "Taco alto"
+        ]
+      }
+    ],
+    "/motos/llantas-y-rines/llantas/llantas-de-scooter": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Multipropósito"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
+        "tipo": "unico",
+        "valores": [
+          "Con neumático",
+          "Tubeless"
+        ]
+      }
+    ],
+    "/motos/llantas-y-rines/llantas/llantas-delanteras": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Multipropósito",
+          "Todoterreno (trocha)",
+          "Deportiva",
+          "Touring",
+          "Pista"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
+        "tipo": "unico",
+        "valores": [
+          "Con neumático",
+          "Tubeless"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/motos/llantas-y-rines/llantas/llantas-para-motocarro": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Carga",
+          "Pasajeros"
+        ]
+      }
+    ],
+    "/motos/llantas-y-rines/llantas/llantas-traseras": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": []
+      },
+      {
+        "nombre": "Uso",
+        "tipo": "multi",
+        "valores": [
+          "Ciudad",
+          "Multipropósito",
+          "Todoterreno (trocha)",
+          "Deportiva",
+          "Touring",
+          "Pista"
+        ]
+      },
+      {
+        "nombre": "Construcción",
+        "tipo": "unico",
+        "valores": [
+          "Radial",
+          "Diagonal (convencional)"
+        ]
+      },
+      {
+        "nombre": "Tipo de montaje",
+        "tipo": "unico",
+        "valores": [
+          "Con neumático",
+          "Tubeless"
+        ]
+      },
+      {
+        "nombre": "Índice de carga y velocidad",
+        "tipo": "unico",
+        "valores": []
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t": [
+      {
+        "nombre": "Tipo de aceite",
+        "tipo": "unico",
+        "valores": [
+          "Sintético",
+          "Semisintético",
+          "Mineral"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "120 ml",
+          "350 ml",
+          "500 ml",
+          "1 L"
+        ]
+      },
+      {
+        "nombre": "Norma JASO",
+        "tipo": "multi",
+        "valores": [
+          "FC",
+          "FD"
+        ]
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t": [
+      {
+        "nombre": "Viscosidad",
+        "tipo": "unico",
+        "valores": [
+          "10W30",
+          "10W40",
+          "15W50",
+          "20W50"
+        ]
+      },
+      {
+        "nombre": "Tipo de aceite",
+        "tipo": "unico",
+        "valores": [
+          "Sintético",
+          "Semisintético",
+          "Mineral"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "350 ml",
+          "1 L",
+          "4 L"
+        ]
+      },
+      {
+        "nombre": "Norma JASO",
+        "tipo": "multi",
+        "valores": [
+          "MA",
+          "MA2",
+          "MB"
+        ]
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/aceite-de-suspension": [
+      {
+        "nombre": "Viscosidad",
+        "tipo": "unico",
+        "valores": [
+          "SAE 5",
+          "SAE 10",
+          "SAE 15",
+          "SAE 20"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "350 ml",
+          "500 ml",
+          "1 L"
+        ]
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja": [
+      {
+        "nombre": "Viscosidad",
+        "tipo": "unico",
+        "valores": [
+          "10W30",
+          "10W40",
+          "80W90"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "350 ml",
+          "500 ml",
+          "1 L"
+        ]
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/liquido-de-frenos": [
+      {
+        "nombre": "Norma DOT",
+        "tipo": "unico",
+        "valores": [
+          "DOT 3",
+          "DOT 4",
+          "DOT 5.1"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "300 ml",
+          "500 ml",
+          "1 L"
+        ]
+      }
+    ],
+    "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena": [
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "200 ml",
+          "400 ml",
+          "500 ml"
+        ]
+      },
+      {
+        "nombre": "Tipo de cadena",
+        "tipo": "multi",
+        "valores": [
+          "Con reten (O-ring)",
+          "Sin reten"
+        ]
+      }
+    ]
+  }
 }

@@ -549,6 +549,86 @@ def check_sinonimos_vacios(tree):
     return sorted(bad)
 
 
+def _rutas_de_nodos(tree):
+    """{ruta: nombre} de macros, subcategorias y hojas."""
+    rutas = {}
+    for seccion in [x for x in tree if not x.startswith('_')]:
+        for macro in tree[seccion]:
+            base = '/%s/%s' % (slugify(seccion), macro.get('slug') or slugify(macro['nombre']))
+            rutas[base] = macro['nombre']
+            for sub in macro.get('subs', []):
+                pre = base
+                if sub.get('nombre'):
+                    pre = '%s/%s' % (base, sub.get('slug') or slugify(sub['nombre']))
+                    rutas[pre] = sub['nombre']
+                for t in sub.get('tipos', []):
+                    nombre = t.get('nombre') if isinstance(t, dict) else t
+                    rutas['%s/%s' % (pre, slugify(nombre))] = nombre
+    return rutas
+
+
+def check_filtros(tree):
+    """_filtros define las especificaciones filtrables de cada nodo, indexado
+    por RUTA y no por nombre.
+
+    Por nombre era ambiguo y peligroso: "Filtros de aceite" existe en carros y
+    en motos, y una carga a ciegas habria creado las especificaciones solo en
+    una de las dos sin avisar. En VTEX esto no se puede deshacer.
+
+    Se puede colgar de una macro, de una subcategoria o de una hoja: las
+    especificaciones se HEREDAN hacia abajo, asi que lo comun va arriba. Los
+    cuatro tipos de llanta comparten Caracteristicas, Construccion e Indice de
+    carga: se definen una vez en /carros/llantas-y-rines/llantas.
+
+    El tipo de campo en VTEX es inmutable, por eso solo se aceptan 'unico' y
+    'multi' y se valida antes de crear nada.
+    """
+    rutas = _rutas_de_nodos(tree)
+    bad = []
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        if ruta not in rutas:
+            bad.append((ruta, 'no corresponde a ningun nodo del arbol'))
+        for spec in specs:
+            if spec.get('tipo') not in ('unico', 'multi'):
+                bad.append((ruta, '%r: tipo %r (debe ser unico o multi)'
+                            % (spec.get('nombre'), spec.get('tipo'))))
+            valores = [norm(v) for v in spec.get('valores') or []]
+            repes = {v for v in valores if valores.count(v) > 1}
+            if repes:
+                bad.append((ruta, '%r: valores repetidos %s' % (spec.get('nombre'), sorted(repes))))
+        nombres = [norm(x.get('nombre')) for x in specs]
+        dup = {n for n in nombres if nombres.count(n) > 1}
+        if dup:
+            bad.append((ruta, 'especificaciones repetidas %s' % sorted(dup)))
+    if bad:
+        print('\n  FILTROS mal definidos:')
+        for ruta, msg in sorted(set(bad)):
+            print('   %-44s %s' % (ruta, msg))
+    else:
+        n = sum(len(v) for v in (tree.get('_filtros') or {}).values())
+        print('  filtros: %d especificaciones en %d nodos'
+              % (n, len(tree.get('_filtros') or {})))
+    return sorted(set(bad))
+
+
+def export_filtros(tree):
+    """CSV para el admin: una fila por (nodo, especificacion, campo, valor)."""
+    path = os.path.join(CAT, 'filtros-por-tipo.csv')
+    rutas = _rutas_de_nodos(tree)
+    filas = [('Ruta', 'Nodo', 'Especificacion', 'Campo', 'Valor')]
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        for spec in specs:
+            campo = 'Multiple' if spec.get('tipo') == 'multi' else 'Unico'
+            for valor in (spec.get('valores') or ['(abierto)']):
+                filas.append((ruta, rutas.get(ruta, ''), spec.get('nombre'), campo, valor))
+    texto = '\n'.join(','.join(csv_safe(c) for c in f) for f in filas) + '\n'
+    if DRY_RUN:
+        print('  [dry-run] %-36s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
+    else:
+        stage(path, texto)
+        print('  %-46s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -1045,12 +1125,13 @@ def main(argv=None):
 
     tree, routes = load_inputs()           # valida TODO antes de escribir
     bad_nombres = (check_separadores(tree) + check_hojas_contenidas(tree)
-                   + check_sinonimos_vacios(tree))
+                   + check_sinonimos_vacios(tree) + check_filtros(tree))
     try:
         nodes, rails = build_tree()
     except ValueError as exc:
         raise SystemExit('ERROR: %s' % exc)
     export_csv(nodes)
+    export_filtros(tree)
     bad_links = build_and_write(nodes, rails, routes)
 
     if DRY_RUN:

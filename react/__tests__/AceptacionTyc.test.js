@@ -1,11 +1,11 @@
 /*
- * Tests de checkout-ui-custom/lib/aceptacion-tyc.js (spec 001, tarea 7.1).
+ * Tests de checkout-ui-custom/aceptacion-tyc.js (spec 001, tarea 7.1).
  * Correr: ver react/__tests__/jest.config.js.
  */
 const fs = require('fs')
 const path = require('path')
 
-const A = require('../../checkout-ui-custom/lib/aceptacion-tyc')
+const A = require('../../checkout-ui-custom/aceptacion-tyc')
 
 const BORRADORES = path.resolve(__dirname, '../../specs/001-tyc-marketplace/borradores')
 const ARCHIVOS = {

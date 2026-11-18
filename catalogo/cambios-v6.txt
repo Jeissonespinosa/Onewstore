@@ -1,0 +1,107 @@
+CAMBIOS v6 — depuracion previa a crear el arbol en VTEX
+Generado al preparar la carga del catalogo. Contexto: en VTEX ya existe la
+rama de Llantas con producto real y UNA CATEGORIA CREADA NO SE PUEDE BORRAR,
+solo desactivar. Todo lo de abajo se corrigio ANTES de crear las 567
+categorias restantes.
+
+1. DUPLICADO ELIMINADO (critico)
+Carros > Motor y transmision > Bloque y culata: "Retenedores de motor" -> eliminada
+   Duplicaba "Empaques y retenedores de motor" con sinonimos solapados. Residuo
+   del renombre v4 ("Empaques y sellos de motor" -> "Empaques y retenedores de
+   motor"), que choco con la hoja preexistente.
+Carros > "Empaques y retenedores de motor": sinonimos + reten, sello de ciguenal, retenedor de arbol de levas
+   No se duplico "retenedor"/"retenedores": el grupo ya tenia "retenedores".
+
+2. SLIDERS / DEFENSAS PARTIDOS (opcion de DOS hojas)
+Motos > Accesorios: "Sliders, defensas y cubrecarter" -> "Defensas (mataperros)" + "Sliders y cubrecarter"
+   Una sola hoja mezclaba tres productos con precio y comprador distintos. El
+   termino de mas volumen en Mercado Libre CO es "defensas" (+9.999 resultados)
+   y quedaba sepultado bajo un nombre que empieza por "Sliders".
+Motos > "Defensas (mataperros)": defensa, defensas, defensas de moto, mataperros, defensa de motor
+Motos > "Sliders y cubrecarter": slider, sliders, sliders y defensas, cubrecarter, protector de carter, protector de motor, protector de radiador, protectores de radiador y cubrecarter
+   NO se creo la tercera hoja "Protectores de radiador": sus dos sinonimos
+   quedaron en "Sliders y cubrecarter", como preveia la instruccion.
+   Resultado: 523 hojas (523 - 1 duplicado + 1 por la particion).
+
+3. SIMETRIA DE SISTEMAS
+   No se subdividio ninguna macro: requiere aprobacion (97+ hojas cambiarian
+   de ruta). La propuesta quedo en catalogo/decision-simetria-sistemas.md.
+
+4. DETALLES
+Carros > Electrico y electronico > Encendido: "Bujias" -> "Bujias de encendido"
+   Convivia con "Bujias de precalentamiento" (diesel) y el nombre generico
+   invitaba a publicar mal. Se agregaron "bujias" y "bujia" como sinonimos.
+   No cambia ninguna ruta: Encendido es vitrina de filtros, asi que sus hojas
+   son valores de especificacion, no paginas.
+_sinonimos: "Bujias" sale de _comunes y pasa a bloque por seccion
+   Motos conserva su hoja "Bujias"; Carros tiene ahora "Bujias de encendido".
+   Al ser bidireccionales y de cuenta, los terminos compartidos quedaron en el
+   grupo de Motos (ver sinonimos-conflictos.txt).
+Motos > Chasis y carroceria: se quito la clave de sinonimos (estaba vacia)
+   Era la unica lista vacia del catalogo. Es una MACRO, y solo 2 de 33 macros
+   tienen sinonimos propios. Llenarla chocaba con la hoja "Chasis y subchasis",
+   que ya posee "chasis" y "subchasis".
+_sinonimos: "Empaques y retenedores de motor" sale de _comunes y pasa a Carros + Motos
+   Estando en _comunes alcanzaba tambien a Herramientas y chocaba con
+   "Empaques genericos" por el termino "empaquetadura". Unica colision que
+   quedaba en el catalogo; ahora son 0 en las tres secciones.
+Motos > "Maletas y baules" / "Parrillas y portamaletas": verificados, no colisionan
+   Son productos distintos y complementarios (el baul y la parrilla que lo
+   sostiene). "baul" queda en Maletas y baules; "soporte de baul" en Parrillas
+   y portamaletas. Quien busca "baul" suele necesitar los dos: vale cruzarlos
+   como productos relacionados en la ficha, no fusionar las categorias.
+
+5. CHEQUEOS AGREGADOS AL GENERADOR
+check_hojas_contenidas(): frena la escritura si dos hojas de la misma
+   subcategoria tienen una el nombre de la otra. Es el chequeo que faltaba y
+   dejo pasar "Retenedores de motor". Compara por palabra completa, no por
+   subcadena, para no marcar "compuertas" como si contuviera "puertas". Los
+   pares revisados y aceptados van en PARES_REVISADOS:
+     Radiadores de aceite / Radiadores                  (enfria aceite, no refrigerante)
+     Rampas de inyectores / Inyectores                  (el riel vs el inyector)
+     Empaques de puertas y molduras (burletes) / Puertas (el burlete vs la lamina)
+check_sinonimos_vacios(): frena la escritura si algun nodo tiene lista vacia.
+check_links(): corregido. Validaba contra el routes.json viejo del disco y en
+   --dry-run no preparaba los bloques en memoria, asi que reportaba como rotos
+   los enlaces a las hojas recien eliminadas y no veia las rutas nuevas. Ahora
+   el modo seco valida exactamente lo que se va a escribir.
+
+RESULTADO
+  hojas            523 (497 paginas + 26 valores de filtro)
+  paginas          567 (33 macros + 37 subcategorias + 497 hojas)
+  sinonimos        468 grupos en 3 CSV de ~12,5 KB (limite 16 KB)
+  colisiones       0 en Carros, Motos y Herramientas
+  enlaces rotos    0 · enlaces de menu rotos 0 · rutas manuales perdidas 0
+
+6. MODELO "PLANA + FILTRO" (decision aprobada)
+Carros > Electrico y electronico: 4 subcategorias con vitrina de filtros -> macro plana con 22 hojas + filtro Sistema
+   Las 22 hojas vuelven a ser paginas propias. Eran valores de filtro y varias
+   son terminos de alto volumen (bujias, alternadores, motores de arranque,
+   fusibles): un valor de filtro NO posiciona, una categoria si. Los cuatro
+   sistemas (Encendido, Arranque y carga, Gestion electronica, Electrico
+   general) sobreviven como valores de la especificacion Sistema.
+   Desaparecen las 4 paginas de subcategoria, que nadie busca.
+Carros > Frenos / Suspension y direccion / Iluminacion: + filtro Sistema
+Motos > Frenos / Electrico y electronico / Suspension y direccion /
+        Chasis y carroceria / Accesorios: + filtro Sistema
+   NO se subdividieron. Las hojas siguen siendo paginas y no cambian de ruta;
+   el filtro agrupa de lado, sin nivel intermedio. Se descarto subdividir en
+   sistemas porque agregaba un clic y creaba 22 paginas que nadie googlea
+   ("frenos hidraulicos"), y se descarto convertir todo en filtro porque
+   costaba 153 paginas indexables.
+
+   Regla: se filtra lo que nadie busca (medida, uso, tipo de vehiculo); se deja
+   como categoria lo que si se busca (el nombre del producto).
+
+   Herramientas > Cuidado y limpieza (23) y Consumibles de taller (13) quedan
+   planas sin filtro Sistema: falta definir sus valores.
+
+check_sistemas(): valida que cada hoja de una macro con "sistemas" este en
+   exactamente un valor, y que no haya valores con hojas inexistentes.
+export_sistemas(): escribe catalogo/filtros-sistema.csv (139 filas) para crear
+   la especificacion en el admin.
+
+RESULTADO ACTUALIZADO
+  hojas            545 (519 paginas + 26 valores de filtro)
+  paginas          585 (33 macros + 33 subcategorias + 519 hojas)
+  filtro Sistema   9 macros, 26 valores, 139 hojas agrupadas

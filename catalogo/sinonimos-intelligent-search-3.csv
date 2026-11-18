@@ -1,5 +1,3 @@
-kits de cilindro,cilindro de moto,kit cilindro pistón;true
-pistones y anillos,kit de pistón;true
 rodamientos de cigüeñal,rodamiento de cigüeñal,balinera de cigüeñal,bancada;true
 balancines,balancín,rocker;true
 cárter y tapas de motor,cárter,tapa de motor,tapa lateral de motor,tapa de cárter;true
@@ -37,6 +35,7 @@ reguladores,rectificadores,reguladores / rectificadores;true
 cdi,módulos de encendido,unidad de encendido,ecu moto,módulo de encendido,caja cdi,cdi / módulos de encendido;true
 bobinas de alta,bobina de encendido,bobina de chispa;true
 estatores,platos de bobinas,bobina de carga,estator,plato de bobinas,stator,estatores (bobina de carga);true
+bujías,bujía,spark plug,chispa,bujías iridium,bujías platino,bujías de encendido;true
 capuchones de bujía,capuchón,capuchón de bujía,pipa de bujía;true
 suiches y comandos,mandos,switch,comandos de manubrio;true
 flashers,relé de direccionales,destellador;true
@@ -46,7 +45,8 @@ exploradoras y luces auxiliares,luces auxiliares,luces led auxiliares,luces auxi
 maletas y baúles,baúl,maleta,top case,cajón de moto,baúl de moto;true
 alforjas y mochilas,alforja,alforjas,mochila de moto,bolso de tanque;true
 parrillas y portamaletas,parrilla trasera,portamaletas,soporte de baúl;true
-sliders defensas y cubrecárter,sliders,defensas,cubrecárter,slider,defensas de moto,mataperros,protector de radiador,sliders y defensas,protectores de radiador y cubrecárter,sliders defensas y protectores,protectores,protector de cárter,cubrecárter y protectores;true
+defensas,mataperros,defensas de moto,defensa de motor;true
+sliders y cubrecárter,slider,sliders,sliders y defensas,cubrecárter,protector de cárter,protector de radiador,protectores de radiador y cubrecárter;true
 pijamas,cubremotos,cubremoto,pijama para moto,forro de moto,carpa de moto,cubremotos (pijamas);true
 cúpulas y soportes,cúpula,windshield,parabrisas de moto,base para cúpula,parabrisas y soportes;true
 espejos,espejo,retrovisor,espejo de moto;true

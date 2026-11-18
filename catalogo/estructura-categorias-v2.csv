@@ -1,10 +1,10 @@
 Departamento,Nivel,Categoría (macro),Subcategoría,Tipo de producto (hoja),URL propuesta,Sinónimos (palabras clave)
 Carros,Categoría,Llantas y rines,,,/carros/llantas-y-rines,
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas de automóvil,/carros/llantas-y-rines/llantas,llantas para carro; llanta; neumáticos; cauchos; llantas sedán; llanta 175; llanta 185; llanta 195; llanta 205
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas SUV y 4x4,/carros/llantas-y-rines/llantas,llantas camioneta; llantas 4x4; llantas todoterreno; llantas AT; llantas MT; llanta 265; llanta 245; llantas de camioneta
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,"Llantas de van, camión y transporte",/carros/llantas-y-rines/llantas,llantas comerciales; llantas de carga; llantas de camión; llantas de van; llantas de furgón; llantas de bus; llantas de transporte; llanta 195r15; llanta 700-16; llanta 1100-20
-Carros,Valor de filtro (Tipo de vehículo),Llantas y rines,Llantas,Llantas OTR e industriales,/carros/llantas-y-rines/llantas,llantas industriales; llantas de montacargas; llantas agrícolas; otr
 Carros,Subcategoría,Llantas y rines,Llantas,,/carros/llantas-y-rines/llantas,
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas de automóvil,/carros/llantas-y-rines/llantas/llantas-de-automovil,llantas para carro; llanta; neumáticos; cauchos; llantas sedán; llanta 175; llanta 185; llanta 195; llanta 205
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas SUV y 4x4,/carros/llantas-y-rines/llantas/llantas-suv-y-4x4,llantas camioneta; llantas 4x4; llantas todoterreno; llantas AT; llantas MT; llanta 265; llanta 245; llantas de camioneta
+Carros,Tipo de producto,Llantas y rines,Llantas,"Llantas de van, camión y transporte",/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte,llantas comerciales; llantas de carga; llantas de camión; llantas de van; llantas de furgón; llantas de bus; llantas de transporte; llanta 195r15; llanta 700-16; llanta 1100-20
+Carros,Tipo de producto,Llantas y rines,Llantas,Llantas OTR e industriales,/carros/llantas-y-rines/llantas/llantas-otr-e-industriales,llantas industriales; llantas de montacargas; llantas agrícolas; otr
 Carros,Subcategoría,Llantas y rines,Rines,,/carros/llantas-y-rines/rines,aros
 Carros,Tipo de producto,Llantas y rines,Rines,Rines de acero,/carros/llantas-y-rines/rines/rines-de-acero,rines de hierro; rines originales de acero; aros de acero
 Carros,Tipo de producto,Llantas y rines,Rines,Rines de aluminio,/carros/llantas-y-rines/rines/rines-de-aluminio,rines de lujo; rines de magnesio; aros de aluminio; rines 15; rines 16; rines 17; rines deportivos; rines originales; rines aftermarket
@@ -76,32 +76,32 @@ Carros,Tipo de producto,Suspensión y dirección,,Suspensión neumática (bolsas
 Carros,Tipo de producto,Suspensión y dirección,,Coilovers y suspensión deportiva,/carros/suspension-y-direccion/coilovers-y-suspension-deportiva,coilover; suspensión deportiva; suspensión regulable
 Carros,Tipo de producto,Suspensión y dirección,,Ballestas (muelles de hoja),/carros/suspension-y-direccion/ballestas-muelles-de-hoja,ballesta; ballestas; muelles de hoja; hojas de resorte; elásticos; paquete de ballestas
 Carros,Categoría,Eléctrico y electrónico,,,/carros/electrico-y-electronico,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bobinas,/carros/electrico-y-electronico/encendido,bobina de encendido; bobina de chispa; coil
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Módulos y distribuidores de encendido,/carros/electrico-y-electronico/encendido,distribuidor; tapa de distribuidor; módulo de encendido
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bujías,/carros/electrico-y-electronico/encendido,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Cables de alta,/carros/electrico-y-electronico/encendido,cables de bujía; cables de encendido; juego de cables
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Bujías de precalentamiento,/carros/electrico-y-electronico/encendido,bujía de precalentamiento; bujías diésel; bujía incandescente; calentadores
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Encendido,Kits de sincronización (afinación),/carros/electrico-y-electronico/encendido,kit de sincronización; afinación; sincronización; tune up; kit de mantenimiento; kits de afinación (sincronización)
 Carros,Subcategoría,Eléctrico y electrónico,Encendido,,/carros/electrico-y-electronico/encendido,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Motores de arranque,/carros/electrico-y-electronico/arranque-y-carga,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Bendix y automáticos de arranque,/carros/electrico-y-electronico/arranque-y-carga,bendix; automático de arranque; solenoide de arranque; piñón de arranque
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Alternadores,/carros/electrico-y-electronico/arranque-y-carga,alternador; generador; dinamo
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Arranque y carga,Reguladores de voltaje,/carros/electrico-y-electronico/arranque-y-carga,regulador de voltaje; regulador de alternador; rectificador
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Bobinas,/carros/electrico-y-electronico/encendido/bobinas,bobina de encendido; bobina de chispa; coil
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Módulos y distribuidores de encendido,/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido,distribuidor; tapa de distribuidor; módulo de encendido
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Bujías de encendido,/carros/electrico-y-electronico/encendido/bujias-de-encendido,bujías; bujía; spark plug; chispa; bujías iridium; bujías platino
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Cables de alta,/carros/electrico-y-electronico/encendido/cables-de-alta,cables de bujía; cables de encendido; juego de cables
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Bujías de precalentamiento,/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento,bujía de precalentamiento; bujías diésel; bujía incandescente; calentadores
+Carros,Tipo de producto,Eléctrico y electrónico,Encendido,Kits de sincronización (afinación),/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion,kit de sincronización; afinación; sincronización; tune up; kit de mantenimiento; kits de afinación (sincronización)
 Carros,Subcategoría,Eléctrico y electrónico,Arranque y carga,,/carros/electrico-y-electronico/arranque-y-carga,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Computadores ECU,/carros/electrico-y-electronico/gestion-electronica,ecu; computador; módulo de motor; pcm; ecm
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Módulos electrónicos,/carros/electrico-y-electronico/gestion-electronica,módulo; módulo de control; caja electrónica
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,Actuadores,/carros/electrico-y-electronico/gestion-electronica,actuador; actuador de ralentí; actuador iac
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Gestión electrónica,"Sensores de motor (CKP, CMP, temperatura)",/carros/electrico-y-electronico/gestion-electronica,sensor; sensor de cigüeñal; sensor ckp; sensor de temperatura; sensor de detonación; sensores de motor; sensor de motor; sensor cmp; sensor de árbol de levas
+Carros,Tipo de producto,Eléctrico y electrónico,Arranque y carga,Motores de arranque,/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque,starter; arranque eléctrico; motor de partida
+Carros,Tipo de producto,Eléctrico y electrónico,Arranque y carga,Bendix y automáticos de arranque,/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque,bendix; automático de arranque; solenoide de arranque; piñón de arranque
+Carros,Tipo de producto,Eléctrico y electrónico,Arranque y carga,Alternadores,/carros/electrico-y-electronico/arranque-y-carga/alternadores,alternador; generador; dinamo
+Carros,Tipo de producto,Eléctrico y electrónico,Arranque y carga,Reguladores de voltaje,/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje,regulador de voltaje; regulador de alternador; rectificador
 Carros,Subcategoría,Eléctrico y electrónico,Gestión electrónica,,/carros/electrico-y-electronico/gestion-electronica,
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Fusibles,/carros/electrico-y-electronico/electrico-general,fusible; caja de fusibles; portafusibles
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Relés,/carros/electrico-y-electronico/electrico-general,relay; rele; relevador
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Suiches de encendido y cilindros de llave,/carros/electrico-y-electronico/electrico-general,suiche de encendido; switch de arranque; cilindro de llave; chapa de encendido
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Suiches e interruptores,/carros/electrico-y-electronico/electrico-general,switch; suiche; interruptor; botón; control de vidrios
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,"Llaves y controles (carcasas, chips)",/carros/electrico-y-electronico/electrico-general,llave; carcasa de llave; control de alarma; chip de llave; llave con control
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Cableado,/carros/electrico-y-electronico/electrico-general,arnés; ramal; cable; instalación eléctrica
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Conectores,/carros/electrico-y-electronico/electrico-general,conector; pacha; socket; terminal eléctrico
-Carros,Valor de filtro (Tipo de producto),Eléctrico y electrónico,Eléctrico general,Pitos,/carros/electrico-y-electronico/electrico-general,
+Carros,Tipo de producto,Eléctrico y electrónico,Gestión electrónica,Computadores ECU,/carros/electrico-y-electronico/gestion-electronica/computadores-ecu,ecu; computador; módulo de motor; pcm; ecm
+Carros,Tipo de producto,Eléctrico y electrónico,Gestión electrónica,Módulos electrónicos,/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos,módulo; módulo de control; caja electrónica
+Carros,Tipo de producto,Eléctrico y electrónico,Gestión electrónica,Actuadores,/carros/electrico-y-electronico/gestion-electronica/actuadores,actuador; actuador de ralentí; actuador iac
+Carros,Tipo de producto,Eléctrico y electrónico,Gestión electrónica,"Sensores de motor (CKP, CMP, temperatura)",/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura,sensor; sensor de cigüeñal; sensor ckp; sensor de temperatura; sensor de detonación; sensores de motor; sensor de motor; sensor cmp; sensor de árbol de levas
 Carros,Subcategoría,Eléctrico y electrónico,Eléctrico general,,/carros/electrico-y-electronico/electrico-general,
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Fusibles,/carros/electrico-y-electronico/electrico-general/fusibles,fusible; caja de fusibles; portafusibles
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Relés,/carros/electrico-y-electronico/electrico-general/reles,relay; rele; relevador
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Suiches de encendido y cilindros de llave,/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave,suiche de encendido; switch de arranque; cilindro de llave; chapa de encendido
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Suiches e interruptores,/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores,switch; suiche; interruptor; botón; control de vidrios
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,"Llaves y controles (carcasas, chips)",/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips,llave; carcasa de llave; control de alarma; chip de llave; llave con control
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Cableado,/carros/electrico-y-electronico/electrico-general/cableado,arnés; ramal; cable; instalación eléctrica
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Conectores,/carros/electrico-y-electronico/electrico-general/conectores,conector; pacha; socket; terminal eléctrico
+Carros,Tipo de producto,Eléctrico y electrónico,Eléctrico general,Pitos,/carros/electrico-y-electronico/electrico-general/pitos,bocina; claxon; corneta
 Carros,Categoría,Iluminación,,,/carros/iluminacion,
 Carros,Tipo de producto,Iluminación,,Farolas,/carros/iluminacion/farolas,faros; luces delanteras; headlights; farola delantera; unidad de farola; luz delantera
 Carros,Tipo de producto,Iluminación,,Stops,/carros/iluminacion/stops,luces traseras; stop; calaveras; luz de freno; farola trasera; luz trasera
@@ -124,8 +124,7 @@ Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Árboles de levas,/
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Culatas,/carros/motor-y-transmision/bloque-y-culata/culatas,culata; cabezote; cabeza de motor
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Válvulas y guías,/carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias,guías de válvula; válvula de admisión; válvula de escape; válvula de motor; guía de válvula
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Camisas,/carros/motor-y-transmision/bloque-y-culata/camisas,camisas de cilindro; cilindros
-Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor
-Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Retenedores de motor,/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor,retenedor; retén; sello de cigüeñal; retenedor de árbol de levas
+Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor; retén; sello de cigüeñal; retenedor de árbol de levas
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Bombas de aceite,/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite,bomba de aceite
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Soportes de motor,/carros/motor-y-transmision/bloque-y-culata/soportes-de-motor,soporte de motor; base de motor; cojín de motor
 Carros,Tipo de producto,Motor y transmisión,Bloque y culata,Motores completos,/carros/motor-y-transmision/bloque-y-culata/motores-completos,motor completo; motor usado; motor reconstruido; motor 3/4
@@ -368,7 +367,7 @@ Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Culatas,/motos/motor
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Válvulas y guías,/motos/motor-y-transmision/bloque-y-culata/valvulas-y-guias,guías de válvula; válvula de admisión; válvula de escape; válvula de motor; guía de válvula
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Árboles de levas,/motos/motor-y-transmision/bloque-y-culata/arboles-de-levas,árbol de levas; eje de levas
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Balancines,/motos/motor-y-transmision/bloque-y-culata/balancines,balancín; balancines; rocker
-Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor
+Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Empaques y retenedores de motor,/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor,juntas; empaquetadura; retenedores; empaques y sellos de motor; empaques; sellos de motor; retén; sello de cigüeñal; retenedor de árbol de levas
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Cárter y tapas de motor,/motos/motor-y-transmision/bloque-y-culata/carter-y-tapas-de-motor,cárter; tapa de motor; tapa lateral de motor; tapa de cárter
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Bombas de aceite,/motos/motor-y-transmision/bloque-y-culata/bombas-de-aceite,bomba de aceite
 Motos,Tipo de producto,Motor y transmisión,Bloque y culata,Volantes magnéticos,/motos/motor-y-transmision/bloque-y-culata/volantes-magneticos,volante magnético; magneto; rotor de estator
@@ -465,7 +464,8 @@ Motos,Categoría,Accesorios,,,/motos/accesorios,
 Motos,Tipo de producto,Accesorios,,Maletas y baúles,/motos/accesorios/maletas-y-baules,baúl; maleta; top case; cajón de moto; baúl de moto
 Motos,Tipo de producto,Accesorios,,Alforjas y mochilas,/motos/accesorios/alforjas-y-mochilas,alforja; alforjas; mochila de moto; bolso de tanque
 Motos,Tipo de producto,Accesorios,,Parrillas y portamaletas,/motos/accesorios/parrillas-y-portamaletas,parrilla; parrilla trasera; portamaletas; soporte de baúl
-Motos,Tipo de producto,Accesorios,,"Sliders, defensas y cubrecárter",/motos/accesorios/sliders-defensas-y-cubrecarter,"slider; defensa; defensas de moto; protector de motor; mataperros; protector de radiador; defensas; sliders y defensas; protectores de radiador y cubrecárter; sliders, defensas y protectores; cubrecárter; protector de cárter; cubrecárter y protectores"
+Motos,Tipo de producto,Accesorios,,Defensas (mataperros),/motos/accesorios/defensas-mataperros,defensa; defensas; defensas de moto; mataperros; defensa de motor
+Motos,Tipo de producto,Accesorios,,Sliders y cubrecárter,/motos/accesorios/sliders-y-cubrecarter,slider; sliders; sliders y defensas; cubrecárter; protector de cárter; protector de motor; protector de radiador; protectores de radiador y cubrecárter
 Motos,Tipo de producto,Accesorios,,Pijamas (cubremotos),/motos/accesorios/pijamas-cubremotos,cubremoto; pijama para moto; forro de moto; carpa de moto; cubremotos (pijamas)
 Motos,Tipo de producto,Accesorios,,Cúpulas (parabrisas) y soportes,/motos/accesorios/cupulas-parabrisas-y-soportes,parabrisas; cúpula; windshield; parabrisas de moto; base para cúpula; parabrisas y soportes
 Motos,Tipo de producto,Accesorios,,Espejos,/motos/accesorios/espejos,espejo; retrovisor; espejo de moto; espejos retrovisores

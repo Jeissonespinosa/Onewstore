@@ -529,6 +529,10 @@ class TestMenuCategorias(_Base):
             else:                                   # macro sin subcategorias: sus tipos
                 self.assertEqual(len(macro.get('children', [])),
                                  sum(len(x['tipos']) for x in src['subs']))
+        # Carros > Electrico y electronico conserva sus 4 subcategorias como
+        # navegacion, pero sus 22 tipos dejaron de ser valores de filtro y son
+        # paginas propias: el nombre del producto (alternadores, fusibles,
+        # bujias) es lo que la gente busca, y un valor de filtro no posiciona.
         self.assertEqual(subs, 37)
 
     def test_macro_sin_subcategorias_muestra_sus_tipos(self):
@@ -601,3 +605,83 @@ class TestMenuCategorias(_Base):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TestSeparadores(unittest.TestCase):
+    """VTEX corta el nombre del facet en " - " y " / ": el generador debe
+    rechazar esos nombres antes de que lleguen al catalogo."""
+
+    def setUp(self):
+        self.check = import_pure_functions()['check_separadores']
+
+    def _arbol(self, nombre_tipo):
+        return {'_sinonimos': {'Carros': {}, '_comunes': {}},
+                'Carros': [{'nombre': 'Frenos', 'slug': 'frenos',
+                            'subs': [{'nombre': 'Pastillas', 'slug': 'pastillas',
+                                      'tipos': [nombre_tipo]}]}]}
+
+    def test_rechaza_barra_con_espacios(self):
+        bad = _quiet(self.check, self._arbol('Frontier / NP300'))
+        self.assertEqual(len(bad), 1)
+        self.assertIn('Frontier / NP300', bad[0][1])
+
+    def test_rechaza_guion_con_espacios(self):
+        bad = _quiet(self.check, self._arbol('Montero - Pajero'))
+        self.assertEqual(len(bad), 1)
+
+    def test_acepta_guion_pegado(self):
+        """D-Max, F-250 y GSX-R600 son nombres reales y validos."""
+        for nombre in ('D-Max', 'F-250', 'GSX-R600', 'Frontier NP300'):
+            self.assertEqual(_quiet(self.check, self._arbol(nombre)), [],
+                             '%s no deberia marcarse' % nombre)
+
+    def test_revisa_macro_sub_y_filtro(self):
+        arbol = {'_sinonimos': {}, 'Carros': [
+            {'nombre': 'Luces / Iluminacion', 'slug': 'luces', 'subs': [
+                {'nombre': 'Farolas - Stops', 'slug': 'farolas',
+                 'filtro': 'Tipo / Clase', 'tipos': []}]}]}
+        self.assertEqual(len(_quiet(self.check, arbol)), 3)
+
+class TestHojasDuplicadas(unittest.TestCase):
+    """El chequeo que faltaba: "Retenedores de motor" convivio con "Empaques y
+    retenedores de motor" en la misma subcategoria. En VTEX una categoria no se
+    borra, asi que un duplicado asi seria permanente."""
+
+    def setUp(self):
+        g = import_pure_functions()
+        self.check = g['check_hojas_contenidas']
+        self.vacios = g['check_sinonimos_vacios']
+
+    def _arbol(self, tipos, sinonimos=None):
+        return {'_sinonimos': sinonimos if sinonimos is not None else {'Carros': {}},
+                'Carros': [{'nombre': 'Motor', 'slug': 'motor',
+                            'subs': [{'nombre': 'Bloque y culata', 'slug': 'b',
+                                      'tipos': tipos}]}]}
+
+    def test_detecta_el_duplicado_real(self):
+        bad = _quiet(self.check, self._arbol(
+            ['Empaques y retenedores de motor', 'Retenedores de motor']))
+        self.assertEqual(len(bad), 1)
+        self.assertEqual(bad[0][2], 'Retenedores de motor')
+
+    def test_no_marca_subcadena_dentro_de_palabra(self):
+        """"compuertas" contiene las letras de "puertas" pero no la palabra."""
+        self.assertEqual(_quiet(self.check, self._arbol(['Baúles y compuertas', 'Puertas'])), [])
+
+    def test_respeta_pares_revisados(self):
+        """Radiadores / Radiadores de aceite son productos distintos."""
+        self.assertEqual(_quiet(self.check, self._arbol(['Radiadores de aceite', 'Radiadores'])), [])
+
+    def test_solo_dentro_de_la_misma_subcategoria(self):
+        arbol = {'_sinonimos': {'Carros': {}}, 'Carros': [
+            {'nombre': 'Motor', 'slug': 'm', 'subs': [
+                {'nombre': 'A', 'slug': 'a', 'tipos': ['Filtros de aceite']},
+                {'nombre': 'B', 'slug': 'b', 'tipos': ['Filtros']}]}]}
+        self.assertEqual(_quiet(self.check, arbol), [])
+
+    def test_detecta_sinonimos_vacios(self):
+        bad = _quiet(self.vacios, self._arbol([], {'Motos': {'Chasis y carrocería': []}}))
+        self.assertEqual(bad, [('Motos', 'Chasis y carrocería')])
+
+    def test_lista_con_terminos_no_se_marca(self):
+        self.assertEqual(_quiet(self.vacios, self._arbol([], {'Motos': {'X': ['a']}})), [])

@@ -139,8 +139,14 @@ def build_tree():
         for m in tree[dept]:
             m['slug'] = slugify(m['nombre'])
             mpath = '/%s/%s' % (sec, m['slug'])
+            # "catalogo": la categoria YA existe en VTEX, asi que la sirve VTEX
+            # y el generador no debe crear una ruta propia que la sombree (si lo
+            # hace, la pagina sale vacia aunque haya productos). Se hereda hacia
+            # abajo: si la macro existe en VTEX, sus subcategorias y hojas tambien.
+            cat_macro = bool(m.get('catalogo'))
             macro = dict(nombre=m['nombre'], slug=m['slug'], path=mpath, kind='macro',
-                         children=[], ancestors=[dept], section=sec)
+                         children=[], ancestors=[dept], section=sec,
+                         catalogo=cat_macro)
             nodes.append(macro)
             rails[sec].append(macro)
             for s in m['subs']:
@@ -149,7 +155,8 @@ def build_tree():
                     for t in s['tipos']:
                         url = '%s/%s' % (mpath, slugify(t))
                         leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                    children=[], ancestors=[dept, m['nombre']], section=sec)
+                                    children=[], ancestors=[dept, m['nombre']], section=sec,
+                                    catalogo=cat_macro)
                         macro['children'].append(leaf)
                         nodes.append(leaf)
                     continue
@@ -158,7 +165,7 @@ def build_tree():
                 sub = dict(nombre=s['nombre'], slug=s['slug'], path=spath, kind='sub',
                            children=[], ancestors=[dept, m['nombre']], section=sec,
                            vitrina=s.get('vitrina'), filtro=s.get('filtro'), valores=[],
-                           catalogo=bool(s.get('catalogo')))
+                           catalogo=cat_macro or bool(s.get('catalogo')))
                 macro['children'].append(sub)
                 nodes.append(sub)
                 if s.get('vitrina') == 'filtros':
@@ -170,7 +177,8 @@ def build_tree():
                 for t in s['tipos']:
                     url = '%s/%s' % (spath, slugify(t))
                     leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                children=[], ancestors=[dept, m['nombre'], s['nombre']], section=sec)
+                                children=[], ancestors=[dept, m['nombre'], s['nombre']],
+                                section=sec, catalogo=sub['catalogo'])
                     sub['children'].append(leaf)
                     nodes.append(leaf)
     for n in nodes:
@@ -347,11 +355,16 @@ def dump(path, header, data):
     out += [('   ' + line).rstrip() for line in header.strip('\n').split('\n')]
     out.append('   ' + '=' * 60 + ' */')
     text = '\n'.join(out) + '\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n'
+    # Se prepara SIEMPRE, incluso en dry-run: check_links valida contra lo
+    # pendiente, y si en seco no hubiera nada pendiente compararia las rutas
+    # nuevas contra los archivos viejos del disco, reportando como rotos los
+    # enlaces a las hojas que justamente se acaban de eliminar. En dry-run
+    # nunca se llama a commit(), asi que preparar no escribe nada.
+    stage(path, text)
     if DRY_RUN:
         print('  [dry-run] %-36s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
-        return
-    stage(path, text)
-    print('  %-46s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
+    else:
+        print('  %-46s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
 
 
 GEN_NOTE = 'GENERADO por scripts/gen-categorias.py — no editar a mano;\ncambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.'
@@ -419,6 +432,203 @@ def check_menu(menu, routes):
     return [(os.path.relpath(MENU_DATA, ROOT), p) for p in bad]
 
 
+SEPARADOR_PROHIBIDO = re.compile(r'\s[-/]\s')
+
+
+def check_separadores(tree):
+    """Nombres que VTEX corta al convertirlos en valor de filtro.
+
+    La capa vtex.search-graphql trunca el nombre del facet en cualquier
+    separador rodeado de espacios: "Frontier / NP300" y "Frontier - NP300"
+    llegan a la tienda como "Frontier", con un slug que no corresponde a
+    ningun producto, y el cliente cae en una pagina vacia. La API REST si
+    devuelve el nombre completo, asi que el error no se ve probando contra
+    la API: solo desde la tienda.
+
+    Los guiones pegados (D-Max, F-250, GSX-R600) no dan problema; se
+    revisa unicamente " - " y " / ". Verificado en devwilbis el 15/11/2026
+    con la especificacion Modelo de la categoria Llantas.
+    """
+    bad = []
+
+    def revisar(nombre, donde):
+        if nombre and SEPARADOR_PROHIBIDO.search(nombre):
+            bad.append((donde, nombre))
+
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            revisar(macro.get('nombre'), '%s > macro' % seccion)
+            for sub in macro.get('subs', []):
+                donde = '%s > %s' % (seccion, macro.get('nombre'))
+                revisar(sub.get('nombre'), donde)
+                revisar(sub.get('filtro'), donde + ' (filtro)')
+                for tipo in sub.get('tipos', []):
+                    nombre = tipo.get('nombre') if isinstance(tipo, dict) else tipo
+                    revisar(nombre, '%s > %s' % (donde, sub.get('nombre') or '(directos)'))
+    if bad:
+        print('\n  NOMBRES CON SEPARADOR " - " o " / " (VTEX los corta en el filtro):')
+        for donde, nombre in sorted(set(bad)):
+            print('   %-46s %s' % (donde, nombre))
+        print('   Usa espacio simple: "Frontier NP300", no "Frontier / NP300".')
+    else:
+        print('  separadores en nombres: ninguno problematico')
+    return sorted(set(bad))
+
+
+
+# Pares de hojas donde una contiene el nombre de la otra y SON productos
+# distintos: revisados a mano, no son duplicados. Cualquier par que no este
+# aqui frena la escritura.
+PARES_REVISADOS = {
+    ('Radiadores de aceite', 'Radiadores'),                    # enfria aceite, no refrigerante
+    ('Rampas de inyectores', 'Inyectores'),                    # el riel vs el inyector
+    ('Empaques de puertas y molduras (burletes)', 'Puertas'),  # el burlete vs la lamina
+}
+
+
+def check_hojas_contenidas(tree):
+    """Dos hojas de la misma subcategoria donde una contiene el nombre de la
+    otra suelen ser la misma cosa nombrada dos veces.
+
+    Es el chequeo que faltaba: "Retenedores de motor" convivio con "Empaques y
+    retenedores de motor" en Bloque y culata, con sinonimos solapados, y nadie
+    lo noto. En VTEX una categoria no se puede borrar, asi que el duplicado
+    seria permanente y los sellers publicarian en cualquiera de las dos.
+
+    Compara por palabra completa, no por subcadena, para no marcar
+    "compuertas" como si contuviera "puertas". Los pares revisados y
+    aceptados van en PARES_REVISADOS.
+    """
+    envuelto = lambda nombre: ' %s ' % norm(nombre)
+    bad = []
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            for sub in macro.get('subs', []):
+                donde = '%s > %s > %s' % (seccion, macro.get('nombre'), sub.get('nombre'))
+                hojas = [t.get('nombre') if isinstance(t, dict) else t
+                         for t in sub.get('tipos', [])]
+                hojas = [h for h in hojas if h]
+                for larga in hojas:
+                    for corta in hojas:
+                        if larga == corta or (larga, corta) in PARES_REVISADOS:
+                            continue
+                        if envuelto(corta) in envuelto(larga):
+                            bad.append((donde, larga, corta))
+    if bad:
+        print('\n  HOJAS DUPLICADAS (una contiene el nombre de la otra):')
+        for donde, larga, corta in sorted(set(bad)):
+            print('   %-44s %r contiene %r' % (donde, larga, corta))
+        print('   Fusionalas, o agrega el par a PARES_REVISADOS si son distintas.')
+    else:
+        print('  hojas duplicadas: ninguna')
+    return sorted(set(bad))
+
+
+def check_sinonimos_vacios(tree):
+    """Una lista de sinonimos vacia no sirve y esconde la intencion: o el nodo
+    tiene terminos reales, o no debe tener la clave."""
+    bloques = tree.get('_sinonimos') or {}
+    if not isinstance(bloques, dict):
+        return []
+    bad = []
+    for bloque, grupos in bloques.items():
+        # El esquema por seccion es {bloque: {nodo: [terminos]}}, pero el
+        # formato viejo era plano {nodo: [terminos]}: con ese, el "grupo" es
+        # la lista de terminos y no hay nada que revisar.
+        if not isinstance(grupos, dict):
+            continue
+        for nombre, terminos in grupos.items():
+            if not terminos:
+                bad.append((bloque, nombre))
+    if bad:
+        print('\n  SINONIMOS VACIOS (llena la lista o quita la clave):')
+        for bloque, nombre in sorted(bad):
+            print('   [%s] %s' % (bloque, nombre))
+    else:
+        print('  sinonimos vacios: ninguno')
+    return sorted(bad)
+
+
+def _rutas_de_nodos(tree):
+    """{ruta: nombre} de macros, subcategorias y hojas."""
+    rutas = {}
+    for seccion in [x for x in tree if not x.startswith('_')]:
+        for macro in tree[seccion]:
+            base = '/%s/%s' % (slugify(seccion), macro.get('slug') or slugify(macro['nombre']))
+            rutas[base] = macro['nombre']
+            for sub in macro.get('subs', []):
+                pre = base
+                if sub.get('nombre'):
+                    pre = '%s/%s' % (base, sub.get('slug') or slugify(sub['nombre']))
+                    rutas[pre] = sub['nombre']
+                for t in sub.get('tipos', []):
+                    nombre = t.get('nombre') if isinstance(t, dict) else t
+                    rutas['%s/%s' % (pre, slugify(nombre))] = nombre
+    return rutas
+
+
+def check_filtros(tree):
+    """_filtros define las especificaciones filtrables de cada nodo, indexado
+    por RUTA y no por nombre.
+
+    Por nombre era ambiguo y peligroso: "Filtros de aceite" existe en carros y
+    en motos, y una carga a ciegas habria creado las especificaciones solo en
+    una de las dos sin avisar. En VTEX esto no se puede deshacer.
+
+    Se puede colgar de una macro, de una subcategoria o de una hoja: las
+    especificaciones se HEREDAN hacia abajo, asi que lo comun va arriba. Los
+    cuatro tipos de llanta comparten Caracteristicas, Construccion e Indice de
+    carga: se definen una vez en /carros/llantas-y-rines/llantas.
+
+    El tipo de campo en VTEX es inmutable, por eso solo se aceptan 'unico' y
+    'multi' y se valida antes de crear nada.
+    """
+    rutas = _rutas_de_nodos(tree)
+    bad = []
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        if ruta not in rutas:
+            bad.append((ruta, 'no corresponde a ningun nodo del arbol'))
+        for spec in specs:
+            if spec.get('tipo') not in ('unico', 'multi'):
+                bad.append((ruta, '%r: tipo %r (debe ser unico o multi)'
+                            % (spec.get('nombre'), spec.get('tipo'))))
+            valores = [norm(v) for v in spec.get('valores') or []]
+            repes = {v for v in valores if valores.count(v) > 1}
+            if repes:
+                bad.append((ruta, '%r: valores repetidos %s' % (spec.get('nombre'), sorted(repes))))
+        nombres = [norm(x.get('nombre')) for x in specs]
+        dup = {n for n in nombres if nombres.count(n) > 1}
+        if dup:
+            bad.append((ruta, 'especificaciones repetidas %s' % sorted(dup)))
+    if bad:
+        print('\n  FILTROS mal definidos:')
+        for ruta, msg in sorted(set(bad)):
+            print('   %-44s %s' % (ruta, msg))
+    else:
+        n = sum(len(v) for v in (tree.get('_filtros') or {}).values())
+        print('  filtros: %d especificaciones en %d nodos'
+              % (n, len(tree.get('_filtros') or {})))
+    return sorted(set(bad))
+
+
+def export_filtros(tree):
+    """CSV para el admin: una fila por (nodo, especificacion, campo, valor)."""
+    path = os.path.join(CAT, 'filtros-por-tipo.csv')
+    rutas = _rutas_de_nodos(tree)
+    filas = [('Ruta', 'Nodo', 'Especificacion', 'Campo', 'Valor')]
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        for spec in specs:
+            campo = 'Multiple' if spec.get('tipo') == 'multi' else 'Unico'
+            for valor in (spec.get('valores') or ['(abierto)']):
+                filas.append((ruta, rutas.get(ruta, ''), spec.get('nombre'), campo, valor))
+    texto = '\n'.join(','.join(csv_safe(c) for c in f) for f in filas) + '\n'
+    if DRY_RUN:
+        print('  [dry-run] %-36s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
+    else:
+        stage(path, texto)
+        print('  %-46s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -427,6 +637,15 @@ def check_links(routes, pending=None):
     escribir, no lo que quedo de la corrida anterior."""
     import glob
     pending = pending or {}
+    # Las rutas tambien se regeneran: si routes.json esta pendiente hay que
+    # validar contra ESE, no contra el que quedo de la corrida anterior. Sin
+    # esto, toda hoja nueva se reporta como enlace roto (su ruta todavia no
+    # existe en disco) y toda hoja eliminada pasa desapercibida.
+    if ROUTES in pending:
+        try:
+            routes = json.loads(pending[ROUTES])
+        except ValueError:
+            pass
     paths = valid_paths(routes)
     bad = []
     files = sorted(glob.glob(os.path.join(ROOT, 'store', 'blocks', '**', '*.json*'), recursive=True))
@@ -857,10 +1076,10 @@ def build_and_write(NODES, RAILS, routes):
                              '/herramientas que el arbol no regenera. Revisa '
                              'catalogo/rutas-eliminadas.txt y vuelve a correr con --force '
                              'si de verdad quieres borrarlas.')
+    stage(ROUTES, json.dumps(kept, ensure_ascii=False, indent=2) + '\n')
     if DRY_RUN:
         print('  [dry-run] %-36s %5d rutas' % ('store/routes.json', len(kept)))
     else:
-        stage(ROUTES, json.dumps(kept, ensure_ascii=False, indent=2) + '\n')
         print('  %-46s %5d rutas' % ('store/routes.json', len(kept)))
 
     # --- resumen ---------------------------------------------------------------
@@ -904,17 +1123,26 @@ def main(argv=None):
     REAL_QUERIES, DRY_RUN, FORCE = args.real, args.dry_run, args.force
     PENDING.clear()
 
-    _tree, routes = load_inputs()          # valida TODO antes de escribir
+    tree, routes = load_inputs()           # valida TODO antes de escribir
+    bad_nombres = (check_separadores(tree) + check_hojas_contenidas(tree)
+                   + check_sinonimos_vacios(tree) + check_filtros(tree))
     try:
         nodes, rails = build_tree()
     except ValueError as exc:
         raise SystemExit('ERROR: %s' % exc)
     export_csv(nodes)
+    export_filtros(tree)
     bad_links = build_and_write(nodes, rails, routes)
 
     if DRY_RUN:
         print('\n--dry-run: no se escribio nada.')
-        return 1 if (bad_links and not FORCE) else 0
+        return 1 if ((bad_links or bad_nombres) and not FORCE) else 0
+    if bad_nombres and not FORCE:
+        raise SystemExit('ERROR: %d problema(s) en los nombres del arbol (separadores '
+                         '" - " o " / ", hojas duplicadas o sinonimos vacios). En VTEX '
+                         'una categoria no se puede borrar: corrigelos antes de crearlas '
+                         '(o vuelve a correr con --force). No se escribio nada.'
+                         % len(bad_nombres))
     if bad_links and not FORCE:
         raise SystemExit('ERROR: %d enlace(s) del theme apuntan a rutas que no existen. '
                          'Corrigelos (o vuelve a correr con --force). No se escribio nada.'

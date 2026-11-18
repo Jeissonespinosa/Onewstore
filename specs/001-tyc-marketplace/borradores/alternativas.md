@@ -9,7 +9,10 @@ del abogado, para que él elija y se pegue la elegida en el borrador.
 Contexto: Repuestox cobra comisión, envía, liquida a los sellers por entrega y atiende
 las reclamaciones. La SIC distingue a los «portales de contacto» de las plataformas de
 comercio electrónico (`research.md`, fila 11). Diego decidió (2026-11-17) que, si la ley
-indica que Repuestox no es solo intermediario, se aplica el cambio.
+indica que Repuestox no es solo intermediario, se aplica el cambio. **Actualización 2026-11-18:** la SIC
+(Concepto 22-51097) dice que una plataforma que cobra comisión por las ventas es portal de comercio
+electrónico y no de contacto (`research.md`, «Verificación»): la alternativa 2 queda descartada
+como punto de partida; la 1 es la hipótesis vigente y falta que el abogado fije la contraparte.
 
 **Alternativa 1 — Repuestox como plataforma de comercio electrónico (hipótesis vigente).**
 «El contrato de compra se celebra entre el comprador y Repuestox, que vende los productos

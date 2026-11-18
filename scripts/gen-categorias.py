@@ -629,6 +629,50 @@ def export_filtros(tree):
         print('  %-46s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
 
 
+def export_cris(tree):
+    """Indice de busqueda para Cris (react/cris-index.json).
+
+    Una entrada por nodo del catalogo con su ruta, su seccion y sus sinonimos.
+    Lo genera el mismo script que crea las paginas para que no se desincronice:
+    si se renombra una categoria, el buscador se entera en la misma corrida.
+
+    Las herramientas quedan marcadas aparte porque sirven igual para carro y
+    para moto: se buscan desde cualquier seccion.
+    """
+    syn = tree.get('_sinonimos') or {}
+
+    def claves(seccion, nombre):
+        return list((syn.get(seccion, {}).get(nombre)
+                     or syn.get('_comunes', {}).get(nombre) or []))
+
+    nodos = []
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            base = '/%s/%s' % (slugify(seccion), macro.get('slug') or slugify(macro['nombre']))
+            nodos.append({'nombre': macro['nombre'], 'path': base, 'seccion': seccion,
+                          'nivel': 'macro', 'sinonimos': claves(seccion, macro['nombre'])})
+            for sub in macro.get('subs', []):
+                pre = base
+                if sub.get('nombre'):
+                    pre = '%s/%s' % (base, sub.get('slug') or slugify(sub['nombre']))
+                    nodos.append({'nombre': sub['nombre'], 'path': pre, 'seccion': seccion,
+                                  'nivel': 'sub', 'sinonimos': claves(seccion, sub['nombre'])})
+                if sub.get('vitrina') == 'filtros':
+                    continue
+                for t in sub.get('tipos', []):
+                    nombre = t.get('nombre') if isinstance(t, dict) else t
+                    nodos.append({'nombre': nombre, 'path': '%s/%s' % (pre, slugify(nombre)),
+                                  'seccion': seccion, 'nivel': 'hoja',
+                                  'sinonimos': claves(seccion, nombre)})
+    datos = {'_generado': GEN_NOTE, 'nodos': nodos}
+    texto = json.dumps(datos, ensure_ascii=False, indent=2) + '\n'
+    if DRY_RUN:
+        print('  [dry-run] %-36s %5d nodos' % ('react/cris-index.json', len(nodos)))
+    else:
+        stage(os.path.join(ROOT, 'react', 'cris-index.json'), texto)
+        print('  %-46s %5d nodos' % ('react/cris-index.json', len(nodos)))
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -967,13 +1011,13 @@ def build_and_write(NODES, RAILS, routes):
         'props': {'blockClass': 'rxM', 'layout': 'phone', 'priceRangeLayout': 'inputAndSlider',
                   'showClearByFilter': True, 'hiddenFacets': hidden}
     }
-    # sin query/map: el selector toma la categoria de la ruta actual
-    # Los mismos nombres que se ocultan en filter-navigator se le pasan al
-    # selector como props explicitas: una sola fuente, no pueden divergir.
-    filters['vehicle-selector#rx-f'] = {'props': {
-        'buttonLabel': 'Buscar repuestos',
-        'brandFacet': VEHICLE_FACETS[0], 'yearFacet': VEHICLE_FACETS[1],
-        'modelFacet': VEHICLE_FACETS[2]}}
+    # Cris sustituye al selector de vehiculo: hace lo mismo y ademas busca
+    # producto. Tener los dos era redundante, y los facets de vehiculo estan
+    # ocultos en el panel justamente porque los cubre Cris.
+    filters['cris#rx-f'] = {'props': {
+        'placeholder': 'Busca tu repuesto o cambia de vehículo',
+        'placeholderHerramientas': '¿Qué herramienta estás buscando?',
+        'boton': 'Buscar'}}
     filters['search-result-layout.desktop#rx-f'] = {
         'props': {'pagination': 'show-more', 'preventRouteChange': True, 'defaultGalleryLayout': 'grid', 'blockClass': 'rxF'},
         'children': ['flex-layout.row#rx-f-body'],
@@ -984,11 +1028,12 @@ def build_and_write(NODES, RAILS, routes):
     }
     filters['flex-layout.col#rx-f-side'] = {
         'props': {'blockClass': 'rxFSide', 'width': '24%'},
-        'children': ['vehicle-selector#rx-f', 'filter-navigator.v3#rx'],
+        'children': ['filter-navigator.v3#rx'],
     }
     filters['flex-layout.col#rx-f-main'] = {
         'props': {'blockClass': 'rxFMain', 'width': 'grow'},
-        'children': ['flex-layout.row#rx-filterbar-f', 'flex-layout.row#rx-results-f'],
+        'children': ['flex-layout.row#rx-f-vehicle-m', 'flex-layout.row#rx-filterbar-f',
+                     'flex-layout.row#rx-results-f'],
     }
     filters['flex-layout.row#rx-filterbar-f'] = {
         'props': {'blockClass': 'rxFilterbarF', 'preventHorizontalStretch': True, 'preserveLayoutOnMobile': True},
@@ -1001,7 +1046,7 @@ def build_and_write(NODES, RAILS, routes):
     }
     filters['flex-layout.row#rx-f-vehicle-m'] = {
         'props': {'fullWidth': True, 'blockClass': 'rxFVehicleM'},
-        'children': ['vehicle-selector#rx-f'],
+        'children': ['cris#rx-f'],
     }
     filters['flex-layout.row#rx-filterbar-m'] = {
         'props': {'blockClass': 'rxFilterbarM', 'preventHorizontalStretch': True, 'preserveLayoutOnMobile': True},
@@ -1132,6 +1177,7 @@ def main(argv=None):
         raise SystemExit('ERROR: %s' % exc)
     export_csv(nodes)
     export_filtros(tree)
+    export_cris(tree)
     bad_links = build_and_write(nodes, rails, routes)
 
     if DRY_RUN:

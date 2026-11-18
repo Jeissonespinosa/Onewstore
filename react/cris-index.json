@@ -1,0 +1,6643 @@
+{
+  "_generado": "GENERADO por scripts/gen-categorias.py — no editar a mano;\ncambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.",
+  "nodos": [
+    {
+      "nombre": "Llantas y rines",
+      "path": "/carros/llantas-y-rines",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Llantas",
+      "path": "/carros/llantas-y-rines/llantas",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Llantas de automóvil",
+      "path": "/carros/llantas-y-rines/llantas/llantas-de-automovil",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llantas para carro",
+        "llanta",
+        "neumáticos",
+        "cauchos",
+        "llantas sedán",
+        "llanta 175",
+        "llanta 185",
+        "llanta 195",
+        "llanta 205"
+      ]
+    },
+    {
+      "nombre": "Llantas SUV y 4x4",
+      "path": "/carros/llantas-y-rines/llantas/llantas-suv-y-4x4",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llantas camioneta",
+        "llantas 4x4",
+        "llantas todoterreno",
+        "llantas AT",
+        "llantas MT",
+        "llanta 265",
+        "llanta 245",
+        "llantas de camioneta"
+      ]
+    },
+    {
+      "nombre": "Llantas de van, camión y transporte",
+      "path": "/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llantas comerciales",
+        "llantas de carga",
+        "llantas de camión",
+        "llantas de van",
+        "llantas de furgón",
+        "llantas de bus",
+        "llantas de transporte",
+        "llanta 195r15",
+        "llanta 700-16",
+        "llanta 1100-20"
+      ]
+    },
+    {
+      "nombre": "Llantas OTR e industriales",
+      "path": "/carros/llantas-y-rines/llantas/llantas-otr-e-industriales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llantas industriales",
+        "llantas de montacargas",
+        "llantas agrícolas",
+        "otr"
+      ]
+    },
+    {
+      "nombre": "Rines",
+      "path": "/carros/llantas-y-rines/rines",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": [
+        "aros"
+      ]
+    },
+    {
+      "nombre": "Rines de acero",
+      "path": "/carros/llantas-y-rines/rines/rines-de-acero",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rines de hierro",
+        "rines originales de acero",
+        "aros de acero"
+      ]
+    },
+    {
+      "nombre": "Rines de aluminio",
+      "path": "/carros/llantas-y-rines/rines/rines-de-aluminio",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rines de lujo",
+        "rines de magnesio",
+        "aros de aluminio",
+        "rines 15",
+        "rines 16",
+        "rines 17",
+        "rines deportivos",
+        "rines originales",
+        "rines aftermarket"
+      ]
+    },
+    {
+      "nombre": "Accesorios de rueda",
+      "path": "/carros/llantas-y-rines/accesorios-de-rueda",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Copas (tapacubos)",
+      "path": "/carros/llantas-y-rines/accesorios-de-rueda/copas-tapacubos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "copas de rin",
+        "tapas de rin",
+        "tapacubos",
+        "embellecedores",
+        "copas"
+      ]
+    },
+    {
+      "nombre": "Tuercas y pernos de rueda",
+      "path": "/carros/llantas-y-rines/accesorios-de-rueda/tuercas-y-pernos-de-rueda",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tuercas de rin",
+        "tuercas de seguridad",
+        "pernos de rueda",
+        "espárragos",
+        "tuercas y pernos",
+        "pernos de seguridad",
+        "tuercas antirrobo"
+      ]
+    },
+    {
+      "nombre": "Separadores y espaciadores de rin",
+      "path": "/carros/llantas-y-rines/accesorios-de-rueda/separadores-y-espaciadores-de-rin",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "separadores",
+        "espaciadores de rines",
+        "separadores de rueda"
+      ]
+    },
+    {
+      "nombre": "Lubricantes y mantenimiento",
+      "path": "/carros/lubricantes-y-mantenimiento",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Aceite de motor",
+      "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite",
+        "aceite de carro",
+        "lubricante de motor",
+        "20w50",
+        "10w30",
+        "10w40",
+        "5w30",
+        "5w40",
+        "aceite sintético",
+        "aceite mineral",
+        "aceite semisintético"
+      ]
+    },
+    {
+      "nombre": "Aceite de transmisión",
+      "path": "/carros/lubricantes-y-mantenimiento/aceite-de-transmision",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite de caja",
+        "valvulina",
+        "atf",
+        "aceite de caja automática",
+        "dexron",
+        "aceite 80w90"
+      ]
+    },
+    {
+      "nombre": "Aceite diferencial",
+      "path": "/carros/lubricantes-y-mantenimiento/aceite-diferencial",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite de diferencial",
+        "valvulina 85w140",
+        "aceite de transmisión trasera"
+      ]
+    },
+    {
+      "nombre": "Refrigerante y anticongelante",
+      "path": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "coolant",
+        "refrigerante",
+        "agua de radiador"
+      ]
+    },
+    {
+      "nombre": "Líquido de frenos",
+      "path": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "líquido de freno",
+        "DOT 3",
+        "DOT 4"
+      ]
+    },
+    {
+      "nombre": "Líquido de dirección hidráulica",
+      "path": "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite de dirección",
+        "atf de dirección",
+        "líquido hidráulico"
+      ]
+    },
+    {
+      "nombre": "Aditivos",
+      "path": "/carros/lubricantes-y-mantenimiento/aditivos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aditivo",
+        "potenciador",
+        "limpia inyectores",
+        "aditivo para gasolina",
+        "stop leak"
+      ]
+    },
+    {
+      "nombre": "Grasas",
+      "path": "/carros/lubricantes-y-mantenimiento/grasas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "grasa",
+        "grasa multiusos",
+        "grasa de litio",
+        "grasa de rodamientos"
+      ]
+    },
+    {
+      "nombre": "Limpiadores de sistemas",
+      "path": "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de sistema",
+        "flush de motor"
+      ]
+    },
+    {
+      "nombre": "Filtros",
+      "path": "/carros/filtros",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Filtros de aceite",
+      "path": "/carros/filtros/filtros-de-aceite",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de aceite"
+      ]
+    },
+    {
+      "nombre": "Filtros de aire",
+      "path": "/carros/filtros/filtros-de-aire",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de aire"
+      ]
+    },
+    {
+      "nombre": "Filtros de combustible",
+      "path": "/carros/filtros/filtros-de-combustible",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de combustible",
+        "filtro de gasolina"
+      ]
+    },
+    {
+      "nombre": "Filtros de cabina",
+      "path": "/carros/filtros/filtros-de-cabina",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de aire acondicionado",
+        "filtro de polen",
+        "filtro de habitáculo",
+        "filtro de cabina"
+      ]
+    },
+    {
+      "nombre": "Filtros de transmisión",
+      "path": "/carros/filtros/filtros-de-transmision",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de caja",
+        "filtro de transmisión automática",
+        "filtro de transmisión"
+      ]
+    },
+    {
+      "nombre": "Baterías",
+      "path": "/carros/baterias",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Baterías para carro",
+      "path": "/carros/baterias/baterias-para-carro",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "batería",
+        "batería de carro",
+        "acumulador",
+        "batería 12v",
+        "batería mac",
+        "batería willard",
+        "baterías agm y start-stop",
+        "batería agm",
+        "batería start stop",
+        "batería efb"
+      ]
+    },
+    {
+      "nombre": "Baterías para furgón, camión y bus",
+      "path": "/carros/baterias/baterias-para-furgon-camion-y-bus",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "batería de camión",
+        "batería de furgón",
+        "batería de bus",
+        "batería 24v",
+        "batería pesada",
+        "batería de carga",
+        "batería 27 placas",
+        "batería 31t"
+      ]
+    },
+    {
+      "nombre": "Bornes y cables de batería",
+      "path": "/carros/baterias/bornes-y-cables-de-bateria",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bornes",
+        "terminales de batería",
+        "cable de batería",
+        "protector de bornes"
+      ]
+    },
+    {
+      "nombre": "Frenos",
+      "path": "/carros/frenos",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Pastillas de freno",
+      "path": "/carros/frenos/pastillas-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pastas de freno",
+        "brake pads"
+      ]
+    },
+    {
+      "nombre": "Discos de freno",
+      "path": "/carros/frenos/discos-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "disco de freno",
+        "discos",
+        "discos ventilados",
+        "discos perforados",
+        "rotor"
+      ]
+    },
+    {
+      "nombre": "Campanas de freno",
+      "path": "/carros/frenos/campanas-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tambores",
+        "campanas",
+        "tambores de freno",
+        "campanas (tambores) de freno"
+      ]
+    },
+    {
+      "nombre": "Bandas de freno",
+      "path": "/carros/frenos/bandas-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "zapatas",
+        "zapatas de freno"
+      ]
+    },
+    {
+      "nombre": "Mordazas (calipers)",
+      "path": "/carros/frenos/mordazas-calipers",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caliper",
+        "cálipers",
+        "pinzas de freno",
+        "mordazas / calipers"
+      ]
+    },
+    {
+      "nombre": "Pistones y kits de caliper",
+      "path": "/carros/frenos/pistones-y-kits-de-caliper",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de caliper",
+        "pistón de caliper",
+        "kit de mordaza"
+      ]
+    },
+    {
+      "nombre": "Cilindros de freno",
+      "path": "/carros/frenos/cilindros-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bombines de freno",
+        "cilindros de rueda",
+        "bombín de freno"
+      ]
+    },
+    {
+      "nombre": "Bombas de freno",
+      "path": "/carros/frenos/bombas-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cilindro maestro",
+        "bomba principal de freno",
+        "bombas de freno (cilindro maestro)"
+      ]
+    },
+    {
+      "nombre": "Servofreno (booster)",
+      "path": "/carros/frenos/servofreno-booster",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "booster",
+        "hidrovac",
+        "servofreno",
+        "servo freno",
+        "servo-freno (booster)"
+      ]
+    },
+    {
+      "nombre": "Bombas de vacío",
+      "path": "/carros/frenos/bombas-de-vacio",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de vacío",
+        "bomba de freno de vacío"
+      ]
+    },
+    {
+      "nombre": "Sensores ABS",
+      "path": "/carros/frenos/sensores-abs",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor abs",
+        "sensor de rueda",
+        "sensor de velocidad de rueda"
+      ]
+    },
+    {
+      "nombre": "Módulos y unidades ABS",
+      "path": "/carros/frenos/modulos-y-unidades-abs",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "módulo abs",
+        "unidad hidráulica",
+        "bomba abs"
+      ]
+    },
+    {
+      "nombre": "Mangueras y líneas de freno",
+      "path": "/carros/frenos/mangueras-y-lineas-de-freno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "líneas de freno",
+        "tuberías de freno",
+        "flexibles de freno",
+        "cañerías de freno",
+        "cañerías y mangueras de freno"
+      ]
+    },
+    {
+      "nombre": "Depósitos de líquido de frenos",
+      "path": "/carros/frenos/depositos-de-liquido-de-frenos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "depósito de líquido de frenos",
+        "tanque de líquido de frenos"
+      ]
+    },
+    {
+      "nombre": "Guayas de freno de mano",
+      "path": "/carros/frenos/guayas-de-freno-de-mano",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de freno de mano",
+        "guaya freno de parqueo"
+      ]
+    },
+    {
+      "nombre": "Herrajes y pernos de pastillas",
+      "path": "/carros/frenos/herrajes-y-pernos-de-pastillas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "herrajes",
+        "clips de pastillas",
+        "pernos de caliper",
+        "pines de caliper"
+      ]
+    },
+    {
+      "nombre": "Kits de reparación de frenos",
+      "path": "/carros/frenos/kits-de-reparacion-de-frenos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de frenos",
+        "kit de reparación",
+        "empaques de bomba"
+      ]
+    },
+    {
+      "nombre": "Sensores de desgaste de pastillas",
+      "path": "/carros/frenos/sensores-de-desgaste-de-pastillas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor de desgaste",
+        "testigo de pastillas",
+        "avisador de pastillas"
+      ]
+    },
+    {
+      "nombre": "Suspensión y dirección",
+      "path": "/carros/suspension-y-direccion",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Amortiguadores",
+      "path": "/carros/suspension-y-direccion/amortiguadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "amortiguador",
+        "shock",
+        "shocks"
+      ]
+    },
+    {
+      "nombre": "Resortes (espirales)",
+      "path": "/carros/suspension-y-direccion/resortes-espirales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "espirales",
+        "resortes",
+        "muelles",
+        "resortes de suspensión",
+        "resortes / espirales"
+      ]
+    },
+    {
+      "nombre": "Rótulas",
+      "path": "/carros/suspension-y-direccion/rotulas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rótula",
+        "rótula de suspensión",
+        "ball joint"
+      ]
+    },
+    {
+      "nombre": "Axiales (brazos axiales)",
+      "path": "/carros/suspension-y-direccion/axiales-brazos-axiales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "axial",
+        "barra axial",
+        "terminal axial",
+        "brazo axial",
+        "axiales"
+      ]
+    },
+    {
+      "nombre": "Bujes",
+      "path": "/carros/suspension-y-direccion/bujes",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "buje",
+        "bujes de suspensión",
+        "bujes de tijera",
+        "bujes de barra"
+      ]
+    },
+    {
+      "nombre": "Tijeras",
+      "path": "/carros/suspension-y-direccion/tijeras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tijera",
+        "tijera de suspensión",
+        "brazo inferior",
+        "mesa",
+        "brazos de suspensión",
+        "brazo de suspensión",
+        "brazo oscilante",
+        "control arm",
+        "parrilla de suspensión"
+      ]
+    },
+    {
+      "nombre": "Barras estabilizadoras",
+      "path": "/carros/suspension-y-direccion/barras-estabilizadoras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "barra estabilizadora",
+        "estabilizadora",
+        "barra de torsión"
+      ]
+    },
+    {
+      "nombre": "Links de estabilizadora",
+      "path": "/carros/suspension-y-direccion/links-de-estabilizadora",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "link",
+        "bieleta",
+        "link de estabilizadora",
+        "tornillo estabilizador",
+        "bieletas",
+        "muñecos",
+        "tensores de estabilizadora",
+        "links"
+      ]
+    },
+    {
+      "nombre": "Balineras de rueda",
+      "path": "/carros/suspension-y-direccion/balineras-de-rueda",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodamientos de rueda",
+        "balineras",
+        "rulemanes"
+      ]
+    },
+    {
+      "nombre": "Manzanas de rueda (cubos)",
+      "path": "/carros/suspension-y-direccion/manzanas-de-rueda-cubos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "mazas",
+        "cubos",
+        "hubs",
+        "cubos de rueda",
+        "bocines",
+        "manzanas / cubos de rueda"
+      ]
+    },
+    {
+      "nombre": "Puntas de eje (manguetas)",
+      "path": "/carros/suspension-y-direccion/puntas-de-eje-manguetas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "mangueta",
+        "punta de eje",
+        "portamanzana"
+      ]
+    },
+    {
+      "nombre": "Cajas de dirección (cremalleras)",
+      "path": "/carros/suspension-y-direccion/cajas-de-direccion-cremalleras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de dirección",
+        "cremallera de dirección",
+        "cremallera",
+        "cremalleras (caja de dirección)"
+      ]
+    },
+    {
+      "nombre": "Bombas de dirección hidráulica",
+      "path": "/carros/suspension-y-direccion/bombas-de-direccion-hidraulica",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de dirección",
+        "bomba hidráulica"
+      ]
+    },
+    {
+      "nombre": "Mangueras de dirección hidráulica",
+      "path": "/carros/suspension-y-direccion/mangueras-de-direccion-hidraulica",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de dirección",
+        "manguera hidráulica",
+        "tubo de dirección"
+      ]
+    },
+    {
+      "nombre": "Columnas y crucetas de dirección",
+      "path": "/carros/suspension-y-direccion/columnas-y-crucetas-de-direccion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "columna de dirección",
+        "cruceta de dirección",
+        "cardán de dirección"
+      ]
+    },
+    {
+      "nombre": "Terminales de dirección",
+      "path": "/carros/suspension-y-direccion/terminales-de-direccion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "terminal",
+        "terminal de dirección",
+        "tie rod"
+      ]
+    },
+    {
+      "nombre": "Copas (bases) de amortiguador",
+      "path": "/carros/suspension-y-direccion/copas-bases-de-amortiguador",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "copa",
+        "copa de amortiguador",
+        "soporte de amortiguador",
+        "strut mount",
+        "bases de amortiguador",
+        "soportes de amortiguador",
+        "copas de amortiguador"
+      ]
+    },
+    {
+      "nombre": "Guardapolvos y fuelles",
+      "path": "/carros/suspension-y-direccion/guardapolvos-y-fuelles",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guardapolvo",
+        "fuelle",
+        "fuelle de cremallera",
+        "fuelle de homocinética"
+      ]
+    },
+    {
+      "nombre": "Topes de amortiguador",
+      "path": "/carros/suspension-y-direccion/topes-de-amortiguador",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tope",
+        "tope de suspensión",
+        "bumper de amortiguador",
+        "caucho de tope"
+      ]
+    },
+    {
+      "nombre": "Kits de tren delantero",
+      "path": "/carros/suspension-y-direccion/kits-de-tren-delantero",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tren delantero",
+        "kit tren delantero"
+      ]
+    },
+    {
+      "nombre": "Suspensión neumática (bolsas de aire)",
+      "path": "/carros/suspension-y-direccion/suspension-neumatica-bolsas-de-aire",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "suspensión de aire",
+        "air suspension"
+      ]
+    },
+    {
+      "nombre": "Coilovers y suspensión deportiva",
+      "path": "/carros/suspension-y-direccion/coilovers-y-suspension-deportiva",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "coilover",
+        "suspensión deportiva",
+        "suspensión regulable"
+      ]
+    },
+    {
+      "nombre": "Ballestas (muelles de hoja)",
+      "path": "/carros/suspension-y-direccion/ballestas-muelles-de-hoja",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ballesta",
+        "ballestas",
+        "muelles de hoja",
+        "hojas de resorte",
+        "elásticos",
+        "paquete de ballestas"
+      ]
+    },
+    {
+      "nombre": "Eléctrico y electrónico",
+      "path": "/carros/electrico-y-electronico",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Encendido",
+      "path": "/carros/electrico-y-electronico/encendido",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Bobinas",
+      "path": "/carros/electrico-y-electronico/encendido/bobinas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bobina de encendido",
+        "bobina de chispa",
+        "coil"
+      ]
+    },
+    {
+      "nombre": "Módulos y distribuidores de encendido",
+      "path": "/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "distribuidor",
+        "tapa de distribuidor",
+        "módulo de encendido"
+      ]
+    },
+    {
+      "nombre": "Bujías de encendido",
+      "path": "/carros/electrico-y-electronico/encendido/bujias-de-encendido",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bujías",
+        "bujía",
+        "spark plug",
+        "chispa",
+        "bujías iridium",
+        "bujías platino"
+      ]
+    },
+    {
+      "nombre": "Cables de alta",
+      "path": "/carros/electrico-y-electronico/encendido/cables-de-alta",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cables de bujía",
+        "cables de encendido",
+        "juego de cables"
+      ]
+    },
+    {
+      "nombre": "Bujías de precalentamiento",
+      "path": "/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bujía de precalentamiento",
+        "bujías diésel",
+        "bujía incandescente",
+        "calentadores"
+      ]
+    },
+    {
+      "nombre": "Kits de sincronización (afinación)",
+      "path": "/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de sincronización",
+        "afinación",
+        "sincronización",
+        "tune up",
+        "kit de mantenimiento",
+        "kits de afinación (sincronización)"
+      ]
+    },
+    {
+      "nombre": "Arranque y carga",
+      "path": "/carros/electrico-y-electronico/arranque-y-carga",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Motores de arranque",
+      "path": "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "starter",
+        "arranque eléctrico",
+        "motor de partida"
+      ]
+    },
+    {
+      "nombre": "Bendix y automáticos de arranque",
+      "path": "/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bendix",
+        "automático de arranque",
+        "solenoide de arranque",
+        "piñón de arranque"
+      ]
+    },
+    {
+      "nombre": "Alternadores",
+      "path": "/carros/electrico-y-electronico/arranque-y-carga/alternadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alternador",
+        "generador",
+        "dinamo"
+      ]
+    },
+    {
+      "nombre": "Reguladores de voltaje",
+      "path": "/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "regulador de voltaje",
+        "regulador de alternador",
+        "rectificador"
+      ]
+    },
+    {
+      "nombre": "Gestión electrónica",
+      "path": "/carros/electrico-y-electronico/gestion-electronica",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Computadores ECU",
+      "path": "/carros/electrico-y-electronico/gestion-electronica/computadores-ecu",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ecu",
+        "computador",
+        "módulo de motor",
+        "pcm",
+        "ecm"
+      ]
+    },
+    {
+      "nombre": "Módulos electrónicos",
+      "path": "/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "módulo",
+        "módulo de control",
+        "caja electrónica"
+      ]
+    },
+    {
+      "nombre": "Actuadores",
+      "path": "/carros/electrico-y-electronico/gestion-electronica/actuadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "actuador",
+        "actuador de ralentí",
+        "actuador iac"
+      ]
+    },
+    {
+      "nombre": "Sensores de motor (CKP, CMP, temperatura)",
+      "path": "/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor",
+        "sensor de cigüeñal",
+        "sensor ckp",
+        "sensor de temperatura",
+        "sensor de detonación",
+        "sensores de motor",
+        "sensor de motor",
+        "sensor cmp",
+        "sensor de árbol de levas"
+      ]
+    },
+    {
+      "nombre": "Eléctrico general",
+      "path": "/carros/electrico-y-electronico/electrico-general",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Fusibles",
+      "path": "/carros/electrico-y-electronico/electrico-general/fusibles",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "fusible",
+        "caja de fusibles",
+        "portafusibles"
+      ]
+    },
+    {
+      "nombre": "Relés",
+      "path": "/carros/electrico-y-electronico/electrico-general/reles",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "relay",
+        "rele",
+        "relevador"
+      ]
+    },
+    {
+      "nombre": "Suiches de encendido y cilindros de llave",
+      "path": "/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "suiche de encendido",
+        "switch de arranque",
+        "cilindro de llave",
+        "chapa de encendido"
+      ]
+    },
+    {
+      "nombre": "Suiches e interruptores",
+      "path": "/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "switch",
+        "suiche",
+        "interruptor",
+        "botón",
+        "control de vidrios"
+      ]
+    },
+    {
+      "nombre": "Llaves y controles (carcasas, chips)",
+      "path": "/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llave",
+        "carcasa de llave",
+        "control de alarma",
+        "chip de llave",
+        "llave con control"
+      ]
+    },
+    {
+      "nombre": "Cableado",
+      "path": "/carros/electrico-y-electronico/electrico-general/cableado",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "arnés",
+        "ramal",
+        "cable",
+        "instalación eléctrica"
+      ]
+    },
+    {
+      "nombre": "Conectores",
+      "path": "/carros/electrico-y-electronico/electrico-general/conectores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "conector",
+        "pacha",
+        "socket",
+        "terminal eléctrico"
+      ]
+    },
+    {
+      "nombre": "Pitos",
+      "path": "/carros/electrico-y-electronico/electrico-general/pitos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bocina",
+        "claxon",
+        "corneta"
+      ]
+    },
+    {
+      "nombre": "Iluminación",
+      "path": "/carros/iluminacion",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Farolas",
+      "path": "/carros/iluminacion/farolas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "faros",
+        "luces delanteras",
+        "headlights",
+        "farola delantera",
+        "unidad de farola",
+        "luz delantera"
+      ]
+    },
+    {
+      "nombre": "Stops",
+      "path": "/carros/iluminacion/stops",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luces traseras",
+        "stop",
+        "calaveras",
+        "luz de freno",
+        "farola trasera",
+        "luz trasera"
+      ]
+    },
+    {
+      "nombre": "Direccionales",
+      "path": "/carros/iluminacion/direccionales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luces direccionales",
+        "intermitentes",
+        "cocuyos",
+        "luz direccional"
+      ]
+    },
+    {
+      "nombre": "Exploradoras",
+      "path": "/carros/iluminacion/exploradoras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luces auxiliares",
+        "antiniebla",
+        "exploradoras led",
+        "neblineros",
+        "halógenos auxiliares"
+      ]
+    },
+    {
+      "nombre": "Luces LED",
+      "path": "/carros/iluminacion/luces-led",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "led",
+        "luces led",
+        "bombillos led",
+        "bombillas led",
+        "focos led",
+        "luz led",
+        "kit led",
+        "led h4",
+        "led h7",
+        "led h11"
+      ]
+    },
+    {
+      "nombre": "Bombillos halógenos",
+      "path": "/carros/iluminacion/bombillos-halogenos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bombillos",
+        "bombillas",
+        "focos",
+        "halógeno",
+        "h1",
+        "h3",
+        "h4",
+        "h7",
+        "h11",
+        "9005",
+        "9006",
+        "luz halógena"
+      ]
+    },
+    {
+      "nombre": "Xenón (HID)",
+      "path": "/carros/iluminacion/xenon-hid",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "xenon",
+        "hid",
+        "kit xenón",
+        "bi-xenón",
+        "balastro"
+      ]
+    },
+    {
+      "nombre": "Barras LED",
+      "path": "/carros/iluminacion/barras-led",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "barra led",
+        "barra de luces",
+        "light bar",
+        "barra off road"
+      ]
+    },
+    {
+      "nombre": "Luces interiores",
+      "path": "/carros/iluminacion/luces-interiores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luz de techo",
+        "luz interior",
+        "plafón",
+        "luz de cabina"
+      ]
+    },
+    {
+      "nombre": "Luces DRL (diurnas)",
+      "path": "/carros/iluminacion/luces-drl-diurnas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "drl",
+        "luces diurnas",
+        "luz de día",
+        "daytime"
+      ]
+    },
+    {
+      "nombre": "Luces de placa y cortesía",
+      "path": "/carros/iluminacion/luces-de-placa-y-cortesia",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luz de placa",
+        "luz de cortesía",
+        "luz de puerta"
+      ]
+    },
+    {
+      "nombre": "Motor y transmisión",
+      "path": "/carros/motor-y-transmision",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Bloque y culata",
+      "path": "/carros/motor-y-transmision/bloque-y-culata",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Pistones",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/pistones",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pistón",
+        "pistones",
+        "kit de pistones"
+      ]
+    },
+    {
+      "nombre": "Anillos",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/anillos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "anillos de pistón",
+        "rines de pistón",
+        "segmentos"
+      ]
+    },
+    {
+      "nombre": "Bielas",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/bielas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "biela",
+        "bielas"
+      ]
+    },
+    {
+      "nombre": "Cigüeñales",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/ciguenales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cigüeñal"
+      ]
+    },
+    {
+      "nombre": "Árboles de levas",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/arboles-de-levas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "árbol de levas",
+        "eje de levas"
+      ]
+    },
+    {
+      "nombre": "Culatas",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/culatas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "culata",
+        "cabezote",
+        "cabeza de motor"
+      ]
+    },
+    {
+      "nombre": "Válvulas y guías",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guías de válvula",
+        "válvula de admisión",
+        "válvula de escape",
+        "válvula de motor",
+        "guía de válvula"
+      ]
+    },
+    {
+      "nombre": "Camisas",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/camisas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "camisas de cilindro",
+        "cilindros"
+      ]
+    },
+    {
+      "nombre": "Empaques y retenedores de motor",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "juntas",
+        "empaquetadura",
+        "retenedores",
+        "empaques y sellos de motor",
+        "empaques",
+        "sellos de motor",
+        "retén",
+        "sello de cigüeñal",
+        "retenedor de árbol de levas"
+      ]
+    },
+    {
+      "nombre": "Bombas de aceite",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de aceite"
+      ]
+    },
+    {
+      "nombre": "Soportes de motor",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/soportes-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "soporte de motor",
+        "base de motor",
+        "cojín de motor"
+      ]
+    },
+    {
+      "nombre": "Motores completos",
+      "path": "/carros/motor-y-transmision/bloque-y-culata/motores-completos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "motor completo",
+        "motor usado",
+        "motor reconstruido",
+        "motor 3/4"
+      ]
+    },
+    {
+      "nombre": "Correas y tensores",
+      "path": "/carros/motor-y-transmision/correas-y-tensores",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Correas de accesorios",
+      "path": "/carros/motor-y-transmision/correas-y-tensores/correas-de-accesorios",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "correa",
+        "correa de alternador",
+        "correa multicanal",
+        "correa poly v",
+        "banda"
+      ]
+    },
+    {
+      "nombre": "Tensores de correa",
+      "path": "/carros/motor-y-transmision/correas-y-tensores/tensores-de-correa",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tensor",
+        "tensor de correa",
+        "polea tensora"
+      ]
+    },
+    {
+      "nombre": "Poleas",
+      "path": "/carros/motor-y-transmision/correas-y-tensores/poleas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "polea",
+        "polea de cigüeñal",
+        "damper",
+        "polea loca"
+      ]
+    },
+    {
+      "nombre": "Repartición (distribución)",
+      "path": "/carros/motor-y-transmision/reparticion-distribucion",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": [
+        "distribución",
+        "tiempo"
+      ]
+    },
+    {
+      "nombre": "Correas de repartición",
+      "path": "/carros/motor-y-transmision/reparticion-distribucion/correas-de-reparticion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "correa de distribución",
+        "correa de tiempo",
+        "timing belt"
+      ]
+    },
+    {
+      "nombre": "Cadenas de repartición",
+      "path": "/carros/motor-y-transmision/reparticion-distribucion/cadenas-de-reparticion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cadena de distribución",
+        "cadena de tiempo",
+        "cadenilla"
+      ]
+    },
+    {
+      "nombre": "Kits de repartición",
+      "path": "/carros/motor-y-transmision/reparticion-distribucion/kits-de-reparticion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de distribución",
+        "kit de tiempo",
+        "kit de repartición"
+      ]
+    },
+    {
+      "nombre": "Tensores y guías de repartición",
+      "path": "/carros/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-reparticion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tensor de distribución",
+        "guía de cadena",
+        "patín de distribución"
+      ]
+    },
+    {
+      "nombre": "Refrigeración",
+      "path": "/carros/motor-y-transmision/refrigeracion",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Radiadores",
+      "path": "/carros/motor-y-transmision/refrigeracion/radiadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "radiador",
+        "panal de radiador",
+        "radiador de agua"
+      ]
+    },
+    {
+      "nombre": "Bombas de agua",
+      "path": "/carros/motor-y-transmision/refrigeracion/bombas-de-agua",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de agua",
+        "water pump"
+      ]
+    },
+    {
+      "nombre": "Termostatos",
+      "path": "/carros/motor-y-transmision/refrigeracion/termostatos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "termostato",
+        "termostato de agua"
+      ]
+    },
+    {
+      "nombre": "Electroventiladores",
+      "path": "/carros/motor-y-transmision/refrigeracion/electroventiladores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ventilador de radiador",
+        "electroventilador",
+        "ventiladores de radiador"
+      ]
+    },
+    {
+      "nombre": "Mangueras de refrigeración",
+      "path": "/carros/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de radiador",
+        "manguera de agua",
+        "manguera superior",
+        "manguera inferior"
+      ]
+    },
+    {
+      "nombre": "Depósitos de refrigerante",
+      "path": "/carros/motor-y-transmision/refrigeracion/depositos-de-refrigerante",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "depósito de agua",
+        "tanque de expansión",
+        "recipiente de refrigerante"
+      ]
+    },
+    {
+      "nombre": "Tapas de radiador",
+      "path": "/carros/motor-y-transmision/refrigeracion/tapas-de-radiador",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tapa de radiador",
+        "tapa de presión"
+      ]
+    },
+    {
+      "nombre": "Radiadores de aceite",
+      "path": "/carros/motor-y-transmision/refrigeracion/radiadores-de-aceite",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "enfriador de aceite",
+        "radiador de aceite",
+        "oil cooler"
+      ]
+    },
+    {
+      "nombre": "Turbo e intercooler",
+      "path": "/carros/motor-y-transmision/turbo-e-intercooler",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Turbos",
+      "path": "/carros/motor-y-transmision/turbo-e-intercooler/turbos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "turbo",
+        "turbocargador",
+        "turbina",
+        "turbo cartucho"
+      ]
+    },
+    {
+      "nombre": "Intercoolers",
+      "path": "/carros/motor-y-transmision/turbo-e-intercooler/intercoolers",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "intercooler",
+        "enfriador de aire"
+      ]
+    },
+    {
+      "nombre": "Mangueras de turbo e intercooler",
+      "path": "/carros/motor-y-transmision/turbo-e-intercooler/mangueras-de-turbo-e-intercooler",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de turbo",
+        "manguera de intercooler",
+        "ducto de turbo"
+      ]
+    },
+    {
+      "nombre": "Válvulas de alivio (blow-off)",
+      "path": "/carros/motor-y-transmision/turbo-e-intercooler/valvulas-de-alivio-blow-off",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "blow off",
+        "válvula de alivio",
+        "pop off",
+        "wastegate"
+      ]
+    },
+    {
+      "nombre": "Combustible e inyección",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Bombas de gasolina",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de combustible",
+        "bomba de gasolina eléctrica",
+        "módulo de bomba"
+      ]
+    },
+    {
+      "nombre": "Inyectores",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/inyectores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "inyector",
+        "inyectores de gasolina",
+        "boquillas",
+        "inyector diésel",
+        "inyectores common rail",
+        "inyectores de acpm"
+      ]
+    },
+    {
+      "nombre": "Rampas de inyectores",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/rampas-de-inyectores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "riel de inyectores",
+        "flauta de inyectores",
+        "rampas (rieles) de inyectores"
+      ]
+    },
+    {
+      "nombre": "Reguladores de presión de combustible",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/reguladores-de-presion-de-combustible",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "regulador de presión",
+        "regulador de gasolina",
+        "reguladores de presión"
+      ]
+    },
+    {
+      "nombre": "Cuerpos de aceleración",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/cuerpos-de-aceleracion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cuerpo de aceleración",
+        "throttle body",
+        "mariposa"
+      ]
+    },
+    {
+      "nombre": "Sensores de oxígeno",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-de-oxigeno",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor de oxígeno",
+        "sonda lambda",
+        "sensor o2"
+      ]
+    },
+    {
+      "nombre": "Sensores MAP",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-map",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor map",
+        "map",
+        "sensor de presión del múltiple",
+        "sensor de presión absoluta",
+        "sensor de vacío"
+      ]
+    },
+    {
+      "nombre": "Válvulas EGR y canister",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/valvulas-egr-y-canister",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "egr",
+        "canister",
+        "válvula pcv"
+      ]
+    },
+    {
+      "nombre": "Carburadores",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/carburadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "carburador",
+        "carburador weber",
+        "kit de carburador"
+      ]
+    },
+    {
+      "nombre": "Guayas de acelerador",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/guayas-de-acelerador",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de acelerador",
+        "chicote de acelerador"
+      ]
+    },
+    {
+      "nombre": "Tanques de gasolina",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/tanques-de-gasolina",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tanque de gasolina",
+        "tanque de combustible",
+        "depósito de combustible"
+      ]
+    },
+    {
+      "nombre": "Bombas de inyección diésel",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-inyeccion-diesel",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de inyección",
+        "bomba diésel",
+        "bomba de acpm",
+        "bomba lineal",
+        "bomba rotativa"
+      ]
+    },
+    {
+      "nombre": "Filtros separadores de agua",
+      "path": "/carros/motor-y-transmision/combustible-e-inyeccion/filtros-separadores-de-agua",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "separador de agua",
+        "trampa de agua",
+        "filtro racor"
+      ]
+    },
+    {
+      "nombre": "Clutch (embrague)",
+      "path": "/carros/motor-y-transmision/clutch-embrague",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Kits de clutch",
+      "path": "/carros/motor-y-transmision/clutch-embrague/kits-de-clutch",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de embrague",
+        "kit clutch",
+        "clutch",
+        "embrague"
+      ]
+    },
+    {
+      "nombre": "Discos de clutch",
+      "path": "/carros/motor-y-transmision/clutch-embrague/discos-de-clutch",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "disco de embrague"
+      ]
+    },
+    {
+      "nombre": "Prensas de clutch",
+      "path": "/carros/motor-y-transmision/clutch-embrague/prensas-de-clutch",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "prensa de embrague",
+        "plato de presión"
+      ]
+    },
+    {
+      "nombre": "Balineras de clutch (collarín)",
+      "path": "/carros/motor-y-transmision/clutch-embrague/balineras-de-clutch-collarin",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "collarín",
+        "rodamiento de embrague",
+        "balinera de clutch"
+      ]
+    },
+    {
+      "nombre": "Bombas y balibombas de clutch",
+      "path": "/carros/motor-y-transmision/clutch-embrague/bombas-y-balibombas-de-clutch",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bombín de embrague",
+        "cilindro esclavo",
+        "bombín de clutch",
+        "bomba de embrague",
+        "balibomba",
+        "bombines de clutch"
+      ]
+    },
+    {
+      "nombre": "Guayas de clutch",
+      "path": "/carros/motor-y-transmision/clutch-embrague/guayas-de-clutch",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de clutch",
+        "cable de embrague",
+        "chicote de clutch"
+      ]
+    },
+    {
+      "nombre": "Admisión y escape",
+      "path": "/carros/motor-y-transmision/admision-y-escape",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Múltiples de admisión",
+      "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-admision",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "múltiple de admisión",
+        "manifold de admisión",
+        "intake"
+      ]
+    },
+    {
+      "nombre": "Múltiples de escape",
+      "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-escape",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "múltiple de escape",
+        "header",
+        "manifold de escape"
+      ]
+    },
+    {
+      "nombre": "Catalizadores",
+      "path": "/carros/motor-y-transmision/admision-y-escape/catalizadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "catalizador",
+        "convertidor catalítico"
+      ]
+    },
+    {
+      "nombre": "Mofles (silenciadores)",
+      "path": "/carros/motor-y-transmision/admision-y-escape/mofles-silenciadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "silenciador"
+      ]
+    },
+    {
+      "nombre": "Resonadores",
+      "path": "/carros/motor-y-transmision/admision-y-escape/resonadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "resonador",
+        "pre-silenciador"
+      ]
+    },
+    {
+      "nombre": "Flexibles de escape",
+      "path": "/carros/motor-y-transmision/admision-y-escape/flexibles-de-escape",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "flexible",
+        "flexible de exhosto",
+        "fuelle de escape"
+      ]
+    },
+    {
+      "nombre": "Tubos y puntas de escape",
+      "path": "/carros/motor-y-transmision/admision-y-escape/tubos-y-puntas-de-escape",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tubo de escape",
+        "punta de exhosto",
+        "cola de escape"
+      ]
+    },
+    {
+      "nombre": "Transmisión y caja",
+      "path": "/carros/motor-y-transmision/transmision-y-caja",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": [
+        "caja",
+        "transmisión"
+      ]
+    },
+    {
+      "nombre": "Cajas de cambios",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-cambios",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de cambios",
+        "caja manual",
+        "caja de velocidades",
+        "transmisión manual"
+      ]
+    },
+    {
+      "nombre": "Cajas automáticas y convertidores",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-automaticas-y-convertidores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja automática",
+        "transmisión automática",
+        "convertidor de par",
+        "torque"
+      ]
+    },
+    {
+      "nombre": "Diferenciales",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/diferenciales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "diferencial",
+        "corona y piñón",
+        "transmisión trasera"
+      ]
+    },
+    {
+      "nombre": "Cardanes y crucetas",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/cardanes-y-crucetas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cardán",
+        "cruceta",
+        "eje cardán"
+      ]
+    },
+    {
+      "nombre": "Ejes y homocinéticas",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/ejes-y-homocineticas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "homocinética",
+        "junta homocinética",
+        "semieje",
+        "eje de tracción",
+        "palier",
+        "copa homocinética"
+      ]
+    },
+    {
+      "nombre": "Sincronizadores y piñones",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/sincronizadores-y-pinones",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sincronizador",
+        "piñón de caja",
+        "engranaje de caja"
+      ]
+    },
+    {
+      "nombre": "Retenedores de caja",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/retenedores-de-caja",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "retenedor de caja",
+        "retén de caja",
+        "sello de caja"
+      ]
+    },
+    {
+      "nombre": "Soportes de caja",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/soportes-de-caja",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "soporte de caja",
+        "base de caja",
+        "cojín de caja"
+      ]
+    },
+    {
+      "nombre": "Selectoras y guayas de cambios",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/selectoras-y-guayas-de-cambios",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "selectora",
+        "guaya de cambios",
+        "varillaje de cambios"
+      ]
+    },
+    {
+      "nombre": "Volantes de motor",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "volante",
+        "flywheel",
+        "volante de inercia",
+        "volante bimasa",
+        "volantes de motor (flywheel)"
+      ]
+    },
+    {
+      "nombre": "Cajas de transferencia 4x4",
+      "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-transferencia-4x4",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de transferencia",
+        "transfer",
+        "4x4"
+      ]
+    },
+    {
+      "nombre": "Partes plásticas de motor",
+      "path": "/carros/motor-y-transmision/partes-plasticas-de-motor",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Tapas y cubiertas de motor",
+      "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/tapas-y-cubiertas-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubierta de motor",
+        "tapa decorativa de motor",
+        "cover de motor"
+      ]
+    },
+    {
+      "nombre": "Guardapolvos y protectores de motor",
+      "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/guardapolvos-y-protectores-de-motor",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector de motor",
+        "guardapolvo de motor",
+        "pasarrueda de motor",
+        "cubre motor"
+      ]
+    },
+    {
+      "nombre": "Carcasas de correa y ductos",
+      "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/carcasas-de-correa-y-ductos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "carcasa de correa",
+        "ducto de aire",
+        "tapa de repartición"
+      ]
+    },
+    {
+      "nombre": "GNV (gas vehicular)",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Kits de conversión a GNV",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular/kits-de-conversion-a-gnv",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de gas",
+        "conversión a gas",
+        "kit gnv",
+        "equipo de gas"
+      ]
+    },
+    {
+      "nombre": "Reguladores GNV",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular/reguladores-gnv",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "regulador de gas",
+        "reductor gnv"
+      ]
+    },
+    {
+      "nombre": "Inyectores y rieles GNV",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular/inyectores-y-rieles-gnv",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "riel de gas",
+        "inyectores de gas",
+        "flauta gnv"
+      ]
+    },
+    {
+      "nombre": "Cilindros GNV",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular/cilindros-gnv",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cilindro de gas",
+        "tanque de gas",
+        "pipeta gnv"
+      ]
+    },
+    {
+      "nombre": "Mangueras y válvulas GNV",
+      "path": "/carros/motor-y-transmision/gnv-gas-vehicular/mangueras-y-valvulas-gnv",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de gas",
+        "válvula de gas",
+        "llave de gas"
+      ]
+    },
+    {
+      "nombre": "Accesorios",
+      "path": "/carros/accesorios",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Accesorios exteriores",
+      "path": "/carros/accesorios/accesorios-exteriores",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Estribos",
+      "path": "/carros/accesorios/accesorios-exteriores/estribos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "estribo",
+        "estribos laterales",
+        "pisaderas"
+      ]
+    },
+    {
+      "nombre": "Barras de techo",
+      "path": "/carros/accesorios/accesorios-exteriores/barras-de-techo",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "barra de techo",
+        "rieles de techo",
+        "portaequipaje de techo"
+      ]
+    },
+    {
+      "nombre": "Portaequipajes",
+      "path": "/carros/accesorios/accesorios-exteriores/portaequipajes",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portaequipaje",
+        "canastilla",
+        "maletero de techo",
+        "cofre de techo"
+      ]
+    },
+    {
+      "nombre": "Portabicicletas",
+      "path": "/carros/accesorios/accesorios-exteriores/portabicicletas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portabicicleta",
+        "rack de bicicleta",
+        "porta bici"
+      ]
+    },
+    {
+      "nombre": "Portallantas",
+      "path": "/carros/accesorios/accesorios-exteriores/portallantas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portallanta",
+        "porta llanta",
+        "soporte de llanta de repuesto"
+      ]
+    },
+    {
+      "nombre": "Enganches de remolque (tiros)",
+      "path": "/carros/accesorios/accesorios-exteriores/enganches-de-remolque-tiros",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tiro",
+        "enganche",
+        "tiro de remolque",
+        "bola de remolque"
+      ]
+    },
+    {
+      "nombre": "Deflectores",
+      "path": "/carros/accesorios/accesorios-exteriores/deflectores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "deflector",
+        "visera de ventana",
+        "deflector de capó",
+        "bug deflector"
+      ]
+    },
+    {
+      "nombre": "Protectores exteriores",
+      "path": "/carros/accesorios/accesorios-exteriores/protectores-exteriores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector",
+        "protector de bómper",
+        "protector lateral"
+      ]
+    },
+    {
+      "nombre": "Molduras",
+      "path": "/carros/accesorios/accesorios-exteriores/molduras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "moldura",
+        "moldura lateral",
+        "friso"
+      ]
+    },
+    {
+      "nombre": "Spoilers y alerones",
+      "path": "/carros/accesorios/accesorios-exteriores/spoilers-y-alerones",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "spoiler",
+        "alerón",
+        "ala"
+      ]
+    },
+    {
+      "nombre": "Parrillas decorativas",
+      "path": "/carros/accesorios/accesorios-exteriores/parrillas-decorativas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parrilla deportiva",
+        "rejilla decorativa"
+      ]
+    },
+    {
+      "nombre": "Protectores de puertas",
+      "path": "/carros/accesorios/accesorios-exteriores/protectores-de-puertas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector de puerta",
+        "bordes de puerta",
+        "protector de filo"
+      ]
+    },
+    {
+      "nombre": "Marcos y portaplacas",
+      "path": "/carros/accesorios/accesorios-exteriores/marcos-y-portaplacas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portaplacas",
+        "marco de placa",
+        "porta placa"
+      ]
+    },
+    {
+      "nombre": "Cubrecarros (forros)",
+      "path": "/carros/accesorios/accesorios-exteriores/cubrecarros-forros",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubrecarro",
+        "forro para carro",
+        "funda de carro",
+        "pijama para carro",
+        "carpa para carro"
+      ]
+    },
+    {
+      "nombre": "Snorkels",
+      "path": "/carros/accesorios/accesorios-exteriores/snorkels",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "snorkel",
+        "toma de aire alta"
+      ]
+    },
+    {
+      "nombre": "Polarizado y películas",
+      "path": "/carros/accesorios/accesorios-exteriores/polarizado-y-peliculas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "polarizado",
+        "película de seguridad",
+        "papel polarizado"
+      ]
+    },
+    {
+      "nombre": "Accesorios interiores",
+      "path": "/carros/accesorios/accesorios-interiores",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Tapetes",
+      "path": "/carros/accesorios/accesorios-interiores/tapetes",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tapetes de carro",
+        "alfombras",
+        "pisos",
+        "tapetes de caucho",
+        "tapetes 3D"
+      ]
+    },
+    {
+      "nombre": "Forros de sillas",
+      "path": "/carros/accesorios/accesorios-interiores/forros-de-sillas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "forros de asientos",
+        "fundas de asiento",
+        "cubreasientos",
+        "cubre sillas",
+        "fundas de asientos",
+        "fundas (forros de sillas)"
+      ]
+    },
+    {
+      "nombre": "Forros de timón",
+      "path": "/carros/accesorios/accesorios-interiores/forros-de-timon",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "forro de timón",
+        "cubrevolante",
+        "cubre volante",
+        "forro de volante"
+      ]
+    },
+    {
+      "nombre": "Cojines",
+      "path": "/carros/accesorios/accesorios-interiores/cojines",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cojín",
+        "cojines de carro",
+        "soporte lumbar"
+      ]
+    },
+    {
+      "nombre": "Organizadores",
+      "path": "/carros/accesorios/accesorios-interiores/organizadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "organizador",
+        "organizador de baúl",
+        "maletero organizador"
+      ]
+    },
+    {
+      "nombre": "Cortasoles de parabrisas",
+      "path": "/carros/accesorios/accesorios-interiores/cortasoles-de-parabrisas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cortasol",
+        "parasol de parabrisas",
+        "protector solar de parabrisas"
+      ]
+    },
+    {
+      "nombre": "Cortinas",
+      "path": "/carros/accesorios/accesorios-interiores/cortinas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cortina",
+        "cortina para carro",
+        "cortina solar"
+      ]
+    },
+    {
+      "nombre": "Percheros",
+      "path": "/carros/accesorios/accesorios-interiores/percheros",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "perchero",
+        "gancho para ropa",
+        "colgador"
+      ]
+    },
+    {
+      "nombre": "Portaobjetos",
+      "path": "/carros/accesorios/accesorios-interiores/portaobjetos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portaobjeto",
+        "bandeja",
+        "organizador de consola"
+      ]
+    },
+    {
+      "nombre": "Portavasos",
+      "path": "/carros/accesorios/accesorios-interiores/portavasos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portavasos",
+        "porta vasos"
+      ]
+    },
+    {
+      "nombre": "Apoyabrazos",
+      "path": "/carros/accesorios/accesorios-interiores/apoyabrazos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "apoyabrazos",
+        "descansabrazos",
+        "consola apoyabrazos"
+      ]
+    },
+    {
+      "nombre": "Volantes deportivos",
+      "path": "/carros/accesorios/accesorios-interiores/volantes-deportivos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "volante deportivo",
+        "timón deportivo",
+        "volante de lujo"
+      ]
+    },
+    {
+      "nombre": "Pedales deportivos (cubrepedales)",
+      "path": "/carros/accesorios/accesorios-interiores/pedales-deportivos-cubrepedales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubrepedales",
+        "pedales de lujo"
+      ]
+    },
+    {
+      "nombre": "Protectores interiores",
+      "path": "/carros/accesorios/accesorios-interiores/protectores-interiores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector interior",
+        "protector de tapicería",
+        "cubre consola"
+      ]
+    },
+    {
+      "nombre": "Sillas para bebé",
+      "path": "/carros/accesorios/accesorios-interiores/sillas-para-bebe",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "silla para bebé",
+        "silla de carro para bebé",
+        "silla infantil",
+        "base isofix"
+      ]
+    },
+    {
+      "nombre": "Neveras portátiles",
+      "path": "/carros/accesorios/accesorios-interiores/neveras-portatiles",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "nevera para carro",
+        "nevera portátil",
+        "cooler"
+      ]
+    },
+    {
+      "nombre": "Cargadores e inversores 12V",
+      "path": "/carros/accesorios/accesorios-interiores/cargadores-e-inversores-12v",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "inversor",
+        "convertidor",
+        "cargador de carro",
+        "cargador 12v",
+        "adaptador de corriente",
+        "inversores y cargadores 12v",
+        "cargadores de celular para carro",
+        "cargadores",
+        "cargador de celular"
+      ]
+    },
+    {
+      "nombre": "Soportes de celular",
+      "path": "/carros/accesorios/accesorios-interiores/soportes-de-celular",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "soporte de celular",
+        "porta celular",
+        "holder",
+        "soporte magnético"
+      ]
+    },
+    {
+      "nombre": "Audio",
+      "path": "/carros/accesorios/audio",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Radios",
+      "path": "/carros/accesorios/audio/radios",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "radio",
+        "radio de carro",
+        "estéreo",
+        "autoradio",
+        "radio 1 din",
+        "radio 2 din"
+      ]
+    },
+    {
+      "nombre": "Pantallas multimedia",
+      "path": "/carros/accesorios/audio/pantallas-multimedia",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pantalla",
+        "pantalla android",
+        "radio con pantalla",
+        "pantalla táctil",
+        "multimedia"
+      ]
+    },
+    {
+      "nombre": "Parlantes",
+      "path": "/carros/accesorios/audio/parlantes",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "altavoces",
+        "bafles",
+        "speakers",
+        "parlantes 6x9",
+        "parlantes 6.5"
+      ]
+    },
+    {
+      "nombre": "Subwoofers",
+      "path": "/carros/accesorios/audio/subwoofers",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "subwoofer",
+        "bajo",
+        "woofer",
+        "cajón de bajos"
+      ]
+    },
+    {
+      "nombre": "Amplificadores",
+      "path": "/carros/accesorios/audio/amplificadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "amplificador",
+        "planta",
+        "amplificador de sonido"
+      ]
+    },
+    {
+      "nombre": "Procesadores y ecualizadores",
+      "path": "/carros/accesorios/audio/procesadores-y-ecualizadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ecualizador",
+        "procesador de audio",
+        "dsp"
+      ]
+    },
+    {
+      "nombre": "Tweeters",
+      "path": "/carros/accesorios/audio/tweeters",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tweeter",
+        "tweeters",
+        "driver de agudos"
+      ]
+    },
+    {
+      "nombre": "Cajas acústicas",
+      "path": "/carros/accesorios/audio/cajas-acusticas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja acústica",
+        "cajón",
+        "cajón de bajo",
+        "bazooka"
+      ]
+    },
+    {
+      "nombre": "Cables y conectores de audio",
+      "path": "/carros/accesorios/audio/cables-y-conectores-de-audio",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de audio",
+        "rca",
+        "cable de parlantes",
+        "kit de cables"
+      ]
+    },
+    {
+      "nombre": "Antenas de radio",
+      "path": "/carros/accesorios/audio/antenas-de-radio",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "antenas",
+        "antena",
+        "antena de radio",
+        "antena tiburón"
+      ]
+    },
+    {
+      "nombre": "Kits de instalación",
+      "path": "/carros/accesorios/audio/kits-de-instalacion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de instalación",
+        "kit de montaje",
+        "adaptador de radio",
+        "marco de radio"
+      ]
+    },
+    {
+      "nombre": "Carrocería y climatización",
+      "path": "/carros/carroceria-y-climatizacion",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Carrocería",
+      "path": "/carros/carroceria-y-climatizacion/carroceria",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Bómperes (bumper)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/bomperes-bumper",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parachoques",
+        "bumper",
+        "bómper",
+        "bomper",
+        "defensa",
+        "paragolpes",
+        "bómper delantero",
+        "bómper trasero",
+        "bómperes (parachoques)"
+      ]
+    },
+    {
+      "nombre": "Capós",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/capos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "capot",
+        "capote",
+        "capó",
+        "bonete",
+        "cofre"
+      ]
+    },
+    {
+      "nombre": "Guardafangos",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/guardafangos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guardafango",
+        "guardabarros",
+        "fender",
+        "guardafango delantero",
+        "guardafango trasero"
+      ]
+    },
+    {
+      "nombre": "Puertas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/puertas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "puerta",
+        "puerta delantera",
+        "puerta trasera",
+        "lámina de puerta"
+      ]
+    },
+    {
+      "nombre": "Baúles y compuertas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/baules-y-compuertas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "baúl",
+        "tapa de baúl",
+        "compuerta",
+        "portalón"
+      ]
+    },
+    {
+      "nombre": "Espejos retrovisores",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/espejos-retrovisores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "espejos",
+        "espejo lateral",
+        "espejo retrovisor",
+        "retrovisor",
+        "carcasa de espejo",
+        "retrovisores",
+        "espejos laterales"
+      ]
+    },
+    {
+      "nombre": "Persianas (parrillas)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/persianas-parrillas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "persiana",
+        "parrilla",
+        "parrilla delantera",
+        "rejilla frontal"
+      ]
+    },
+    {
+      "nombre": "Rejillas y tomas de aire",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/rejillas-y-tomas-de-aire",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rejilla",
+        "toma de aire",
+        "rejilla de bómper"
+      ]
+    },
+    {
+      "nombre": "Soportes y bases de carrocería",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/soportes-y-bases-de-carroceria",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "soporte de bómper",
+        "base de farola",
+        "soporte de carrocería"
+      ]
+    },
+    {
+      "nombre": "Bisagras",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/bisagras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bisagra",
+        "bisagra de puerta",
+        "bisagra de capó"
+      ]
+    },
+    {
+      "nombre": "Chapas y manijas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/chapas-y-manijas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manijas",
+        "manija de puerta",
+        "chapa",
+        "cerradura",
+        "cerradura de puerta"
+      ]
+    },
+    {
+      "nombre": "Cerraduras de capó y baúl",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/cerraduras-de-capo-y-baul",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cerradura de capó",
+        "cerradura de baúl",
+        "chapa de baúl",
+        "guaya de capó"
+      ]
+    },
+    {
+      "nombre": "Amortiguadores de capó y baúl (resortes a gas)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/amortiguadores-de-capo-y-baul-resortes-a-gas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "resorte a gas",
+        "amortiguador de capó",
+        "amortiguador de baúl",
+        "pistón de capó"
+      ]
+    },
+    {
+      "nombre": "Vidrios y parabrisas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/vidrios-y-parabrisas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parabrisas",
+        "vidrio",
+        "panorámico",
+        "luneta",
+        "vidrio de puerta"
+      ]
+    },
+    {
+      "nombre": "Elevavidrios",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/elevavidrios",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alzavidrios",
+        "regulador de vidrio",
+        "motor de vidrio",
+        "eleva vidrios",
+        "alza cristales",
+        "elevadores de vidrio",
+        "motor elevavidrios",
+        "elevavidrios (alza cristales)",
+        "motores eléctricos (vidrios, limpiaparabrisas)",
+        "motor eleva vidrios"
+      ]
+    },
+    {
+      "nombre": "Empaques de puertas y molduras (burletes)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/empaques-de-puertas-y-molduras-burletes",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "burlete",
+        "empaque de puerta",
+        "caucho de puerta",
+        "goma de vidrio"
+      ]
+    },
+    {
+      "nombre": "Plumillas (limpiaparabrisas)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/plumillas-limpiaparabrisas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "plumillas",
+        "escobillas",
+        "wipers",
+        "limpiabrisas",
+        "brazos de limpiaparabrisas",
+        "limpiaparabrisas",
+        "limpiaparabrisas (plumillas)"
+      ]
+    },
+    {
+      "nombre": "Brazos y motores de limpiaparabrisas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/brazos-y-motores-de-limpiaparabrisas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "brazo de limpiaparabrisas",
+        "motor de limpiaparabrisas",
+        "motor limpiabrisas"
+      ]
+    },
+    {
+      "nombre": "Lavaparabrisas (bombas y depósitos)",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/lavaparabrisas-bombas-y-depositos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de agua de parabrisas",
+        "depósito de lavaparabrisas",
+        "lava parabrisas"
+      ]
+    },
+    {
+      "nombre": "Guardapolvos y pasarruedas",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/guardapolvos-y-pasarruedas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pasarruedas",
+        "guardapolvo de rueda",
+        "plástico de guardafango"
+      ]
+    },
+    {
+      "nombre": "Zócalos",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/zocalos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "zócalo",
+        "faldón",
+        "estribos y zócalos"
+      ]
+    },
+    {
+      "nombre": "Techos corredizos",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/techos-corredizos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "techo corredizo",
+        "sunroof",
+        "quemacocos"
+      ]
+    },
+    {
+      "nombre": "Emblemas de carrocería",
+      "path": "/carros/carroceria-y-climatizacion/carroceria/emblemas-de-carroceria",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "emblemas"
+      ]
+    },
+    {
+      "nombre": "Interior (repuestos)",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": [
+        "interior",
+        "repuestos de interior"
+      ]
+    },
+    {
+      "nombre": "Manijas y chapas interiores",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manijas-y-chapas-interiores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manija interior",
+        "manilla",
+        "chapa interior"
+      ]
+    },
+    {
+      "nombre": "Paneles de puerta",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/paneles-de-puerta",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "panel de puerta",
+        "tapizado de puerta",
+        "forro de puerta"
+      ]
+    },
+    {
+      "nombre": "Tableros y consolas",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tableros-y-consolas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tablero",
+        "consola",
+        "dashboard",
+        "consola central"
+      ]
+    },
+    {
+      "nombre": "Guanteras",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/guanteras",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guantera",
+        "tapa de guantera"
+      ]
+    },
+    {
+      "nombre": "Palancas de cambios y pomos",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-cambios-y-pomos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pomo",
+        "palanca de cambios",
+        "perilla de cambios",
+        "fuelle de palanca"
+      ]
+    },
+    {
+      "nombre": "Palancas de freno de mano",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-freno-de-mano",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "freno de mano",
+        "palanca de freno de mano",
+        "freno de parqueo"
+      ]
+    },
+    {
+      "nombre": "Pedales",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/pedales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pedal",
+        "pedal de freno",
+        "pedal de acelerador",
+        "pedal de embrague"
+      ]
+    },
+    {
+      "nombre": "Sillas y tapizados",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/sillas-y-tapizados",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "asientos",
+        "tapicería",
+        "asientos y tapizados"
+      ]
+    },
+    {
+      "nombre": "Cinturones de seguridad",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cinturones-de-seguridad",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cinturón",
+        "cinturón de seguridad",
+        "hebilla de cinturón"
+      ]
+    },
+    {
+      "nombre": "Airbags y módulos",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/airbags-y-modulos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "airbag",
+        "bolsa de aire",
+        "módulo de airbag",
+        "clock spring",
+        "resorte espiral"
+      ]
+    },
+    {
+      "nombre": "Espejos retrovisores interiores",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/espejos-retrovisores-interiores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "retrovisor interior",
+        "espejo interior",
+        "retrovisores interiores"
+      ]
+    },
+    {
+      "nombre": "Parasoles",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/parasoles",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parasol",
+        "viseras",
+        "visera parasol"
+      ]
+    },
+    {
+      "nombre": "Cielorrasos",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cielorrasos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cielorraso",
+        "techo interior",
+        "forro de techo"
+      ]
+    },
+    {
+      "nombre": "Tomas 12V y encendedores",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tomas-12v-y-encendedores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "encendedor",
+        "toma 12v",
+        "toma de corriente"
+      ]
+    },
+    {
+      "nombre": "Manivelas de ventana",
+      "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manivelas-de-ventana",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manivela",
+        "manija de vidrio",
+        "manivela de vidrio"
+      ]
+    },
+    {
+      "nombre": "Aire acondicionado y climatización",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Compresores de AC",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/compresores-de-ac",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "compresor",
+        "compresor de aire acondicionado",
+        "compresor a/c"
+      ]
+    },
+    {
+      "nombre": "Condensadores",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/condensadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "condensador",
+        "condensador de aire",
+        "radiador de aire acondicionado"
+      ]
+    },
+    {
+      "nombre": "Evaporadores",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/evaporadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "evaporador",
+        "evaporador de aire acondicionado"
+      ]
+    },
+    {
+      "nombre": "Blowers (ventiladores de AC)",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/blowers-ventiladores-de-ac",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "blower",
+        "motor de ventilación",
+        "ventilador de aire acondicionado",
+        "ventiladores de ac"
+      ]
+    },
+    {
+      "nombre": "Resistencias",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/resistencias",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "resistencia de blower",
+        "resistencia de aire",
+        "resistor"
+      ]
+    },
+    {
+      "nombre": "Sensores de AC",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/sensores-de-ac",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor de aire acondicionado",
+        "presostato",
+        "sensor de presión de ac"
+      ]
+    },
+    {
+      "nombre": "Mangueras de AC",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/mangueras-de-ac",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de aire acondicionado",
+        "tubería de ac"
+      ]
+    },
+    {
+      "nombre": "Gas refrigerante",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/gas-refrigerante",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "gas",
+        "r134a",
+        "r1234yf",
+        "gas de aire acondicionado",
+        "freón"
+      ]
+    },
+    {
+      "nombre": "Válvulas de expansión",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/valvulas-de-expansion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "válvula de expansión",
+        "válvula de ac",
+        "orificio de expansión"
+      ]
+    },
+    {
+      "nombre": "Radiadores de calefacción",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/radiadores-de-calefaccion",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "radiador de calefacción",
+        "calefacción",
+        "heater core"
+      ]
+    },
+    {
+      "nombre": "Comandos y perillas de AC",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/comandos-y-perillas-de-ac",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "comando de aire",
+        "perilla de aire",
+        "control de aire acondicionado",
+        "switch de aire"
+      ]
+    },
+    {
+      "nombre": "Difusores de aire",
+      "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/difusores-de-aire",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "difusor",
+        "rejilla de aire",
+        "salida de aire",
+        "vent"
+      ]
+    },
+    {
+      "nombre": "Tecnología y seguridad",
+      "path": "/carros/tecnologia-y-seguridad",
+      "seccion": "Carros",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Tecnología y conectividad",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Sistemas Android y CarPlay",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sistemas android / carplay",
+        "android auto",
+        "carplay",
+        "sistema android"
+      ]
+    },
+    {
+      "nombre": "Cámaras de reversa",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-de-reversa",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cámara de reversa",
+        "cámara trasera",
+        "cámara de retroceso"
+      ]
+    },
+    {
+      "nombre": "Cámaras DVR y de seguridad",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-dvr-y-de-seguridad",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cámaras dvr",
+        "cámara dvr",
+        "cámara de seguridad",
+        "dashcam",
+        "cámara testigo",
+        "cámaras de seguridad"
+      ]
+    },
+    {
+      "nombre": "Sensores de parqueo",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-parqueo",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor de parqueo",
+        "sensores de reversa",
+        "sensor de estacionamiento"
+      ]
+    },
+    {
+      "nombre": "Sensores de presión de llantas (TPMS)",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tpms",
+        "sensor de presión de llantas"
+      ]
+    },
+    {
+      "nombre": "Adaptadores Bluetooth",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/adaptadores-bluetooth",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bluetooth",
+        "adaptador bluetooth",
+        "transmisor fm"
+      ]
+    },
+    {
+      "nombre": "Cargadores y cables para eléctricos e híbridos",
+      "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/cargadores-y-cables-para-electricos-e-hibridos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cargador ev",
+        "cargador de carro eléctrico",
+        "wallbox",
+        "cable de carga tipo 2"
+      ]
+    },
+    {
+      "nombre": "Seguridad",
+      "path": "/carros/tecnologia-y-seguridad/seguridad",
+      "seccion": "Carros",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Alarmas",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/alarmas",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alarma de carro"
+      ]
+    },
+    {
+      "nombre": "Inmovilizadores",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/inmovilizadores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "inmovilizador",
+        "corta corriente",
+        "bloqueo de motor"
+      ]
+    },
+    {
+      "nombre": "Rastreo GPS",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/rastreo-gps",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "gps para carro"
+      ]
+    },
+    {
+      "nombre": "Cerraduras y bloqueos",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/cerraduras-y-bloqueos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bloqueo",
+        "cerradura de seguridad",
+        "bloqueo de puertas"
+      ]
+    },
+    {
+      "nombre": "Trabavolantes y trabapedales",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/trabavolantes-y-trabapedales",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "trabavolante",
+        "traba volante",
+        "bastón",
+        "trabapedal"
+      ]
+    },
+    {
+      "nombre": "Extintores",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/extintores",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "extintor",
+        "extinguidor",
+        "extintor de carro"
+      ]
+    },
+    {
+      "nombre": "Triángulos",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/triangulos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "triángulo",
+        "triángulos reflectivos",
+        "señal de carretera"
+      ]
+    },
+    {
+      "nombre": "Botiquines",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/botiquines",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "botiquín",
+        "botiquín de carretera",
+        "kit de primeros auxilios"
+      ]
+    },
+    {
+      "nombre": "Kits de carretera",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/kits-de-carretera",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de carretera",
+        "equipo de carretera",
+        "kit obligatorio"
+      ]
+    },
+    {
+      "nombre": "Chalecos reflectivos",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/chalecos-reflectivos",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "chaleco reflectivo",
+        "chaleco"
+      ]
+    },
+    {
+      "nombre": "Alcoholímetros",
+      "path": "/carros/tecnologia-y-seguridad/seguridad/alcoholimetros",
+      "seccion": "Carros",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alcoholímetro"
+      ]
+    },
+    {
+      "nombre": "Llantas y rines",
+      "path": "/motos/llantas-y-rines",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Llantas",
+      "path": "/motos/llantas-y-rines/llantas",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": [
+        "llanta de moto",
+        "llantas de moto",
+        "neumático de moto",
+        "caucho de moto"
+      ]
+    },
+    {
+      "nombre": "Llantas delanteras",
+      "path": "/motos/llantas-y-rines/llantas/llantas-delanteras",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llanta delantera",
+        "llanta 2.75-18",
+        "llanta 90/90-17"
+      ]
+    },
+    {
+      "nombre": "Llantas traseras",
+      "path": "/motos/llantas-y-rines/llantas/llantas-traseras",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llanta trasera",
+        "llanta 100/90-17",
+        "llanta 130/70-17"
+      ]
+    },
+    {
+      "nombre": "Llantas de scooter",
+      "path": "/motos/llantas-y-rines/llantas/llantas-de-scooter",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llanta de scooter",
+        "llanta 90/90-10",
+        "llanta de patineta"
+      ]
+    },
+    {
+      "nombre": "Llantas de enduro y cross",
+      "path": "/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llanta de enduro",
+        "llanta cross",
+        "llanta taquera",
+        "llanta off road"
+      ]
+    },
+    {
+      "nombre": "Llantas para motocarro",
+      "path": "/motos/llantas-y-rines/llantas/llantas-para-motocarro",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llanta de motocarro",
+        "llanta de torito",
+        "llanta de triciclo"
+      ]
+    },
+    {
+      "nombre": "Rines y rayos",
+      "path": "/motos/llantas-y-rines/rines-y-rayos",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Rines",
+      "path": "/motos/llantas-y-rines/rines-y-rayos/rines",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rines de moto"
+      ]
+    },
+    {
+      "nombre": "Rayos y niples",
+      "path": "/motos/llantas-y-rines/rines-y-rayos/rayos-y-niples",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "radios",
+        "rayos de rin"
+      ]
+    },
+    {
+      "nombre": "Manzanas de rueda",
+      "path": "/motos/llantas-y-rines/rines-y-rayos/manzanas-de-rueda",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubos de rueda",
+        "hubs",
+        "manzana trasera",
+        "manzana delantera",
+        "cubo de rueda",
+        "manzanas (cubos) de rueda"
+      ]
+    },
+    {
+      "nombre": "Balineras de rueda",
+      "path": "/motos/llantas-y-rines/rines-y-rayos/balineras-de-rueda",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodamientos de rueda",
+        "balineras",
+        "rulemanes"
+      ]
+    },
+    {
+      "nombre": "Accesorios de rueda",
+      "path": "/motos/llantas-y-rines/accesorios-de-rueda",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Neumáticos (tripas)",
+      "path": "/motos/llantas-y-rines/accesorios-de-rueda/neumaticos-tripas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tripas",
+        "tubos",
+        "cámaras de aire",
+        "neumáticos"
+      ]
+    },
+    {
+      "nombre": "Válvulas",
+      "path": "/motos/llantas-y-rines/accesorios-de-rueda/valvulas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "válvula de rin",
+        "válvula de aire",
+        "pin de válvula",
+        "válvula de llanta"
+      ]
+    },
+    {
+      "nombre": "Tuercas y ejes",
+      "path": "/motos/llantas-y-rines/accesorios-de-rueda/tuercas-y-ejes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tuerca de eje",
+        "tuerca de rueda de moto"
+      ]
+    },
+    {
+      "nombre": "Protectores de rin",
+      "path": "/motos/llantas-y-rines/accesorios-de-rueda/protectores-de-rin",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector de rin",
+        "cinta de rin",
+        "protector de aro"
+      ]
+    },
+    {
+      "nombre": "Lubricantes y mantenimiento",
+      "path": "/motos/lubricantes-y-mantenimiento",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Aceite de motor 4T",
+      "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite 4t",
+        "aceite de moto",
+        "aceite 20w50 moto",
+        "aceite 10w40 moto",
+        "aceite motul",
+        "aceite mobil"
+      ]
+    },
+    {
+      "nombre": "Aceite de motor 2T",
+      "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite 2t",
+        "aceite de dos tiempos",
+        "aceite para mezcla"
+      ]
+    },
+    {
+      "nombre": "Aceite de transmisión (caja)",
+      "path": "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite de transmisión / caja",
+        "aceite de caja",
+        "valvulina"
+      ]
+    },
+    {
+      "nombre": "Aceite de suspensión",
+      "path": "/motos/lubricantes-y-mantenimiento/aceite-de-suspension",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aceite de barras",
+        "aceite de horquilla",
+        "aceite de telescópicos"
+      ]
+    },
+    {
+      "nombre": "Lubricante de cadena",
+      "path": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "lubricante de cadena",
+        "grasa de cadena",
+        "aceite de cadena"
+      ]
+    },
+    {
+      "nombre": "Líquido de frenos",
+      "path": "/motos/lubricantes-y-mantenimiento/liquido-de-frenos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "líquido de freno",
+        "DOT 3",
+        "DOT 4"
+      ]
+    },
+    {
+      "nombre": "Refrigerante",
+      "path": "/motos/lubricantes-y-mantenimiento/refrigerante",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "refrigerante",
+        "coolant",
+        "anticongelante"
+      ]
+    },
+    {
+      "nombre": "Aditivos y grasas",
+      "path": "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aditivo",
+        "grasa",
+        "grasa de rodamientos"
+      ]
+    },
+    {
+      "nombre": "Filtros",
+      "path": "/motos/filtros",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Filtros de aceite",
+      "path": "/motos/filtros/filtros-de-aceite",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de aceite"
+      ]
+    },
+    {
+      "nombre": "Filtros de aire",
+      "path": "/motos/filtros/filtros-de-aire",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de aire"
+      ]
+    },
+    {
+      "nombre": "Filtros de combustible",
+      "path": "/motos/filtros/filtros-de-combustible",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "filtro de combustible",
+        "filtro de gasolina"
+      ]
+    },
+    {
+      "nombre": "Motor y transmisión",
+      "path": "/motos/motor-y-transmision",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Bloque y culata",
+      "path": "/motos/motor-y-transmision/bloque-y-culata",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Kits de cilindro",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/kits-de-cilindro",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cilindro de moto",
+        "kit cilindro pistón"
+      ]
+    },
+    {
+      "nombre": "Pistones y anillos",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/pistones-y-anillos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pistón",
+        "anillos",
+        "kit de pistón",
+        "rines de pistón"
+      ]
+    },
+    {
+      "nombre": "Bielas",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/bielas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "biela",
+        "bielas"
+      ]
+    },
+    {
+      "nombre": "Cigüeñales",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/ciguenales",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cigüeñal"
+      ]
+    },
+    {
+      "nombre": "Rodamientos de cigüeñal",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/rodamientos-de-ciguenal",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodamiento de cigüeñal",
+        "balinera de cigüeñal",
+        "bancada"
+      ]
+    },
+    {
+      "nombre": "Culatas",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/culatas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "culata",
+        "cabezote",
+        "cabeza de motor"
+      ]
+    },
+    {
+      "nombre": "Válvulas y guías",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/valvulas-y-guias",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guías de válvula",
+        "válvula de admisión",
+        "válvula de escape",
+        "válvula de motor",
+        "guía de válvula"
+      ]
+    },
+    {
+      "nombre": "Árboles de levas",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/arboles-de-levas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "árbol de levas",
+        "eje de levas"
+      ]
+    },
+    {
+      "nombre": "Balancines",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/balancines",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "balancín",
+        "balancines",
+        "rocker"
+      ]
+    },
+    {
+      "nombre": "Empaques y retenedores de motor",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "juntas",
+        "empaquetadura",
+        "retenedores",
+        "empaques y sellos de motor",
+        "empaques",
+        "sellos de motor",
+        "retén",
+        "sello de cigüeñal",
+        "retenedor de árbol de levas"
+      ]
+    },
+    {
+      "nombre": "Cárter y tapas de motor",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/carter-y-tapas-de-motor",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cárter",
+        "tapa de motor",
+        "tapa lateral de motor",
+        "tapa de cárter"
+      ]
+    },
+    {
+      "nombre": "Bombas de aceite",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/bombas-de-aceite",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de aceite"
+      ]
+    },
+    {
+      "nombre": "Volantes magnéticos",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/volantes-magneticos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "volante magnético",
+        "magneto",
+        "rotor de estator"
+      ]
+    },
+    {
+      "nombre": "Motores completos",
+      "path": "/motos/motor-y-transmision/bloque-y-culata/motores-completos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "motor completo",
+        "motor usado",
+        "motor reconstruido",
+        "motor 3/4"
+      ]
+    },
+    {
+      "nombre": "Repartición (distribución)",
+      "path": "/motos/motor-y-transmision/reparticion-distribucion",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": [
+        "distribución",
+        "tiempo"
+      ]
+    },
+    {
+      "nombre": "Cadenillas (cadenas de repartición)",
+      "path": "/motos/motor-y-transmision/reparticion-distribucion/cadenillas-cadenas-de-reparticion",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cadena de distribución",
+        "cadena de tiempo",
+        "cadenilla",
+        "cadenas de repartición"
+      ]
+    },
+    {
+      "nombre": "Tensores y guías de cadenilla",
+      "path": "/motos/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-cadenilla",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tensor de cadenilla",
+        "guía de cadenilla",
+        "tensores y guías"
+      ]
+    },
+    {
+      "nombre": "Kits de cadenilla",
+      "path": "/motos/motor-y-transmision/reparticion-distribucion/kits-de-cadenilla",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de distribución",
+        "kit de tiempo",
+        "kit de repartición",
+        "kits de repartición"
+      ]
+    },
+    {
+      "nombre": "Refrigeración",
+      "path": "/motos/motor-y-transmision/refrigeracion",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Radiadores",
+      "path": "/motos/motor-y-transmision/refrigeracion/radiadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "radiador",
+        "panal de radiador",
+        "radiador de agua"
+      ]
+    },
+    {
+      "nombre": "Bombas de agua",
+      "path": "/motos/motor-y-transmision/refrigeracion/bombas-de-agua",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de agua",
+        "water pump"
+      ]
+    },
+    {
+      "nombre": "Termostatos",
+      "path": "/motos/motor-y-transmision/refrigeracion/termostatos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "termostato",
+        "termostato de agua"
+      ]
+    },
+    {
+      "nombre": "Mangueras de refrigeración",
+      "path": "/motos/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de radiador",
+        "manguera de agua",
+        "manguera superior",
+        "manguera inferior"
+      ]
+    },
+    {
+      "nombre": "Electroventiladores",
+      "path": "/motos/motor-y-transmision/refrigeracion/electroventiladores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "moto ventilador"
+      ]
+    },
+    {
+      "nombre": "Combustible",
+      "path": "/motos/motor-y-transmision/combustible",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Carburadores",
+      "path": "/motos/motor-y-transmision/combustible/carburadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "carburador",
+        "carburador weber",
+        "kit de carburador"
+      ]
+    },
+    {
+      "nombre": "Inyectores",
+      "path": "/motos/motor-y-transmision/combustible/inyectores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "inyector",
+        "inyectores de gasolina",
+        "boquillas",
+        "inyector diésel",
+        "inyectores common rail",
+        "inyectores de acpm"
+      ]
+    },
+    {
+      "nombre": "Bombas de gasolina",
+      "path": "/motos/motor-y-transmision/combustible/bombas-de-gasolina",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bomba de combustible",
+        "bomba de gasolina eléctrica",
+        "módulo de bomba"
+      ]
+    },
+    {
+      "nombre": "Cuerpos de aceleración",
+      "path": "/motos/motor-y-transmision/combustible/cuerpos-de-aceleracion",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cuerpo de aceleración",
+        "throttle body",
+        "mariposa"
+      ]
+    },
+    {
+      "nombre": "Llaves de gasolina",
+      "path": "/motos/motor-y-transmision/combustible/llaves-de-gasolina",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "grifo de gasolina",
+        "llave de paso"
+      ]
+    },
+    {
+      "nombre": "Clutch y transmisión",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Discos de clutch",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/discos-de-clutch",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "disco de embrague"
+      ]
+    },
+    {
+      "nombre": "Kits de clutch",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-clutch",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de embrague",
+        "kit clutch",
+        "clutch",
+        "embrague"
+      ]
+    },
+    {
+      "nombre": "Resortes y campanas de clutch",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/resortes-y-campanas-de-clutch",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "campana de clutch",
+        "resorte de clutch",
+        "campana de embrague"
+      ]
+    },
+    {
+      "nombre": "Piñones",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/pinones",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sprocket",
+        "piñón de salida",
+        "piñón delantero",
+        "sprocket delantero",
+        "piñones (sprocket)"
+      ]
+    },
+    {
+      "nombre": "Catalinas (sprocket trasero)",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/catalinas-sprocket-trasero",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sprocket trasero",
+        "piñón trasero",
+        "corona",
+        "plato",
+        "catalinas"
+      ]
+    },
+    {
+      "nombre": "Cadenas de transmisión",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/cadenas-de-transmision",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cadena de moto",
+        "cadena de tracción"
+      ]
+    },
+    {
+      "nombre": "Kits de arrastre",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-arrastre",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de arrastre",
+        "kit de transmisión",
+        "kit de tracción",
+        "piñón catalina cadena",
+        "kit relación"
+      ]
+    },
+    {
+      "nombre": "Correas de transmisión (scooter)",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/correas-de-transmision-scooter",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "correa de scooter",
+        "banda de scooter",
+        "correa cvt"
+      ]
+    },
+    {
+      "nombre": "Variador, rodillos y clutch de scooter",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/variador-rodillos-y-clutch-de-scooter",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "clutch de scooter (variador)",
+        "variador",
+        "rodillos de variador",
+        "clutch de scooter",
+        "campana de clutch scooter"
+      ]
+    },
+    {
+      "nombre": "Cajas de cambios y engranajes",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/cajas-de-cambios-y-engranajes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de cambios",
+        "engranajes",
+        "piñonería",
+        "caja de moto"
+      ]
+    },
+    {
+      "nombre": "Selectoras y palancas de cambios",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/selectoras-y-palancas-de-cambios",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "selectora",
+        "horquilla selectora"
+      ]
+    },
+    {
+      "nombre": "Ejes de cambios",
+      "path": "/motos/motor-y-transmision/clutch-y-transmision/ejes-de-cambios",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "eje de cambios",
+        "eje selector",
+        "eje de palanca"
+      ]
+    },
+    {
+      "nombre": "Arranque",
+      "path": "/motos/motor-y-transmision/arranque",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Motores de arranque",
+      "path": "/motos/motor-y-transmision/arranque/motores-de-arranque",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pisa",
+        "motores de arranque (pisa)"
+      ]
+    },
+    {
+      "nombre": "Bendix",
+      "path": "/motos/motor-y-transmision/arranque/bendix",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "piñón de arranque"
+      ]
+    },
+    {
+      "nombre": "Pedales de arranque (crank)",
+      "path": "/motos/motor-y-transmision/arranque/pedales-de-arranque-crank",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "patada",
+        "kick starter",
+        "crank",
+        "kick",
+        "patada de arranque",
+        "pedales de arranque (kick)"
+      ]
+    },
+    {
+      "nombre": "Automáticos (relés) de arranque",
+      "path": "/motos/motor-y-transmision/arranque/automaticos-reles-de-arranque",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "automático de arranque",
+        "relé de arranque",
+        "solenoide de arranque",
+        "automático"
+      ]
+    },
+    {
+      "nombre": "Escape",
+      "path": "/motos/motor-y-transmision/escape",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Exostos",
+      "path": "/motos/motor-y-transmision/escape/exostos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "escape",
+        "tubo de escape",
+        "mofle",
+        "exhosto",
+        "exhostos"
+      ]
+    },
+    {
+      "nombre": "Mofles (silenciadores)",
+      "path": "/motos/motor-y-transmision/escape/mofles-silenciadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "silenciador"
+      ]
+    },
+    {
+      "nombre": "Catalizadores",
+      "path": "/motos/motor-y-transmision/escape/catalizadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "catalizador",
+        "convertidor catalítico"
+      ]
+    },
+    {
+      "nombre": "Empaques de exosto",
+      "path": "/motos/motor-y-transmision/escape/empaques-de-exosto",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "empaque de exhosto",
+        "empaque de escape",
+        "empaques de exhosto"
+      ]
+    },
+    {
+      "nombre": "Guayas y cables",
+      "path": "/motos/motor-y-transmision/guayas-y-cables",
+      "seccion": "Motos",
+      "nivel": "sub",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Guayas de freno",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de freno",
+        "chicote de freno"
+      ]
+    },
+    {
+      "nombre": "Guayas de clutch",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-clutch",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de clutch",
+        "cable de embrague",
+        "chicote de clutch"
+      ]
+    },
+    {
+      "nombre": "Guayas de acelerador",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-acelerador",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cable de acelerador",
+        "chicote de acelerador"
+      ]
+    },
+    {
+      "nombre": "Guayas de velocímetro",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-velocimetro",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guaya de velocímetro",
+        "cable de velocímetro",
+        "chicote de velocímetro"
+      ]
+    },
+    {
+      "nombre": "Guayas de choke (ahogador)",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-choke-ahogador",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guaya de ahogador",
+        "choke",
+        "guayas de ahogador"
+      ]
+    },
+    {
+      "nombre": "Guayas de tacómetro",
+      "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-tacometro",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guaya de tacómetro",
+        "cable de tacómetro"
+      ]
+    },
+    {
+      "nombre": "Baterías",
+      "path": "/motos/baterias",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Baterías para moto",
+      "path": "/motos/baterias/baterias-para-moto",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "batería de moto",
+        "batería 12v moto",
+        "batería yuasa",
+        "batería mac moto",
+        "baterías de gel y agm",
+        "batería de gel",
+        "batería agm moto",
+        "batería sellada",
+        "batería agm",
+        "baterías de litio",
+        "batería de litio",
+        "batería lifepo4",
+        "lifepo4"
+      ]
+    },
+    {
+      "nombre": "Bornes y cables de batería",
+      "path": "/motos/baterias/bornes-y-cables-de-bateria",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bornes",
+        "terminales de batería",
+        "cable de batería",
+        "protector de bornes"
+      ]
+    },
+    {
+      "nombre": "Frenos",
+      "path": "/motos/frenos",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Pastillas de freno",
+      "path": "/motos/frenos/pastillas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pastas de freno",
+        "brake pads"
+      ]
+    },
+    {
+      "nombre": "Bandas de freno",
+      "path": "/motos/frenos/bandas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "zapatas",
+        "zapatas de freno"
+      ]
+    },
+    {
+      "nombre": "Discos de freno",
+      "path": "/motos/frenos/discos-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "disco de freno",
+        "discos",
+        "discos ventilados",
+        "discos perforados",
+        "rotor"
+      ]
+    },
+    {
+      "nombre": "Campanas de freno",
+      "path": "/motos/frenos/campanas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tambores",
+        "campanas",
+        "tambores de freno",
+        "campanas (tambores) de freno"
+      ]
+    },
+    {
+      "nombre": "Mordazas (calipers)",
+      "path": "/motos/frenos/mordazas-calipers",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caliper",
+        "cálipers",
+        "pinzas de freno",
+        "mordazas / calipers"
+      ]
+    },
+    {
+      "nombre": "Bombas de freno",
+      "path": "/motos/frenos/bombas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cilindro maestro",
+        "bomba principal de freno",
+        "bombas de freno (cilindro maestro)"
+      ]
+    },
+    {
+      "nombre": "Cilindros de freno",
+      "path": "/motos/frenos/cilindros-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bombines de freno",
+        "cilindros de rueda",
+        "bombín de freno"
+      ]
+    },
+    {
+      "nombre": "Mangueras de freno",
+      "path": "/motos/frenos/mangueras-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manguera de freno",
+        "bandeja de freno",
+        "flexible de freno",
+        "línea de freno"
+      ]
+    },
+    {
+      "nombre": "Maniguetas de freno",
+      "path": "/motos/frenos/maniguetas-de-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manigueta",
+        "manilla de freno",
+        "palanca de freno",
+        "manigueta de freno",
+        "varilla de freno",
+        "palancas (maniguetas) y pedales de freno",
+        "maniguetas y pedales de freno"
+      ]
+    },
+    {
+      "nombre": "Kits de reparación de frenos",
+      "path": "/motos/frenos/kits-de-reparacion-de-frenos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de frenos",
+        "kit de reparación",
+        "empaques de bomba"
+      ]
+    },
+    {
+      "nombre": "Depósitos de líquido de frenos",
+      "path": "/motos/frenos/depositos-de-liquido-de-frenos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "depósito de líquido de frenos",
+        "tanque de líquido de frenos"
+      ]
+    },
+    {
+      "nombre": "Cascos",
+      "path": "/motos/cascos",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Cascos integrales",
+      "path": "/motos/cascos/cascos-integrales",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "casco",
+        "casco cerrado",
+        "full face",
+        "casco integral"
+      ]
+    },
+    {
+      "nombre": "Cascos abatibles",
+      "path": "/motos/cascos/cascos-abatibles",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "casco modular",
+        "flip up"
+      ]
+    },
+    {
+      "nombre": "Cascos abiertos",
+      "path": "/motos/cascos/cascos-abiertos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "casco jet",
+        "casco 3/4"
+      ]
+    },
+    {
+      "nombre": "Cascos cross",
+      "path": "/motos/cascos/cascos-cross",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "casco enduro",
+        "casco motocross"
+      ]
+    },
+    {
+      "nombre": "Visores y repuestos de casco",
+      "path": "/motos/cascos/visores-y-repuestos-de-casco",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "visor",
+        "visor de casco",
+        "mica",
+        "interior de casco"
+      ]
+    },
+    {
+      "nombre": "Eléctrico y electrónico",
+      "path": "/motos/electrico-y-electronico",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Reguladores (rectificadores)",
+      "path": "/motos/electrico-y-electronico/reguladores-rectificadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rectificador",
+        "regulador de voltaje",
+        "reguladores / rectificadores"
+      ]
+    },
+    {
+      "nombre": "CDI (módulos de encendido)",
+      "path": "/motos/electrico-y-electronico/cdi-modulos-de-encendido",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cdi",
+        "unidad de encendido",
+        "ECU moto",
+        "módulo de encendido",
+        "caja cdi",
+        "cdi / módulos de encendido"
+      ]
+    },
+    {
+      "nombre": "Bobinas de alta",
+      "path": "/motos/electrico-y-electronico/bobinas-de-alta",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bobina de encendido",
+        "bobina de chispa"
+      ]
+    },
+    {
+      "nombre": "Estatores (platos de bobinas)",
+      "path": "/motos/electrico-y-electronico/estatores-platos-de-bobinas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bobina de carga",
+        "estator",
+        "plato de bobinas",
+        "stator",
+        "estatores (bobina de carga)"
+      ]
+    },
+    {
+      "nombre": "Bujías",
+      "path": "/motos/electrico-y-electronico/bujias",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bujía",
+        "spark plug",
+        "chispa",
+        "bujías iridium",
+        "bujías platino"
+      ]
+    },
+    {
+      "nombre": "Capuchones de bujía",
+      "path": "/motos/electrico-y-electronico/capuchones-de-bujia",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "capuchón",
+        "capuchón de bujía",
+        "pipa de bujía"
+      ]
+    },
+    {
+      "nombre": "Fusibles y relés",
+      "path": "/motos/electrico-y-electronico/fusibles-y-reles",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "fusible",
+        "relé",
+        "relay",
+        "caja de fusibles"
+      ]
+    },
+    {
+      "nombre": "Suiches y comandos",
+      "path": "/motos/electrico-y-electronico/suiches-y-comandos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "mandos",
+        "switch",
+        "comandos de manubrio"
+      ]
+    },
+    {
+      "nombre": "Flashers",
+      "path": "/motos/electrico-y-electronico/flashers",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "relé de direccionales",
+        "destellador"
+      ]
+    },
+    {
+      "nombre": "Pitos",
+      "path": "/motos/electrico-y-electronico/pitos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bocina",
+        "claxon",
+        "corneta"
+      ]
+    },
+    {
+      "nombre": "Cableado y conectores",
+      "path": "/motos/electrico-y-electronico/cableado-y-conectores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ramal",
+        "arnés",
+        "cableado",
+        "conector"
+      ]
+    },
+    {
+      "nombre": "Tableros, tacómetros y velocímetros",
+      "path": "/motos/electrico-y-electronico/tableros-tacometros-y-velocimetros",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "velocímetro",
+        "tacómetro",
+        "tablero",
+        "odómetro",
+        "tacómetros y velocímetros",
+        "instrumental",
+        "instrumental y tableros"
+      ]
+    },
+    {
+      "nombre": "Sensores",
+      "path": "/motos/electrico-y-electronico/sensores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sensor",
+        "sensor de velocidad",
+        "sensor de posición"
+      ]
+    },
+    {
+      "nombre": "Iluminación",
+      "path": "/motos/iluminacion",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Farolas",
+      "path": "/motos/iluminacion/farolas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "faros",
+        "luces delanteras",
+        "headlights",
+        "farola delantera",
+        "unidad de farola",
+        "luz delantera"
+      ]
+    },
+    {
+      "nombre": "Stops",
+      "path": "/motos/iluminacion/stops",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luces traseras",
+        "stop",
+        "calaveras",
+        "luz de freno",
+        "farola trasera",
+        "luz trasera"
+      ]
+    },
+    {
+      "nombre": "Direccionales",
+      "path": "/motos/iluminacion/direccionales",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "luces direccionales",
+        "intermitentes",
+        "cocuyos",
+        "luz direccional"
+      ]
+    },
+    {
+      "nombre": "Luces LED",
+      "path": "/motos/iluminacion/luces-led",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "led",
+        "luces led",
+        "bombillos led",
+        "bombillas led",
+        "focos led",
+        "luz led",
+        "kit led",
+        "led h4",
+        "led h7",
+        "led h11"
+      ]
+    },
+    {
+      "nombre": "Bombillos halógenos",
+      "path": "/motos/iluminacion/bombillos-halogenos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bombillos",
+        "bombillas",
+        "focos",
+        "halógeno",
+        "h1",
+        "h3",
+        "h4",
+        "h7",
+        "h11",
+        "9005",
+        "9006",
+        "luz halógena"
+      ]
+    },
+    {
+      "nombre": "Exploradoras y luces auxiliares",
+      "path": "/motos/iluminacion/exploradoras-y-luces-auxiliares",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "exploradoras",
+        "antiniebla",
+        "luces auxiliares",
+        "luces led auxiliares",
+        "luces auxiliares led"
+      ]
+    },
+    {
+      "nombre": "Accesorios",
+      "path": "/motos/accesorios",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Maletas y baúles",
+      "path": "/motos/accesorios/maletas-y-baules",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "baúl",
+        "maleta",
+        "top case",
+        "cajón de moto",
+        "baúl de moto"
+      ]
+    },
+    {
+      "nombre": "Alforjas y mochilas",
+      "path": "/motos/accesorios/alforjas-y-mochilas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alforja",
+        "alforjas",
+        "mochila de moto",
+        "bolso de tanque"
+      ]
+    },
+    {
+      "nombre": "Parrillas y portamaletas",
+      "path": "/motos/accesorios/parrillas-y-portamaletas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parrilla",
+        "parrilla trasera",
+        "portamaletas",
+        "soporte de baúl"
+      ]
+    },
+    {
+      "nombre": "Defensas (mataperros)",
+      "path": "/motos/accesorios/defensas-mataperros",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "defensa",
+        "defensas",
+        "defensas de moto",
+        "mataperros",
+        "defensa de motor"
+      ]
+    },
+    {
+      "nombre": "Sliders y cubrecárter",
+      "path": "/motos/accesorios/sliders-y-cubrecarter",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "slider",
+        "sliders",
+        "sliders y defensas",
+        "cubrecárter",
+        "protector de cárter",
+        "protector de motor",
+        "protector de radiador",
+        "protectores de radiador y cubrecárter"
+      ]
+    },
+    {
+      "nombre": "Pijamas (cubremotos)",
+      "path": "/motos/accesorios/pijamas-cubremotos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubremoto",
+        "pijama para moto",
+        "forro de moto",
+        "carpa de moto",
+        "cubremotos (pijamas)"
+      ]
+    },
+    {
+      "nombre": "Cúpulas (parabrisas) y soportes",
+      "path": "/motos/accesorios/cupulas-parabrisas-y-soportes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "parabrisas",
+        "cúpula",
+        "windshield",
+        "parabrisas de moto",
+        "base para cúpula",
+        "parabrisas y soportes"
+      ]
+    },
+    {
+      "nombre": "Espejos",
+      "path": "/motos/accesorios/espejos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "espejo",
+        "retrovisor",
+        "espejo de moto",
+        "espejos retrovisores"
+      ]
+    },
+    {
+      "nombre": "Cubrepuños y cubremanos",
+      "path": "/motos/accesorios/cubrepunos-y-cubremanos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubrepuños",
+        "cubremanos",
+        "protector de manos"
+      ]
+    },
+    {
+      "nombre": "Soportes de celular",
+      "path": "/motos/accesorios/soportes-de-celular",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "soporte de celular",
+        "porta celular",
+        "holder",
+        "soporte magnético"
+      ]
+    },
+    {
+      "nombre": "Forros de sillín",
+      "path": "/motos/accesorios/forros-de-sillin",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "forro de sillín",
+        "forro de silla",
+        "funda de sillín",
+        "cobertor de silla"
+      ]
+    },
+    {
+      "nombre": "Pulpos y redes",
+      "path": "/motos/accesorios/pulpos-y-redes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pulpo",
+        "red de pulpo",
+        "malla",
+        "red elástica"
+      ]
+    },
+    {
+      "nombre": "Rampas y caballetes",
+      "path": "/motos/accesorios/rampas-y-caballetes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rampa",
+        "caballete de taller",
+        "caballete trasero"
+      ]
+    },
+    {
+      "nombre": "Cubrerayos y adhesivos",
+      "path": "/motos/accesorios/cubrerayos-y-adhesivos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cubrerayos",
+        "stickers",
+        "calcomanías",
+        "adhesivos"
+      ]
+    },
+    {
+      "nombre": "Cargadores USB",
+      "path": "/motos/accesorios/cargadores-usb",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cargador usb",
+        "toma usb",
+        "cargador para moto"
+      ]
+    },
+    {
+      "nombre": "Intercomunicadores",
+      "path": "/motos/accesorios/intercomunicadores",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "intercomunicador",
+        "intercom",
+        "manos libres para casco"
+      ]
+    },
+    {
+      "nombre": "Parlantes",
+      "path": "/motos/accesorios/parlantes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "altavoces",
+        "bafles",
+        "speakers",
+        "parlantes 6x9",
+        "parlantes 6.5"
+      ]
+    },
+    {
+      "nombre": "Ropa",
+      "path": "/motos/ropa",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Chaquetas",
+      "path": "/motos/ropa/chaquetas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "chaqueta",
+        "chaqueta de moto",
+        "chaqueta con protecciones"
+      ]
+    },
+    {
+      "nombre": "Guantes de moto",
+      "path": "/motos/ropa/guantes-de-moto",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guantes",
+        "guantes para moto",
+        "guantes motociclista"
+      ]
+    },
+    {
+      "nombre": "Botas",
+      "path": "/motos/ropa/botas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "bota",
+        "botas de moto",
+        "botines"
+      ]
+    },
+    {
+      "nombre": "Pantalones",
+      "path": "/motos/ropa/pantalones",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pantalón",
+        "pantalón de moto",
+        "pantalón con protecciones"
+      ]
+    },
+    {
+      "nombre": "Impermeables",
+      "path": "/motos/ropa/impermeables",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "impermeable",
+        "traje de lluvia",
+        "capa impermeable",
+        "pantalonera"
+      ]
+    },
+    {
+      "nombre": "Protecciones (rodilleras, coderas)",
+      "path": "/motos/ropa/protecciones-rodilleras-coderas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodilleras",
+        "coderas",
+        "protecciones",
+        "pechera",
+        "espaldar"
+      ]
+    },
+    {
+      "nombre": "Chalecos reflectivos",
+      "path": "/motos/ropa/chalecos-reflectivos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "chaleco reflectivo",
+        "chaleco"
+      ]
+    },
+    {
+      "nombre": "Chasis y carrocería",
+      "path": "/motos/chasis-y-carroceria",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Carenajes y plásticos",
+      "path": "/motos/chasis-y-carroceria/carenajes-y-plasticos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "carenaje",
+        "plásticos",
+        "plástico de moto",
+        "carenaje delantero",
+        "carenaje lateral",
+        "tapa lateral",
+        "cubierta"
+      ]
+    },
+    {
+      "nombre": "Tanques de gasolina y tapas",
+      "path": "/motos/chasis-y-carroceria/tanques-de-gasolina-y-tapas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tanque",
+        "tanque de gasolina",
+        "tapa de tanque",
+        "tapa de gasolina"
+      ]
+    },
+    {
+      "nombre": "Sillines",
+      "path": "/motos/chasis-y-carroceria/sillines",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sillín",
+        "silla",
+        "asiento de moto",
+        "cojín"
+      ]
+    },
+    {
+      "nombre": "Colines y parrillas traseras",
+      "path": "/motos/chasis-y-carroceria/colines-y-parrillas-traseras",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "colín",
+        "porta maleta"
+      ]
+    },
+    {
+      "nombre": "Guardabarros",
+      "path": "/motos/chasis-y-carroceria/guardabarros",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guardafango",
+        "fender",
+        "guardapolvo",
+        "guardafango delantero",
+        "guardabarro delantero",
+        "guardabarro trasero",
+        "guardafangos"
+      ]
+    },
+    {
+      "nombre": "Portaplacas",
+      "path": "/motos/chasis-y-carroceria/portaplacas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "portaplaca",
+        "porta placa",
+        "soporte de placa"
+      ]
+    },
+    {
+      "nombre": "Patas y caballetes",
+      "path": "/motos/chasis-y-carroceria/patas-y-caballetes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pata",
+        "pata lateral",
+        "pata central",
+        "caballete",
+        "gato de moto",
+        "caballetes (patas)"
+      ]
+    },
+    {
+      "nombre": "Pedalines y soportes",
+      "path": "/motos/chasis-y-carroceria/pedalines-y-soportes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pedalín",
+        "pedalines",
+        "posapiés",
+        "estribos de moto",
+        "pedalines de lujo",
+        "pedalines aluminio",
+        "posapiés de lujo"
+      ]
+    },
+    {
+      "nombre": "Pedales de cambio y freno",
+      "path": "/motos/chasis-y-carroceria/pedales-de-cambio-y-freno",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pedal de cambios",
+        "pedal de freno",
+        "palanca de cambios"
+      ]
+    },
+    {
+      "nombre": "Chasis y subchasis",
+      "path": "/motos/chasis-y-carroceria/chasis-y-subchasis",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "chasis",
+        "subchasis",
+        "marco de moto"
+      ]
+    },
+    {
+      "nombre": "Cajas de filtro de aire",
+      "path": "/motos/chasis-y-carroceria/cajas-de-filtro-de-aire",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de filtro",
+        "caja de aire",
+        "airbox"
+      ]
+    },
+    {
+      "nombre": "Agarraderas",
+      "path": "/motos/chasis-y-carroceria/agarraderas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "agarradera",
+        "agarradera trasera",
+        "asa"
+      ]
+    },
+    {
+      "nombre": "Ejes de rueda",
+      "path": "/motos/chasis-y-carroceria/ejes-de-rueda",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "eje de rueda",
+        "eje delantero",
+        "eje trasero"
+      ]
+    },
+    {
+      "nombre": "Suspensión y dirección",
+      "path": "/motos/suspension-y-direccion",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Amortiguadores traseros",
+      "path": "/motos/suspension-y-direccion/amortiguadores-traseros",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "amortiguador",
+        "amortiguador de moto",
+        "monoshock",
+        "amortiguadores dobles"
+      ]
+    },
+    {
+      "nombre": "Barras telescópicas (botellas)",
+      "path": "/motos/suspension-y-direccion/barras-telescopicas-botellas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "botellas",
+        "telescópicos",
+        "barras de suspensión",
+        "horquilla"
+      ]
+    },
+    {
+      "nombre": "Kits de barras (retenedores y guardapolvos)",
+      "path": "/motos/suspension-y-direccion/kits-de-barras-retenedores-y-guardapolvos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "retenedores de barra",
+        "guardapolvos",
+        "kit de barras",
+        "sellos de suspensión",
+        "retenedores de barras",
+        "guardapolvos de barras",
+        "kit de suspensión delantera",
+        "kits de suspensión delantera (retenedores, guardapolvos)"
+      ]
+    },
+    {
+      "nombre": "Resortes",
+      "path": "/motos/suspension-y-direccion/resortes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "resorte",
+        "espiral",
+        "muelle de suspensión"
+      ]
+    },
+    {
+      "nombre": "Tijeras (basculantes)",
+      "path": "/motos/suspension-y-direccion/tijeras-basculantes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "basculante",
+        "tijera trasera",
+        "swingarm"
+      ]
+    },
+    {
+      "nombre": "Rodamientos de tijera",
+      "path": "/motos/suspension-y-direccion/rodamientos-de-tijera",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodamiento de tijera",
+        "balinera de basculante",
+        "bocín de tijera"
+      ]
+    },
+    {
+      "nombre": "Cunas de dirección",
+      "path": "/motos/suspension-y-direccion/cunas-de-direccion",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rodamientos de dirección",
+        "balineras de dirección",
+        "cuna de dirección",
+        "cuna direccional",
+        "manzana de dirección",
+        "manzanas de dirección (rodamientos)"
+      ]
+    },
+    {
+      "nombre": "Bujes",
+      "path": "/motos/suspension-y-direccion/bujes",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "buje",
+        "bujes de suspensión",
+        "bujes de tijera",
+        "bujes de barra"
+      ]
+    },
+    {
+      "nombre": "Manubrios",
+      "path": "/motos/suspension-y-direccion/manubrios",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "manillar",
+        "timón",
+        "manubrio",
+        "manubrios y puños de lujo",
+        "pad de manubrio",
+        "manubrio de lujo",
+        "puños de lujo",
+        "pads de manubrio",
+        "manubrios, puños y pads"
+      ]
+    },
+    {
+      "nombre": "Puños y contrapesos",
+      "path": "/motos/suspension-y-direccion/punos-y-contrapesos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "puños",
+        "manillas",
+        "contrapesos",
+        "cachas"
+      ]
+    },
+    {
+      "nombre": "Tés y triples de dirección",
+      "path": "/motos/suspension-y-direccion/tes-y-triples-de-direccion",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "triple",
+        "yugo",
+        "tijera de dirección"
+      ]
+    },
+    {
+      "nombre": "Tecnología y seguridad",
+      "path": "/motos/tecnologia-y-seguridad",
+      "seccion": "Motos",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Rastreo GPS",
+      "path": "/motos/tecnologia-y-seguridad/rastreo-gps",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "gps para moto"
+      ]
+    },
+    {
+      "nombre": "Alarmas",
+      "path": "/motos/tecnologia-y-seguridad/alarmas",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alarma de moto"
+      ]
+    },
+    {
+      "nombre": "Candados y bloqueos",
+      "path": "/motos/tecnologia-y-seguridad/candados-y-bloqueos",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "candados, guayas y alarmas",
+        "candado de moto",
+        "candado de disco",
+        "guaya de seguridad",
+        "traba de disco"
+      ]
+    },
+    {
+      "nombre": "Cámaras",
+      "path": "/motos/tecnologia-y-seguridad/camaras",
+      "seccion": "Motos",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cámara para moto",
+        "cámara de seguridad",
+        "dashcam de moto"
+      ]
+    },
+    {
+      "nombre": "Herramientas manuales",
+      "path": "/herramientas/herramientas-manuales",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Llaves y copas",
+      "path": "/herramientas/herramientas-manuales/llaves-y-copas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "dados",
+        "juego de copas",
+        "rachet",
+        "ratchet",
+        "llaves y dados"
+      ]
+    },
+    {
+      "nombre": "Llaves de cruz",
+      "path": "/herramientas/herramientas-manuales/llaves-de-cruz",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llave de cruz",
+        "llave de rueda",
+        "cruceta de llantas"
+      ]
+    },
+    {
+      "nombre": "Torquímetros",
+      "path": "/herramientas/herramientas-manuales/torquimetros",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "torquímetro",
+        "llave de torque",
+        "torcómetro"
+      ]
+    },
+    {
+      "nombre": "Destornilladores",
+      "path": "/herramientas/herramientas-manuales/destornilladores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "destornillador",
+        "desarmador",
+        "juego de destornilladores"
+      ]
+    },
+    {
+      "nombre": "Alicates y pinzas",
+      "path": "/herramientas/herramientas-manuales/alicates-y-pinzas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "alicate",
+        "pinza",
+        "hombresolo",
+        "cortafrío"
+      ]
+    },
+    {
+      "nombre": "Martillos y cinceles",
+      "path": "/herramientas/herramientas-manuales/martillos-y-cinceles",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "martillo",
+        "cincel",
+        "mazo"
+      ]
+    },
+    {
+      "nombre": "Extractores y herramientas especiales",
+      "path": "/herramientas/herramientas-manuales/extractores-y-herramientas-especiales",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "extractor",
+        "extractor de poleas",
+        "extractor de rótulas",
+        "herramienta especial"
+      ]
+    },
+    {
+      "nombre": "Llaves para filtros",
+      "path": "/herramientas/herramientas-manuales/llaves-para-filtros",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "llave de filtro",
+        "extractor de filtro"
+      ]
+    },
+    {
+      "nombre": "Kits de herramientas",
+      "path": "/herramientas/herramientas-manuales/kits-de-herramientas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "caja de herramientas",
+        "set de herramientas",
+        "juego de herramientas"
+      ]
+    },
+    {
+      "nombre": "Herramientas eléctricas y neumáticas",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Taladros",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/taladros",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "taladro",
+        "taladro inalámbrico"
+      ]
+    },
+    {
+      "nombre": "Esmeriles y lijadoras",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "esmeril",
+        "moto tool",
+        "pulidoras y esmeriles",
+        "lijadora",
+        "amoladora"
+      ]
+    },
+    {
+      "nombre": "Pistolas de impacto",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pistola de impacto",
+        "llave de impacto"
+      ]
+    },
+    {
+      "nombre": "Herramientas neumáticas",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "herramienta neumática",
+        "pistola neumática",
+        "ratchet neumático"
+      ]
+    },
+    {
+      "nombre": "Compresores de aire",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "compresor",
+        "compresor de aire",
+        "compresor de taller"
+      ]
+    },
+    {
+      "nombre": "Pistolas de calor y cautines",
+      "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pistola de calor",
+        "cautín",
+        "soldador de estaño"
+      ]
+    },
+    {
+      "nombre": "Equipos de taller",
+      "path": "/herramientas/equipos-de-taller",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Gatos y torres",
+      "path": "/herramientas/equipos-de-taller/gatos-y-torres",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "gato",
+        "gato hidráulico",
+        "gato de carro",
+        "gato lagarto",
+        "torres"
+      ]
+    },
+    {
+      "nombre": "Elevadores",
+      "path": "/herramientas/equipos-de-taller/elevadores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "elevador",
+        "elevador de carro",
+        "rampa",
+        "rampas"
+      ]
+    },
+    {
+      "nombre": "Camillas de mecánico",
+      "path": "/herramientas/equipos-de-taller/camillas-de-mecanico",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "camilla",
+        "camilla de mecánico"
+      ]
+    },
+    {
+      "nombre": "Prensas hidráulicas",
+      "path": "/herramientas/equipos-de-taller/prensas-hidraulicas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "prensa hidráulica"
+      ]
+    },
+    {
+      "nombre": "Grúas de motor",
+      "path": "/herramientas/equipos-de-taller/gruas-de-motor",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "grúa de motor",
+        "pluma"
+      ]
+    },
+    {
+      "nombre": "Winches",
+      "path": "/herramientas/equipos-de-taller/winches",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "winche",
+        "malacate",
+        "winch"
+      ]
+    },
+    {
+      "nombre": "Cargadores y arrancadores de batería",
+      "path": "/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cargador de batería",
+        "arrancador",
+        "booster",
+        "jump starter",
+        "cargador"
+      ]
+    },
+    {
+      "nombre": "Infladores y manómetros de llanta",
+      "path": "/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "inflador",
+        "compresor portátil",
+        "medidor de presión",
+        "manómetro",
+        "inflador 12v",
+        "infladores y calibradores",
+        "medidor de presión de llantas",
+        "manómetro de llanta"
+      ]
+    },
+    {
+      "nombre": "Montallantas y despinche",
+      "path": "/herramientas/equipos-de-taller/montallantas-y-despinche",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "montallantas",
+        "kit de despinche",
+        "parches"
+      ]
+    },
+    {
+      "nombre": "Diagnóstico y medición",
+      "path": "/herramientas/diagnostico-y-medicion",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Escáneres y equipos de diagnóstico",
+      "path": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "escáner",
+        "scanner",
+        "escáner automotriz",
+        "obd2",
+        "obd",
+        "equipo de diagnóstico"
+      ]
+    },
+    {
+      "nombre": "Multímetros y probadores eléctricos",
+      "path": "/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "multímetro",
+        "tester",
+        "probador de corriente"
+      ]
+    },
+    {
+      "nombre": "Calibradores y micrómetros",
+      "path": "/herramientas/diagnostico-y-medicion/calibradores-y-micrometros",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "calibrador",
+        "vernier",
+        "pie de rey",
+        "galgas",
+        "calibradores y medidores",
+        "micrómetro"
+      ]
+    },
+    {
+      "nombre": "Lámparas de tiempo",
+      "path": "/herramientas/diagnostico-y-medicion/lamparas-de-tiempo",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "lámpara estroboscópica",
+        "lámpara de tiempo"
+      ]
+    },
+    {
+      "nombre": "Compresímetros",
+      "path": "/herramientas/diagnostico-y-medicion/compresimetros",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "compresímetro",
+        "medidor de compresión",
+        "compresímetros y manómetros"
+      ]
+    },
+    {
+      "nombre": "Cuidado y limpieza",
+      "path": "/herramientas/cuidado-y-limpieza",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Shampoo",
+      "path": "/herramientas/cuidado-y-limpieza/shampoo",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "shampoo para carro",
+        "jabón para carro",
+        "champú",
+        "shampoo para moto",
+        "jabón para moto"
+      ]
+    },
+    {
+      "nombre": "Desengrasantes",
+      "path": "/herramientas/cuidado-y-limpieza/desengrasantes",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "desengrasante"
+      ]
+    },
+    {
+      "nombre": "Limpiavidrios",
+      "path": "/herramientas/cuidado-y-limpieza/limpiavidrios",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiavidrios",
+        "limpiador de vidrios",
+        "antiempañante"
+      ]
+    },
+    {
+      "nombre": "Limpiadores interiores",
+      "path": "/herramientas/cuidado-y-limpieza/limpiadores-interiores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador interior",
+        "limpiador de tablero",
+        "apc"
+      ]
+    },
+    {
+      "nombre": "Limpiadores de tapicería y cuero",
+      "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de cuero",
+        "limpiador de tapicería",
+        "acondicionador de cuero"
+      ]
+    },
+    {
+      "nombre": "Limpiadores de motor",
+      "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-motor",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de motor",
+        "desengrasante de motor",
+        "limpia motor"
+      ]
+    },
+    {
+      "nombre": "Limpiadores de rines",
+      "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-rines",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de rines",
+        "limpia rines",
+        "removedor de polvo de freno"
+      ]
+    },
+    {
+      "nombre": "Siliconas y renovadores de llantas",
+      "path": "/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "silicona para carro",
+        "silicona para llantas",
+        "llantax",
+        "renovador de llantas",
+        "brillo de llantas"
+      ]
+    },
+    {
+      "nombre": "Ceras",
+      "path": "/herramientas/cuidado-y-limpieza/ceras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cera",
+        "cera para carro",
+        "cera pulidora",
+        "cera líquida",
+        "brillo para moto",
+        "cera para moto"
+      ]
+    },
+    {
+      "nombre": "Selladores",
+      "path": "/herramientas/cuidado-y-limpieza/selladores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "sellador",
+        "sellante",
+        "sellador de pintura"
+      ]
+    },
+    {
+      "nombre": "Coatings",
+      "path": "/herramientas/cuidado-y-limpieza/coatings",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "coating",
+        "recubrimiento cerámico",
+        "cerámico"
+      ]
+    },
+    {
+      "nombre": "Hidrofóbicos",
+      "path": "/herramientas/cuidado-y-limpieza/hidrofobicos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "hidrofóbico",
+        "repelente de agua",
+        "sellador hidrofóbico"
+      ]
+    },
+    {
+      "nombre": "Protectores UV",
+      "path": "/herramientas/cuidado-y-limpieza/protectores-uv",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "protector uv",
+        "protector solar de tablero",
+        "protector de plásticos"
+      ]
+    },
+    {
+      "nombre": "Quita rayones y restauradores de pintura",
+      "path": "/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "quita rayones",
+        "restaurador de pintura",
+        "corrector de rayones"
+      ]
+    },
+    {
+      "nombre": "Microfibras",
+      "path": "/herramientas/cuidado-y-limpieza/microfibras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "microfibra",
+        "paños de microfibra",
+        "toallas de microfibra",
+        "cepillo de limpieza",
+        "paño de microfibra"
+      ]
+    },
+    {
+      "nombre": "Cepillos y aplicadores",
+      "path": "/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cepillo",
+        "aplicador",
+        "brocha de detailing"
+      ]
+    },
+    {
+      "nombre": "Pulimentos y compuestos (rubbing)",
+      "path": "/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "rubbing",
+        "pulimento",
+        "compuesto pulidor",
+        "pulidor"
+      ]
+    },
+    {
+      "nombre": "Pads",
+      "path": "/herramientas/cuidado-y-limpieza/pads",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pad",
+        "pad de pulido",
+        "boina",
+        "esponja de pulir"
+      ]
+    },
+    {
+      "nombre": "Abrillantadores",
+      "path": "/herramientas/cuidado-y-limpieza/abrillantadores",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "abrillantador",
+        "brillo",
+        "renovador de plásticos"
+      ]
+    },
+    {
+      "nombre": "Ambientadores y perfumes",
+      "path": "/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "ambientador",
+        "perfume para carro",
+        "aromatizante",
+        "aromatizador",
+        "little trees",
+        "pino",
+        "aromatizantes"
+      ]
+    },
+    {
+      "nombre": "Anticorrosivos",
+      "path": "/herramientas/cuidado-y-limpieza/anticorrosivos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "anticorrosivo",
+        "antioxidante",
+        "protector de chasis"
+      ]
+    },
+    {
+      "nombre": "Kits de limpieza",
+      "path": "/herramientas/cuidado-y-limpieza/kits-de-limpieza",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "kit de limpieza",
+        "kit de lavado",
+        "kit de detailing"
+      ]
+    },
+    {
+      "nombre": "Limpiadores de cadena",
+      "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-cadena",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de cadena",
+        "desengrasante de cadena",
+        "limpia cadena"
+      ]
+    },
+    {
+      "nombre": "Consumibles de taller",
+      "path": "/herramientas/consumibles-de-taller",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": []
+    },
+    {
+      "nombre": "Guantes",
+      "path": "/herramientas/consumibles-de-taller/guantes",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "guantes de nitrilo",
+        "guantes de taller",
+        "guantes industriales"
+      ]
+    },
+    {
+      "nombre": "Paños",
+      "path": "/herramientas/consumibles-de-taller/panos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "paño",
+        "trapo",
+        "estopa",
+        "limpión"
+      ]
+    },
+    {
+      "nombre": "Cintas",
+      "path": "/herramientas/consumibles-de-taller/cintas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "cinta",
+        "cinta aislante",
+        "cinta doble faz",
+        "teflón"
+      ]
+    },
+    {
+      "nombre": "Abrazaderas",
+      "path": "/herramientas/consumibles-de-taller/abrazaderas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "abrazadera",
+        "clamp",
+        "abrazadera de manguera"
+      ]
+    },
+    {
+      "nombre": "Tornillería",
+      "path": "/herramientas/consumibles-de-taller/tornilleria",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "tornillo",
+        "tuerca",
+        "arandela",
+        "tornillería"
+      ]
+    },
+    {
+      "nombre": "Bridas",
+      "path": "/herramientas/consumibles-de-taller/bridas",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "brida",
+        "amarre plástico",
+        "cincha plástica",
+        "zuncho"
+      ]
+    },
+    {
+      "nombre": "Siliconas y pegantes",
+      "path": "/herramientas/consumibles-de-taller/siliconas-y-pegantes",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "silicona",
+        "pegante",
+        "sellador de empaques",
+        "soldadura fría"
+      ]
+    },
+    {
+      "nombre": "Lubricantes técnicos",
+      "path": "/herramientas/consumibles-de-taller/lubricantes-tecnicos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "lubricante técnico",
+        "wd40",
+        "penetrante",
+        "aflojatodo"
+      ]
+    },
+    {
+      "nombre": "Limpiadores técnicos",
+      "path": "/herramientas/consumibles-de-taller/limpiadores-tecnicos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "limpiador de contactos",
+        "limpiador de frenos",
+        "limpiador técnico"
+      ]
+    },
+    {
+      "nombre": "Aerosoles",
+      "path": "/herramientas/consumibles-de-taller/aerosoles",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aerosol",
+        "spray"
+      ]
+    },
+    {
+      "nombre": "Empaques genéricos",
+      "path": "/herramientas/consumibles-de-taller/empaques-genericos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "empaque",
+        "empaquetadura",
+        "junta genérica",
+        "lámina de empaque"
+      ]
+    },
+    {
+      "nombre": "Terminales eléctricos",
+      "path": "/herramientas/consumibles-de-taller/terminales-electricos",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "terminal eléctrico",
+        "terminal de batería",
+        "conector eléctrico",
+        "ojal"
+      ]
+    },
+    {
+      "nombre": "Pinturas y retoques",
+      "path": "/herramientas/consumibles-de-taller/pinturas-y-retoques",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "pintura para carro",
+        "retoque",
+        "lápiz de retoque",
+        "pintura en aerosol",
+        "primer"
+      ]
+    },
+    {
+      "nombre": "Equipos de lavado y pulido",
+      "path": "/herramientas/equipos-de-lavado-y-pulido",
+      "seccion": "Herramientas",
+      "nivel": "macro",
+      "sinonimos": [
+        "equipos de limpieza",
+        "lavado",
+        "pulido"
+      ]
+    },
+    {
+      "nombre": "Hidrolavadoras",
+      "path": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "hidrolavadora",
+        "lavadora a presión",
+        "karcher"
+      ]
+    },
+    {
+      "nombre": "Polichadoras",
+      "path": "/herramientas/equipos-de-lavado-y-pulido/polichadoras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "polichadora",
+        "pulidora",
+        "polichadora inalámbrica",
+        "pulidora orbital",
+        "pulidora de carro",
+        "brilladora"
+      ]
+    },
+    {
+      "nombre": "Aspiradoras",
+      "path": "/herramientas/equipos-de-lavado-y-pulido/aspiradoras",
+      "seccion": "Herramientas",
+      "nivel": "hoja",
+      "sinonimos": [
+        "aspiradora para carro",
+        "aspiradora portátil",
+        "aspiradora 12v"
+      ]
+    }
+  ]
+}

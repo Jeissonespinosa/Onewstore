@@ -7,15 +7,8 @@
       Al hacer scroll, cuando la barra llega al header se queda
       pegada debajo de el (verticalSpacing = alto del header) y
       al volver arriba regresa a su sitio.
-   2. "Encuentra lo que tu carro/moto necesita": el vehicle-selector
-      en disposicion "hero" (titulo, subtitulo, selects centrados,
-      boton en pildora) con la categoria base de la seccion
-      (carros = categoria "Carros" del catalogo; motos = "Motos",
-      que debe crearse). Debajo, un loop infinito con las marcas
-      en gris difuminado en los bordes (referencias/header).
-      Las marcas van como texto; para usar logos, cambia cada
-      {"name": "..."} por {"name": "...", "image": "<url png>"}
-      (se muestran en escala de grises automaticamente).
+   2. El selector de vehiculo se retiro: Cris ya guarda el vehiculo y
+      ademas busca producto, asi que tener los dos era redundante.
    ============================================================ */
 {
   "flex-layout.row#rx-tools-search": {
@@ -43,211 +36,14 @@
       "blockClass": "rxSearchInner"
     },
     "children": [
-      "search-bar#rx"
+      "cris#rx"
     ]
   },
-  "search-bar#rx": {
+  "cris#rx": {
     "props": {
-      "blockClass": "rx",
-      "placeholder": "¿Qué estás buscando?",
-      "displayMode": "search-button",
-      "submitOnIconClick": true,
-      "autocompleteAlignment": "left",
-      "openAutocompleteOnFocus": false
-    }
-  },
-  "flex-layout.row#rx-tools-vehicle-carros": {
-    "props": {
-      "fullWidth": true,
-      "blockClass": "rxToolsVehicle"
-    },
-    "children": [
-      "vehicle-selector#rx-home-carros"
-    ]
-  },
-  "vehicle-selector#rx-home-carros": {
-    "props": {
-      "layout": "hero",
-      "title": "Encuentra lo que tu carro necesita",
-      "subtitle": "Elige marca, modelo y año y te mostramos solo los repuestos que le sirven.",
-      "buttonLabel": "Ver productos",
-      "query": "carros",
-      "map": "c",
-      "vehicle": "carros",
-      "brands": [
-        {
-          "name": "Chevrolet"
-        },
-        {
-          "name": "Renault"
-        },
-        {
-          "name": "Toyota"
-        },
-        {
-          "name": "Mazda"
-        },
-        {
-          "name": "Kia"
-        },
-        {
-          "name": "Hyundai"
-        },
-        {
-          "name": "Nissan"
-        },
-        {
-          "name": "Ford"
-        },
-        {
-          "name": "Volkswagen"
-        },
-        {
-          "name": "Suzuki"
-        },
-        {
-          "name": "Honda"
-        },
-        {
-          "name": "Mitsubishi"
-        },
-        {
-          "name": "BMW"
-        },
-        {
-          "name": "Mercedes-Benz"
-        },
-        {
-          "name": "Audi"
-        },
-        {
-          "name": "Jeep"
-        },
-        {
-          "name": "Peugeot"
-        },
-        {
-          "name": "Fiat"
-        },
-        {
-          "name": "Citroën"
-        },
-        {
-          "name": "Subaru"
-        },
-        {
-          "name": "Volvo"
-        },
-        {
-          "name": "BYD"
-        },
-        {
-          "name": "Chery"
-        },
-        {
-          "name": "JAC"
-        },
-        {
-          "name": "Great Wall"
-        },
-        {
-          "name": "Dodge"
-        },
-        {
-          "name": "RAM"
-        },
-        {
-          "name": "Land Rover"
-        },
-        {
-          "name": "MG"
-        },
-        {
-          "name": "SsangYong"
-        }
-      ]
-    }
-  },
-  "flex-layout.row#rx-tools-vehicle-motos": {
-    "props": {
-      "fullWidth": true,
-      "blockClass": "rxToolsVehicle"
-    },
-    "children": [
-      "vehicle-selector#rx-home-motos"
-    ]
-  },
-  "vehicle-selector#rx-home-motos": {
-    "props": {
-      "layout": "hero",
-      "title": "Encuentra lo que tu moto necesita",
-      "subtitle": "Elige marca, modelo y año y te mostramos solo los repuestos que le sirven.",
-      "buttonLabel": "Ver productos",
-      "query": "motos",
-      "map": "c",
-      "vehicle": "motos",
-      "brands": [
-        {
-          "name": "Yamaha"
-        },
-        {
-          "name": "Honda"
-        },
-        {
-          "name": "Suzuki"
-        },
-        {
-          "name": "Bajaj"
-        },
-        {
-          "name": "AKT"
-        },
-        {
-          "name": "Kawasaki"
-        },
-        {
-          "name": "KTM"
-        },
-        {
-          "name": "TVS"
-        },
-        {
-          "name": "Hero"
-        },
-        {
-          "name": "Royal Enfield"
-        },
-        {
-          "name": "Auteco"
-        },
-        {
-          "name": "Victory"
-        },
-        {
-          "name": "Benelli"
-        },
-        {
-          "name": "Ducati"
-        },
-        {
-          "name": "BMW Motorrad"
-        },
-        {
-          "name": "Harley-Davidson"
-        },
-        {
-          "name": "Kymco"
-        },
-        {
-          "name": "SYM"
-        },
-        {
-          "name": "CFMoto"
-        },
-        {
-          "name": "Husqvarna"
-        }
-      ]
+      "placeholder": "¿Qué necesitas? Escribe el repuesto y tu vehículo",
+      "placeholderHerramientas": "¿Qué herramienta estás buscando?",
+      "boton": "Buscar"
     }
   }
 }

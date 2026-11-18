@@ -3,7 +3,6 @@
     "blocks": [
       "slider-layout#rx-hero-carros",
       "flex-layout.row#rx-tools-search",
-      "flex-layout.row#rx-tools-vehicle-carros",
       "flex-layout.row#rx-lineas-section-carros",
       "flex-layout.row#rx-productos-carros",
       "flex-layout.row#carros-cta-banner",
@@ -15,7 +14,6 @@
     "blocks": [
       "slider-layout#rx-hero-motos",
       "flex-layout.row#rx-tools-search",
-      "flex-layout.row#rx-tools-vehicle-motos",
       "flex-layout.row#rx-lineas-section-motos",
       "rich-text#repuestox-section-brands-landing-motos",
       "flex-layout.row#repuestox-brands-static-landing-motos"

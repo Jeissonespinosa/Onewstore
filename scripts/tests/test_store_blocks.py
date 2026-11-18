@@ -225,7 +225,8 @@ class TestBloques(unittest.TestCase):
         ESPERADO: cada blockClass tiene CSS o se elimina.
         """
         css = '\n'.join(open(f, encoding='utf-8').read() for f in CSS_FILES)
-        js = open(os.path.join(REPO, 'react', 'VehicleSelector.js'), encoding='utf-8').read()
+        # Cris reemplazo al selector de vehiculo: sus clases viven ahi.
+        js = open(os.path.join(REPO, 'react', 'Cris.js'), encoding='utf-8').read()
         missing = set()
         for f in BLOCK_FILES:
             for bid, body in load_jsonc(f).items():

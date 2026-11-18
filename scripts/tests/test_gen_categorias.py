@@ -353,32 +353,21 @@ class TestSalida(_Base):
         self.assertEqual(sb.run_subprocess(['--force']).returncode, 0)
         self.assertNotIn('store.custom#promo', sb.read_routes())
 
-    def test_ROJO_HOY_hidden_facets_no_duplican_los_nombres_del_componente(self):
-        """
-        SUPUESTO: un solo lugar define los nombres de facet (brandFacet/modelFacet/yearFacet).
-        HOY: category-filters.jsonc oculta 'Marca vehículo'/'Año'/'Modelo' con literales
-             copiados de react/VehicleSelector.js; vehicle-selector#rx-f no pasa esos props.
-             Si alguien cambia brandFacet en el bloque, el filtro nativo deja de ocultarse.
-        ESPERADO: el bloque vehicle-selector#rx-f declara brandFacet/modelFacet/yearFacet
-                  y hiddenFilters se construye a partir de esos mismos valores.
-        """
+    def test_facets_de_vehiculo_ocultos_en_el_panel(self):
+        """Marca vehiculo / Modelo / Año no van como filtros sueltos: los cubre
+        Cris, en cascada. Tenerlos en los dos lados confunde y el panel no
+        respeta el orden marca -> modelo -> año."""
         sb = self.sandbox(tree=minimal_tree())
         _quiet(sb.run)
         filters = sb.read_blocks('category-filters.jsonc')
-        props = filters['vehicle-selector#rx-f']['props']
-        hidden = [h['name'] for h in filters['filter-navigator.v3#rx']['props']['hiddenFacets']['specificationFilters']['hiddenFilters']]
-        for key in ('brandFacet', 'modelFacet', 'yearFacet'):
-            self.assertIn(key, props, 'vehicle-selector#rx-f no declara %s' % key)
-            self.assertIn(props[key], hidden)
+        ocultos = [f['name'] for f in filters['filter-navigator.v3#rx']['props']
+                   ['hiddenFacets']['specificationFilters']['hiddenFilters']]
+        for nombre in ('Marca vehículo', 'Modelo', 'Año'):
+            self.assertIn(nombre, ocultos)
+        self.assertNotIn('vehicle-selector#rx-f', filters,
+                         'el selector de vehiculo lo reemplazo Cris')
+        self.assertIn('cris#rx-f', filters)
 
-
-# ---------------------------------------------------------------------------
-# Auditoria A1-A11 + PARTE B: los 10 casos que no pueden volver a romperse.
-# ---------------------------------------------------------------------------
-class TestAuditoria(_Base):
-    """Un caso por cada bug reportado. Ninguno escribe en el repo real."""
-
-    # 1 --------------------------------------------------------------------
     def test_importar_no_escribe_nada(self):
         """Importar el script (desde un test, un linter, un editor) no puede
         regenerar el theme."""

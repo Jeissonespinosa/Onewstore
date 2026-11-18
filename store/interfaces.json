@@ -2,10 +2,10 @@
   "category-menu": {
     "component": "CategoryMenu"
   },
-  "vehicle-selector": {
-    "component": "VehicleSelector"
-  },
   "tyre-size-selector": {
     "component": "TyreSizeSelector"
+  },
+  "cris": {
+    "component": "Cris"
   }
 }

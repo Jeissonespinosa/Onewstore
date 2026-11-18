@@ -80,12 +80,11 @@
       }
     }
   },
-  "vehicle-selector#rx-f": {
+  "cris#rx-f": {
     "props": {
-      "buttonLabel": "Buscar repuestos",
-      "brandFacet": "Marca vehículo",
-      "yearFacet": "Año",
-      "modelFacet": "Modelo"
+      "placeholder": "Busca tu repuesto o cambia de vehículo",
+      "placeholderHerramientas": "¿Qué herramienta estás buscando?",
+      "boton": "Buscar"
     }
   },
   "search-result-layout.desktop#rx-f": {
@@ -116,7 +115,6 @@
       "width": "24%"
     },
     "children": [
-      "vehicle-selector#rx-f",
       "filter-navigator.v3#rx"
     ]
   },
@@ -126,6 +124,7 @@
       "width": "grow"
     },
     "children": [
+      "flex-layout.row#rx-f-vehicle-m",
       "flex-layout.row#rx-filterbar-f",
       "flex-layout.row#rx-results-f"
     ]
@@ -168,7 +167,7 @@
       "blockClass": "rxFVehicleM"
     },
     "children": [
-      "vehicle-selector#rx-f"
+      "cris#rx-f"
     ]
   },
   "flex-layout.row#rx-filterbar-m": {

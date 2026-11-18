@@ -233,11 +233,18 @@ export default function Cris({
   /* Navega a la categoria con el vehiculo aplicado como filtro, o a la
      busqueda libre si no hay categoria. */
   const irA = (nodo, veh, llanta) => {
-    /* El filtro de vehiculo solo se aplica donde discrimina. En herramientas
-       no existe compatibilidad: si se aplicara, la pagina saldria vacia
-       (comprobado: herramientas + Chevrolet = 0 productos). */
-    const destinoSinVehiculo = nodo && norm(nodo.path).indexOf('/herramientas') === 0
-    const v = destinoSinVehiculo ? null : veh || vehiculo
+    /* El vehiculo solo se aplica como filtro donde de verdad discrimina. Lo
+       dice el indice, que lo trae de catalogo/compatibilidad-por-categoria.json:
+
+         estricta   el repuesto encaja o no encaja -> se filtra
+         ajuste     sirve a muchos y manda un atributo -> NO se filtra
+         universal  le sirve a cualquiera -> NO se filtra
+
+       Sin esto, un cliente con su carro guardado entraba a Lubricantes o a
+       Herramientas y la pagina salia vacia: VTEX filtra con AND y un producto
+       que no declara compatibilidad simplemente no existe para ese vehiculo. */
+    const compat = nodo ? nodo.compatibilidad || 'estricta' : 'estricta'
+    const v = compat === 'estricta' ? veh || vehiculo : null
     const segmentos = []
     const llaves = []
     if (nodo) {
@@ -462,6 +469,12 @@ export default function Cris({
           ) : null}
           {lectura.marca ? (
             <span className="rx-cris__tag"><small>vehículo</small>{lectura.marca} {lectura.modelo || ''} {lectura.ano || ''}</span>
+          ) : null}
+          {lectura.categoria && lectura.categoria.nodo.compatibilidad === 'ajuste' &&
+           lectura.categoria.nodo.atributo ? (
+            <span className="rx-cris__tag">
+              <small>aquí manda</small>{lectura.categoria.nodo.atributo}
+            </span>
           ) : null}
         </div>
       ) : null}

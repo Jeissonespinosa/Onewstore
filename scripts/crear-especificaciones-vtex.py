@@ -90,6 +90,27 @@ def categorias(tk):
     return por_ruta
 
 
+def grupos_existentes(tk, limite=120):
+    """{(categoria, nombre): id} de los grupos de especificacion que ya hay.
+
+    No existe un endpoint que liste los grupos de una categoria, asi que se
+    recorren por id. Hace falta porque VTEX no deja repetir el nombre de un
+    grupo dentro de la misma rama del arbol: si el ancestro ya tiene
+    "Caracteristicas", hay que REUSARLO, no crear otro.
+    """
+    mapa = {}
+    for gid in range(1, limite + 1):
+        st, g = call(tk, 'GET', '/api/catalog/pvt/specificationgroup/%d' % gid)
+        if st == 200 and isinstance(g, dict) and g.get('Name'):
+            mapa[(g['CategoryId'], g['Name'])] = g['Id']
+    return mapa
+
+
+def ancestros(ruta):
+    partes = [x for x in ruta.split('/') if x]
+    return ['/' + '/'.join(partes[:i]) for i in range(len(partes), 0, -1)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--ejecutar', action='store_true')
@@ -101,12 +122,13 @@ def main():
 
     nuevas = valores_nuevos = reusadas = 0
     sin_categoria = []
+    mapa_grupos = grupos_existentes(tk) if args.ejecutar else {}
     for ruta, specs in filtros.items():
         cid = cats.get(ruta)
         if cid is None:
             sin_categoria.append(ruta)
             continue
-        hoja = ruta.rsplit('/', 1)[-1]
+        hoja = ruta.rsplit('/', 1)[-1].replace('-', ' ').capitalize()
         st, existentes = call(tk, 'GET',
                               '/api/catalog_system/pub/specification/field/listTreeByCategoryId/%d' % cid)
         ya = {norm(f['Name']): f['FieldId'] for f in (existentes or [])} if st == 200 else {}
@@ -125,11 +147,24 @@ def main():
                 continue
             else:
                 if grupo is None:
-                    st, g = call(tk, 'POST', '/api/catalog/pvt/specificationgroup',
-                                 {'CategoryId': cid, 'Name': 'Características', 'Position': 1})
-                    if st != 200 or not isinstance(g, dict):
-                        sys.exit('ERROR creando el grupo en la categoria %d: %s' % (cid, g))
-                    grupo = g['Id']
+                    # El grupo tiene que ser de ESTA categoria (si no, "Field
+                    # group not found") y a la vez su nombre no puede repetirse
+                    # en la rama del arbol. Las dos reglas juntas obligan a un
+                    # nombre por categoria: se usa el de la categoria misma,
+                    # que ademas se lee mejor en el admin.
+                    nombre_grupo = (hoja[:48] or 'Características')
+                    if (cid, nombre_grupo) in mapa_grupos:
+                        grupo = mapa_grupos[(cid, nombre_grupo)]
+                    elif (cid, 'Características') in mapa_grupos:
+                        grupo = mapa_grupos[(cid, 'Características')]
+                    else:
+                        st, g = call(tk, 'POST', '/api/catalog/pvt/specificationgroup',
+                                     {'CategoryId': cid, 'Name': nombre_grupo, 'Position': 1})
+                        if st != 200 or not isinstance(g, dict):
+                            sys.exit('ERROR creando el grupo en la categoria %d (%s): %s'
+                                     % (cid, nombre_grupo, g))
+                        grupo = g['Id']
+                        mapa_grupos[(cid, nombre_grupo)] = grupo
                 st, r = call(tk, 'POST', '/api/catalog/pvt/specification', {
                     'FieldTypeId': CAMPO[tipo], 'CategoryId': cid, 'FieldGroupId': grupo,
                     'Name': nombre, 'Description': nombre, 'Position': pos,

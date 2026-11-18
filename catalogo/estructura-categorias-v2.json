@@ -3910,6 +3910,205 @@
         ]
       }
     ],
+    "/carros/accesorios/accesorios-exteriores/barras-de-techo": [
+      {
+        "nombre": "Tipo de carrocería",
+        "tipo": "multi",
+        "valores": [
+          "Sedán",
+          "Hatchback",
+          "SUV",
+          "Camioneta",
+          "Pick-up",
+          "Van",
+          "Coupé",
+          "Station wagon"
+        ]
+      },
+      {
+        "nombre": "Montaje",
+        "tipo": "unico",
+        "valores": [
+          "Con rieles",
+          "Sin rieles",
+          "Techo fijo"
+        ]
+      }
+    ],
+    "/carros/accesorios/accesorios-exteriores/cubrecarros-forros": [
+      {
+        "nombre": "Tipo de carrocería",
+        "tipo": "multi",
+        "valores": [
+          "Sedán",
+          "Hatchback",
+          "SUV",
+          "Camioneta",
+          "Pick-up",
+          "Van",
+          "Coupé",
+          "Station wagon"
+        ]
+      },
+      {
+        "nombre": "Talla",
+        "tipo": "unico",
+        "valores": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      }
+    ],
+    "/carros/accesorios/accesorios-exteriores/portabicicletas": [
+      {
+        "nombre": "Tipo de carrocería",
+        "tipo": "multi",
+        "valores": [
+          "Sedán",
+          "Hatchback",
+          "SUV",
+          "Camioneta",
+          "Pick-up",
+          "Van",
+          "Coupé",
+          "Station wagon"
+        ]
+      },
+      {
+        "nombre": "Montaje",
+        "tipo": "unico",
+        "valores": [
+          "Techo",
+          "Platón",
+          "Enganche",
+          "Compuerta"
+        ]
+      }
+    ],
+    "/carros/accesorios/accesorios-exteriores/portaequipajes": [
+      {
+        "nombre": "Tipo de carrocería",
+        "tipo": "multi",
+        "valores": [
+          "Sedán",
+          "Hatchback",
+          "SUV",
+          "Camioneta",
+          "Pick-up",
+          "Van",
+          "Coupé",
+          "Station wagon"
+        ]
+      }
+    ],
+    "/carros/accesorios/accesorios-interiores/forros-de-sillas": [
+      {
+        "nombre": "Número de puestos",
+        "tipo": "unico",
+        "valores": [
+          "2",
+          "4",
+          "5",
+          "7"
+        ]
+      }
+    ],
+    "/carros/accesorios/accesorios-interiores/tapetes": [
+      {
+        "nombre": "Tipo de carrocería",
+        "tipo": "multi",
+        "valores": [
+          "Sedán",
+          "Hatchback",
+          "SUV",
+          "Camioneta",
+          "Pick-up",
+          "Van",
+          "Coupé",
+          "Station wagon"
+        ]
+      },
+      {
+        "nombre": "Tipo de tapete",
+        "tipo": "unico",
+        "valores": [
+          "Universal",
+          "Moldeado (a medida)",
+          "Bandeja de platón"
+        ]
+      }
+    ],
+    "/carros/accesorios/audio/pantallas-multimedia": [
+      {
+        "nombre": "Formato",
+        "tipo": "unico",
+        "valores": [
+          "1 DIN",
+          "2 DIN",
+          "Flotante"
+        ]
+      },
+      {
+        "nombre": "Pulgadas",
+        "tipo": "unico",
+        "valores": [
+          "7\"",
+          "9\"",
+          "10\"",
+          "10.1\"",
+          "12.3\""
+        ]
+      }
+    ],
+    "/carros/accesorios/audio/parlantes": [
+      {
+        "nombre": "Diámetro",
+        "tipo": "unico",
+        "valores": [
+          "4\"",
+          "5\"",
+          "5x7\"",
+          "6\"",
+          "6.5\"",
+          "6x9\""
+        ]
+      }
+    ],
+    "/carros/accesorios/audio/radios": [
+      {
+        "nombre": "Formato",
+        "tipo": "unico",
+        "valores": [
+          "1 DIN",
+          "2 DIN"
+        ]
+      }
+    ],
+    "/carros/accesorios/audio/subwoofers": [
+      {
+        "nombre": "Diámetro",
+        "tipo": "unico",
+        "valores": [
+          "8\"",
+          "10\"",
+          "12\"",
+          "15\""
+        ]
+      }
+    ],
+    "/carros/accesorios/audio/tweeters": [
+      {
+        "nombre": "Diámetro",
+        "tipo": "unico",
+        "valores": [
+          "1\"",
+          "2\"",
+          "3\""
+        ]
+      }
+    ],
     "/carros/baterias/baterias-para-carro": [
       {
         "nombre": "Amperaje de arranque (CCA)",
@@ -4499,6 +4698,28 @@
         ]
       }
     ],
+    "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay": [
+      {
+        "nombre": "Formato",
+        "tipo": "unico",
+        "valores": [
+          "1 DIN",
+          "2 DIN",
+          "Flotante"
+        ]
+      },
+      {
+        "nombre": "Pulgadas",
+        "tipo": "unico",
+        "valores": [
+          "7\"",
+          "9\"",
+          "10\"",
+          "10.1\"",
+          "12.3\""
+        ]
+      }
+    ],
     "/herramientas/consumibles-de-taller": [
       {
         "nombre": "Presentación",
@@ -4637,6 +4858,18 @@
           "Azul",
           "Transparente",
           "Cromado"
+        ]
+      }
+    ],
+    "/motos/accesorios/espejos": [
+      {
+        "nombre": "Rosca",
+        "tipo": "unico",
+        "valores": [
+          "8 mm",
+          "10 mm derecha",
+          "10 mm izquierda",
+          "Universal"
         ]
       }
     ],

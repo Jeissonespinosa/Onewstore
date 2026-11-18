@@ -629,6 +629,42 @@ def export_filtros(tree):
         print('  %-46s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))
 
 
+def _niveles_compatibilidad():
+    """Cuanto manda el vehiculo en cada categoria, de
+    catalogo/compatibilidad-por-categoria.json.
+
+      estricta  el repuesto encaja o no encaja -> Cris filtra por vehiculo
+      ajuste    sirve a muchos y un atributo decide -> NO filtra (ocultaria
+                casi todo) y se apoya en ese atributo
+      universal le sirve a cualquiera -> no filtra ni pide compatibilidad
+
+    Sin esto, un cliente con su carro guardado entraba a Lubricantes y la
+    pagina salia vacia: el liquido de frenos sirve para cualquier carro pero
+    no declara compatibilidad, y VTEX filtra con AND.
+    """
+    path = os.path.join(CAT, 'compatibilidad-por-categoria.json')
+    if not os.path.exists(path):
+        return {}, {}
+    datos = _read_json(path, 'niveles de compatibilidad')
+    return datos.get('macros') or {}, datos.get('hojas') or {}
+
+
+def _nivel_de(ruta, macros, hojas):
+    """La excepcion mas especifica gana; si no hay, manda la macro."""
+    if ruta in hojas:
+        return hojas[ruta]
+    mejor = None
+    for r, v in hojas.items():
+        if ruta.startswith(r + '/') and (mejor is None or len(r) > len(mejor[0])):
+            mejor = (r, v)
+    if mejor:
+        return mejor[1]
+    for r, v in macros.items():
+        if ruta == r or ruta.startswith(r + '/'):
+            return v
+    return {'nivel': 'estricta'}
+
+
 def export_cris(tree):
     """Indice de busqueda para Cris (react/cris-index.json).
 
@@ -640,6 +676,7 @@ def export_cris(tree):
     para moto: se buscan desde cualquier seccion.
     """
     syn = tree.get('_sinonimos') or {}
+    macros_nivel, hojas_nivel = _niveles_compatibilidad()
 
     def claves(seccion, nombre):
         return list((syn.get(seccion, {}).get(nombre)
@@ -649,20 +686,30 @@ def export_cris(tree):
     for seccion in [k for k in tree if not k.startswith('_')]:
         for macro in tree[seccion]:
             base = '/%s/%s' % (slugify(seccion), macro.get('slug') or slugify(macro['nombre']))
+            info = _nivel_de(base, macros_nivel, hojas_nivel)
             nodos.append({'nombre': macro['nombre'], 'path': base, 'seccion': seccion,
-                          'nivel': 'macro', 'sinonimos': claves(seccion, macro['nombre'])})
+                          'nivel': 'macro', 'compatibilidad': info['nivel'],
+                          'atributo': info.get('atributo'),
+                          'sinonimos': claves(seccion, macro['nombre'])})
             for sub in macro.get('subs', []):
                 pre = base
                 if sub.get('nombre'):
                     pre = '%s/%s' % (base, sub.get('slug') or slugify(sub['nombre']))
+                    info = _nivel_de(pre, macros_nivel, hojas_nivel)
                     nodos.append({'nombre': sub['nombre'], 'path': pre, 'seccion': seccion,
-                                  'nivel': 'sub', 'sinonimos': claves(seccion, sub['nombre'])})
+                                  'nivel': 'sub', 'compatibilidad': info['nivel'],
+                                  'atributo': info.get('atributo'),
+                                  'sinonimos': claves(seccion, sub['nombre'])})
                 if sub.get('vitrina') == 'filtros':
                     continue
                 for t in sub.get('tipos', []):
                     nombre = t.get('nombre') if isinstance(t, dict) else t
-                    nodos.append({'nombre': nombre, 'path': '%s/%s' % (pre, slugify(nombre)),
+                    ruta_hoja = '%s/%s' % (pre, slugify(nombre))
+                    info = _nivel_de(ruta_hoja, macros_nivel, hojas_nivel)
+                    nodos.append({'nombre': nombre, 'path': ruta_hoja,
                                   'seccion': seccion, 'nivel': 'hoja',
+                                  'compatibilidad': info['nivel'],
+                                  'atributo': info.get('atributo'),
                                   'sinonimos': claves(seccion, nombre)})
     datos = {'_generado': GEN_NOTE, 'nodos': nodos}
     texto = json.dumps(datos, ensure_ascii=False, indent=2) + '\n'

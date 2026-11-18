@@ -67,5 +67,23 @@ console.log('\n=== el indice cubre el catalogo ===')
 prueba('nodos indexados', indice.nodos.length > 500, true)
 prueba('entradas de carros', idxCarros.length > 1000, true)
 
+console.log('\n=== cuanto manda el vehiculo en cada categoria ===')
+const nivelDe = ruta => (indice.nodos.find(n => n.path === ruta) || {}).compatibilidad
+prueba('pastillas de freno -> estricta', nivelDe('/carros/frenos/pastillas-de-freno'), 'estricta')
+prueba('aceite de motor    -> estricta', nivelDe('/carros/lubricantes-y-mantenimiento/aceite-de-motor'), 'estricta')
+prueba('aceite 4T de moto  -> estricta', nivelDe('/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t'), 'estricta')
+prueba('liquido de frenos  -> ajuste', nivelDe('/carros/lubricantes-y-mantenimiento/liquido-de-frenos'), 'ajuste')
+prueba('parlantes          -> ajuste', nivelDe('/carros/accesorios/audio/parlantes'), 'ajuste')
+prueba('kits de instalacion-> estricta', nivelDe('/carros/accesorios/audio/kits-de-instalacion'), 'estricta')
+prueba('portaequipajes     -> ajuste', nivelDe('/carros/accesorios/accesorios-exteriores/portaequipajes'), 'ajuste')
+prueba('estribos           -> estricta', nivelDe('/carros/accesorios/accesorios-exteriores/estribos'), 'estricta')
+prueba('cascos             -> universal', nivelDe('/motos/cascos/cascos-integrales'), 'universal')
+prueba('herramientas       -> universal', nivelDe('/herramientas/herramientas-manuales/llaves-y-copas'), 'universal')
+prueba('TPMS               -> estricta', nivelDe('/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms'), 'estricta')
+prueba('alarmas            -> universal', nivelDe('/carros/tecnologia-y-seguridad/seguridad/alarmas'), 'universal')
+
+console.log('\n=== todo nodo tiene nivel ===')
+prueba('sin nodos sin clasificar', indice.nodos.filter(n => !n.compatibilidad).length, 0)
+
 console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
 process.exit(fallos ? 1 : 0)

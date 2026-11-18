@@ -13,6 +13,87 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/accesorios,Accesorios,Color,Unico,Transparente
 /carros/accesorios,Accesorios,Color,Unico,Rojo
 /carros/accesorios,Accesorios,Color,Unico,Azul
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Sedán
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Hatchback
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,SUV
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Camioneta
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Pick-up
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Van
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Coupé
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Tipo de carrocería,Multiple,Station wagon
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Montaje,Unico,Con rieles
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Montaje,Unico,Sin rieles
+/carros/accesorios/accesorios-exteriores/barras-de-techo,Barras de techo,Montaje,Unico,Techo fijo
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Sedán
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Hatchback
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,SUV
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Camioneta
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Pick-up
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Van
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Coupé
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Tipo de carrocería,Multiple,Station wagon
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Talla,Unico,S
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Talla,Unico,M
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Talla,Unico,L
+/carros/accesorios/accesorios-exteriores/cubrecarros-forros,Cubrecarros (forros),Talla,Unico,XL
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Sedán
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Hatchback
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,SUV
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Camioneta
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Pick-up
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Van
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Coupé
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Tipo de carrocería,Multiple,Station wagon
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Montaje,Unico,Techo
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Montaje,Unico,Platón
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Montaje,Unico,Enganche
+/carros/accesorios/accesorios-exteriores/portabicicletas,Portabicicletas,Montaje,Unico,Compuerta
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Sedán
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Hatchback
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,SUV
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Camioneta
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Pick-up
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Van
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Coupé
+/carros/accesorios/accesorios-exteriores/portaequipajes,Portaequipajes,Tipo de carrocería,Multiple,Station wagon
+/carros/accesorios/accesorios-interiores/forros-de-sillas,Forros de sillas,Número de puestos,Unico,2
+/carros/accesorios/accesorios-interiores/forros-de-sillas,Forros de sillas,Número de puestos,Unico,4
+/carros/accesorios/accesorios-interiores/forros-de-sillas,Forros de sillas,Número de puestos,Unico,5
+/carros/accesorios/accesorios-interiores/forros-de-sillas,Forros de sillas,Número de puestos,Unico,7
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Sedán
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Hatchback
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,SUV
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Camioneta
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Pick-up
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Van
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Coupé
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de carrocería,Multiple,Station wagon
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de tapete,Unico,Universal
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de tapete,Unico,Moldeado (a medida)
+/carros/accesorios/accesorios-interiores/tapetes,Tapetes,Tipo de tapete,Unico,Bandeja de platón
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Formato,Unico,1 DIN
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Formato,Unico,2 DIN
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Formato,Unico,Flotante
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Pulgadas,Unico,7"
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Pulgadas,Unico,9"
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Pulgadas,Unico,10"
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Pulgadas,Unico,10.1"
+/carros/accesorios/audio/pantallas-multimedia,Pantallas multimedia,Pulgadas,Unico,12.3"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,4"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,5"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,5x7"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,6"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,6.5"
+/carros/accesorios/audio/parlantes,Parlantes,Diámetro,Unico,6x9"
+/carros/accesorios/audio/radios,Radios,Formato,Unico,1 DIN
+/carros/accesorios/audio/radios,Radios,Formato,Unico,2 DIN
+/carros/accesorios/audio/subwoofers,Subwoofers,Diámetro,Unico,8"
+/carros/accesorios/audio/subwoofers,Subwoofers,Diámetro,Unico,10"
+/carros/accesorios/audio/subwoofers,Subwoofers,Diámetro,Unico,12"
+/carros/accesorios/audio/subwoofers,Subwoofers,Diámetro,Unico,15"
+/carros/accesorios/audio/tweeters,Tweeters,Diámetro,Unico,1"
+/carros/accesorios/audio/tweeters,Tweeters,Diámetro,Unico,2"
+/carros/accesorios/audio/tweeters,Tweeters,Diámetro,Unico,3"
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,450
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,550
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,650
@@ -230,6 +311,14 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,USB
 /carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Cable
 /carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,GPS
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Formato,Unico,1 DIN
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Formato,Unico,2 DIN
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Formato,Unico,Flotante
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Pulgadas,Unico,7"
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Pulgadas,Unico,9"
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Pulgadas,Unico,10"
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Pulgadas,Unico,10.1"
+/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay,Sistemas Android y CarPlay,Pulgadas,Unico,12.3"
 /herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Unidad
 /herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Caja
 /herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Rollo
@@ -283,6 +372,10 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/accesorios,Accesorios,Color,Unico,Azul
 /motos/accesorios,Accesorios,Color,Unico,Transparente
 /motos/accesorios,Accesorios,Color,Unico,Cromado
+/motos/accesorios/espejos,Espejos,Rosca,Unico,8 mm
+/motos/accesorios/espejos,Espejos,Rosca,Unico,10 mm derecha
+/motos/accesorios/espejos,Espejos,Rosca,Unico,10 mm izquierda
+/motos/accesorios/espejos,Espejos,Rosca,Unico,Universal
 /motos/baterias/baterias-para-moto,Baterías para moto,Voltaje,Unico,6 V
 /motos/baterias/baterias-para-moto,Baterías para moto,Voltaje,Unico,12 V
 /motos/baterias/baterias-para-moto,Baterías para moto,Amperaje (Ah),Unico,2.5

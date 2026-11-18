@@ -1,0 +1,297 @@
+{
+  "_nota": "Que tan fuerte aplica el vehiculo en cada categoria. Lo consume Cris para decidir si filtra por vehiculo y que atributo ofrecer. Por defecto manda la macro; las hojas listadas la sobrescriben.",
+  "_niveles": {
+    "estricta": "El repuesto encaja o no encaja en ese vehiculo. Cris aplica el filtro de vehiculo. Si el seller no declara compatibilidad, el producto no se vende: debe ser obligatorio.",
+    "ajuste": "Sirve a muchos vehiculos pero un ATRIBUTO decide cual. Cris NO filtra por vehiculo (ocultaria casi todo) y destaca ese atributo. Mas adelante el vehiculo servira para recomendar el valor correcto.",
+    "universal": "Le sirve a cualquiera. Cris no aplica el vehiculo ni pide compatibilidad al seller."
+  },
+  "macros": {
+    "/carros/llantas-y-rines": {
+      "nivel": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)"
+    },
+    "/carros/lubricantes-y-mantenimiento": {
+      "nivel": "ajuste",
+      "atributo": "Viscosidad y norma"
+    },
+    "/carros/filtros": {
+      "nivel": "estricta"
+    },
+    "/carros/baterias": {
+      "nivel": "estricta"
+    },
+    "/carros/frenos": {
+      "nivel": "estricta"
+    },
+    "/carros/suspension-y-direccion": {
+      "nivel": "estricta"
+    },
+    "/carros/electrico-y-electronico": {
+      "nivel": "estricta"
+    },
+    "/carros/iluminacion": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de bombillo"
+    },
+    "/carros/motor-y-transmision": {
+      "nivel": "estricta"
+    },
+    "/carros/accesorios": {
+      "nivel": "universal"
+    },
+    "/carros/carroceria-y-climatizacion": {
+      "nivel": "estricta"
+    },
+    "/carros/tecnologia-y-seguridad": {
+      "nivel": "universal"
+    },
+    "/motos/llantas-y-rines": {
+      "nivel": "ajuste",
+      "atributo": "Medida"
+    },
+    "/motos/lubricantes-y-mantenimiento": {
+      "nivel": "ajuste",
+      "atributo": "Viscosidad y norma JASO"
+    },
+    "/motos/filtros": {
+      "nivel": "estricta"
+    },
+    "/motos/baterias": {
+      "nivel": "estricta"
+    },
+    "/motos/frenos": {
+      "nivel": "estricta"
+    },
+    "/motos/motor-y-transmision": {
+      "nivel": "estricta"
+    },
+    "/motos/suspension-y-direccion": {
+      "nivel": "estricta"
+    },
+    "/motos/chasis-y-carroceria": {
+      "nivel": "estricta"
+    },
+    "/motos/electrico-y-electronico": {
+      "nivel": "estricta"
+    },
+    "/motos/iluminacion": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de bombillo"
+    },
+    "/motos/accesorios": {
+      "nivel": "universal"
+    },
+    "/motos/cascos": {
+      "nivel": "universal"
+    },
+    "/motos/ropa": {
+      "nivel": "universal"
+    },
+    "/motos/tecnologia-y-seguridad": {
+      "nivel": "universal"
+    },
+    "/herramientas/herramientas-manuales": {
+      "nivel": "universal"
+    },
+    "/herramientas/herramientas-electricas-y-neumaticas": {
+      "nivel": "universal"
+    },
+    "/herramientas/equipos-de-taller": {
+      "nivel": "universal"
+    },
+    "/herramientas/diagnostico-y-medicion": {
+      "nivel": "universal"
+    },
+    "/herramientas/cuidado-y-limpieza": {
+      "nivel": "universal"
+    },
+    "/herramientas/consumibles-de-taller": {
+      "nivel": "universal"
+    },
+    "/herramientas/equipos-de-lavado-y-pulido": {
+      "nivel": "universal"
+    }
+  },
+  "hojas": {
+    "/carros/accesorios/accesorios-exteriores/barras-de-techo": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de carroceria"
+    },
+    "/carros/accesorios/accesorios-exteriores/cubrecarros-forros": {
+      "nivel": "ajuste",
+      "atributo": "Talla / tipo de carroceria"
+    },
+    "/carros/accesorios/accesorios-exteriores/enganches-de-remolque-tiros": {
+      "nivel": "estricta"
+    },
+    "/carros/accesorios/accesorios-exteriores/estribos": {
+      "nivel": "estricta",
+      "razon": "Se atornilla al chasis: es por modelo."
+    },
+    "/carros/accesorios/accesorios-exteriores/portabicicletas": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de carroceria"
+    },
+    "/carros/accesorios/accesorios-exteriores/portaequipajes": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de carroceria",
+      "razon": "No es por modelo, pero un sedan y un hatchback no llevan el mismo."
+    },
+    "/carros/accesorios/accesorios-exteriores/snorkels": {
+      "nivel": "estricta"
+    },
+    "/carros/accesorios/accesorios-exteriores/spoilers-y-alerones": {
+      "nivel": "estricta"
+    },
+    "/carros/accesorios/accesorios-interiores/forros-de-sillas": {
+      "nivel": "ajuste",
+      "atributo": "Numero de puestos"
+    },
+    "/carros/accesorios/accesorios-interiores/tapetes": {
+      "nivel": "ajuste",
+      "atributo": "Tipo de carroceria",
+      "razon": "Los moldeados son por modelo; los universales no."
+    },
+    "/carros/accesorios/audio/kits-de-instalacion": {
+      "nivel": "estricta",
+      "razon": "El marco de adaptacion ES por modelo."
+    },
+    "/carros/accesorios/audio/pantallas-multimedia": {
+      "nivel": "ajuste",
+      "atributo": "Formato y pulgadas"
+    },
+    "/carros/accesorios/audio/parlantes": {
+      "nivel": "ajuste",
+      "atributo": "Diametro",
+      "razon": "No caben en el mismo hueco: manda el diametro, no el modelo."
+    },
+    "/carros/accesorios/audio/radios": {
+      "nivel": "ajuste",
+      "atributo": "Formato (1 DIN / 2 DIN)"
+    },
+    "/carros/accesorios/audio/subwoofers": {
+      "nivel": "ajuste",
+      "atributo": "Diametro"
+    },
+    "/carros/accesorios/audio/tweeters": {
+      "nivel": "ajuste",
+      "atributo": "Diametro"
+    },
+    "/carros/electrico-y-electronico/electrico-general/cableado": {
+      "nivel": "universal"
+    },
+    "/carros/electrico-y-electronico/electrico-general/conectores": {
+      "nivel": "universal"
+    },
+    "/carros/electrico-y-electronico/electrico-general/fusibles": {
+      "nivel": "universal"
+    },
+    "/carros/electrico-y-electronico/electrico-general/reles": {
+      "nivel": "universal"
+    },
+    "/carros/iluminacion/direccionales": {
+      "nivel": "estricta"
+    },
+    "/carros/iluminacion/exploradoras": {
+      "nivel": "estricta"
+    },
+    "/carros/iluminacion/farolas": {
+      "nivel": "estricta"
+    },
+    "/carros/iluminacion/stops": {
+      "nivel": "estricta"
+    },
+    "/carros/lubricantes-y-mantenimiento/aceite-de-motor": {
+      "nivel": "estricta",
+      "razon": "BMW pide 5W30 Castrol; el motor manda. El vehiculo SI aplica."
+    },
+    "/carros/lubricantes-y-mantenimiento/aceite-de-transmision": {
+      "nivel": "estricta",
+      "razon": "ATF por caja; no es intercambiable."
+    },
+    "/carros/lubricantes-y-mantenimiento/aceite-diferencial": {
+      "nivel": "estricta"
+    },
+    "/carros/lubricantes-y-mantenimiento/aditivos": {
+      "nivel": "universal"
+    },
+    "/carros/lubricantes-y-mantenimiento/grasas": {
+      "nivel": "universal"
+    },
+    "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas": {
+      "nivel": "universal"
+    },
+    "/carros/lubricantes-y-mantenimiento/liquido-de-frenos": {
+      "nivel": "ajuste",
+      "atributo": "Norma DOT",
+      "razon": "Sirve a cualquiera, pero el DOT correcto lo pide el vehiculo."
+    },
+    "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante": {
+      "nivel": "ajuste",
+      "atributo": "Color y concentracion"
+    },
+    "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms": {
+      "nivel": "estricta"
+    },
+    "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay": {
+      "nivel": "ajuste",
+      "atributo": "Formato y pulgadas"
+    },
+    "/motos/accesorios/cupulas-parabrisas-y-soportes": {
+      "nivel": "estricta"
+    },
+    "/motos/accesorios/defensas-mataperros": {
+      "nivel": "estricta",
+      "razon": "Se atornilla al chasis de esa moto."
+    },
+    "/motos/accesorios/espejos": {
+      "nivel": "ajuste",
+      "atributo": "Rosca"
+    },
+    "/motos/accesorios/forros-de-sillin": {
+      "nivel": "estricta"
+    },
+    "/motos/accesorios/parrillas-y-portamaletas": {
+      "nivel": "estricta"
+    },
+    "/motos/accesorios/pijamas-cubremotos": {
+      "nivel": "ajuste",
+      "atributo": "Talla"
+    },
+    "/motos/accesorios/sliders-y-cubrecarter": {
+      "nivel": "estricta"
+    },
+    "/motos/electrico-y-electronico/cableado-y-conectores": {
+      "nivel": "universal"
+    },
+    "/motos/electrico-y-electronico/fusibles-y-reles": {
+      "nivel": "universal"
+    },
+    "/motos/iluminacion/direccionales": {
+      "nivel": "estricta"
+    },
+    "/motos/iluminacion/farolas": {
+      "nivel": "estricta"
+    },
+    "/motos/iluminacion/stops": {
+      "nivel": "estricta"
+    },
+    "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t": {
+      "nivel": "estricta"
+    },
+    "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t": {
+      "nivel": "estricta",
+      "razon": "Yamalube sirve a varias Yamaha: multi-valor. El fabricante manda."
+    },
+    "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas": {
+      "nivel": "universal"
+    },
+    "/motos/lubricantes-y-mantenimiento/liquido-de-frenos": {
+      "nivel": "ajuste",
+      "atributo": "Norma DOT"
+    },
+    "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena": {
+      "nivel": "universal"
+    }
+  }
+}

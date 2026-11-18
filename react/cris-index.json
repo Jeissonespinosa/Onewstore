@@ -6,6 +6,8 @@
       "path": "/carros/llantas-y-rines",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": []
     },
     {
@@ -13,6 +15,8 @@
       "path": "/carros/llantas-y-rines/llantas",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": []
     },
     {
@@ -20,6 +24,8 @@
       "path": "/carros/llantas-y-rines/llantas/llantas-de-automovil",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "llantas para carro",
         "llanta",
@@ -37,6 +43,8 @@
       "path": "/carros/llantas-y-rines/llantas/llantas-suv-y-4x4",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "llantas camioneta",
         "llantas 4x4",
@@ -53,6 +61,8 @@
       "path": "/carros/llantas-y-rines/llantas/llantas-de-van-camion-y-transporte",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "llantas comerciales",
         "llantas de carga",
@@ -71,6 +81,8 @@
       "path": "/carros/llantas-y-rines/llantas/llantas-otr-e-industriales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "llantas industriales",
         "llantas de montacargas",
@@ -83,6 +95,8 @@
       "path": "/carros/llantas-y-rines/rines",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "aros"
       ]
@@ -92,6 +106,8 @@
       "path": "/carros/llantas-y-rines/rines/rines-de-acero",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "rines de hierro",
         "rines originales de acero",
@@ -103,6 +119,8 @@
       "path": "/carros/llantas-y-rines/rines/rines-de-aluminio",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "rines de lujo",
         "rines de magnesio",
@@ -120,6 +138,8 @@
       "path": "/carros/llantas-y-rines/accesorios-de-rueda",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": []
     },
     {
@@ -127,6 +147,8 @@
       "path": "/carros/llantas-y-rines/accesorios-de-rueda/copas-tapacubos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "copas de rin",
         "tapas de rin",
@@ -140,6 +162,8 @@
       "path": "/carros/llantas-y-rines/accesorios-de-rueda/tuercas-y-pernos-de-rueda",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "tuercas de rin",
         "tuercas de seguridad",
@@ -155,6 +179,8 @@
       "path": "/carros/llantas-y-rines/accesorios-de-rueda/separadores-y-espaciadores-de-rin",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida (ancho, perfil, rin)",
       "sinonimos": [
         "separadores",
         "espaciadores de rines",
@@ -166,6 +192,8 @@
       "path": "/carros/lubricantes-y-mantenimiento",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma",
       "sinonimos": []
     },
     {
@@ -173,6 +201,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "aceite",
         "aceite de carro",
@@ -192,6 +222,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/aceite-de-transmision",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "aceite de caja",
         "valvulina",
@@ -206,6 +238,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/aceite-diferencial",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "aceite de diferencial",
         "valvulina 85w140",
@@ -217,6 +251,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Color y concentracion",
       "sinonimos": [
         "coolant",
         "refrigerante",
@@ -228,6 +264,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Norma DOT",
       "sinonimos": [
         "líquido de freno",
         "DOT 3",
@@ -239,6 +277,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma",
       "sinonimos": [
         "aceite de dirección",
         "atf de dirección",
@@ -250,6 +290,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/aditivos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "aditivo",
         "potenciador",
@@ -263,6 +305,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/grasas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "grasa",
         "grasa multiusos",
@@ -275,6 +319,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de sistema",
         "flush de motor"
@@ -285,6 +331,8 @@
       "path": "/carros/filtros",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -292,6 +340,8 @@
       "path": "/carros/filtros/filtros-de-aceite",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de aceite"
       ]
@@ -301,6 +351,8 @@
       "path": "/carros/filtros/filtros-de-aire",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de aire"
       ]
@@ -310,6 +362,8 @@
       "path": "/carros/filtros/filtros-de-combustible",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de combustible",
         "filtro de gasolina"
@@ -320,6 +374,8 @@
       "path": "/carros/filtros/filtros-de-cabina",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de aire acondicionado",
         "filtro de polen",
@@ -332,6 +388,8 @@
       "path": "/carros/filtros/filtros-de-transmision",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de caja",
         "filtro de transmisión automática",
@@ -343,6 +401,8 @@
       "path": "/carros/baterias",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -350,6 +410,8 @@
       "path": "/carros/baterias/baterias-para-carro",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "batería",
         "batería de carro",
@@ -368,6 +430,8 @@
       "path": "/carros/baterias/baterias-para-furgon-camion-y-bus",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "batería de camión",
         "batería de furgón",
@@ -384,6 +448,8 @@
       "path": "/carros/baterias/bornes-y-cables-de-bateria",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bornes",
         "terminales de batería",
@@ -396,6 +462,8 @@
       "path": "/carros/frenos",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -403,6 +471,8 @@
       "path": "/carros/frenos/pastillas-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pastas de freno",
         "brake pads"
@@ -413,6 +483,8 @@
       "path": "/carros/frenos/discos-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "disco de freno",
         "discos",
@@ -426,6 +498,8 @@
       "path": "/carros/frenos/campanas-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tambores",
         "campanas",
@@ -438,6 +512,8 @@
       "path": "/carros/frenos/bandas-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "zapatas",
         "zapatas de freno"
@@ -448,6 +524,8 @@
       "path": "/carros/frenos/mordazas-calipers",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caliper",
         "cálipers",
@@ -460,6 +538,8 @@
       "path": "/carros/frenos/pistones-y-kits-de-caliper",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de caliper",
         "pistón de caliper",
@@ -471,6 +551,8 @@
       "path": "/carros/frenos/cilindros-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bombines de freno",
         "cilindros de rueda",
@@ -482,6 +564,8 @@
       "path": "/carros/frenos/bombas-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cilindro maestro",
         "bomba principal de freno",
@@ -493,6 +577,8 @@
       "path": "/carros/frenos/servofreno-booster",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "booster",
         "hidrovac",
@@ -506,6 +592,8 @@
       "path": "/carros/frenos/bombas-de-vacio",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de vacío",
         "bomba de freno de vacío"
@@ -516,6 +604,8 @@
       "path": "/carros/frenos/sensores-abs",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor abs",
         "sensor de rueda",
@@ -527,6 +617,8 @@
       "path": "/carros/frenos/modulos-y-unidades-abs",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "módulo abs",
         "unidad hidráulica",
@@ -538,6 +630,8 @@
       "path": "/carros/frenos/mangueras-y-lineas-de-freno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "líneas de freno",
         "tuberías de freno",
@@ -551,6 +645,8 @@
       "path": "/carros/frenos/depositos-de-liquido-de-frenos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "depósito de líquido de frenos",
         "tanque de líquido de frenos"
@@ -561,6 +657,8 @@
       "path": "/carros/frenos/guayas-de-freno-de-mano",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de freno de mano",
         "guaya freno de parqueo"
@@ -571,6 +669,8 @@
       "path": "/carros/frenos/herrajes-y-pernos-de-pastillas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "herrajes",
         "clips de pastillas",
@@ -583,6 +683,8 @@
       "path": "/carros/frenos/kits-de-reparacion-de-frenos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de frenos",
         "kit de reparación",
@@ -594,6 +696,8 @@
       "path": "/carros/frenos/sensores-de-desgaste-de-pastillas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor de desgaste",
         "testigo de pastillas",
@@ -605,6 +709,8 @@
       "path": "/carros/suspension-y-direccion",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -612,6 +718,8 @@
       "path": "/carros/suspension-y-direccion/amortiguadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "amortiguador",
         "shock",
@@ -623,6 +731,8 @@
       "path": "/carros/suspension-y-direccion/resortes-espirales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "espirales",
         "resortes",
@@ -636,6 +746,8 @@
       "path": "/carros/suspension-y-direccion/rotulas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rótula",
         "rótula de suspensión",
@@ -647,6 +759,8 @@
       "path": "/carros/suspension-y-direccion/axiales-brazos-axiales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "axial",
         "barra axial",
@@ -660,6 +774,8 @@
       "path": "/carros/suspension-y-direccion/bujes",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "buje",
         "bujes de suspensión",
@@ -672,6 +788,8 @@
       "path": "/carros/suspension-y-direccion/tijeras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tijera",
         "tijera de suspensión",
@@ -689,6 +807,8 @@
       "path": "/carros/suspension-y-direccion/barras-estabilizadoras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "barra estabilizadora",
         "estabilizadora",
@@ -700,6 +820,8 @@
       "path": "/carros/suspension-y-direccion/links-de-estabilizadora",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "link",
         "bieleta",
@@ -716,6 +838,8 @@
       "path": "/carros/suspension-y-direccion/balineras-de-rueda",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rodamientos de rueda",
         "balineras",
@@ -727,6 +851,8 @@
       "path": "/carros/suspension-y-direccion/manzanas-de-rueda-cubos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "mazas",
         "cubos",
@@ -741,6 +867,8 @@
       "path": "/carros/suspension-y-direccion/puntas-de-eje-manguetas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "mangueta",
         "punta de eje",
@@ -752,6 +880,8 @@
       "path": "/carros/suspension-y-direccion/cajas-de-direccion-cremalleras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja de dirección",
         "cremallera de dirección",
@@ -764,6 +894,8 @@
       "path": "/carros/suspension-y-direccion/bombas-de-direccion-hidraulica",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de dirección",
         "bomba hidráulica"
@@ -774,6 +906,8 @@
       "path": "/carros/suspension-y-direccion/mangueras-de-direccion-hidraulica",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de dirección",
         "manguera hidráulica",
@@ -785,6 +919,8 @@
       "path": "/carros/suspension-y-direccion/columnas-y-crucetas-de-direccion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "columna de dirección",
         "cruceta de dirección",
@@ -796,6 +932,8 @@
       "path": "/carros/suspension-y-direccion/terminales-de-direccion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "terminal",
         "terminal de dirección",
@@ -807,6 +945,8 @@
       "path": "/carros/suspension-y-direccion/copas-bases-de-amortiguador",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "copa",
         "copa de amortiguador",
@@ -822,6 +962,8 @@
       "path": "/carros/suspension-y-direccion/guardapolvos-y-fuelles",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guardapolvo",
         "fuelle",
@@ -834,6 +976,8 @@
       "path": "/carros/suspension-y-direccion/topes-de-amortiguador",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tope",
         "tope de suspensión",
@@ -846,6 +990,8 @@
       "path": "/carros/suspension-y-direccion/kits-de-tren-delantero",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tren delantero",
         "kit tren delantero"
@@ -856,6 +1002,8 @@
       "path": "/carros/suspension-y-direccion/suspension-neumatica-bolsas-de-aire",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "suspensión de aire",
         "air suspension"
@@ -866,6 +1014,8 @@
       "path": "/carros/suspension-y-direccion/coilovers-y-suspension-deportiva",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "coilover",
         "suspensión deportiva",
@@ -877,6 +1027,8 @@
       "path": "/carros/suspension-y-direccion/ballestas-muelles-de-hoja",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "ballesta",
         "ballestas",
@@ -891,6 +1043,8 @@
       "path": "/carros/electrico-y-electronico",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -898,6 +1052,8 @@
       "path": "/carros/electrico-y-electronico/encendido",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -905,6 +1061,8 @@
       "path": "/carros/electrico-y-electronico/encendido/bobinas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bobina de encendido",
         "bobina de chispa",
@@ -916,6 +1074,8 @@
       "path": "/carros/electrico-y-electronico/encendido/modulos-y-distribuidores-de-encendido",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "distribuidor",
         "tapa de distribuidor",
@@ -927,6 +1087,8 @@
       "path": "/carros/electrico-y-electronico/encendido/bujias-de-encendido",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bujías",
         "bujía",
@@ -941,6 +1103,8 @@
       "path": "/carros/electrico-y-electronico/encendido/cables-de-alta",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cables de bujía",
         "cables de encendido",
@@ -952,6 +1116,8 @@
       "path": "/carros/electrico-y-electronico/encendido/bujias-de-precalentamiento",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bujía de precalentamiento",
         "bujías diésel",
@@ -964,6 +1130,8 @@
       "path": "/carros/electrico-y-electronico/encendido/kits-de-sincronizacion-afinacion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de sincronización",
         "afinación",
@@ -978,6 +1146,8 @@
       "path": "/carros/electrico-y-electronico/arranque-y-carga",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -985,6 +1155,8 @@
       "path": "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "starter",
         "arranque eléctrico",
@@ -996,6 +1168,8 @@
       "path": "/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bendix",
         "automático de arranque",
@@ -1008,6 +1182,8 @@
       "path": "/carros/electrico-y-electronico/arranque-y-carga/alternadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "alternador",
         "generador",
@@ -1019,6 +1195,8 @@
       "path": "/carros/electrico-y-electronico/arranque-y-carga/reguladores-de-voltaje",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "regulador de voltaje",
         "regulador de alternador",
@@ -1030,6 +1208,8 @@
       "path": "/carros/electrico-y-electronico/gestion-electronica",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1037,6 +1217,8 @@
       "path": "/carros/electrico-y-electronico/gestion-electronica/computadores-ecu",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "ecu",
         "computador",
@@ -1050,6 +1232,8 @@
       "path": "/carros/electrico-y-electronico/gestion-electronica/modulos-electronicos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "módulo",
         "módulo de control",
@@ -1061,6 +1245,8 @@
       "path": "/carros/electrico-y-electronico/gestion-electronica/actuadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "actuador",
         "actuador de ralentí",
@@ -1072,6 +1258,8 @@
       "path": "/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor",
         "sensor de cigüeñal",
@@ -1089,6 +1277,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1096,6 +1286,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/fusibles",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "fusible",
         "caja de fusibles",
@@ -1107,6 +1299,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/reles",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "relay",
         "rele",
@@ -1118,6 +1312,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/suiches-de-encendido-y-cilindros-de-llave",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "suiche de encendido",
         "switch de arranque",
@@ -1130,6 +1326,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/suiches-e-interruptores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "switch",
         "suiche",
@@ -1143,6 +1341,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/llaves-y-controles-carcasas-chips",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "llave",
         "carcasa de llave",
@@ -1156,6 +1356,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/cableado",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "arnés",
         "ramal",
@@ -1168,6 +1370,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/conectores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "conector",
         "pacha",
@@ -1180,6 +1384,8 @@
       "path": "/carros/electrico-y-electronico/electrico-general/pitos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bocina",
         "claxon",
@@ -1191,6 +1397,8 @@
       "path": "/carros/iluminacion",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": []
     },
     {
@@ -1198,6 +1406,8 @@
       "path": "/carros/iluminacion/farolas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "faros",
         "luces delanteras",
@@ -1212,6 +1422,8 @@
       "path": "/carros/iluminacion/stops",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "luces traseras",
         "stop",
@@ -1226,6 +1438,8 @@
       "path": "/carros/iluminacion/direccionales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "luces direccionales",
         "intermitentes",
@@ -1238,6 +1452,8 @@
       "path": "/carros/iluminacion/exploradoras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "luces auxiliares",
         "antiniebla",
@@ -1251,6 +1467,8 @@
       "path": "/carros/iluminacion/luces-led",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "led",
         "luces led",
@@ -1269,6 +1487,8 @@
       "path": "/carros/iluminacion/bombillos-halogenos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "bombillos",
         "bombillas",
@@ -1289,6 +1509,8 @@
       "path": "/carros/iluminacion/xenon-hid",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "xenon",
         "hid",
@@ -1302,6 +1524,8 @@
       "path": "/carros/iluminacion/barras-led",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "barra led",
         "barra de luces",
@@ -1314,6 +1538,8 @@
       "path": "/carros/iluminacion/luces-interiores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "luz de techo",
         "luz interior",
@@ -1326,6 +1552,8 @@
       "path": "/carros/iluminacion/luces-drl-diurnas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "drl",
         "luces diurnas",
@@ -1338,6 +1566,8 @@
       "path": "/carros/iluminacion/luces-de-placa-y-cortesia",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "luz de placa",
         "luz de cortesía",
@@ -1349,6 +1579,8 @@
       "path": "/carros/motor-y-transmision",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1356,6 +1588,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1363,6 +1597,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/pistones",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pistón",
         "pistones",
@@ -1374,6 +1610,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/anillos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "anillos de pistón",
         "rines de pistón",
@@ -1385,6 +1623,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/bielas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "biela",
         "bielas"
@@ -1395,6 +1635,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/ciguenales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cigüeñal"
       ]
@@ -1404,6 +1646,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/arboles-de-levas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "árbol de levas",
         "eje de levas"
@@ -1414,6 +1658,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/culatas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "culata",
         "cabezote",
@@ -1425,6 +1671,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/valvulas-y-guias",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guías de válvula",
         "válvula de admisión",
@@ -1438,6 +1686,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/camisas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "camisas de cilindro",
         "cilindros"
@@ -1448,6 +1698,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "juntas",
         "empaquetadura",
@@ -1465,6 +1717,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de aceite"
       ]
@@ -1474,6 +1728,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/soportes-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "soporte de motor",
         "base de motor",
@@ -1485,6 +1741,8 @@
       "path": "/carros/motor-y-transmision/bloque-y-culata/motores-completos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "motor completo",
         "motor usado",
@@ -1497,6 +1755,8 @@
       "path": "/carros/motor-y-transmision/correas-y-tensores",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1504,6 +1764,8 @@
       "path": "/carros/motor-y-transmision/correas-y-tensores/correas-de-accesorios",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "correa",
         "correa de alternador",
@@ -1517,6 +1779,8 @@
       "path": "/carros/motor-y-transmision/correas-y-tensores/tensores-de-correa",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tensor",
         "tensor de correa",
@@ -1528,6 +1792,8 @@
       "path": "/carros/motor-y-transmision/correas-y-tensores/poleas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "polea",
         "polea de cigüeñal",
@@ -1540,6 +1806,8 @@
       "path": "/carros/motor-y-transmision/reparticion-distribucion",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "distribución",
         "tiempo"
@@ -1550,6 +1818,8 @@
       "path": "/carros/motor-y-transmision/reparticion-distribucion/correas-de-reparticion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "correa de distribución",
         "correa de tiempo",
@@ -1561,6 +1831,8 @@
       "path": "/carros/motor-y-transmision/reparticion-distribucion/cadenas-de-reparticion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cadena de distribución",
         "cadena de tiempo",
@@ -1572,6 +1844,8 @@
       "path": "/carros/motor-y-transmision/reparticion-distribucion/kits-de-reparticion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de distribución",
         "kit de tiempo",
@@ -1583,6 +1857,8 @@
       "path": "/carros/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-reparticion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tensor de distribución",
         "guía de cadena",
@@ -1594,6 +1870,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1601,6 +1879,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/radiadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "radiador",
         "panal de radiador",
@@ -1612,6 +1892,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/bombas-de-agua",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de agua",
         "water pump"
@@ -1622,6 +1904,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/termostatos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "termostato",
         "termostato de agua"
@@ -1632,6 +1916,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/electroventiladores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "ventilador de radiador",
         "electroventilador",
@@ -1643,6 +1929,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de radiador",
         "manguera de agua",
@@ -1655,6 +1943,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/depositos-de-refrigerante",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "depósito de agua",
         "tanque de expansión",
@@ -1666,6 +1956,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/tapas-de-radiador",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tapa de radiador",
         "tapa de presión"
@@ -1676,6 +1968,8 @@
       "path": "/carros/motor-y-transmision/refrigeracion/radiadores-de-aceite",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "enfriador de aceite",
         "radiador de aceite",
@@ -1687,6 +1981,8 @@
       "path": "/carros/motor-y-transmision/turbo-e-intercooler",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1694,6 +1990,8 @@
       "path": "/carros/motor-y-transmision/turbo-e-intercooler/turbos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "turbo",
         "turbocargador",
@@ -1706,6 +2004,8 @@
       "path": "/carros/motor-y-transmision/turbo-e-intercooler/intercoolers",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "intercooler",
         "enfriador de aire"
@@ -1716,6 +2016,8 @@
       "path": "/carros/motor-y-transmision/turbo-e-intercooler/mangueras-de-turbo-e-intercooler",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de turbo",
         "manguera de intercooler",
@@ -1727,6 +2029,8 @@
       "path": "/carros/motor-y-transmision/turbo-e-intercooler/valvulas-de-alivio-blow-off",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "blow off",
         "válvula de alivio",
@@ -1739,6 +2043,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1746,6 +2052,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de combustible",
         "bomba de gasolina eléctrica",
@@ -1757,6 +2065,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/inyectores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "inyector",
         "inyectores de gasolina",
@@ -1771,6 +2081,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/rampas-de-inyectores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "riel de inyectores",
         "flauta de inyectores",
@@ -1782,6 +2094,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/reguladores-de-presion-de-combustible",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "regulador de presión",
         "regulador de gasolina",
@@ -1793,6 +2107,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/cuerpos-de-aceleracion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cuerpo de aceleración",
         "throttle body",
@@ -1804,6 +2120,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-de-oxigeno",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor de oxígeno",
         "sonda lambda",
@@ -1815,6 +2133,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/sensores-map",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor map",
         "map",
@@ -1828,6 +2148,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/valvulas-egr-y-canister",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "egr",
         "canister",
@@ -1839,6 +2161,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/carburadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "carburador",
         "carburador weber",
@@ -1850,6 +2174,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/guayas-de-acelerador",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de acelerador",
         "chicote de acelerador"
@@ -1860,6 +2186,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/tanques-de-gasolina",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tanque de gasolina",
         "tanque de combustible",
@@ -1871,6 +2199,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-inyeccion-diesel",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de inyección",
         "bomba diésel",
@@ -1884,6 +2214,8 @@
       "path": "/carros/motor-y-transmision/combustible-e-inyeccion/filtros-separadores-de-agua",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "separador de agua",
         "trampa de agua",
@@ -1895,6 +2227,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1902,6 +2236,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/kits-de-clutch",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de embrague",
         "kit clutch",
@@ -1914,6 +2250,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/discos-de-clutch",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "disco de embrague"
       ]
@@ -1923,6 +2261,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/prensas-de-clutch",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "prensa de embrague",
         "plato de presión"
@@ -1933,6 +2273,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/balineras-de-clutch-collarin",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "collarín",
         "rodamiento de embrague",
@@ -1944,6 +2286,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/bombas-y-balibombas-de-clutch",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bombín de embrague",
         "cilindro esclavo",
@@ -1958,6 +2302,8 @@
       "path": "/carros/motor-y-transmision/clutch-embrague/guayas-de-clutch",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de clutch",
         "cable de embrague",
@@ -1969,6 +2315,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -1976,6 +2324,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-admision",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "múltiple de admisión",
         "manifold de admisión",
@@ -1987,6 +2337,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/multiples-de-escape",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "múltiple de escape",
         "header",
@@ -1998,6 +2350,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/catalizadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "catalizador",
         "convertidor catalítico"
@@ -2008,6 +2362,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/mofles-silenciadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "silenciador"
       ]
@@ -2017,6 +2373,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/resonadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "resonador",
         "pre-silenciador"
@@ -2027,6 +2385,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/flexibles-de-escape",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "flexible",
         "flexible de exhosto",
@@ -2038,6 +2398,8 @@
       "path": "/carros/motor-y-transmision/admision-y-escape/tubos-y-puntas-de-escape",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tubo de escape",
         "punta de exhosto",
@@ -2049,6 +2411,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja",
         "transmisión"
@@ -2059,6 +2423,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-cambios",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja de cambios",
         "caja manual",
@@ -2071,6 +2437,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-automaticas-y-convertidores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja automática",
         "transmisión automática",
@@ -2083,6 +2451,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/diferenciales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "diferencial",
         "corona y piñón",
@@ -2094,6 +2464,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/cardanes-y-crucetas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cardán",
         "cruceta",
@@ -2105,6 +2477,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/ejes-y-homocineticas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "homocinética",
         "junta homocinética",
@@ -2119,6 +2493,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/sincronizadores-y-pinones",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sincronizador",
         "piñón de caja",
@@ -2130,6 +2506,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/retenedores-de-caja",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "retenedor de caja",
         "retén de caja",
@@ -2141,6 +2519,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/soportes-de-caja",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "soporte de caja",
         "base de caja",
@@ -2152,6 +2532,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/selectoras-y-guayas-de-cambios",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "selectora",
         "guaya de cambios",
@@ -2163,6 +2545,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "volante",
         "flywheel",
@@ -2176,6 +2560,8 @@
       "path": "/carros/motor-y-transmision/transmision-y-caja/cajas-de-transferencia-4x4",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja de transferencia",
         "transfer",
@@ -2187,6 +2573,8 @@
       "path": "/carros/motor-y-transmision/partes-plasticas-de-motor",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2194,6 +2582,8 @@
       "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/tapas-y-cubiertas-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cubierta de motor",
         "tapa decorativa de motor",
@@ -2205,6 +2595,8 @@
       "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/guardapolvos-y-protectores-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "protector de motor",
         "guardapolvo de motor",
@@ -2217,6 +2609,8 @@
       "path": "/carros/motor-y-transmision/partes-plasticas-de-motor/carcasas-de-correa-y-ductos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "carcasa de correa",
         "ducto de aire",
@@ -2228,6 +2622,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2235,6 +2631,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular/kits-de-conversion-a-gnv",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de gas",
         "conversión a gas",
@@ -2247,6 +2645,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular/reguladores-gnv",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "regulador de gas",
         "reductor gnv"
@@ -2257,6 +2657,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular/inyectores-y-rieles-gnv",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "riel de gas",
         "inyectores de gas",
@@ -2268,6 +2670,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular/cilindros-gnv",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cilindro de gas",
         "tanque de gas",
@@ -2279,6 +2683,8 @@
       "path": "/carros/motor-y-transmision/gnv-gas-vehicular/mangueras-y-valvulas-gnv",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de gas",
         "válvula de gas",
@@ -2290,6 +2696,8 @@
       "path": "/carros/accesorios",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2297,6 +2705,8 @@
       "path": "/carros/accesorios/accesorios-exteriores",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2304,6 +2714,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/estribos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "estribo",
         "estribos laterales",
@@ -2315,6 +2727,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/barras-de-techo",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de carroceria",
       "sinonimos": [
         "barra de techo",
         "rieles de techo",
@@ -2326,6 +2740,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/portaequipajes",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de carroceria",
       "sinonimos": [
         "portaequipaje",
         "canastilla",
@@ -2338,6 +2754,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/portabicicletas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de carroceria",
       "sinonimos": [
         "portabicicleta",
         "rack de bicicleta",
@@ -2349,6 +2767,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/portallantas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "portallanta",
         "porta llanta",
@@ -2360,6 +2780,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/enganches-de-remolque-tiros",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tiro",
         "enganche",
@@ -2372,6 +2794,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/deflectores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "deflector",
         "visera de ventana",
@@ -2384,6 +2808,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/protectores-exteriores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "protector",
         "protector de bómper",
@@ -2395,6 +2821,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/molduras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "moldura",
         "moldura lateral",
@@ -2406,6 +2834,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/spoilers-y-alerones",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "spoiler",
         "alerón",
@@ -2417,6 +2847,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/parrillas-decorativas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "parrilla deportiva",
         "rejilla decorativa"
@@ -2427,6 +2859,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/protectores-de-puertas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "protector de puerta",
         "bordes de puerta",
@@ -2438,6 +2872,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/marcos-y-portaplacas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "portaplacas",
         "marco de placa",
@@ -2449,6 +2885,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/cubrecarros-forros",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Talla / tipo de carroceria",
       "sinonimos": [
         "cubrecarro",
         "forro para carro",
@@ -2462,6 +2900,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/snorkels",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "snorkel",
         "toma de aire alta"
@@ -2472,6 +2912,8 @@
       "path": "/carros/accesorios/accesorios-exteriores/polarizado-y-peliculas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "polarizado",
         "película de seguridad",
@@ -2483,6 +2925,8 @@
       "path": "/carros/accesorios/accesorios-interiores",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2490,6 +2934,8 @@
       "path": "/carros/accesorios/accesorios-interiores/tapetes",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de carroceria",
       "sinonimos": [
         "tapetes de carro",
         "alfombras",
@@ -2503,6 +2949,8 @@
       "path": "/carros/accesorios/accesorios-interiores/forros-de-sillas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Numero de puestos",
       "sinonimos": [
         "forros de asientos",
         "fundas de asiento",
@@ -2517,6 +2965,8 @@
       "path": "/carros/accesorios/accesorios-interiores/forros-de-timon",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "forro de timón",
         "cubrevolante",
@@ -2529,6 +2979,8 @@
       "path": "/carros/accesorios/accesorios-interiores/cojines",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cojín",
         "cojines de carro",
@@ -2540,6 +2992,8 @@
       "path": "/carros/accesorios/accesorios-interiores/organizadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "organizador",
         "organizador de baúl",
@@ -2551,6 +3005,8 @@
       "path": "/carros/accesorios/accesorios-interiores/cortasoles-de-parabrisas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cortasol",
         "parasol de parabrisas",
@@ -2562,6 +3018,8 @@
       "path": "/carros/accesorios/accesorios-interiores/cortinas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cortina",
         "cortina para carro",
@@ -2573,6 +3031,8 @@
       "path": "/carros/accesorios/accesorios-interiores/percheros",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "perchero",
         "gancho para ropa",
@@ -2584,6 +3044,8 @@
       "path": "/carros/accesorios/accesorios-interiores/portaobjetos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "portaobjeto",
         "bandeja",
@@ -2595,6 +3057,8 @@
       "path": "/carros/accesorios/accesorios-interiores/portavasos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "portavasos",
         "porta vasos"
@@ -2605,6 +3069,8 @@
       "path": "/carros/accesorios/accesorios-interiores/apoyabrazos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "apoyabrazos",
         "descansabrazos",
@@ -2616,6 +3082,8 @@
       "path": "/carros/accesorios/accesorios-interiores/volantes-deportivos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "volante deportivo",
         "timón deportivo",
@@ -2627,6 +3095,8 @@
       "path": "/carros/accesorios/accesorios-interiores/pedales-deportivos-cubrepedales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cubrepedales",
         "pedales de lujo"
@@ -2637,6 +3107,8 @@
       "path": "/carros/accesorios/accesorios-interiores/protectores-interiores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "protector interior",
         "protector de tapicería",
@@ -2648,6 +3120,8 @@
       "path": "/carros/accesorios/accesorios-interiores/sillas-para-bebe",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "silla para bebé",
         "silla de carro para bebé",
@@ -2660,6 +3134,8 @@
       "path": "/carros/accesorios/accesorios-interiores/neveras-portatiles",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "nevera para carro",
         "nevera portátil",
@@ -2671,6 +3147,8 @@
       "path": "/carros/accesorios/accesorios-interiores/cargadores-e-inversores-12v",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "inversor",
         "convertidor",
@@ -2688,6 +3166,8 @@
       "path": "/carros/accesorios/accesorios-interiores/soportes-de-celular",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "soporte de celular",
         "porta celular",
@@ -2700,6 +3180,8 @@
       "path": "/carros/accesorios/audio",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2707,6 +3189,8 @@
       "path": "/carros/accesorios/audio/radios",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Formato (1 DIN / 2 DIN)",
       "sinonimos": [
         "radio",
         "radio de carro",
@@ -2721,6 +3205,8 @@
       "path": "/carros/accesorios/audio/pantallas-multimedia",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Formato y pulgadas",
       "sinonimos": [
         "pantalla",
         "pantalla android",
@@ -2734,6 +3220,8 @@
       "path": "/carros/accesorios/audio/parlantes",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Diametro",
       "sinonimos": [
         "altavoces",
         "bafles",
@@ -2747,6 +3235,8 @@
       "path": "/carros/accesorios/audio/subwoofers",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Diametro",
       "sinonimos": [
         "subwoofer",
         "bajo",
@@ -2759,6 +3249,8 @@
       "path": "/carros/accesorios/audio/amplificadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "amplificador",
         "planta",
@@ -2770,6 +3262,8 @@
       "path": "/carros/accesorios/audio/procesadores-y-ecualizadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "ecualizador",
         "procesador de audio",
@@ -2781,6 +3275,8 @@
       "path": "/carros/accesorios/audio/tweeters",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Diametro",
       "sinonimos": [
         "tweeter",
         "tweeters",
@@ -2792,6 +3288,8 @@
       "path": "/carros/accesorios/audio/cajas-acusticas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "caja acústica",
         "cajón",
@@ -2804,6 +3302,8 @@
       "path": "/carros/accesorios/audio/cables-y-conectores-de-audio",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cable de audio",
         "rca",
@@ -2816,6 +3316,8 @@
       "path": "/carros/accesorios/audio/antenas-de-radio",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "antenas",
         "antena",
@@ -2828,6 +3330,8 @@
       "path": "/carros/accesorios/audio/kits-de-instalacion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de instalación",
         "kit de montaje",
@@ -2840,6 +3344,8 @@
       "path": "/carros/carroceria-y-climatizacion",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2847,6 +3353,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -2854,6 +3362,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/bomperes-bumper",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "parachoques",
         "bumper",
@@ -2871,6 +3381,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/capos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "capot",
         "capote",
@@ -2884,6 +3396,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/guardafangos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guardafango",
         "guardabarros",
@@ -2897,6 +3411,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/puertas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "puerta",
         "puerta delantera",
@@ -2909,6 +3425,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/baules-y-compuertas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "baúl",
         "tapa de baúl",
@@ -2921,6 +3439,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/espejos-retrovisores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "espejos",
         "espejo lateral",
@@ -2936,6 +3456,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/persianas-parrillas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "persiana",
         "parrilla",
@@ -2948,6 +3470,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/rejillas-y-tomas-de-aire",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rejilla",
         "toma de aire",
@@ -2959,6 +3483,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/soportes-y-bases-de-carroceria",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "soporte de bómper",
         "base de farola",
@@ -2970,6 +3496,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/bisagras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bisagra",
         "bisagra de puerta",
@@ -2981,6 +3509,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/chapas-y-manijas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manijas",
         "manija de puerta",
@@ -2994,6 +3524,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/cerraduras-de-capo-y-baul",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cerradura de capó",
         "cerradura de baúl",
@@ -3006,6 +3538,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/amortiguadores-de-capo-y-baul-resortes-a-gas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "resorte a gas",
         "amortiguador de capó",
@@ -3018,6 +3552,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/vidrios-y-parabrisas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "parabrisas",
         "vidrio",
@@ -3031,6 +3567,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/elevavidrios",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "alzavidrios",
         "regulador de vidrio",
@@ -3049,6 +3587,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/empaques-de-puertas-y-molduras-burletes",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "burlete",
         "empaque de puerta",
@@ -3061,6 +3601,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/plumillas-limpiaparabrisas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "plumillas",
         "escobillas",
@@ -3076,6 +3618,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/brazos-y-motores-de-limpiaparabrisas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "brazo de limpiaparabrisas",
         "motor de limpiaparabrisas",
@@ -3087,6 +3631,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/lavaparabrisas-bombas-y-depositos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de agua de parabrisas",
         "depósito de lavaparabrisas",
@@ -3098,6 +3644,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/guardapolvos-y-pasarruedas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pasarruedas",
         "guardapolvo de rueda",
@@ -3109,6 +3657,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/zocalos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "zócalo",
         "faldón",
@@ -3120,6 +3670,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/techos-corredizos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "techo corredizo",
         "sunroof",
@@ -3131,6 +3683,8 @@
       "path": "/carros/carroceria-y-climatizacion/carroceria/emblemas-de-carroceria",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "emblemas"
       ]
@@ -3140,6 +3694,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "interior",
         "repuestos de interior"
@@ -3150,6 +3706,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manijas-y-chapas-interiores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manija interior",
         "manilla",
@@ -3161,6 +3719,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/paneles-de-puerta",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "panel de puerta",
         "tapizado de puerta",
@@ -3172,6 +3732,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tableros-y-consolas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tablero",
         "consola",
@@ -3184,6 +3746,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/guanteras",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guantera",
         "tapa de guantera"
@@ -3194,6 +3758,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-cambios-y-pomos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pomo",
         "palanca de cambios",
@@ -3206,6 +3772,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/palancas-de-freno-de-mano",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "freno de mano",
         "palanca de freno de mano",
@@ -3217,6 +3785,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/pedales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pedal",
         "pedal de freno",
@@ -3229,6 +3799,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/sillas-y-tapizados",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "asientos",
         "tapicería",
@@ -3240,6 +3812,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cinturones-de-seguridad",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cinturón",
         "cinturón de seguridad",
@@ -3251,6 +3825,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/airbags-y-modulos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "airbag",
         "bolsa de aire",
@@ -3264,6 +3840,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/espejos-retrovisores-interiores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "retrovisor interior",
         "espejo interior",
@@ -3275,6 +3853,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/parasoles",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "parasol",
         "viseras",
@@ -3286,6 +3866,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/cielorrasos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cielorraso",
         "techo interior",
@@ -3297,6 +3879,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/tomas-12v-y-encendedores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "encendedor",
         "toma 12v",
@@ -3308,6 +3892,8 @@
       "path": "/carros/carroceria-y-climatizacion/interior-repuestos/manivelas-de-ventana",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manivela",
         "manija de vidrio",
@@ -3319,6 +3905,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3326,6 +3914,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/compresores-de-ac",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "compresor",
         "compresor de aire acondicionado",
@@ -3337,6 +3927,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/condensadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "condensador",
         "condensador de aire",
@@ -3348,6 +3940,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/evaporadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "evaporador",
         "evaporador de aire acondicionado"
@@ -3358,6 +3952,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/blowers-ventiladores-de-ac",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "blower",
         "motor de ventilación",
@@ -3370,6 +3966,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/resistencias",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "resistencia de blower",
         "resistencia de aire",
@@ -3381,6 +3979,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/sensores-de-ac",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor de aire acondicionado",
         "presostato",
@@ -3392,6 +3992,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/mangueras-de-ac",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de aire acondicionado",
         "tubería de ac"
@@ -3402,6 +4004,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/gas-refrigerante",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "gas",
         "r134a",
@@ -3415,6 +4019,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/valvulas-de-expansion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "válvula de expansión",
         "válvula de ac",
@@ -3426,6 +4032,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/radiadores-de-calefaccion",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "radiador de calefacción",
         "calefacción",
@@ -3437,6 +4045,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/comandos-y-perillas-de-ac",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "comando de aire",
         "perilla de aire",
@@ -3449,6 +4059,8 @@
       "path": "/carros/carroceria-y-climatizacion/aire-acondicionado-y-climatizacion/difusores-de-aire",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "difusor",
         "rejilla de aire",
@@ -3461,6 +4073,8 @@
       "path": "/carros/tecnologia-y-seguridad",
       "seccion": "Carros",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3468,6 +4082,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3475,6 +4091,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sistemas-android-y-carplay",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Formato y pulgadas",
       "sinonimos": [
         "sistemas android / carplay",
         "android auto",
@@ -3487,6 +4105,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-de-reversa",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cámara de reversa",
         "cámara trasera",
@@ -3498,6 +4118,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-dvr-y-de-seguridad",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cámaras dvr",
         "cámara dvr",
@@ -3512,6 +4134,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-parqueo",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "sensor de parqueo",
         "sensores de reversa",
@@ -3523,6 +4147,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tpms",
         "sensor de presión de llantas"
@@ -3533,6 +4159,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/adaptadores-bluetooth",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "bluetooth",
         "adaptador bluetooth",
@@ -3544,6 +4172,8 @@
       "path": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/cargadores-y-cables-para-electricos-e-hibridos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cargador ev",
         "cargador de carro eléctrico",
@@ -3556,6 +4186,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad",
       "seccion": "Carros",
       "nivel": "sub",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3563,6 +4195,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/alarmas",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "alarma de carro"
       ]
@@ -3572,6 +4206,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/inmovilizadores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "inmovilizador",
         "corta corriente",
@@ -3583,6 +4219,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/rastreo-gps",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "gps para carro"
       ]
@@ -3592,6 +4230,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/cerraduras-y-bloqueos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "bloqueo",
         "cerradura de seguridad",
@@ -3603,6 +4243,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/trabavolantes-y-trabapedales",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "trabavolante",
         "traba volante",
@@ -3615,6 +4257,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/extintores",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "extintor",
         "extinguidor",
@@ -3626,6 +4270,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/triangulos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "triángulo",
         "triángulos reflectivos",
@@ -3637,6 +4283,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/botiquines",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "botiquín",
         "botiquín de carretera",
@@ -3648,6 +4296,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/kits-de-carretera",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "kit de carretera",
         "equipo de carretera",
@@ -3659,6 +4309,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/chalecos-reflectivos",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "chaleco reflectivo",
         "chaleco"
@@ -3669,6 +4321,8 @@
       "path": "/carros/tecnologia-y-seguridad/seguridad/alcoholimetros",
       "seccion": "Carros",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "alcoholímetro"
       ]
@@ -3678,6 +4332,8 @@
       "path": "/motos/llantas-y-rines",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": []
     },
     {
@@ -3685,6 +4341,8 @@
       "path": "/motos/llantas-y-rines/llantas",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta de moto",
         "llantas de moto",
@@ -3697,6 +4355,8 @@
       "path": "/motos/llantas-y-rines/llantas/llantas-delanteras",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta delantera",
         "llanta 2.75-18",
@@ -3708,6 +4368,8 @@
       "path": "/motos/llantas-y-rines/llantas/llantas-traseras",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta trasera",
         "llanta 100/90-17",
@@ -3719,6 +4381,8 @@
       "path": "/motos/llantas-y-rines/llantas/llantas-de-scooter",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta de scooter",
         "llanta 90/90-10",
@@ -3730,6 +4394,8 @@
       "path": "/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta de enduro",
         "llanta cross",
@@ -3742,6 +4408,8 @@
       "path": "/motos/llantas-y-rines/llantas/llantas-para-motocarro",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "llanta de motocarro",
         "llanta de torito",
@@ -3753,6 +4421,8 @@
       "path": "/motos/llantas-y-rines/rines-y-rayos",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": []
     },
     {
@@ -3760,6 +4430,8 @@
       "path": "/motos/llantas-y-rines/rines-y-rayos/rines",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "rines de moto"
       ]
@@ -3769,6 +4441,8 @@
       "path": "/motos/llantas-y-rines/rines-y-rayos/rayos-y-niples",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "radios",
         "rayos de rin"
@@ -3779,6 +4453,8 @@
       "path": "/motos/llantas-y-rines/rines-y-rayos/manzanas-de-rueda",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "cubos de rueda",
         "hubs",
@@ -3793,6 +4469,8 @@
       "path": "/motos/llantas-y-rines/rines-y-rayos/balineras-de-rueda",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "rodamientos de rueda",
         "balineras",
@@ -3804,6 +4482,8 @@
       "path": "/motos/llantas-y-rines/accesorios-de-rueda",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": []
     },
     {
@@ -3811,6 +4491,8 @@
       "path": "/motos/llantas-y-rines/accesorios-de-rueda/neumaticos-tripas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "tripas",
         "tubos",
@@ -3823,6 +4505,8 @@
       "path": "/motos/llantas-y-rines/accesorios-de-rueda/valvulas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "válvula de rin",
         "válvula de aire",
@@ -3835,6 +4519,8 @@
       "path": "/motos/llantas-y-rines/accesorios-de-rueda/tuercas-y-ejes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "tuerca de eje",
         "tuerca de rueda de moto"
@@ -3845,6 +4531,8 @@
       "path": "/motos/llantas-y-rines/accesorios-de-rueda/protectores-de-rin",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Medida",
       "sinonimos": [
         "protector de rin",
         "cinta de rin",
@@ -3856,6 +4544,8 @@
       "path": "/motos/lubricantes-y-mantenimiento",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
       "sinonimos": []
     },
     {
@@ -3863,6 +4553,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "aceite 4t",
         "aceite de moto",
@@ -3877,6 +4569,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "aceite 2t",
         "aceite de dos tiempos",
@@ -3888,6 +4582,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
       "sinonimos": [
         "aceite de transmisión / caja",
         "aceite de caja",
@@ -3899,6 +4595,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-suspension",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
       "sinonimos": [
         "aceite de barras",
         "aceite de horquilla",
@@ -3910,6 +4608,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "lubricante de cadena",
         "grasa de cadena",
@@ -3921,6 +4621,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/liquido-de-frenos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Norma DOT",
       "sinonimos": [
         "líquido de freno",
         "DOT 3",
@@ -3932,6 +4634,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/refrigerante",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
       "sinonimos": [
         "refrigerante",
         "coolant",
@@ -3943,6 +4647,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "aditivo",
         "grasa",
@@ -3954,6 +4660,8 @@
       "path": "/motos/filtros",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3961,6 +4669,8 @@
       "path": "/motos/filtros/filtros-de-aceite",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de aceite"
       ]
@@ -3970,6 +4680,8 @@
       "path": "/motos/filtros/filtros-de-aire",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de aire"
       ]
@@ -3979,6 +4691,8 @@
       "path": "/motos/filtros/filtros-de-combustible",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "filtro de combustible",
         "filtro de gasolina"
@@ -3989,6 +4703,8 @@
       "path": "/motos/motor-y-transmision",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -3996,6 +4712,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4003,6 +4721,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/kits-de-cilindro",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cilindro de moto",
         "kit cilindro pistón"
@@ -4013,6 +4733,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/pistones-y-anillos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pistón",
         "anillos",
@@ -4025,6 +4747,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/bielas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "biela",
         "bielas"
@@ -4035,6 +4759,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/ciguenales",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cigüeñal"
       ]
@@ -4044,6 +4770,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/rodamientos-de-ciguenal",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rodamiento de cigüeñal",
         "balinera de cigüeñal",
@@ -4055,6 +4783,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/culatas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "culata",
         "cabezote",
@@ -4066,6 +4796,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/valvulas-y-guias",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guías de válvula",
         "válvula de admisión",
@@ -4079,6 +4811,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/arboles-de-levas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "árbol de levas",
         "eje de levas"
@@ -4089,6 +4823,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/balancines",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "balancín",
         "balancines",
@@ -4100,6 +4836,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "juntas",
         "empaquetadura",
@@ -4117,6 +4855,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/carter-y-tapas-de-motor",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cárter",
         "tapa de motor",
@@ -4129,6 +4869,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/bombas-de-aceite",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de aceite"
       ]
@@ -4138,6 +4880,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/volantes-magneticos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "volante magnético",
         "magneto",
@@ -4149,6 +4893,8 @@
       "path": "/motos/motor-y-transmision/bloque-y-culata/motores-completos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "motor completo",
         "motor usado",
@@ -4161,6 +4907,8 @@
       "path": "/motos/motor-y-transmision/reparticion-distribucion",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "distribución",
         "tiempo"
@@ -4171,6 +4919,8 @@
       "path": "/motos/motor-y-transmision/reparticion-distribucion/cadenillas-cadenas-de-reparticion",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cadena de distribución",
         "cadena de tiempo",
@@ -4183,6 +4933,8 @@
       "path": "/motos/motor-y-transmision/reparticion-distribucion/tensores-y-guias-de-cadenilla",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tensor de cadenilla",
         "guía de cadenilla",
@@ -4194,6 +4946,8 @@
       "path": "/motos/motor-y-transmision/reparticion-distribucion/kits-de-cadenilla",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de distribución",
         "kit de tiempo",
@@ -4206,6 +4960,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4213,6 +4969,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion/radiadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "radiador",
         "panal de radiador",
@@ -4224,6 +4982,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion/bombas-de-agua",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de agua",
         "water pump"
@@ -4234,6 +4994,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion/termostatos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "termostato",
         "termostato de agua"
@@ -4244,6 +5006,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de radiador",
         "manguera de agua",
@@ -4256,6 +5020,8 @@
       "path": "/motos/motor-y-transmision/refrigeracion/electroventiladores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "moto ventilador"
       ]
@@ -4265,6 +5031,8 @@
       "path": "/motos/motor-y-transmision/combustible",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4272,6 +5040,8 @@
       "path": "/motos/motor-y-transmision/combustible/carburadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "carburador",
         "carburador weber",
@@ -4283,6 +5053,8 @@
       "path": "/motos/motor-y-transmision/combustible/inyectores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "inyector",
         "inyectores de gasolina",
@@ -4297,6 +5069,8 @@
       "path": "/motos/motor-y-transmision/combustible/bombas-de-gasolina",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bomba de combustible",
         "bomba de gasolina eléctrica",
@@ -4308,6 +5082,8 @@
       "path": "/motos/motor-y-transmision/combustible/cuerpos-de-aceleracion",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cuerpo de aceleración",
         "throttle body",
@@ -4319,6 +5095,8 @@
       "path": "/motos/motor-y-transmision/combustible/llaves-de-gasolina",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "grifo de gasolina",
         "llave de paso"
@@ -4329,6 +5107,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4336,6 +5116,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/discos-de-clutch",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "disco de embrague"
       ]
@@ -4345,6 +5127,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-clutch",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de embrague",
         "kit clutch",
@@ -4357,6 +5141,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/resortes-y-campanas-de-clutch",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "campana de clutch",
         "resorte de clutch",
@@ -4368,6 +5154,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/pinones",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sprocket",
         "piñón de salida",
@@ -4381,6 +5169,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/catalinas-sprocket-trasero",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sprocket trasero",
         "piñón trasero",
@@ -4394,6 +5184,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/cadenas-de-transmision",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cadena de moto",
         "cadena de tracción"
@@ -4404,6 +5196,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-arrastre",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de arrastre",
         "kit de transmisión",
@@ -4417,6 +5211,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/correas-de-transmision-scooter",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "correa de scooter",
         "banda de scooter",
@@ -4428,6 +5224,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/variador-rodillos-y-clutch-de-scooter",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "clutch de scooter (variador)",
         "variador",
@@ -4441,6 +5239,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/cajas-de-cambios-y-engranajes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja de cambios",
         "engranajes",
@@ -4453,6 +5253,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/selectoras-y-palancas-de-cambios",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "selectora",
         "horquilla selectora"
@@ -4463,6 +5265,8 @@
       "path": "/motos/motor-y-transmision/clutch-y-transmision/ejes-de-cambios",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "eje de cambios",
         "eje selector",
@@ -4474,6 +5278,8 @@
       "path": "/motos/motor-y-transmision/arranque",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4481,6 +5287,8 @@
       "path": "/motos/motor-y-transmision/arranque/motores-de-arranque",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pisa",
         "motores de arranque (pisa)"
@@ -4491,6 +5299,8 @@
       "path": "/motos/motor-y-transmision/arranque/bendix",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "piñón de arranque"
       ]
@@ -4500,6 +5310,8 @@
       "path": "/motos/motor-y-transmision/arranque/pedales-de-arranque-crank",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "patada",
         "kick starter",
@@ -4514,6 +5326,8 @@
       "path": "/motos/motor-y-transmision/arranque/automaticos-reles-de-arranque",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "automático de arranque",
         "relé de arranque",
@@ -4526,6 +5340,8 @@
       "path": "/motos/motor-y-transmision/escape",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4533,6 +5349,8 @@
       "path": "/motos/motor-y-transmision/escape/exostos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "escape",
         "tubo de escape",
@@ -4546,6 +5364,8 @@
       "path": "/motos/motor-y-transmision/escape/mofles-silenciadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "silenciador"
       ]
@@ -4555,6 +5375,8 @@
       "path": "/motos/motor-y-transmision/escape/catalizadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "catalizador",
         "convertidor catalítico"
@@ -4565,6 +5387,8 @@
       "path": "/motos/motor-y-transmision/escape/empaques-de-exosto",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "empaque de exhosto",
         "empaque de escape",
@@ -4576,6 +5400,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables",
       "seccion": "Motos",
       "nivel": "sub",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4583,6 +5409,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de freno",
         "chicote de freno"
@@ -4593,6 +5421,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-clutch",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de clutch",
         "cable de embrague",
@@ -4604,6 +5434,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-acelerador",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cable de acelerador",
         "chicote de acelerador"
@@ -4614,6 +5446,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-velocimetro",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guaya de velocímetro",
         "cable de velocímetro",
@@ -4625,6 +5459,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-choke-ahogador",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guaya de ahogador",
         "choke",
@@ -4636,6 +5472,8 @@
       "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-tacometro",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guaya de tacómetro",
         "cable de tacómetro"
@@ -4646,6 +5484,8 @@
       "path": "/motos/baterias",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4653,6 +5493,8 @@
       "path": "/motos/baterias/baterias-para-moto",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "batería de moto",
         "batería 12v moto",
@@ -4674,6 +5516,8 @@
       "path": "/motos/baterias/bornes-y-cables-de-bateria",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bornes",
         "terminales de batería",
@@ -4686,6 +5530,8 @@
       "path": "/motos/frenos",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4693,6 +5539,8 @@
       "path": "/motos/frenos/pastillas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pastas de freno",
         "brake pads"
@@ -4703,6 +5551,8 @@
       "path": "/motos/frenos/bandas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "zapatas",
         "zapatas de freno"
@@ -4713,6 +5563,8 @@
       "path": "/motos/frenos/discos-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "disco de freno",
         "discos",
@@ -4726,6 +5578,8 @@
       "path": "/motos/frenos/campanas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tambores",
         "campanas",
@@ -4738,6 +5592,8 @@
       "path": "/motos/frenos/mordazas-calipers",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caliper",
         "cálipers",
@@ -4750,6 +5606,8 @@
       "path": "/motos/frenos/bombas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cilindro maestro",
         "bomba principal de freno",
@@ -4761,6 +5619,8 @@
       "path": "/motos/frenos/cilindros-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bombines de freno",
         "cilindros de rueda",
@@ -4772,6 +5632,8 @@
       "path": "/motos/frenos/mangueras-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manguera de freno",
         "bandeja de freno",
@@ -4784,6 +5646,8 @@
       "path": "/motos/frenos/maniguetas-de-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manigueta",
         "manilla de freno",
@@ -4799,6 +5663,8 @@
       "path": "/motos/frenos/kits-de-reparacion-de-frenos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "kit de frenos",
         "kit de reparación",
@@ -4810,6 +5676,8 @@
       "path": "/motos/frenos/depositos-de-liquido-de-frenos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "depósito de líquido de frenos",
         "tanque de líquido de frenos"
@@ -4820,6 +5688,8 @@
       "path": "/motos/cascos",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4827,6 +5697,8 @@
       "path": "/motos/cascos/cascos-integrales",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "casco",
         "casco cerrado",
@@ -4839,6 +5711,8 @@
       "path": "/motos/cascos/cascos-abatibles",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "casco modular",
         "flip up"
@@ -4849,6 +5723,8 @@
       "path": "/motos/cascos/cascos-abiertos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "casco jet",
         "casco 3/4"
@@ -4859,6 +5735,8 @@
       "path": "/motos/cascos/cascos-cross",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "casco enduro",
         "casco motocross"
@@ -4869,6 +5747,8 @@
       "path": "/motos/cascos/visores-y-repuestos-de-casco",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "visor",
         "visor de casco",
@@ -4881,6 +5761,8 @@
       "path": "/motos/electrico-y-electronico",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -4888,6 +5770,8 @@
       "path": "/motos/electrico-y-electronico/reguladores-rectificadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rectificador",
         "regulador de voltaje",
@@ -4899,6 +5783,8 @@
       "path": "/motos/electrico-y-electronico/cdi-modulos-de-encendido",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "cdi",
         "unidad de encendido",
@@ -4913,6 +5799,8 @@
       "path": "/motos/electrico-y-electronico/bobinas-de-alta",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bobina de encendido",
         "bobina de chispa"
@@ -4923,6 +5811,8 @@
       "path": "/motos/electrico-y-electronico/estatores-platos-de-bobinas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bobina de carga",
         "estator",
@@ -4936,6 +5826,8 @@
       "path": "/motos/electrico-y-electronico/bujias",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bujía",
         "spark plug",
@@ -4949,6 +5841,8 @@
       "path": "/motos/electrico-y-electronico/capuchones-de-bujia",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "capuchón",
         "capuchón de bujía",
@@ -4960,6 +5854,8 @@
       "path": "/motos/electrico-y-electronico/fusibles-y-reles",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "fusible",
         "relé",
@@ -4972,6 +5868,8 @@
       "path": "/motos/electrico-y-electronico/suiches-y-comandos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "mandos",
         "switch",
@@ -4983,6 +5881,8 @@
       "path": "/motos/electrico-y-electronico/flashers",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "relé de direccionales",
         "destellador"
@@ -4993,6 +5893,8 @@
       "path": "/motos/electrico-y-electronico/pitos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "bocina",
         "claxon",
@@ -5004,6 +5906,8 @@
       "path": "/motos/electrico-y-electronico/cableado-y-conectores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "ramal",
         "arnés",
@@ -5016,6 +5920,8 @@
       "path": "/motos/electrico-y-electronico/tableros-tacometros-y-velocimetros",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "velocímetro",
         "tacómetro",
@@ -5031,6 +5937,8 @@
       "path": "/motos/electrico-y-electronico/sensores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sensor",
         "sensor de velocidad",
@@ -5042,6 +5950,8 @@
       "path": "/motos/iluminacion",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": []
     },
     {
@@ -5049,6 +5959,8 @@
       "path": "/motos/iluminacion/farolas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "faros",
         "luces delanteras",
@@ -5063,6 +5975,8 @@
       "path": "/motos/iluminacion/stops",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "luces traseras",
         "stop",
@@ -5077,6 +5991,8 @@
       "path": "/motos/iluminacion/direccionales",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "luces direccionales",
         "intermitentes",
@@ -5089,6 +6005,8 @@
       "path": "/motos/iluminacion/luces-led",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "led",
         "luces led",
@@ -5107,6 +6025,8 @@
       "path": "/motos/iluminacion/bombillos-halogenos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "bombillos",
         "bombillas",
@@ -5127,6 +6047,8 @@
       "path": "/motos/iluminacion/exploradoras-y-luces-auxiliares",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Tipo de bombillo",
       "sinonimos": [
         "exploradoras",
         "antiniebla",
@@ -5140,6 +6062,8 @@
       "path": "/motos/accesorios",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5147,6 +6071,8 @@
       "path": "/motos/accesorios/maletas-y-baules",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "baúl",
         "maleta",
@@ -5160,6 +6086,8 @@
       "path": "/motos/accesorios/alforjas-y-mochilas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "alforja",
         "alforjas",
@@ -5172,6 +6100,8 @@
       "path": "/motos/accesorios/parrillas-y-portamaletas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "parrilla",
         "parrilla trasera",
@@ -5184,6 +6114,8 @@
       "path": "/motos/accesorios/defensas-mataperros",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "defensa",
         "defensas",
@@ -5197,6 +6129,8 @@
       "path": "/motos/accesorios/sliders-y-cubrecarter",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "slider",
         "sliders",
@@ -5213,6 +6147,8 @@
       "path": "/motos/accesorios/pijamas-cubremotos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Talla",
       "sinonimos": [
         "cubremoto",
         "pijama para moto",
@@ -5226,6 +6162,8 @@
       "path": "/motos/accesorios/cupulas-parabrisas-y-soportes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "parabrisas",
         "cúpula",
@@ -5240,6 +6178,8 @@
       "path": "/motos/accesorios/espejos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "ajuste",
+      "atributo": "Rosca",
       "sinonimos": [
         "espejo",
         "retrovisor",
@@ -5252,6 +6192,8 @@
       "path": "/motos/accesorios/cubrepunos-y-cubremanos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cubrepuños",
         "cubremanos",
@@ -5263,6 +6205,8 @@
       "path": "/motos/accesorios/soportes-de-celular",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "soporte de celular",
         "porta celular",
@@ -5275,6 +6219,8 @@
       "path": "/motos/accesorios/forros-de-sillin",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "forro de sillín",
         "forro de silla",
@@ -5287,6 +6233,8 @@
       "path": "/motos/accesorios/pulpos-y-redes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pulpo",
         "red de pulpo",
@@ -5299,6 +6247,8 @@
       "path": "/motos/accesorios/rampas-y-caballetes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "rampa",
         "caballete de taller",
@@ -5310,6 +6260,8 @@
       "path": "/motos/accesorios/cubrerayos-y-adhesivos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cubrerayos",
         "stickers",
@@ -5322,6 +6274,8 @@
       "path": "/motos/accesorios/cargadores-usb",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cargador usb",
         "toma usb",
@@ -5333,6 +6287,8 @@
       "path": "/motos/accesorios/intercomunicadores",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "intercomunicador",
         "intercom",
@@ -5344,6 +6300,8 @@
       "path": "/motos/accesorios/parlantes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "altavoces",
         "bafles",
@@ -5357,6 +6315,8 @@
       "path": "/motos/ropa",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5364,6 +6324,8 @@
       "path": "/motos/ropa/chaquetas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "chaqueta",
         "chaqueta de moto",
@@ -5375,6 +6337,8 @@
       "path": "/motos/ropa/guantes-de-moto",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "guantes",
         "guantes para moto",
@@ -5386,6 +6350,8 @@
       "path": "/motos/ropa/botas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "bota",
         "botas de moto",
@@ -5397,6 +6363,8 @@
       "path": "/motos/ropa/pantalones",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pantalón",
         "pantalón de moto",
@@ -5408,6 +6376,8 @@
       "path": "/motos/ropa/impermeables",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "impermeable",
         "traje de lluvia",
@@ -5420,6 +6390,8 @@
       "path": "/motos/ropa/protecciones-rodilleras-coderas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "rodilleras",
         "coderas",
@@ -5433,6 +6405,8 @@
       "path": "/motos/ropa/chalecos-reflectivos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "chaleco reflectivo",
         "chaleco"
@@ -5443,6 +6417,8 @@
       "path": "/motos/chasis-y-carroceria",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5450,6 +6426,8 @@
       "path": "/motos/chasis-y-carroceria/carenajes-y-plasticos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "carenaje",
         "plásticos",
@@ -5465,6 +6443,8 @@
       "path": "/motos/chasis-y-carroceria/tanques-de-gasolina-y-tapas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "tanque",
         "tanque de gasolina",
@@ -5477,6 +6457,8 @@
       "path": "/motos/chasis-y-carroceria/sillines",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "sillín",
         "silla",
@@ -5489,6 +6471,8 @@
       "path": "/motos/chasis-y-carroceria/colines-y-parrillas-traseras",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "colín",
         "porta maleta"
@@ -5499,6 +6483,8 @@
       "path": "/motos/chasis-y-carroceria/guardabarros",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "guardafango",
         "fender",
@@ -5514,6 +6500,8 @@
       "path": "/motos/chasis-y-carroceria/portaplacas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "portaplaca",
         "porta placa",
@@ -5525,6 +6513,8 @@
       "path": "/motos/chasis-y-carroceria/patas-y-caballetes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pata",
         "pata lateral",
@@ -5539,6 +6529,8 @@
       "path": "/motos/chasis-y-carroceria/pedalines-y-soportes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pedalín",
         "pedalines",
@@ -5554,6 +6546,8 @@
       "path": "/motos/chasis-y-carroceria/pedales-de-cambio-y-freno",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "pedal de cambios",
         "pedal de freno",
@@ -5565,6 +6559,8 @@
       "path": "/motos/chasis-y-carroceria/chasis-y-subchasis",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "chasis",
         "subchasis",
@@ -5576,6 +6572,8 @@
       "path": "/motos/chasis-y-carroceria/cajas-de-filtro-de-aire",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "caja de filtro",
         "caja de aire",
@@ -5587,6 +6585,8 @@
       "path": "/motos/chasis-y-carroceria/agarraderas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "agarradera",
         "agarradera trasera",
@@ -5598,6 +6598,8 @@
       "path": "/motos/chasis-y-carroceria/ejes-de-rueda",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "eje de rueda",
         "eje delantero",
@@ -5609,6 +6611,8 @@
       "path": "/motos/suspension-y-direccion",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5616,6 +6620,8 @@
       "path": "/motos/suspension-y-direccion/amortiguadores-traseros",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "amortiguador",
         "amortiguador de moto",
@@ -5628,6 +6634,8 @@
       "path": "/motos/suspension-y-direccion/barras-telescopicas-botellas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "botellas",
         "telescópicos",
@@ -5640,6 +6648,8 @@
       "path": "/motos/suspension-y-direccion/kits-de-barras-retenedores-y-guardapolvos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "retenedores de barra",
         "guardapolvos",
@@ -5656,6 +6666,8 @@
       "path": "/motos/suspension-y-direccion/resortes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "resorte",
         "espiral",
@@ -5667,6 +6679,8 @@
       "path": "/motos/suspension-y-direccion/tijeras-basculantes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "basculante",
         "tijera trasera",
@@ -5678,6 +6692,8 @@
       "path": "/motos/suspension-y-direccion/rodamientos-de-tijera",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rodamiento de tijera",
         "balinera de basculante",
@@ -5689,6 +6705,8 @@
       "path": "/motos/suspension-y-direccion/cunas-de-direccion",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "rodamientos de dirección",
         "balineras de dirección",
@@ -5703,6 +6721,8 @@
       "path": "/motos/suspension-y-direccion/bujes",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "buje",
         "bujes de suspensión",
@@ -5715,6 +6735,8 @@
       "path": "/motos/suspension-y-direccion/manubrios",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "manillar",
         "timón",
@@ -5732,6 +6754,8 @@
       "path": "/motos/suspension-y-direccion/punos-y-contrapesos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "puños",
         "manillas",
@@ -5744,6 +6768,8 @@
       "path": "/motos/suspension-y-direccion/tes-y-triples-de-direccion",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "estricta",
+      "atributo": null,
       "sinonimos": [
         "triple",
         "yugo",
@@ -5755,6 +6781,8 @@
       "path": "/motos/tecnologia-y-seguridad",
       "seccion": "Motos",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5762,6 +6790,8 @@
       "path": "/motos/tecnologia-y-seguridad/rastreo-gps",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "gps para moto"
       ]
@@ -5771,6 +6801,8 @@
       "path": "/motos/tecnologia-y-seguridad/alarmas",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "alarma de moto"
       ]
@@ -5780,6 +6812,8 @@
       "path": "/motos/tecnologia-y-seguridad/candados-y-bloqueos",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "candados, guayas y alarmas",
         "candado de moto",
@@ -5793,6 +6827,8 @@
       "path": "/motos/tecnologia-y-seguridad/camaras",
       "seccion": "Motos",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cámara para moto",
         "cámara de seguridad",
@@ -5804,6 +6840,8 @@
       "path": "/herramientas/herramientas-manuales",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5811,6 +6849,8 @@
       "path": "/herramientas/herramientas-manuales/llaves-y-copas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "dados",
         "juego de copas",
@@ -5824,6 +6864,8 @@
       "path": "/herramientas/herramientas-manuales/llaves-de-cruz",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "llave de cruz",
         "llave de rueda",
@@ -5835,6 +6877,8 @@
       "path": "/herramientas/herramientas-manuales/torquimetros",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "torquímetro",
         "llave de torque",
@@ -5846,6 +6890,8 @@
       "path": "/herramientas/herramientas-manuales/destornilladores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "destornillador",
         "desarmador",
@@ -5857,6 +6903,8 @@
       "path": "/herramientas/herramientas-manuales/alicates-y-pinzas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "alicate",
         "pinza",
@@ -5869,6 +6917,8 @@
       "path": "/herramientas/herramientas-manuales/martillos-y-cinceles",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "martillo",
         "cincel",
@@ -5880,6 +6930,8 @@
       "path": "/herramientas/herramientas-manuales/extractores-y-herramientas-especiales",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "extractor",
         "extractor de poleas",
@@ -5892,6 +6944,8 @@
       "path": "/herramientas/herramientas-manuales/llaves-para-filtros",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "llave de filtro",
         "extractor de filtro"
@@ -5902,6 +6956,8 @@
       "path": "/herramientas/herramientas-manuales/kits-de-herramientas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "caja de herramientas",
         "set de herramientas",
@@ -5913,6 +6969,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5920,6 +6978,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/taladros",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "taladro",
         "taladro inalámbrico"
@@ -5930,6 +6990,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/esmeriles-y-lijadoras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "esmeril",
         "moto tool",
@@ -5943,6 +7005,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pistola de impacto",
         "llave de impacto"
@@ -5953,6 +7017,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/herramientas-neumaticas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "herramienta neumática",
         "pistola neumática",
@@ -5964,6 +7030,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/compresores-de-aire",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "compresor",
         "compresor de aire",
@@ -5975,6 +7043,8 @@
       "path": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-calor-y-cautines",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pistola de calor",
         "cautín",
@@ -5986,6 +7056,8 @@
       "path": "/herramientas/equipos-de-taller",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -5993,6 +7065,8 @@
       "path": "/herramientas/equipos-de-taller/gatos-y-torres",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "gato",
         "gato hidráulico",
@@ -6006,6 +7080,8 @@
       "path": "/herramientas/equipos-de-taller/elevadores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "elevador",
         "elevador de carro",
@@ -6018,6 +7094,8 @@
       "path": "/herramientas/equipos-de-taller/camillas-de-mecanico",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "camilla",
         "camilla de mecánico"
@@ -6028,6 +7106,8 @@
       "path": "/herramientas/equipos-de-taller/prensas-hidraulicas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "prensa hidráulica"
       ]
@@ -6037,6 +7117,8 @@
       "path": "/herramientas/equipos-de-taller/gruas-de-motor",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "grúa de motor",
         "pluma"
@@ -6047,6 +7129,8 @@
       "path": "/herramientas/equipos-de-taller/winches",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "winche",
         "malacate",
@@ -6058,6 +7142,8 @@
       "path": "/herramientas/equipos-de-taller/cargadores-y-arrancadores-de-bateria",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cargador de batería",
         "arrancador",
@@ -6071,6 +7157,8 @@
       "path": "/herramientas/equipos-de-taller/infladores-y-manometros-de-llanta",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "inflador",
         "compresor portátil",
@@ -6087,6 +7175,8 @@
       "path": "/herramientas/equipos-de-taller/montallantas-y-despinche",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "montallantas",
         "kit de despinche",
@@ -6098,6 +7188,8 @@
       "path": "/herramientas/diagnostico-y-medicion",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -6105,6 +7197,8 @@
       "path": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "escáner",
         "scanner",
@@ -6119,6 +7213,8 @@
       "path": "/herramientas/diagnostico-y-medicion/multimetros-y-probadores-electricos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "multímetro",
         "tester",
@@ -6130,6 +7226,8 @@
       "path": "/herramientas/diagnostico-y-medicion/calibradores-y-micrometros",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "calibrador",
         "vernier",
@@ -6144,6 +7242,8 @@
       "path": "/herramientas/diagnostico-y-medicion/lamparas-de-tiempo",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "lámpara estroboscópica",
         "lámpara de tiempo"
@@ -6154,6 +7254,8 @@
       "path": "/herramientas/diagnostico-y-medicion/compresimetros",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "compresímetro",
         "medidor de compresión",
@@ -6165,6 +7267,8 @@
       "path": "/herramientas/cuidado-y-limpieza",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -6172,6 +7276,8 @@
       "path": "/herramientas/cuidado-y-limpieza/shampoo",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "shampoo para carro",
         "jabón para carro",
@@ -6185,6 +7291,8 @@
       "path": "/herramientas/cuidado-y-limpieza/desengrasantes",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "desengrasante"
       ]
@@ -6194,6 +7302,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiavidrios",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiavidrios",
         "limpiador de vidrios",
@@ -6205,6 +7315,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiadores-interiores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador interior",
         "limpiador de tablero",
@@ -6216,6 +7328,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-tapiceria-y-cuero",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de cuero",
         "limpiador de tapicería",
@@ -6227,6 +7341,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-motor",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de motor",
         "desengrasante de motor",
@@ -6238,6 +7354,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-rines",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de rines",
         "limpia rines",
@@ -6249,6 +7367,8 @@
       "path": "/herramientas/cuidado-y-limpieza/siliconas-y-renovadores-de-llantas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "silicona para carro",
         "silicona para llantas",
@@ -6262,6 +7382,8 @@
       "path": "/herramientas/cuidado-y-limpieza/ceras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cera",
         "cera para carro",
@@ -6276,6 +7398,8 @@
       "path": "/herramientas/cuidado-y-limpieza/selladores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "sellador",
         "sellante",
@@ -6287,6 +7411,8 @@
       "path": "/herramientas/cuidado-y-limpieza/coatings",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "coating",
         "recubrimiento cerámico",
@@ -6298,6 +7424,8 @@
       "path": "/herramientas/cuidado-y-limpieza/hidrofobicos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "hidrofóbico",
         "repelente de agua",
@@ -6309,6 +7437,8 @@
       "path": "/herramientas/cuidado-y-limpieza/protectores-uv",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "protector uv",
         "protector solar de tablero",
@@ -6320,6 +7450,8 @@
       "path": "/herramientas/cuidado-y-limpieza/quita-rayones-y-restauradores-de-pintura",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "quita rayones",
         "restaurador de pintura",
@@ -6331,6 +7463,8 @@
       "path": "/herramientas/cuidado-y-limpieza/microfibras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "microfibra",
         "paños de microfibra",
@@ -6344,6 +7478,8 @@
       "path": "/herramientas/cuidado-y-limpieza/cepillos-y-aplicadores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cepillo",
         "aplicador",
@@ -6355,6 +7491,8 @@
       "path": "/herramientas/cuidado-y-limpieza/pulimentos-y-compuestos-rubbing",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "rubbing",
         "pulimento",
@@ -6367,6 +7505,8 @@
       "path": "/herramientas/cuidado-y-limpieza/pads",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pad",
         "pad de pulido",
@@ -6379,6 +7519,8 @@
       "path": "/herramientas/cuidado-y-limpieza/abrillantadores",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "abrillantador",
         "brillo",
@@ -6390,6 +7532,8 @@
       "path": "/herramientas/cuidado-y-limpieza/ambientadores-y-perfumes",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "ambientador",
         "perfume para carro",
@@ -6405,6 +7549,8 @@
       "path": "/herramientas/cuidado-y-limpieza/anticorrosivos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "anticorrosivo",
         "antioxidante",
@@ -6416,6 +7562,8 @@
       "path": "/herramientas/cuidado-y-limpieza/kits-de-limpieza",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "kit de limpieza",
         "kit de lavado",
@@ -6427,6 +7575,8 @@
       "path": "/herramientas/cuidado-y-limpieza/limpiadores-de-cadena",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de cadena",
         "desengrasante de cadena",
@@ -6438,6 +7588,8 @@
       "path": "/herramientas/consumibles-de-taller",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": []
     },
     {
@@ -6445,6 +7597,8 @@
       "path": "/herramientas/consumibles-de-taller/guantes",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "guantes de nitrilo",
         "guantes de taller",
@@ -6456,6 +7610,8 @@
       "path": "/herramientas/consumibles-de-taller/panos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "paño",
         "trapo",
@@ -6468,6 +7624,8 @@
       "path": "/herramientas/consumibles-de-taller/cintas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "cinta",
         "cinta aislante",
@@ -6480,6 +7638,8 @@
       "path": "/herramientas/consumibles-de-taller/abrazaderas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "abrazadera",
         "clamp",
@@ -6491,6 +7651,8 @@
       "path": "/herramientas/consumibles-de-taller/tornilleria",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "tornillo",
         "tuerca",
@@ -6503,6 +7665,8 @@
       "path": "/herramientas/consumibles-de-taller/bridas",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "brida",
         "amarre plástico",
@@ -6515,6 +7679,8 @@
       "path": "/herramientas/consumibles-de-taller/siliconas-y-pegantes",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "silicona",
         "pegante",
@@ -6527,6 +7693,8 @@
       "path": "/herramientas/consumibles-de-taller/lubricantes-tecnicos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "lubricante técnico",
         "wd40",
@@ -6539,6 +7707,8 @@
       "path": "/herramientas/consumibles-de-taller/limpiadores-tecnicos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "limpiador de contactos",
         "limpiador de frenos",
@@ -6550,6 +7720,8 @@
       "path": "/herramientas/consumibles-de-taller/aerosoles",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "aerosol",
         "spray"
@@ -6560,6 +7732,8 @@
       "path": "/herramientas/consumibles-de-taller/empaques-genericos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "empaque",
         "empaquetadura",
@@ -6572,6 +7746,8 @@
       "path": "/herramientas/consumibles-de-taller/terminales-electricos",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "terminal eléctrico",
         "terminal de batería",
@@ -6584,6 +7760,8 @@
       "path": "/herramientas/consumibles-de-taller/pinturas-y-retoques",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "pintura para carro",
         "retoque",
@@ -6597,6 +7775,8 @@
       "path": "/herramientas/equipos-de-lavado-y-pulido",
       "seccion": "Herramientas",
       "nivel": "macro",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "equipos de limpieza",
         "lavado",
@@ -6608,6 +7788,8 @@
       "path": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "hidrolavadora",
         "lavadora a presión",
@@ -6619,6 +7801,8 @@
       "path": "/herramientas/equipos-de-lavado-y-pulido/polichadoras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "polichadora",
         "pulidora",
@@ -6633,6 +7817,8 @@
       "path": "/herramientas/equipos-de-lavado-y-pulido/aspiradoras",
       "seccion": "Herramientas",
       "nivel": "hoja",
+      "compatibilidad": "universal",
+      "atributo": null,
       "sinonimos": [
         "aspiradora para carro",
         "aspiradora portátil",

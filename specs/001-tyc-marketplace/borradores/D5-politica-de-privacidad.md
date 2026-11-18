@@ -56,7 +56,7 @@ Aplicamos medidas técnicas y administrativas para proteger tus datos. El feedba
 
 ## 9. Registro Nacional de Bases de Datos
 
-La obligación de inscribir las bases de datos en el Registro Nacional de Bases de Datos de la Superintendencia de Industria y Comercio recae en las sociedades y entidades sin ánimo de lucro con activos totales por encima del umbral que fija el Decreto 090 de 2018; las micro y pequeñas empresas y las personas naturales no están obligadas. [A CONFIRMAR POR ABOGADO] Umbral vigente, si [RAZÓN SOCIAL] está obligada y, en ese caso, el número de registro que debe figurar aquí.
+La obligación de inscribir las bases de datos en el Registro Nacional de Bases de Datos de la Superintendencia de Industria y Comercio recae en las sociedades y entidades sin ánimo de lucro con activos totales superiores a 100.000 Unidades de Valor Tributario (UVT) y en las personas jurídicas de naturaleza pública (Decreto 090 de 2018); las demás sociedades y las personas naturales no están obligadas. [A CONFIRMAR POR ABOGADO] Si [RAZÓN SOCIAL] supera ese umbral (en 2026, con la UVT en $52.374, son $5.237.400.000 en activos totales) y, en ese caso, el número de registro que debe figurar aquí.
 
 ## 10. Cambios en esta política
 

@@ -4,7 +4,7 @@ Versión 2026.11.18 · Actualizado: 2026-11-18
 
 Aquí explicamos tus derechos cuando quieres devolver un producto, cuando un pago no corresponde a lo que compraste y cuando un producto falla. Estas reglas no limitan los derechos que la ley te da como consumidor.
 
-[A CONFIRMAR POR ABOGADO] Los artículos 47 y 51 de la Ley 1480 de 2011 se contrastaron con el texto vigente (Función Pública, con las modificaciones de la Ley 2439 de 2024). Quedan por confirmar el Decreto 587 de 2016 y los artículos 7 a 10.
+[A CONFIRMAR POR ABOGADO] Los artículos 47 y 51 de la Ley 1480 de 2011 se contrastaron con el texto vigente (Función Pública, con las modificaciones de la Ley 2439 de 2024). El Decreto 587 de 2016 (reversión del pago) también se leyó en Función Pública. Quedan por confirmar los artículos 7 a 10.
 
 ## 1. Derecho de retracto
 
@@ -22,7 +22,7 @@ La ley solo permite las excepciones que ella misma establece (artículo 47), por
 
 Si pagaste con tarjeta u otro medio electrónico, puedes pedir la **reversión del pago** en estos casos: fraude, operación que no solicitaste, producto que no recibiste, producto diferente al pedido o defectuoso (artículo 51 de la Ley 1480 de 2011 y Decreto 587 de 2016).
 
-Tienes **5 días hábiles** desde que supiste del hecho para presentar tu queja a Repuestox y avisar a quien emitió tu medio de pago. Una vez pedida, quienes participan en el proceso de pago tienen **15 días hábiles** para hacerla efectiva. Esto aplica cuando el vendedor y el emisor del medio de pago están en Colombia.
+Tienes **5 días hábiles** desde que supiste del hecho para presentar tu queja a Repuestox y avisar a quien emitió tu medio de pago. Una vez pedida, quienes participan en el proceso de pago tienen **15 días hábiles** para hacerla efectiva. Si el producto ya lo recibiste, debes dejarlo a disposición de Repuestox para que lo recoja, en las mismas condiciones y en el mismo lugar en que lo recibiste. Esto aplica cuando el vendedor y el emisor del medio de pago están en Colombia.
 
 [A CONFIRMAR POR ABOGADO] Quién tramita la reversión con [PASARELA DE PAGO] y cómo se comparte con el seller.
 

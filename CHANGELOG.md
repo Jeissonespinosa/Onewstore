@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Spec 002 (feedback): calificación de la compra con 5 estrellas en la confirmación del pedido (`purchase-rating`) y botón flotante de feedback con modal (`feedback-button`, dentro del header). Servicio propio `onewstore.feedback-service` que guarda en Master Data con campos privados. El correo es siempre el que escribe la persona, precargado con el de la cuenta si hay sesión.
+
 ## [5.2.0] - 2024-09-05
 
 ### Changed

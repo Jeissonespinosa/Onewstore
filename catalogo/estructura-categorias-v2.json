@@ -2798,8 +2798,6 @@
             "Llantas de van, camión y transporte",
             "Llantas OTR e industriales"
           ],
-          "vitrina": "filtros",
-          "filtro": "Tipo de vehículo",
           "catalogo": true
         },
         {
@@ -2819,7 +2817,8 @@
             "Separadores y espaciadores de rin"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Lubricantes y mantenimiento",
@@ -2839,7 +2838,8 @@
             "Limpiadores de sistemas"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Filtros",
@@ -2854,7 +2854,8 @@
             "Filtros de transmisión"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Baterías",
@@ -2868,7 +2869,8 @@
             "Bornes y cables de batería"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Frenos",
@@ -2979,7 +2981,8 @@
             "Pitos"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Iluminación",
@@ -3365,7 +3368,8 @@
             "Protectores de rin"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Lubricantes y mantenimiento",
@@ -3384,7 +3388,8 @@
             "Aditivos y grasas"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Filtros",
@@ -3397,7 +3402,8 @@
             "Filtros de combustible"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Motor y transmisión",
@@ -3517,7 +3523,8 @@
             "Bornes y cables de batería"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Frenos",

@@ -139,8 +139,14 @@ def build_tree():
         for m in tree[dept]:
             m['slug'] = slugify(m['nombre'])
             mpath = '/%s/%s' % (sec, m['slug'])
+            # "catalogo": la categoria YA existe en VTEX, asi que la sirve VTEX
+            # y el generador no debe crear una ruta propia que la sombree (si lo
+            # hace, la pagina sale vacia aunque haya productos). Se hereda hacia
+            # abajo: si la macro existe en VTEX, sus subcategorias y hojas tambien.
+            cat_macro = bool(m.get('catalogo'))
             macro = dict(nombre=m['nombre'], slug=m['slug'], path=mpath, kind='macro',
-                         children=[], ancestors=[dept], section=sec)
+                         children=[], ancestors=[dept], section=sec,
+                         catalogo=cat_macro)
             nodes.append(macro)
             rails[sec].append(macro)
             for s in m['subs']:
@@ -149,7 +155,8 @@ def build_tree():
                     for t in s['tipos']:
                         url = '%s/%s' % (mpath, slugify(t))
                         leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                    children=[], ancestors=[dept, m['nombre']], section=sec)
+                                    children=[], ancestors=[dept, m['nombre']], section=sec,
+                                    catalogo=cat_macro)
                         macro['children'].append(leaf)
                         nodes.append(leaf)
                     continue
@@ -158,7 +165,7 @@ def build_tree():
                 sub = dict(nombre=s['nombre'], slug=s['slug'], path=spath, kind='sub',
                            children=[], ancestors=[dept, m['nombre']], section=sec,
                            vitrina=s.get('vitrina'), filtro=s.get('filtro'), valores=[],
-                           catalogo=bool(s.get('catalogo')))
+                           catalogo=cat_macro or bool(s.get('catalogo')))
                 macro['children'].append(sub)
                 nodes.append(sub)
                 if s.get('vitrina') == 'filtros':
@@ -170,7 +177,8 @@ def build_tree():
                 for t in s['tipos']:
                     url = '%s/%s' % (spath, slugify(t))
                     leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                children=[], ancestors=[dept, m['nombre'], s['nombre']], section=sec)
+                                children=[], ancestors=[dept, m['nombre'], s['nombre']],
+                                section=sec, catalogo=sub['catalogo'])
                     sub['children'].append(leaf)
                     nodes.append(leaf)
     for n in nodes:

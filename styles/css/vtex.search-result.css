@@ -302,3 +302,39 @@
     white-space: nowrap;
   }
 }
+
+/* ============================================================
+   FILTROS QUE NO DEBEN VERSE EN EL PANEL
+
+   La prop hiddenFacets del filter-navigator no sirve con
+   Intelligent Search: ahi TODOS los facets llegan con
+   type "TEXT", asi que specificationFilters.hiddenFilters
+   nunca reconoce a "Marca vehiculo", "Modelo" ni "Año" como
+   especificaciones y los muestra igual. Y hiddenFacets
+   .categories solo tapa category-1, 2 y 3: del cuarto nivel
+   en adelante VTEX ni siquiera traduce el nombre y el cliente
+   veia un filtro llamado "Category 4".
+
+   El componente si expone una clase por facet
+   (filter__container--<clave del facet>), que es por donde se
+   resuelve. La categoria sigue existiendo y su pagina sigue
+   indexando: lo unico que se oculta es el filtro repetido.
+   ============================================================ */
+
+/* Niveles de categoria 4 en adelante: sin nombre traducido. */
+.filter__container--category-4,
+.filter__container--category-5,
+.filter__container--category-6,
+.filter__container--category-7,
+.filter__container--category-8 {
+  display: none;
+}
+
+/* Compatibilidad de vehiculo: ya la cubre el selector de
+   arriba, en cascada marca -> modelo -> año. Repetirla como
+   tres listas sueltas confunde y no respeta la cascada. */
+.filter__container--marca-vehiculo,
+.filter__container--modelo,
+.filter__container--ano {
+  display: none;
+}

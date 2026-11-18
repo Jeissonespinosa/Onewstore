@@ -69,7 +69,6 @@ coilovers y suspensión deportiva,coilover,suspensión deportiva,suspensión reg
 ballestas,muelles de hoja,ballesta,hojas de resorte,elásticos,paquete de ballestas;true
 bobinas,coil;true
 módulos y distribuidores de encendido,distribuidor,tapa de distribuidor;true
-bujías,bujía,spark plug,chispa,bujías iridium,bujías platino;true
 cables de alta,cables de bujía,cables de encendido,juego de cables;true
 bujías de precalentamiento,bujía de precalentamiento,bujías diésel,bujía incandescente,calentadores;true
 kits de sincronización,afinación,kit de sincronización,sincronización,tune up,kit de mantenimiento,kits de afinación (sincronización);true
@@ -108,8 +107,7 @@ cigüeñales,cigüeñal;true
 culatas,culata,cabezote,cabeza de motor;true
 válvulas y guías,guías de válvula,válvula de admisión,válvula de escape,válvula de motor,guía de válvula;true
 camisas,camisas de cilindro,cilindros;true
-empaques y retenedores de motor,juntas,retenedores,empaques y sellos de motor,empaques,sellos de motor;true
-retenedores de motor,retenedor,retén,sello de cigüeñal,retenedor de árbol de levas;true
+empaques y retenedores de motor,juntas,retenedores,empaques y sellos de motor,empaques,sellos de motor,retén,sello de cigüeñal,retenedor de árbol de levas;true
 bombas de aceite,bomba de aceite;true
 soportes de motor,soporte de motor,base de motor,cojín de motor;true
 motores completos,motor completo,motor usado,motor reconstruido,motor 3/4;true
@@ -145,3 +143,5 @@ carburadores,carburador,carburador weber,kit de carburador;true
 guayas de acelerador,cable de acelerador,chicote de acelerador;true
 tanques de gasolina,tanque de gasolina,tanque de combustible,depósito de combustible;true
 bombas de inyección diésel,bomba de inyección,bomba diésel,bomba de acpm,bomba lineal,bomba rotativa;true
+filtros separadores de agua,separador de agua,trampa de agua,filtro racor;true
+kits de clutch,kit de embrague,kit clutch,embrague,clutch;true

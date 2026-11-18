@@ -139,8 +139,14 @@ def build_tree():
         for m in tree[dept]:
             m['slug'] = slugify(m['nombre'])
             mpath = '/%s/%s' % (sec, m['slug'])
+            # "catalogo": la categoria YA existe en VTEX, asi que la sirve VTEX
+            # y el generador no debe crear una ruta propia que la sombree (si lo
+            # hace, la pagina sale vacia aunque haya productos). Se hereda hacia
+            # abajo: si la macro existe en VTEX, sus subcategorias y hojas tambien.
+            cat_macro = bool(m.get('catalogo'))
             macro = dict(nombre=m['nombre'], slug=m['slug'], path=mpath, kind='macro',
-                         children=[], ancestors=[dept], section=sec)
+                         children=[], ancestors=[dept], section=sec,
+                         catalogo=cat_macro)
             nodes.append(macro)
             rails[sec].append(macro)
             for s in m['subs']:
@@ -149,7 +155,8 @@ def build_tree():
                     for t in s['tipos']:
                         url = '%s/%s' % (mpath, slugify(t))
                         leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                    children=[], ancestors=[dept, m['nombre']], section=sec)
+                                    children=[], ancestors=[dept, m['nombre']], section=sec,
+                                    catalogo=cat_macro)
                         macro['children'].append(leaf)
                         nodes.append(leaf)
                     continue
@@ -158,7 +165,7 @@ def build_tree():
                 sub = dict(nombre=s['nombre'], slug=s['slug'], path=spath, kind='sub',
                            children=[], ancestors=[dept, m['nombre']], section=sec,
                            vitrina=s.get('vitrina'), filtro=s.get('filtro'), valores=[],
-                           catalogo=bool(s.get('catalogo')))
+                           catalogo=cat_macro or bool(s.get('catalogo')))
                 macro['children'].append(sub)
                 nodes.append(sub)
                 if s.get('vitrina') == 'filtros':
@@ -170,7 +177,8 @@ def build_tree():
                 for t in s['tipos']:
                     url = '%s/%s' % (spath, slugify(t))
                     leaf = dict(nombre=t, slug=slugify(t), path=url, kind='hoja',
-                                children=[], ancestors=[dept, m['nombre'], s['nombre']], section=sec)
+                                children=[], ancestors=[dept, m['nombre'], s['nombre']],
+                                section=sec, catalogo=sub['catalogo'])
                     sub['children'].append(leaf)
                     nodes.append(leaf)
     for n in nodes:
@@ -347,11 +355,16 @@ def dump(path, header, data):
     out += [('   ' + line).rstrip() for line in header.strip('\n').split('\n')]
     out.append('   ' + '=' * 60 + ' */')
     text = '\n'.join(out) + '\n' + json.dumps(data, ensure_ascii=False, indent=2) + '\n'
+    # Se prepara SIEMPRE, incluso en dry-run: check_links valida contra lo
+    # pendiente, y si en seco no hubiera nada pendiente compararia las rutas
+    # nuevas contra los archivos viejos del disco, reportando como rotos los
+    # enlaces a las hojas que justamente se acaban de eliminar. En dry-run
+    # nunca se llama a commit(), asi que preparar no escribe nada.
+    stage(path, text)
     if DRY_RUN:
         print('  [dry-run] %-36s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
-        return
-    stage(path, text)
-    print('  %-46s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
+    else:
+        print('  %-46s %5d bloques' % (os.path.relpath(path, ROOT), len(data)))
 
 
 GEN_NOTE = 'GENERADO por scripts/gen-categorias.py — no editar a mano;\ncambia catalogo/estructura-categorias-v2.* y vuelve a correrlo.'
@@ -462,6 +475,80 @@ def check_separadores(tree):
     return sorted(set(bad))
 
 
+
+# Pares de hojas donde una contiene el nombre de la otra y SON productos
+# distintos: revisados a mano, no son duplicados. Cualquier par que no este
+# aqui frena la escritura.
+PARES_REVISADOS = {
+    ('Radiadores de aceite', 'Radiadores'),                    # enfria aceite, no refrigerante
+    ('Rampas de inyectores', 'Inyectores'),                    # el riel vs el inyector
+    ('Empaques de puertas y molduras (burletes)', 'Puertas'),  # el burlete vs la lamina
+}
+
+
+def check_hojas_contenidas(tree):
+    """Dos hojas de la misma subcategoria donde una contiene el nombre de la
+    otra suelen ser la misma cosa nombrada dos veces.
+
+    Es el chequeo que faltaba: "Retenedores de motor" convivio con "Empaques y
+    retenedores de motor" en Bloque y culata, con sinonimos solapados, y nadie
+    lo noto. En VTEX una categoria no se puede borrar, asi que el duplicado
+    seria permanente y los sellers publicarian en cualquiera de las dos.
+
+    Compara por palabra completa, no por subcadena, para no marcar
+    "compuertas" como si contuviera "puertas". Los pares revisados y
+    aceptados van en PARES_REVISADOS.
+    """
+    envuelto = lambda nombre: ' %s ' % norm(nombre)
+    bad = []
+    for seccion in [k for k in tree if not k.startswith('_')]:
+        for macro in tree[seccion]:
+            for sub in macro.get('subs', []):
+                donde = '%s > %s > %s' % (seccion, macro.get('nombre'), sub.get('nombre'))
+                hojas = [t.get('nombre') if isinstance(t, dict) else t
+                         for t in sub.get('tipos', [])]
+                hojas = [h for h in hojas if h]
+                for larga in hojas:
+                    for corta in hojas:
+                        if larga == corta or (larga, corta) in PARES_REVISADOS:
+                            continue
+                        if envuelto(corta) in envuelto(larga):
+                            bad.append((donde, larga, corta))
+    if bad:
+        print('\n  HOJAS DUPLICADAS (una contiene el nombre de la otra):')
+        for donde, larga, corta in sorted(set(bad)):
+            print('   %-44s %r contiene %r' % (donde, larga, corta))
+        print('   Fusionalas, o agrega el par a PARES_REVISADOS si son distintas.')
+    else:
+        print('  hojas duplicadas: ninguna')
+    return sorted(set(bad))
+
+
+def check_sinonimos_vacios(tree):
+    """Una lista de sinonimos vacia no sirve y esconde la intencion: o el nodo
+    tiene terminos reales, o no debe tener la clave."""
+    bloques = tree.get('_sinonimos') or {}
+    if not isinstance(bloques, dict):
+        return []
+    bad = []
+    for bloque, grupos in bloques.items():
+        # El esquema por seccion es {bloque: {nodo: [terminos]}}, pero el
+        # formato viejo era plano {nodo: [terminos]}: con ese, el "grupo" es
+        # la lista de terminos y no hay nada que revisar.
+        if not isinstance(grupos, dict):
+            continue
+        for nombre, terminos in grupos.items():
+            if not terminos:
+                bad.append((bloque, nombre))
+    if bad:
+        print('\n  SINONIMOS VACIOS (llena la lista o quita la clave):')
+        for bloque, nombre in sorted(bad):
+            print('   [%s] %s' % (bloque, nombre))
+    else:
+        print('  sinonimos vacios: ninguno')
+    return sorted(bad)
+
+
 def check_links(routes, pending=None):
     """Revisa TODOS los enlaces internos del theme (no solo los de las tres
     secciones) contra las rutas que van a quedar. Devuelve los rotos.
@@ -470,6 +557,15 @@ def check_links(routes, pending=None):
     escribir, no lo que quedo de la corrida anterior."""
     import glob
     pending = pending or {}
+    # Las rutas tambien se regeneran: si routes.json esta pendiente hay que
+    # validar contra ESE, no contra el que quedo de la corrida anterior. Sin
+    # esto, toda hoja nueva se reporta como enlace roto (su ruta todavia no
+    # existe en disco) y toda hoja eliminada pasa desapercibida.
+    if ROUTES in pending:
+        try:
+            routes = json.loads(pending[ROUTES])
+        except ValueError:
+            pass
     paths = valid_paths(routes)
     bad = []
     files = sorted(glob.glob(os.path.join(ROOT, 'store', 'blocks', '**', '*.json*'), recursive=True))
@@ -900,10 +996,10 @@ def build_and_write(NODES, RAILS, routes):
                              '/herramientas que el arbol no regenera. Revisa '
                              'catalogo/rutas-eliminadas.txt y vuelve a correr con --force '
                              'si de verdad quieres borrarlas.')
+    stage(ROUTES, json.dumps(kept, ensure_ascii=False, indent=2) + '\n')
     if DRY_RUN:
         print('  [dry-run] %-36s %5d rutas' % ('store/routes.json', len(kept)))
     else:
-        stage(ROUTES, json.dumps(kept, ensure_ascii=False, indent=2) + '\n')
         print('  %-46s %5d rutas' % ('store/routes.json', len(kept)))
 
     # --- resumen ---------------------------------------------------------------
@@ -948,7 +1044,8 @@ def main(argv=None):
     PENDING.clear()
 
     tree, routes = load_inputs()           # valida TODO antes de escribir
-    bad_sep = check_separadores(tree)
+    bad_nombres = (check_separadores(tree) + check_hojas_contenidas(tree)
+                   + check_sinonimos_vacios(tree))
     try:
         nodes, rails = build_tree()
     except ValueError as exc:
@@ -958,12 +1055,13 @@ def main(argv=None):
 
     if DRY_RUN:
         print('\n--dry-run: no se escribio nada.')
-        return 1 if ((bad_links or bad_sep) and not FORCE) else 0
-    if bad_sep and not FORCE:
-        raise SystemExit('ERROR: %d nombre(s) llevan " - " o " / ". VTEX los corta al '
-                         'volverlos valor de filtro y el cliente llega a una pagina '
-                         'vacia. Corrigelos (o vuelve a correr con --force). No se '
-                         'escribio nada.' % len(bad_sep))
+        return 1 if ((bad_links or bad_nombres) and not FORCE) else 0
+    if bad_nombres and not FORCE:
+        raise SystemExit('ERROR: %d problema(s) en los nombres del arbol (separadores '
+                         '" - " o " / ", hojas duplicadas o sinonimos vacios). En VTEX '
+                         'una categoria no se puede borrar: corrigelos antes de crearlas '
+                         '(o vuelve a correr con --force). No se escribio nada.'
+                         % len(bad_nombres))
     if bad_links and not FORCE:
         raise SystemExit('ERROR: %d enlace(s) del theme apuntan a rutas que no existen. '
                          'Corrigelos (o vuelve a correr con --force). No se escribio nada.'

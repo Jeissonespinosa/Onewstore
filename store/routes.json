@@ -38,90 +38,6 @@
   "store.custom#landing-herramientas": {
     "path": "/herramientas"
   },
-  "store.custom#carros-llantas-y-rines": {
-    "path": "/carros/llantas-y-rines"
-  },
-  "store.custom#carros-llantas-y-rines-rines": {
-    "path": "/carros/llantas-y-rines/rines"
-  },
-  "store.custom#carros-llantas-y-rines-rines-rines-de-acero": {
-    "path": "/carros/llantas-y-rines/rines/rines-de-acero"
-  },
-  "store.custom#carros-llantas-y-rines-rines-rines-de-aluminio": {
-    "path": "/carros/llantas-y-rines/rines/rines-de-aluminio"
-  },
-  "store.custom#carros-llantas-y-rines-accesorios-de-rueda": {
-    "path": "/carros/llantas-y-rines/accesorios-de-rueda"
-  },
-  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-copas-tapacubos": {
-    "path": "/carros/llantas-y-rines/accesorios-de-rueda/copas-tapacubos"
-  },
-  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-tuercas-y-pernos-de-rueda": {
-    "path": "/carros/llantas-y-rines/accesorios-de-rueda/tuercas-y-pernos-de-rueda"
-  },
-  "store.custom#carros-llantas-y-rines-accesorios-de-rueda-separadores-y-espaciadores-de-rin": {
-    "path": "/carros/llantas-y-rines/accesorios-de-rueda/separadores-y-espaciadores-de-rin"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento": {
-    "path": "/carros/lubricantes-y-mantenimiento"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-aceite-de-motor": {
-    "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-aceite-de-transmision": {
-    "path": "/carros/lubricantes-y-mantenimiento/aceite-de-transmision"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-aceite-diferencial": {
-    "path": "/carros/lubricantes-y-mantenimiento/aceite-diferencial"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-refrigerante-y-anticongelante": {
-    "path": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-liquido-de-frenos": {
-    "path": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-liquido-de-direccion-hidraulica": {
-    "path": "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-aditivos": {
-    "path": "/carros/lubricantes-y-mantenimiento/aditivos"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-grasas": {
-    "path": "/carros/lubricantes-y-mantenimiento/grasas"
-  },
-  "store.custom#carros-lubricantes-y-mantenimiento-limpiadores-de-sistemas": {
-    "path": "/carros/lubricantes-y-mantenimiento/limpiadores-de-sistemas"
-  },
-  "store.custom#carros-filtros": {
-    "path": "/carros/filtros"
-  },
-  "store.custom#carros-filtros-filtros-de-aceite": {
-    "path": "/carros/filtros/filtros-de-aceite"
-  },
-  "store.custom#carros-filtros-filtros-de-aire": {
-    "path": "/carros/filtros/filtros-de-aire"
-  },
-  "store.custom#carros-filtros-filtros-de-combustible": {
-    "path": "/carros/filtros/filtros-de-combustible"
-  },
-  "store.custom#carros-filtros-filtros-de-cabina": {
-    "path": "/carros/filtros/filtros-de-cabina"
-  },
-  "store.custom#carros-filtros-filtros-de-transmision": {
-    "path": "/carros/filtros/filtros-de-transmision"
-  },
-  "store.custom#carros-baterias": {
-    "path": "/carros/baterias"
-  },
-  "store.custom#carros-baterias-baterias-para-carro": {
-    "path": "/carros/baterias/baterias-para-carro"
-  },
-  "store.custom#carros-baterias-baterias-para-furgon-camion-y-bus": {
-    "path": "/carros/baterias/baterias-para-furgon-camion-y-bus"
-  },
-  "store.custom#carros-baterias-bornes-y-cables-de-bateria": {
-    "path": "/carros/baterias/bornes-y-cables-de-bateria"
-  },
   "store.custom#carros-frenos": {
     "path": "/carros/frenos"
   },
@@ -251,21 +167,6 @@
   "store.custom#carros-suspension-y-direccion-ballestas-muelles-de-hoja": {
     "path": "/carros/suspension-y-direccion/ballestas-muelles-de-hoja"
   },
-  "store.custom#carros-electrico-y-electronico": {
-    "path": "/carros/electrico-y-electronico"
-  },
-  "store.custom#carros-electrico-y-electronico-encendido": {
-    "path": "/carros/electrico-y-electronico/encendido"
-  },
-  "store.custom#carros-electrico-y-electronico-arranque-y-carga": {
-    "path": "/carros/electrico-y-electronico/arranque-y-carga"
-  },
-  "store.custom#carros-electrico-y-electronico-gestion-electronica": {
-    "path": "/carros/electrico-y-electronico/gestion-electronica"
-  },
-  "store.custom#carros-electrico-y-electronico-electrico-general": {
-    "path": "/carros/electrico-y-electronico/electrico-general"
-  },
   "store.custom#carros-iluminacion": {
     "path": "/carros/iluminacion"
   },
@@ -334,9 +235,6 @@
   },
   "store.custom#carros-motor-y-transmision-bloque-y-culata-empaques-y-retenedores-de-motor": {
     "path": "/carros/motor-y-transmision/bloque-y-culata/empaques-y-retenedores-de-motor"
-  },
-  "store.custom#carros-motor-y-transmision-bloque-y-culata-retenedores-de-motor": {
-    "path": "/carros/motor-y-transmision/bloque-y-culata/retenedores-de-motor"
   },
   "store.custom#carros-motor-y-transmision-bloque-y-culata-bombas-de-aceite": {
     "path": "/carros/motor-y-transmision/bloque-y-culata/bombas-de-aceite"
@@ -941,96 +839,6 @@
   "store.custom#carros-tecnologia-y-seguridad-seguridad-alcoholimetros": {
     "path": "/carros/tecnologia-y-seguridad/seguridad/alcoholimetros"
   },
-  "store.custom#motos-llantas-y-rines": {
-    "path": "/motos/llantas-y-rines"
-  },
-  "store.custom#motos-llantas-y-rines-llantas": {
-    "path": "/motos/llantas-y-rines/llantas"
-  },
-  "store.custom#motos-llantas-y-rines-llantas-llantas-delanteras": {
-    "path": "/motos/llantas-y-rines/llantas/llantas-delanteras"
-  },
-  "store.custom#motos-llantas-y-rines-llantas-llantas-traseras": {
-    "path": "/motos/llantas-y-rines/llantas/llantas-traseras"
-  },
-  "store.custom#motos-llantas-y-rines-llantas-llantas-de-scooter": {
-    "path": "/motos/llantas-y-rines/llantas/llantas-de-scooter"
-  },
-  "store.custom#motos-llantas-y-rines-llantas-llantas-de-enduro-y-cross": {
-    "path": "/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross"
-  },
-  "store.custom#motos-llantas-y-rines-llantas-llantas-para-motocarro": {
-    "path": "/motos/llantas-y-rines/llantas/llantas-para-motocarro"
-  },
-  "store.custom#motos-llantas-y-rines-rines-y-rayos": {
-    "path": "/motos/llantas-y-rines/rines-y-rayos"
-  },
-  "store.custom#motos-llantas-y-rines-rines-y-rayos-rines": {
-    "path": "/motos/llantas-y-rines/rines-y-rayos/rines"
-  },
-  "store.custom#motos-llantas-y-rines-rines-y-rayos-rayos-y-niples": {
-    "path": "/motos/llantas-y-rines/rines-y-rayos/rayos-y-niples"
-  },
-  "store.custom#motos-llantas-y-rines-rines-y-rayos-manzanas-de-rueda": {
-    "path": "/motos/llantas-y-rines/rines-y-rayos/manzanas-de-rueda"
-  },
-  "store.custom#motos-llantas-y-rines-rines-y-rayos-balineras-de-rueda": {
-    "path": "/motos/llantas-y-rines/rines-y-rayos/balineras-de-rueda"
-  },
-  "store.custom#motos-llantas-y-rines-accesorios-de-rueda": {
-    "path": "/motos/llantas-y-rines/accesorios-de-rueda"
-  },
-  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-neumaticos-tripas": {
-    "path": "/motos/llantas-y-rines/accesorios-de-rueda/neumaticos-tripas"
-  },
-  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-valvulas": {
-    "path": "/motos/llantas-y-rines/accesorios-de-rueda/valvulas"
-  },
-  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-tuercas-y-ejes": {
-    "path": "/motos/llantas-y-rines/accesorios-de-rueda/tuercas-y-ejes"
-  },
-  "store.custom#motos-llantas-y-rines-accesorios-de-rueda-protectores-de-rin": {
-    "path": "/motos/llantas-y-rines/accesorios-de-rueda/protectores-de-rin"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento": {
-    "path": "/motos/lubricantes-y-mantenimiento"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-motor-4t": {
-    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-motor-2t": {
-    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-transmision-caja": {
-    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-transmision-caja"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-aceite-de-suspension": {
-    "path": "/motos/lubricantes-y-mantenimiento/aceite-de-suspension"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-lubricante-de-cadena": {
-    "path": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-liquido-de-frenos": {
-    "path": "/motos/lubricantes-y-mantenimiento/liquido-de-frenos"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-refrigerante": {
-    "path": "/motos/lubricantes-y-mantenimiento/refrigerante"
-  },
-  "store.custom#motos-lubricantes-y-mantenimiento-aditivos-y-grasas": {
-    "path": "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas"
-  },
-  "store.custom#motos-filtros": {
-    "path": "/motos/filtros"
-  },
-  "store.custom#motos-filtros-filtros-de-aceite": {
-    "path": "/motos/filtros/filtros-de-aceite"
-  },
-  "store.custom#motos-filtros-filtros-de-aire": {
-    "path": "/motos/filtros/filtros-de-aire"
-  },
-  "store.custom#motos-filtros-filtros-de-combustible": {
-    "path": "/motos/filtros/filtros-de-combustible"
-  },
   "store.custom#motos-motor-y-transmision": {
     "path": "/motos/motor-y-transmision"
   },
@@ -1217,15 +1025,6 @@
   "store.custom#motos-motor-y-transmision-guayas-y-cables-guayas-de-tacometro": {
     "path": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-tacometro"
   },
-  "store.custom#motos-baterias": {
-    "path": "/motos/baterias"
-  },
-  "store.custom#motos-baterias-baterias-para-moto": {
-    "path": "/motos/baterias/baterias-para-moto"
-  },
-  "store.custom#motos-baterias-bornes-y-cables-de-bateria": {
-    "path": "/motos/baterias/bornes-y-cables-de-bateria"
-  },
   "store.custom#motos-frenos": {
     "path": "/motos/frenos"
   },
@@ -1355,8 +1154,11 @@
   "store.custom#motos-accesorios-parrillas-y-portamaletas": {
     "path": "/motos/accesorios/parrillas-y-portamaletas"
   },
-  "store.custom#motos-accesorios-sliders-defensas-y-cubrecarter": {
-    "path": "/motos/accesorios/sliders-defensas-y-cubrecarter"
+  "store.custom#motos-accesorios-defensas-mataperros": {
+    "path": "/motos/accesorios/defensas-mataperros"
+  },
+  "store.custom#motos-accesorios-sliders-y-cubrecarter": {
+    "path": "/motos/accesorios/sliders-y-cubrecarter"
   },
   "store.custom#motos-accesorios-pijamas-cubremotos": {
     "path": "/motos/accesorios/pijamas-cubremotos"

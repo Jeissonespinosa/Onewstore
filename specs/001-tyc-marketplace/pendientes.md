@@ -3,8 +3,13 @@
 - **Pausada el:** 2026-11-15. **Reanudada el 2026-11-17** (los prerrequisitos P1 a P3 se resuelven ahora con el grupo 1; Q1, Q3-Q6 siguen abiertas).
 - **Actualización 2026-11-17:** el workspace de trabajo es **`pruebatema`**; `devdiego` se borró el 2026-11-16. La spec 002 se fusionó en esta rama y **ya no depende de la 004**; la 001 sí sigue necesitando la 004 (canal de atención) y la 005 (identidad).
 - **Motivo:** el spike del grupo 1 necesita un `vtex link` que sirva los cambios y acceso al admin de VTEX, y los grupos 4-8 dependen de decisiones de negocio y de un abogado que aún no existen.
-- **Estado del trabajo:** `plan.md` y `tasks.md` aprobados (commit `81b680e`). **Ninguna tarea está marcada**: no se implementó nada. La página de prueba del spike 1.2 se retiró del árbol.
-- **Cómo reanudar:** cuando los prerrequisitos P1 a P4 estén listos, ejecuta `/implementar-spec 001`. Retomará el grupo 1 desde la tarea 1.1.
+- **Pausada de nuevo el 2026-11-18.** Hechos: grupos 2, 3, 4, 5, 6, 7.1 y la parte del PDP de 7.4 (rama `feat/001-tyc-marketplace`). Los cinco textos legales existen como borrador, con placeholders.
+- **Qué la bloquea:**
+  1. **Tarea 1.1 (checkout):** el admin de VTEX muestra «bloqueado por facturas impagas». Sin él no se pueden hacer 1.1, 7.2, 7.3, 7.5 ni la parte de checkout de 7.4.
+  2. **Grupo 8:** abogado (Q6) y datos de negocio Q1 (razón social, NIT, domicilio), Q3 (comisión y pasarela), Q4 (transportadora y plazos) y Q5 (canal de atención).
+  3. **Jest** no corre en el equipo de Diego: falta correr `yarn jest` en un entorno con dependencias (los tests de `AceptacionTyc` solo se verificaron con un ejecutor mínimo).
+- **Para el abogado (fuentes colombianas sin leer):** ningún sitio `.gov.co` se pudo abrir en la sesión. Hay que contrastar el texto oficial de la Ley 1480 de 2011 (arts. 47, 50, 51, 7-10), la Ley 2439 de 2024, el Decreto 587 de 2016, el criterio de la SIC sobre «portales de contacto» y el RNBD. La lista de enlaces está en `research.md` («Fuentes»).
+- **Cómo reanudar:** resuelto el bloqueo del admin, ejecuta `/implementar-spec 001`; retomará la 1.1. `vtex link` en `pruebatema`.
 
 Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decisiones de negocio), **Abogado** (aún sin asignar, Q6).
 

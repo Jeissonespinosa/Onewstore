@@ -305,6 +305,1035 @@
           "2022"
         ]
       }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/frenos/discos-de-freno",
+      "nombre": "Disco de freno delantero Bosch ventilado Chevrolet Spark GT",
+      "ref": "RX-021",
+      "marca": "Bosch",
+      "precio": 168000,
+      "stock": 20,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ],
+        "Sistema de freno": [
+          "Disco"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet"
+        ],
+        "Modelo": [
+          "Spark GT"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/frenos/bombas-de-freno",
+      "nombre": "Bomba de freno Bosch Renault Logan",
+      "ref": "RX-022",
+      "marca": "Bosch",
+      "precio": 245000,
+      "stock": 8,
+      "specs": {
+        "Sistema de freno": [
+          "Disco"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Renault"
+        ],
+        "Modelo": [
+          "Logan"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/suspension-y-direccion/rotulas",
+      "nombre": "Rótula inferior Mazda 3",
+      "ref": "RX-023",
+      "marca": "Bosch",
+      "precio": 78000,
+      "stock": 30,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ],
+        "Lado": [
+          "Ambos"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Mazda"
+        ],
+        "Modelo": [
+          "Mazda 3 (2ª gen)",
+          "Mazda 3 (3ª gen)"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/suspension-y-direccion/terminales-de-direccion",
+      "nombre": "Terminal de dirección Toyota Corolla",
+      "ref": "RX-024",
+      "marca": "Bosch",
+      "precio": 62000,
+      "stock": 25,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ],
+        "Lado": [
+          "Ambos"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Toyota"
+        ],
+        "Modelo": [
+          "Corolla"
+        ],
+        "Año": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/electrico-y-electronico/arranque-y-carga/alternadores",
+      "nombre": "Alternador Bosch 90A Chevrolet Aveo",
+      "ref": "RX-025",
+      "marca": "Bosch",
+      "precio": 520000,
+      "stock": 6,
+      "specs": {
+        "Voltaje": [
+          "12V"
+        ],
+        "Amperaje": [
+          "90A"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet"
+        ],
+        "Modelo": [
+          "Aveo"
+        ],
+        "Año": [
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque",
+      "nombre": "Motor de arranque Bosch Renault Sandero",
+      "ref": "RX-026",
+      "marca": "Bosch",
+      "precio": 480000,
+      "stock": 5,
+      "specs": {
+        "Voltaje": [
+          "12V"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Renault"
+        ],
+        "Modelo": [
+          "Sandero"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/electrico-y-electronico/encendido/bujias-de-encendido",
+      "nombre": "Bujía NGK Iridium IX Mazda 3",
+      "ref": "RX-027",
+      "marca": "NGK",
+      "precio": 42000,
+      "stock": 60,
+      "specs": {},
+      "compat": {
+        "Marca vehículo": [
+          "Mazda"
+        ],
+        "Modelo": [
+          "Mazda 3 (3ª gen)",
+          "Mazda 3 (4ª gen)"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/filtros/filtros-de-aire",
+      "nombre": "Filtro de aire Mann Chevrolet Spark GT",
+      "ref": "RX-028",
+      "marca": "Mann-Filter",
+      "precio": 46000,
+      "stock": 40,
+      "specs": {
+        "Tipo de filtro": [
+          "Panel"
+        ],
+        "Material": [
+          "Papel"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet"
+        ],
+        "Modelo": [
+          "Spark GT"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/filtros/filtros-de-cabina",
+      "nombre": "Filtro de cabina Mann con carbón activado Mazda 3",
+      "ref": "RX-029",
+      "marca": "Mann-Filter",
+      "precio": 54000,
+      "stock": 35,
+      "specs": {
+        "Tipo de filtro": [
+          "Con carbón activado"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Mazda"
+        ],
+        "Modelo": [
+          "Mazda 3 (3ª gen)",
+          "Mazda 3 (4ª gen)"
+        ],
+        "Año": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/baterias/baterias-para-carro",
+      "nombre": "Batería Mac 36 Free 650A",
+      "ref": "RX-030",
+      "marca": "Mac",
+      "precio": 385000,
+      "stock": 14,
+      "specs": {
+        "Amperaje de arranque (CCA)": [
+          "650"
+        ],
+        "Tipo de batería": [
+          "Libre mantenimiento"
+        ],
+        "Placas": [
+          "13"
+        ],
+        "Polaridad": [
+          "Derecha"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet",
+          "Renault"
+        ],
+        "Modelo": [
+          "Aveo",
+          "Logan",
+          "Sandero"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/carroceria-y-climatizacion/carroceria/espejos-retrovisores",
+      "nombre": "Espejo retrovisor eléctrico izquierdo Renault Logan",
+      "ref": "RX-031",
+      "marca": "Bosch",
+      "precio": 195000,
+      "stock": 7,
+      "specs": {
+        "Posición": [
+          "Delantero izquierdo"
+        ],
+        "Lado": [
+          "Izquierdo"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Renault"
+        ],
+        "Modelo": [
+          "Logan"
+        ],
+        "Año": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/carroceria-y-climatizacion/carroceria/guardafangos",
+      "nombre": "Guardafango delantero derecho Chevrolet Spark GT",
+      "ref": "RX-032",
+      "marca": "Bosch",
+      "precio": 165000,
+      "stock": 4,
+      "specs": {
+        "Posición": [
+          "Delantero derecho"
+        ],
+        "Lado": [
+          "Derecho"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet"
+        ],
+        "Modelo": [
+          "Spark GT"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/iluminacion/farolas",
+      "nombre": "Farola delantera derecha Toyota Hilux",
+      "ref": "RX-033",
+      "marca": "Hella",
+      "precio": 610000,
+      "stock": 3,
+      "specs": {
+        "Posición": [
+          "Delantero derecho"
+        ],
+        "Lado": [
+          "Derecho"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Toyota"
+        ],
+        "Modelo": [
+          "Hilux"
+        ],
+        "Año": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/motor-y-transmision/reparticion-distribucion/kits-de-reparticion",
+      "nombre": "Kit de repartición Gates Renault Logan 1.6",
+      "ref": "RX-034",
+      "marca": "Bosch",
+      "precio": 420000,
+      "stock": 6,
+      "specs": {},
+      "compat": {
+        "Marca vehículo": [
+          "Renault"
+        ],
+        "Modelo": [
+          "Logan"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/lubricantes-y-mantenimiento/aceite-de-motor",
+      "nombre": "Aceite Castrol Magnatec 5W30 sintético 4 L",
+      "ref": "RX-035",
+      "marca": "Castrol",
+      "precio": 168000,
+      "stock": 30,
+      "specs": {
+        "Viscosidad": [
+          "5W30"
+        ],
+        "Tipo de aceite": [
+          "Sintético"
+        ],
+        "Presentación": [
+          "4 L"
+        ],
+        "Norma API": [
+          "SN"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "BMW",
+          "Mazda",
+          "Volkswagen"
+        ],
+        "Modelo": [
+          "Serie 1",
+          "Mazda 3 (3ª gen)",
+          "Mazda 3 (4ª gen)",
+          "Gol"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante",
+      "nombre": "Refrigerante Terpel verde listo para usar 1 L",
+      "ref": "RX-036",
+      "marca": "Terpel",
+      "precio": 28000,
+      "stock": 45,
+      "specs": {
+        "Color": [
+          "Verde"
+        ],
+        "Concentración": [
+          "Listo para usar"
+        ],
+        "Presentación": [
+          "1 L"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/iluminacion/bombillos-halogenos",
+      "nombre": "Bombillo halógeno Osram H4 60/55W",
+      "ref": "RX-037",
+      "marca": "Hella",
+      "precio": 22000,
+      "stock": 70,
+      "specs": {
+        "Tipo de bombillo": [
+          "H4"
+        ],
+        "Color de luz": [
+          "Blanco"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/accesorios/accesorios-interiores/tapetes",
+      "nombre": "Juego de tapetes de caucho universal sedán",
+      "ref": "RX-038",
+      "marca": "Bosch",
+      "precio": 89000,
+      "stock": 22,
+      "specs": {
+        "Tipo de carrocería": [
+          "Sedán",
+          "Hatchback"
+        ],
+        "Tipo de tapete": [
+          "Universal"
+        ],
+        "Material": [
+          "Caucho"
+        ],
+        "Color": [
+          "Negro"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/accesorios/audio/parlantes",
+      "nombre": "Parlantes coaxiales Pioneer 6x9 400W",
+      "ref": "RX-039",
+      "marca": "Bosch",
+      "precio": 215000,
+      "stock": 16,
+      "specs": {
+        "Diámetro": [
+          "6x9\""
+        ],
+        "Material": [
+          "Plástico"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/accesorios/accesorios-exteriores/portaequipajes",
+      "nombre": "Portaequipajes de techo 380 L",
+      "ref": "RX-040",
+      "marca": "Bosch",
+      "precio": 1250000,
+      "stock": 3,
+      "specs": {
+        "Tipo de carrocería": [
+          "SUV",
+          "Camioneta",
+          "Station wagon"
+        ],
+        "Material": [
+          "Plástico"
+        ],
+        "Color": [
+          "Negro"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/tecnologia-y-seguridad/seguridad/alarmas",
+      "nombre": "Alarma Viper con dos controles",
+      "ref": "RX-041",
+      "marca": "Bosch",
+      "precio": 245000,
+      "stock": 10,
+      "specs": {
+        "Alimentación": [
+          "12V"
+        ],
+        "Conexión": [
+          "Cable"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/camaras-de-reversa",
+      "nombre": "Cámara de reversa HD con guías",
+      "ref": "RX-042",
+      "marca": "Bosch",
+      "precio": 95000,
+      "stock": 25,
+      "specs": {
+        "Alimentación": [
+          "12V"
+        ],
+        "Conexión": [
+          "Cable"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/frenos/pastillas-de-freno",
+      "nombre": "Pastillas de freno delanteras Bajaj Pulsar NS 200",
+      "ref": "RX-050",
+      "marca": "Bosch",
+      "precio": 48000,
+      "stock": 30,
+      "specs": {
+        "Posición": [
+          "Delantera"
+        ],
+        "Sistema de freno": [
+          "Disco"
+        ],
+        "Material": [
+          "Semimetálica"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj"
+        ],
+        "Modelo": [
+          "Pulsar 200 NS"
+        ],
+        "Año": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/motor-y-transmision/clutch-y-transmision/kits-de-arrastre",
+      "nombre": "Kit de arrastre Bajaj Boxer CT 100",
+      "ref": "RX-051",
+      "marca": "Bosch",
+      "precio": 145000,
+      "stock": 18,
+      "specs": {},
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj"
+        ],
+        "Modelo": [
+          "Boxer CT 100"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/electrico-y-electronico/cdi-modulos-de-encendido",
+      "nombre": "CDI Yamaha YBR 125",
+      "ref": "RX-052",
+      "marca": "Bosch",
+      "precio": 98000,
+      "stock": 12,
+      "specs": {
+        "Voltaje": [
+          "12V"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Yamaha"
+        ],
+        "Modelo": [
+          "YB 125 YBR 125"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/llantas-y-rines/llantas/llantas-delanteras",
+      "nombre": "Llanta delantera Vee Rubber 2.75-18",
+      "ref": "RX-053",
+      "marca": "Vee Rubber",
+      "precio": 142000,
+      "stock": 20,
+      "specs": {
+        "Uso": [
+          "Ciudad"
+        ],
+        "Construcción": [
+          "Diagonal (convencional)"
+        ],
+        "Tipo de montaje": [
+          "Con neumático"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj",
+          "AKT"
+        ],
+        "Modelo": [
+          "Boxer CT 100",
+          "AK 110 Special"
+        ],
+        "Año": [
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/ropa/chaquetas",
+      "nombre": "Chaqueta de moto impermeable con protecciones talla L",
+      "ref": "RX-054",
+      "marca": "Bosch",
+      "precio": 320000,
+      "stock": 9,
+      "specs": {
+        "Talla": [
+          "L"
+        ],
+        "Color": [
+          "Negro"
+        ],
+        "Material": [
+          "Impermeable"
+        ],
+        "Protecciones": [
+          "Hombros",
+          "Codos",
+          "Espalda"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/accesorios/maletas-y-baules",
+      "nombre": "Baúl trasero 45 L con base universal",
+      "ref": "RX-056",
+      "marca": "Bosch",
+      "precio": 265000,
+      "stock": 11,
+      "specs": {
+        "Material": [
+          "Plástico"
+        ],
+        "Color": [
+          "Negro"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/accesorios/defensas-mataperros",
+      "nombre": "Defensa delantera tubular Bajaj Boxer CT 100",
+      "ref": "RX-057",
+      "marca": "Bosch",
+      "precio": 135000,
+      "stock": 7,
+      "specs": {
+        "Material": [
+          "Acero"
+        ],
+        "Color": [
+          "Negro"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj"
+        ],
+        "Modelo": [
+          "Boxer CT 100"
+        ],
+        "Año": [
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      }
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena",
+      "nombre": "Lubricante de cadena Motul C2 400 ml",
+      "ref": "RX-058",
+      "marca": "Motul",
+      "precio": 58000,
+      "stock": 35,
+      "specs": {
+        "Presentación": [
+          "400 ml"
+        ],
+        "Tipo de cadena": [
+          "Con reten (O-ring)"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/herramientas/herramientas-electricas-y-neumaticas/pistolas-de-impacto",
+      "nombre": "Pistola de impacto neumática 1/2",
+      "ref": "RX-070",
+      "marca": "Bosch",
+      "precio": 420000,
+      "stock": 6,
+      "specs": {
+        "Alimentación": [
+          "Neumática"
+        ],
+        "Presentación": [
+          "Unidad"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/herramientas/diagnostico-y-medicion/escaneres-y-equipos-de-diagnostico",
+      "nombre": "Escáner OBD2 Bluetooth multimarca",
+      "ref": "RX-071",
+      "marca": "Bosch",
+      "precio": 180000,
+      "stock": 14,
+      "specs": {
+        "Conexión": [
+          "OBD2",
+          "Bluetooth"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/herramientas/equipos-de-taller/gatos-y-torres",
+      "nombre": "Gato hidráulico tipo botella 3 toneladas",
+      "ref": "RX-072",
+      "marca": "Bosch",
+      "precio": 165000,
+      "stock": 10,
+      "specs": {
+        "Capacidad": [
+          "3 toneladas"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/herramientas/equipos-de-lavado-y-pulido/hidrolavadoras",
+      "nombre": "Hidrolavadora eléctrica 1800 PSI",
+      "ref": "RX-073",
+      "marca": "Bosch",
+      "precio": 590000,
+      "stock": 5,
+      "specs": {
+        "Alimentación": [
+          "Eléctrica 110V"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "catalogo",
+      "ruta": "/herramientas/cuidado-y-limpieza/ceras",
+      "nombre": "Cera líquida para carrocería 500 ml",
+      "ref": "RX-074",
+      "marca": "Bosch",
+      "precio": 42000,
+      "stock": 30,
+      "specs": {
+        "Presentación": [
+          "500 ml"
+        ]
+      },
+      "compat": {}
     }
   ]
 }

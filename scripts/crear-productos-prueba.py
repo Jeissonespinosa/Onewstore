@@ -70,6 +70,48 @@ def marca_id(tk, nombre):
     return None
 
 
+def specs_de_categoria(tk, cid, cache):
+    """{nombre: (fieldId, {valores admitidos})} de la categoria, con herencia."""
+    if cid in cache:
+        return cache[cid]
+    out = {}
+    st, campos = call(tk, 'GET',
+                      '/api/catalog_system/pub/specification/field/listTreeByCategoryId/%d' % cid)
+    for f in (campos or []):
+        st2, d = call(tk, 'GET', '/api/catalog/pvt/specification/%d' % f['FieldId'])
+        if st2 != 200 or not d.get('IsActive'):
+            continue
+        st3, vals = call(tk, 'GET',
+                         '/api/catalog_system/pub/specification/fieldvalue/%d' % f['FieldId'])
+        out[d['Name']] = (f['FieldId'], {v['Value'] for v in (vals or [])})
+    cache[cid] = out
+    return out
+
+
+def depurar(declaradas, admitidas, ref):
+    """Deja solo lo que la categoria acepta y DICE que descarto.
+
+    Un valor que no existe en la especificacion no da error: VTEX lo ignora y
+    el producto queda invisible en ese filtro. Preferimos verlo aqui.
+    """
+    limpio, avisos = {}, []
+    for nombre, valores in declaradas.items():
+        if nombre not in admitidas:
+            avisos.append('%s: la categoria no tiene %r' % (ref, nombre))
+            continue
+        permitidos = admitidas[nombre][1]
+        if not permitidos:                      # campo de texto libre
+            limpio[nombre] = valores
+            continue
+        buenos = [v for v in valores if v in permitidos]
+        malos = [v for v in valores if v not in permitidos]
+        if malos:
+            avisos.append('%s: %r no admite %s' % (ref, nombre, malos[:4]))
+        if buenos:
+            limpio[nombre] = buenos
+    return limpio, avisos
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--ejecutar', action='store_true')
@@ -80,6 +122,7 @@ def main():
     tk = token()
 
     creados = reusados = 0
+    cache_specs, avisos_todos = {}, []
     for p in fuente:
         cat = categorias.get(p['ruta'])
         if not cat:
@@ -103,8 +146,12 @@ def main():
             print('   existe  %-14s %s' % (p['ref'], p['nombre'][:52]))
             continue
         if not args.ejecutar:
+            todas = dict(p.get('specs') or {})
+            todas.update(p.get('compat') or {})
+            _, avisos = depurar(todas, specs_de_categoria(tk, cat['id'], cache_specs), p['ref'])
+            avisos_todos.extend(avisos)
             creados += 1
-            print('   [plan]  %-14s %-52s %s' % (p['ref'], p['nombre'][:52], p['caso'][:28]))
+            print('   [plan]  %-14s %-52s %s' % (p['ref'], p['nombre'][:52], p['caso'][:26]))
             continue
 
         st, prod = call(tk, 'POST', '/api/catalog/pvt/product', {
@@ -141,6 +188,8 @@ def main():
         # De a una: la API acepta un lote y responde 200, pero solo aplica la primera.
         todas = dict(p.get('specs') or {})
         todas.update(p.get('compat') or {})
+        todas, avisos = depurar(todas, specs_de_categoria(tk, cat['id'], cache_specs), p['ref'])
+        avisos_todos.extend(avisos)
         for nombre, valores in todas.items():
             call(tk, 'POST', '/api/catalog_system/pvt/products/%d/specification' % pid,
                  [{'Value': valores, 'Name': nombre}])
@@ -152,6 +201,10 @@ def main():
 
     print('\n  %s: %d productos, %d ya existian'
           % ('EJECUTADO' if args.ejecutar else 'PLAN (no se creo nada)', creados, reusados))
+    if avisos_todos:
+        print('\n  ESPECIFICACIONES DESCARTADAS (el producto quedaria invisible en ese filtro):')
+        for a in avisos_todos:
+            print('   ', a)
 
 
 if __name__ == '__main__':

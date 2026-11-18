@@ -38,7 +38,7 @@ LEGAL_PREFIX = 'store.custom#legal-'
 KNOWN_PLACEHOLDERS = (
     '[RAZÓN SOCIAL]', '[NIT]', '[DOMICILIO]', '[CANAL DE ATENCIÓN]', '[PASARELA DE PAGO]',
     '[COMISIÓN]', '[QUIÉN ENVÍA]', '[TRANSPORTADORA]', '[A CONFIRMAR POR ABOGADO]',
-    '[BORRADOR EN REDACCIÓN]',
+    '[BORRADOR EN REDACCIÓN]', '[PLAZO DE ENTREGA]',
 )
 PLACEHOLDER_RE = re.compile(r'\[[A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ0-9 ()/.,-]{1,60}\]')
 BANNED_RE = re.compile(r'onewstore', re.IGNORECASE)

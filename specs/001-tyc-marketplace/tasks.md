@@ -40,7 +40,7 @@ Va antes que los documentos para usarla desde el primero.
 
 ## 5. D3 y D6 — Venta y devoluciones
 
-- [ ] 5.1 Redactar D3 (TyC de venta: compra, envío, pago; solo nuevos e importados; origen, quién importa y responde por la garantía; plazos por importación; comprador empresarial). Verificación: cubre los puntos de §5 de la spec que le corresponden o los marca `[A CONFIRMAR POR ABOGADO]`; `check-legal.py` lista cada placeholder pendiente (Q3, Q4, Q5); borrador y bloque coinciden.
+- [x] 5.1 Redactar D3 (TyC de venta: compra, envío, pago; solo nuevos e importados; origen, quién importa y responde por la garantía; plazos por importación; comprador empresarial). Verificación: cubre los puntos de §5 de la spec que le corresponden o los marca `[A CONFIRMAR POR ABOGADO]`; `check-legal.py` lista cada placeholder pendiente (Q3, Q4, Q5); borrador y bloque coinciden.
 - [ ] 5.2 Redactar D6 (retracto, reversión del pago, garantías; piezas de seguridad; productos instalados o sin empaque; accesorios y herramientas). Verificación: cada cita legal de D6 aparece en `research.md` con su fuente; los límites del retracto están marcados `[A CONFIRMAR POR ABOGADO]`; en el workspace `/devoluciones-y-garantias` ya no cae en "sin resultados" (CU-7).
 
 ## 6. D4 y D5 — Sellers y privacidad

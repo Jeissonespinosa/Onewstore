@@ -4,18 +4,81 @@
   "store.custom#legal-devoluciones-y-garantias": {
     "children": [
       "rich-text#legal-devoluciones-y-garantias-0",
-      "rich-text#legal-devoluciones-y-garantias-1"
+      "rich-text#legal-devoluciones-y-garantias-1",
+      "rich-text#legal-devoluciones-y-garantias-2",
+      "rich-text#legal-devoluciones-y-garantias-3",
+      "rich-text#legal-devoluciones-y-garantias-4",
+      "rich-text#legal-devoluciones-y-garantias-5",
+      "rich-text#legal-devoluciones-y-garantias-6",
+      "rich-text#legal-devoluciones-y-garantias-7",
+      "rich-text#legal-devoluciones-y-garantias-8",
+      "rich-text#legal-devoluciones-y-garantias-9",
+      "rich-text#legal-devoluciones-y-garantias-10"
     ]
   },
   "rich-text#legal-devoluciones-y-garantias-0": {
     "props": {
-      "text": "# Devoluciones, retracto y garantías\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "text": "# Devoluciones, retracto y garantías\n\nVersión 2026.11.18 · Actualizado: 2026-11-18\n\nAquí explicamos tus derechos cuando quieres devolver un producto, cuando un pago no corresponde a lo que compraste y cuando un producto falla. Estas reglas no limitan los derechos que la ley te da como consumidor.\n\n[A CONFIRMAR POR ABOGADO] Los plazos y artículos citados en este documento deben confirmarse contra el texto vigente de la Ley 1480 de 2011 (modificada por la Ley 2439 de 2024) antes de publicar.",
       "blockClass": "legal"
     }
   },
   "rich-text#legal-devoluciones-y-garantias-1": {
     "props": {
-      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "text": "## 1. Derecho de retracto\n\nSi compraste a distancia (por internet), puedes **retractarte** de la compra dentro de los **5 días hábiles** siguientes a la entrega del producto (artículo 47 de la Ley 1480 de 2011). Si lo haces, la compra se cancela y te devolvemos el dinero.\n\nPara ejercerlo, escríbenos por [CANAL DE ATENCIÓN] dentro de ese plazo indicando tu pedido. Debes devolver el producto en las mismas condiciones en que lo recibiste, y los costos de transporte de la devolución están a tu cargo.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-2": {
+    "props": {
+      "text": "## 2. Casos en que no aplica el retracto\n\nLa ley solo permite las excepciones que ella misma establece; por ejemplo, los productos hechos a tu medida o claramente personalizados. No negamos un retracto por razones que la ley no prevea.\n\n[A CONFIRMAR POR ABOGADO] Límites aplicables a piezas ya instaladas, usadas o sin empaque original, y la lista completa de excepciones vigentes.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-3": {
+    "props": {
+      "text": "## 3. Reversión del pago\n\nSi pagaste con tarjeta u otro medio electrónico, puedes pedir la **reversión del pago** en estos casos: fraude, operación que no solicitaste, producto que no recibiste, producto diferente al pedido o defectuoso (artículo 51 de la Ley 1480 de 2011 y Decreto 587 de 2016).\n\nTienes **5 días hábiles** desde que supiste del hecho para presentar tu queja a Repuestox y avisar a quien emitió tu medio de pago. Una vez pedida, quienes participan en el proceso de pago tienen **15 días hábiles** para hacerla efectiva. Esto aplica cuando el vendedor y el emisor del medio de pago están en Colombia.\n\n[A CONFIRMAR POR ABOGADO] Quién tramita la reversión con [PASARELA DE PAGO] y cómo se comparte con el seller.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-4": {
+    "props": {
+      "text": "## 4. Garantía legal\n\nTodo producto tiene una **garantía legal**: quien lo produce y quien lo vende deben responder por su calidad, idoneidad, seguridad y buen funcionamiento (artículos 7 a 10 de la Ley 1480 de 2011). Responden **de forma solidaria**, es decir, puedes reclamar a cualquiera de los dos.\n\nEl plazo de la garantía es el que fije la ley o la autoridad competente y, si no existe, el que se anuncie en el producto; empieza a contar desde la entrega. [A CONFIRMAR POR ABOGADO] Plazo mínimo aplicable a repuestos nuevos e importados, y quién atiende la garantía de un producto importado.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-5": {
+    "props": {
+      "text": "## 5. Piezas de seguridad e instalación\n\nPara que la garantía se mantenga, instala el producto según las instrucciones del fabricante. Las piezas de seguridad (frenos, llantas, airbags y similares) deben instalarse por un técnico calificado.\n\n[A CONFIRMAR POR ABOGADO] Validez de condicionar la garantía a la instalación profesional.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-6": {
+    "props": {
+      "text": "## 6. Cuándo la garantía no cubre\n\nLa garantía no cubre daños por mal uso, instalación incorrecta, golpes, falta de mantenimiento o desgaste normal. [A CONFIRMAR POR ABOGADO] Alcance de estas exclusiones.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-7": {
+    "props": {
+      "text": "## 7. Cómo hacer un reclamo\n\n1. Escríbenos por [CANAL DE ATENCIÓN] con tu número de pedido y la descripción del problema.\n2. Adjunta fotos o video del producto y del empaque, y la factura.\n3. Te indicamos cómo devolverlo o cambiarlo. [TRANSPORTADORA]\n4. Revisamos el caso y te respondemos. [A CONFIRMAR POR ABOGADO] Plazo de respuesta.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-8": {
+    "props": {
+      "text": "## 8. Reembolsos\n\nSi procede un reembolso, lo hacemos por el mismo medio con el que pagaste. [A CONFIRMAR POR ABOGADO] Plazo del reembolso.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-9": {
+    "props": {
+      "text": "## 9. Compras de talleres y empresas\n\n[A CONFIRMAR POR ABOGADO] Si el retracto, la reversión del pago y la garantía legal aplican de la misma forma cuando el comprador es una empresa o un taller.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-devoluciones-y-garantias-10": {
+    "props": {
+      "text": "## 10. Si no quedas conforme\n\nPuedes acudir a la Superintendencia de Industria y Comercio (SIC), que es la autoridad que resuelve los conflictos de consumo.",
       "blockClass": "legal"
     }
   }

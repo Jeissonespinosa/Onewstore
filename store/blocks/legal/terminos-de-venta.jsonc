@@ -4,18 +4,102 @@
   "store.custom#legal-terminos-de-venta": {
     "children": [
       "rich-text#legal-terminos-de-venta-0",
-      "rich-text#legal-terminos-de-venta-1"
+      "rich-text#legal-terminos-de-venta-1",
+      "rich-text#legal-terminos-de-venta-2",
+      "rich-text#legal-terminos-de-venta-3",
+      "rich-text#legal-terminos-de-venta-4",
+      "rich-text#legal-terminos-de-venta-5",
+      "rich-text#legal-terminos-de-venta-6",
+      "rich-text#legal-terminos-de-venta-7",
+      "rich-text#legal-terminos-de-venta-8",
+      "rich-text#legal-terminos-de-venta-9",
+      "rich-text#legal-terminos-de-venta-10",
+      "rich-text#legal-terminos-de-venta-11",
+      "rich-text#legal-terminos-de-venta-12",
+      "rich-text#legal-terminos-de-venta-13"
     ]
   },
   "rich-text#legal-terminos-de-venta-0": {
     "props": {
-      "text": "# Términos de venta\n\nVersión 2026.11.17 · Actualizado: 2026-11-17",
+      "text": "# Términos de venta\n\nVersión 2026.11.18 · Actualizado: 2026-11-18\n\nEstos términos explican cómo se compra en Repuestox: quién vende, cómo se paga, cómo se envía y qué pasa si algo no sale como esperabas. Se leen junto con los [Términos y condiciones de uso](/terminos-y-condiciones) y con [Devoluciones, retracto y garantías](/devoluciones-y-garantias).",
       "blockClass": "legal"
     }
   },
   "rich-text#legal-terminos-de-venta-1": {
     "props": {
-      "text": "## Estado del documento\n\n[BORRADOR EN REDACCIÓN] Este documento todavía no está redactado.",
+      "text": "## 1. Quién vende, quién cobra y quién envía\n\nEn cada producto y antes de pagar te mostramos qué seller lo ofrece. Repuestox cobra el pedido y lo envía a todo Colombia.\n\n[A CONFIRMAR POR ABOGADO] Contraparte del contrato de compraventa: el contrato se celebra entre el comprador y [A CONFIRMAR POR ABOGADO: el seller / Repuestox], y la responsabilidad de cada uno frente al comprador (garantía, retracto, reversión del pago) depende de esa respuesta.\n\nRepuestox identifica a cada seller y conserva sus datos de contacto, para que puedas ubicar a quien vendió el producto.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-2": {
+    "props": {
+      "text": "## 2. Qué productos se venden\n\nTodos los productos son **nuevos e importados**. No vendemos usados ni remanufacturados. También hay accesorios y herramientas para mecánica automotriz.\n\nEl origen del producto y quién lo importa se indican en su ficha. [A CONFIRMAR POR ABOGADO] Quién importa el producto y responde por su garantía, y qué información de origen debe mostrarse.\n\nLos productos pueden ser originales (OEM), alternativos o de marca propia del seller. La ficha dice cuál es.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-3": {
+    "props": {
+      "text": "## 3. Compatibilidad con tu vehículo\n\nAntes de comprar, verifica que el repuesto sirve para tu vehículo (marca, modelo y año). El seller informa la compatibilidad de cada producto y tú la confirmas. Si no estás seguro, escríbenos por [CANAL DE ATENCIÓN] antes de comprar.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-4": {
+    "props": {
+      "text": "## 4. Piezas de seguridad, accesorios y herramientas\n\nLas piezas de seguridad (por ejemplo, frenos, llantas o airbags) deben instalarse por un técnico calificado. Seguir las instrucciones del fabricante es parte del uso correcto del producto.\n\n[A CONFIRMAR POR ABOGADO] Advertencias y condiciones de garantía propias de accesorios y herramientas, y qué categorías tienen reglamento técnico.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-5": {
+    "props": {
+      "text": "## 5. Cómo comprar\n\nAgregas productos al carrito, indicas tus datos y la dirección de entrega, eliges el medio de pago y confirmas. Al confirmar te pedimos aceptar los términos vigentes en ese momento: la casilla de aceptación aparece en cada compra y no viene marcada. El pedido queda registrado cuando recibes la confirmación en tu correo.\n\nSi un producto deja de estar disponible después de tu pedido, te avisamos y puedes elegir esperar, cambiarlo por otro o cancelar con devolución de tu dinero.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-6": {
+    "props": {
+      "text": "## 6. Precios\n\nLos precios están en pesos colombianos (COP). [A CONFIRMAR POR ABOGADO] Si el precio publicado incluye los impuestos aplicables y cómo se muestra el IVA en la factura.\n\nEl costo del envío se calcula en el carrito, según el destino, y se muestra antes de pagar.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-7": {
+    "props": {
+      "text": "## 7. Pago\n\nEl pago se procesa por [PASARELA DE PAGO]. Los medios de pago disponibles se muestran en el paso de pago. [A CONFIRMAR POR ABOGADO] Qué datos de pago guarda cada parte y cómo se informa al comprador.\n\nSi un pago es rechazado o no se completa, el pedido no se genera y no se te cobra.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-8": {
+    "props": {
+      "text": "## 8. Envío y entrega\n\nEnviamos a todo Colombia. El envío lo hace Repuestox [TRANSPORTADORA].\n\nEl plazo de entrega depende del producto, del destino y de si el producto debe importarse. Lo ves en el carrito antes de pagar: [PLAZO DE ENTREGA].\n\nCuando recibas tu pedido, revisa que el empaque esté completo y que el producto coincida con lo que compraste. Si hay daños o diferencias, avísanos por [CANAL DE ATENCIÓN] lo antes posible y conserva el empaque y las fotos.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-9": {
+    "props": {
+      "text": "## 9. Compras de talleres y empresas\n\nLos talleres y las empresas (por ejemplo, con flota) pueden comprar. [A CONFIRMAR POR ABOGADO] Qué normas de protección al consumidor aplican cuando el comprador es una empresa, y si hay condiciones comerciales aparte.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-10": {
+    "props": {
+      "text": "## 10. Factura\n\n[A CONFIRMAR POR ABOGADO] Quién emite la factura de venta (el seller o Repuestox) y cómo se entrega.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-11": {
+    "props": {
+      "text": "## 11. Cancelaciones\n\nPuedes cancelar tu pedido antes de que se envíe escribiendo a [CANAL DE ATENCIÓN]. Una vez enviado, aplican las reglas de retracto y devolución de [Devoluciones, retracto y garantías](/devoluciones-y-garantias).",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-12": {
+    "props": {
+      "text": "## 12. Cómo ordenamos los resultados\n\nLos resultados de búsqueda y de las categorías se ordenan por relevancia con el buscador de la tienda y los filtros que eliges. Hoy ningún seller paga por aparecer primero. Si eso cambia, lo informaremos aquí.",
+      "blockClass": "legal"
+    }
+  },
+  "rich-text#legal-terminos-de-venta-13": {
+    "props": {
+      "text": "## 13. Peticiones, quejas y reclamos\n\nEscríbenos por [CANAL DE ATENCIÓN]. Si no quedas conforme con la respuesta, puedes acudir a la Superintendencia de Industria y Comercio (SIC).",
       "blockClass": "legal"
     }
   }

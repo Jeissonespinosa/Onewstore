@@ -27,7 +27,7 @@
   },
   "rich-text#legal-terminos-y-condiciones-1": {
     "props": {
-      "text": "## 1. Quiénes somos\n\nRepuestox es operado por [RAZÓN SOCIAL], con NIT [NIT] y domicilio en [DOMICILIO]. Puedes escribirnos por [CANAL DE ATENCIÓN].",
+      "text": "## 1. Quiénes somos\n\nRepuestox es operado por [RAZÓN SOCIAL], con NIT [NIT], dirección de notificación judicial [DOMICILIO], teléfono y correo electrónico [CANAL DE ATENCIÓN]. Puedes escribirnos por ese canal. (Estos datos de identidad son obligatorios para quien vende por medios electrónicos, artículo 50 de la Ley 1480 de 2011.)",
       "blockClass": "legal"
     }
   },

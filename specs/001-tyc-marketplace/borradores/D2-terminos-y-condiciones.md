@@ -6,7 +6,7 @@ Estos términos regulan el uso del sitio web de Repuestox. Al navegar, crear una
 
 ## 1. Quiénes somos
 
-Repuestox es operado por [RAZÓN SOCIAL], con NIT [NIT] y domicilio en [DOMICILIO]. Puedes escribirnos por [CANAL DE ATENCIÓN].
+Repuestox es operado por [RAZÓN SOCIAL], con NIT [NIT], dirección de notificación judicial [DOMICILIO], teléfono y correo electrónico [CANAL DE ATENCIÓN]. Puedes escribirnos por ese canal. (Estos datos de identidad son obligatorios para quien vende por medios electrónicos, artículo 50 de la Ley 1480 de 2011.)
 
 ## 2. Qué es Repuestox
 

@@ -130,3 +130,16 @@
 10. **Envío por Repuestox** y plazos de importación: qué debe informarse y qué responsabilidad conlleva (Q4).
 11. ¿Qué datos de identificación del seller debe conservar Repuestox y por cuánto tiempo (fila 1)?
 12. **Razón social, NIT y domicilio** (Q1) y registro mercantil para el aviso legal.
+
+## Verificación contra el texto oficial (2026-11-18)
+
+Fuente leída completa: <https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306> (Ley 1480 de 2011, Gestor Normativo de Función Pública, con anotaciones de la Ley 2439 de 2024). Es la única fuente colombiana que pudo leerse; las demás de la lista siguen sin abrirse. **[VERIFICADO]** en esa página:
+
+- **Art. 47 (retracto):** 5 días hábiles desde la entrega; el consumidor devuelve el bien por los mismos medios y en las mismas condiciones y paga el transporte; excepciones propias (bienes personalizados, que no pueden devolverse o se deterioran con rapidez, perecederos, de uso personal, apuestas y loterías, precios atados al mercado financiero); devolución del dinero **sin descuentos ni retenciones y en máximo 30 días calendario** (parágrafo 1: aplica también a la entidad financiera; adición del art. 3 de la Ley 2439). *Corrige D6: antes decía «plazo por confirmar».*
+- **Art. 50 (comercio electrónico):** el proveedor informa su nombre o razón social, NIT, **dirección de notificación judicial**, teléfono y correo (letra a); debe disponer en el mismo medio de canales de atención con trazabilidad de reclamos (letra g, modificada por la Ley 2439); si el producto pedido no está disponible y el consumidor cancela, la devolución se hace en **máximo 15 días calendario** (modificado por la Ley 2439). *D2 §1 y D6 §8 ya lo recogen.*
+- **Art. 51 (reversión del pago):** 5 días hábiles desde que el consumidor supo del hecho para presentar queja ante el proveedor; el emisor del medio de pago y los participantes reversan. **El texto del artículo no fija los 15 días hábiles**: esa cifra viene de `[EXTRACTO]` sobre el Decreto 587 de 2016 y sigue **sin verificar**.
+- **Art. 5, numeral 18 (portal de contacto), adicionado por el art. 6 de la Ley 2439:** plataforma que *pone en contacto* a proveedores o productores con consumidores, **a través de la cual se podrá concretar la relación de consumo directamente entre ellos**. Repuestox cobra, envía y atiende: esto apoya la hipótesis de comercio electrónico (pregunta 1 al abogado), sin cerrarla.
+- **Art. 53 (portales de contacto):** exige registro de los oferentes con nombre o razón social, documento, dirección física y teléfonos, consultable por quien compró y entregable a la autoridad. *D4 §1 ya lo recoge.*
+
+**Sigue sin verificar:** Decreto 587 de 2016, arts. 7 a 10 (garantías, texto no leído en detalle), el criterio de la SIC sobre «portal de contacto» y MercadoLibre, el RNBD y la Ley 527 de 1999.
+

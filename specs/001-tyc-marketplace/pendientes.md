@@ -8,7 +8,7 @@
   1. **Tarea 1.1 (checkout):** el admin de VTEX muestra «bloqueado por facturas impagas». Sin él no se pueden hacer 1.1, 7.2, 7.3, 7.5 ni la parte de checkout de 7.4.
   2. **Grupo 8:** abogado (Q6) y datos de negocio Q1 (razón social, NIT, domicilio), Q3 (comisión y pasarela), Q4 (transportadora y plazos) y Q5 (canal de atención).
   3. **Jest** no corre en el equipo de Diego: falta correr `yarn jest` en un entorno con dependencias (los tests de `AceptacionTyc` solo se verificaron con un ejecutor mínimo).
-- **Para el abogado (fuentes colombianas sin leer):** ningún sitio `.gov.co` se pudo abrir en la sesión. Hay que contrastar el texto oficial de la Ley 1480 de 2011 (arts. 47, 50, 51, 7-10), la Ley 2439 de 2024, el Decreto 587 de 2016, el criterio de la SIC sobre «portales de contacto» y el RNBD. La lista de enlaces está en `research.md` («Fuentes»).
+- **Para el abogado (fuentes colombianas):** el 2026-11-18 se leyó la Ley 1480 completa en Función Pública (arts. 5, 47, 50, 51 y 53; ver `research.md`, «Verificación»). Siguen sin leerse: el Decreto 587 de 2016 (de ahí los 15 días hábiles de la reversión), los arts. 7-10, el criterio de la SIC sobre «portales de contacto», el criterio de la SIC sobre «portales de contacto» y el RNBD. La lista de enlaces está en `research.md` («Fuentes»).
 - **Cómo reanudar:** resuelto el bloqueo del admin, ejecuta `/implementar-spec 001`; retomará la 1.1. `vtex link` en `pruebatema`.
 
 Quién: **Diego** (responsable de la spec y del workspace), **Equipo** (decisiones de negocio), **Abogado** (aún sin asignar, Q6).

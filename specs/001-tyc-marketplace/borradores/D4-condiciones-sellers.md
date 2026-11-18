@@ -8,7 +8,7 @@ Estas condiciones regulan la relación entre Repuestox y los vendedores independ
 
 Puede ser seller una persona natural o jurídica que venda en Colombia productos que cumplen estas condiciones. Antes de activar su cuenta, Repuestox verifica su identidad. El seller entrega y mantiene actualizados, como mínimo, su nombre o razón social, su documento de identificación, su dirección de notificaciones y sus teléfonos de contacto. [A CONFIRMAR POR ABOGADO] Documentos de existencia y representación, RUT y demás datos que debe conservar Repuestox, y por cuánto tiempo.
 
-Repuestox conserva esos datos y los usa para identificar al seller ante los compradores y las autoridades que lo requieran.
+Repuestox conserva esos datos en un registro. El comprador de un producto puede consultarlos para presentar una queja o reclamo, y Repuestox los entrega a la autoridad competente cuando la pida (artículo 53 de la Ley 1480 de 2011).
 
 ## 2. Qué se puede vender
 

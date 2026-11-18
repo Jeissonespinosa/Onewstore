@@ -4,19 +4,19 @@ Versión 2026.11.18 · Actualizado: 2026-11-18
 
 Aquí explicamos tus derechos cuando quieres devolver un producto, cuando un pago no corresponde a lo que compraste y cuando un producto falla. Estas reglas no limitan los derechos que la ley te da como consumidor.
 
-[A CONFIRMAR POR ABOGADO] Los plazos y artículos citados en este documento deben confirmarse contra el texto vigente de la Ley 1480 de 2011 (modificada por la Ley 2439 de 2024) antes de publicar.
+[A CONFIRMAR POR ABOGADO] Los artículos 47 y 51 de la Ley 1480 de 2011 se contrastaron con el texto vigente (Función Pública, con las modificaciones de la Ley 2439 de 2024). Quedan por confirmar el Decreto 587 de 2016 y los artículos 7 a 10.
 
 ## 1. Derecho de retracto
 
 Si compraste a distancia (por internet), puedes **retractarte** de la compra dentro de los **5 días hábiles** siguientes a la entrega del producto (artículo 47 de la Ley 1480 de 2011). Si lo haces, la compra se cancela y te devolvemos el dinero.
 
-Para ejercerlo, escríbenos por [CANAL DE ATENCIÓN] dentro de ese plazo indicando tu pedido. Debes devolver el producto en las mismas condiciones en que lo recibiste, y los costos de transporte de la devolución están a tu cargo.
+Para ejercerlo, escríbenos por [CANAL DE ATENCIÓN] dentro de ese plazo indicando tu pedido. Debes devolver el producto por los mismos medios y en las mismas condiciones en que lo recibiste, y los costos de transporte de la devolución están a tu cargo. Te devolvemos todo el dinero que pagaste, sin descuentos ni retenciones, en un máximo de **30 días calendario** desde que ejerciste el derecho.
 
 ## 2. Casos en que no aplica el retracto
 
-La ley solo permite las excepciones que ella misma establece; por ejemplo, los productos hechos a tu medida o claramente personalizados. No negamos un retracto por razones que la ley no prevea.
+La ley solo permite las excepciones que ella misma establece (artículo 47), por ejemplo: bienes hechos según tus especificaciones o claramente personalizados; bienes que por su naturaleza no pueden devolverse o pueden deteriorarse o caducar con rapidez; bienes perecederos; y bienes de uso personal. No negamos un retracto por razones que la ley no prevea.
 
-[A CONFIRMAR POR ABOGADO] Límites aplicables a piezas ya instaladas, usadas o sin empaque original, y la lista completa de excepciones vigentes.
+[A CONFIRMAR POR ABOGADO] Si algún repuesto cae en la excepción de «bienes de uso personal» o «no pueden ser devueltos», y qué límites aplican a piezas ya instaladas, usadas o sin empaque original.
 
 ## 3. Reversión del pago
 
@@ -51,7 +51,7 @@ La garantía no cubre daños por mal uso, instalación incorrecta, golpes, falta
 
 ## 8. Reembolsos
 
-Si procede un reembolso, lo hacemos por el mismo medio con el que pagaste. [A CONFIRMAR POR ABOGADO] Plazo del reembolso.
+Si procede un reembolso, lo hacemos por el mismo medio con el que pagaste. En el retracto, el plazo máximo es de 30 días calendario (artículo 47); si un producto pedido no está disponible y cancelas, el reembolso se hace en un máximo de 15 días calendario (artículo 50). [A CONFIRMAR POR ABOGADO] Plazo en garantías y reversiones.
 
 ## 9. Compras de talleres y empresas
 

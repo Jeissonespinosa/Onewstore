@@ -94,3 +94,21 @@ El plan **no supone** ninguna de estas respuestas: cada una deja un placeholder 
 - `AC-2` y `AC-3` en un checkout real (autenticado o con pago): solo el equipo, con datos ficticios.
 - `AC-5`: evidencia de la revisión del abogado en el PR.
 - `AC-7`: `python scripts/check-legal.py --prod` con salida 0, tras cerrar Q1, Q3, Q4 y Q5.
+
+---
+
+## E. Funcionalidad recomendada por la SIC (fuera del alcance de la spec 001)
+
+Origen: Guía de comercio electrónico de la SIC (abril 2022), leída el 2026-11-18; resumen en `research.md`, «Verificación». Son recomendaciones, no norma, pero D6 §3 las menciona y **no promete nada** hasta que existan. Decisión de Diego (2026-11-18): se anotan como pendientes.
+
+| # | Qué | Para qué | Quién | Dónde |
+|---|---|---|---|---|
+| E1 | **Formulario de solicitud de reversión del pago** visible en el sitio (por ejemplo, enlazado desde Devoluciones y garantías y desde el módulo de PQR) | Que el comprador pueda pedir la reversión (Ley 1480 art. 51; Decreto 587/2016) sin escribir un correo libre. Campos mínimos: pedido, causal (fraude, operación no solicitada, producto no recibido, producto distinto o defectuoso) y fecha en que supo del hecho | Equipo + Diego | Spec nueva (o ampliar la 005 o la 004 de contacto); necesita Q5 (canal de atención) |
+| E2 | **Constancia de la queja**, con fecha y causal, enviada al correo del comprador | Probar que se presentó dentro de los 5 días hábiles; la SIC la recomienda | Equipo | Misma spec que E1; depende de cómo se atiendan las PQR (Q5) |
+| E3 | **Proceso interno de reversión**: quién notifica a [PASARELA DE PAGO] y al emisor, y cómo se descuenta al seller | Cumplir los 15 días hábiles del decreto; D4 §7 y D6 §3 lo dejan `[A CONFIRMAR POR ABOGADO]` | Equipo + abogado (Q6) | Procedimiento escrito, antes de publicar D6 |
+| E4 | **Acuse de recibo del pedido** a más tardar el día calendario siguiente (producto, precio, forma de pago, tiempo de entrega) | D3 §5 ya lo promete; hay que comprobar que el correo de confirmación de VTEX lo cumple | Diego | Admin de VTEX (plantilla de correo de pedido); no es código del theme |
+
+**Cuando existan E1 y E2:** actualizar D6 §3 (quitar la frase «hoy no existen»), regenerar con `python scripts/gen-legal.py` y volver a correr `check-legal.py`.
+
+**Cómo completarlo:** crea la spec con la plantilla `specs/_template.md` (siguiente número libre: 016) y enlázala desde `specs/README.md`; mientras no exista, D3 §5 (E4) debe revisarse antes de publicar, porque promete el acuse.
+

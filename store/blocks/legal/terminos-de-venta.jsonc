@@ -27,7 +27,7 @@
   },
   "rich-text#legal-terminos-de-venta-1": {
     "props": {
-      "text": "## 1. Quién vende, quién cobra y quién envía\n\nEn cada producto y antes de pagar te mostramos qué seller lo ofrece. Repuestox cobra el pedido y lo envía a todo Colombia.\n\n[A CONFIRMAR POR ABOGADO] Contraparte del contrato de compraventa: el contrato se celebra entre el comprador y [A CONFIRMAR POR ABOGADO: el seller / Repuestox], y la responsabilidad de cada uno frente al comprador (garantía, retracto, reversión del pago) depende de esa respuesta.\n\nRepuestox identifica a cada seller y conserva sus datos de contacto, para que puedas ubicar a quien vendió el producto.",
+      "text": "## 1. Quién vende, quién cobra y quién envía\n\nEn cada producto y antes de pagar te mostramos qué seller lo ofrece. Repuestox cobra el pedido y lo envía a todo Colombia.\n\n**Contrato de compraventa:** el contrato se celebra entre el comprador y Repuestox, que vende los productos de los sellers, cobra el precio, envía el pedido y responde por la garantía, el retracto y la reversión del pago frente al comprador. El seller responde frente a Repuestox.\n\nRepuestox identifica a cada seller y conserva sus datos de contacto, para que puedas ubicar a quien vendió el producto.",
       "blockClass": "legal"
     }
   },

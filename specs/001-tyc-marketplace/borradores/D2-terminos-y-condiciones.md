@@ -12,7 +12,7 @@ Repuestox es operado por [RAZÓN SOCIAL], con NIT [NIT], dirección de notificac
 
 Repuestox es una plataforma de comercio electrónico para comprar repuestos, accesorios y herramientas para carros y motos. En ella, vendedores independientes (los «sellers») publican sus productos y Repuestox gestiona el cobro, el envío en todo Colombia y la atención a los compradores.
 
-[A CONFIRMAR POR ABOGADO] Contrato de compraventa: el contrato de compra de cada producto se celebra entre el comprador y [A CONFIRMAR POR ABOGADO: el seller / Repuestox]. En cada producto y en el pago te mostramos quién vende y quién envía.
+**Contrato de compraventa:** el contrato de compra de cada producto se celebra entre el comprador y Repuestox, que vende los productos de los sellers, cobra el precio, envía el pedido y responde por la garantía frente al comprador. El seller responde frente a Repuestox. En cada producto y en el pago te mostramos qué seller ofrece el producto y quién lo envía.
 
 ## 3. Quién puede usar el sitio
 

@@ -8,7 +8,7 @@ Estos términos explican cómo se compra en Repuestox: quién vende, cómo se pa
 
 En cada producto y antes de pagar te mostramos qué seller lo ofrece. Repuestox cobra el pedido y lo envía a todo Colombia.
 
-[A CONFIRMAR POR ABOGADO] Contraparte del contrato de compraventa: el contrato se celebra entre el comprador y [A CONFIRMAR POR ABOGADO: el seller / Repuestox], y la responsabilidad de cada uno frente al comprador (garantía, retracto, reversión del pago) depende de esa respuesta.
+**Contrato de compraventa:** el contrato se celebra entre el comprador y Repuestox, que vende los productos de los sellers, cobra el precio, envía el pedido y responde por la garantía, el retracto y la reversión del pago frente al comprador. El seller responde frente a Repuestox.
 
 Repuestox identifica a cada seller y conserva sus datos de contacto, para que puedas ubicar a quien vendió el producto.
 

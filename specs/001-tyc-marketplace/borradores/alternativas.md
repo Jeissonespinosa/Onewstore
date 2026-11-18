@@ -12,7 +12,7 @@ comercio electrónico (`research.md`, fila 11). Diego decidió (2026-11-17) que,
 indica que Repuestox no es solo intermediario, se aplica el cambio. **Actualización 2026-11-18:** la SIC
 (Concepto 22-51097) dice que una plataforma que cobra comisión por las ventas es portal de comercio
 electrónico y no de contacto (`research.md`, «Verificación»): la alternativa 2 queda descartada
-como punto de partida; la 1 es la hipótesis vigente y falta que el abogado fije la contraparte.
+como punto de partida; la 1 es la **adoptada**: Diego la fijó el 2026-11-18 y D2 §2 y D3 §1 ya la llevan como texto firme (sin aviso). El abogado puede revisarla (pregunta 1 de `research.md`).
 
 **Alternativa 1 — Repuestox como plataforma de comercio electrónico (hipótesis vigente).**
 «El contrato de compra se celebra entre el comprador y Repuestox, que vende los productos

@@ -1,4 +1,18 @@
 Ruta,Nodo,Especificacion,Campo,Valor
+/carros/accesorios,Accesorios,Material,Unico,Plástico
+/carros/accesorios,Accesorios,Material,Unico,Caucho
+/carros/accesorios,Accesorios,Material,Unico,Metal
+/carros/accesorios,Accesorios,Material,Unico,Tela
+/carros/accesorios,Accesorios,Material,Unico,Cuero sintético
+/carros/accesorios,Accesorios,Material,Unico,Acero inoxidable
+/carros/accesorios,Accesorios,Material,Unico,Aluminio
+/carros/accesorios,Accesorios,Color,Unico,Negro
+/carros/accesorios,Accesorios,Color,Unico,Gris
+/carros/accesorios,Accesorios,Color,Unico,Beige
+/carros/accesorios,Accesorios,Color,Unico,Cromado
+/carros/accesorios,Accesorios,Color,Unico,Transparente
+/carros/accesorios,Accesorios,Color,Unico,Rojo
+/carros/accesorios,Accesorios,Color,Unico,Azul
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,450
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,550
 /carros/baterias/baterias-para-carro,Baterías para carro,Amperaje de arranque (CCA),Unico,650
@@ -27,9 +41,26 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/baterias/baterias-para-furgon-camion-y-bus,Baterías para furgón, camión y bus,Placas,Unico,8D
 /carros/baterias/baterias-para-furgon-camion-y-bus,Baterías para furgón, camión y bus,Polaridad,Unico,Izquierda
 /carros/baterias/baterias-para-furgon-camion-y-bus,Baterías para furgón, camión y bus,Polaridad,Unico,Derecha
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Delantero
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Trasero
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Delantero izquierdo
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Delantero derecho
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Trasero izquierdo
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Posición,Unico,Trasero derecho
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Lado,Unico,Izquierdo
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Lado,Unico,Derecho
+/carros/carroceria-y-climatizacion,Carrocería y climatización,Lado,Unico,Ambos
+/carros/electrico-y-electronico,Eléctrico y electrónico,Voltaje,Unico,12V
+/carros/electrico-y-electronico,Eléctrico y electrónico,Voltaje,Unico,24V
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,35A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,50A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,70A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,90A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,100A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,120A
+/carros/electrico-y-electronico,Eléctrico y electrónico,Amperaje,Unico,150A
 /carros/filtros/filtros-de-aceite,Filtros de aceite,Tipo de filtro,Unico,Enroscable
 /carros/filtros/filtros-de-aceite,Filtros de aceite,Tipo de filtro,Unico,Cartucho
-/carros/filtros/filtros-de-aceite,Filtros de aceite,Marca del filtro,Unico,(abierto)
 /carros/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Panel
 /carros/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Redondo
 /carros/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Cónico deportivo
@@ -42,6 +73,42 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/filtros/filtros-de-combustible,Filtros de combustible,Tipo de filtro,Unico,De canastilla
 /carros/filtros/filtros-de-combustible,Filtros de combustible,Combustible,Unico,Gasolina
 /carros/filtros/filtros-de-combustible,Filtros de combustible,Combustible,Unico,Diésel
+/carros/frenos,Frenos,Posición,Unico,Delantero
+/carros/frenos,Frenos,Posición,Unico,Trasero
+/carros/frenos,Frenos,Posición,Unico,Delantero izquierdo
+/carros/frenos,Frenos,Posición,Unico,Delantero derecho
+/carros/frenos,Frenos,Posición,Unico,Trasero izquierdo
+/carros/frenos,Frenos,Posición,Unico,Trasero derecho
+/carros/frenos,Frenos,Sistema de freno,Unico,Disco
+/carros/frenos,Frenos,Sistema de freno,Unico,Tambor
+/carros/frenos,Frenos,Material,Unico,Cerámica
+/carros/frenos,Frenos,Material,Unico,Semimetálica
+/carros/frenos,Frenos,Material,Unico,Orgánica
+/carros/frenos,Frenos,Material,Unico,Metálica
+/carros/iluminacion,Iluminación,Posición,Unico,Delantero
+/carros/iluminacion,Iluminación,Posición,Unico,Trasero
+/carros/iluminacion,Iluminación,Posición,Unico,Delantero izquierdo
+/carros/iluminacion,Iluminación,Posición,Unico,Delantero derecho
+/carros/iluminacion,Iluminación,Posición,Unico,Trasero izquierdo
+/carros/iluminacion,Iluminación,Posición,Unico,Trasero derecho
+/carros/iluminacion,Iluminación,Lado,Unico,Izquierdo
+/carros/iluminacion,Iluminación,Lado,Unico,Derecho
+/carros/iluminacion,Iluminación,Lado,Unico,Ambos
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H1
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H3
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H4
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H7
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H11
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,H13
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,9005
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,9006
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,LED
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,HID
+/carros/iluminacion,Iluminación,Tipo de bombillo,Unico,Halógeno
+/carros/iluminacion,Iluminación,Color de luz,Unico,Blanco
+/carros/iluminacion,Iluminación,Color de luz,Unico,Blanco frío
+/carros/iluminacion,Iluminación,Color de luz,Unico,Amarillo
+/carros/iluminacion,Iluminación,Color de luz,Unico,Azulado
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,Runflat
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,Reforzada (XL)
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,M+S (barro y nieve)
@@ -94,11 +161,11 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de caja,Multiple,Automática
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de caja,Multiple,CVT
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de caja,Multiple,DSG (doble embrague)
-/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Especificación,Multiple,ATF Dexron
-/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Especificación,Multiple,ATF Mercon
-/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Especificación,Multiple,80W90
-/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Especificación,Multiple,75W90
-/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Especificación,Multiple,85W140
+/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de fluido,Multiple,ATF Dexron
+/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de fluido,Multiple,ATF Mercon
+/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de fluido,Multiple,80W90
+/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de fluido,Multiple,75W90
+/carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Tipo de fluido,Multiple,85W140
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Presentación,Unico,1 L
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Presentación,Unico,4 L
 /carros/lubricantes-y-mantenimiento/aceite-de-transmision,Aceite de transmisión,Presentación,Unico,Galón
@@ -118,8 +185,8 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/lubricantes-y-mantenimiento/grasas,Grasas,Presentación,Unico,500 g
 /carros/lubricantes-y-mantenimiento/grasas,Grasas,Presentación,Unico,1 kg
 /carros/lubricantes-y-mantenimiento/grasas,Grasas,Presentación,Unico,Cartucho
-/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Especificación,Multiple,ATF Dexron
-/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Especificación,Multiple,Hidráulico mineral
+/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Tipo de fluido,Multiple,ATF Dexron
+/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Tipo de fluido,Multiple,Hidráulico mineral
 /carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Presentación,Unico,300 ml
 /carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Presentación,Unico,500 ml
 /carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica,Líquido de dirección hidráulica,Presentación,Unico,1 L
@@ -139,6 +206,83 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Refrigerante y anticongelante,Presentación,Unico,1 L
 /carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Refrigerante y anticongelante,Presentación,Unico,4 L
 /carros/lubricantes-y-mantenimiento/refrigerante-y-anticongelante,Refrigerante y anticongelante,Presentación,Unico,Galón
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Admisión
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Escape
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Superior
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Inferior
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Delantero
+/carros/motor-y-transmision,Motor y transmisión,Posición,Unico,Trasero
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Delantero
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Trasero
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Delantero izquierdo
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Delantero derecho
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Trasero izquierdo
+/carros/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Trasero derecho
+/carros/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Izquierdo
+/carros/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Derecho
+/carros/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Ambos
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,12V
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,USB
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,Batería
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,Cableado directo
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Bluetooth
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Wi-Fi
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,USB
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Cable
+/carros/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,GPS
+/herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Unidad
+/herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Caja
+/herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Rollo
+/herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Metro
+/herramientas/consumibles-de-taller,Consumibles de taller,Presentación,Unico,Juego
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,250 ml
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,500 ml
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,1 L
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,4 L
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,Galón
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,Aerosol
+/herramientas/cuidado-y-limpieza,Cuidado y limpieza,Presentación,Unico,Unidad
+/herramientas/diagnostico-y-medicion,Diagnóstico y medición,Conexión,Multiple,OBD2
+/herramientas/diagnostico-y-medicion,Diagnóstico y medición,Conexión,Multiple,Bluetooth
+/herramientas/diagnostico-y-medicion,Diagnóstico y medición,Conexión,Multiple,USB
+/herramientas/diagnostico-y-medicion,Diagnóstico y medición,Conexión,Multiple,Wi-Fi
+/herramientas/diagnostico-y-medicion,Diagnóstico y medición,Conexión,Multiple,Analógico
+/herramientas/equipos-de-lavado-y-pulido,Equipos de lavado y pulido,Alimentación,Unico,Eléctrica 110V
+/herramientas/equipos-de-lavado-y-pulido,Equipos de lavado y pulido,Alimentación,Unico,Eléctrica 220V
+/herramientas/equipos-de-lavado-y-pulido,Equipos de lavado y pulido,Alimentación,Unico,Manual
+/herramientas/equipos-de-lavado-y-pulido,Equipos de lavado y pulido,Alimentación,Unico,Batería
+/herramientas/equipos-de-taller,Equipos de taller,Capacidad,Unico,2 toneladas
+/herramientas/equipos-de-taller,Equipos de taller,Capacidad,Unico,3 toneladas
+/herramientas/equipos-de-taller,Equipos de taller,Capacidad,Unico,5 toneladas
+/herramientas/equipos-de-taller,Equipos de taller,Capacidad,Unico,10 toneladas
+/herramientas/equipos-de-taller,Equipos de taller,Capacidad,Unico,Más de 10 toneladas
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Alimentación,Unico,Eléctrica 110V
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Alimentación,Unico,Eléctrica 220V
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Alimentación,Unico,Neumática
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Alimentación,Unico,Batería
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Presentación,Unico,Unidad
+/herramientas/herramientas-electricas-y-neumaticas,Herramientas eléctricas y neumáticas,Presentación,Unico,Kit
+/herramientas/herramientas-manuales,Herramientas manuales,Medida,Unico,Milimétrica
+/herramientas/herramientas-manuales,Herramientas manuales,Medida,Unico,En pulgadas
+/herramientas/herramientas-manuales,Herramientas manuales,Medida,Unico,Mixta
+/herramientas/herramientas-manuales,Herramientas manuales,Material,Unico,Acero cromo vanadio
+/herramientas/herramientas-manuales,Herramientas manuales,Material,Unico,Acero al carbono
+/herramientas/herramientas-manuales,Herramientas manuales,Material,Unico,Acero inoxidable
+/herramientas/herramientas-manuales,Herramientas manuales,Presentación,Unico,Unidad
+/herramientas/herramientas-manuales,Herramientas manuales,Presentación,Unico,Juego
+/motos/accesorios,Accesorios,Material,Unico,Plástico
+/motos/accesorios,Accesorios,Material,Unico,Caucho
+/motos/accesorios,Accesorios,Material,Unico,Metal
+/motos/accesorios,Accesorios,Material,Unico,Tela
+/motos/accesorios,Accesorios,Material,Unico,Aluminio
+/motos/accesorios,Accesorios,Material,Unico,Acero
+/motos/accesorios,Accesorios,Material,Unico,Fibra de carbono
+/motos/accesorios,Accesorios,Color,Unico,Negro
+/motos/accesorios,Accesorios,Color,Unico,Gris
+/motos/accesorios,Accesorios,Color,Unico,Rojo
+/motos/accesorios,Accesorios,Color,Unico,Azul
+/motos/accesorios,Accesorios,Color,Unico,Transparente
+/motos/accesorios,Accesorios,Color,Unico,Cromado
 /motos/baterias/baterias-para-moto,Baterías para moto,Voltaje,Unico,6 V
 /motos/baterias/baterias-para-moto,Baterías para moto,Voltaje,Unico,12 V
 /motos/baterias/baterias-para-moto,Baterías para moto,Amperaje (Ah),Unico,2.5
@@ -152,9 +296,47 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/baterias/baterias-para-moto,Baterías para moto,Tipo de batería,Unico,Sellada (AGM)
 /motos/baterias/baterias-para-moto,Baterías para moto,Tipo de batería,Unico,Gel
 /motos/baterias/baterias-para-moto,Baterías para moto,Tipo de batería,Unico,Litio
+/motos/cascos,Cascos,Talla,Unico,XS
+/motos/cascos,Cascos,Talla,Unico,S
+/motos/cascos,Cascos,Talla,Unico,M
+/motos/cascos,Cascos,Talla,Unico,L
+/motos/cascos,Cascos,Talla,Unico,XL
+/motos/cascos,Cascos,Talla,Unico,XXL
+/motos/cascos,Cascos,Talla,Unico,XXXL
+/motos/cascos,Cascos,Certificación,Multiple,DOT
+/motos/cascos,Cascos,Certificación,Multiple,ECE 22.05
+/motos/cascos,Cascos,Certificación,Multiple,ECE 22.06
+/motos/cascos,Cascos,Certificación,Multiple,NTC 4533
+/motos/cascos,Cascos,Certificación,Multiple,SNELL
+/motos/cascos,Cascos,Color,Unico,Negro
+/motos/cascos,Cascos,Color,Unico,Blanco
+/motos/cascos,Cascos,Color,Unico,Gris
+/motos/cascos,Cascos,Color,Unico,Rojo
+/motos/cascos,Cascos,Color,Unico,Azul
+/motos/cascos,Cascos,Color,Unico,Verde
+/motos/cascos,Cascos,Color,Unico,Amarillo
+/motos/cascos,Cascos,Color,Unico,Multicolor
+/motos/cascos,Cascos,Tipo de visor,Unico,Transparente
+/motos/cascos,Cascos,Tipo de visor,Unico,Oscuro
+/motos/cascos,Cascos,Tipo de visor,Unico,Espejado
+/motos/cascos,Cascos,Tipo de visor,Unico,Fotocromático
+/motos/chasis-y-carroceria,Chasis y carrocería,Posición,Unico,Delantera
+/motos/chasis-y-carroceria,Chasis y carrocería,Posición,Unico,Trasera
+/motos/chasis-y-carroceria,Chasis y carrocería,Lado,Unico,Izquierdo
+/motos/chasis-y-carroceria,Chasis y carrocería,Lado,Unico,Derecho
+/motos/chasis-y-carroceria,Chasis y carrocería,Lado,Unico,Ambos
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Negro
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Rojo
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Azul
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Blanco
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Verde
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Naranja
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Cromado
+/motos/chasis-y-carroceria,Chasis y carrocería,Color,Unico,Sin pintar
+/motos/electrico-y-electronico,Eléctrico y electrónico,Voltaje,Unico,6V
+/motos/electrico-y-electronico,Eléctrico y electrónico,Voltaje,Unico,12V
 /motos/filtros/filtros-de-aceite,Filtros de aceite,Tipo de filtro,Unico,Enroscable
 /motos/filtros/filtros-de-aceite,Filtros de aceite,Tipo de filtro,Unico,Cartucho
-/motos/filtros/filtros-de-aceite,Filtros de aceite,Marca del filtro,Unico,(abierto)
 /motos/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Panel
 /motos/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Redondo
 /motos/filtros/filtros-de-aire,Filtros de aire,Tipo de filtro,Unico,Cónico deportivo
@@ -165,6 +347,24 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/filtros/filtros-de-combustible,Filtros de combustible,Tipo de filtro,Unico,De canastilla
 /motos/filtros/filtros-de-combustible,Filtros de combustible,Combustible,Unico,Gasolina
 /motos/filtros/filtros-de-combustible,Filtros de combustible,Combustible,Unico,Diésel
+/motos/frenos,Frenos,Posición,Unico,Delantera
+/motos/frenos,Frenos,Posición,Unico,Trasera
+/motos/frenos,Frenos,Sistema de freno,Unico,Disco
+/motos/frenos,Frenos,Sistema de freno,Unico,Tambor
+/motos/frenos,Frenos,Material,Unico,Cerámica
+/motos/frenos,Frenos,Material,Unico,Semimetálica
+/motos/frenos,Frenos,Material,Unico,Orgánica
+/motos/frenos,Frenos,Material,Unico,Sinterizada
+/motos/iluminacion,Iluminación,Posición,Unico,Delantera
+/motos/iluminacion,Iluminación,Posición,Unico,Trasera
+/motos/iluminacion,Iluminación,Tipo de bombillo,Unico,H4
+/motos/iluminacion,Iluminación,Tipo de bombillo,Unico,H6
+/motos/iluminacion,Iluminación,Tipo de bombillo,Unico,H7
+/motos/iluminacion,Iluminación,Tipo de bombillo,Unico,LED
+/motos/iluminacion,Iluminación,Tipo de bombillo,Unico,Halógeno
+/motos/iluminacion,Iluminación,Color de luz,Unico,Blanco
+/motos/iluminacion,Iluminación,Color de luz,Unico,Amarillo
+/motos/iluminacion,Iluminación,Color de luz,Unico,Azulado
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,(abierto)
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Uso,Multiple,Enduro
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Uso,Multiple,Cross
@@ -253,3 +453,50 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Lubricante de cadena,Presentación,Unico,500 ml
 /motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Lubricante de cadena,Tipo de cadena,Multiple,Con reten (O-ring)
 /motos/lubricantes-y-mantenimiento/lubricante-de-cadena,Lubricante de cadena,Tipo de cadena,Multiple,Sin reten
+/motos/motor-y-transmision,Motor y transmisión,Posición,Unico,Admisión
+/motos/motor-y-transmision,Motor y transmisión,Posición,Unico,Escape
+/motos/motor-y-transmision,Motor y transmisión,Posición,Unico,Superior
+/motos/motor-y-transmision,Motor y transmisión,Posición,Unico,Inferior
+/motos/motor-y-transmision,Motor y transmisión,Sobremedida,Unico,STD (estándar)
+/motos/motor-y-transmision,Motor y transmisión,Sobremedida,Unico,0.25
+/motos/motor-y-transmision,Motor y transmisión,Sobremedida,Unico,0.50
+/motos/motor-y-transmision,Motor y transmisión,Sobremedida,Unico,0.75
+/motos/motor-y-transmision,Motor y transmisión,Sobremedida,Unico,1.00
+/motos/ropa,Ropa,Talla,Unico,XS
+/motos/ropa,Ropa,Talla,Unico,S
+/motos/ropa,Ropa,Talla,Unico,M
+/motos/ropa,Ropa,Talla,Unico,L
+/motos/ropa,Ropa,Talla,Unico,XL
+/motos/ropa,Ropa,Talla,Unico,XXL
+/motos/ropa,Ropa,Talla,Unico,XXXL
+/motos/ropa,Ropa,Color,Unico,Negro
+/motos/ropa,Ropa,Color,Unico,Gris
+/motos/ropa,Ropa,Color,Unico,Rojo
+/motos/ropa,Ropa,Color,Unico,Azul
+/motos/ropa,Ropa,Color,Unico,Verde
+/motos/ropa,Ropa,Color,Unico,Amarillo
+/motos/ropa,Ropa,Color,Unico,Multicolor
+/motos/ropa,Ropa,Material,Unico,Cordura
+/motos/ropa,Ropa,Material,Unico,Cuero
+/motos/ropa,Ropa,Material,Unico,Textil
+/motos/ropa,Ropa,Material,Unico,Malla
+/motos/ropa,Ropa,Material,Unico,Impermeable
+/motos/ropa,Ropa,Protecciones,Multiple,Hombros
+/motos/ropa,Ropa,Protecciones,Multiple,Codos
+/motos/ropa,Ropa,Protecciones,Multiple,Espalda
+/motos/ropa,Ropa,Protecciones,Multiple,Rodillas
+/motos/ropa,Ropa,Protecciones,Multiple,Pecho
+/motos/ropa,Ropa,Protecciones,Multiple,Sin protecciones
+/motos/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Delantera
+/motos/suspension-y-direccion,Suspensión y dirección,Posición,Unico,Trasera
+/motos/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Izquierdo
+/motos/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Derecho
+/motos/suspension-y-direccion,Suspensión y dirección,Lado,Unico,Ambos
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,12V
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,USB
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Alimentación,Unico,Batería
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Bluetooth
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Wi-Fi
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,USB
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,Cable
+/motos/tecnologia-y-seguridad,Tecnología y seguridad,Conexión,Multiple,GPS

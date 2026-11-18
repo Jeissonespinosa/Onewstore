@@ -14,6 +14,7 @@ aparece en ningun filtro y es invisible para quien busca.
     python3 scripts/plantilla-seller.py
 """
 import csv, json, os, subprocess, sys, time, urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SALIDA = os.path.join(ROOT, 'catalogo', 'plantilla-seller.csv')
@@ -60,17 +61,33 @@ def main():
     walk(arbol, [])
 
     tipos = {5: 'Único', 6: 'Lista', 7: 'Múltiple', 1: 'Texto', 3: 'Número'}
+    # Las especificaciones se repiten mucho entre categorias (se heredan), asi
+    # que se consultan una vez por FieldId y no una vez por categoria: son
+    # ~150 campos contra ~600 categorias.
+    cache = {}
+
+    def campo(fid):
+        if fid not in cache:
+            d = get(tk, '/api/catalog/pvt/specification/%d' % fid)
+            vals = (get(tk, '/api/catalog_system/pub/specification/fieldvalue/%d' % fid) or []
+                    ) if d.get('IsActive') and d.get('IsFilter') else []
+            cache[fid] = (d, [v['Value'] for v in vals])
+        return cache[fid]
+
+    listas = dict(zip([h[0] for h in hojas], ThreadPoolExecutor(8).map(
+        lambda cid: get(tk, '/api/catalog_system/pub/specification/field/listTreeByCategoryId/%d' % cid) or [],
+        [h[0] for h in hojas])))
+    for fid in {f['FieldId'] for v in listas.values() for f in v}:
+        campo(fid)
+
     filas = []
     for cid, camino, url in hojas:
-        specs = get(tk, '/api/catalog_system/pub/specification/field/listTreeByCategoryId/%d' % cid) or []
         detalle = []
-        for f in specs:
-            d = get(tk, '/api/catalog/pvt/specification/%d' % f['FieldId'])
+        for f in listas[cid]:
+            d, vals = campo(f['FieldId'])
             if not d.get('IsActive') or not d.get('IsFilter'):
                 continue            # inactivas y no filtrables: no las llena el seller
-            vals = get(tk, '/api/catalog_system/pub/specification/fieldvalue/%d' % f['FieldId']) or []
-            detalle.append((d['Name'], tipos.get(d['FieldTypeId'], d['FieldTypeId']),
-                            [v['Value'] for v in vals]))
+            detalle.append((d['Name'], tipos.get(d['FieldTypeId'], d['FieldTypeId']), vals))
         for nombre, tipo, vals in sorted(detalle):
             filas.append({
                 'Ruta': url.split('.com.br')[-1] or '/'.join(camino),

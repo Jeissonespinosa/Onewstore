@@ -3882,6 +3882,34 @@
     }
   ],
   "_filtros": {
+    "/carros/accesorios": [
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Plástico",
+          "Caucho",
+          "Metal",
+          "Tela",
+          "Cuero sintético",
+          "Acero inoxidable",
+          "Aluminio"
+        ]
+      },
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Negro",
+          "Gris",
+          "Beige",
+          "Cromado",
+          "Transparente",
+          "Rojo",
+          "Azul"
+        ]
+      }
+    ],
     "/carros/baterias/baterias-para-carro": [
       {
         "nombre": "Amperaje de arranque (CCA)",
@@ -3956,6 +3984,52 @@
         ]
       }
     ],
+    "/carros/carroceria-y-climatizacion": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantero",
+          "Trasero",
+          "Delantero izquierdo",
+          "Delantero derecho",
+          "Trasero izquierdo",
+          "Trasero derecho"
+        ]
+      },
+      {
+        "nombre": "Lado",
+        "tipo": "unico",
+        "valores": [
+          "Izquierdo",
+          "Derecho",
+          "Ambos"
+        ]
+      }
+    ],
+    "/carros/electrico-y-electronico": [
+      {
+        "nombre": "Voltaje",
+        "tipo": "unico",
+        "valores": [
+          "12V",
+          "24V"
+        ]
+      },
+      {
+        "nombre": "Amperaje",
+        "tipo": "unico",
+        "valores": [
+          "35A",
+          "50A",
+          "70A",
+          "90A",
+          "100A",
+          "120A",
+          "150A"
+        ]
+      }
+    ],
     "/carros/filtros/filtros-de-aceite": [
       {
         "nombre": "Tipo de filtro",
@@ -3964,11 +4038,6 @@
           "Enroscable",
           "Cartucho"
         ]
-      },
-      {
-        "nombre": "Marca del filtro",
-        "tipo": "unico",
-        "valores": []
       }
     ],
     "/carros/filtros/filtros-de-aire": [
@@ -4016,6 +4085,88 @@
         "valores": [
           "Gasolina",
           "Diésel"
+        ]
+      }
+    ],
+    "/carros/frenos": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantero",
+          "Trasero",
+          "Delantero izquierdo",
+          "Delantero derecho",
+          "Trasero izquierdo",
+          "Trasero derecho"
+        ]
+      },
+      {
+        "nombre": "Sistema de freno",
+        "tipo": "unico",
+        "valores": [
+          "Disco",
+          "Tambor"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Cerámica",
+          "Semimetálica",
+          "Orgánica",
+          "Metálica"
+        ]
+      }
+    ],
+    "/carros/iluminacion": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantero",
+          "Trasero",
+          "Delantero izquierdo",
+          "Delantero derecho",
+          "Trasero izquierdo",
+          "Trasero derecho"
+        ]
+      },
+      {
+        "nombre": "Lado",
+        "tipo": "unico",
+        "valores": [
+          "Izquierdo",
+          "Derecho",
+          "Ambos"
+        ]
+      },
+      {
+        "nombre": "Tipo de bombillo",
+        "tipo": "unico",
+        "valores": [
+          "H1",
+          "H3",
+          "H4",
+          "H7",
+          "H11",
+          "H13",
+          "9005",
+          "9006",
+          "LED",
+          "HID",
+          "Halógeno"
+        ]
+      },
+      {
+        "nombre": "Color de luz",
+        "tipo": "unico",
+        "valores": [
+          "Blanco",
+          "Blanco frío",
+          "Amarillo",
+          "Azulado"
         ]
       }
     ],
@@ -4155,7 +4306,7 @@
         ]
       },
       {
-        "nombre": "Especificación",
+        "nombre": "Tipo de fluido",
         "tipo": "multi",
         "valores": [
           "ATF Dexron",
@@ -4221,7 +4372,7 @@
     ],
     "/carros/lubricantes-y-mantenimiento/liquido-de-direccion-hidraulica": [
       {
-        "nombre": "Especificación",
+        "nombre": "Tipo de fluido",
         "tipo": "multi",
         "valores": [
           "ATF Dexron",
@@ -4288,6 +4439,207 @@
         ]
       }
     ],
+    "/carros/motor-y-transmision": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Admisión",
+          "Escape",
+          "Superior",
+          "Inferior",
+          "Delantero",
+          "Trasero"
+        ]
+      }
+    ],
+    "/carros/suspension-y-direccion": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantero",
+          "Trasero",
+          "Delantero izquierdo",
+          "Delantero derecho",
+          "Trasero izquierdo",
+          "Trasero derecho"
+        ]
+      },
+      {
+        "nombre": "Lado",
+        "tipo": "unico",
+        "valores": [
+          "Izquierdo",
+          "Derecho",
+          "Ambos"
+        ]
+      }
+    ],
+    "/carros/tecnologia-y-seguridad": [
+      {
+        "nombre": "Alimentación",
+        "tipo": "unico",
+        "valores": [
+          "12V",
+          "USB",
+          "Batería",
+          "Cableado directo"
+        ]
+      },
+      {
+        "nombre": "Conexión",
+        "tipo": "multi",
+        "valores": [
+          "Bluetooth",
+          "Wi-Fi",
+          "USB",
+          "Cable",
+          "GPS"
+        ]
+      }
+    ],
+    "/herramientas/consumibles-de-taller": [
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "Unidad",
+          "Caja",
+          "Rollo",
+          "Metro",
+          "Juego"
+        ]
+      }
+    ],
+    "/herramientas/cuidado-y-limpieza": [
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "250 ml",
+          "500 ml",
+          "1 L",
+          "4 L",
+          "Galón",
+          "Aerosol",
+          "Unidad"
+        ]
+      }
+    ],
+    "/herramientas/diagnostico-y-medicion": [
+      {
+        "nombre": "Conexión",
+        "tipo": "multi",
+        "valores": [
+          "OBD2",
+          "Bluetooth",
+          "USB",
+          "Wi-Fi",
+          "Analógico"
+        ]
+      }
+    ],
+    "/herramientas/equipos-de-lavado-y-pulido": [
+      {
+        "nombre": "Alimentación",
+        "tipo": "unico",
+        "valores": [
+          "Eléctrica 110V",
+          "Eléctrica 220V",
+          "Manual",
+          "Batería"
+        ]
+      }
+    ],
+    "/herramientas/equipos-de-taller": [
+      {
+        "nombre": "Capacidad",
+        "tipo": "unico",
+        "valores": [
+          "2 toneladas",
+          "3 toneladas",
+          "5 toneladas",
+          "10 toneladas",
+          "Más de 10 toneladas"
+        ]
+      }
+    ],
+    "/herramientas/herramientas-electricas-y-neumaticas": [
+      {
+        "nombre": "Alimentación",
+        "tipo": "unico",
+        "valores": [
+          "Eléctrica 110V",
+          "Eléctrica 220V",
+          "Neumática",
+          "Batería"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "Unidad",
+          "Kit"
+        ]
+      }
+    ],
+    "/herramientas/herramientas-manuales": [
+      {
+        "nombre": "Medida",
+        "tipo": "unico",
+        "valores": [
+          "Milimétrica",
+          "En pulgadas",
+          "Mixta"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Acero cromo vanadio",
+          "Acero al carbono",
+          "Acero inoxidable"
+        ]
+      },
+      {
+        "nombre": "Presentación",
+        "tipo": "unico",
+        "valores": [
+          "Unidad",
+          "Juego"
+        ]
+      }
+    ],
+    "/motos/accesorios": [
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Plástico",
+          "Caucho",
+          "Metal",
+          "Tela",
+          "Aluminio",
+          "Acero",
+          "Fibra de carbono"
+        ]
+      },
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Negro",
+          "Gris",
+          "Rojo",
+          "Azul",
+          "Transparente",
+          "Cromado"
+        ]
+      }
+    ],
     "/motos/baterias/baterias-para-moto": [
       {
         "nombre": "Voltaje",
@@ -4321,6 +4673,99 @@
         ]
       }
     ],
+    "/motos/cascos": [
+      {
+        "nombre": "Talla",
+        "tipo": "unico",
+        "valores": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ]
+      },
+      {
+        "nombre": "Certificación",
+        "tipo": "multi",
+        "valores": [
+          "DOT",
+          "ECE 22.05",
+          "ECE 22.06",
+          "NTC 4533",
+          "SNELL"
+        ]
+      },
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Negro",
+          "Blanco",
+          "Gris",
+          "Rojo",
+          "Azul",
+          "Verde",
+          "Amarillo",
+          "Multicolor"
+        ]
+      },
+      {
+        "nombre": "Tipo de visor",
+        "tipo": "unico",
+        "valores": [
+          "Transparente",
+          "Oscuro",
+          "Espejado",
+          "Fotocromático"
+        ]
+      }
+    ],
+    "/motos/chasis-y-carroceria": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantera",
+          "Trasera"
+        ]
+      },
+      {
+        "nombre": "Lado",
+        "tipo": "unico",
+        "valores": [
+          "Izquierdo",
+          "Derecho",
+          "Ambos"
+        ]
+      },
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Negro",
+          "Rojo",
+          "Azul",
+          "Blanco",
+          "Verde",
+          "Naranja",
+          "Cromado",
+          "Sin pintar"
+        ]
+      }
+    ],
+    "/motos/electrico-y-electronico": [
+      {
+        "nombre": "Voltaje",
+        "tipo": "unico",
+        "valores": [
+          "6V",
+          "12V"
+        ]
+      }
+    ],
     "/motos/filtros/filtros-de-aceite": [
       {
         "nombre": "Tipo de filtro",
@@ -4329,11 +4774,6 @@
           "Enroscable",
           "Cartucho"
         ]
-      },
-      {
-        "nombre": "Marca del filtro",
-        "tipo": "unico",
-        "valores": []
       }
     ],
     "/motos/filtros/filtros-de-aire": [
@@ -4371,6 +4811,64 @@
         "valores": [
           "Gasolina",
           "Diésel"
+        ]
+      }
+    ],
+    "/motos/frenos": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantera",
+          "Trasera"
+        ]
+      },
+      {
+        "nombre": "Sistema de freno",
+        "tipo": "unico",
+        "valores": [
+          "Disco",
+          "Tambor"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Cerámica",
+          "Semimetálica",
+          "Orgánica",
+          "Sinterizada"
+        ]
+      }
+    ],
+    "/motos/iluminacion": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantera",
+          "Trasera"
+        ]
+      },
+      {
+        "nombre": "Tipo de bombillo",
+        "tipo": "unico",
+        "valores": [
+          "H4",
+          "H6",
+          "H7",
+          "LED",
+          "Halógeno"
+        ]
+      },
+      {
+        "nombre": "Color de luz",
+        "tipo": "unico",
+        "valores": [
+          "Blanco",
+          "Amarillo",
+          "Azulado"
         ]
       }
     ],
@@ -4671,6 +5169,121 @@
         "valores": [
           "Con reten (O-ring)",
           "Sin reten"
+        ]
+      }
+    ],
+    "/motos/motor-y-transmision": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Admisión",
+          "Escape",
+          "Superior",
+          "Inferior"
+        ]
+      },
+      {
+        "nombre": "Sobremedida",
+        "tipo": "unico",
+        "valores": [
+          "STD (estándar)",
+          "0.25",
+          "0.50",
+          "0.75",
+          "1.00"
+        ]
+      }
+    ],
+    "/motos/ropa": [
+      {
+        "nombre": "Talla",
+        "tipo": "unico",
+        "valores": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL",
+          "XXXL"
+        ]
+      },
+      {
+        "nombre": "Color",
+        "tipo": "unico",
+        "valores": [
+          "Negro",
+          "Gris",
+          "Rojo",
+          "Azul",
+          "Verde",
+          "Amarillo",
+          "Multicolor"
+        ]
+      },
+      {
+        "nombre": "Material",
+        "tipo": "unico",
+        "valores": [
+          "Cordura",
+          "Cuero",
+          "Textil",
+          "Malla",
+          "Impermeable"
+        ]
+      },
+      {
+        "nombre": "Protecciones",
+        "tipo": "multi",
+        "valores": [
+          "Hombros",
+          "Codos",
+          "Espalda",
+          "Rodillas",
+          "Pecho",
+          "Sin protecciones"
+        ]
+      }
+    ],
+    "/motos/suspension-y-direccion": [
+      {
+        "nombre": "Posición",
+        "tipo": "unico",
+        "valores": [
+          "Delantera",
+          "Trasera"
+        ]
+      },
+      {
+        "nombre": "Lado",
+        "tipo": "unico",
+        "valores": [
+          "Izquierdo",
+          "Derecho",
+          "Ambos"
+        ]
+      }
+    ],
+    "/motos/tecnologia-y-seguridad": [
+      {
+        "nombre": "Alimentación",
+        "tipo": "unico",
+        "valores": [
+          "12V",
+          "USB",
+          "Batería"
+        ]
+      },
+      {
+        "nombre": "Conexión",
+        "tipo": "multi",
+        "valores": [
+          "Bluetooth",
+          "Wi-Fi",
+          "USB",
+          "Cable",
+          "GPS"
         ]
       }
     ]

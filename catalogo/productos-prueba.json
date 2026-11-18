@@ -1,0 +1,310 @@
+{
+  "_nota": "Productos de prueba para validar Cris de punta a punta. Cubren los tres casos de compatibilidad: uno solo, varios, y ninguno. Se crean con scripts/crear-productos-prueba.py",
+  "productos": [
+    {
+      "caso": "A · un vehiculo y un rango corto de años",
+      "ruta": "/carros/frenos/pastillas-de-freno",
+      "nombre": "Pastillas de freno Bosch delanteras Chevrolet Aveo",
+      "ref": "RX-TEST-001",
+      "marca": "Bosch",
+      "precio": 142900,
+      "stock": 25,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ],
+        "Sistema de freno": [
+          "Disco"
+        ],
+        "Material": [
+          "Semimetálica"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet"
+        ],
+        "Modelo": [
+          "Aveo"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ]
+      }
+    },
+    {
+      "caso": "B · un modelo, varios años (el caso del bomper BMW)",
+      "ruta": "/carros/carroceria-y-climatizacion/carroceria/bomperes-bumper",
+      "nombre": "Bómper delantero BMW Serie 1 E81 E82 E87",
+      "ref": "RX-TEST-002",
+      "marca": "Bosch",
+      "precio": 890000,
+      "stock": 4,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "BMW"
+        ],
+        "Modelo": [
+          "Serie 1"
+        ],
+        "Año": [
+          "2004",
+          "2005",
+          "2006",
+          "2007",
+          "2008",
+          "2009",
+          "2010",
+          "2011",
+          "2012",
+          "2013"
+        ]
+      }
+    },
+    {
+      "caso": "C · varios modelos de la misma marca",
+      "ruta": "/carros/suspension-y-direccion/amortiguadores",
+      "nombre": "Amortiguador delantero Monroe Renault Logan Sandero Duster",
+      "ref": "RX-TEST-003",
+      "marca": "Bosch",
+      "precio": 268000,
+      "stock": 12,
+      "specs": {
+        "Posición": [
+          "Delantero"
+        ],
+        "Lado": [
+          "Ambos"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Renault"
+        ],
+        "Modelo": [
+          "Logan",
+          "Sandero",
+          "Duster"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "caso": "D · varias marcas (universal por medida)",
+      "ruta": "/carros/filtros/filtros-de-aceite",
+      "nombre": "Filtro de aceite Mann W 712/75 multimarca",
+      "ref": "RX-TEST-004",
+      "marca": "Mann-Filter",
+      "precio": 38900,
+      "stock": 60,
+      "specs": {
+        "Tipo de filtro": [
+          "Enroscable"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Chevrolet",
+          "Renault",
+          "Volkswagen",
+          "Mazda"
+        ],
+        "Modelo": [
+          "Aveo",
+          "Logan",
+          "Gol",
+          "Mazda 2"
+        ],
+        "Año": [
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ]
+      }
+    },
+    {
+      "caso": "E · SIN compatibilidad: le sirve a cualquier carro",
+      "ruta": "/carros/lubricantes-y-mantenimiento/liquido-de-frenos",
+      "nombre": "Líquido de frenos Bosch DOT 4 500 ml",
+      "ref": "RX-TEST-005",
+      "marca": "Bosch",
+      "precio": 24900,
+      "stock": 80,
+      "specs": {
+        "Norma DOT": [
+          "DOT 4"
+        ],
+        "Presentación": [
+          "500 ml"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "F · herramienta: no existe compatibilidad de vehiculo",
+      "ruta": "/herramientas/herramientas-manuales/llaves-y-copas",
+      "nombre": "Juego de copas Stanley 40 piezas 1/2 pulgada",
+      "ref": "RX-TEST-006",
+      "marca": "Bosch",
+      "precio": 189000,
+      "stock": 15,
+      "specs": {
+        "Medida": [
+          "En pulgadas"
+        ],
+        "Presentación": [
+          "Juego"
+        ],
+        "Material": [
+          "Acero cromo vanadio"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "G · moto con compatibilidad",
+      "ruta": "/motos/motor-y-transmision/guayas-y-cables/guayas-de-clutch",
+      "nombre": "Guaya de clutch Bajaj Boxer CT 100",
+      "ref": "RX-TEST-007",
+      "marca": "Bosch",
+      "precio": 18500,
+      "stock": 40,
+      "specs": {},
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj"
+        ],
+        "Modelo": [
+          "Boxer CT 100"
+        ],
+        "Año": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ]
+      }
+    },
+    {
+      "caso": "H · moto sin compatibilidad: aceite universal",
+      "ruta": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t",
+      "nombre": "Aceite Motul 3000 4T 20W50 mineral 1 L",
+      "ref": "RX-TEST-008",
+      "marca": "Motul",
+      "precio": 42900,
+      "stock": 50,
+      "specs": {
+        "Viscosidad": [
+          "20W50"
+        ],
+        "Tipo de aceite": [
+          "Mineral"
+        ],
+        "Presentación": [
+          "1 L"
+        ],
+        "Norma JASO": [
+          "MA2"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "I · casco: sin compatibilidad de modelo, pero con talla",
+      "ruta": "/motos/cascos/cascos-integrales",
+      "nombre": "Casco integral Shaft talla M negro mate",
+      "ref": "RX-TEST-009",
+      "marca": "Bosch",
+      "precio": 265000,
+      "stock": 8,
+      "specs": {
+        "Talla": [
+          "M"
+        ],
+        "Color": [
+          "Negro"
+        ],
+        "Certificación": [
+          "DOT",
+          "NTC 4533"
+        ]
+      },
+      "compat": {}
+    },
+    {
+      "caso": "J · llanta de moto con medida",
+      "ruta": "/motos/llantas-y-rines/llantas/llantas-traseras",
+      "nombre": "Llanta trasera Vee Rubber 100/90-17 VRM 189",
+      "ref": "RX-TEST-010",
+      "marca": "Vee Rubber",
+      "precio": 178000,
+      "stock": 18,
+      "specs": {
+        "Uso": [
+          "Ciudad",
+          "Multipropósito"
+        ],
+        "Construcción": [
+          "Diagonal (convencional)"
+        ],
+        "Tipo de montaje": [
+          "Con neumático"
+        ]
+      },
+      "compat": {
+        "Marca vehículo": [
+          "Bajaj",
+          "AKT",
+          "Honda"
+        ],
+        "Modelo": [
+          "Boxer CT 100",
+          "Pulsar 150",
+          "AK 110 Special",
+          "CB 110"
+        ],
+        "Año": [
+          "2018",
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ]
+      }
+    }
+  ]
+}

@@ -233,7 +233,11 @@ export default function Cris({
   /* Navega a la categoria con el vehiculo aplicado como filtro, o a la
      busqueda libre si no hay categoria. */
   const irA = (nodo, veh, llanta) => {
-    const v = veh || vehiculo
+    /* El filtro de vehiculo solo se aplica donde discrimina. En herramientas
+       no existe compatibilidad: si se aplicara, la pagina saldria vacia
+       (comprobado: herramientas + Chevrolet = 0 productos). */
+    const destinoSinVehiculo = nodo && norm(nodo.path).indexOf('/herramientas') === 0
+    const v = destinoSinVehiculo ? null : veh || vehiculo
     const segmentos = []
     const llaves = []
     if (nodo) {

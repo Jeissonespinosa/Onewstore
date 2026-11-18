@@ -505,67 +505,78 @@ def check_sinonimos_vacios(tree):
     return sorted(bad)
 
 
+def _rutas_de_nodos(tree):
+    """{ruta: nombre} de macros, subcategorias y hojas."""
+    rutas = {}
+    for seccion in [x for x in tree if not x.startswith('_')]:
+        for macro in tree[seccion]:
+            base = '/%s/%s' % (slugify(seccion), macro.get('slug') or slugify(macro['nombre']))
+            rutas[base] = macro['nombre']
+            for sub in macro.get('subs', []):
+                pre = base
+                if sub.get('nombre'):
+                    pre = '%s/%s' % (base, sub.get('slug') or slugify(sub['nombre']))
+                    rutas[pre] = sub['nombre']
+                for t in sub.get('tipos', []):
+                    nombre = t.get('nombre') if isinstance(t, dict) else t
+                    rutas['%s/%s' % (pre, slugify(nombre))] = nombre
+    return rutas
+
+
 def check_filtros(tree):
-    """_filtros define las especificaciones filtrables de cada tipo de producto
-    ("Aceite de motor" -> Viscosidad, Tipo de aceite, Presentacion...).
+    """_filtros define las especificaciones filtrables de cada nodo, indexado
+    por RUTA y no por nombre.
 
-    No crea ni quita categorias: son atributos que describen la variante. La
-    regla del catalogo es que sea categoria lo que la gente busca (el nombre
-    del producto) y filtro lo que describe la variante.
+    Por nombre era ambiguo y peligroso: "Filtros de aceite" existe en carros y
+    en motos, y una carga a ciegas habria creado las especificaciones solo en
+    una de las dos sin avisar. En VTEX esto no se puede deshacer.
 
-    Se valida que cada clave sea una hoja real del arbol, que el tipo de campo
-    sea 'unico' o 'multi' (en VTEX es inmutable: cambiarlo obliga a crear otra
-    especificacion y re-etiquetar los productos) y que no haya valores
-    repetidos dentro de una misma especificacion.
+    Se puede colgar de una macro, de una subcategoria o de una hoja: las
+    especificaciones se HEREDAN hacia abajo, asi que lo comun va arriba. Los
+    cuatro tipos de llanta comparten Caracteristicas, Construccion e Indice de
+    carga: se definen una vez en /carros/llantas-y-rines/llantas.
+
+    El tipo de campo en VTEX es inmutable, por eso solo se aceptan 'unico' y
+    'multi' y se valida antes de crear nada.
     """
-    hojas = {t.get('nombre') if isinstance(t, dict) else t
-             for seccion in [k for k in tree if not k.startswith('_')]
-             for macro in tree[seccion] for sub in macro.get('subs', [])
-             for t in sub.get('tipos', [])}
+    rutas = _rutas_de_nodos(tree)
     bad = []
-    for hoja, specs in (tree.get('_filtros') or {}).items():
-        if hoja not in hojas:
-            bad.append((hoja, 'no es una hoja del arbol'))
+    for ruta, specs in (tree.get('_filtros') or {}).items():
+        if ruta not in rutas:
+            bad.append((ruta, 'no corresponde a ningun nodo del arbol'))
         for spec in specs:
             if spec.get('tipo') not in ('unico', 'multi'):
-                bad.append((hoja, '%r: tipo %r (debe ser unico o multi)'
+                bad.append((ruta, '%r: tipo %r (debe ser unico o multi)'
                             % (spec.get('nombre'), spec.get('tipo'))))
             valores = [norm(v) for v in spec.get('valores') or []]
             repes = {v for v in valores if valores.count(v) > 1}
             if repes:
-                bad.append((hoja, '%r: valores repetidos %s' % (spec.get('nombre'), sorted(repes))))
+                bad.append((ruta, '%r: valores repetidos %s' % (spec.get('nombre'), sorted(repes))))
+        nombres = [norm(x.get('nombre')) for x in specs]
+        dup = {n for n in nombres if nombres.count(n) > 1}
+        if dup:
+            bad.append((ruta, 'especificaciones repetidas %s' % sorted(dup)))
     if bad:
         print('\n  FILTROS mal definidos:')
-        for hoja, msg in sorted(set(bad)):
-            print('   %-36s %s' % (hoja, msg))
+        for ruta, msg in sorted(set(bad)):
+            print('   %-44s %s' % (ruta, msg))
     else:
         n = sum(len(v) for v in (tree.get('_filtros') or {}).values())
-        print('  filtros por tipo: %d especificaciones en %d tipos'
+        print('  filtros: %d especificaciones en %d nodos'
               % (n, len(tree.get('_filtros') or {})))
     return sorted(set(bad))
 
 
 def export_filtros(tree):
-    """CSV para crear las especificaciones en el admin: una fila por
-    (tipo de producto, especificacion, tipo de campo, valor)."""
+    """CSV para el admin: una fila por (nodo, especificacion, campo, valor)."""
     path = os.path.join(CAT, 'filtros-por-tipo.csv')
-    filas = [('Tipo de producto', 'Ruta', 'Especificacion', 'Campo', 'Valor')]
-    rutas = {}
-    for seccion in [k for k in tree if not k.startswith('_')]:
-        for macro in tree[seccion]:
-            for sub in macro.get('subs', []):
-                partes = [slugify(seccion), macro.get('slug') or slugify(macro['nombre'])]
-                if sub.get('nombre'):
-                    partes.append(sub.get('slug') or slugify(sub['nombre']))
-                for t in sub.get('tipos', []):
-                    nombre = t.get('nombre') if isinstance(t, dict) else t
-                    rutas.setdefault(nombre, '/' + '/'.join(partes + [slugify(nombre)]))
-    for hoja, specs in (tree.get('_filtros') or {}).items():
+    rutas = _rutas_de_nodos(tree)
+    filas = [('Ruta', 'Nodo', 'Especificacion', 'Campo', 'Valor')]
+    for ruta, specs in (tree.get('_filtros') or {}).items():
         for spec in specs:
             campo = 'Multiple' if spec.get('tipo') == 'multi' else 'Unico'
-            valores = spec.get('valores') or ['(abierto)']
-            for valor in valores:
-                filas.append((hoja, rutas.get(hoja, ''), spec.get('nombre'), campo, valor))
+            for valor in (spec.get('valores') or ['(abierto)']):
+                filas.append((ruta, rutas.get(ruta, ''), spec.get('nombre'), campo, valor))
     texto = '\n'.join(','.join(csv_safe(c) for c in f) for f in filas) + '\n'
     if DRY_RUN:
         print('  [dry-run] %-36s %5d filas' % (os.path.relpath(path, ROOT), len(filas) - 1))

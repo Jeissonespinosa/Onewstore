@@ -2899,7 +2899,8 @@
             "Sensores de desgaste de pastillas"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Suspensión y dirección",
@@ -2933,7 +2934,8 @@
             "Ballestas (muelles de hoja)"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Eléctrico y electrónico",
@@ -3003,7 +3005,8 @@
             "Luces de placa y cortesía"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Motor y transmisión",
@@ -3150,7 +3153,8 @@
             "Mangueras y válvulas GNV"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Accesorios",
@@ -3219,7 +3223,8 @@
             "Kits de instalación"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Carrocería y climatización",
@@ -3293,7 +3298,8 @@
             "Difusores de aire"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Tecnología y seguridad",
@@ -3329,7 +3335,8 @@
             "Alcoholímetros"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     }
   ],
   "Motos": [
@@ -3510,7 +3517,8 @@
             "Guayas de tacómetro"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Baterías",
@@ -3546,7 +3554,8 @@
             "Depósitos de líquido de frenos"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Cascos",
@@ -3562,7 +3571,8 @@
             "Visores y repuestos de casco"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Eléctrico y electrónico",
@@ -3586,7 +3596,8 @@
             "Sensores"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Iluminación",
@@ -3602,7 +3613,8 @@
             "Exploradoras y luces auxiliares"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Accesorios",
@@ -3630,7 +3642,8 @@
             "Parlantes"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Ropa",
@@ -3648,7 +3661,8 @@
             "Chalecos reflectivos"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Chasis y carrocería",
@@ -3672,7 +3686,8 @@
             "Ejes de rueda"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Suspensión y dirección",
@@ -3694,7 +3709,8 @@
             "Tés y triples de dirección"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Tecnología y seguridad",
@@ -3709,7 +3725,8 @@
             "Cámaras"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     }
   ],
   "Herramientas": [
@@ -3731,7 +3748,8 @@
             "Kits de herramientas"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Herramientas eléctricas y neumáticas",
@@ -3748,7 +3766,8 @@
             "Pistolas de calor y cautines"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Equipos de taller",
@@ -3768,7 +3787,8 @@
             "Montallantas y despinche"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Diagnóstico y medición",
@@ -3784,7 +3804,8 @@
             "Compresímetros"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Cuidado y limpieza",
@@ -3817,7 +3838,8 @@
             "Limpiadores de cadena"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Consumibles de taller",
@@ -3840,7 +3862,8 @@
             "Pinturas y retoques"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     },
     {
       "nombre": "Equipos de lavado y pulido",
@@ -3854,7 +3877,8 @@
             "Aspiradoras"
           ]
         }
-      ]
+      ],
+      "catalogo": true
     }
   ],
   "_filtros": {

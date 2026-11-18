@@ -24,7 +24,7 @@ Si pagaste con tarjeta u otro medio electrónico, puedes pedir la **reversión d
 
 Tienes **5 días hábiles** desde que supiste del hecho para presentar tu queja a Repuestox y avisar a quien emitió tu medio de pago. Una vez pedida, quienes participan en el proceso de pago tienen **15 días hábiles** para hacerla efectiva. Si el producto ya lo recibiste, debes dejarlo a disposición de Repuestox para que lo recoja, en las mismas condiciones y en el mismo lugar en que lo recibiste. Esto aplica cuando el vendedor y el emisor del medio de pago están en Colombia.
 
-[A CONFIRMAR POR ABOGADO] Quién tramita la reversión con [PASARELA DE PAGO] y cómo se comparte con el seller.
+[A CONFIRMAR POR ABOGADO] Quién tramita la reversión con [PASARELA DE PAGO] y cómo se comparte con el seller. La SIC recomienda ofrecer en el sitio un formulario de solicitud de reversión y entregar una constancia de la queja con fecha y causal; hoy no existen, así que no se prometen aquí hasta que existan.
 
 ## 4. Garantía legal
 

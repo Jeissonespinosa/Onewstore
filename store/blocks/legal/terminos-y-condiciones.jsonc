@@ -75,7 +75,7 @@
   },
   "rich-text#legal-terminos-y-condiciones-9": {
     "props": {
-      "text": "## 9. Responsabilidad\n\nRepuestox responde por lo que la ley le exige frente a los consumidores. En lo demás, y en la medida que la ley permita, no respondemos por interrupciones del sitio ni por usos indebidos de los productos. [A CONFIRMAR POR ABOGADO] Alcance y límites de esta cláusula.",
+      "text": "## 9. Responsabilidad\n\nRepuestox responde frente a los consumidores por lo que la ley le exige y no limita esa responsabilidad. [A CONFIRMAR POR ABOGADO] La SIC recomienda no incluir cláusulas que limiten la responsabilidad del proveedor; si se quiere aclarar algo sobre interrupciones del sitio, debe revisarlo el abogado.",
       "blockClass": "legal"
     }
   },
@@ -87,7 +87,7 @@
   },
   "rich-text#legal-terminos-y-condiciones-11": {
     "props": {
-      "text": "## 11. Cambios en estos términos\n\nPodemos actualizar estos términos. Cada versión lleva un número y una fecha al inicio. Al comprar te pedimos que aceptes la versión vigente en ese momento.",
+      "text": "## 11. Cambios en estos términos\n\nPodemos actualizar estos términos para las compras futuras. Cada versión lleva un número y una fecha al inicio, y al comprar te pedimos que aceptes la versión vigente en ese momento. Un cambio no modifica una compra que ya hiciste.",
       "blockClass": "legal"
     }
   },

@@ -42,7 +42,7 @@ Las marcas, los logos, los textos y el diseño del sitio son de Repuestox o de s
 
 ## 9. Responsabilidad
 
-Repuestox responde por lo que la ley le exige frente a los consumidores. En lo demás, y en la medida que la ley permita, no respondemos por interrupciones del sitio ni por usos indebidos de los productos. [A CONFIRMAR POR ABOGADO] Alcance y límites de esta cláusula.
+Repuestox responde frente a los consumidores por lo que la ley le exige y no limita esa responsabilidad. [A CONFIRMAR POR ABOGADO] La SIC recomienda no incluir cláusulas que limiten la responsabilidad del proveedor; si se quiere aclarar algo sobre interrupciones del sitio, debe revisarlo el abogado.
 
 ## 10. Datos personales
 
@@ -50,7 +50,7 @@ Tratamos tus datos según la [Política de privacidad](/politica-de-privacidad).
 
 ## 11. Cambios en estos términos
 
-Podemos actualizar estos términos. Cada versión lleva un número y una fecha al inicio. Al comprar te pedimos que aceptes la versión vigente en ese momento.
+Podemos actualizar estos términos para las compras futuras. Cada versión lleva un número y una fecha al inicio, y al comprar te pedimos que aceptes la versión vigente en ese momento. Un cambio no modifica una compra que ya hiciste.
 
 ## 12. Peticiones, quejas y reclamos
 

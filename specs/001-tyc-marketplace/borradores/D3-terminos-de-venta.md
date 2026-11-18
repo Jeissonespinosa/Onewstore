@@ -32,7 +32,7 @@ Las piezas de seguridad (por ejemplo, frenos, llantas o airbags) deben instalars
 
 ## 5. Cómo comprar
 
-Agregas productos al carrito, indicas tus datos y la dirección de entrega, eliges el medio de pago y confirmas. Al confirmar te pedimos aceptar los términos vigentes en ese momento: la casilla de aceptación aparece en cada compra y no viene marcada. El pedido queda registrado cuando recibes la confirmación en tu correo.
+Agregas productos al carrito, indicas tus datos y la dirección de entrega, eliges el medio de pago y confirmas. Al confirmar te pedimos aceptar los términos vigentes en ese momento: la casilla de aceptación aparece en cada compra y no viene marcada. El pedido queda registrado cuando recibes la confirmación en tu correo, que te enviamos a más tardar el día calendario siguiente e incluye el producto, el precio, la forma de pago y el tiempo de entrega. Los términos vigentes están siempre disponibles en el sitio para leerlos, imprimirlos o descargarlos, antes y después de comprar.
 
 Si un producto deja de estar disponible después de tu pedido, te avisamos y puedes elegir esperar, cambiarlo por otro o cancelar con devolución de tu dinero.
 

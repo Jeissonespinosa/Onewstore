@@ -56,7 +56,7 @@ Aplicamos medidas técnicas y administrativas para proteger tus datos. El feedba
 
 ## 9. Registro Nacional de Bases de Datos
 
-[A CONFIRMAR POR ABOGADO] Si [RAZÓN SOCIAL] debe inscribir sus bases de datos en el Registro Nacional de Bases de Datos (SIC), según sus activos totales.
+La obligación de inscribir las bases de datos en el Registro Nacional de Bases de Datos de la Superintendencia de Industria y Comercio recae en las sociedades y entidades sin ánimo de lucro con activos totales por encima del umbral que fija el Decreto 090 de 2018; las micro y pequeñas empresas y las personas naturales no están obligadas. [A CONFIRMAR POR ABOGADO] Umbral vigente, si [RAZÓN SOCIAL] está obligada y, en ese caso, el número de registro que debe figurar aquí.
 
 ## 10. Cambios en esta política
 

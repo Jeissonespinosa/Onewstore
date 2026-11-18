@@ -1,0 +1,16 @@
+{
+  "_nota": "Marcas de PRODUCTO (el fabricante del repuesto), no marcas de vehiculo. Las de vehiculo viven en la especificacion 'Marca vehiculo'. Se crean con scripts/crear-marcas-vtex.py.",
+  "Llantas": ["Michelin", "Bridgestone", "Goodyear", "Pirelli", "Continental", "Hankook",
+              "Yokohama", "Dunlop", "Firestone", "Kumho", "Maxxis", "Aeolus", "Linglong",
+              "Triangle", "Westlake", "GT Radial", "Roadstone", "Nexen", "BFGoodrich", "Toyo"],
+  "Llantas de moto": ["Vee Rubber", "Kenda", "IRC", "Metzeler", "Rinaldi", "Duro", "Shinko"],
+  "Lubricantes": ["Mobil", "Castrol", "Shell", "Terpel", "Valvoline", "Chevron", "Havoline",
+                  "Motul", "Liqui Moly", "Repsol", "Petronas", "Total", "Bardahl", "Maxima",
+                  "Gulf", "Amalie"],
+  "Filtros": ["Bosch", "Mann-Filter", "Fram", "Wix", "Purolator", "Hengst", "Sakura",
+              "Tecfil", "Donaldson", "Baldwin", "Mahle", "Coopers"],
+  "Baterias": ["Mac", "Willard", "Varta", "Duncan", "Yuasa", "Moura", "Optima", "Bosch",
+               "Tudor", "Magna"],
+  "Electrico y encendido": ["Bosch", "NGK", "Denso", "Champion", "Valeo", "Hella", "Delphi",
+                            "Magneti Marelli", "Beru", "Autolite", "Motorcraft", "ACDelco"]
+}

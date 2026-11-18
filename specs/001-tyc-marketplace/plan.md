@@ -112,7 +112,7 @@
    datos del usuario ni comparar versiones. Costo: un clic por compra. Lo confirma el
    abogado (pregunta B).
 
-9. **Código propio con tests.** La lógica del checkbox (versión actual, forma del registro,
+9. **Código propio con tests.** *(Hecho en 7.1: `checkout-ui-custom/lib/aceptacion-tyc.js`, módulo UMD con `versionVigente`, `estadoPago`, `construirRegistro` y `registroVigente`; tests en `react/__tests__/AceptacionTyc.test.js`, incluido uno que compara cada versión con la de su borrador. El registro lleva dos campos de `customData`, `version` (`tyc=…;venta=…;privacidad=…`) y `aceptadoEn`. El builder solo sirve `checkout6-custom.js`: en 7.2 este módulo hay que incluirlo en ese archivo, no importarlo.)* La lógica del checkbox (versión actual, forma del registro,
    habilitar/deshabilitar el pago) va en un módulo puro, sin DOM, para probarla con Jest
    (constitución #2). El archivo de `checkout-ui-custom` solo lo conecta con la página.
 

@@ -103,6 +103,7 @@
       "flex-layout.row#list-price-savings",
       "flex-layout.row#selling-price",
       "product-installments",
+      "product-seller-name",
       "product-separator",
       "product-identifier.product",
       "sku-selector",

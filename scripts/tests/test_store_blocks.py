@@ -59,7 +59,7 @@ NATIVE_INTERFACES = {
     # product-summary / price
     'product-summary.shelf', 'product-summary-image', 'product-summary-name', 'product-summary-space',
     'product-summary-sku-selector', 'product-summary-quantity', 'product-list-price',
-    'product-selling-price', 'product-price-savings', 'product-installments',
+    'product-selling-price', 'product-price-savings', 'product-installments', 'product-seller-name',
     # search-result
     'search-result-layout', 'search-result-layout.desktop', 'search-result-layout.mobile',
     'search-result-layout.customQuery', 'search-not-found-layout', 'search-content', 'gallery',

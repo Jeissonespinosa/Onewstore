@@ -52,10 +52,10 @@ Va antes que los documentos para usarla desde el primero.
 
 Depende del spike (grupo 1) y de las preguntas A, B y D.
 
-- [ ] 7.1 Módulo puro con la lógica del checkbox (versión vigente, forma del registro, habilitar o deshabilitar el pago) y sus tests en `react/__tests__`. Verificación: `yarn jest` en `react/` en verde, incluidos casos de checkbox sin marcar, marcado y versión distinta.
+- [x] 7.1 Módulo puro con la lógica del checkbox (versión vigente, forma del registro, habilitar o deshabilitar el pago) y sus tests en `react/__tests__`. Verificación: `yarn jest` en `react/` en verde, incluidos casos de checkbox sin marcar, marcado y versión distinta.
 - [ ] 7.2 Añadir el builder `checkout-ui-custom` al `manifest.json` y el script que muestra el checkbox no premarcado con enlaces a D2, D3 y D5, y bloquea el pago hasta marcarlo (RF-2, RF-7). Verificación: en el workspace, con datos ficticios y **sin pagar**, el botón queda bloqueado con mensaje claro hasta marcar (AC-2). *(El checkout autenticado o con pago real lo prueba el equipo.)*
 - [ ] 7.3 Registro de la aceptación (decisión 7): `customData` con versión y fecha. Verificación: tras marcar, el `orderForm` (consulta de red del navegador) contiene el registro con versión y fecha (AC-3); el equipo confirma que se ve en el pedido real y que no se guarda nada más (constitución #6).
-- [ ] 7.4 Mostrar al seller en el PDP y en el checkout (RF-5, decisión 10); «quién envía» con `[QUIÉN ENVÍA]` mientras Q4 siga abierta. Si hace falta componente propio, con test en `react/__tests__`. Verificación: en el workspace, la ficha muestra al seller en 1280 y 360 px y los tests pasan.
+- [ ] 7.4 *(PDP hecho 2026-11-18: `product-seller-name` en `store/blocks/pdp/product.jsonc`, verificado a 1536 y 360 px; falta el checkout, que depende de 1.1.)* Mostrar al seller en el PDP y en el checkout (RF-5, decisión 10); «quién envía» con `[QUIÉN ENVÍA]` mientras Q4 siga abierta. Si hace falta componente propio, con test en `react/__tests__`. Verificación: en el workspace, la ficha muestra al seller en 1280 y 360 px y los tests pasan.
 - [ ] 7.5 Documentar el límite del bloqueo (solo navegador) y la decisión final de checkout en `plan.md` y `research.md`. Verificación: ambos lo mencionan y la pregunta B figura para el abogado.
 
 ## 8. Revisión legal y cierre

@@ -190,6 +190,42 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /carros/iluminacion,Iluminación,Color de luz,Unico,Blanco frío
 /carros/iluminacion,Iluminación,Color de luz,Unico,Amarillo
 /carros/iluminacion,Iluminación,Color de luz,Unico,Azulado
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,155
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,165
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,175
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,185
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,195
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,205
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,215
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,225
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,235
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,245
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,255
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,265
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,275
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,285
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,700
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,750
+/carros/llantas-y-rines/llantas,Llantas,Ancho,Unico,1100
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,40
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,45
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,50
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,55
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,60
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,65
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,70
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,75
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,80
+/carros/llantas-y-rines/llantas,Llantas,Alto (perfil),Unico,85
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,13
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,14
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,15
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,16
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,17
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,18
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,19
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,20
+/carros/llantas-y-rines/llantas,Llantas,Rin,Unico,22.5
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,Runflat
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,Reforzada (XL)
 /carros/llantas-y-rines/llantas,Llantas,Características,Multiple,M+S (barro y nieve)
@@ -458,7 +494,13 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/iluminacion,Iluminación,Color de luz,Unico,Blanco
 /motos/iluminacion,Iluminación,Color de luz,Unico,Amarillo
 /motos/iluminacion,Iluminación,Color de luz,Unico,Azulado
-/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,(abierto)
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,80/100-21
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,90/90-21
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,100/90-19
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,110/90-19
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,120/80-19
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,120/90-18
+/motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Medida,Unico,140/80-18
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Uso,Multiple,Enduro
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Uso,Multiple,Cross
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Uso,Multiple,Trial
@@ -466,12 +508,31 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Tipo de taco,Unico,Taco bajo
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Tipo de taco,Unico,Taco medio
 /motos/llantas-y-rines/llantas/llantas-de-enduro-y-cross,Llantas de enduro y cross,Tipo de taco,Unico,Taco alto
-/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,(abierto)
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,90/90-10
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,90/90-12
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,100/90-10
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,110/70-12
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,110/80-14
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,120/70-12
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,120/70-13
+/motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Medida,Unico,130/70-12
 /motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Uso,Multiple,Ciudad
 /motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Uso,Multiple,Multipropósito
 /motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Tipo de montaje,Unico,Con neumático
 /motos/llantas-y-rines/llantas/llantas-de-scooter,Llantas de scooter,Tipo de montaje,Unico,Tubeless
-/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,(abierto)
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,2.50-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,2.75-18
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,60/100-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,70/90-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,80/90-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,80/100-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,90/90-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,90/90-18
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,100/80-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,100/90-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,110/70-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,110/80-17
+/motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Medida,Unico,120/70-17
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Uso,Multiple,Ciudad
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Uso,Multiple,Multipropósito
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Uso,Multiple,Todoterreno (trocha)
@@ -483,12 +544,27 @@ Ruta,Nodo,Especificacion,Campo,Valor
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Tipo de montaje,Unico,Con neumático
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Tipo de montaje,Unico,Tubeless
 /motos/llantas-y-rines/llantas/llantas-delanteras,Llantas delanteras,Índice de carga y velocidad,Unico,(abierto)
-/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,(abierto)
+/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,4.00-8
+/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,4.50-10
+/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,5.00-10
+/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,90/90-12
+/motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Medida,Unico,120/90-10
 /motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Construcción,Unico,Radial
 /motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Construcción,Unico,Diagonal (convencional)
 /motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Uso,Multiple,Carga
 /motos/llantas-y-rines/llantas/llantas-para-motocarro,Llantas para motocarro,Uso,Multiple,Pasajeros
-/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,(abierto)
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,90/90-18
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,100/90-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,100/90-18
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,110/90-16
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,110/90-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,110/90-18
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,120/80-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,120/80-18
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,120/90-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,130/70-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,140/70-17
+/motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Medida,Unico,150/60-17
 /motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Uso,Multiple,Ciudad
 /motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Uso,Multiple,Multipropósito
 /motos/llantas-y-rines/llantas/llantas-traseras,Llantas traseras,Uso,Multiple,Todoterreno (trocha)

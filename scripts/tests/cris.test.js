@@ -15,7 +15,7 @@ const corte = src.slice(src.indexOf('const norm ='), src.indexOf('export default
 const codigo = corte.split('\n').filter(l => !l.startsWith('import')).join('\n')
 eval(codigo + '\nglobal.norm=norm; global.toks=toks; global.seccionDe=seccionDe;' +
      'global.construirIndice=construirIndice; global.buscarCategoria=buscarCategoria;' +
-     'global.medidaLlanta=medidaLlanta;')
+     'global.medidaLlanta=medidaLlanta; global.vehiculoAplica=vehiculoAplica;')
 
 let fallos = 0
 function prueba(nombre, real, esperado) {
@@ -57,6 +57,21 @@ const m = medidaLlanta('205/55 R16')
 prueba('205/55 R16', [m.ancho, m.perfil, m.rin], ['205', '55', '16'])
 prueba('185/65R15 sin espacios', (x => [x.ancho, x.perfil, x.rin])(medidaLlanta('185/65R15')), ['185', '65', '15'])
 prueba('"bujias" no es una medida', medidaLlanta('bujias'), null)
+prueba('moto 90/90-18', (x => [x.ancho, x.perfil, x.rin])(medidaLlanta('90/90-18')), ['90', '90', '18'])
+prueba('moto 110/90 17', (x => [x.ancho, x.perfil, x.rin])(medidaLlanta('110/90 17')), ['110', '90', '17'])
+prueba('camion 1100-20 R22.5', medidaLlanta('225/75 R22.5').rin, '22.5')
+prueba('medida completa para el facet de moto', medidaLlanta('90/90-18').completa, '90/90-18')
+prueba('una fecha no es medida (10/05/20)', medidaLlanta('10/05/20'), null)
+prueba('rin imposible no es medida (205/55 R40)', medidaLlanta('205/55 R40'), null)
+
+console.log('\n=== cuando el vehiculo se aplica como filtro ===')
+// La regla que causaba que "llantas toyota corolla" trajera la llanta del Hilux.
+prueba('estricta, vehiculo guardado  -> si', vehiculoAplica('estricta', false, false), true)
+prueba('estricta, vehiculo escrito   -> si', vehiculoAplica('estricta', true, false), true)
+prueba('ajuste, vehiculo guardado    -> no', vehiculoAplica('ajuste', false, false), false)
+prueba('ajuste, vehiculo escrito     -> si', vehiculoAplica('ajuste', true, false), true)
+prueba('universal, aunque lo escriba -> no', vehiculoAplica('universal', true, false), false)
+prueba('con medida de llanta         -> no', vehiculoAplica('estricta', true, true), false)
 
 console.log('\n=== el modelo pertenece a la marca ===')
 prueba('Toyota tiene Hilux', 'Hilux' in vehiculos.carros.Toyota, true)
@@ -70,8 +85,8 @@ prueba('entradas de carros', idxCarros.length > 1000, true)
 console.log('\n=== cuanto manda el vehiculo en cada categoria ===')
 const nivelDe = ruta => (indice.nodos.find(n => n.path === ruta) || {}).compatibilidad
 prueba('pastillas de freno -> estricta', nivelDe('/carros/frenos/pastillas-de-freno'), 'estricta')
-prueba('aceite de motor    -> estricta', nivelDe('/carros/lubricantes-y-mantenimiento/aceite-de-motor'), 'estricta')
-prueba('aceite 4T de moto  -> estricta', nivelDe('/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t'), 'estricta')
+prueba('aceite de motor    -> ajuste', nivelDe('/carros/lubricantes-y-mantenimiento/aceite-de-motor'), 'ajuste')
+prueba('aceite 4T de moto  -> ajuste', nivelDe('/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t'), 'ajuste')
 prueba('liquido de frenos  -> ajuste', nivelDe('/carros/lubricantes-y-mantenimiento/liquido-de-frenos'), 'ajuste')
 prueba('parlantes          -> ajuste', nivelDe('/carros/accesorios/audio/parlantes'), 'ajuste')
 prueba('kits de instalacion-> estricta', nivelDe('/carros/accesorios/audio/kits-de-instalacion'), 'estricta')

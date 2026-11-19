@@ -34,6 +34,65 @@ const RED = '#FF371E'
 const INK = '#010101'
 const CLAVE = 'rx-cris-vehiculo'
 
+/* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:
+   que las marcas que Cris ofrece de entrada sean las que la gente de verdad
+   tiene, y que al escribir "to" salga Toyota antes que Tata. Lo que no esta
+   en la lista conserva el orden alfabetico de la base. */
+const RANK_MARCAS = {
+  carros: [
+    'Chevrolet', 'Renault', 'Mazda', 'Kia', 'Toyota', 'Nissan', 'Suzuki',
+    'Hyundai', 'Volkswagen', 'Ford', 'BMW', 'Mercedes-Benz', 'Audi',
+    'Mitsubishi', 'Honda', 'Jeep', 'Peugeot', 'Fiat', 'BYD', 'Chery',
+    'Citroën', 'Subaru', 'Volvo', 'JAC', 'Great Wall', 'SsangYong',
+    'Land Rover', 'MG', 'Changan', 'Dodge', 'RAM',
+  ],
+  motos: [
+    'Bajaj', 'AKT', 'Yamaha', 'Honda', 'Suzuki', 'TVS', 'Hero', 'KTM',
+    'Kawasaki', 'Royal Enfield', 'Benelli', 'Kymco', 'SYM', 'CFMoto',
+    'Ducati', 'Harley-Davidson',
+  ],
+}
+
+/* Modelos mas vendidos por marca: ordenan el paso "¿Que Toyota tienes?" para
+   que Corolla y Hilux salgan antes que Coaster. Solo las marcas de mayor
+   volumen; el resto va alfabetico. */
+const RANK_MODELOS = {
+  Chevrolet: ['Onix', 'Spark GT', 'Sail', 'Tracker', 'Aveo', 'Captiva', 'Optra', 'Beat', 'Cruze', 'Corsa', 'Joy', 'Groove', 'D-Max'],
+  Renault: ['Sandero', 'Logan', 'Kwid', 'Duster', 'Stepway', 'Twingo', 'Symbol', 'Captur', 'Mégane', 'Koleos'],
+  Mazda: ['Mazda 2', 'Mazda 3', 'CX-30', 'CX-5', 'CX-3', 'BT-50', 'Mazda 6', 'Allegro'],
+  Kia: ['Picanto', 'Rio', 'Sportage', 'Cerato', 'Seltos', 'Sonet', 'Carnival', 'Sorento', 'Soul'],
+  Toyota: ['Corolla', 'Hilux', 'Fortuner', 'Prado', 'Yaris', 'RAV4', 'Corolla Cross', 'Land Cruiser'],
+  Nissan: ['Versa', 'Kicks', 'March', 'Sentra', 'Frontier NP300', 'X-Trail', 'Qashqai', 'Tiida'],
+  Suzuki: ['Swift', 'Vitara', 'Jimny', 'Grand Vitara', 'S-Presso', 'Baleno', 'Alto'],
+  Hyundai: ['Tucson', 'Accent', 'i10', 'Grand i10', 'Creta', 'Kona', 'Santa Fe', 'Elantra'],
+  Volkswagen: ['Gol', 'Jetta', 'T-Cross', 'Polo', 'Tiguan', 'Amarok', 'Golf', 'Fox'],
+  Ford: ['EcoSport', 'Ranger', 'Fiesta', 'Escape', 'Explorer', 'Focus', 'F-150'],
+  BMW: ['Serie 3', 'X1', 'Serie 1', 'X3', 'Serie 2', 'X5', 'Serie 5'],
+  Bajaj: ['Boxer CT 100', 'Pulsar 160 NS', 'Pulsar N160', 'Pulsar 180', 'Pulsar 150', 'Discover 125', 'Dominar 400', 'Platina 100'],
+  AKT: ['NKD 125', 'AK 125 CR4', 'TTR 200', 'TTR 180', 'Flex 125', 'AK 110 Special'],
+  Yamaha: ['NMax', 'FZ 2.0', 'XTZ 150', 'FZ 25', 'Crypton 115', 'BWS 125', 'MT-15', 'XTZ 125'],
+  Honda: ['CB 125F', 'Wave 110', 'XR 150L', 'CB 160F', 'Dio', 'Navi', 'CB 190R', 'CB 110'],
+}
+
+/* Categorias que Cris ofrece cuando ya hay vehiculo guardado y la caja esta
+   vacia: lo mas vendido, para no dejar el panel en blanco. */
+const POPULARES = {
+  carros: ['Pastillas de freno', 'Filtros de aceite', 'Amortiguadores', 'Baterías para carro', 'Llantas'],
+  motos: ['Pastillas de freno', 'Kits de arrastre', 'Filtros de aceite', 'Baterías para moto', 'Llantas'],
+  herramientas: [],
+}
+
+/* Posicion de una marca o modelo en el ranking; lo no listado va al final
+   pero conserva su orden relativo. */
+const posMarca = (seccion, marca) => {
+  const i = (RANK_MARCAS[seccion] || []).indexOf(marca)
+  return i < 0 ? 900 : i
+}
+const posModelo = (marca, modelo) => {
+  const i = (RANK_MODELOS[marca] || []).indexOf(modelo)
+  return i < 0 ? 900 : i
+}
+
 const norm = s =>
   (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -110,10 +169,47 @@ function buscarCategoria(entradas, palabras) {
   return mejor
 }
 
-/* Medida de llanta: 205/55R16, 205/55 R16, 205-55-16 */
+/* Medida de llanta.
+     carro  205/55R16, 205/55 R16, 205-55-16
+     moto   90/90-18, 110/90 17   (ancho de dos digitos)
+
+   El ancho de dos digitos es lo que faltaba: con \d{3} una medida de moto no
+   se reconocia y la busqueda caia a texto libre.
+
+   Las guardas evitan leer una fecha o un codigo como medida: no hay llanta de
+   menos de 50 de ancho ni rin fuera de 8-26. */
 function medidaLlanta(texto) {
-  const m = texto.match(/\b(\d{3})\s*[/x-]\s*(\d{2})\s*(?:r|zr|-)?\s*(\d{2})\b/i)
-  return m ? { ancho: m[1], perfil: m[2], rin: m[3], texto: m[0] } : null
+  const m = texto.match(/\b(\d{2,3})\s*[/x-]\s*(\d{2})\s*(?:r|zr|-)?\s*(\d{2}(?:\.5)?)\b/i)
+  if (!m) return null
+  if (+m[1] < 50 || parseFloat(m[3]) < 8 || parseFloat(m[3]) > 26) return null
+  return {
+    ancho: m[1],
+    perfil: m[2],
+    rin: m[3],
+    texto: m[0],
+    /* Formato unico para el facet "Medida" de moto. Tiene que ser el mismo
+       que la plantilla del seller ofrece, o el filtro no casa con nada. */
+    completa: m[1] + '/' + m[2] + '-' + m[3],
+  }
+}
+
+/* ¿Se aplica el vehiculo como filtro? Es la regla que decide si la pagina
+   sale con los repuestos del cliente o con todo el catalogo, y la que estaba
+   mal: devolvia false para "ajuste" siempre, asi que quien buscaba "llantas
+   toyota corolla" veia tambien la llanta del Hilux.
+
+     estricta   encaja o no encaja            -> siempre
+     ajuste     manda un atributo             -> solo si el cliente nombro el
+                                                 vehiculo en esta busqueda
+     universal  le sirve a cualquiera         -> nunca
+
+   Con medida de llanta nunca: 185/65R15 ya dice lo unico que importa y
+   sumarle el vehiculo con AND solo puede vaciar la pagina. */
+function vehiculoAplica(compat, explicito, hayLlanta) {
+  if (hayLlanta) return false
+  if (compat === 'estricta') return true
+  if (compat === 'ajuste') return !!explicito
+  return false
 }
 
 export default function Cris({
@@ -203,27 +299,111 @@ export default function Cris({
     }
   }, [texto, entradas, base, pideVehiculo])
 
-  /* Sugerencias: categorias que empiezan por lo escrito, y vehiculos si la
-     frase apunta a uno. */
+  /* Marcas de la seccion, ya ordenadas por venta. */
+  const marcas = useMemo(
+    () => Object.keys(base).sort((a, b) => posMarca(seccion, a) - posMarca(seccion, b)),
+    [base, seccion]
+  )
+
+  /* Modelos de una marca, ordenados por venta. */
+  const modelosDe = marca =>
+    Object.keys(base[marca] || {}).sort(
+      (a, b) => posModelo(marca, a) - posModelo(marca, b)
+    )
+
+  /* Sugerencias. Tres clases en una sola lista, en el orden en que le sirven
+     al cliente:
+
+       marca       "to" -> Toyota, para armar el vehiculo paso a paso
+       modelo      cuando lo escrito no es marca pero si modelo ("corolla")
+       categoria   el repuesto que busca
+
+     Con la caja vacia no se devuelve nada solo si no hay nada que ofrecer:
+     sin vehiculo se ofrecen las marcas (es el primer paso del flujo), y con
+     vehiculo guardado lo mas vendido. Antes devolvia [] y el panel no abria,
+     asi que al dar clic no pasaba nada. */
   const sugerencias = useMemo(() => {
-    if (!texto.trim() || texto.trim().length < 2) return []
-    const palabras = toks(texto)
+    const crudo = texto.trim()
     const vistos = new Set()
     const out = []
+    const meter = s => {
+      const k =
+        s.tipo +
+        ':' +
+        (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
+        (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
+      if (!vistos.has(k) && out.length < 8) {
+        vistos.add(k)
+        out.push(s)
+      }
+    }
+
+    if (!crudo) {
+      if (!pideVehiculo) return []
+      if (!vehiculo || !vehiculo.marca) {
+        marcas.slice(0, 8).forEach(m => meter({ tipo: 'marca', marca: m }))
+      } else {
+        (POPULARES[seccion] || []).forEach(nombre => {
+          const e = entradas.find(x => !x.parcial && norm(x.alias) === norm(nombre))
+          if (e) meter({ tipo: 'categoria', nodo: e.nodo, alias: e.alias })
+        })
+      }
+      return out
+    }
+
+    if (crudo.length < 2) return []
+    const palabras = toks(texto)
+    const ultima = norm((texto.match(/(\S+)\s*$/) || [])[1] || '')
+
+    /* Categoria + vehiculo: se ofrecen las DOS salidas, como en la prueba.
+       Filtrar por vehiculo es lo correcto ("corolla" no debe traer la llanta
+       del Hilux), pero puede dejar la pagina en cero mientras el catalogo
+       este joven. Dandole las dos el cliente nunca queda sin camino, y no
+       hace falta adivinar por el. */
+    if (lectura && lectura.categoria) {
+      const veh = lectura.marca
+        ? { marca: lectura.marca, modelo: lectura.modelo, ano: lectura.ano }
+        : vehiculo
+      const nodo = lectura.categoria.nodo
+      const compat = nodo.compatibilidad || 'estricta'
+      if (veh && veh.marca && !lectura.llanta && compat !== 'universal') {
+        meter({ tipo: 'ir', nodo, veh, conVehiculo: true })
+        meter({ tipo: 'ir', nodo, veh: null, conVehiculo: false })
+      }
+    }
+
+    /* Marca por prefijo de lo ultimo que escribio: "to" -> Toyota. */
+    if (pideVehiculo && ultima.length >= 2) {
+      marcas
+        .filter(m => norm(m).indexOf(ultima) === 0)
+        .forEach(m => meter({ tipo: 'marca', marca: m }))
+    }
+
+    /* Categorias. */
     entradas.forEach(e => {
-      if (out.length >= 8 || vistos.has(e.nodo.path)) return
+      if (vistos.has('categoria:' + e.nodo.path)) return
       const coincide = palabras.every(q =>
         e.palabras.some(
           w => w.indexOf(q) === 0 || (q.length >= 4 && w.length >= 4 && q.indexOf(w) === 0)
         )
       )
-      if (coincide) {
-        vistos.add(e.nodo.path)
-        out.push({ tipo: 'categoria', nodo: e.nodo, alias: e.alias })
-      }
+      if (coincide) meter({ tipo: 'categoria', nodo: e.nodo, alias: e.alias })
     })
+
+    /* Modelo sin marca: la gente escribe "corolla" o "pulsar 160" sin decir
+       de quien es. Solo si todavia queda espacio, para no tapar la categoria. */
+    if (pideVehiculo && ultima.length >= 3 && out.length < 6) {
+      marcas.forEach(m => {
+        modelosDe(m).forEach(mo => {
+          if (toks(mo).some(t => t.indexOf(ultima) === 0)) {
+            meter({ tipo: 'modelo', marca: m, modelo: mo })
+          }
+        })
+      })
+    }
+
     return out
-  }, [texto, entradas])
+  }, [texto, entradas, marcas, seccion, pideVehiculo, vehiculo, base, lectura])
 
   const limpiarAux = () => {
     setPaso(null)
@@ -232,19 +412,23 @@ export default function Cris({
 
   /* Navega a la categoria con el vehiculo aplicado como filtro, o a la
      busqueda libre si no hay categoria. */
-  const irA = (nodo, veh, llanta) => {
-    /* El vehiculo solo se aplica como filtro donde de verdad discrimina. Lo
-       dice el indice, que lo trae de catalogo/compatibilidad-por-categoria.json:
+  const irA = (nodo, veh, llanta, explicito, sinVehiculo) => {
+    /* El nivel sale del indice, que lo trae de
+       catalogo/compatibilidad-por-categoria.json. La regla de cuando aplica
+       esta en vehiculoAplica(), arriba, con el porque.
 
-         estricta   el repuesto encaja o no encaja -> se filtra
-         ajuste     sirve a muchos y manda un atributo -> NO se filtra
-         universal  le sirve a cualquiera -> NO se filtra
-
-       Sin esto, un cliente con su carro guardado entraba a Lubricantes o a
-       Herramientas y la pagina salia vacia: VTEX filtra con AND y un producto
-       que no declara compatibilidad simplemente no existe para ese vehiculo. */
+       En "ajuste" se usa SOLO el vehiculo de esta busqueda (veh), nunca el
+       guardado: arrastrar el guardado a Lubricantes o Herramientas dejaba la
+       pagina vacia, porque VTEX filtra con AND y un producto que no declara
+       compatibilidad no existe para ese vehiculo. */
     const compat = nodo ? nodo.compatibilidad || 'estricta' : 'estricta'
-    const v = compat === 'estricta' ? veh || vehiculo : null
+    /* sinVehiculo es la salida "ver todo" que Cris ofrece junto a la filtrada:
+       tiene que ganarle incluso al vehiculo guardado, o el cliente que pide
+       ver todo seguiria viendo solo lo de su carro. */
+    const v =
+      !sinVehiculo && vehiculoAplica(compat, explicito, !!llanta)
+        ? (compat === 'ajuste' ? veh : veh || vehiculo)
+        : null
     const segmentos = []
     const llaves = []
     if (nodo) {
@@ -254,8 +438,20 @@ export default function Cris({
       })
     }
     if (llanta) {
-      segmentos.push(llanta.ancho, llanta.perfil, llanta.rin)
-      llaves.push('ancho', 'alto--perfil-', 'rin')
+      /* Carros parte la medida en tres especificaciones (Ancho, Alto (perfil),
+         Rin: fields 25/26/27, verificados contra el facet real). Motos usa una
+         sola "Medida", porque asi se vende: 90/90-18 es un solo dato.
+
+         La llave "alto--perfil-" lleva dos guiones a proposito: VTEX la deriva
+         del nombre "Alto (perfil)" y NO colapsa los guiones consecutivos. Esta
+         comprobado contra el facet en vivo, no es un slug escrito a mano. */
+      if (seccion === 'motos') {
+        segmentos.push(llanta.completa)
+        llaves.push('medida')
+      } else {
+        segmentos.push(llanta.ancho, llanta.perfil, llanta.rin)
+        llaves.push('ancho', 'alto--perfil-', 'rin')
+      }
     }
     if (v && v.marca) {
       segmentos.push(norm(v.marca).replace(/[^a-z0-9]+/g, '-'))
@@ -307,18 +503,55 @@ export default function Cris({
     }
     const veh = l.marca ? { marca: l.marca, modelo: l.modelo, ano: l.ano } : vehiculo
     if (l.marca) guardar(veh)
-    if (l.categoria) return irA(l.categoria.nodo, veh, l.llanta)
+    if (l.categoria) return irA(l.categoria.nodo, veh, l.llanta, !!l.marca)
     if (l.llanta) {
       const llantas = indice.nodos.find(
         n => n.path === (seccion === 'motos'
           ? '/motos/llantas-y-rines/llantas'
           : '/carros/llantas-y-rines/llantas')
       )
-      if (llantas) return irA(llantas, veh, l.llanta)
+      if (llantas) return irA(llantas, veh, l.llanta, !!l.marca)
     }
     /* Sin categoria reconocida: busqueda de texto, que es lo que haria
        cualquier buscador. No se pierde nada. */
     return buscarTexto(texto)
+  }
+
+  /* Clic en una sugerencia. La categoria navega; la marca y el modelo NO
+     navegan: abren el siguiente paso del embudo (marca -> modelo -> año),
+     que es como funcionaba la prueba. Antes solo habia categorias, asi que
+     el cliente no tenia forma de armar su vehiculo con clics. */
+  const elegirSugerencia = s => {
+    /* Las dos salidas de una categoria con vehiculo. "con" manda el vehiculo
+       como explicito, que es lo que hace que en "ajuste" si se filtre. */
+    if (s.tipo === 'ir') {
+      if (s.conVehiculo) guardar(s.veh)
+      irA(s.nodo, s.conVehiculo ? s.veh : null, null, s.conVehiculo, !s.conVehiculo)
+      return
+    }
+    if (s.tipo === 'categoria') {
+      irA(s.nodo, vehiculo, lectura && lectura.llanta, false)
+      return
+    }
+    if (s.tipo === 'marca') {
+      setTexto('')
+      setAbierto(false)
+      setPaso({ tipo: 'modelo', marca: s.marca, opciones: modelosDe(s.marca).slice(0, 40) })
+      return
+    }
+    /* Modelo: ya se sabe la marca, se salta directo al año. */
+    const rango = (base[s.marca] || {})[s.modelo]
+    const veh = { marca: s.marca, modelo: s.modelo, ano: null }
+    guardar(veh)
+    setTexto('')
+    setAbierto(false)
+    if (rango && rango[0] && rango[1]) {
+      const anos = []
+      for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
+      setPaso({ tipo: 'ano', marca: s.marca, modelo: s.modelo, opciones: anos })
+      return
+    }
+    setPaso(null)
   }
 
   const elegirPaso = valor => {
@@ -340,7 +573,7 @@ export default function Cris({
     guardar(veh)
     setPaso(null)
     const l = lectura
-    if (l && l.categoria) irA(l.categoria.nodo, veh, l.llanta)
+    if (l && l.categoria) irA(l.categoria.nodo, veh, l.llanta, true)
   }
 
   const iconoVehiculo = seccion === 'motos' ? (
@@ -380,6 +613,10 @@ export default function Cris({
       padding:.6rem .75rem;border:0;background:none;border-radius:10px;font:inherit;font-size:.9rem;cursor:pointer}
     .rx-cris__op:hover,.rx-cris__op:focus{background:#f5f5f7}
     .rx-cris__op small{color:rgba(1,1,1,.5)}
+    .rx-cris__titulo{padding:.5rem .7rem .2rem;font-size:.8rem;font-weight:700;
+      letter-spacing:.04em;text-transform:uppercase;color:rgba(1,1,1,.45)}
+    .rx-cris__salto{background:none;border:0;color:${RED};font:inherit;font-weight:700;
+      cursor:pointer;padding:0;margin-top:.6rem}
     .rx-cris__paso{margin-top:.5rem;background:#fff;border:1px solid rgba(1,1,1,.1);border-radius:16px;padding:.9rem}
     .rx-cris__paso h4{margin:0 0 .5rem;font-size:1rem;font-weight:800}
     .rx-cris__chips{display:flex;flex-wrap:wrap;gap:.4rem}
@@ -428,15 +665,42 @@ export default function Cris({
 
         {abierto && sugerencias.length ? (
           <div className={`rx-cris__panel ${handles.crisSuggestions || ''}`}>
+            {!texto.trim() && (!vehiculo || !vehiculo.marca) && pideVehiculo ? (
+              <div className="rx-cris__titulo">
+                ¿De qué marca es tu {seccion === 'motos' ? 'moto' : 'carro'}?
+              </div>
+            ) : null}
             {sugerencias.map(s => (
               <button
                 type="button"
-                key={s.nodo.path}
+                key={
+                  s.tipo +
+                  ':' +
+                  (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
+                  (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
+                }
                 className="rx-cris__op"
-                onMouseDown={e => { e.preventDefault(); irA(s.nodo, vehiculo, lectura && lectura.llanta) }}
+                onMouseDown={e => { e.preventDefault(); elegirSugerencia(s) }}
               >
-                <span>{s.nodo.nombre}</span>
-                <small>{s.nodo.seccion}</small>
+                <span>
+                  {s.tipo === 'ir' && s.conVehiculo
+                    ? `${s.nodo.nombre} para tu ${s.veh.marca} ${s.veh.modelo || ''}`
+                    : null}
+                  {s.tipo === 'ir' && !s.conVehiculo
+                    ? `${s.nodo.nombre} — ver todo`
+                    : null}
+                  {s.tipo === 'categoria' ? s.nodo.nombre : null}
+                  {s.tipo === 'marca' ? s.marca : null}
+                  {s.tipo === 'modelo' ? `${s.marca} ${s.modelo}` : null}
+                </span>
+                <small>
+                  {s.tipo === 'ir'
+                    ? (s.conVehiculo ? 'solo lo que le sirve' : 'sin filtro de vehículo')
+                    : null}
+                  {s.tipo === 'categoria' ? s.nodo.seccion : null}
+                  {s.tipo === 'marca' ? 'marca' : null}
+                  {s.tipo === 'modelo' ? 'modelo' : null}
+                </small>
               </button>
             ))}
           </div>
@@ -456,6 +720,14 @@ export default function Cris({
                 onClick={() => elegirPaso(o)}>{o}</button>
             ))}
           </div>
+          {/* El año es para verificar el ajuste, no un requisito: quien no lo
+              sabe no puede quedarse trancado en el paso. */}
+          {paso.tipo === 'ano' ? (
+            <button type="button" className="rx-cris__salto"
+              onClick={() => { guardar({ marca: paso.marca, modelo: paso.modelo, ano: null }); setPaso(null) }}>
+              No sé el año
+            </button>
+          ) : null}
         </div>
       ) : null}
 

@@ -10,13 +10,18 @@
    catalogo/estructura-categorias-v2.json ya no generan pagina
    propia: las sirve VTEX con estos bloques.
 
-   store.search (busqueda por texto) conserva el layout del
-   theme base.
+   store.search (busqueda por texto) usa el MISMO layout #rx-cat.
+   Antes se quedaba con el layout base del theme y eso dejaba la
+   pagina de resultados sin Cris, sin breadcrumb y sin panel de
+   filtros: el cliente buscaba, veia resultados y ahi se quedaba,
+   sin poder refinar ni volver a buscar. El tyre-size-selector de
+   ese layout trae showOn "llantas", asi que se oculta solo donde
+   no aplica.
    ============================================================ */
 {
   "store.search": {
     "blocks": [
-      "search-result-layout"
+      "search-result-layout#rx-cat"
     ],
     "props": {
       "context": {
@@ -27,7 +32,7 @@
   },
   "store.search#brand": {
     "blocks": [
-      "search-result-layout"
+      "search-result-layout#rx-cat"
     ],
     "props": {
       "context": {

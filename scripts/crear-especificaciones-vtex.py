@@ -177,21 +177,32 @@ def main():
                 fid = r['Id']
                 nuevas += 1
                 print('   creada  %-28s %-26s id=%s (%s)' % (hoja[:27], nombre[:25], fid, tipo))
-            if not args.ejecutar:
-                continue
+            # Los valores se revisan SIEMPRE, tambien en dry-run. Antes el
+            # dry-run salia de aqui y reportaba "0 valores" para toda
+            # especificacion que ya existiera, aunque el arbol trajera valores
+            # nuevos: las 45 medidas de llanta de moto no aparecian en el plan
+            # y se habrian creado sin avisar. El plan tiene que decir todo lo
+            # que va a pasar, porque es lo que se aprueba.
             st, vs = call(tk, 'GET', '/api/catalog_system/pub/specification/fieldvalue/%d' % fid)
             tiene = {norm(v['Value']) for v in (vs or [])} if st == 200 else set()
+            faltan = [v for v in valores if norm(v) not in tiene]
+            if not args.ejecutar:
+                if faltan:
+                    valores_nuevos += len(faltan)
+                    print('      [plan]  +%d valores: %s'
+                          % (len(faltan), ', '.join(faltan[:6])
+                             + (' ...' if len(faltan) > 6 else '')))
+                continue
             for i, valor in enumerate(valores, 1):
-                if norm(valor) in tiene:
-                    continue
-                st2, _ = call(tk, 'POST', '/api/catalog/pvt/specificationvalue',
-                              {'FieldId': fid, 'Name': valor, 'Text': valor,
-                               'Position': i, 'IsActive': True})
-                if st2 != 200:
-                    print('      ERROR valor %r -> %s' % (valor, st2))
-                else:
-                    valores_nuevos += 1
-                time.sleep(0.1)
+                if norm(valor) not in tiene:
+                    st2, _ = call(tk, 'POST', '/api/catalog/pvt/specificationvalue',
+                                  {'FieldId': fid, 'Name': valor, 'Text': valor,
+                                   'Position': i, 'IsActive': True})
+                    if st2 != 200:
+                        print('      ERROR valor %r -> %s' % (valor, st2))
+                    else:
+                        valores_nuevos += 1
+                    time.sleep(0.1)
 
     print('\n  %s: %d especificaciones, %d valores, %d ya existian'
           % ('EJECUTADO' if args.ejecutar else 'PLAN (no se creo nada)',

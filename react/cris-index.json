@@ -201,8 +201,8 @@
       "path": "/carros/lubricantes-y-mantenimiento/aceite-de-motor",
       "seccion": "Carros",
       "nivel": "hoja",
-      "compatibilidad": "estricta",
-      "atributo": null,
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma API",
       "sinonimos": [
         "aceite",
         "aceite de carro",
@@ -4553,8 +4553,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t",
       "seccion": "Motos",
       "nivel": "hoja",
-      "compatibilidad": "estricta",
-      "atributo": null,
+      "compatibilidad": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
       "sinonimos": [
         "aceite 4t",
         "aceite de moto",
@@ -4569,8 +4569,8 @@
       "path": "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t",
       "seccion": "Motos",
       "nivel": "hoja",
-      "compatibilidad": "estricta",
-      "atributo": null,
+      "compatibilidad": "ajuste",
+      "atributo": "Norma JASO (FC/FD)",
       "sinonimos": [
         "aceite 2t",
         "aceite de dos tiempos",

@@ -202,8 +202,9 @@
       "nivel": "estricta"
     },
     "/carros/lubricantes-y-mantenimiento/aceite-de-motor": {
-      "nivel": "estricta",
-      "razon": "BMW pide 5W30 Castrol; el motor manda. El vehiculo SI aplica."
+      "nivel": "ajuste",
+      "atributo": "Viscosidad y norma API",
+      "razon": "El aceite no \"calza\": encaja por viscosidad y norma. Un 5W30 SP sirve a cientos de motores, asi que el atributo es el que discrimina. Queda ajuste, no universal, porque cuando el cliente nombra su vehiculo Cris si filtra."
     },
     "/carros/lubricantes-y-mantenimiento/aceite-de-transmision": {
       "nivel": "estricta",
@@ -277,11 +278,14 @@
       "nivel": "estricta"
     },
     "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t": {
-      "nivel": "estricta"
+      "nivel": "ajuste",
+      "atributo": "Norma JASO (FC/FD)",
+      "razon": "La mezcla 2T la define la norma, no el modelo."
     },
     "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t": {
-      "nivel": "estricta",
-      "razon": "Yamalube sirve a varias Yamaha: multi-valor. El fabricante manda."
+      "nivel": "ajuste",
+      "atributo": "Viscosidad y norma JASO",
+      "razon": "Igual que en carros, pero la norma que manda es JASO MA/MA2 (embrague humedo). Yamalube sirve a varias Yamaha: el valor es multi-vehiculo."
     },
     "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas": {
       "nivel": "universal"

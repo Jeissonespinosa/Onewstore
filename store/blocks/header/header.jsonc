@@ -1,3 +1,25 @@
+/* ============================================================
+   HEADER
+   ------------------------------------------------------------
+   Mismo orden en las tres anchuras:
+
+     menu · logo · Cris · vehiculo · cuenta · carrito
+
+   El vehiculo es su propia puerta (vehiculo-header): se agrega,
+   se consulta y se quita ahi. Cris entra en modo "producto", o
+   sea que busca repuestos y entiende "llantas para toyota
+   corolla", pero NO arma ni guarda el vehiculo: dos puertas
+   para lo mismo confunden.
+
+   En movil el vehiculo es un circulo con un + chiquito en la
+   esquina; en escritorio y tablet es una pildora con el + al
+   lado del carro. El logo tambien cambia: isotipo en movil,
+   logotipo completo donde hay ancho.
+
+   El nombre del carro guardado NO sale en el header. Sale
+   dentro de la pagina, en "vehiculo-en-pagina" (bloque
+   #rx-cat-head-inner de search.jsonc).
+   ============================================================ */
 {
   "header": {
     "blocks": [
@@ -11,6 +33,8 @@
       "header-layout.mobile"
     ]
   },
+
+  /* ---------- escritorio ---------- */
   "header-layout.desktop": {
     "children": [
       "flex-layout.row#1-desktop",
@@ -23,11 +47,6 @@
     ],
     "props": {
       "fullWidth": true
-    }
-  },
-  "flex-layout.col#spacer": {
-    "props": {
-      "width": "grow"
     }
   },
   "sticky-layout#4-desktop": {
@@ -48,11 +67,80 @@
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
       "flex-layout.col#categories-desktop",
-      "flex-layout.col#spacer",
+      "flex-layout.col#logo-desktop",
+      "flex-layout.col#cris-desktop",
+      "flex-layout.col#vehiculo-desktop",
       "flex-layout.row#header-actions"
     ]
+  },
+  "flex-layout.col#categories-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto",
+      "blockClass": "categoriesDesktop"
+    },
+    "children": [
+      "category-menu#header"
+    ]
+  },
+  "category-menu#header": {
+    "props": {
+      "id": "rx-category-menu-desktop"
+    }
+  },
+  "flex-layout.col#logo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto"
+    },
+    "children": [
+      "logo#desktop"
+    ]
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Repuestox",
+      "href": "/",
+      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
+      "width": "150",
+      "height": "45"
+    }
+  },
+  /* Cris se lleva el centro: aqui si hay ancho para que sirva. */
+  "flex-layout.col#cris-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "grow",
+      "blockClass": "crisDesktop"
+    },
+    "children": [
+      "cris#header"
+    ]
+  },
+  "cris#header": {
+    "props": {
+      "modo": "producto",
+      "placeholder": "Busca tu repuesto: pastillas, filtro, 185/65 R15…",
+      "placeholderHerramientas": "¿Qué herramienta estás buscando?",
+      "boton": "Buscar"
+    }
+  },
+  "flex-layout.col#vehiculo-desktop": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto",
+      "blockClass": "vehiculoDesktop"
+    },
+    "children": [
+      "vehiculo-header#desktop"
+    ]
+  },
+  "vehiculo-header#desktop": {
+    "props": {
+      "variante": "pildora",
+      "etiquetaVacia": "Agregar vehículo"
+    }
   },
   "flex-layout.row#header-actions": {
     "props": {
@@ -66,20 +154,6 @@
       "minicart.v2"
     ]
   },
-  "flex-layout.col#categories-desktop": {
-    "props": {
-      "verticalAlign": "middle",
-      "blockClass": "categoriesDesktop"
-    },
-    "children": [
-      "category-menu#header"
-    ]
-  },
-  "category-menu#header": {
-    "props": {
-      "id": "rx-category-menu-desktop"
-    }
-  },
   "login": {
     "props": {
       "iconLabel": "Inicio de sesión",
@@ -87,23 +161,8 @@
       "labelInitialIcon": "Inicio de sesión"
     }
   },
-  "flex-layout.col#logo-desktop": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": [
-      "logo#desktop"
-    ]
-  },
-  "logo#desktop": {
-    "props": {
-      "title": "Repuestox",
-      "href": "/",
-      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
-      "width": "180",
-      "height": "54"
-    }
-  },
+
+  /* ---------- movil ---------- */
   "header-layout.mobile": {
     "children": [
       "sticky-layout#1-mobile"
@@ -117,8 +176,9 @@
   "flex-layout.row#1-mobile": {
     "children": [
       "flex-layout.col#categories-mobile",
-      "logo#mobile",
-      "flex-layout.col#spacer",
+      "flex-layout.col#logo-mobile",
+      "flex-layout.col#cris-mobile",
+      "flex-layout.col#vehiculo-mobile",
       "flex-layout.col#header-actions-mobile"
     ],
     "props": {
@@ -127,16 +187,6 @@
       "preserveLayoutOnMobile": true,
       "fullWidth": true
     }
-  },
-  "flex-layout.col#header-actions-mobile": {
-    "props": {
-      "verticalAlign": "middle",
-      "blockClass": "headerActionsMobile"
-    },
-    "children": [
-      "login",
-      "minicart.v2"
-    ]
   },
   "flex-layout.col#categories-mobile": {
     "props": {
@@ -154,13 +204,69 @@
       "id": "rx-category-menu-mobile"
     }
   },
+  /* En movil va el isotipo: el logotipo completo le come a Cris el
+     ancho que ya tiene justo. */
+  "flex-layout.col#logo-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto",
+      "blockClass": "logoMobile"
+    },
+    "children": [
+      "logo#mobile"
+    ]
+  },
   "logo#mobile": {
     "props": {
       "title": "Repuestox",
       "href": "/",
-      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
-      "width": "130",
-      "height": "40"
+      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/49047458-cec0-4f58-9c58-2d008bd04f71___26e677192553caaf43fd069a83223dc2.png",
+      "width": "28",
+      "height": "28"
     }
+  },
+  "flex-layout.col#cris-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "grow",
+      "blockClass": "crisMobile"
+    },
+    "children": [
+      "cris#header-mobile"
+    ]
+  },
+  "cris#header-mobile": {
+    "props": {
+      "modo": "producto",
+      "placeholder": "Buscar repuesto",
+      "placeholderHerramientas": "Buscar herramienta",
+      "boton": "Buscar"
+    }
+  },
+  "flex-layout.col#vehiculo-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto",
+      "blockClass": "vehiculoMobile"
+    },
+    "children": [
+      "vehiculo-header#mobile"
+    ]
+  },
+  "vehiculo-header#mobile": {
+    "props": {
+      "variante": "circulo"
+    }
+  },
+  "flex-layout.col#header-actions-mobile": {
+    "props": {
+      "verticalAlign": "middle",
+      "width": "auto",
+      "blockClass": "headerActionsMobile"
+    },
+    "children": [
+      "login",
+      "minicart.v2"
+    ]
   }
 }

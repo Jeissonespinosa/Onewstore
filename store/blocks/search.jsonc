@@ -393,7 +393,6 @@
     "children": [
       "flex-layout.row#rx-cat-head",
       "flex-layout.row#rx-size",
-      "flex-layout.row#rx-f-vehicle-m",
       "flex-layout.row#rx-results-f",
       "flex-layout.row#rx-filterbar-m"
     ]
@@ -414,8 +413,18 @@
     },
     "children": [
       "breadcrumb.search",
-      "search-title.v2"
+      "search-title.v2",
+      "vehiculo-en-pagina#rx"
     ]
+  },
+  /* El header no dice que carro quedo guardado, solo lo marca con el
+     icono lleno. El nombre sale aqui, junto a los resultados que ese
+     vehiculo esta filtrando: sin esto alguien navega filtrado por el
+     carro de otra persona y no se entera. */
+  "vehiculo-en-pagina#rx": {
+    "props": {
+      "prefijo": "Para tu"
+    }
   },
   "flex-layout.row#rx-size": {
     "props": {

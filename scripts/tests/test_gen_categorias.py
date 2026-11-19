@@ -354,9 +354,10 @@ class TestSalida(_Base):
         self.assertNotIn('store.custom#promo', sb.read_routes())
 
     def test_facets_de_vehiculo_ocultos_en_el_panel(self):
-        """Marca vehiculo / Modelo / Año no van como filtros sueltos: los cubre
-        Cris, en cascada. Tenerlos en los dos lados confunde y el panel no
-        respeta el orden marca -> modelo -> año."""
+        """Marca vehiculo / Modelo / Año no van como filtros sueltos: el
+        vehiculo tiene una sola puerta, la pildora del header, y ahi va en
+        cascada marca -> modelo -> año. Sueltos en el panel se pueden combinar
+        mal (un modelo que no es de esa marca) y la pagina sale vacia."""
         sb = self.sandbox(tree=minimal_tree())
         _quiet(sb.run)
         filters = sb.read_blocks('category-filters.jsonc')
@@ -365,8 +366,13 @@ class TestSalida(_Base):
         for nombre in ('Marca vehículo', 'Modelo', 'Año'):
             self.assertIn(nombre, ocultos)
         self.assertNotIn('vehicle-selector#rx-f', filters,
-                         'el selector de vehiculo lo reemplazo Cris')
-        self.assertIn('cris#rx-f', filters)
+                         'el selector de vehiculo lo reemplazo el header')
+        # Ni el selector ni Cris: el header es pegajoso y ya los lleva. Dos
+        # cajas de busqueda a dos dedos una de otra no ayudan a nadie.
+        self.assertNotIn('cris#rx-f', filters,
+                         'Cris vive en el header, no se repite en el panel')
+        for bloque in filters.values():
+            self.assertNotIn('cris#rx-f', bloque.get('children') or [])
 
     def test_importar_no_escribe_nada(self):
         """Importar el script (desde un test, un linter, un editor) no puede

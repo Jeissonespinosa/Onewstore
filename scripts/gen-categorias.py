@@ -1058,13 +1058,11 @@ def build_and_write(NODES, RAILS, routes):
         'props': {'blockClass': 'rxM', 'layout': 'phone', 'priceRangeLayout': 'inputAndSlider',
                   'showClearByFilter': True, 'hiddenFacets': hidden}
     }
-    # Cris sustituye al selector de vehiculo: hace lo mismo y ademas busca
-    # producto. Tener los dos era redundante, y los facets de vehiculo estan
-    # ocultos en el panel justamente porque los cubre Cris.
-    filters['cris#rx-f'] = {'props': {
-        'placeholder': 'Busca tu repuesto o cambia de vehículo',
-        'placeholderHerramientas': '¿Qué herramienta estás buscando?',
-        'boton': 'Buscar'}}
+    # Cris vive en el header, que es pegajoso y esta en todas las paginas.
+    # Repetirlo aqui era una segunda caja de busqueda a dos dedos de la
+    # primera. El vehiculo tampoco va aqui: su unica puerta es la pildora del
+    # header (vehiculo-header), y el nombre del carro lo dice
+    # "vehiculo-en-pagina" arriba de los resultados.
     filters['search-result-layout.desktop#rx-f'] = {
         'props': {'pagination': 'show-more', 'preventRouteChange': True, 'defaultGalleryLayout': 'grid', 'blockClass': 'rxF'},
         'children': ['flex-layout.row#rx-f-body'],
@@ -1079,8 +1077,7 @@ def build_and_write(NODES, RAILS, routes):
     }
     filters['flex-layout.col#rx-f-main'] = {
         'props': {'blockClass': 'rxFMain', 'width': 'grow'},
-        'children': ['flex-layout.row#rx-f-vehicle-m', 'flex-layout.row#rx-filterbar-f',
-                     'flex-layout.row#rx-results-f'],
+        'children': ['flex-layout.row#rx-filterbar-f', 'flex-layout.row#rx-results-f'],
     }
     filters['flex-layout.row#rx-filterbar-f'] = {
         'props': {'blockClass': 'rxFilterbarF', 'preventHorizontalStretch': True, 'preserveLayoutOnMobile': True},
@@ -1089,11 +1086,7 @@ def build_and_write(NODES, RAILS, routes):
     filters['flex-layout.row#rx-results-f'] = {'props': {'blockClass': 'rxResultsF'}, 'children': ['search-content#rx']}
     filters['search-result-layout.mobile#rx-f'] = {
         'props': {'pagination': 'show-more', 'preventRouteChange': True, 'defaultGalleryLayout': 'grid', 'blockClass': 'rxF'},
-        'children': ['flex-layout.row#rx-f-vehicle-m', 'flex-layout.row#rx-filterbar-m', 'flex-layout.row#rx-results-f'],
-    }
-    filters['flex-layout.row#rx-f-vehicle-m'] = {
-        'props': {'fullWidth': True, 'blockClass': 'rxFVehicleM'},
-        'children': ['cris#rx-f'],
+        'children': ['flex-layout.row#rx-filterbar-m', 'flex-layout.row#rx-results-f'],
     }
     filters['flex-layout.row#rx-filterbar-m'] = {
         'props': {'blockClass': 'rxFilterbarM', 'preventHorizontalStretch': True, 'preserveLayoutOnMobile': True},

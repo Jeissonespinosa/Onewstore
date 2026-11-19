@@ -244,8 +244,15 @@ class TestInterfaces(unittest.TestCase):
         with open(os.path.join(REPO, 'store', 'interfaces.json'), encoding='utf-8') as fh:
             ifaces = json.load(fh)
         react_dir = os.path.join(REPO, 'react')
+        # Un componente de VTEX empieza por mayuscula (Cris.js, VehiculoHeader.js);
+        # lo que empieza en minuscula es un modulo auxiliar que importan los
+        # componentes (vehiculo.js: el almacen del vehiculo guardado) y no
+        # necesita interfaz. Sin esta distincion, cualquier helper que se
+        # extraiga para no duplicar codigo rompe la prueba.
         comps = {os.path.splitext(f)[0] for f in os.listdir(react_dir)
-                 if f.endswith(('.js', '.jsx', '.tsx', '.ts')) and not f.startswith(('jest', 'setup'))}
+                 if f.endswith(('.js', '.jsx', '.tsx', '.ts'))
+                 and not f.startswith(('jest', 'setup'))
+                 and f[:1].isupper()}
         for name, spec in ifaces.items():
             self.assertIn(spec['component'], comps, 'interfaz %s -> componente inexistente' % name)
         declared = {spec['component'] for spec in ifaces.values()}

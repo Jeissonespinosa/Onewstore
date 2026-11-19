@@ -35,70 +35,16 @@ import { useCssHandles } from 'vtex.css-handles'
 
 import indice from './cris-index.json'
 import vehiculos from './data/vehiculos-colombia.json'
+/* El ranking y el almacen del vehiculo son compartidos con la pildora del
+   header: una sola fuente, o los dos componentes se desincronizan. */
+import {
+  POPULARES, posMarca, posModelo,
+  leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
+} from './vehiculo'
 
 const CSS_HANDLES = ['cris', 'crisInput', 'crisVehicle', 'crisSuggestions', 'crisStep']
 const RED = '#FF371E'
 const INK = '#010101'
-const CLAVE = 'rx-cris-vehiculo'
-
-/* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:
-   que las marcas que Cris ofrece de entrada sean las que la gente de verdad
-   tiene, y que al escribir "to" salga Toyota antes que Tata. Lo que no esta
-   en la lista conserva el orden alfabetico de la base. */
-const RANK_MARCAS = {
-  carros: [
-    'Chevrolet', 'Renault', 'Mazda', 'Kia', 'Toyota', 'Nissan', 'Suzuki',
-    'Hyundai', 'Volkswagen', 'Ford', 'BMW', 'Mercedes-Benz', 'Audi',
-    'Mitsubishi', 'Honda', 'Jeep', 'Peugeot', 'Fiat', 'BYD', 'Chery',
-    'Citroën', 'Subaru', 'Volvo', 'JAC', 'Great Wall', 'SsangYong',
-    'Land Rover', 'MG', 'Changan', 'Dodge', 'RAM',
-  ],
-  motos: [
-    'Bajaj', 'AKT', 'Yamaha', 'Honda', 'Suzuki', 'TVS', 'Hero', 'KTM',
-    'Kawasaki', 'Royal Enfield', 'Benelli', 'Kymco', 'SYM', 'CFMoto',
-    'Ducati', 'Harley-Davidson',
-  ],
-}
-
-/* Modelos mas vendidos por marca: ordenan el paso "¿Que Toyota tienes?" para
-   que Corolla y Hilux salgan antes que Coaster. Solo las marcas de mayor
-   volumen; el resto va alfabetico. */
-const RANK_MODELOS = {
-  Chevrolet: ['Onix', 'Spark GT', 'Sail', 'Tracker', 'Aveo', 'Captiva', 'Optra', 'Beat', 'Cruze', 'Corsa', 'Joy', 'Groove', 'D-Max'],
-  Renault: ['Sandero', 'Logan', 'Kwid', 'Duster', 'Stepway', 'Twingo', 'Symbol', 'Captur', 'Mégane', 'Koleos'],
-  Mazda: ['Mazda 2', 'Mazda 3', 'CX-30', 'CX-5', 'CX-3', 'BT-50', 'Mazda 6', 'Allegro'],
-  Kia: ['Picanto', 'Rio', 'Sportage', 'Cerato', 'Seltos', 'Sonet', 'Carnival', 'Sorento', 'Soul'],
-  Toyota: ['Corolla', 'Hilux', 'Fortuner', 'Prado', 'Yaris', 'RAV4', 'Corolla Cross', 'Land Cruiser'],
-  Nissan: ['Versa', 'Kicks', 'March', 'Sentra', 'Frontier NP300', 'X-Trail', 'Qashqai', 'Tiida'],
-  Suzuki: ['Swift', 'Vitara', 'Jimny', 'Grand Vitara', 'S-Presso', 'Baleno', 'Alto'],
-  Hyundai: ['Tucson', 'Accent', 'i10', 'Grand i10', 'Creta', 'Kona', 'Santa Fe', 'Elantra'],
-  Volkswagen: ['Gol', 'Jetta', 'T-Cross', 'Polo', 'Tiguan', 'Amarok', 'Golf', 'Fox'],
-  Ford: ['EcoSport', 'Ranger', 'Fiesta', 'Escape', 'Explorer', 'Focus', 'F-150'],
-  BMW: ['Serie 3', 'X1', 'Serie 1', 'X3', 'Serie 2', 'X5', 'Serie 5'],
-  Bajaj: ['Boxer CT 100', 'Pulsar 160 NS', 'Pulsar N160', 'Pulsar 180', 'Pulsar 150', 'Discover 125', 'Dominar 400', 'Platina 100'],
-  AKT: ['NKD 125', 'AK 125 CR4', 'TTR 200', 'TTR 180', 'Flex 125', 'AK 110 Special'],
-  Yamaha: ['NMax', 'FZ 2.0', 'XTZ 150', 'FZ 25', 'Crypton 115', 'BWS 125', 'MT-15', 'XTZ 125'],
-  Honda: ['CB 125F', 'Wave 110', 'XR 150L', 'CB 160F', 'Dio', 'Navi', 'CB 190R', 'CB 110'],
-}
-
-/* Categorias que Cris ofrece cuando ya hay vehiculo guardado y la caja esta
-   vacia: lo mas vendido, para no dejar el panel en blanco. */
-const POPULARES = {
-  carros: ['Pastillas de freno', 'Filtros de aceite', 'Amortiguadores', 'Baterías para carro', 'Llantas'],
-  motos: ['Pastillas de freno', 'Kits de arrastre', 'Filtros de aceite', 'Baterías para moto', 'Llantas'],
-  herramientas: [],
-}
-
-/* Posicion de una marca o modelo en el ranking; lo no listado va al final
-   pero conserva su orden relativo. */
-const posMarca = (seccion, marca) => {
-  const i = (RANK_MARCAS[seccion] || []).indexOf(marca)
-  return i < 0 ? 900 : i
-}
-const posModelo = (marca, modelo) => {
-  const i = (RANK_MODELOS[marca] || []).indexOf(modelo)
-  return i < 0 ? 900 : i
-}
 
 const norm = s =>
   (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -223,9 +169,16 @@ export default function Cris({
   placeholder = '¿Qué necesitas? Escribe el repuesto y tu vehículo',
   placeholderHerramientas = '¿Qué herramienta estás buscando?',
   boton = 'Buscar',
+  /* "completo"  Cris tambien arma el vehiculo paso a paso (panel de filtros)
+     "producto"  solo busca; el vehiculo se agrega en la pildora del header,
+                 para que no haya dos puertas para lo mismo. Sigue entendiendo
+                 "llantas para toyota corolla": lo usa en ESA busqueda. */
+  modo = 'completo',
 }) {
   const handles = useCssHandles(CSS_HANDLES)
   const { navigate, route } = useRuntime()
+  /* En el header Cris no arma vehiculos: eso es de la pildora. */
+  const armaVehiculo = modo !== 'producto'
   const winPath =
     typeof window !== 'undefined' && window.location ? window.location.pathname : ''
   const ruta = (winPath || (route && route.path) || '').split('?')[0]
@@ -238,25 +191,18 @@ export default function Cris({
   const [abierto, setAbierto] = useState(false)
   const caja = useRef(null)
 
-  /* El vehiculo se guarda por seccion: el carro de alguien no es su moto. */
+  /* El vehiculo se guarda por seccion: el carro de alguien no es su moto.
+     Se escucha al almacen comun para que si la pildora del header lo cambia,
+     Cris lo refleje sin recargar la pagina. */
   useEffect(() => {
-    if (!pideVehiculo) return
-    try {
-      const guardado = window.localStorage.getItem(CLAVE + '-' + seccion)
-      if (guardado) setVehiculo(JSON.parse(guardado))
-    } catch (e) {
-      /* navegador sin almacenamiento: Cris funciona igual, solo no recuerda */
-    }
+    if (!pideVehiculo) return undefined
+    setVehiculo(leerVehiculo(seccion))
+    return suscribir(seccion, setVehiculo)
   }, [seccion, pideVehiculo])
 
   const guardar = v => {
     setVehiculo(v)
-    try {
-      if (v) window.localStorage.setItem(CLAVE + '-' + seccion, JSON.stringify(v))
-      else window.localStorage.removeItem(CLAVE + '-' + seccion)
-    } catch (e) {
-      /* sin almacenamiento: el vehiculo vale para esta sesion */
-    }
+    escribirVehiculo(seccion, v)
   }
 
   const entradas = useMemo(() => construirIndice(seccion), [seccion])
@@ -348,7 +294,7 @@ export default function Cris({
     if (!crudo) {
       if (!pideVehiculo) return []
       if (!vehiculo || !vehiculo.marca) {
-        marcas.slice(0, 8).forEach(m => meter({ tipo: 'marca', marca: m }))
+        if (armaVehiculo) marcas.slice(0, 8).forEach(m => meter({ tipo: 'marca', marca: m }))
       } else {
         (POPULARES[seccion] || []).forEach(nombre => {
           const e = entradas.find(x => !x.parcial && norm(x.alias) === norm(nombre))
@@ -380,7 +326,7 @@ export default function Cris({
     }
 
     /* Marca por prefijo de lo ultimo que escribio: "to" -> Toyota. */
-    if (pideVehiculo && ultima.length >= 2) {
+    if (pideVehiculo && armaVehiculo && ultima.length >= 2) {
       marcas
         .filter(m => norm(m).indexOf(ultima) === 0)
         .forEach(m => meter({ tipo: 'marca', marca: m }))
@@ -399,7 +345,7 @@ export default function Cris({
 
     /* Modelo sin marca: la gente escribe "corolla" o "pulsar 160" sin decir
        de quien es. Solo si todavia queda espacio, para no tapar la categoria. */
-    if (pideVehiculo && ultima.length >= 3 && out.length < 6) {
+    if (pideVehiculo && armaVehiculo && ultima.length >= 3 && out.length < 6) {
       marcas.forEach(m => {
         modelosDe(m).forEach(mo => {
           if (toks(mo).some(t => t.indexOf(ultima) === 0)) {
@@ -410,7 +356,7 @@ export default function Cris({
     }
 
     return out
-  }, [texto, entradas, marcas, seccion, pideVehiculo, vehiculo, base, lectura])
+  }, [texto, entradas, marcas, seccion, pideVehiculo, vehiculo, base, lectura, armaVehiculo])
 
   const limpiarAux = () => {
     setPaso(null)
@@ -490,7 +436,7 @@ export default function Cris({
       return
     }
     /* Vehiculo incompleto: Cris pide lo que falta en vez de buscar mal. */
-    if (pideVehiculo && l.marca && !l.modelo) {
+    if (pideVehiculo && armaVehiculo && l.marca && !l.modelo) {
       const modelos = Object.keys(base[l.marca] || {})
       if (modelos.length) {
         setPaso({ tipo: 'modelo', marca: l.marca, opciones: modelos.slice(0, 40) })
@@ -498,7 +444,7 @@ export default function Cris({
         return
       }
     }
-    if (pideVehiculo && l.marca && l.modelo && !l.ano) {
+    if (pideVehiculo && armaVehiculo && l.marca && l.modelo && !l.ano) {
       const rango = (base[l.marca] || {})[l.modelo]
       if (rango && rango[0] && rango[1]) {
         const anos = []
@@ -651,7 +597,7 @@ export default function Cris({
     <div className={`rx-cris ${handles.cris || ''}`}>
       <style>{css}</style>
 
-      {pideVehiculo && vehiculo && vehiculo.marca ? (
+      {armaVehiculo && pideVehiculo && vehiculo && vehiculo.marca ? (
         <div className={`rx-cris__veh ${handles.crisVehicle || ''}`}>
           {iconoVehiculo}
           <span>

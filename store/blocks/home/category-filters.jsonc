@@ -80,13 +80,6 @@
       }
     }
   },
-  "cris#rx-f": {
-    "props": {
-      "placeholder": "Busca tu repuesto o cambia de vehículo",
-      "placeholderHerramientas": "¿Qué herramienta estás buscando?",
-      "boton": "Buscar"
-    }
-  },
   "search-result-layout.desktop#rx-f": {
     "props": {
       "pagination": "show-more",
@@ -124,7 +117,6 @@
       "width": "grow"
     },
     "children": [
-      "flex-layout.row#rx-f-vehicle-m",
       "flex-layout.row#rx-filterbar-f",
       "flex-layout.row#rx-results-f"
     ]
@@ -156,18 +148,8 @@
       "blockClass": "rxF"
     },
     "children": [
-      "flex-layout.row#rx-f-vehicle-m",
       "flex-layout.row#rx-filterbar-m",
       "flex-layout.row#rx-results-f"
-    ]
-  },
-  "flex-layout.row#rx-f-vehicle-m": {
-    "props": {
-      "fullWidth": true,
-      "blockClass": "rxFVehicleM"
-    },
-    "children": [
-      "cris#rx-f"
     ]
   },
   "flex-layout.row#rx-filterbar-m": {

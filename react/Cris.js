@@ -10,9 +10,16 @@
  *   "205/55 R16"                   -> medida de llanta
  *   "bujias"                       -> categoria sin vehiculo (busqueda valida)
  *
- * El vehiculo queda fijado arriba de la caja y guardado en el navegador, asi
- * que las busquedas siguientes lo usan sin volver a escribirlo. Se cambia o
- * se quita con un clic.
+ * BUSCAR CON UN VEHICULO NO ES GUARDARLO. Son dos cosas:
+ *
+ *   escribirlo   "llantas para toyota corolla" filtra por ese carro en ESA
+ *                busqueda y ya. Puede ser el carro de un cliente.
+ *   elegirlo     tocar marca -> modelo -> año si guarda, y entonces queda
+ *                fijado arriba de la caja y en el navegador, asi que las
+ *                busquedas siguientes lo usan sin volver a escribirlo.
+ *
+ * Antes cualquier frase con marca pisaba el vehiculo guardado, y la tienda
+ * quedaba filtrada por un carro que el cliente nunca dijo que fuera suyo.
  *
  * Secciones: en /carros consulta la base de carros y en /motos la de motos
  * (una Hilux no debe aparecer buscando en motos). En /herramientas no hay
@@ -501,8 +508,15 @@ export default function Cris({
         return
       }
     }
+    /* El vehiculo que sale de la frase vale para ESTA busqueda y no se guarda.
+       Quien escribe "llantas para toyota corolla" puede estar mirando algo
+       para el carro de un cliente o de un familiar: cambiarle el vehiculo
+       guardado por eso le deja la tienda filtrada por un carro que no es el
+       suyo, sin que lo haya pedido.
+
+       Guardar el vehiculo es un acto deliberado y tiene su propio camino:
+       elegir marca -> modelo -> año. */
     const veh = l.marca ? { marca: l.marca, modelo: l.modelo, ano: l.ano } : vehiculo
-    if (l.marca) guardar(veh)
     if (l.categoria) return irA(l.categoria.nodo, veh, l.llanta, !!l.marca)
     if (l.llanta) {
       const llantas = indice.nodos.find(
@@ -525,7 +539,8 @@ export default function Cris({
     /* Las dos salidas de una categoria con vehiculo. "con" manda el vehiculo
        como explicito, que es lo que hace que en "ajuste" si se filtre. */
     if (s.tipo === 'ir') {
-      if (s.conVehiculo) guardar(s.veh)
+      /* Tampoco se guarda aqui: el vehiculo puede venir de la frase, y "ver
+         pastillas para ese carro" no es lo mismo que "ese carro es el mio". */
       irA(s.nodo, s.conVehiculo ? s.veh : null, null, s.conVehiculo, !s.conVehiculo)
       return
     }

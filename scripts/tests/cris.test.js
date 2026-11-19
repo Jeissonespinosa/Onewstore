@@ -97,6 +97,24 @@ prueba('herramientas       -> universal', nivelDe('/herramientas/herramientas-ma
 prueba('TPMS               -> estricta', nivelDe('/carros/tecnologia-y-seguridad/tecnologia-y-conectividad/sensores-de-presion-de-llantas-tpms'), 'estricta')
 prueba('alarmas            -> universal', nivelDe('/carros/tecnologia-y-seguridad/seguridad/alarmas'), 'universal')
 
+console.log('\n=== buscar con un vehiculo no es guardarlo ===')
+// Escribir "llantas para toyota corolla" filtra por ese carro en esa busqueda,
+// pero NO cambia el vehiculo guardado: puede ser el carro de un cliente.
+// Guardar es deliberado y pasa por marca -> modelo -> año.
+const cuerpo = (nombre) => {
+  const i = src.indexOf('const ' + nombre + ' =')
+  if (i < 0) return null
+  // hasta la siguiente declaracion del mismo nivel de indentacion
+  const resto = src.slice(i)
+  const fin = resto.slice(1).search(/\n  const [a-zA-Z]/)
+  return fin < 0 ? resto : resto.slice(0, fin + 1)
+}
+const enviar = cuerpo('enviar')
+prueba('se encontro enviar()', enviar !== null, true)
+prueba('enviar() no guarda el vehiculo', /\bguardar\(/.test(enviar || 'guardar('), false)
+const elegirPaso = cuerpo('elegirPaso')
+prueba('elegirPaso() si guarda (es deliberado)', /\bguardar\(/.test(elegirPaso || ''), true)
+
 console.log('\n=== todo nodo tiene nivel ===')
 prueba('sin nodos sin clasificar', indice.nodos.filter(n => !n.compatibilidad).length, 0)
 

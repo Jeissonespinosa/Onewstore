@@ -38,7 +38,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 /* El ranking y el almacen del vehiculo son compartidos con la pildora del
    header: una sola fuente, o los dos componentes se desincronizan. */
 import {
-  POPULARES, posMarca, posModelo,
+  POPULARES, posMarca, posModelo, rutaDe,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
 } from './vehiculo'
 
@@ -179,10 +179,11 @@ export default function Cris({
   const { navigate, route } = useRuntime()
   /* En el header Cris no arma vehiculos: eso es de la pildora. */
   const armaVehiculo = modo !== 'producto'
-  const winPath =
-    typeof window !== 'undefined' && window.location ? window.location.pathname : ''
-  const ruta = (winPath || (route && route.path) || '').split('?')[0]
-  const seccion = seccionDe(ruta)
+  /* rutaDe() usa canonicalPath, que el servidor tambien ve. Con route.path
+     (la ruta interna de enrutamiento de VTEX) el servidor creia estar en
+     carros dentro de /motos, y Cris cargaba la base equivocada hasta que
+     hidrataba. */
+  const seccion = seccionDe(rutaDe(route))
   const pideVehiculo = seccion !== 'herramientas'
 
   const [texto, setTexto] = useState('')

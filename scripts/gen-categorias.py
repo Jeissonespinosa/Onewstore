@@ -801,9 +801,11 @@ def build_and_write(NODES, RAILS, routes):
             rail['rich-text#%s-arrow' % cid] = {'props': {'text': '[→](%s)' % m['path'], 'blockClass': 'rxLineaArrow'}}
         rail['flex-layout.row#rx-lineas-%s' % sec] = {'props': {'blockClass': grid_class(len(macros))}, 'children': cards}
 
-    # landing /herramientas: banner + buscador + rail (sin selector de vehiculo)
+    # landing /herramientas: banner + rail. El buscador de debajo del banner se
+    # retiro: Cris vive en el header, que es pegajoso y esta en todas las
+    # paginas, asi que repetirlo aqui era la misma caja dos veces en pantalla.
     rail['store.custom#landing-herramientas'] = {
-        'blocks': ['flex-layout.row#rx-p-landing-herramientas-banner', 'flex-layout.row#rx-tools-search',
+        'blocks': ['flex-layout.row#rx-p-landing-herramientas-banner',
                    'flex-layout.row#rx-lineas-section-herramientas', 'flex-layout.row#carros-cta-banner'],
     }
     rail['flex-layout.row#rx-p-landing-herramientas-banner'] = {

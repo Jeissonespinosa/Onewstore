@@ -164,3 +164,27 @@ export function alPedirAbrir(seccion, fn) {
   }
   return () => window.removeEventListener(ABRIR, oir)
 }
+
+/* ------------------------------------------------------------------
+   La ruta publica, la misma en el servidor y en el navegador.
+
+   route.path NO sirve: en una pagina nativa de categoria VTEX entrega
+   su ruta interna de enrutamiento
+
+     /_v/segment/routing/vtex.store@2.x/subcategory/515/motos/frenos/...
+
+   que no empieza por /motos, asi que el servidor creia estar en carros
+   y el navegador en motos. React hidrataba por posicion y mezclaba los
+   dos dibujos: el icono salia con las ruedas de la moto y la carroceria
+   del carro. No era un parpadeo, era un icono roto.
+
+   canonicalPath si trae /motos/frenos/... y existe en los dos lados.
+   ------------------------------------------------------------------ */
+export function rutaDe(route) {
+  const r = route || {}
+  if (r.canonicalPath) return r.canonicalPath.split('?')[0]
+  const dpto = r.params && r.params.department
+  if (dpto) return '/' + dpto
+  if (typeof window !== 'undefined' && window.location) return window.location.pathname
+  return (r.path || '').split('?')[0]
+}

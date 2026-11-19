@@ -1,18 +1,17 @@
-.flexRowContent--menu-link,
-.flexRowContent--main-header {
+/* El padding del header lo fija su propio bloque, mas abajo: estas
+   reglas solo quedan para menu-link. */
+.flexRowContent--menu-link {
   padding: 0 0.5rem;
 }
 
 @media screen and (min-width: 40em) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
+  .flexRowContent--menu-link {
     padding: 0 1rem;
   }
 }
 
 @media screen and (min-width: 80rem) {
-  .flexRowContent--menu-link,
-  .flexRowContent--main-header {
+  .flexRowContent--menu-link {
     padding: 0 0.25rem;
   }
 }
@@ -22,17 +21,81 @@
   color: #fff;
 }
 
+/* ============================================================
+   HEADER
+   ------------------------------------------------------------
+   menu · logo · Cris · vehiculo · cuenta · carrito
+
+   Una sola fila que nunca envuelve. Cris es el unico que crece
+   y el unico que puede encogerse (min-width: 0, sin el un flex
+   hijo no baja de su contenido y empuja a los demas fuera).
+   Todo lo demas conserva su ancho: la pildora del vehiculo se
+   pegaba a "Mi cuenta" porque sin gap los cinco bloques suman
+   justo el ancho de la ventana.
+   ============================================================ */
 .flexRowContent--main-header {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.1);
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 1rem;
+  min-height: 4.75rem;
+  padding: 0 1.25rem;
 }
 
+@media screen and (min-width: 80rem) {
+  .flexRowContent--main-header {
+    gap: 1.25rem;
+    padding: 0 2rem;
+  }
+}
+
+.flexCol--crisDesktop {
+  min-width: 0;
+}
+
+.flexCol--categoriesDesktop,
+.flexCol--vehiculoDesktop {
+  flex-shrink: 0;
+}
+
+.flexRowContent--headerActions {
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+}
+
+/* ---------- movil ---------- */
 .flexRowContent--main-header-mobile {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.1);
   align-items: center;
-  padding: 0.625rem 0.5rem;
-  background-color: #f0f0f0;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  min-height: 3.5rem;
+  padding: 0.375rem 0.625rem;
+}
+
+.flexCol--crisMobile {
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.flexCol--categoriesMobile,
+.flexCol--logoMobile,
+.flexCol--vehiculoMobile,
+.flexCol--headerActionsMobile {
+  flex-shrink: 0;
+}
+
+/* Los hijos de una columna de flex-layout vienen con w-100; en el
+   header eso estira el isotipo y el circulo del vehiculo a todo el
+   ancho de su columna y descuadra la fila. */
+.flexCol--logoMobile,
+.flexCol--vehiculoMobile,
+.flexCol--categoriesMobile,
+.flexCol--vehiculoDesktop {
+  width: auto;
 }
 
 .flexRowContent--menu-link :global(.vtex-menu-2-x-styledLink) {

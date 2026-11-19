@@ -22,7 +22,7 @@ import { useCssHandles } from 'vtex.css-handles'
 
 import vehiculos from './data/vehiculos-colombia.json'
 import {
-  seccionDe, leer, escribir, suscribir, nombreDe, posMarca, posModelo, alPedirAbrir,
+  seccionDe, rutaDe, leer, escribir, suscribir, nombreDe, posMarca, posModelo, alPedirAbrir,
 } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoHeader', 'vehiculoBoton', 'vehiculoPanel']
@@ -41,10 +41,7 @@ export default function VehiculoHeader({
 }) {
   const handles = useCssHandles(CSS_HANDLES)
   const { route } = useRuntime()
-  const winPath =
-    typeof window !== 'undefined' && window.location ? window.location.pathname : ''
-  const ruta = (winPath || (route && route.path) || '').split('?')[0]
-  const seccion = seccionDe(ruta)
+  const seccion = seccionDe(rutaDe(route))
 
   const [vehiculo, setVehiculo] = useState(null)
   const [vista, setVista] = useState(null)     // null|'vehiculo'|'marca'|'modelo'|'ano'
@@ -138,13 +135,31 @@ export default function VehiculoHeader({
     }))
   }
 
+  /* En /motos el icono es una moto. Mismo viewBox y mismo trazo redondo que
+     el carro, asi que todos los tamaños de abajo calzan sin tocar nada. */
+  const esMoto = seccion === 'motos'
   const iconoCarro = (color, ancho, alto) => (
     <svg width={ancho} height={alto} viewBox="0 0 30 22" fill="none" stroke={color}
-      strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
-      style={{ flexShrink: 0 }}>
-      <path d="M4 12 L6.5 5.5 Q7 4 8.5 4 L21.5 4 Q23 4 23.5 5.5 L26 12" />
-      <path d="M2.5 12 L27.5 12 L27.5 17 L2.5 17 Z" />
-      <path d="M6 17 L6 19.5 M24 17 L24 19.5" />
+      strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
+      aria-hidden="true" style={{ flexShrink: 0 }}>
+      {esMoto ? (
+        /* Lateral con tanque y sillin. La version "bicicleta" (solo ruedas y
+           cuadro) se descarto: a 24 px no se distinguia de una bici. */
+        <>
+          <circle cx="6.5" cy="16" r="3.8" />
+          <circle cx="23.5" cy="16" r="3.8" />
+          <path d="M6.5 16 L10.5 16 L13 11 L18 11 L20 16 L23.5 16" />
+          <path d="M13 11 Q15.5 8 18.5 8.5" />
+          <path d="M18.5 8.5 L21 5 L24 5" />
+          <path d="M10.5 11 L9 8.5 L13 8.5" />
+        </>
+      ) : (
+        <>
+          <path d="M4 12 L6.5 5.5 Q7 4 8.5 4 L21.5 4 Q23 4 23.5 5.5 L26 12" />
+          <path d="M2.5 12 L27.5 12 L27.5 17 L2.5 17 Z" />
+          <path d="M6 17 L6 19.5 M24 17 L24 19.5" />
+        </>
+      )}
     </svg>
   )
 

@@ -15,7 +15,7 @@ import React, { useEffect, useState } from 'react'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
-import { seccionDe, leer, suscribir, nombreDe, pedirAbrir } from './vehiculo'
+import { seccionDe, rutaDe, leer, suscribir, nombreDe, pedirAbrir } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoEnPagina']
 const RED = '#FF371E'
@@ -23,10 +23,7 @@ const RED = '#FF371E'
 export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   const handles = useCssHandles(CSS_HANDLES)
   const { route } = useRuntime()
-  const winPath =
-    typeof window !== 'undefined' && window.location ? window.location.pathname : ''
-  const ruta = (winPath || (route && route.path) || '').split('?')[0]
-  const seccion = seccionDe(ruta)
+  const seccion = seccionDe(rutaDe(route))
 
   const [vehiculo, setVehiculo] = useState(null)
 
@@ -60,11 +57,23 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   return (
     <div className={`rx-vp ${handles.vehiculoEnPagina || ''}`}>
       <style>{css}</style>
+      {/* Carro o moto segun la seccion, misma estetica de trazo. */}
       <svg width="16" height="12" viewBox="0 0 30 22" fill="none" stroke={RED}
         strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
         style={{ flexShrink: 0 }}>
-        <path d="M4 12 L6.5 5.5 Q7 4 8.5 4 L21.5 4 Q23 4 23.5 5.5 L26 12" />
-        <path d="M2.5 12 L27.5 12 L27.5 17 L2.5 17 Z" />
+        {seccion === 'motos' ? (
+          <>
+            <circle cx="6.5" cy="16" r="3.8" />
+            <circle cx="23.5" cy="16" r="3.8" />
+            <path d="M6.5 16 L10.5 16 L13 11 L18 11 L20 16 L23.5 16" />
+            <path d="M18.5 8.5 L21 5 L24 5" />
+          </>
+        ) : (
+          <>
+            <path d="M4 12 L6.5 5.5 Q7 4 8.5 4 L21.5 4 Q23 4 23.5 5.5 L26 12" />
+            <path d="M2.5 12 L27.5 12 L27.5 17 L2.5 17 Z" />
+          </>
+        )}
       </svg>
       <span className="rx-vp__nombre">{prefijo} {nombreDe(vehiculo)}</span>
       {vehiculo.ano ? <span className="rx-vp__ano">· {vehiculo.ano}</span> : null}

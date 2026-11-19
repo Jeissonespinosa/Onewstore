@@ -180,11 +180,10 @@
   gap: 0;
   width: 100%;
   max-width: none;
-  /* Pantalla completa menos el header, que en el home ya no va
-     superpuesto: si no se descuenta, el selector empuja y queda
-     una barra de scroll de la altura exacta del header. */
-  height: calc(100vh - 3.5rem);
-  height: calc(100svh - 3.5rem);
+  /* Pantalla completa: en el home el header se oculta entero
+     (vtex.login.css), asi que no hay nada que descontar. */
+  height: 100vh;
+  height: 100svh;
   min-height: 30rem;
   margin: 0;
   padding: 0;
@@ -193,13 +192,6 @@
 /* El wrapper de cada columna no lleva el modificador del blockClass,
    por eso se apunta desde el contenedor; pisa el width inline que
    calcula flex-layout (50%). */
-@media screen and (min-width: 40rem) {
-  .flexRowContent--repuestoxSplitHero {
-    height: calc(100vh - 4.75rem);
-    height: calc(100svh - 4.75rem);
-  }
-}
-
 .flexRowContent--repuestoxSplitHero .stretchChildrenWidth {
   width: 100% !important;
   max-width: none !important;

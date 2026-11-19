@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
 
 /* ============================================================
-   HOME CON EL MISMO HEADER QUE EL RESTO
+   HOME SIN HEADER
    ------------------------------------------------------------
-   Antes el home sacaba el header del flujo y lo volvia
-   transparente, estilo Pull&Bear: solo el isotipo flotando
-   sobre las fotos. Con Cris y la pildora del vehiculo en el
-   header eso dejaba la pantalla principal sin buscador y sin
-   forma de guardar el carro, y en celular el isotipo quedaba
-   encima de la imagen.
+   La primera pantalla es una sola decision: carros, motos o
+   herramientas. Nada mas compite por la atencion, asi que el
+   header entero sale — no transparente ni superpuesto, fuera.
 
-   Ahora el home lleva el header normal. Lo unico que cambia es
-   que el selector a pantalla completa descuenta su altura, para
-   que las dos mitades sigan entrando sin barra de scroll.
+   Antes quedaba el isotipo flotando sobre la foto, que es lo
+   que se veia mal en celular: encima de una imagen clara se
+   perdia y encima de una oscura tapaba el carro. El isotipo ya
+   tiene su momento en el splash de entrada.
+
+   Se ocultan los DOS sticky (escritorio y movil) por su
+   blockClass: hacerlos transparentes no basta porque el wrapper
+   reserva su altura igual y empuja el selector.
    ============================================================ */
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-container--sticky-header),
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-container--sticky-header-mobile),
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header),
+:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header-mobile) {
+  display: none !important;
+}
 
 /* ============================================================
    TOKENS REPUESTOX + ESTADOS DE FOCO

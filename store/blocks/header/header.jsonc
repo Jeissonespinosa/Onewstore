@@ -169,6 +169,9 @@
     ]
   },
   "sticky-layout#1-mobile": {
+    "props": {
+      "blockClass": "sticky-header-mobile"
+    },
     "children": [
       "flex-layout.row#1-mobile"
     ]

@@ -575,6 +575,31 @@ export default function Cris({
       padding:.6rem .75rem;border:0;background:none;border-radius:10px;font:inherit;font-size:.9rem;cursor:pointer}
     .rx-cris__op:hover,.rx-cris__op:focus{background:#f5f5f7}
     .rx-cris__op small{color:rgba(1,1,1,.5)}
+
+    /* ---- Cris dentro del header ----
+       La caja de arriba se diseno para vivir sola debajo de un banner:
+       3.4rem de alto, 6rem de padding derecho para el boton "Buscar" y una
+       sombra ancha. Metida en una fila de header con 11rem de ancho, el
+       boton se comia la caja y no quedaba ni un pixel de texto: eso era lo
+       que se veia en el celular, un boton rojo flotando.
+
+       Aqui se encoge a la altura de los demas controles, el boton pasa a ser
+       una lupa redonda y el texto arranca despues de la lupa de la
+       izquierda. */
+    .rx-cris--barra{max-width:none}
+    .rx-cris--barra .rx-cris__lupa{position:absolute;left:.75rem;top:50%;
+      transform:translateY(-50%);pointer-events:none}
+    .rx-cris--barra .rx-cris__input{height:2.375rem;font-size:.8125rem;
+      padding:0 2.75rem 0 2.25rem;box-shadow:none}
+    .rx-cris--barra .rx-cris__go{right:.25rem;top:.25rem;height:1.875rem;width:1.875rem;
+      padding:0;display:flex;align-items:center;justify-content:center}
+
+    @media screen and (min-width:40rem){
+      .rx-cris--barra .rx-cris__input{height:2.875rem;font-size:.875rem;
+        padding:0 3rem 0 2.5rem}
+      .rx-cris--barra .rx-cris__go{height:2.375rem;width:2.375rem;right:.25rem;top:.25rem}
+      .rx-cris--barra .rx-cris__lupa{left:.875rem}
+    }
     .rx-cris__titulo{padding:.5rem .7rem .2rem;font-size:.8rem;font-weight:700;
       letter-spacing:.04em;text-transform:uppercase;color:rgba(1,1,1,.45)}
     .rx-cris__salto{background:none;border:0;color:${RED};font:inherit;font-weight:700;
@@ -595,7 +620,7 @@ export default function Cris({
   `
 
   return (
-    <div className={`rx-cris ${handles.cris || ''}`}>
+    <div className={`rx-cris ${armaVehiculo ? '' : 'rx-cris--barra'} ${handles.cris || ''}`}>
       <style>{css}</style>
 
       {armaVehiculo && pideVehiculo && vehiculo && vehiculo.marca ? (
@@ -612,6 +637,15 @@ export default function Cris({
       ) : null}
 
       <form className="rx-cris__box" onSubmit={enviar} role="search">
+        {/* La lupa solo en la barra del header: en el panel ancho el boton
+            "Buscar" ya dice de que se trata. */}
+        {!armaVehiculo ? (
+          <svg className="rx-cris__lupa" width="15" height="15" viewBox="0 0 16 16" fill="none"
+            stroke={RED} strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <circle cx="7" cy="7" r="4.5" />
+            <path d="M10.5 10.5 14 14" />
+          </svg>
+        ) : null}
         <input
           ref={caja}
           className={`rx-cris__input ${handles.crisInput || ''}`}
@@ -623,7 +657,17 @@ export default function Cris({
           onChange={e => { setTexto(e.target.value); setAbierto(true); setPaso(null) }}
           onFocus={() => setAbierto(true)}
         />
-        <button type="submit" className="rx-cris__go">{boton}</button>
+        {/* En la barra del header no cabe la palabra: el boton queda como
+            lupa, con el texto en aria-label para que se siga anunciando. */}
+        <button type="submit" className="rx-cris__go" aria-label={boton}>
+          {armaVehiculo ? boton : (
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="#fff"
+              strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="7" cy="7" r="4.5" />
+              <path d="M10.5 10.5 14 14" />
+            </svg>
+          )}
+        </button>
 
         {abierto && sugerencias.length ? (
           <div className={`rx-cris__panel ${handles.crisSuggestions || ''}`}>

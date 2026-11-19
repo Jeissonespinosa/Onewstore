@@ -1,55 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
 
 /* ============================================================
-   HOME SIN BARRA DE HEADER (estilo Pull&Bear)
+   HOME CON EL MISMO HEADER QUE EL RESTO
    ------------------------------------------------------------
-   El wrapper del sticky-layout ocupaba 94px de flujo y pintaba
-   una franja blanca sobre el hero. Aqui se saca del flujo y se
-   vuelve transparente SOLO en el home, para que el logo quede
-   encima de las imagenes y el selector de vehiculo ocupe el
-   viewport completo. El resto de rutas conserva su header.
+   Antes el home sacaba el header del flujo y lo volvia
+   transparente, estilo Pull&Bear: solo el isotipo flotando
+   sobre las fotos. Con Cris y la pildora del vehiculo en el
+   header eso dejaba la pantalla principal sin buscador y sin
+   forma de guardar el carro, y en celular el isotipo quedaba
+   encima de la imagen.
+
+   Ahora el home lleva el header normal. Lo unico que cambia es
+   que el selector a pantalla completa descuenta su altura, para
+   que las dos mitades sigan entrando sin barra de scroll.
    ============================================================ */
-:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
-  /* sticky-layout escribe "position: relative; height: 94px"
-     como estilo INLINE desde React, asi que sacarlo del flujo
-     exige !important. Al quedar absolute ya no reserva alto. */
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 30;
-  background-color: transparent;
-  border-bottom: none;
-}
-
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
-  background-color: transparent;
-}
-
-/* Al hacer scroll el header se pone opaco con blur; en el home
-   eso reintroduce la barra que justamente queremos quitar. */
-:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
-:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--stuck) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
-}
-
-/* Velo muy suave en el borde superior: no es una barra, es un
-   seguro de legibilidad para que el logo se lea sea cual sea
-   la foto que se cargue despues. */
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--repuestoxSplitHero) {
-  position: relative;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.32) 0,
-    rgba(0, 0, 0, 0.12) 4.5rem,
-    rgba(0, 0, 0, 0) 8rem
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 8rem;
-}
 
 /* ============================================================
    TOKENS REPUESTOX + ESTADOS DE FOCO
@@ -546,21 +510,8 @@
    validation, letting us use the render-route class.
    ============================================================ */
 
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActions),
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--headerActions),
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile),
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerDrawerMobile),
+/* La barra de telemarketing si sigue fuera del home: es una franja
+   de soporte que no aporta en la primera pantalla. */
 :global(.render-route-store-home) :global(.vtex-telemarketing-1-x-container) {
   display: none !important;
-}
-
-/* Center the logo when it is the only element left on home */
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header),
-:global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRowContent--main-header-mobile) {
-  justify-content: center;
-}
-
-/* Remove the sticky bottom border on home for a cleaner first screen */
-:global(.render-route-store-home) :global(.vtex-sticky-layout-0-x-wrapper--sticky-header) {
-  border-bottom: none;
 }

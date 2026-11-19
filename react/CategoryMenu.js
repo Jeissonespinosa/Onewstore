@@ -47,6 +47,7 @@ const CSS_HANDLES = [
   'seeAll',
   // variante drawer (movil)
   'triggerLabelHidden',
+  'triggerSolo',
   'drawerRoot',
   'drawerOverlay',
   'drawer',
@@ -576,7 +577,7 @@ function DrawerMenu({ sections, label = 'Categorías', id = 'rx-category-menu-dr
       <button
         type="button"
         ref={triggerRef}
-        className={h.trigger}
+        className={`${h.trigger} ${h.triggerSolo}`}
         aria-expanded={open}
         aria-haspopup="dialog"
         aria-controls={open ? dialogId : undefined}

@@ -179,6 +179,23 @@
 
 /* --- variante movil: drawer con acordeon ----------------------------------- */
 
+/* El disparador movil es solo el icono, sin la pildora negra: en una fila de
+   390 px esa mancha competia con el isotipo y con Cris, que es lo que tiene
+   que resaltar. El area tactil se mantiene en 2.75rem. */
+.triggerSolo {
+  width: 2.75rem;
+  padding: 0;
+  justify-content: center;
+  background: transparent;
+  color: var(--cm-ink);
+}
+
+.triggerSolo:hover,
+.triggerSolo[aria-expanded="true"] {
+  background: transparent;
+  color: var(--cm-red);
+}
+
 /* texto solo para lectores de pantalla (el disparador movil muestra solo el icono) */
 .triggerLabelHidden {
   position: absolute;

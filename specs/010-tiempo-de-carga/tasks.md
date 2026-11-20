@@ -9,12 +9,12 @@
 
 ## 1. Línea base propia
 
-- [ ] 1.1 **Diego:** tener `vtex link` activo en un workspace y darme la URL. Anotar el commit
+- [x] 1.1 **Diego:** tener `vtex link` activo en un workspace y darme la URL. Anotar el commit
   del theme medido. Verificación: la URL carga el theme.
-- [ ] 1.2 **Diego:** medir Lighthouse (mediana de varias corridas, móvil y escritorio) en `/`,
+- [x] 1.2 **Diego:** medir Lighthouse (mediana de varias corridas, móvil y escritorio) en `/`,
   `/carros/llantas-y-rines/llantas` y `/llanta-aeolus-agc28-1100-20/p` con el método de la 003,
   y pasarme los valores. Verificación: tabla en `medidas.md` con fecha, workspace y commit (AC-1).
-- [ ] 1.3 Crear `medidas.md` con la tabla de 1.2 y comparar contra la medición final de la 003.
+- [x] 1.3 Crear `medidas.md` con la tabla de 1.2 y comparar contra la medición final de la 003.
   Si difiere más de 5 puntos, anotar la diferencia y su causa probable.
   Verificación: la tabla existe y las metas de AC-3 y AC-4 están calculadas en ella.
 

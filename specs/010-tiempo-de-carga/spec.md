@@ -1,6 +1,6 @@
 # 010 — Mejorar el tiempo de carga
 
-- **Estado:** draft
+- **Estado:** implementing
 - **Responsable:** Diego
 - **Origen:** tarea 8 de la lista de trabajo
 - **Rama:** `feat/010-tiempo-de-carga` (creada desde `release`)
@@ -11,7 +11,7 @@
 
 La tienda carga lento en móvil: Lighthouse móvil **52 (inicio), 58 (categoría), 48 (ficha)**
 frente a 78, 68 y 75 en escritorio (`003-menu-categorias-global/baseline.md`, medición final,
-mediana de varias corridas con `vtex link` en `devdiego`). Esas cifras están medidas en un
+mediana de varias corridas con `vtex link` en `devdiego`, hoy borrado). Esas cifras están medidas en un
 workspace de desarrollo, que carga más lento que un theme publicado, y con datos de prueba.
 
 Observado leyendo el repo (**[Hecho·código]**, sin medir en el navegador todavía):
@@ -113,7 +113,8 @@ Observado leyendo el repo (**[Hecho·código]**, sin medir en el navegador todav
 
 Respondidas el 2026-11-19:
 - [x] Meta numérica → **+10 puntos móvil** en inicio, categoría y ficha sobre la medición final de la 003.
-- [x] Dónde se mide → workspace `devdiego` con `vtex link` (no hay producción).
+- [x] Dónde se mide → workspace `pruebamedidas` con `vtex link` (no hay producción; creado el 2026-11-20 porque `pruebatema` resuelve mal las rutas de catálogo). `devdiego` se
+  borró el 2026-11-16; la medición final de la 003 se hizo allí, por lo que la comparación lleva esa salvedad.
 
 Siguen abiertas y **no bloquean** el diagnóstico:
 - [ ] **Carga diferida del árbol de categorías (46 KB):** Diego la revirtió en la 003. ¿Se vuelve a

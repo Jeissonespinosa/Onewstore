@@ -43,7 +43,7 @@ entre tandas); si la mejora es menor de 3 puntos, se revierte el commit. Un comm
   (peso variable 300-900, `font-display: swap`, subconjunto latino) y reemplazar Roboto por Montserrat
   en los tokens de `style.json`. Verificación adicional: AC-5 (sin petición a `fonts.googleapis.com`
   ni CSS de fuentes bloqueante) y que Roboto ya no se descargue.
-- [ ] 3.2 **C4 Imágenes:** prioridad de carga del hero de la inicio y `width`/`height` en las imágenes
+- [x] 3.2 **C4 Imágenes:** prioridad de carga del hero de la inicio y `width`/`height` en las imágenes
   sin dimensiones (logo, pie, ficha), donde el bloque de VTEX lo soporte; anotar lo que no. Verificación
   adicional: CLS y LCP antes y después.
 - [ ] 3.3 **N1 LCP de categoría:** decidir con la medición posterior a 3.1 si hace falta tocar

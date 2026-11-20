@@ -92,3 +92,27 @@ en `pruebamedidas`.
   quedan por revisar por Diego (el navegador de la sesión no tiene sesión en `pruebamedidas`).
 - **Tests de `react/`:** 109 pasan y 7 fallan, todos en `VehicleSelector`; los mismos 7 fallan en `HEAD` limpio
   (comprobado en un worktree temporal), por lo que son anteriores a este cambio.
+
+## 3.2 — C4 Imágenes (2026-11-20)
+
+- **Cambio:** las dos imágenes del hero de la inicio (carros y motos, de Unsplash) declaran `srcSet`
+  (800 px y 1600 px) y `sizes: "100vw"` en `store/blocks/home/repuestox-home.json`. El móvil descarga la de 800 px;
+  el escritorio sigue recibiendo la de 1600 px.
+- **No se pudo aplicar (el bloque `image` no lo soporta, RF-6):** `width`/`height` (las 4 imágenes sin dimensiones
+  del logo, el pie y la ficha), carga diferida (`loading`) y prioridad de carga (`fetchpriority`) del hero. Según la
+  [documentación del bloque](https://developers.vtex.com/docs/apps/vtex.store-components/Image) solo admite `src`, `srcSet`, `sizes`,
+  `alt`, `link`, `maxHeight` y `maxWidth`. Hacerlo exigiría un componente propio o cambiar de bloque
+  (`store-image`, con `loading` y `experimentalSetExplicitDimensions`); no se hizo por el riesgo visual y porque CLS
+  ya es ≤ 0,026. Queda como opción si la spec 011 cambia las imágenes.
+- **Método:** inicio móvil, 5 corridas antes y 5 después, misma sesión, commit base `821b260`.
+
+| Página | Móvil antes → después | LCP | Peso | Imágenes de Unsplash |
+|---|---|---|---|---|
+| Inicio | 70 → **73 (+3)** | 4,1 → 3,9 s | 2 495 → 2 428 KB | 29 + 83 KB → 13 + 30 KB |
+
+- **Corridas:** antes 72, 70, 73, 67, 70 · después 68, 73, 75, 70, 76.
+- **Lectura:** el puntaje sube 3 puntos, justo en el umbral y dentro del ruido (los rangos se solapan); lo que sí es
+  firme es el ahorro de 67 KB en la inicio. **Se conserva** porque es de bajo riesgo y reduce bytes en datos móviles; si
+  Diego prefiere el criterio estricto (< 3 puntos o sin evidencia → revertir), es un revert de un commit.
+- **AC-6:** capturas finales de Lighthouse antes/después de la inicio móvil, 0,5 % de píxeles distintos; sin cambios visibles.
+- Escritorio no se midió: no cambia la imagen que recibe (1600 px).

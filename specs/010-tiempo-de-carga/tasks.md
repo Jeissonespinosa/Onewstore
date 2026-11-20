@@ -28,25 +28,26 @@
   descartada o sin datos. Verificación: columna "evidencia" por candidata en `diagnostico.md`.
 - [x] 2.3 Ordenar las causas por ganancia estimada ÷ esfuerzo y proponer qué aplicar.
   Verificación: lista priorizada en `diagnostico.md` (RF-3).
-- [ ] 2.4 **Diego:** aprobar qué candidatas se aplican (incluida C2, que él revirtió en la 003).
+- [x] 2.4 **Diego:** aprobar qué candidatas se aplican (incluida C2, que él revirtió en la 003).
   Verificación: aprobación anotada en `diagnostico.md` (AC-2); se reescribe el grupo 3.
+  *Aprobado el 2026-11-20: C1 y C4; familia única Montserrat; C2 y C3 descartadas.*
 
-## 3. Optimizaciones *(candidatas; se concretan en 2.4)*
+## 3. Optimizaciones *(concretadas el 2026-11-20 en 2.4)*
 
 Verificación común a cada una: tests de `react/__tests__` en verde; capturas a 360 y 1280 px sin
-cambios visuales (AC-6); medida "antes → después" en `medidas.md` (AC-9); si la mejora es menor
-de 3 puntos, se revierte el commit.
+cambios visuales salvo lo que la tarea declare (AC-6); medida "antes → después" en `medidas.md`
+(AC-9, móvil 5 corridas y escritorio 3, **el "antes" se mide justo antes de cada cambio** por el ruido
+entre tandas); si la mejora es menor de 3 puntos, se revierte el commit. Un commit por tarea.
 
-- [ ] 3.1 **C1 Fuentes:** quitar el `@import` de `vtex.login.css`, cargar solo los pesos usados con
-  `font-display: swap` y definir una sola familia. Verificación adicional: AC-5.
-- [ ] 3.2 **C2 Árbol de categorías diferido** (solo con aprobación de Diego). Verificación
-  adicional: tests de `CategoryMenu` y del drawer; abrir el menú con teclado y con clic funciona
-  (RF-8).
-- [ ] 3.3 **C3 Datos de vehículos diferidos.** Verificación adicional: test de `VehicleSelector`.
-- [ ] 3.4 **C4 Imágenes:** carga diferida bajo el primer pantallazo y dimensiones declaradas,
-  donde el bloque lo soporte. Verificación adicional: CLS medido antes y después.
-- [ ] 3.5 **C5 Home arriba del pliegue** y **C6 JS de terceros**: solo si el diagnóstico las
-  confirma. Verificación adicional: el aspecto visible no cambia sin aprobación.
+- [ ] 3.1 **C1 Fuentes:** quitar el `@import` de `vtex.login.css`; declarar Montserrat con `@font-face`
+  (peso variable 300-900, `font-display: swap`, subconjunto latino) y reemplazar Roboto por Montserrat
+  en los tokens de `style.json`. Verificación adicional: AC-5 (sin petición a `fonts.googleapis.com`
+  ni CSS de fuentes bloqueante) y que Roboto ya no se descargue.
+- [ ] 3.2 **C4 Imágenes:** prioridad de carga del hero de la inicio y `width`/`height` en las imágenes
+  sin dimensiones (logo, pie, ficha), donde el bloque de VTEX lo soporte; anotar lo que no. Verificación
+  adicional: CLS y LCP antes y después.
+- [ ] 3.3 **N1 LCP de categoría:** decidir con la medición posterior a 3.1 si hace falta tocar
+  `TyreSizeSelector`. Verificación: anotar en `diagnostico.md` la decisión y sus datos.
 
 ## 4. Guía de imágenes y presupuesto
 

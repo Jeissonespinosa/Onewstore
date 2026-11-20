@@ -82,4 +82,9 @@ Las ganancias son **estimaciones**, no medidas; se confirman con la medición «
 
 ## 4. Aprobación — tarea 2.4
 
-*Pendiente de Diego.* Anotar aquí qué candidatas se aplican y la fecha.
+**Aprobado por Diego el 2026-11-20:**
+- Se aplican **C1** y **C4**, cada una en su commit, midiendo antes → después.
+- La familia tipográfica única es **Montserrat** (se reemplaza Roboto de los tokens).
+- **C2 y C3 se descartan.** N1 (LCP de categoría) se decide tras medir C1.
+- **C6 (reCAPTCHA)** queda fuera del repo: lo evalúa Diego en la configuración de la cuenta o con VTEX.
+- C5 no se aplica (sin datos).

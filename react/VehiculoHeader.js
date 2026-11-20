@@ -1,20 +1,27 @@
 /*
- * La puerta del vehiculo, en el header.
+ * La puerta de los vehiculos, en el header.
  *
- * Una sola puerta: se agrega ahi, se consulta ahi y se quita ahi. Cris busca
- * repuestos y nada mas, asi no hay dos sitios que hagan lo mismo.
+ * Una sola puerta: se agregan ahi, se consultan ahi, se cambia cual manda y
+ * se quitan ahi. Cris busca repuestos y nada mas, asi no hay dos sitios que
+ * hagan lo mismo.
  *
  *   variante "circulo"  movil: circulo de 30 px con un + chiquito en la
  *                       esquina mientras no hay vehiculo.
  *   variante "pildora"  escritorio y tablet: pildora con el carro y el +
  *                       al lado, sin circulo; con vehiculo muestra el nombre.
  *
+ * HASTA 3 VEHICULOS. El activo es el que filtra la tienda: va en rojo con el
+ * chulo al final. Los demas quedan en blanco con el borde gris, a un clic de
+ * tomar el relevo. Tres alcanzan para el carro propio, el de la casa y el
+ * del trabajo; mas convierten la lista en algo que hay que leer en vez de
+ * reconocer de un vistazo.
+ *
  * Al guardar, el cuadro se encoge hacia el icono y el icono rebota. El
  * movimiento es la explicacion de donde quedo guardado el carro: sin el, un
  * circulo que se llena no le dice nada a nadie.
  *
- * La X y el clic por fuera cierran sin tocar el vehiculo. Borrar esta en un
- * solo lugar, el boton "Quitar" del cuadro, con su palabra.
+ * La X y el clic por fuera cierran sin tocar nada. Borrar esta en un solo
+ * lugar, el boton "Quitar", y siempre actua sobre el activo.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useRuntime } from 'vtex.render-runtime'
@@ -22,7 +29,8 @@ import { useCssHandles } from 'vtex.css-handles'
 
 import vehiculos from './data/vehiculos-colombia.json'
 import {
-  seccionDe, rutaDe, leer, escribir, suscribir, nombreDe, posMarca, posModelo, alPedirAbrir,
+  seccionDe, rutaDe, leerEstado, escribirEstado, suscribirEstado,
+  nombreDe, posMarca, posModelo, alPedirAbrir, MAX_VEHICULOS,
 } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoHeader', 'vehiculoBoton', 'vehiculoPanel']
@@ -30,7 +38,7 @@ const RED = '#FF371E'
 const INK = '#010101'
 
 /* Lo que tarda el cuadro en viajar al icono. Si se cambia aqui hay que
-   cambiarlo en la animacion rxGuardar, o el cuadro desaparece antes de
+   cambiarlo en la animacion rxVehGuardar, o el cuadro desaparece antes de
    llegar (o se queda colgado despues). */
 const VIAJE = 400
 const REBOTE = 1050
@@ -43,22 +51,25 @@ export default function VehiculoHeader({
   const { route } = useRuntime()
   const seccion = seccionDe(rutaDe(route))
 
-  const [vehiculo, setVehiculo] = useState(null)
-  const [vista, setVista] = useState(null)     // null|'vehiculo'|'marca'|'modelo'|'ano'
+  const [estado, setEstado] = useState({ lista: [], activo: 0 })
+  const [vista, setVista] = useState(null)    // null|'lista'|'marca'|'modelo'|'ano'
+  const [modo, setModo] = useState('agregar') // 'agregar' suma; 'cambiar' reemplaza el activo
   const [guardando, setGuardando] = useState(false)
   const [pop, setPop] = useState(false)
+  const [marca, setMarca] = useState(null)
+  const [modelo, setModelo] = useState(null)
   const relojes = useRef([])
   const boton = useRef(null)
 
   useEffect(() => {
-    setVehiculo(leer(seccion))
-    return suscribir(seccion, setVehiculo)
+    setEstado(leerEstado(seccion))
+    return suscribirEstado(seccion, setEstado)
   }, [seccion])
 
   useEffect(() => () => relojes.current.forEach(clearTimeout), [])
 
   /* El "Cambiar" de la linea "Para tu ..." de la pagina abre este panel. */
-  useEffect(() => alPedirAbrir(seccion, () => setVista('vehiculo')), [seccion])
+  useEffect(() => alPedirAbrir(seccion, () => setVista('lista')), [seccion])
 
   /* Esc cierra, como cualquier dialogo. Sin esto quien navega con teclado
      queda atrapado detras de la capa oscura. */
@@ -82,18 +93,24 @@ export default function VehiculoHeader({
     () => Object.keys(base).sort((a, b) => posMarca(seccion, a) - posMarca(seccion, b)),
     [base, seccion]
   )
-  const modelosDe = marca =>
-    Object.keys(base[marca] || {}).sort((a, b) => posModelo(marca, a) - posModelo(marca, b))
-
-  const [marca, setMarca] = useState(null)
-  const [modelo, setModelo] = useState(null)
+  const modelosDe = m =>
+    Object.keys(base[m] || {}).sort((a, b) => posModelo(m, a) - posModelo(m, b))
 
   const luego = (fn, ms) => relojes.current.push(setTimeout(fn, ms))
 
-  /* Queda agregado: el cuadro viaja al icono y el icono acusa recibo. */
+  const lista = estado.lista || []
+  const activo = lista[estado.activo] || null
+  const hay = !!activo
+  const nombre = nombreDe(activo)
+  const lleno = lista.length >= MAX_VEHICULOS
+
+  /* Queda guardado: el cuadro viaja al icono y el icono acusa recibo. */
   const guardar = v => {
+    const cambia = modo === 'cambiar' && lista.length > 0
+    const nueva = cambia ? lista.map((x, i) => (i === estado.activo ? v : x)) : lista.concat([v])
+    const i = cambia ? estado.activo : nueva.length - 1
     setGuardando(true)
-    escribir(seccion, v)
+    escribirEstado(seccion, { lista: nueva, activo: i })
     luego(() => {
       setGuardando(false)
       setVista(null)
@@ -102,9 +119,22 @@ export default function VehiculoHeader({
     luego(() => setPop(false), REBOTE)
   }
 
+  /* Tocar otro de la lista lo pone a filtrar la tienda. */
+  const activar = i => escribirEstado(seccion, { lista, activo: i })
+
+  const quitar = () => {
+    const nueva = lista.filter((_, i) => i !== estado.activo)
+    escribirEstado(seccion, { lista: nueva, activo: 0 })
+  }
+
+  const empezar = comoModo => {
+    setModo(comoModo)
+    setMarca(null)
+    setModelo(null)
+    setVista('marca')
+  }
+
   const cerrar = () => setVista(null)
-  const hay = !!(vehiculo && vehiculo.marca)
-  const nombre = nombreDe(vehiculo)
   const esPaso = vista === 'marca' || vista === 'modelo' || vista === 'ano'
 
   let titulo = 'Mis vehículos'
@@ -184,17 +214,25 @@ export default function VehiculoHeader({
     .rx-veh__mas { position: absolute; top: -3px; right: -3px; width: 12px; height: 12px;
       border-radius: 999px; background: ${RED}; border: 1.5px solid #fff;
       display: flex; align-items: center; justify-content: center }
+    /* Cuantos hay guardados. Solo aparece con mas de uno: con uno solo seria
+       un "1" que no informa nada. */
+    .rx-veh__cuantos { position: absolute; top: -5px; right: -6px; min-width: 15px; height: 15px;
+      box-sizing: border-box; padding: 0 3px; border-radius: 999px; background: ${INK};
+      border: 1.5px solid #fff; color: #fff; font-size: 9px; font-weight: 800;
+      line-height: 12px; text-align: center }
 
     /* Escritorio: pildora. Punteada mientras esta vacia (es un hueco por
        llenar) y continua cuando ya hay carro. */
     .rx-veh__pildora { display: flex; align-items: center; gap: 8px; height: 44px;
-      padding: 0 16px; border-radius: 999px; max-width: 240px; box-sizing: border-box;
+      padding: 0 16px; border-radius: 999px; max-width: 250px; box-sizing: border-box;
       border: 1.5px dashed rgba(255,55,30,.55); background: transparent }
     .rx-veh__pildora--lleno { border-style: solid; border-color: rgba(255,55,30,.45);
       background: rgba(255,55,30,.09) }
     .rx-veh__texto { font-size: 13.5px; font-weight: 700; white-space: nowrap;
       overflow: hidden; text-overflow: ellipsis; color: ${RED} }
     .rx-veh__pildora--lleno .rx-veh__texto { color: ${INK} }
+    .rx-veh__contador { font-size: 10.5px; font-weight: 800; color: #fff; background: ${INK};
+      border-radius: 999px; padding: 1px 6px; flex-shrink: 0 }
 
     .rx-veh__capa { position: fixed; inset: 0; background: rgba(1,1,1,.26); border: 0;
       padding: 0; margin: 0; cursor: default; z-index: 60 }
@@ -210,27 +248,46 @@ export default function VehiculoHeader({
       background: rgba(1,1,1,.05); display: flex; align-items: center; justify-content: center;
       cursor: pointer; padding: 0 }
     .rx-veh__cuerpo { padding: 0 16px 14px }
-    .rx-veh__ficha { display: flex; align-items: center; gap: 10px; background: rgba(255,55,30,.07);
-      border: 1px solid rgba(255,55,30,.22); border-radius: 14px; padding: 12px }
+
+    /* La lista. El activo en rojo con el chulo; los demas en blanco con el
+       borde gris, que se lee como "disponible" sin competir con el que manda. */
+    .rx-veh__lista { display: flex; flex-direction: column; gap: 7px }
+    .rx-veh__ficha { display: flex; align-items: center; gap: 10px; width: 100%;
+      border-radius: 14px; padding: 11px; text-align: left; font: inherit; cursor: pointer;
+      background: #fff; border: 1px solid rgba(1,1,1,.12) }
+    .rx-veh__ficha--activo { background: rgba(255,55,30,.07); border-color: rgba(255,55,30,.22);
+      cursor: default }
+    .rx-veh__ficha:not(.rx-veh__ficha--activo):hover { border-color: rgba(255,55,30,.45) }
     .rx-veh__disco { width: 34px; height: 34px; flex-shrink: 0; border-radius: 999px;
-      background: ${RED}; display: flex; align-items: center; justify-content: center }
+      display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+      border: 1.5px solid rgba(255,55,30,.5); background: #fff }
+    .rx-veh__ficha--activo .rx-veh__disco { background: ${RED}; border-color: ${RED} }
+    .rx-veh__nom { display: block; font-size: 13.5px; font-weight: 800; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; color: ${INK} }
+    .rx-veh__sub { display: block; font-size: 11.5px; color: #6b6b70; font-weight: 600;
+      margin-top: 1px }
+
     .rx-veh__acciones { display: flex; gap: 8px; margin-top: 12px }
     .rx-veh__accion { flex: 1 1 0; min-height: 44px; border-radius: 999px; font-size: 13px;
       font-weight: 700; cursor: pointer; font-family: inherit }
     .rx-veh__accion--quitar { border: 1.5px solid rgba(1,1,1,.14); background: #fff; color: ${INK} }
     .rx-veh__accion--cambiar { border: 0; background: ${RED}; color: #fff }
+
     .rx-veh__opciones { display: flex; flex-wrap: wrap; gap: 6px; max-height: 300px;
       overflow-y: auto }
     .rx-veh__chip { border: 1.5px solid rgba(1,1,1,.12); background: #f7f7f8; color: ${INK};
       border-radius: 999px; padding: 9px 13px; font-size: 13px; font-weight: 600;
       cursor: pointer; min-height: 40px; font-family: inherit }
     .rx-veh__chip:hover { border-color: ${RED}; color: ${RED} }
-    .rx-veh__pronto { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(1,1,1,.08);
-      display: flex; align-items: center; gap: 8px; color: #9a9aa2; font-size: 12.5px;
-      font-weight: 600 }
-    .rx-veh__etiqueta { font-size: 10px; font-weight: 800; letter-spacing: .06em;
+
+    .rx-veh__sumar { width: 100%; margin-top: 12px; padding: 12px 0 0;
+      border: 0; border-top: 1px solid rgba(1,1,1,.08); background: none; cursor: pointer;
+      display: flex; align-items: center; gap: 8px; font: inherit; font-size: 12.5px;
+      font-weight: 700; color: ${RED}; min-height: 44px }
+    .rx-veh__sumar[disabled] { color: #9a9aa2; cursor: default }
+    .rx-veh__tope { font-size: 10px; font-weight: 800; letter-spacing: .06em;
       text-transform: uppercase; background: #f2f2f4; color: #9a9aa2; border-radius: 999px;
-      padding: 3px 7px }
+      padding: 3px 7px; margin-left: auto }
     .rx-veh__nota { margin: 0 0 12px; font-size: 12.5px; color: #55555c; line-height: 1.5 }
     .rx-veh__agregar { width: 100%; min-height: 44px; border: 0; background: ${RED}; color: #fff;
       border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer;
@@ -267,7 +324,10 @@ export default function VehiculoHeader({
     }
   `
 
-  const panelVisible = vista === 'vehiculo' || esPaso || guardando
+  const panelVisible = vista !== null || guardando
+  const etiquetaBoton = hay
+    ? `Mis vehículos, ${lista.length} guardado${lista.length > 1 ? 's' : ''}. Filtrando por ${nombre}`
+    : 'Agregar mi vehículo'
 
   return (
     <div className={`rx-veh ${handles.vehiculoHeader || ''}`}>
@@ -277,32 +337,38 @@ export default function VehiculoHeader({
         ref={boton}
         type="button"
         className={`rx-veh__btn ${handles.vehiculoBoton || ''}`}
-        aria-expanded={vista === 'vehiculo'}
-        aria-label={hay ? `Mis vehículos. Guardado: ${nombre}` : 'Agregar mi vehículo'}
-        onClick={() => setVista(vista === null ? 'vehiculo' : null)}
+        aria-expanded={vista !== null}
+        aria-label={etiquetaBoton}
+        onClick={() => setVista(vista === null ? 'lista' : null)}
       >
         {variante === 'circulo' ? (
           <span className={`rx-veh__circulo ${hay ? 'rx-veh__circulo--lleno' : ''} ${pop ? 'rx-veh__pop' : ''}`}>
             {iconoCarro(hay ? '#FFFFFF' : RED, 19, 14)}
-            {hay ? null : (
+            {!hay ? (
               <span className="rx-veh__mas" aria-hidden="true">
                 <svg width="6" height="6" viewBox="0 0 10 10" fill="none" stroke="#fff"
                   strokeWidth="2.8" strokeLinecap="round" aria-hidden="true">
                   <path d="M5 1.5v7M1.5 5h7" />
                 </svg>
               </span>
-            )}
+            ) : null}
+            {lista.length > 1 ? (
+              <span className="rx-veh__cuantos" aria-hidden="true">{lista.length}</span>
+            ) : null}
           </span>
         ) : (
           <span className={`rx-veh__pildora ${hay ? 'rx-veh__pildora--lleno' : ''} ${pop ? 'rx-veh__pop' : ''}`}>
             {iconoCarro(RED, 24, 17)}
-            {hay ? null : (
+            {!hay ? (
               <svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke={RED}
                 strokeWidth="2.4" strokeLinecap="round" aria-hidden="true" style={{ flexShrink: 0 }}>
                 <path d="M5 1v8M1 5h8" />
               </svg>
-            )}
+            ) : null}
             <span className="rx-veh__texto">{hay ? nombre : etiquetaVacia}</span>
+            {lista.length > 1 ? (
+              <span className="rx-veh__contador" aria-hidden="true">{lista.length}</span>
+            ) : null}
             {hay ? (
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke={RED}
                 strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
@@ -314,7 +380,7 @@ export default function VehiculoHeader({
         )}
       </button>
 
-      {/* Clic por fuera: cierra sin tocar el vehiculo. */}
+      {/* Clic por fuera: cierra sin tocar nada. */}
       {vista !== null ? (
         <button type="button" className="rx-veh__capa" aria-label="Cerrar sin hacer cambios"
           onClick={cerrar} />
@@ -358,69 +424,76 @@ export default function VehiculoHeader({
 
           {!esPaso && hay ? (
             <div className="rx-veh__cuerpo">
-              <div className="rx-veh__ficha">
-                <span className="rx-veh__disco">{iconoCarro('#FFFFFF', 21, 15)}</span>
-                <span style={{ flexGrow: 1, minWidth: 0 }}>
-                  <span style={{ display: 'block', fontSize: '13.5px', fontWeight: 800,
-                    whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {nombre}
-                  </span>
-                  <span style={{ display: 'block', fontSize: '11.5px', color: '#6B6B70',
-                    fontWeight: 600, marginTop: '1px' }}>
-                    {vehiculo.ano ? `Modelo ${vehiculo.ano}` : 'Año sin definir'}
-                  </span>
-                </span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke={RED}
-                  strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
-                  style={{ flexShrink: 0 }}>
-                  <path d="M2.5 8.5 6 12l7.5-8" />
-                </svg>
+              <div className="rx-veh__lista">
+                {lista.map((v, i) => {
+                  const esActivo = i === estado.activo
+                  return (
+                    <button
+                      key={`${v.marca}-${v.modelo}-${v.ano || 's'}-${i}`}
+                      type="button"
+                      className={`rx-veh__ficha ${esActivo ? 'rx-veh__ficha--activo' : ''}`}
+                      aria-pressed={esActivo}
+                      aria-label={esActivo
+                        ? `${nombreDe(v)}, filtrando la tienda`
+                        : `Filtrar la tienda por ${nombreDe(v)}`}
+                      onClick={esActivo ? undefined : () => activar(i)}
+                    >
+                      <span className="rx-veh__disco">
+                        {iconoCarro(esActivo ? '#FFFFFF' : RED, 21, 15)}
+                      </span>
+                      <span style={{ flexGrow: 1, minWidth: 0 }}>
+                        <span className="rx-veh__nom">{nombreDe(v)}</span>
+                        <span className="rx-veh__sub">
+                          {v.ano ? `Modelo ${v.ano}` : 'Año sin definir'}
+                        </span>
+                      </span>
+                      {esActivo ? (
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke={RED}
+                          strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"
+                          aria-hidden="true" style={{ flexShrink: 0 }}>
+                          <path d="M2.5 8.5 6 12l7.5-8" />
+                        </svg>
+                      ) : null}
+                    </button>
+                  )
+                })}
               </div>
 
               <div className="rx-veh__acciones">
-                <button
-                  type="button"
-                  className="rx-veh__accion rx-veh__accion--quitar"
-                  onClick={() => { escribir(seccion, null); setVista(null) }}
-                >
+                <button type="button" className="rx-veh__accion rx-veh__accion--quitar"
+                  onClick={quitar}>
                   Quitar
                 </button>
-                <button
-                  type="button"
-                  className="rx-veh__accion rx-veh__accion--cambiar"
-                  onClick={() => { setMarca(null); setModelo(null); setVista('marca') }}
-                >
+                <button type="button" className="rx-veh__accion rx-veh__accion--cambiar"
+                  onClick={() => empezar('cambiar')}>
                   Cambiar
                 </button>
               </div>
 
-              <div className="rx-veh__pronto">
+              <button type="button" className="rx-veh__sumar" disabled={lleno}
+                onClick={lleno ? undefined : () => empezar('agregar')}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor"
                   strokeWidth="2" strokeLinecap="round" aria-hidden="true">
                   <path d="M8 3.5v9M3.5 8h9" />
                 </svg>
-                <span style={{ flexGrow: 1 }}>Agregar otro vehículo</span>
-                <span className="rx-veh__etiqueta">Pronto</span>
-              </div>
+                <span>Agregar otro {esMoto ? 'vehículo' : 'vehículo'}</span>
+                {lleno ? <span className="rx-veh__tope">Máximo {MAX_VEHICULOS}</span> : null}
+              </button>
             </div>
           ) : null}
 
           {!esPaso && !hay ? (
             <div className="rx-veh__cuerpo">
               <p className="rx-veh__nota">
-                Todavía no has agregado ninguno. Cuando agregues tu {seccion === 'motos' ? 'moto' : 'carro'},
+                Todavía no has agregado ninguno. Cuando agregues tu {esMoto ? 'moto' : 'carro'},
                 la tienda te muestra solo lo que le sirve.
               </p>
-              <button
-                type="button"
-                className="rx-veh__agregar"
-                onClick={() => { setMarca(null); setModelo(null); setVista('marca') }}
-              >
+              <button type="button" className="rx-veh__agregar" onClick={() => empezar('agregar')}>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#fff"
                   strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
                   <path d="M8 3v10M3 8h10" />
                 </svg>
-                Agregar mi vehículo
+                Agregar mi {esMoto ? 'moto' : 'carro'}
               </button>
             </div>
           ) : null}

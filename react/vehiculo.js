@@ -1,20 +1,38 @@
 /*
- * El vehiculo guardado, en un solo lugar.
+ * Los vehiculos guardados, en un solo lugar.
  *
- * Lo leen y lo escriben tres componentes: la pildora del header, Cris (en el
- * panel de filtros) y la linea "Para tu ..." de la pagina. Antes cada uno leia
+ * Lo leen y lo escriben cuatro componentes: la pildora del header, el logo,
+ * Cris y la linea "Para tu ..." de la pagina. Antes cada uno leia
  * localStorage por su cuenta al montarse, asi que si el header cambiaba el
  * carro, Cris seguia mostrando el anterior hasta recargar.
  *
  * Se guarda POR SECCION: el carro de alguien no es su moto, y en
  * /herramientas no hay vehiculo que valga.
+ *
+ * El estado es una LISTA con uno activo, hasta MAX:
+ *
+ *   { v: 2, lista: [{marca, modelo, ano}, ...], activo: 0 }
+ *
+ * El activo es el que filtra la tienda; los demas quedan a un clic. Quien
+ * solo necesita ese (Cris, la linea de la pagina) usa leer(), que devuelve
+ * el activo y nada mas.
+ *
+ * COMPATIBILIDAD: antes se guardaba un vehiculo suelto, sin lista. Esos
+ * registros siguen en el navegador de cualquiera que ya haya usado la
+ * tienda, asi que leerEstado() los reconoce y los trata como lista de uno.
+ * Sin eso, a quien ya tenia carro guardado le aparecia la tienda sin
+ * vehiculo despues de publicar.
  */
 const CLAVE = 'rx-cris-vehiculo'
 const EVENTO = 'rx-vehiculo'
 
+/* Tres son suficientes para el carro propio, el de la casa y el del trabajo;
+   mas vuelven la lista algo que hay que leer en vez de reconocer. */
+export const MAX_VEHICULOS = 3
+
 export const claveDe = seccion => CLAVE + '-' + seccion
 
-/* La seccion sale de la ruta. Vive aqui para que los tres la calculen igual. */
+/* La seccion sale de la ruta. Vive aqui para que todos la calculen igual. */
 export function seccionDe(path) {
   const p = (path || '').toString().toLowerCase()
   if (p.indexOf('/motos') === 0) return 'motos'
@@ -22,43 +40,96 @@ export function seccionDe(path) {
   return 'carros'
 }
 
-export function leer(seccion) {
+const vacio = () => ({ lista: [], activo: 0 })
+
+const valido = v => !!(v && v.marca && v.modelo)
+
+/* Dos vehiculos son el mismo si coinciden marca, modelo y año. */
+export const mismoVehiculo = (a, b) =>
+  !!a && !!b && a.marca === b.marca && a.modelo === b.modelo &&
+  (a.ano || null) === (b.ano || null)
+
+export function leerEstado(seccion) {
+  let crudo = null
   try {
-    const crudo = window.localStorage.getItem(claveDe(seccion))
-    return crudo ? JSON.parse(crudo) : null
+    crudo = window.localStorage.getItem(claveDe(seccion))
   } catch (e) {
-    /* Navegador sin almacenamiento, o en modo privado: se sigue sin recordar. */
-    return null
+    /* Navegador sin almacenamiento, o en modo privado. */
+    return vacio()
   }
+  if (!crudo) return vacio()
+  let d = null
+  try {
+    d = JSON.parse(crudo)
+  } catch (e) {
+    return vacio()
+  }
+  /* Formato viejo: un vehiculo suelto. */
+  if (valido(d)) return { lista: [d], activo: 0 }
+  const lista = (Array.isArray(d && d.lista) ? d.lista : [])
+    .filter(valido)
+    .slice(0, MAX_VEHICULOS)
+  if (!lista.length) return vacio()
+  const n = Number(d && d.activo)
+  return { lista, activo: n >= 0 && n < lista.length ? n : 0 }
 }
 
-export function escribir(seccion, v) {
+export function escribirEstado(seccion, estado) {
+  const lista = (estado && estado.lista ? estado.lista : []).filter(valido).slice(0, MAX_VEHICULOS)
+  const n = Number(estado && estado.activo)
+  const e = { v: 2, lista, activo: lista.length && n >= 0 && n < lista.length ? n : 0 }
   try {
-    if (v) window.localStorage.setItem(claveDe(seccion), JSON.stringify(v))
+    if (lista.length) window.localStorage.setItem(claveDe(seccion), JSON.stringify(e))
     else window.localStorage.removeItem(claveDe(seccion))
-  } catch (e) {
-    /* sin almacenamiento: el vehiculo vale para esta pagina */
+  } catch (err) {
+    /* sin almacenamiento: vale para esta pagina */
   }
-  avisar(seccion, v)
+  avisar(seccion, e)
+  return e
 }
 
-/* El evento es lo que mantiene a los tres en el mismo carro dentro de la misma
+/* El vehiculo que esta filtrando la tienda. */
+export function leer(seccion) {
+  const e = leerEstado(seccion)
+  return e.lista[e.activo] || null
+}
+
+/* Guardar UN vehiculo desde fuera del panel (Cris). Si ya esta en la lista lo
+   activa; si no, lo agrega; si la lista esta llena, reemplaza al activo en vez
+   de fallar en silencio. Con null se quita el activo. */
+export function escribir(seccion, v) {
+  const e = leerEstado(seccion)
+  if (!valido(v)) {
+    const lista = e.lista.filter((_, i) => i !== e.activo)
+    return escribirEstado(seccion, { lista, activo: 0 })
+  }
+  const ya = e.lista.findIndex(x => mismoVehiculo(x, v))
+  if (ya >= 0) return escribirEstado(seccion, { lista: e.lista, activo: ya })
+  if (e.lista.length < MAX_VEHICULOS) {
+    return escribirEstado(seccion, { lista: e.lista.concat([v]), activo: e.lista.length })
+  }
+  const lista = e.lista.slice()
+  lista[e.activo] = v
+  return escribirEstado(seccion, { lista, activo: e.activo })
+}
+
+/* El evento es lo que mantiene a todos en el mismo carro dentro de la misma
    pestaña; "storage" solo avisa a las OTRAS pestañas, nunca a la propia. */
-function avisar(seccion, v) {
+function avisar(seccion, estado) {
   try {
-    window.dispatchEvent(new CustomEvent(EVENTO, { detail: { seccion, vehiculo: v } }))
+    window.dispatchEvent(new CustomEvent(EVENTO, { detail: { seccion, estado } }))
   } catch (e) {
     /* CustomEvent no soportado: cada componente se queda con lo suyo */
   }
 }
 
-export function suscribir(seccion, fn) {
+/* Avisa con el estado completo: lo usa el panel, que pinta la lista. */
+export function suscribirEstado(seccion, fn) {
   const propio = e => {
-    if (e && e.detail && e.detail.seccion === seccion) fn(e.detail.vehiculo)
+    if (e && e.detail && e.detail.seccion === seccion) fn(e.detail.estado)
   }
-  /* Otra pestaña del mismo navegador. */
   const otraPestana = e => {
-    if (e && e.key === claveDe(seccion)) fn(leer(seccion))
+    if (e && e.key === claveDe(seccion)) fn(leerEstado(seccion))
   }
   try {
     window.addEventListener(EVENTO, propio)
@@ -72,8 +143,21 @@ export function suscribir(seccion, fn) {
   }
 }
 
-/* Nombre para mostrar. El año es opcional: se puede guardar un carro sin el. */
-export const nombreDe = v => (v && v.marca ? v.marca + ' ' + (v.modelo || '') : '').trim()
+/* Avisa solo con el activo: lo usan Cris y la linea de la pagina. */
+export function suscribir(seccion, fn) {
+  return suscribirEstado(seccion, estado => fn((estado.lista || [])[estado.activo] || null))
+}
+
+/* Nombre para mostrar. El año es opcional: se puede guardar un carro sin el.
+
+   Hay 14 modelos cuyo nombre YA empieza por la marca (Mazda 3, Renault 12,
+   MG 5...). Pegarle la marca delante daba "Mazda Mazda 3". */
+export const nombreDe = v => {
+  if (!v || !v.marca) return ''
+  const modelo = (v.modelo || '').trim()
+  if (modelo.toLowerCase().indexOf(v.marca.toLowerCase() + ' ') === 0) return modelo
+  return (v.marca + ' ' + modelo).trim()
+}
 export const completoDe = v => (v && v.ano ? nombreDe(v) + ' · ' + v.ano : nombreDe(v))
 
 /* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:

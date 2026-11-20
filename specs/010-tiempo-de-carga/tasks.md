@@ -59,12 +59,12 @@ entre tandas); si la mejora es menor de 3 puntos, se revierte el commit. Un comm
 
 ## 5. Medición final y cierre
 
-- [ ] 5.1 Medir Lighthouse con el mismo método tras el grupo 3 (la hizo el agente con autorización de Diego).
+- [x] 5.1 Medir Lighthouse con el mismo método tras el grupo 3 (la hizo el agente con autorización de Diego).
   Verificación: AC-3 (móvil ≥ 78 / 83 / 81) y AC-4 (escritorio ≥ 81 / 83 / 85), o excepción por
-  escrito de Diego con su causa. *Medido: AC-4 se cumple; AC-3 no (74 / 74 / 69). Queda sin marcar hasta
-  que Diego acepte por escrito la excepción propuesta en `medidas.md`.*
+  escrito de Diego con su causa. *Medido: AC-4 se cumple; AC-3 no (74 / 74 / 69). Excepción aceptada por
+  Diego el 2026-11-20; a revisar (`spec.md` §8.1, R1).*
 - [x] 5.2 Revisar que `medidas.md` tenga todas las optimizaciones con antes → después y que las
   revertidas estén marcadas. Verificación: AC-9.
-- [ ] 5.3 Correr `react/__tests__`. Verificación: AC-7. *Corrido: 109 pasan, 7 fallan en `VehicleSelector`; los 7 fallan igual en `HEAD` limpio (anteriores a la 010). Queda sin marcar hasta que Diego confirme que se acepta como línea conocida.*
+- [x] 5.3 Correr `react/__tests__`. Verificación: AC-7. *Corrido: 109 pasan, 7 fallan en `VehicleSelector`; los 7 fallan igual en `HEAD` limpio (anteriores a la 010). Aceptado por Diego el 2026-11-20 como línea conocida; a revisar (`spec.md` §8.1, R2).*
 - [ ] 5.4 Actualizar `specs/README.md` y la spec 000 §7, marcar la spec como `done` con el enlace
   al PR. Verificación: `AC-1` a `AC-9` revisados uno por uno en el resumen.

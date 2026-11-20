@@ -145,7 +145,7 @@ Detalle: LCP móvil 3,8 / 1,9 / 2,6 s; TBT móvil 271 / 689 / 771 ms; CLS ≤ 0,
 - **Ruido de esta tanda:** el TBT de categoría y ficha (689 y 771 ms) es mucho mayor que en tandas anteriores (~450 y
   ~400 ms) con el mismo código, y la inicio osciló entre 65 y 80. La varianza de la máquina domina; no se atribuye
   a un cambio del theme.
-- **Excepción propuesta para AC-3** (pendiente de que Diego la acepte por escrito): *«No se alcanza +10 en móvil porque
+- **Excepción de AC-3 — ACEPTADA por Diego el 2026-11-20** (a revisar en el futuro, ver `spec.md` §8): *«No se alcanza +10 en móvil porque
   la causa principal de la carga está fuera del código propio: el JavaScript de VTEX y de reCAPTCHA (~354 KB, ~480 ms) y el
   TTFB del workspace dominan el TBT y el LCP (`diagnostico.md`). El theme aportó lo que podía: se eliminó el render
   bloqueante de fuentes (~1 005 → ~163 ms) y se redujeron 67 KB en la inicio. Lo que queda requiere decidir sobre

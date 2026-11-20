@@ -92,19 +92,20 @@
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle",
-      "width": "auto"
+      "width": "auto",
+      "blockClass": "logoDesktop"
     },
     "children": [
-      "logo#desktop"
+      "logo-rx#desktop"
     ]
   },
-  "logo#desktop": {
+  /* logo-rx en vez del bloque logo de VTEX: el href tiene que
+     depender de la seccion. Desde /carros el logo lleva a
+     /carros, no al selector del home. */
+  "logo-rx#desktop": {
     "props": {
-      "title": "Repuestox",
-      "href": "/",
-      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/772c8205-47cf-4795-ae5d-40aced62274f___c4c0ef3890ef1285c76b15521a8a13ab.png",
-      "width": "150",
-      "height": "45"
+      "variante": "logotipo",
+      "alto": 30
     }
   },
   /* Cris se lleva el centro: aqui si hay ancho para que sirva. */
@@ -216,16 +217,13 @@
       "blockClass": "logoMobile"
     },
     "children": [
-      "logo#mobile"
+      "logo-rx#mobile"
     ]
   },
-  "logo#mobile": {
+  "logo-rx#mobile": {
     "props": {
-      "title": "Repuestox",
-      "href": "/",
-      "url": "https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/49047458-cec0-4f58-9c58-2d008bd04f71___26e677192553caaf43fd069a83223dc2.png",
-      "width": "28",
-      "height": "28"
+      "variante": "isotipo",
+      "alto": 24
     }
   },
   "flex-layout.col#cris-mobile": {

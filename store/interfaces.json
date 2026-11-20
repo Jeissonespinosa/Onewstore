@@ -13,5 +13,8 @@
   },
   "vehiculo-en-pagina": {
     "component": "VehiculoEnPagina"
+  },
+  "logo-rx": {
+    "component": "LogoRx"
   }
 }

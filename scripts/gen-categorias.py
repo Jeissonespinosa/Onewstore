@@ -805,7 +805,8 @@ def build_and_write(NODES, RAILS, routes):
     # retiro: Cris vive en el header, que es pegajoso y esta en todas las
     # paginas, asi que repetirlo aqui era la misma caja dos veces en pantalla.
     rail['store.custom#landing-herramientas'] = {
-        'blocks': ['flex-layout.row#rx-p-landing-herramientas-banner',
+        'blocks': ['flex-layout.row#repuestox-splash',
+                   'flex-layout.row#rx-p-landing-herramientas-banner',
                    'flex-layout.row#rx-lineas-section-herramientas', 'flex-layout.row#carros-cta-banner'],
     }
     rail['flex-layout.row#rx-p-landing-herramientas-banner'] = {

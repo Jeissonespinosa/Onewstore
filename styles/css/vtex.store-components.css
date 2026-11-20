@@ -265,37 +265,3 @@
 :global(.vtex-flex-layout-0-x-flexRowContent--rxLineasGrid) :global(.vtex-flex-layout-0-x-flexCol--rxLineaCard):hover .imageElement--rxLineaImage {
   transform: scale(1.16);
 }
-
-
-/* ============================================================
-   ISOTIPO DEL HEADER MOVIL
-   ------------------------------------------------------------
-   El PNG que sirve de isotipo es una lamina del manual de marca:
-   2551x3301 con la marca al centro y el resto transparente. Si se
-   le pide 28x28 al bloque logo, VTEX deforma la lamina entera y lo
-   que se ve es un ala cortada, no el isotipo.
-
-   Aqui se recorta la marca con background-position. Las medidas
-   salen del alfa del propio PNG: la marca ocupa 1265x994 px a
-   partir de (582, 1172). Escala = 30 / 1265 = 0.02372, de donde
-   salen el tamano (2551 y 3301 por la escala) y el desplazamiento.
-
-   Esto es un parche hasta que haya un isotipo cuadrado y ajustado
-   en el file manager: cuando exista, se cambia la URL del bloque
-   logo#mobile y se borra este bloque entero.
-   ============================================================ */
-.flexCol--logoMobile :global(.vtex-store-components-3-x-logoImage) {
-  display: none;
-}
-
-.flexCol--logoMobile :global(.vtex-store-components-3-x-logoLink) {
-  display: block;
-  width: 30px;
-  height: 24px;
-  background-image: url('https://onewstore.vtexassets.com/assets/vtex.file-manager-graphql/images/49047458-cec0-4f58-9c58-2d008bd04f71___26e677192553caaf43fd069a83223dc2.png');
-  background-repeat: no-repeat;
-  /* La marca va al 94% de la caja para que la cola de la derecha no
-     quede pegada al borde. */
-  background-size: 56.9px 73.6px;
-  background-position: -12.1px -25.2px;
-}

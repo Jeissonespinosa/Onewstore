@@ -56,8 +56,10 @@
 }
 
 .flexCol--categoriesDesktop,
+.flexCol--logoDesktop,
 .flexCol--vehiculoDesktop {
   flex-shrink: 0;
+  width: auto;
 }
 
 .flexRowContent--headerActions {

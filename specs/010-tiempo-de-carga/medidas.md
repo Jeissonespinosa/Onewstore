@@ -159,3 +159,27 @@ Detalle: LCP móvil 3,8 / 1,9 / 2,6 s; TBT móvil 271 / 689 / 771 ms; CLS ≤ 0,
 | 3.2 C4 Imágenes (`srcSet`) | inicio móvil 70 → 73, −67 KB | Conservada (borderline, sin regresión) |
 | C2, C3, C5, N1 | no se aplicaron (descartadas en `diagnostico.md`) | — |
 | Revertidas | ninguna | — |
+
+## AC-6 — revisión visual en navegador (2026-11-20)
+
+Revisado por el agente en `https://pruebamedidas--onewstore.myvtex.com`, con sesión de Diego, navegador de
+herramientas de desarrollo, **360 px (móvil, DPR 2)** y **1280 px (escritorio)**, sobre el código de las tareas 3.1 y 3.2.
+Capturas en el scratchpad de la sesión (no se versionan).
+
+| Página | 360 px | 1280 px |
+|---|---|---|
+| Inicio (`store.home`) | Hero nítido (carga la versión de 800 px, ocupa 360 px), «CARROS» en Montserrat, sin desborde horizontal. Texto: 12/12 elementos en Montserrat | Mitades Carros/Motos correctas (carga la de 1600 px, como antes), «Categorías» y títulos en Montserrat, sin desborde |
+| Categoría (`store.search#subcategory`) | Título, selector de medidas y «Busca por vehículo» bien; 153/153 elementos en Montserrat; sin desborde | Selector de medidas con rueda, filtros y rejilla correctos; 218 de 220 en Montserrat |
+| Ficha (`store.product`) | Título, precio, referencia y migas en Montserrat, sin cortes ni saltos | Galería, título, precio, botón y envío correctos; 115 de 117 en Montserrat |
+
+**Resultado: sin regresión visual atribuible a la 010.** El único cambio visible es la tipografía aprobada.
+
+**Observaciones, ninguna causada por esta spec (para otras specs):**
+1. **Ficha a 360 px: «Compatibilidad» desborda.** Los valores múltiples de la tabla de especificaciones se
+   muestran **pegados y sin separador** («2005200620072008…», «Camión y vanOTR e industrial»), y el de «Año» se corta
+   por la derecha (hasta 766 px). Con otra fuente sigue desbordando (748 px), así que no es de la tipografía. Para la
+   spec 013 (ficha de producto).
+2. **Botones con la fuente del sistema** (`Mostrar más` de la categoría y el `+`/`-` de cantidad): heredan la pila de
+   Tachyons (`-apple-system…`), no la de los tokens. Ya era así con Roboto en los tokens. Opcional para la 013 o 011.
+3. La barra fija «Filtrar / Relevancia» de la categoría en móvil tapa parte del selector «Busca por vehículo»
+   mientras se desplaza: comportamiento existente del bloque de filtros, no tocado.

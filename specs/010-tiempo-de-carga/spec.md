@@ -145,8 +145,8 @@ Diego aceptó estas dos excepciones el 2026-11-20. No son definitivas: quedan **
 | R1 | **AC-3 no cumplido:** móvil final 74 / 74 / 69 frente a la meta 78 / 83 / 81 (excepción redactada en `medidas.md`) | La carga la dominan el JS de VTEX y reCAPTCHA y el TTFB del workspace, fuera del código propio | (a) cuando se decida sobre reCAPTCHA (cuenta o VTEX); (b) cuando la spec 011 reemplace el logo de 2551 px y las imágenes reales; (c) cuando exista un theme publicado o producción para medir; (d) antes de cualquier lanzamiento |
 | R2 | **AC-7 con 7 tests en rojo** en `react/__tests__/VehicleSelector.test.js` (109 pasan, 7 fallan) | Fallan igual en `HEAD` limpio, antes de la 010 (comprobado en un worktree). Son los casos marcados `ROJO HOY` y otros de cascada/navegación de la spec 007 | Antes de la siguiente spec que modifique `VehicleSelector`, o al cerrar la 007 |
 
-También quedan pendientes de Diego (no bloquean lo aceptado): revisar a 360 y 1280 px en `pruebamedidas` (AC-6),
-evaluar reCAPTCHA (C6) y abrir el PR.
+AC-6 se revisó en el navegador el 2026-11-20 (360 y 1280 px; ver `medidas.md`). Quedan pendientes de Diego, sin
+bloquear lo aceptado: evaluar reCAPTCHA (C6) y decidir cuándo abrir el PR.
 
 ## 9. Referencias
 

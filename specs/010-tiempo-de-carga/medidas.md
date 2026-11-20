@@ -62,3 +62,33 @@ En `pruebatema`, las rutas de categoría y de producto devolvían `store.home` (
 existen en el catálogo; las rutas del tema como `/carros` sí resolvían). Es el mismo síntoma que en `devdiego`.
 En `pruebamedidas`, enlazando el mismo theme, resuelven bien. Causa en `pruebatema` sin identificar; se midió
 en `pruebamedidas`.
+
+## 3.1 — C1 Fuentes (2026-11-20)
+
+- **Cambio:** se quita el `@import` de Google Fonts de `styles/css/vtex.login.css`, se declara Montserrat con
+  `@font-face` (archivo variable, pesos 300-900, `font-display: swap`, subconjuntos latino y latino extendido) y los 12
+  tokens de `style.json` pasan de Roboto a Montserrat (decisión de Diego: familia única).
+- **Método:** mismo workspace y commit base `b9ff9b6`; el «antes» se midió justo antes del cambio (móvil 5 corridas,
+  escritorio 3), el «después» justo tras reconstruir el link. Mediana por celda.
+
+| Página | Móvil antes → después | Escritorio antes → después | LCP móvil | TBT móvil |
+|---|---|---|---|---|
+| Inicio | 70 → 69 (−1) | 86 → 88 (+2) | 4,4 → 4,2 s | 218 → 357 ms |
+| Categoría | 72 → **78 (+6)** | 89 → 90 (+1) | 2,8 → **1,9 s** | 453 → 493 ms |
+| Ficha | 74 → 76 (+2) | 91 → 94 (+3) | 2,7 → 2,6 s | 409 → 498 ms |
+
+- **Corridas móviles después:** inicio 68, 75, 69, 71, 68 · categoría 76, 80, 78, 80, 78 · ficha 75, 76, 76, 73, 81.
+- **Efecto medido en la causa:** peticiones a `fonts.googleapis.com` 15 → 0 (en las 15 corridas móviles); recursos
+  bloqueantes del render ≈ 1 005 ms → ≈ 163 ms por corrida.
+- **Lectura:** la mejora clara está en categoría (+6, sobre el umbral de 3 puntos; el LCP baja 0,9 s). Inicio y ficha
+  quedan dentro del ruido (±3). El TBT sube unos 40-140 ms: no se atribuye al cambio (el ruido entre tandas es de ese
+  orden) pero se vigila. **Se conserva** el commit: sin regresión en escritorio y la causa se eliminó.
+- **Roboto:** sigue descargándose (≈ 33 KB) pero lo pide un `iframe` (el de reCAPTCHA de Google), no el tema; el
+  diagnóstico lo atribuía a los tokens y se corrige en `diagnostico.md`.
+- **AC-6 (regresión visual):** comparadas las capturas finales de Lighthouse antes/después (móvil 412 px y escritorio
+  1350 px de la emulación, no 360/1280): 0,4 % a 5,9 % de píxeles distintos. La diferencia visible es la tipografía
+  aprobada: en la ficha, el texto que antes salía en Roboto/sans del sistema (migas, «Hasta 1x…», «Referencia»,
+  «Cantidad») ahora sale en Montserrat. No se vieron cambios de maquetación. Capturas a 360 y 1280 px con navegador
+  quedan por revisar por Diego (el navegador de la sesión no tiene sesión en `pruebamedidas`).
+- **Tests de `react/`:** 109 pasan y 7 fallan, todos en `VehicleSelector`; los mismos 7 fallan en `HEAD` limpio
+  (comprobado en un worktree temporal), por lo que son anteriores a este cambio.

@@ -39,7 +39,7 @@ cambios visuales salvo lo que la tarea declare (AC-6); medida "antes → despué
 (AC-9, móvil 5 corridas y escritorio 3, **el "antes" se mide justo antes de cada cambio** por el ruido
 entre tandas); si la mejora es menor de 3 puntos, se revierte el commit. Un commit por tarea.
 
-- [ ] 3.1 **C1 Fuentes:** quitar el `@import` de `vtex.login.css`; declarar Montserrat con `@font-face`
+- [x] 3.1 **C1 Fuentes:** quitar el `@import` de `vtex.login.css`; declarar Montserrat con `@font-face`
   (peso variable 300-900, `font-display: swap`, subconjunto latino) y reemplazar Roboto por Montserrat
   en los tokens de `style.json`. Verificación adicional: AC-5 (sin petición a `fonts.googleapis.com`
   ni CSS de fuentes bloqueante) y que Roboto ya no se descargue.

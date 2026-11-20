@@ -4,6 +4,7 @@
 - **Responsable:** Diego
 - **Origen:** tarea 8 de la lista de trabajo
 - **Rama:** `feat/010-tiempo-de-carga` (creada desde `release`)
+- **PR:** https://github.com/Jeissonespinosa/Onewstore/pull/5 (contra `release`)
 - **Depende de:** 000, 003 (línea base). Se coordina con 011 (imágenes) y 009 (móvil); **no se bloquea por ellas**.
 - **Última actualización:** 2026-11-20 (spec cerrada; metas recalculadas sobre la línea base propia)
 

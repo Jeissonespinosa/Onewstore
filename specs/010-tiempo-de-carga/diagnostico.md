@@ -88,3 +88,15 @@ Las ganancias son **estimaciones**, no medidas; se confirman con la medición «
 - **C2 y C3 se descartan.** N1 (LCP de categoría) se decide tras medir C1.
 - **C6 (reCAPTCHA)** queda fuera del repo: lo evalúa Diego en la configuración de la cuenta o con VTEX.
 - C5 no se aplica (sin datos).
+
+## 5. Decisión sobre N1 (tarea 3.3, 2026-11-20)
+
+**No se modifica `TyreSizeSelector`.** Evidencia, con la medición posterior a 3.1:
+- El `<h3 class="rx-size__title">` (elemento LCP de categoría) **ya viene en el HTML del servidor** (3 apariciones de
+  `rx-size__title` en la respuesta de `/carros/llantas-y-rines/llantas`): no depende de que el JS del selector se ejecute.
+- La consulta de datos del selector usa `ssr: false` (línea 137 de `react/TyreSizeSelector.js`) y no afecta al título.
+- El «retraso de render» sigue en ~1,4 s (antes ~1,5 s) mientras el LCP total bajó de 2,8 s a 1,9 s tras C1: lo que
+  bloquea el pintado es el CSS y el JS de VTEX, no el componente propio. El TTFB del workspace varía entre corridas
+  (0,9-1,3 s) y explica parte del ruido.
+- Cambiarlo no tendría palanca dentro del código propio, así que se descarta. Se reabre solo si, con un theme publicado,
+  el LCP de categoría vuelve a ser texto de este componente con retraso de render alto.

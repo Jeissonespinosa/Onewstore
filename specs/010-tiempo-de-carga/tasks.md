@@ -51,10 +51,10 @@ entre tandas); si la mejora es menor de 3 puntos, se revierte el commit. Un comm
 
 ## 4. Guía de imágenes y presupuesto
 
-- [ ] 4.1 Escribir `guia-imagenes.md`: formatos, ancho máximo por tipo (slide 1600×700, tarjeta de
+- [x] 4.1 Escribir `guia-imagenes.md`: formatos, ancho máximo por tipo (slide 1600×700, tarjeta de
   producto, miniatura), peso máximo, `alt`, y presupuesto de peso y JS por página
   (RF-7). Verificación: el documento existe y cada cifra cita su fuente (medida propia o referencia).
-- [ ] 4.2 Enlazar la guía desde `specs/011-disenos-iconos-banners/spec.md`.
+- [x] 4.2 Enlazar la guía desde `specs/011-disenos-iconos-banners/spec.md`.
   Verificación: el enlace existe y no está roto (AC-8).
 
 ## 5. Medición final y cierre

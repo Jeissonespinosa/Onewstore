@@ -18,9 +18,9 @@ Diseños, iconos y banners para la tienda.
 - [ ] ¿Existe una guía de marca (colores, tipografías, logo en vectores)? Los tokens del theme están en `styles/configs/style.json`.
 - [ ] ¿Qué piezas exactas se piden (lista de banners, íconos y pantallas)? ¿Quién las produce y quién las aprueba?
 - [ ] ¿Son diseños nuevos de páginas o solo reemplazar los placeholders?
-- [ ] ¿Formato y peso máximos de imágenes (impacta la spec 010)?
+- [ ] ¿Formato y peso máximos de imágenes (impacta la spec 010)? *Propuesta de la 010: ver [`guia-imagenes.md`](../010-tiempo-de-carga/guia-imagenes.md) (medida, formato y peso máximo por tipo, dos versiones de 800 y 1600 px para hero y mitades, presupuesto de rendimiento). Pendiente de que la 011 la confirme o ajuste.*
 
 ## 4. Relaciones
-- 003 (íconos del menú), 006 (logo del checkout, redes), 008 (íconos de los botones), 010 (peso de imágenes), 013 (ficha de producto).
+- 003 (íconos del menú), 006 (logo del checkout, redes), 008 (íconos de los botones), 010 (peso de imágenes; guía en [`guia-imagenes.md`](../010-tiempo-de-carga/guia-imagenes.md)), 013 (ficha de producto).
 
 > Esta spec se detallará cuando se aborde. Entregable típico: inventario de piezas con medida, destino (`image#…`) y estado.

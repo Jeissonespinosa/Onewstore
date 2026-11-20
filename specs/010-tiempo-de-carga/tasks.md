@@ -20,13 +20,13 @@
 
 ## 2. Diagnóstico (spike: decide qué se optimiza)
 
-- [ ] 2.1 Con el navegador, registrar por página (móvil emulado) el desglose: peso total, JS, CSS,
+- [x] 2.1 Con el navegador, registrar por página (móvil emulado) el desglose: peso total, JS, CSS,
   fuentes, imágenes, número de peticiones, LCP y su elemento, CLS y TBT. Incluir cuánto llega
   de las páginas generadas y si hay peticiones a dominios externos (Google Fonts u otros).
   Verificación: tabla por página en `diagnostico.md` con la fuente de cada cifra (RF-2).
-- [ ] 2.2 Contrastar cada **candidata** del plan §3 (C1 a C6) con lo medido: confirmada,
+- [x] 2.2 Contrastar cada **candidata** del plan §3 (C1 a C6) con lo medido: confirmada,
   descartada o sin datos. Verificación: columna "evidencia" por candidata en `diagnostico.md`.
-- [ ] 2.3 Ordenar las causas por ganancia estimada ÷ esfuerzo y proponer qué aplicar.
+- [x] 2.3 Ordenar las causas por ganancia estimada ÷ esfuerzo y proponer qué aplicar.
   Verificación: lista priorizada en `diagnostico.md` (RF-3).
 - [ ] 2.4 **Diego:** aprobar qué candidatas se aplican (incluida C2, que él revirtió en la 003).
   Verificación: aprobación anotada en `diagnostico.md` (AC-2); se reescribe el grupo 3.

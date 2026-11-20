@@ -19,7 +19,8 @@ specs/
   005-about-us/             spec.md (página Quiénes somos)
   006-ajustes-calidad-tienda/ spec.md (checkout, redes, 404, tests)
   007-selector-medida-rines/  spec.md · plan.md · tasks.md (selector Diámetro → Ancho → Huecos → PCD)
-  008 … 015                 borradores `backlog` (ver índice); se detallan cuando se aborden
+  010-tiempo-de-carga/      spec.md · plan.md · tasks.md
+  008, 009, 011 … 015       borradores `backlog` o `draft` (ver índice)
 ```
 
 Solo `spec.md` se escribe ahora; `plan.md` y `tasks.md` se generan tras aprobar la spec
@@ -53,7 +54,7 @@ aceptación (`AC-n`) que cubre.
 | 007 | Selector de medida de rines | Diego | approved | 000, `catalogo/como-cargan-los-sellers.md` |
 | 008 | Cambio rápido entre Carros, Motos y Herramientas | William | backlog | 003 |
 | 009 | Optimizar el uso por móvil | Diego | backlog | 002, 003 |
-| 010 | Mejorar el tiempo de carga | Diego | backlog | 003 (línea base), 011 |
+| 010 | Mejorar el tiempo de carga | Diego | done (con excepciones R1 y R2 a revisar) | 003 (línea base); coordina con 011 |
 | 011 | Diseños, iconos y banners | William | backlog | — |
 | 012 | Ingreso con Apple y Google | William | backlog | respuesta de VTEX |
 | 013 | Mejorar el aspecto de la página de producto | William | backlog | 014 |

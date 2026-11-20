@@ -95,10 +95,11 @@ Observado leyendo el repo (**[Hecho·código]**, sin medir en el navegador todav
 - `AC-2` `diagnostico.md` lista las causas con evidencia y prioridad; Diego aprobó cuáles se
   aplican.
 - `AC-3` Lighthouse móvil, mediana de varias corridas con el mismo método, al terminar:
-  **inicio ≥ 62, categoría ≥ 68, ficha ≥ 58** (la medición final de la 003 + 10), **o** hay una
-  excepción aceptada por Diego, por escrito, con la causa (p. ej. tope del workspace).
-- `AC-4` Lighthouse de escritorio no baja más de 5 puntos frente a la medición final de la 003
-  (inicio ≥ 73, categoría ≥ 63, ficha ≥ 70).
+  **inicio ≥ 78, categoría ≥ 83, ficha ≥ 81** (la línea base propia de `medidas.md` + 10; Diego cambió la referencia
+  el 2026-11-20 porque la herramienta y el workspace de la 003 ya no son comparables), **o** hay una excepción
+  aceptada por Diego, por escrito, con la causa (p. ej. tope del workspace).
+- `AC-4` Lighthouse de escritorio no baja más de 5 puntos frente a la línea base propia
+  (inicio ≥ 81, categoría ≥ 83, ficha ≥ 85).
 - `AC-5` Si se tocan las fuentes: a 360 px, una petición de red a `fonts.googleapis.com` no bloquea
   el render (sin `@import` en CSS) y el texto se ve con `font-display: swap`.
 - `AC-6` No hay regresión visual: capturas de inicio, categoría y ficha a 360 y 1280 px iguales
@@ -112,7 +113,7 @@ Observado leyendo el repo (**[Hecho·código]**, sin medir en el navegador todav
 ## 7. Preguntas abiertas
 
 Respondidas el 2026-11-19:
-- [x] Meta numérica → **+10 puntos móvil** en inicio, categoría y ficha sobre la medición final de la 003.
+- [x] Meta numérica → **+10 puntos móvil** en inicio, categoría y ficha. *Referencia cambiada el 2026-11-20: de la medición final de la 003 (62/68/58) a la línea base propia de `medidas.md` (78/83/81).*
 - [x] Dónde se mide → workspace `pruebamedidas` con `vtex link` (no hay producción; creado el 2026-11-20 porque `pruebatema` resuelve mal las rutas de catálogo). `devdiego` se
   borró el 2026-11-16; la medición final de la 003 se hizo allí, por lo que la comparación lleva esa salvedad.
 

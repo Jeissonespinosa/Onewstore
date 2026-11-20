@@ -116,3 +116,46 @@ en `pruebamedidas`.
   Diego prefiere el criterio estricto (< 3 puntos o sin evidencia → revertir), es un revert de un commit.
 - **AC-6:** capturas finales de Lighthouse antes/después de la inicio móvil, 0,5 % de píxeles distintos; sin cambios visibles.
 - Escritorio no se midió: no cambia la imagen que recibe (1600 px).
+
+## Medición final (tarea 5.1, 2026-11-20)
+
+- **Workspace / commit:** `pruebamedidas`, `vtex link` relanzado tras liberar memoria; código de las tareas 3.1 y 3.2
+  (commit `0644668`, docs `97fec72`). Rutas verificadas antes de medir: `store.home`, `store.search#subcategory`,
+  `store.product`. Mediana de **5 corridas** por celda (móvil y escritorio).
+
+| Página | Móvil final | Meta AC-3 | Escritorio final | Piso AC-4 |
+|---|---|---|---|---|
+| Inicio | **74** (65, 80, 77, 74, 72) | ≥ 78 ✗ | **88** | ≥ 81 ✓ |
+| Categoría | **74** (74, 75, 74, 74, 74) | ≥ 83 ✗ | **90** | ≥ 83 ✓ |
+| Ficha | **69** (69, 68, 71, 67, 71) | ≥ 81 ✗ | **93** | ≥ 85 ✓ |
+
+Detalle: LCP móvil 3,8 / 1,9 / 2,6 s; TBT móvil 271 / 689 / 771 ms; CLS ≤ 0,028; peso 2 428 / 3 006 / 3 418 KB.
+
+**Frente a la línea base propia (68 / 73 / 71 móvil; 86 / 88 / 90 escritorio):**
+
+| Página | Móvil | Escritorio |
+|---|---|---|
+| Inicio | 68 → 74 (+6) | 86 → 88 (+2) |
+| Categoría | 73 → 74 (+1) | 88 → 90 (+2) |
+| Ficha | 71 → 69 (−2) | 90 → 93 (+3) |
+
+- **AC-4 se cumple** (escritorio no baja; sube 2-3 puntos).
+- **AC-3 no se cumple:** ninguna página móvil llega a +10. La mejora neta es de +6 en inicio y +1 / −2 en categoría y
+  ficha, dentro del ruido salvo la inicio.
+- **Ruido de esta tanda:** el TBT de categoría y ficha (689 y 771 ms) es mucho mayor que en tandas anteriores (~450 y
+  ~400 ms) con el mismo código, y la inicio osciló entre 65 y 80. La varianza de la máquina domina; no se atribuye
+  a un cambio del theme.
+- **Excepción propuesta para AC-3** (pendiente de que Diego la acepte por escrito): *«No se alcanza +10 en móvil porque
+  la causa principal de la carga está fuera del código propio: el JavaScript de VTEX y de reCAPTCHA (~354 KB, ~480 ms) y el
+  TTFB del workspace dominan el TBT y el LCP (`diagnostico.md`). El theme aportó lo que podía: se eliminó el render
+  bloqueante de fuentes (~1 005 → ~163 ms) y se redujeron 67 KB en la inicio. Lo que queda requiere decidir sobre
+  reCAPTCHA (cuenta/VTEX), el logo y la imagen de 2551 px (contenido) o medir en un theme publicado.»*
+
+## Revisión de optimizaciones (tarea 5.2)
+
+| Tarea | Medida antes → después | Estado |
+|---|---|---|
+| 3.1 C1 Fuentes | categoría móvil 72 → 78, ficha 74 → 76, inicio 70 → 69; escritorio +1 a +3 | Conservada |
+| 3.2 C4 Imágenes (`srcSet`) | inicio móvil 70 → 73, −67 KB | Conservada (borderline, sin regresión) |
+| C2, C3, C5, N1 | no se aplicaron (descartadas en `diagnostico.md`) | — |
+| Revertidas | ninguna | — |

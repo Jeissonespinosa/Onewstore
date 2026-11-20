@@ -41,8 +41,10 @@ import {
   POPULARES, posMarca, posModelo, rutaDe,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
 } from './vehiculo'
+import { buscarEnTienda, masBuscado } from './buscar'
 
 const CSS_HANDLES = ['cris', 'crisInput', 'crisVehicle', 'crisSuggestions', 'crisStep']
+const VACIO = { sugerencias: [], marcas: [], productos: [], patrocinados: [], banner: null }
 const RED = '#FF371E'
 const INK = '#010101'
 
@@ -190,7 +192,42 @@ export default function Cris({
   const [vehiculo, setVehiculo] = useState(null)
   const [paso, setPaso] = useState(null)      // {tipo:'modelo'|'ano', marca, modelo, opciones}
   const [abierto, setAbierto] = useState(false)
+  const [tienda, setTienda] = useState(VACIO)
+  const [cargando, setCargando] = useState(false)
+  const [masBuscadas, setMasBuscadas] = useState([])
   const caja = useRef(null)
+
+  /* Lo que la tienda sabe de lo escrito: sugerencias, marcas, productos y
+     pauta. Se consulta con 220 ms de retardo para no disparar una llamada por
+     tecla, y cada consulta aborta la anterior: sin eso una respuesta lenta
+     pisaba a una rapida y el panel mostraba resultados de lo que el cliente
+     ya habia borrado. */
+  useEffect(() => {
+    const q = texto.trim()
+    if (q.length < 2) {
+      setTienda(VACIO)
+      setCargando(false)
+      return undefined
+    }
+    const control = typeof AbortController !== 'undefined' ? new AbortController() : null
+    setCargando(true)
+    const reloj = setTimeout(() => {
+      buscarEnTienda(q, control ? control.signal : undefined)
+        .then(r => { setTienda(r); setCargando(false) })
+        .catch(() => setCargando(false))
+    }, 220)
+    return () => {
+      clearTimeout(reloj)
+      if (control) control.abort()
+    }
+  }, [texto])
+
+  /* Lo mas buscado: una sola vez, para la caja vacia. */
+  useEffect(() => {
+    let vivo = true
+    masBuscado().then(t => { if (vivo) setMasBuscadas(t) })
+    return () => { vivo = false }
+  }, [])
 
   /* El vehiculo se guarda por seccion: el carro de alguien no es su moto.
      Se escucha al almacen comun para que si la pildora del header lo cambia,
@@ -424,6 +461,16 @@ export default function Cris({
     navigate({ to: '/' + segmentos.join('/'), query: 'map=' + llaves.join(',') })
   }
 
+  /* Navega a una ruta que ya viene armada (una marca del facet, un producto).
+     VTEX las entrega con su query, asi que se parte en to + query en vez de
+     rearmarla. */
+  const irAUrl = url => {
+    if (!url) return
+    limpiarAux()
+    const [ruta, query] = String(url).split('?')
+    navigate(query ? { to: ruta, query } : { to: ruta })
+  }
+
   const buscarTexto = q => {
     limpiarAux()
     navigate({ to: '/' + encodeURIComponent(q.trim()) + '/s', query: 'map=ft' })
@@ -538,6 +585,21 @@ export default function Cris({
     if (l && l.categoria) irA(l.categoria.nodo, veh, l.llanta, true)
   }
 
+  /* El panel se abre si hay ALGO que mostrar. Antes dependia solo de las
+     sugerencias locales, asi que una busqueda que solo traia productos no
+     abria nada. */
+  const hayPanel =
+    sugerencias.length > 0 ||
+    tienda.sugerencias.length > 0 ||
+    tienda.marcas.length > 0 ||
+    tienda.productos.length > 0 ||
+    tienda.patrocinados.length > 0 ||
+    (!texto.trim() && masBuscadas.length > 0)
+
+  /* Con texto, la lista local son categorias; con la caja vacia son marcas de
+     vehiculo y ya las encabeza su propia pregunta. */
+  const tituloLocal = texto.trim() ? 'Categorías' : ''
+
   const iconoVehiculo = seccion === 'motos' ? (
     <svg width="20" height="16" viewBox="0 0 40 28" fill="none" aria-hidden="true">
       <circle cx="8" cy="20" r="6" stroke={RED} strokeWidth="2.4" />
@@ -575,6 +637,45 @@ export default function Cris({
       padding:.6rem .75rem;border:0;background:none;border-radius:10px;font:inherit;font-size:.9rem;cursor:pointer}
     .rx-cris__op:hover,.rx-cris__op:focus{background:#f5f5f7}
     .rx-cris__op small{color:rgba(1,1,1,.5)}
+
+    /* ---- panel de dos columnas ----
+       Izquierda lo que se busca (sugerencias, categorias, marcas), derecha lo
+       que se compra. En movil la derecha pasa debajo: a 390 px dos columnas
+       dejan ambas inservibles. */
+    .rx-cris__cols{display:flex;flex-direction:column;gap:.25rem}
+    .rx-cris__izq,.rx-cris__der{min-width:0}
+    .rx-cris__grupo{padding-bottom:.25rem}
+    .rx-cris__grupo+.rx-cris__grupo{border-top:1px solid rgba(1,1,1,.07);padding-top:.35rem}
+    .rx-cris__der{border-top:1px solid rgba(1,1,1,.07);padding-top:.35rem}
+
+    .rx-cris__prod{display:flex;align-items:center;gap:.6rem;width:100%;text-align:left;
+      padding:.5rem .5rem;border:0;background:none;border-radius:10px;font:inherit;cursor:pointer}
+    .rx-cris__prod:hover,.rx-cris__prod:focus{background:#f5f5f7}
+    .rx-cris__foto{width:3rem;height:3rem;flex-shrink:0;border-radius:8px;background:#f2f2f4;
+      display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .rx-cris__foto img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+    .rx-cris__info{min-width:0;flex-grow:1;display:flex;flex-direction:column;gap:.15rem}
+    .rx-cris__nom{font-size:.8125rem;font-weight:600;color:${INK};line-height:1.3;
+      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .rx-cris__precio{display:flex;align-items:center;gap:.4rem;font-size:.875rem;font-weight:800}
+    .rx-cris__precio s{font-size:.75rem;font-weight:600;color:rgba(1,1,1,.4)}
+    .rx-cris__sin{font-style:normal;font-size:.75rem;font-weight:700;color:#9a9aa2}
+    /* La etiqueta de pauta va declarada, no disimulada: es publicidad. */
+    .rx-cris__pauta{font-style:normal;font-size:.5625rem;font-weight:800;letter-spacing:.06em;
+      text-transform:uppercase;color:#6b6b70;background:#f2f2f4;border-radius:999px;padding:.1rem .35rem}
+
+    .rx-cris__todo{display:block;width:100%;margin-top:.35rem;padding:.7rem .5rem;
+      border:0;border-top:1px solid rgba(1,1,1,.07);background:none;color:${RED};
+      font:inherit;font-size:.8125rem;font-weight:700;cursor:pointer;text-align:left}
+    .rx-cris__todo:hover{background:#f5f5f7}
+
+    @media screen and (min-width:48rem){
+      .rx-cris__panel{max-height:30rem}
+      .rx-cris__cols{flex-direction:row;gap:.5rem}
+      .rx-cris__izq{flex:0 0 42%}
+      .rx-cris__der{flex:1 1 auto;border-top:0;border-left:1px solid rgba(1,1,1,.07);
+        padding-top:0;padding-left:.5rem}
+    }
 
     /* ---- Cris dentro del header ----
        La caja de arriba se diseno para vivir sola debajo de un banner:
@@ -669,46 +770,136 @@ export default function Cris({
           )}
         </button>
 
-        {abierto && sugerencias.length ? (
+        {abierto && hayPanel ? (
           <div className={`rx-cris__panel ${handles.crisSuggestions || ''}`}>
-            {!texto.trim() && (!vehiculo || !vehiculo.marca) && pideVehiculo ? (
-              <div className="rx-cris__titulo">
-                ¿De qué marca es tu {seccion === 'motos' ? 'moto' : 'carro'}?
+            <div className="rx-cris__cols">
+
+              <div className="rx-cris__izq">
+                {/* Caja vacia: lo mas buscado y, si falta vehiculo, las marcas. */}
+                {!texto.trim() && masBuscadas.length ? (
+                  <div className="rx-cris__grupo">
+                    <div className="rx-cris__titulo">Lo más buscado</div>
+                    {masBuscadas.map(t => (
+                      <button key={t} type="button" className="rx-cris__op"
+                        onMouseDown={e => { e.preventDefault(); buscarTexto(t) }}>
+                        <span>{t}</span>
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
+
+                {!texto.trim() && (!vehiculo || !vehiculo.marca) && pideVehiculo && armaVehiculo ? (
+                  <div className="rx-cris__titulo">
+                    ¿De qué marca es tu {seccion === 'motos' ? 'moto' : 'carro'}?
+                  </div>
+                ) : null}
+
+                {/* Lo que la gente ya busco. Viene de VTEX y en una tienda
+                    nueva suele estar vacio: por eso no es la unica seccion. */}
+                {tienda.sugerencias.length ? (
+                  <div className="rx-cris__grupo">
+                    <div className="rx-cris__titulo">Sugerencias</div>
+                    {tienda.sugerencias.map(sg => (
+                      <button key={sg.termino} type="button" className="rx-cris__op"
+                        onMouseDown={e => { e.preventDefault(); buscarTexto(sg.termino) }}>
+                        <span>{sg.termino}</span>
+                        {sg.donde ? <small>en {sg.donde}</small> : null}
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
+
+                {/* Las categorias del arbol: esto si funciona desde el dia uno. */}
+                {sugerencias.length ? (
+                  <div className="rx-cris__grupo">
+                    {tituloLocal ? (
+                      <div className="rx-cris__titulo">{tituloLocal}</div>
+                    ) : null}
+                    {sugerencias.map(s => (
+                      <button
+                        type="button"
+                        key={
+                          s.tipo + ':' +
+                          (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
+                          (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
+                        }
+                        className="rx-cris__op"
+                        onMouseDown={e => { e.preventDefault(); elegirSugerencia(s) }}
+                      >
+                        <span>
+                          {s.tipo === 'ir' && s.conVehiculo
+                            ? `${s.nodo.nombre} para tu ${s.veh.marca} ${s.veh.modelo || ''}`
+                            : null}
+                          {s.tipo === 'ir' && !s.conVehiculo
+                            ? `${s.nodo.nombre} — ver todo`
+                            : null}
+                          {s.tipo === 'categoria' ? s.nodo.nombre : null}
+                          {s.tipo === 'marca' ? s.marca : null}
+                          {s.tipo === 'modelo' ? `${s.marca} ${s.modelo}` : null}
+                        </span>
+                        <small>
+                          {s.tipo === 'ir'
+                            ? (s.conVehiculo ? 'solo lo que le sirve' : 'sin filtro de vehículo')
+                            : null}
+                          {s.tipo === 'categoria' ? s.nodo.seccion : null}
+                          {s.tipo === 'marca' ? 'marca' : null}
+                          {s.tipo === 'modelo' ? 'modelo' : null}
+                        </small>
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
+
+                {tienda.marcas.length ? (
+                  <div className="rx-cris__grupo">
+                    <div className="rx-cris__titulo">Marcas</div>
+                    {tienda.marcas.map(m => (
+                      <button key={m.valor} type="button" className="rx-cris__op"
+                        onMouseDown={e => { e.preventDefault(); irAUrl(m.url) }}>
+                        <span>{m.nombre}</span>
+                        <small>{m.cuantos}</small>
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
               </div>
-            ) : null}
-            {sugerencias.map(s => (
-              <button
-                type="button"
-                key={
-                  s.tipo +
-                  ':' +
-                  (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
-                  (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
-                }
-                className="rx-cris__op"
-                onMouseDown={e => { e.preventDefault(); elegirSugerencia(s) }}
-              >
-                <span>
-                  {s.tipo === 'ir' && s.conVehiculo
-                    ? `${s.nodo.nombre} para tu ${s.veh.marca} ${s.veh.modelo || ''}`
-                    : null}
-                  {s.tipo === 'ir' && !s.conVehiculo
-                    ? `${s.nodo.nombre} — ver todo`
-                    : null}
-                  {s.tipo === 'categoria' ? s.nodo.nombre : null}
-                  {s.tipo === 'marca' ? s.marca : null}
-                  {s.tipo === 'modelo' ? `${s.marca} ${s.modelo}` : null}
-                </span>
-                <small>
-                  {s.tipo === 'ir'
-                    ? (s.conVehiculo ? 'solo lo que le sirve' : 'sin filtro de vehículo')
-                    : null}
-                  {s.tipo === 'categoria' ? s.nodo.seccion : null}
-                  {s.tipo === 'marca' ? 'marca' : null}
-                  {s.tipo === 'modelo' ? 'modelo' : null}
-                </small>
+
+              {/* Columna de producto: foto, nombre y precio, como en cualquier
+                  tienda grande. Es ademas donde se para la pauta. */}
+              {tienda.productos.length || tienda.patrocinados.length ? (
+                <div className="rx-cris__der">
+                  <div className="rx-cris__titulo">Productos</div>
+                  {tienda.patrocinados.concat(tienda.productos).slice(0, 6).map((pr, i) => (
+                    <button key={pr.id + '-' + i} type="button" className="rx-cris__prod"
+                      onMouseDown={e => { e.preventDefault(); irAUrl(pr.url) }}>
+                      <span className="rx-cris__foto">
+                        {pr.imagen ? <img src={pr.imagen} alt="" loading="lazy" /> : null}
+                      </span>
+                      <span className="rx-cris__info">
+                        <span className="rx-cris__nom">{pr.nombre}</span>
+                        <span className="rx-cris__precio">
+                          {pr.precioTexto
+                            ? pr.precioTexto
+                            : <em className="rx-cris__sin">{pr.agotado ? 'Agotado' : 'Consultar'}</em>}
+                          {pr.antes ? <s>{pr.antes}</s> : null}
+                          {i < tienda.patrocinados.length ? (
+                            <em className="rx-cris__pauta">Patrocinado</em>
+                          ) : null}
+                        </span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+
+            </div>
+
+            {texto.trim().length >= 2 ? (
+              <button type="button" className="rx-cris__todo"
+                onMouseDown={e => { e.preventDefault(); buscarTexto(texto) }}>
+                {cargando ? 'Buscando…' : `Ver todos los resultados para «${texto.trim()}»`}
               </button>
-            ))}
+            ) : null}
           </div>
         ) : null}
       </form>

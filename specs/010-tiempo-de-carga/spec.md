@@ -1,11 +1,11 @@
 # 010 — Mejorar el tiempo de carga
 
-- **Estado:** implementing
+- **Estado:** done (2026-11-20), con excepciones aceptadas R1 y R2 a revisar (§8.1)
 - **Responsable:** Diego
 - **Origen:** tarea 8 de la lista de trabajo
 - **Rama:** `feat/010-tiempo-de-carga` (creada desde `release`)
 - **Depende de:** 000, 003 (línea base). Se coordina con 011 (imágenes) y 009 (móvil); **no se bloquea por ellas**.
-- **Última actualización:** 2026-11-19 (meta numérica fijada por Diego)
+- **Última actualización:** 2026-11-20 (spec cerrada; metas recalculadas sobre la línea base propia)
 
 ## 1. Contexto y problema
 

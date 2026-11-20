@@ -183,3 +183,27 @@ Capturas en el scratchpad de la sesión (no se versionan).
    Tachyons (`-apple-system…`), no la de los tokens. Ya era así con Roboto en los tokens. Opcional para la 013 o 011.
 3. La barra fija «Filtrar / Relevancia» de la categoría en móvil tapa parte del selector «Busca por vehículo»
    mientras se desplaza: comportamiento existente del bloque de filtros, no tocado.
+
+## Experimento: móvil sin reCAPTCHA (2026-11-20)
+
+- **Qué es:** Lighthouse móvil con `--blocked-url-patterns=recaptcha`, **solo en la medición**; el sitio no se cambió.
+  Mismo workspace y mismo código que la medición final. 5 corridas por página. Sirve para estimar el techo que daría
+  resolver el punto C6 (reCAPTCHA) con VTEX; no es una propuesta de quitarlo.
+
+| Página | Con reCAPTCHA (final) | Sin reCAPTCHA | Diferencia | Meta AC-3 | Peso |
+|---|---|---|---|---|---|
+| Inicio | 74 (65, 80, 77, 74, 72) | **76** (76, 68, 76, 77, 76) | +2 | ≥ 78 | 2 428 → 1 978 KB |
+| Categoría | 74 (74, 75, 74, 74, 74) | **82** (82, 83, 72, 79, 85) | +8 | ≥ 83 | 3 006 → 2 554 KB |
+| Ficha | 69 (69, 68, 71, 67, 71) | **79** (78, 76, 80, 80, 79) | +10 | ≥ 81 | 3 418 → 2 965 KB |
+
+- **Firme:** se ahorran ~450 KB por página (la petición de reCAPTCHA y su iframe).
+- **Con cautela (ruido):** los rangos de las corridas se solapan (categoría 72-85), y la tanda «final» tuvo un TBT de
+  categoría y ficha (689 y 771 ms) mucho mayor que las tandas anteriores con el mismo código (~450 y ~400 ms). Frente a
+  esas tandas anteriores (categoría 78, ficha 76, inicio 69) la ganancia sería de unos +3 a +4 en categoría y ficha. Por
+  eso la estimación honesta es de **+3 a +8 puntos en móvil**, con el LCP sin cambio (3,8 / 2,0 / 2,8 s); la ganancia
+  viene del TBT.
+- **Lectura:** sin reCAPTCHA las tres páginas quedarían a **2 o 3 puntos** de la meta de AC-3 (76 / 82 / 79 frente a
+  78 / 83 / 81). Resolver C6 con VTEX es la acción con más ganancia que queda, pero por sí sola probablemente no basta
+  para cerrar la excepción R1 sin otra mejora (logo de 2551 px, contenido de la 011).
+- **No se decidió quitar reCAPTCHA.** Protege los pagos con tarjeta; la propuesta es preguntar a VTEX si el script puede
+  cargarse solo en el checkout y el login.

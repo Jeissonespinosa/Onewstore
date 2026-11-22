@@ -179,11 +179,21 @@ def main():
         sku['IsActive'] = True
         call(tk, 'PUT', '/api/catalog/pvt/stockkeepingunit/%d' % sid, sku)
 
-        call(tk, 'PUT', '/api/pricing/prices/%d' % sid,
-             {'costPrice': int(p['precio'] * 0.7), 'markup': 42},
-             base='https://api.vtex.com/onewstore')
-        call(tk, 'PUT', '/api/logistics/pvt/inventory/skus/%d/warehouses/%s' % (sid, ALMACEN),
-             {'quantity': p['stock'], 'unlimitedQuantity': False})
+        # El precio iba a api.vtex.com, que NO acepta la cookie de sesion (pide
+        # appKey/appToken), y nadie miraba el resultado: fallo en silencio en
+        # los 45 productos. Sin precio VTEX no ofrece el SKU, asi que ademas
+        # salian como agotados aunque el inventario estuviera puesto.
+        #
+        # costPrice sale de dividir por el markup para que basePrice caiga en
+        # el precio del archivo y no un 0,6% por debajo.
+        st, r = call(tk, 'PUT', '/api/pricing/prices/%d' % sid,
+                     {'costPrice': round(p['precio'] / 1.42), 'markup': 42})
+        if st not in (200, 204):
+            print('   ERROR precio %s (sku %s): %s %s' % (p['ref'], sid, st, r))
+        st, r = call(tk, 'PUT', '/api/logistics/pvt/inventory/skus/%d/warehouses/%s' % (sid, ALMACEN),
+                     {'quantity': p['stock'], 'unlimitedQuantity': False})
+        if st not in (200, 204):
+            print('   ERROR inventario %s (sku %s): %s %s' % (p['ref'], sid, st, r))
 
         # De a una: la API acepta un lote y responde 200, pero solo aplica la primera.
         todas = dict(p.get('specs') or {})

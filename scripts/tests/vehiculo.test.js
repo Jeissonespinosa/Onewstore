@@ -247,6 +247,23 @@ prueba('en 2011 cada opcion dice de que generacion es',
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
 
+console.log('\n=== cuando el numero es el motor (BMW, Mercedes) ===')
+const motoresId = (ma, mo, a) => motoresDe('carros', ma, mo, a).map(x => x.id).sort()
+/* BMW Serie 1, confirmado generacion por generacion. */
+prueba('un Serie 1 de 2008 es aspirado', motoresId('BMW', 'Serie 1', '2008'),
+  ['1.6', '2.0', '3.0'])
+prueba('uno de 2016 ya es turbo', motoresId('BMW', 'Serie 1', '2016'),
+  ['1.5T', '1.6T', '3.0T'])
+prueba('uno de 2025 son dos', motoresId('BMW', 'Serie 1', '2025'), ['1.5T', '2.0T'])
+prueba('y se le pregunta, porque son dos',
+  pideMotor('carros', 'BMW', 'Serie 1', '2025'), true)
+prueba('2011 es el año del cambio y los muestra todos',
+  motoresDe('carros', 'BMW', 'Serie 1', '2011').length, 6)
+/* Cada opcion tiene que decir cual numero es, o el dueño de un 118i no sabe
+   cual escoger. */
+prueba('cada motor del Serie 1 dice que version es',
+  motoresDe('carros', 'BMW', 'Serie 1', '2016').every(x => !!x.nota), true)
+
 console.log('\n=== el año va en todos ===')
 /* Regla nueva: un motor verificado SIN ventana de año no existe. "De 2010 a
    2023" es un dato confirmado; "sin año" es un dato que falta. */

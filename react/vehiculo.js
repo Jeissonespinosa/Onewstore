@@ -440,6 +440,7 @@ export const RANK_MODELOS = {
   Volkswagen: ['Gol', 'Jetta', 'T-Cross', 'Polo', 'Tiguan', 'Amarok', 'Golf', 'Fox'],
   Ford: ['EcoSport', 'Ranger', 'Fiesta', 'Escape', 'Explorer', 'Focus', 'F-150'],
   BMW: ['Serie 3', 'X1', 'Serie 1', 'X3', 'Serie 2', 'X5', 'Serie 5'],
+  'Mercedes-Benz': ['Clase C', 'GLC', 'Clase A', 'GLA', 'CLA', 'Clase E', 'GLB', 'GLE ML'],
   Bajaj: ['Boxer CT 100', 'Pulsar 160 NS', 'Pulsar N160', 'Pulsar 180', 'Pulsar 150', 'Discover 100 125', 'Dominar 400', 'Platina 100 125'],
   AKT: ['NKD 125', 'AK 125 CR4', 'TTR 200', 'TTR 180', 'Flex 125', 'AK 110 Special'],
   Yamaha: ['NMax', 'FZ 2.0 FZ-S', 'XTZ 150', 'FZ 25', 'Crypton 115 FI', 'BWS 125 FI', 'MT-15', 'XTZ 125'],

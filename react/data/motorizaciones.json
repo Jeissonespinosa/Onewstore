@@ -75,26 +75,77 @@
       },
       "Serie 3": {
         "fuente": "por-confirmar",
+        "falta": "las designaciones salen de la historia del modelo; falta confirmar cuáles entraron a Colombia",
         "motores": [
           {
-            "id": "316i",
-            "nombre": "316i · 1.6 Turbo"
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc",
+            "nota": "316i aspirado",
+            "desde": 1990,
+            "hasta": 1998
           },
           {
-            "id": "320i",
-            "nombre": "320i · 2.0 Turbo"
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "318i",
+            "desde": 1990,
+            "hasta": 2005
           },
           {
-            "id": "328i",
-            "nombre": "328i · 2.0 Turbo"
+            "id": "2.0-asp",
+            "nombre": "2.0 · 1995 cc",
+            "nota": "318i y 320i aspirados",
+            "desde": 1998,
+            "hasta": 2012
           },
           {
-            "id": "330i",
-            "nombre": "330i · 2.0 Turbo"
+            "id": "2.2-6c",
+            "nombre": "2.2 · 2171 cc · 6 cilindros",
+            "nota": "320i del E46",
+            "desde": 1998,
+            "hasta": 2005
           },
           {
-            "id": "320d",
-            "nombre": "320d · 2.0 Diésel"
+            "id": "2.5-6c",
+            "nombre": "2.5 · 2494 cc · 6 cilindros",
+            "nota": "325i",
+            "desde": 1990,
+            "hasta": 2012
+          },
+          {
+            "id": "3.0-asp",
+            "nombre": "3.0 · 2979 cc · 6 cilindros",
+            "nota": "328i y 330i aspirados",
+            "desde": 1998,
+            "hasta": 2012
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2979 cc · 6 cilindros",
+            "nota": "335i y M340i",
+            "desde": 2007,
+            "hasta": 2027
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "316i del F30",
+            "desde": 2012,
+            "hasta": 2016
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "320i, 328i y 330i",
+            "desde": 2012,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1995 cc",
+            "nota": "320d",
+            "desde": 2012,
+            "hasta": 2019
           }
         ]
       },
@@ -1432,7 +1483,15 @@
         "motores": [
           {
             "id": "2.5",
-            "nombre": "2.5 · 2488 cc"
+            "nombre": "2.5 · 2488 cc",
+            "nota": "único en Colombia en las dos generaciones",
+            "desde": 2009,
+            "hasta": 2023
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 dCi Diésel · 1995 cc",
+            "nota": "existe afuera: por confirmar si entró"
           }
         ]
       },
@@ -1518,24 +1577,35 @@
       },
       "Symbol": {
         "fuente": "por-confirmar",
+        "falta": "el 1.4 16V aparece en una fuente y no en la otra",
         "motores": [
           {
             "id": "1.4-8V",
             "nombre": "1.4 8V · 1390 cc",
-            "nota": "falta desde qué año"
+            "nota": "el de la primera, 75 hp",
+            "desde": 2001,
+            "hasta": 2008
           },
           {
-            "id": "1.4-16V",
-            "nombre": "1.4 16V · 1390 cc",
-            "nota": "falta desde qué año"
+            "id": "1.6-8V",
+            "nombre": "1.6 8V · 1598 cc",
+            "nota": "entrada e intermedias de la segunda, 90 hp",
+            "desde": 2008,
+            "hasta": 2013
           },
           {
             "id": "1.6-16V",
             "nombre": "1.6 16V · 1598 cc",
-            "nota": "falta desde qué año"
+            "nota": "Dynamique y versiones altas",
+            "desde": 2009,
+            "hasta": 2013
+          },
+          {
+            "id": "1.4-16V",
+            "nombre": "1.4 16V · 1390 cc",
+            "nota": "una fuente lo lista y la colombiana no: por verificar"
           }
-        ],
-        "falta": "falta separar desde qué año va cada motor"
+        ]
       },
       "Twingo": {
         "fuente": "por-confirmar",
@@ -1819,10 +1889,21 @@
       },
       "Yaris": {
         "fuente": "por-confirmar",
+        "falta": "verificar si hubo 1.3 al principio y si se vendió entre 2014 y 2017",
         "motores": [
           {
             "id": "1.5",
-            "nombre": "1.5 · 1496 cc"
+            "nombre": "1.5 · 1496 cc",
+            "nota": "Yaris anterior (1NZ-FE)",
+            "desde": 2006,
+            "hasta": 2017
+          },
+          {
+            "id": "1.5-NR",
+            "nombre": "1.5 Dual VVT-i · 1496 cc",
+            "nota": "Yaris actual (2NR-FE), sedán y hatchback",
+            "desde": 2018,
+            "hasta": 2027
           }
         ]
       },
@@ -1925,16 +2006,32 @@
         "fuente": "por-confirmar",
         "motores": [
           {
-            "id": "1.4T",
-            "nombre": "1.4 TSI · 1395 cc"
-          },
-          {
             "id": "2.0",
-            "nombre": "2.0 · 1984 cc"
+            "nombre": "2.0 Aspirado · 1984 cc",
+            "nota": "el de toda la etapa anterior",
+            "desde": 1998,
+            "hasta": 2018
           },
           {
             "id": "2.5",
-            "nombre": "2.5 · 2480 cc"
+            "nombre": "2.5 · 2480 cc · 5 cilindros",
+            "nota": "versiones altas de la etapa anterior",
+            "desde": 2006,
+            "hasta": 2018
+          },
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc",
+            "nota": "desde 2019, reemplazo a los aspirados",
+            "desde": 2019,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TSI · 1984 cc",
+            "nota": "GLI — mismo cilindraje que el viejo, otro motor",
+            "desde": 2019,
+            "hasta": 2027
           }
         ]
       },

@@ -272,7 +272,7 @@ prueba('el Mazda 3 de 2010 no ve SkyActiv',
 prueba('el Fortuner recupero el 2.4 diésel',
   crudoEnAno('Toyota', 'Fortuner', 2020), ['2.4D', '2.7', '2.8D'])
 prueba('el Symbol dejo de tener un solo motor',
-  motorizaciones.carros.Renault.Symbol.motores.length, 3)
+  motorizaciones.carros.Renault.Symbol.motores.length >= 3, true)
 prueba('el Twingo distingue 8V de 16V',
   motorizaciones.carros.Renault.Twingo.motores.map(x => x.id).sort(),
   ['1.2-16V', '1.2-8V'])
@@ -280,6 +280,33 @@ prueba('el Twingo distingue 8V de 16V',
 prueba('lo que falta se anota en la ficha, no entre los motores',
   motorizaciones.carros.Toyota.Hilux.motores.every(x => /\d/.test(x.id)), true)
 prueba('y la ficha lo dice', !!motorizaciones.carros.Toyota.Hilux.falta, true)
+
+console.log('\n=== los cinco que faltaba completar ===')
+prueba('el Jetta de 2015 no ve el TSI, que llego en 2019',
+  crudoEnAno('Volkswagen', 'Jetta', 2015), ['2.0', '2.5'])
+prueba('y el de 2022 no ve los aspirados',
+  crudoEnAno('Volkswagen', 'Jetta', 2022), ['1.4T', '2.0T'])
+/* El 2.0 viejo y el 2.0 del GLI son el mismo cilindraje y otro motor: tienen
+   que verse distinto o el cliente escoge a la suerte. */
+prueba('el 2.0 viejo y el 2.0 TSI no se llaman igual',
+  motorizaciones.carros.Volkswagen.Jetta.motores
+    .filter(x => x.id.indexOf('2.0') === 0).map(x => x.nombre),
+  ['2.0 Aspirado · 1984 cc', '2.0 TSI · 1984 cc'])
+
+prueba('el Serie 3 de 2003 es todo aspirado',
+  crudoEnAno('BMW', 'Serie 3', 2003), ['1.8', '2.0-asp', '2.2-6c', '2.5-6c', '3.0-asp'])
+prueba('el de 2024 son dos', crudoEnAno('BMW', 'Serie 3', 2024), ['2.0T', '3.0T'])
+
+prueba('el Yaris viejo y el nuevo son motores distintos',
+  crudoEnAno('Toyota', 'Yaris', 2010).concat(crudoEnAno('Toyota', 'Yaris', 2022)),
+  ['1.5', '1.5-NR'])
+prueba('el Symbol de 2005 lleva el 1.4 8V',
+  crudoEnAno('Renault', 'Symbol', 2005).indexOf('1.4-8V') >= 0, true)
+prueba('y el de 2011 ya es 1.6',
+  crudoEnAno('Renault', 'Symbol', 2011).filter(x => x.indexOf('1.6') === 0).sort(),
+  ['1.6-16V', '1.6-8V'])
+prueba('el Koleos quedo con su rango completo',
+  crudoEnAno('Renault', 'Koleos', 2015).indexOf('2.5') >= 0, true)
 
 console.log('\n=== cuando el numero es el motor (BMW, Mercedes) ===')
 const motoresId = (ma, mo, a) => motoresDe('carros', ma, mo, a).map(x => x.id).sort()

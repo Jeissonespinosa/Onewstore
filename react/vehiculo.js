@@ -44,10 +44,15 @@ const vacio = () => ({ lista: [], activo: 0 })
 
 const valido = v => !!(v && v.marca && v.modelo)
 
-/* Dos vehiculos son el mismo si coinciden marca, modelo y año. */
+/* Dos vehiculos son el mismo si coinciden marca, modelo y año. El motor solo
+   los separa cuando los dos lo tienen: un Picanto 2015 1.0 y uno 1.25 son
+   carros distintos, pero uno sin motor declarado todavia puede ser cualquiera
+   de los dos, asi que cuenta como el mismo y al guardarlo se completa. */
+const mismoMotor = (a, b) => !a.motor || !b.motor || a.motor === b.motor
+
 export const mismoVehiculo = (a, b) =>
   !!a && !!b && a.marca === b.marca && a.modelo === b.modelo &&
-  (a.ano || null) === (b.ano || null)
+  (a.ano || null) === (b.ano || null) && mismoMotor(a, b)
 
 export function leerEstado(seccion) {
   let crudo = null
@@ -104,7 +109,14 @@ export function escribir(seccion, v) {
     return escribirEstado(seccion, { lista, activo: 0 })
   }
   const ya = e.lista.findIndex(x => mismoVehiculo(x, v))
-  if (ya >= 0) return escribirEstado(seccion, { lista: e.lista, activo: ya })
+  if (ya >= 0) {
+    /* Lo reemplaza, no solo lo activa: asi el motor que acaba de escoger se
+       guarda sobre el que estaba sin declarar, y gana siempre la ultima
+       pasada por el embudo. */
+    const lista = e.lista.slice()
+    lista[ya] = v
+    return escribirEstado(seccion, { lista, activo: ya })
+  }
   if (e.lista.length < MAX_VEHICULOS) {
     return escribirEstado(seccion, { lista: e.lista.concat([v]), activo: e.lista.length })
   }

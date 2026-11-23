@@ -168,5 +168,30 @@ console.log('\n=== mismoVehiculo ===')
 prueba('igual con el mismo año', mismoVehiculo(onix, { ...onix }), true)
 prueba('distinto si cambia el año', mismoVehiculo(onix, { ...onix, ano: '2021' }), false)
 
+/* El caso que el usuario puso de ejemplo: dos Picanto del mismo año. */
+const pic10 = { marca: 'Kia', modelo: 'Picanto', ano: '2015', motor: '1.0' }
+const pic125 = { marca: 'Kia', modelo: 'Picanto', ano: '2015', motor: '1.25' }
+const picSin = { marca: 'Kia', modelo: 'Picanto', ano: '2015' }
+prueba('1.0 y 1.25 del mismo año son carros distintos', mismoVehiculo(pic10, pic125), false)
+prueba('sin motor todavia puede ser cualquiera de los dos', mismoVehiculo(picSin, pic125), true)
+prueba('y al reves tambien', mismoVehiculo(pic10, picSin), true)
+prueba('motor null cuenta como sin declarar',
+  mismoVehiculo({ ...picSin, motor: null }, pic10), true)
+
+console.log('\n=== guardar con motor ===')
+limpiar()
+escribir('carros', pic10)
+escribir('carros', pic125)
+prueba('los dos Picanto caben a la vez',
+  leerEstado('carros'), { lista: [pic10, pic125], activo: 1 })
+limpiar()
+escribir('carros', picSin)
+escribir('carros', pic125)
+prueba('escoger el motor completa el que estaba sin declarar, no lo duplica',
+  leerEstado('carros'), { lista: [pic125], activo: 0 })
+escribir('carros', picSin)
+prueba('decir "no se cual es" despues lo deja otra vez sin motor',
+  leerEstado('carros'), { lista: [picSin], activo: 0 })
+
 console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
 process.exit(fallos ? 1 : 0)

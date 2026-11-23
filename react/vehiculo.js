@@ -181,22 +181,27 @@ export const RANK_MARCAS = {
 
 /* Modelos mas vendidos por marca: ordenan el paso "¿Que Toyota tienes?" para
    que Corolla y Hilux salgan antes que Coaster. Solo las marcas de mayor
-   volumen; el resto va alfabetico. */
+   volumen; el resto va alfabetico.
+
+   EL NOMBRE TIENE QUE SER EXACTO al de vehiculos-colombia.json. Seis estaban
+   escritos de otra forma ("Land Cruiser" por "Land Cruiser 200", "FZ 2.0" por
+   "FZ 2.0 FZ-S") y simplemente no rankeaban: la busqueda no fallaba, solo
+   ordenaba mal y nadie lo notaba. scripts/validar-motorizaciones.py lo revisa. */
 export const RANK_MODELOS = {
   Chevrolet: ['Onix', 'Spark GT', 'Sail', 'Tracker', 'Aveo', 'Captiva', 'Optra', 'Beat', 'Cruze', 'Corsa', 'Joy', 'Groove', 'D-Max'],
   Renault: ['Sandero', 'Logan', 'Kwid', 'Duster', 'Stepway', 'Twingo', 'Symbol', 'Captur', 'Mégane', 'Koleos'],
   Mazda: ['Mazda 2', 'Mazda 3', 'CX-30', 'CX-5', 'CX-3', 'BT-50', 'Mazda 6', 'Allegro'],
   Kia: ['Picanto', 'Rio', 'Sportage', 'Cerato', 'Seltos', 'Sonet', 'Carnival', 'Sorento', 'Soul'],
-  Toyota: ['Corolla', 'Hilux', 'Fortuner', 'Prado', 'Yaris', 'RAV4', 'Corolla Cross', 'Land Cruiser'],
+  Toyota: ['Corolla', 'Hilux', 'Fortuner', 'Prado', 'Yaris', 'RAV4', 'Corolla Cross', 'Land Cruiser 200'],
   Nissan: ['Versa', 'Kicks', 'March', 'Sentra', 'Frontier NP300', 'X-Trail', 'Qashqai', 'Tiida'],
   Suzuki: ['Swift', 'Vitara', 'Jimny', 'Grand Vitara', 'S-Presso', 'Baleno', 'Alto'],
   Hyundai: ['Tucson', 'Accent', 'i10', 'Grand i10', 'Creta', 'Kona', 'Santa Fe', 'Elantra'],
   Volkswagen: ['Gol', 'Jetta', 'T-Cross', 'Polo', 'Tiguan', 'Amarok', 'Golf', 'Fox'],
   Ford: ['EcoSport', 'Ranger', 'Fiesta', 'Escape', 'Explorer', 'Focus', 'F-150'],
   BMW: ['Serie 3', 'X1', 'Serie 1', 'X3', 'Serie 2', 'X5', 'Serie 5'],
-  Bajaj: ['Boxer CT 100', 'Pulsar 160 NS', 'Pulsar N160', 'Pulsar 180', 'Pulsar 150', 'Discover 125', 'Dominar 400', 'Platina 100'],
+  Bajaj: ['Boxer CT 100', 'Pulsar 160 NS', 'Pulsar N160', 'Pulsar 180', 'Pulsar 150', 'Discover 100 125', 'Dominar 400', 'Platina 100 125'],
   AKT: ['NKD 125', 'AK 125 CR4', 'TTR 200', 'TTR 180', 'Flex 125', 'AK 110 Special'],
-  Yamaha: ['NMax', 'FZ 2.0', 'XTZ 150', 'FZ 25', 'Crypton 115', 'BWS 125', 'MT-15', 'XTZ 125'],
+  Yamaha: ['NMax', 'FZ 2.0 FZ-S', 'XTZ 150', 'FZ 25', 'Crypton 115 FI', 'BWS 125 FI', 'MT-15', 'XTZ 125'],
   Honda: ['CB 125F', 'Wave 110', 'XR 150L', 'CB 160F', 'Dio', 'Navi', 'CB 190R', 'CB 110'],
 }
 

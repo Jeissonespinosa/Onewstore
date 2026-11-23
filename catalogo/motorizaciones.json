@@ -1,0 +1,1249 @@
+{
+  "_nota": "Motorizaciones por modelo para el mercado colombiano. El paso del motor solo se le pregunta al cliente cuando el modelo y el año tienen MAS DE UNA. Las motos no estan: su cilindraje ya va en el nombre del modelo (Pulsar 160, Boxer CT 100, XTZ 150).",
+  "_fuentes": {
+    "verificado": "Confirmado contra fichas tecnicas publicadas. No tocar sin volver a verificar.",
+    "por-confirmar": "Armado con lo conocido del mercado. HAY QUE CONFIRMARLO contra un catalogo de distribuidor antes de subirlo a VTEX."
+  },
+  "carros": {
+    "BMW": {
+      "Serie 1": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "116i",
+            "nombre": "116i · 1.6 Turbo"
+          },
+          {
+            "id": "118i",
+            "nombre": "118i · 1.6/2.0 Turbo"
+          },
+          {
+            "id": "120i",
+            "nombre": "120i · 2.0 Turbo"
+          }
+        ]
+      },
+      "Serie 2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "218i",
+            "nombre": "218i · 1.5 Turbo"
+          },
+          {
+            "id": "220i",
+            "nombre": "220i · 2.0 Turbo"
+          }
+        ]
+      },
+      "Serie 3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "316i",
+            "nombre": "316i · 1.6 Turbo"
+          },
+          {
+            "id": "320i",
+            "nombre": "320i · 2.0 Turbo"
+          },
+          {
+            "id": "328i",
+            "nombre": "328i · 2.0 Turbo"
+          },
+          {
+            "id": "330i",
+            "nombre": "330i · 2.0 Turbo"
+          },
+          {
+            "id": "320d",
+            "nombre": "320d · 2.0 Diésel"
+          }
+        ]
+      },
+      "Serie 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "520i",
+            "nombre": "520i · 2.0 Turbo"
+          },
+          {
+            "id": "530i",
+            "nombre": "530i · 2.0 Turbo"
+          }
+        ]
+      },
+      "X1": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "18i",
+            "nombre": "sDrive18i · 1.5 Turbo"
+          },
+          {
+            "id": "20i",
+            "nombre": "xDrive20i · 2.0 Turbo"
+          }
+        ]
+      },
+      "X3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "20i",
+            "nombre": "xDrive20i · 2.0 Turbo"
+          },
+          {
+            "id": "30i",
+            "nombre": "xDrive30i · 2.0 Turbo"
+          }
+        ]
+      },
+      "X5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "40i",
+            "nombre": "xDrive40i · 3.0 Turbo"
+          },
+          {
+            "id": "30d",
+            "nombre": "xDrive30d · 3.0 Diésel"
+          }
+        ]
+      }
+    },
+    "Chevrolet": {
+      "Aveo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc",
+            "desde": 2006,
+            "hasta": 2018
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2006,
+            "hasta": 2018
+          },
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1485 cc",
+            "desde": 2023
+          }
+        ]
+      },
+      "Beat": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1199 cc"
+          }
+        ]
+      },
+      "Captiva": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2384 cc"
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2997 cc"
+          },
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2231 cc"
+          }
+        ]
+      },
+      "Corsa": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1389 cc"
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Cruze": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc"
+          }
+        ]
+      },
+      "D-Max": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2499 cc"
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2999 cc"
+          }
+        ]
+      },
+      "Groove": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1485 cc"
+          }
+        ]
+      },
+      "Joy": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc"
+          }
+        ]
+      },
+      "Onix": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.0T",
+            "nombre": "1.0 Turbo · 999 cc"
+          },
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1199 cc"
+          }
+        ]
+      },
+      "Optra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc"
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          },
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc"
+          }
+        ]
+      },
+      "Sail": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc",
+            "desde": 2013,
+            "hasta": 2018
+          },
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1485 cc",
+            "desde": 2019
+          }
+        ]
+      },
+      "Spark GT": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1206 cc"
+          }
+        ]
+      },
+      "Tracker": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "desde": 2014,
+            "hasta": 2019
+          },
+          {
+            "id": "1.2T",
+            "nombre": "1.2 Turbo · 1199 cc",
+            "desde": 2020
+          }
+        ]
+      }
+    },
+    "Ford": {
+      "EcoSport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Escape": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "Explorer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3",
+            "nombre": "2.3 EcoBoost · 2261 cc"
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3496 cc"
+          }
+        ]
+      },
+      "F-150": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.7",
+            "nombre": "2.7 EcoBoost V6"
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 EcoBoost V6"
+          },
+          {
+            "id": "5.0",
+            "nombre": "5.0 V8 · 4951 cc"
+          }
+        ]
+      },
+      "Fiesta": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc"
+          }
+        ]
+      },
+      "Focus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Ranger": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2198 cc"
+          },
+          {
+            "id": "3.2D",
+            "nombre": "3.2 Diésel · 3198 cc"
+          },
+          {
+            "id": "2.0BT",
+            "nombre": "2.0 Bi-Turbo Diésel · 1996 cc"
+          }
+        ]
+      }
+    },
+    "Hyundai": {
+      "Accent": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc"
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          }
+        ]
+      },
+      "Creta": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Elantra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Grand i10": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc"
+          },
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc"
+          }
+        ]
+      },
+      "Kona": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1591 cc"
+          }
+        ]
+      },
+      "Santa Fe": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2359 cc"
+          },
+          {
+            "id": "2.2D",
+            "nombre": "2.2 CRDi Diésel · 2199 cc"
+          }
+        ]
+      },
+      "Tucson": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 CRDi Diésel · 1995 cc"
+          }
+        ]
+      },
+      "i10": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc"
+          },
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc"
+          }
+        ]
+      }
+    },
+    "Kia": {
+      "Carnival": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.3",
+            "nombre": "3.3 V6 · 3342 cc"
+          },
+          {
+            "id": "2.2D",
+            "nombre": "2.2 CRDi Diésel · 2199 cc"
+          }
+        ]
+      },
+      "Cerato": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Picanto": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.1",
+            "nombre": "1.1 · 1086 cc",
+            "desde": 2005,
+            "hasta": 2011
+          },
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc",
+            "desde": 2011
+          },
+          {
+            "id": "1.25",
+            "nombre": "1.25 · 1248 cc",
+            "desde": 2011
+          }
+        ]
+      },
+      "Rio": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc"
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          }
+        ]
+      },
+      "Seltos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Sonet": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          }
+        ]
+      },
+      "Sorento": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2359 cc"
+          },
+          {
+            "id": "2.2D",
+            "nombre": "2.2 CRDi Diésel · 2199 cc"
+          }
+        ]
+      },
+      "Soul": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Sportage": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc"
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 CRDi Diésel · 1995 cc"
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "desde": 2022
+          }
+        ]
+      }
+    },
+    "Mazda": {
+      "Allegro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc"
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "BT-50": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2198 cc"
+          },
+          {
+            "id": "3.2D",
+            "nombre": "3.2 Diésel · 3198 cc"
+          }
+        ]
+      },
+      "CX-3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          }
+        ]
+      },
+      "CX-30": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "CX-5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "Mazda 2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1496 cc"
+          }
+        ]
+      },
+      "Mazda 3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2004,
+            "hasta": 2013
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "desde": 2019
+          }
+        ]
+      },
+      "Mazda 6": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      }
+    },
+    "Nissan": {
+      "Frontier NP300": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2488 cc"
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2389 cc"
+          }
+        ]
+      },
+      "Kicks": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "March": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Qashqai": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1997 cc"
+          }
+        ]
+      },
+      "Sentra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1798 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1997 cc"
+          }
+        ]
+      },
+      "Tiida": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1798 cc"
+          }
+        ]
+      },
+      "Versa": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "X-Trail": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1997 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      }
+    },
+    "Renault": {
+      "Captur": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          }
+        ]
+      },
+      "Duster": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          }
+        ]
+      },
+      "Koleos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "Kwid": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 999 cc"
+          }
+        ]
+      },
+      "Logan": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.6-8V",
+            "nombre": "1.6 8V · 85 hp"
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 105-113 hp"
+          }
+        ]
+      },
+      "Mégane": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc"
+          }
+        ]
+      },
+      "Sandero": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.6-8V",
+            "nombre": "1.6 8V · 85 hp"
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 105-113 hp"
+          }
+        ]
+      },
+      "Stepway": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.6-8V",
+            "nombre": "1.6 8V · 85 hp"
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 105-113 hp"
+          }
+        ]
+      },
+      "Symbol": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Twingo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1149 cc"
+          }
+        ]
+      }
+    },
+    "Suzuki": {
+      "Alto": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc"
+          },
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc"
+          }
+        ]
+      },
+      "Baleno": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1373 cc"
+          }
+        ]
+      },
+      "Grand Vitara": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc"
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2393 cc"
+          }
+        ]
+      },
+      "Jimny": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1462 cc"
+          },
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1328 cc"
+          }
+        ]
+      },
+      "S-Presso": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc"
+          }
+        ]
+      },
+      "Swift": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc"
+          },
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1372 cc"
+          }
+        ]
+      },
+      "Vitara": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1586 cc"
+          },
+          {
+            "id": "1.4T",
+            "nombre": "1.4 Turbo · 1373 cc"
+          }
+        ]
+      }
+    },
+    "Toyota": {
+      "Corolla": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 1995,
+            "hasta": 2019
+          },
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1798 cc",
+            "desde": 1998,
+            "hasta": 2019
+          },
+          {
+            "id": "1.8HV",
+            "nombre": "1.8 Híbrido · 1798 cc",
+            "desde": 2020
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1987 cc",
+            "desde": 2020
+          }
+        ]
+      },
+      "Corolla Cross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8HV",
+            "nombre": "1.8 Híbrido · 1798 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1987 cc"
+          }
+        ]
+      },
+      "Fortuner": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.7",
+            "nombre": "2.7 Gasolina · 2694 cc"
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc"
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      },
+      "Hilux": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Diésel · 2393 cc"
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc"
+          },
+          {
+            "id": "2.7",
+            "nombre": "2.7 Gasolina · 2694 cc"
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      },
+      "Prado": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc"
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2982 cc"
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      },
+      "RAV4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1987 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2487 cc"
+          },
+          {
+            "id": "2.5HV",
+            "nombre": "2.5 Híbrido · 2487 cc"
+          }
+        ]
+      },
+      "Yaris": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1496 cc"
+          }
+        ]
+      },
+      "Land Cruiser 200": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.5D",
+            "nombre": "4.5 V8 Diésel · 4461 cc"
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      }
+    },
+    "Volkswagen": {
+      "Amarok": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 TDI · 1968 cc"
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 V6 TDI · 2967 cc"
+          }
+        ]
+      },
+      "Fox": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Gol": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Golf": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc"
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TSI · 1984 cc"
+          }
+        ]
+      },
+      "Jetta": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc"
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1984 cc"
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2480 cc"
+          }
+        ]
+      },
+      "Polo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "T-Cross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc"
+          },
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc"
+          }
+        ]
+      },
+      "Tiguan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc"
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TSI · 1984 cc"
+          }
+        ]
+      }
+    }
+  }
+}

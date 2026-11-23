@@ -247,6 +247,40 @@ prueba('en 2011 cada opcion dice de que generacion es',
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
 
+console.log('\n=== no mezclar generaciones ===')
+/* Estos todavia son por-confirmar, asi que motoresDe() no los muestra: se
+   revisan contra el dato crudo. Lo que se prueba es que las ventanas de año
+   partan bien las generaciones, que es lo que evita ofrecerle a una Ranger
+   2018 un motor que salio en 2023. */
+const crudoEnAno = (ma, mo, y) => {
+  const f = motorizaciones.carros[ma][mo]
+  return f.motores
+    .filter(x => !(x.desde && y < x.desde) && !(x.hasta && y > x.hasta))
+    .map(x => x.id)
+    .sort()
+}
+prueba('la Ranger vieja no ve el motor de la nueva',
+  crudoEnAno('Ford', 'Ranger', 2018), ['2.2D', '2.5', '3.2D'])
+prueba('y la nueva no ve los de la vieja',
+  crudoEnAno('Ford', 'Ranger', 2025), ['2.0BT', '3.0V6D'])
+prueba('la Hilux de 2012 no ve el 2.8 diésel, que salio en 2016',
+  crudoEnAno('Toyota', 'Hilux', 2012), ['2.7', '4.0'])
+prueba('la Hilux de 2020 no ve el V6',
+  crudoEnAno('Toyota', 'Hilux', 2020), ['2.4D', '2.7', '2.8D'])
+prueba('el Mazda 3 de 2010 no ve SkyActiv',
+  crudoEnAno('Mazda', 'Mazda 3', 2010), ['1.6', '2.0'])
+prueba('el Fortuner recupero el 2.4 diésel',
+  crudoEnAno('Toyota', 'Fortuner', 2020), ['2.4D', '2.7', '2.8D'])
+prueba('el Symbol dejo de tener un solo motor',
+  motorizaciones.carros.Renault.Symbol.motores.length, 3)
+prueba('el Twingo distingue 8V de 16V',
+  motorizaciones.carros.Renault.Twingo.motores.map(x => x.id).sort(),
+  ['1.2-16V', '1.2-8V'])
+/* "Anteriores a 2005" no es un motor y no puede salir como opcion. */
+prueba('lo que falta se anota en la ficha, no entre los motores',
+  motorizaciones.carros.Toyota.Hilux.motores.every(x => /\d/.test(x.id)), true)
+prueba('y la ficha lo dice', !!motorizaciones.carros.Toyota.Hilux.falta, true)
+
 console.log('\n=== cuando el numero es el motor (BMW, Mercedes) ===')
 const motoresId = (ma, mo, a) => motoresDe('carros', ma, mo, a).map(x => x.id).sort()
 /* BMW Serie 1, confirmado generacion por generacion. */

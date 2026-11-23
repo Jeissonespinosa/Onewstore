@@ -524,16 +524,39 @@
         "fuente": "por-confirmar",
         "motores": [
           {
+            "id": "2.5",
+            "nombre": "2.5 Gasolina · 2500 cc",
+            "nota": "versiones de entrada de la anterior",
+            "desde": 2012,
+            "hasta": 2022
+          },
+          {
             "id": "2.2D",
-            "nombre": "2.2 Diésel · 2198 cc"
+            "nombre": "2.2 Diésel · 2198 cc",
+            "nota": "generación anterior",
+            "desde": 2012,
+            "hasta": 2022
           },
           {
             "id": "3.2D",
-            "nombre": "3.2 Diésel · 3198 cc"
+            "nombre": "3.2 Diésel · 3198 cc",
+            "nota": "generación anterior",
+            "desde": 2012,
+            "hasta": 2022
           },
           {
             "id": "2.0BT",
-            "nombre": "2.0 Bi-Turbo Diésel · 1996 cc"
+            "nombre": "2.0 Bi-Turbo Diésel · 1996 cc",
+            "nota": "generación nueva",
+            "desde": 2023,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0V6D",
+            "nombre": "3.0 V6 Diésel · 2993 cc",
+            "nota": "generación nueva, Raptor y tope",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       }
@@ -841,25 +864,31 @@
         "motores": [
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc",
-            "nota": "Desire y versiones de entrada"
+            "nombre": "2.0 Gasolina · 1999 cc",
+            "nota": "desde las primeras hasta la quinta",
+            "desde": 1995,
+            "hasta": 2027
           },
           {
             "id": "2.0D",
             "nombre": "2.0 CRDi Diésel · 1995 cc",
-            "nota": "por confirmar qué años entraron"
+            "nota": "por confirmar qué años entraron",
+            "desde": 2005,
+            "hasta": 2021
           },
           {
             "id": "1.6T",
             "nombre": "1.6 Turbo · 1598 cc",
-            "nota": "Vibrant",
-            "desde": 2022
+            "nota": "quinta generación",
+            "desde": 2022,
+            "hasta": 2027
           },
           {
             "id": "1.6T-HEV",
             "nombre": "1.6 Turbo Híbrido · 1598 cc",
-            "nota": "Zenith HEV",
-            "desde": 2025
+            "nota": "por confirmar si entró a Colombia",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       }
@@ -971,17 +1000,37 @@
           {
             "id": "1.6",
             "nombre": "1.6 · 1598 cc",
+            "nota": "anterior a SkyActiv",
             "desde": 2004,
             "hasta": 2013
           },
           {
             "id": "2.0",
-            "nombre": "2.0 · 1998 cc"
+            "nombre": "2.0 · 1999 cc",
+            "nota": "anterior a SkyActiv (MZR)",
+            "desde": 2004,
+            "hasta": 2014
           },
           {
-            "id": "2.5",
-            "nombre": "2.5 · 2488 cc",
-            "desde": 2019
+            "id": "2.0S",
+            "nombre": "2.0 SkyActiv · 1998 cc",
+            "nota": "SkyActiv-G",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "2.5S",
+            "nombre": "2.5 SkyActiv · 2488 cc",
+            "nota": "gama alta",
+            "desde": 2019,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0S-MHEV",
+            "nombre": "2.0 SkyActiv MHEV · 1998 cc",
+            "nota": "híbrido ligero, gama nueva",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },
@@ -1290,9 +1339,18 @@
         "motores": [
           {
             "id": "2.0",
-            "nombre": "2.0 · 1997 cc"
+            "nombre": "2.0 · 1997 cc",
+            "nota": "MR20, el documentado en Colombia",
+            "desde": 2010,
+            "hasta": 2027
+          },
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "Qashqai Advance — sale en la base del Ministerio, por verificar"
           }
-        ]
+        ],
+        "falta": "verificar el 1.3 del Qashqai Advance antes de ofrecerlo"
       },
       "Sentra": {
         "fuente": "por-confirmar",
@@ -1462,19 +1520,38 @@
         "fuente": "por-confirmar",
         "motores": [
           {
-            "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "id": "1.4-8V",
+            "nombre": "1.4 8V · 1390 cc",
+            "nota": "falta desde qué año"
+          },
+          {
+            "id": "1.4-16V",
+            "nombre": "1.4 16V · 1390 cc",
+            "nota": "falta desde qué año"
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "nota": "falta desde qué año"
           }
-        ]
+        ],
+        "falta": "falta separar desde qué año va cada motor"
       },
       "Twingo": {
         "fuente": "por-confirmar",
         "motores": [
           {
-            "id": "1.2",
-            "nombre": "1.2 · 1149 cc"
+            "id": "1.2-8V",
+            "nombre": "1.2 8V · 1149 cc",
+            "nota": "falta desde qué año"
+          },
+          {
+            "id": "1.2-16V",
+            "nombre": "1.2 16V · 1149 cc",
+            "nota": "falta desde qué año"
           }
-        ]
+        ],
+        "falta": "falta separar 8V de 16V por año, y la etapa europea posterior"
       },
       "Zoe": {
         "fuente": "verificado",
@@ -1621,36 +1698,65 @@
         "motores": [
           {
             "id": "2.7",
-            "nombre": "2.7 Gasolina · 2694 cc"
-          },
-          {
-            "id": "2.8D",
-            "nombre": "2.8 Diésel · 2755 cc"
+            "nombre": "2.7 Gasolina · 2694 cc",
+            "nota": "2TR-FE",
+            "desde": 2006,
+            "hasta": 2027
           },
           {
             "id": "4.0",
-            "nombre": "4.0 V6 · 3956 cc"
+            "nombre": "4.0 V6 Gasolina · 3956 cc",
+            "nota": "1GR-FE",
+            "desde": 2006,
+            "hasta": 2016
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Diésel · 2393 cc",
+            "nota": "2GD-FTV",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc",
+            "nota": "1GD-FTV",
+            "desde": 2016,
+            "hasta": 2027
           }
         ]
       },
       "Hilux": {
         "fuente": "por-confirmar",
+        "falta": "la Hilux anterior a 2005 (22R, 3L, 5L) todavía no está",
         "motores": [
           {
-            "id": "2.4D",
-            "nombre": "2.4 Diésel · 2393 cc"
-          },
-          {
-            "id": "2.8D",
-            "nombre": "2.8 Diésel · 2755 cc"
-          },
-          {
             "id": "2.7",
-            "nombre": "2.7 Gasolina · 2694 cc"
+            "nombre": "2.7 Gasolina · 2694 cc",
+            "nota": "2TR-FE",
+            "desde": 2005,
+            "hasta": 2027
           },
           {
             "id": "4.0",
-            "nombre": "4.0 V6 · 3956 cc"
+            "nombre": "4.0 V6 Gasolina · 3956 cc",
+            "nota": "1GR-FE",
+            "desde": 2005,
+            "hasta": 2016
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Diésel · 2393 cc",
+            "nota": "2GD-FTV",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc",
+            "nota": "1GD-FTV",
+            "desde": 2016,
+            "hasta": 2027
           }
         ]
       },
@@ -1658,16 +1764,39 @@
         "fuente": "por-confirmar",
         "motores": [
           {
-            "id": "2.8D",
-            "nombre": "2.8 Diésel · 2755 cc"
-          },
-          {
-            "id": "3.0D",
-            "nombre": "3.0 Diésel · 2982 cc"
+            "id": "2.7",
+            "nombre": "2.7 Gasolina · 2694 cc",
+            "nota": "TX 2.7",
+            "desde": 2003,
+            "hasta": 2027
           },
           {
             "id": "4.0",
-            "nombre": "4.0 V6 · 3956 cc"
+            "nombre": "4.0 V6 Gasolina · 3956 cc",
+            "nota": "VX y Sumo",
+            "desde": 2003,
+            "hasta": 2023
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2982 cc",
+            "nota": "1KD-FTV",
+            "desde": 1996,
+            "hasta": 2015
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc",
+            "nota": "1GD-FTV",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.4T",
+            "nombre": "2.4 Gasolina Turbo · 2393 cc",
+            "nota": "generación nueva",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },

@@ -38,7 +38,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 /* El ranking y el almacen del vehiculo son compartidos con la pildora del
    header: una sola fuente, o los dos componentes se desincronizan. */
 import {
-  POPULARES, posMarca, posModelo, rutaDe,
+  POPULARES, posMarca, posModelo, rutaDe, esElectrico,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
 } from './vehiculo'
 import { buscarEnTienda, masBuscado } from './buscar'
@@ -317,7 +317,15 @@ export default function Cris({
     const crudo = texto.trim()
     const vistos = new Set()
     const out = []
+    /* Un 100% electrico no tiene filtro de aceite, bujias ni correa de
+       reparticion. Con la caja vacia no se le ofrecen: seria mandarlo a una
+       pagina que no es para su carro. Si EL las escribe si se le muestran,
+       marcadas, porque dejarlo sin resultados y sin explicacion es peor. */
+    const electrico = esElectrico(seccion, (vehiculo || {}).marca, (vehiculo || {}).modelo)
+
     const meter = s => {
+      const sobra = electrico && s.nodo && s.nodo.soloCombustion
+      if (sobra && !crudo) return
       const k =
         s.tipo +
         ':' +
@@ -325,7 +333,7 @@ export default function Cris({
         (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
       if (!vistos.has(k) && out.length < 8) {
         vistos.add(k)
-        out.push(s)
+        out.push(sobra ? { ...s, noAplica: true } : s)
       }
     }
 
@@ -838,10 +846,11 @@ export default function Cris({
                           {s.tipo === 'modelo' ? `${s.marca} ${s.modelo}` : null}
                         </span>
                         <small>
-                          {s.tipo === 'ir'
+                          {s.noAplica ? 'tu carro es eléctrico: no lleva' : null}
+                          {!s.noAplica && s.tipo === 'ir'
                             ? (s.conVehiculo ? 'solo lo que le sirve' : 'sin filtro de vehículo')
                             : null}
-                          {s.tipo === 'categoria' ? s.nodo.seccion : null}
+                          {!s.noAplica && s.tipo === 'categoria' ? s.nodo.seccion : null}
                           {s.tipo === 'marca' ? 'marca' : null}
                           {s.tipo === 'modelo' ? 'modelo' : null}
                         </small>

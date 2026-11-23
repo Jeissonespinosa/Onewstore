@@ -649,6 +649,25 @@ def _niveles_compatibilidad():
     return datos.get('macros') or {}, datos.get('hojas') or {}
 
 
+def _rutas_combustion(macros, hojas):
+    """Rutas que solo existen en un carro de combustion.
+
+    Un 100% electrico no tiene filtro de aceite, bujias, correa de
+    reparticion ni exosto. Ofrecerselo termina en devolucion, asi que la
+    marca viaja al indice y Cris deja de ofrecer esas categorias cuando el
+    vehiculo guardado es electrico. Hereda hacia abajo: marcar
+    "combustible-e-inyeccion" cubre inyectores, bombas y rampas.
+
+    Un hibrido NO cuenta como electrico: sigue llevando aceite y bujias.
+    """
+    fuentes = list(macros.items()) + list(hojas.items())
+    return [r for r, v in fuentes if isinstance(v, dict) and v.get('soloCombustion')]
+
+
+def _es_combustion(ruta, marcadas):
+    return any(ruta == r or ruta.startswith(r + '/') for r in marcadas)
+
+
 def _nivel_de(ruta, macros, hojas):
     """La excepcion mas especifica gana; si no hay, manda la macro."""
     if ruta in hojas:
@@ -677,6 +696,7 @@ def export_cris(tree):
     """
     syn = tree.get('_sinonimos') or {}
     macros_nivel, hojas_nivel = _niveles_compatibilidad()
+    combustion = _rutas_combustion(macros_nivel, hojas_nivel)
 
     def claves(seccion, nombre):
         return list((syn.get(seccion, {}).get(nombre)
@@ -690,6 +710,7 @@ def export_cris(tree):
             nodos.append({'nombre': macro['nombre'], 'path': base, 'seccion': seccion,
                           'nivel': 'macro', 'compatibilidad': info['nivel'],
                           'atributo': info.get('atributo'),
+                          'soloCombustion': _es_combustion(base, combustion),
                           'sinonimos': claves(seccion, macro['nombre'])})
             for sub in macro.get('subs', []):
                 pre = base
@@ -699,6 +720,7 @@ def export_cris(tree):
                     nodos.append({'nombre': sub['nombre'], 'path': pre, 'seccion': seccion,
                                   'nivel': 'sub', 'compatibilidad': info['nivel'],
                                   'atributo': info.get('atributo'),
+                                  'soloCombustion': _es_combustion(pre, combustion),
                                   'sinonimos': claves(seccion, sub['nombre'])})
                 if sub.get('vitrina') == 'filtros':
                     continue
@@ -710,6 +732,7 @@ def export_cris(tree):
                                   'seccion': seccion, 'nivel': 'hoja',
                                   'compatibilidad': info['nivel'],
                                   'atributo': info.get('atributo'),
+                                  'soloCombustion': _es_combustion(ruta_hoja, combustion),
                                   'sinonimos': claves(seccion, nombre)})
     datos = {'_generado': GEN_NOTE, 'nodos': nodos}
     texto = json.dumps(datos, ensure_ascii=False, indent=2) + '\n'

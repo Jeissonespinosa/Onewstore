@@ -114,6 +114,63 @@
         ]
       }
     },
+    "BYD": {
+      "Dolphin": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 44,9 kWh"
+          }
+        ]
+      },
+      "Dolphin Mini": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 38 kWh"
+          }
+        ]
+      },
+      "Seal": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 82,5 kWh"
+          }
+        ]
+      },
+      "Yuan Plus Atto 3": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 60,5 kWh"
+          }
+        ]
+      },
+      "Yuan Pro": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 45,1 kWh"
+          }
+        ]
+      }
+    },
     "Chevrolet": {
       "Aveo": {
         "fuente": "por-confirmar",
@@ -146,6 +203,17 @@
           }
         ]
       },
+      "Bolt EV": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 66 kWh"
+          }
+        ]
+      },
       "Captiva": {
         "fuente": "por-confirmar",
         "motores": [
@@ -160,6 +228,17 @@
           {
             "id": "2.2D",
             "nombre": "2.2 Diésel · 2231 cc"
+          }
+        ]
+      },
+      "Captiva EV": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 52 kWh"
           }
         ]
       },
@@ -259,6 +338,17 @@
             "id": "1.5",
             "nombre": "1.5 · 1485 cc",
             "desde": 2019
+          }
+        ]
+      },
+      "Spark EUV": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 41,9 kWh"
           }
         ]
       },
@@ -385,6 +475,19 @@
         ]
       }
     },
+    "Great Wall": {
+      "Ora 03": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 48 kWh"
+          }
+        ]
+      }
+    },
     "Hyundai": {
       "Accent": {
         "fuente": "por-confirmar",
@@ -435,6 +538,17 @@
           {
             "id": "1.2",
             "nombre": "1.2 · 1197 cc"
+          }
+        ]
+      },
+      "Ioniq 5": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 58 kWh"
           }
         ]
       },
@@ -491,6 +605,19 @@
         ]
       }
     },
+    "JAC": {
+      "E10X": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 30,2 kWh"
+          }
+        ]
+      }
+    },
     "Kia": {
       "Carnival": {
         "fuente": "por-confirmar",
@@ -515,6 +642,28 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "EV5": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 64,2 kWh"
+          }
+        ]
+      },
+      "EV6": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 77,4 kWh"
           }
         ]
       },
@@ -638,6 +787,19 @@
             "nombre": "1.6 Turbo Híbrido · 1598 cc",
             "nota": "Zenith HEV",
             "desde": 2025
+          }
+        ]
+      }
+    },
+    "MG": {
+      "MG4": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 51 kWh"
           }
         ]
       }
@@ -770,6 +932,17 @@
           }
         ]
       },
+      "Leaf": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 40 kWh"
+          }
+        ]
+      },
       "March": {
         "fuente": "por-confirmar",
         "motores": [
@@ -891,6 +1064,17 @@
           }
         ]
       },
+      "Megane E-Tech": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 60 kWh"
+          }
+        ]
+      },
       "Mégane": {
         "fuente": "por-confirmar",
         "motores": [
@@ -945,6 +1129,17 @@
           {
             "id": "1.2",
             "nombre": "1.2 · 1149 cc"
+          }
+        ]
+      },
+      "Zoe": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 52 kWh"
           }
         ]
       }
@@ -1274,6 +1469,19 @@
           {
             "id": "2.0T",
             "nombre": "2.0 TSI · 1984 cc"
+          }
+        ]
+      }
+    },
+    "Volvo": {
+      "EX30": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 51 kWh"
           }
         ]
       }

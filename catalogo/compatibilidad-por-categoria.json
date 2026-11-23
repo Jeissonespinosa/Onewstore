@@ -204,7 +204,8 @@
     "/carros/lubricantes-y-mantenimiento/aceite-de-motor": {
       "nivel": "ajuste",
       "atributo": "Viscosidad y norma API",
-      "razon": "El aceite no \"calza\": encaja por viscosidad y norma. Un 5W30 SP sirve a cientos de motores, asi que el atributo es el que discrimina. Queda ajuste, no universal, porque cuando el cliente nombra su vehiculo Cris si filtra."
+      "razon": "El aceite no \"calza\": encaja por viscosidad y norma. Un 5W30 SP sirve a cientos de motores, asi que el atributo es el que discrimina. Queda ajuste, no universal, porque cuando el cliente nombra su vehiculo Cris si filtra.",
+      "soloCombustion": true
     },
     "/carros/lubricantes-y-mantenimiento/aceite-de-transmision": {
       "nivel": "estricta",
@@ -296,6 +297,87 @@
     },
     "/motos/lubricantes-y-mantenimiento/lubricante-de-cadena": {
       "nivel": "universal"
+    },
+    "/carros/filtros/filtros-de-aceite": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/filtros/filtros-de-aire": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/filtros/filtros-de-combustible": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/filtros/filtros-de-transmision": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/electrico-y-electronico/encendido": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/electrico-y-electronico/arranque-y-carga/motores-de-arranque": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/electrico-y-electronico/arranque-y-carga/bendix-y-automaticos-de-arranque": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/electrico-y-electronico/arranque-y-carga/alternadores": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/electrico-y-electronico/gestion-electronica/sensores-de-motor-ckp-cmp-temperatura": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/bloque-y-culata": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/correas-y-tensores": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/reparticion-distribucion": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/turbo-e-intercooler": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/combustible-e-inyeccion": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/clutch-embrague": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/admision-y-escape": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/partes-plasticas-de-motor": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/gnv-gas-vehicular": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/refrigeracion/radiadores-de-aceite": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor": {
+      "nivel": "estricta",
+      "soloCombustion": true
     }
-  }
+  },
+  "_combustion": "Rutas que solo existen en un carro de combustion. Si el vehiculo guardado es 100% electrico, Cris no las ofrece y la pagina avisa. Un hibrido NO es electrico para esto: sigue llevando aceite, bujias y correa."
 }

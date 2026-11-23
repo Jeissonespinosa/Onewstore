@@ -177,7 +177,19 @@ export const completoDe = v => (v && v.ano ? nombreDe(v) + ' · ' + v.ano : nomb
    distinguirlos o la lista de vehiculos muestra dos renglones iguales. */
 export const nombreConMotor = v => {
   const n = nombreDe(v)
-  return v && v.motor ? n + ' ' + v.motor : n
+  /* "EV" no se escribe al lado del nombre: un Spark EUV no tiene otra
+     version, y "Spark EUV EV" no le dice nada a nadie. */
+  return v && v.motor && v.motor !== 'EV' ? n + ' ' + v.motor : n
+}
+
+/* Un carro 100% electrico no tiene cilindraje, y media tienda no le sirve:
+   filtro de aceite, bujias, correa de reparticion, exosto. Saberlo es lo que
+   evita que le vendamos algo que su carro no tiene. Los hibridos NO entran
+   aqui: siguen llevando motor de gasolina y todos sus repuestos. */
+export function esElectrico(seccion, marca, modelo) {
+  if (seccion !== 'carros' || !marca || !modelo) return false
+  const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
+  return !!(ficha && ficha.electrico)
 }
 
 /* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:
@@ -201,28 +213,155 @@ export const nombreConMotor = v => {
 export const APODOS = {
   carros: {
     Kia: {
-      Picanto: ['Morning', 'Ion', 'X-Line', 'XTreme', 'X-Treme'],
+      Picanto: ['Morning', 'Ion', 'X-Line', 'XTreme'],
       Rio: ['Spice', 'Xcite', 'Stylus'],
+      'K2700 K3000': ['Camioncito', 'Furgon Kia'],
     },
     Chevrolet: {
       Aveo: ['Aveo Family'],
       'Spark GT': ['Spark'],
+      'Spark EUV': ['Spark eléctrico', 'Spark SUV', 'Spark nuevo'],
       Joy: ['Beat'],
+      'Luv D-Max': ['Dmax viejo'],
+      Sprint: ['Swift Sprint'],
+      N300: ['Van N300', 'Mover'],
+      Trailblazer: ['Trail Blazer'],
     },
     Renault: {
       Stepway: ['Sandero Stepway'],
       Kwid: ['Kwid Outsider', 'Kwid E-Tech'],
+      'Renault 4': ['R4', 'Cuatro latas', 'Amigo fiel'],
+      'Renault 6': ['R6'],
+      'Renault 9': ['R9'],
+      'Renault 12': ['R12'],
+      'Renault 18': ['R18'],
+      'Renault 19': ['R19'],
+      'Renault 21': ['R21'],
+      Twingo: ['Tuingo'],
+      'Duster Oroch': ['Oroch'],
     },
     Hyundai: {
-      'Grand i10': ['i10 Grand', 'Grand i10 Sedan'],
+      'Grand i10': ['i10 Grand'],
       Accent: ['Accent Vision', 'Verna'],
+      'Tucson ix35': ['ix35'],
+      'H100 Porter': ['Porter'],
     },
     Toyota: {
       'Yaris Cross': ['Yaris Cross HEV'],
-      Hilux: ['Hilux SRV', 'Hilux Revo'],
+      Hilux: ['Hilux SRV', 'Hilux Revo', 'Hilux Vigo'],
+      'Land Cruiser FJ40 FJ43 Campero': ['Campero Toyota', 'FJ40', 'FJ43'],
+      'Land Cruiser 70 Macho': ['Macho'],
+      'Land Cruiser Burbuja': ['Burbuja'],
+      Prado: ['Land Cruiser Prado', 'Prado Sumo', 'Prado TX'],
+    },
+    Mazda: {
+      'MX-5': ['Miata'],
+      'Mazda 3': ['M3', 'Mazda tres'],
+      'Mazda 2': ['M2', 'Mazda dos'],
+      Allegro: ['323 Allegro'],
+      'B-2200 B-2600': ['B2200', 'B2600', 'Mazda estacas'],
+    },
+    Nissan: {
+      'Frontier NP300': ['NP300'],
+      'D21 D22 Frontier': ['D21', 'D22', 'Frontier vieja'],
+      'Sentra B13': ['B13'],
+      Urvan: ['Van Urvan'],
+    },
+    Suzuki: {
+      'Grand Vitara clásico': ['Grand Vitara vieja', 'Grand Nomade'],
+      'Vitara clásico': ['Vitara vieja'],
+      'Super Carry': ['Carry', 'Supercarry'],
+      'SJ410 SJ413': ['SJ410', 'SJ413', 'Samurai viejo'],
+    },
+    Volkswagen: {
+      Escarabajo: ['Beetle', 'Cucarrón', 'Volky'],
+      'Combi Kombi': ['Combi', 'Kombi'],
+      Crossfox: ['Fox Cross'],
+      Gol: ['Gol Power', 'Gol Trend'],
+    },
+    Ford: {
+      'F-150': ['F150', 'Efe 150'],
+      'F-250 F-350': ['F250', 'F350'],
+      'Ranger clásica': ['Ranger vieja'],
+      'Fiesta Sedán': ['Fiesta sedan', 'Ikon'],
+    },
+    Mitsubishi: {
+      'Montero Pajero': ['Pajero'],
+      'Montero clásico': ['Montero viejo'],
+      'L200 Sportero': ['Sportero', 'L200'],
+      Nativa: ['Montero Nativa'],
+    },
+    Honda: {
+      'CR-V': ['CRV'],
+      'HR-V': ['HRV'],
+      'BR-V': ['BRV'],
+      'WR-V': ['WRV'],
+    },
+    Fiat: {
+      'Uno clásico': ['Uno viejo'],
+      Mobi: ['Fiat Mobi'],
+    },
+    Jeep: {
+      'Willys CJ': ['Willys', 'Yipao', 'CJ'],
+      'Cherokee clásico XJ': ['XJ', 'Cherokee viejo'],
     },
   },
-  motos: {},
+  motos: {
+    Bajaj: {
+      'Boxer CT 100': ['CT100', 'Boxer 100'],
+      'Boxer BM 150': ['BM150'],
+      'Pulsar 160 NS': ['NS160', 'NS 160'],
+      'Pulsar 200 NS': ['NS200', 'NS 200'],
+      'Pulsar 200 RS': ['RS200'],
+      'Pulsar N160': ['N160'],
+      'Pulsar N250': ['N250'],
+      'Discover 100 125': ['Discover'],
+      'Platina 100 125': ['Platina'],
+      'RE mototaxi': ['Mototaxi', 'Tuk tuk'],
+      'Qute motocarro': ['Motocarro'],
+    },
+    Yamaha: {
+      'FZ 2.0 FZ-S': ['FZS', 'FZ 2.0', 'FZ S'],
+      'FZ-S 3.0 FI': ['FZS 3.0'],
+      'Crypton 115 FI': ['Crypton'],
+      'BWS 125 FI': ['BWS'],
+      'YB 125 YBR 125': ['YBR', 'YB125'],
+      'Libero 110 125': ['Libero'],
+      'N-Max Connected': ['NMax Connected'],
+      'Ténéré 250': ['Tenere 250'],
+      'Ténéré 700': ['Tenere 700'],
+    },
+    Honda: {
+      'CG 125 Titan': ['Titan'],
+      'Splendor Hero Honda': ['Splendor'],
+      'Eco Deluxe 100': ['Eco 100'],
+      'NXR 160 Bros': ['Bros'],
+      'NX 4 Falcon': ['Falcon'],
+      'C90 Econo Power': ['Econo Power', 'C90'],
+    },
+    AKT: {
+      'AK 125 CR4': ['CR4'],
+      'AK 110 Special': ['AK110'],
+      'NKD 125': ['NKD'],
+      'Carguero AK 3W': ['Carguero', 'Motocarro AKT'],
+    },
+    Suzuki: {
+      'AX 100': ['AX100'],
+      'EN 125': ['EN125'],
+      'Viva 115': ['Viva'],
+      "Let's AN 125": ['Lets', 'AN125'],
+    },
+    TVS: {
+      'Apache RTR 160': ['Apache 160'],
+      'Apache RTR 180': ['Apache 180'],
+      'Apache RTR 200 4V': ['Apache 200'],
+      'King motocarro': ['Motocarro TVS', 'King'],
+    },
+    Hero: {
+      'Eco Deluxe 100': ['Eco 100'],
+      'Splendor iSmart': ['Splendor i Smart'],
+    },
+  },
 }
 
 export const VERSIONES = {
@@ -240,6 +379,10 @@ export const VERSIONES = {
 export const plano = t => String(t || '')
   .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
 
+/* Sin guiones ni espacios: "cx5" encuentra el CX-5, "np300" la Frontier
+   NP300 y "cb125f" la CB 125F. La gente no escribe el guion. */
+export const compacto = t => plano(t).replace(/[^a-z0-9]/g, '')
+
 const apodosDe = (seccion, marca, modelo) =>
   (((APODOS[seccion] || {})[marca] || {})[modelo] || [])
 
@@ -247,10 +390,10 @@ const apodosDe = (seccion, marca, modelo) =>
    apodos. "yar" trae Yaris, Yaris Cross y Yaris Hatchback; "morning" trae
    Picanto aunque esa palabra no este en la base. */
 export function modeloCoincide(seccion, marca, modelo, texto) {
-  const q = plano(texto)
+  const q = compacto(texto)
   if (!q) return true
-  if (plano(modelo).includes(q)) return true
-  return apodosDe(seccion, marca, modelo).some(a => plano(a).includes(q))
+  if (compacto(modelo).includes(q)) return true
+  return apodosDe(seccion, marca, modelo).some(a => compacto(a).includes(q))
 }
 
 /* Si lo que escribieron es un acabado, devuelve como se escribe de verdad,

@@ -42,6 +42,7 @@ eval(codigo + `
   global.motoresDe = motoresDe; global.pideMotor = pideMotor;
   global.nombreConMotor = nombreConMotor;
   global.modeloCoincide = modeloCoincide; global.esVersion = esVersion;
+  global.esElectrico = esElectrico;
   global.plano = plano; global.VERSIONES = VERSIONES; global.APODOS = APODOS;
 `)
 
@@ -180,6 +181,27 @@ prueba('"megane" sin tilde encuentra el Mégane', cal('Renault', 'Mégane', 'meg
 prueba('no confunde: "morning" no trae el Rio', cal('Kia', 'Rio', 'morning'), false)
 prueba('sin texto pasan todos', cal('Kia', 'Rio', ''), true)
 
+/* El guion: nadie lo escribe. */
+prueba('"cx5" encuentra el CX-5', cal('Mazda', 'CX-5', 'cx5'), true)
+prueba('"crv" encuentra la CR-V', cal('Honda', 'CR-V', 'crv'), true)
+prueba('"np300" encuentra la Frontier NP300',
+  cal('Nissan', 'Frontier NP300', 'np300'), true)
+prueba('"f150" encuentra la F-150', cal('Ford', 'F-150', 'f150'), true)
+/* Apodos de la calle. */
+prueba('"r4" es el Renault 4', cal('Renault', 'Renault 4', 'r4'), true)
+prueba('"cuatro latas" tambien', cal('Renault', 'Renault 4', 'cuatro latas'), true)
+prueba('"miata" es el MX-5', cal('Mazda', 'MX-5', 'miata'), true)
+prueba('"pajero" es el Montero', cal('Mitsubishi', 'Montero Pajero', 'pajero'), true)
+prueba('"yipao" es el Willys', cal('Jeep', 'Willys CJ', 'yipao'), true)
+prueba('"escarabajo" sigue siendo el escarabajo',
+  cal('Volkswagen', 'Escarabajo', 'beetle'), true)
+/* En motos. */
+const calM = (marca, modelo, q) => modeloCoincide('motos', marca, modelo, q)
+prueba('"ns160" es la Pulsar 160 NS', calM('Bajaj', 'Pulsar 160 NS', 'ns160'), true)
+prueba('"titan" es la CG 125', calM('Honda', 'CG 125 Titan', 'titan'), true)
+prueba('"ybr" es la YB 125', calM('Yamaha', 'YB 125 YBR 125', 'ybr'), true)
+prueba('"tenere" sin tilde', calM('Yamaha', 'Ténéré 250', 'tenere'), true)
+
 console.log('\n=== versiones, que no son modelos ===')
 prueba('zenith es version de Kia', esVersion('Kia', 'zenith'), 'Zenith')
 prueba('ltz es version de Chevrolet', esVersion('Chevrolet', 'ltz'), 'LTZ')
@@ -221,6 +243,21 @@ prueba('en 2011 cada opcion dice de que generacion es',
   motoresDe('carros', 'Kia', 'Picanto', '2011').every(m => !!m.nota), true)
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
+
+console.log('\n=== el carro electrico ===')
+prueba('el Spark EUV es electrico', esElectrico('carros', 'Chevrolet', 'Spark EUV'), true)
+prueba('el Spark GT no', esElectrico('carros', 'Chevrolet', 'Spark GT'), false)
+prueba('el Leaf si', esElectrico('carros', 'Nissan', 'Leaf'), true)
+/* Un hibrido lleva motor de gasolina: aceite, bujias y correa igual. */
+prueba('el Corolla hibrido NO cuenta como electrico',
+  esElectrico('carros', 'Toyota', 'Corolla'), false)
+prueba('un modelo sin ficha no revienta', esElectrico('carros', 'Nada', 'Nada'), false)
+prueba('al electrico no se le pregunta motor',
+  pideMotor('carros', 'Chevrolet', 'Spark EUV', '2026'), false)
+prueba('el Spark EUV existe en la base', !!base.carros.Chevrolet['Spark EUV'], true)
+prueba('"EV" no se escribe al lado del nombre',
+  nombreConMotor({ marca: 'Chevrolet', modelo: 'Spark EUV', ano: '2026', motor: 'EV' }),
+  'Chevrolet Spark EUV')
 
 console.log('\n=== mismoVehiculo ===')
 prueba('igual con el mismo año', mismoVehiculo(onix, { ...onix }), true)

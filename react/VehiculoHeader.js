@@ -31,7 +31,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 import {
   seccionDe, rutaDe, leerEstado, escribirEstado, suscribirEstado,
   nombreDe, nombreConMotor, posMarca, posModelo, alPedirAbrir, MAX_VEHICULOS,
-  motoresDe, pideMotor, modeloCoincide, esVersion, plano, VERSIONES,
+  motoresDe, pideMotor, esElectrico, modeloCoincide, esVersion, plano, VERSIONES,
 } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoHeader', 'vehiculoBoton', 'vehiculoPanel']
@@ -149,7 +149,10 @@ export default function VehiculoHeader({
       setVista('motor')
       return
     }
-    guardar({ marca, modelo, ano: y })
+    /* Al electrico no se le pregunta nada, pero si se le anota: de eso
+       depende que no le ofrezcamos filtro de aceite ni bujias. */
+    const motor = esElectrico(seccion, marca, modelo) ? 'EV' : undefined
+    guardar(motor ? { marca, modelo, ano: y, motor } : { marca, modelo, ano: y })
   }
 
   const cerrar = () => setVista(null)

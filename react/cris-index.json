@@ -8,6 +8,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -17,6 +18,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -26,6 +28,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "llantas para carro",
         "llanta",
@@ -45,6 +48,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "llantas camioneta",
         "llantas 4x4",
@@ -63,6 +67,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "llantas comerciales",
         "llantas de carga",
@@ -83,6 +88,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "llantas industriales",
         "llantas de montacargas",
@@ -97,6 +103,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "aros"
       ]
@@ -108,6 +115,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "rines de hierro",
         "rines originales de acero",
@@ -121,6 +129,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "rines de lujo",
         "rines de magnesio",
@@ -140,6 +149,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -149,6 +159,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "copas de rin",
         "tapas de rin",
@@ -164,6 +175,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "tuercas de rin",
         "tuercas de seguridad",
@@ -181,6 +193,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida (ancho, perfil, rin)",
+      "soloCombustion": false,
       "sinonimos": [
         "separadores",
         "espaciadores de rines",
@@ -194,6 +207,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -203,6 +217,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma API",
+      "soloCombustion": true,
       "sinonimos": [
         "aceite",
         "aceite de carro",
@@ -224,6 +239,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aceite de caja",
         "valvulina",
@@ -240,6 +256,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aceite de diferencial",
         "valvulina 85w140",
@@ -253,6 +270,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Color y concentracion",
+      "soloCombustion": false,
       "sinonimos": [
         "coolant",
         "refrigerante",
@@ -266,6 +284,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Norma DOT",
+      "soloCombustion": false,
       "sinonimos": [
         "líquido de freno",
         "DOT 3",
@@ -279,6 +298,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma",
+      "soloCombustion": false,
       "sinonimos": [
         "aceite de dirección",
         "atf de dirección",
@@ -292,6 +312,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aditivo",
         "potenciador",
@@ -307,6 +328,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "grasa",
         "grasa multiusos",
@@ -321,6 +343,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de sistema",
         "flush de motor"
@@ -333,6 +356,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -342,6 +366,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de aceite"
       ]
@@ -353,6 +378,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de aire"
       ]
@@ -364,6 +390,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de combustible",
         "filtro de gasolina"
@@ -376,6 +403,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "filtro de aire acondicionado",
         "filtro de polen",
@@ -390,6 +418,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de caja",
         "filtro de transmisión automática",
@@ -403,6 +432,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -412,6 +442,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "batería",
         "batería de carro",
@@ -432,6 +463,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "batería de camión",
         "batería de furgón",
@@ -450,6 +482,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bornes",
         "terminales de batería",
@@ -464,6 +497,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -473,6 +507,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pastas de freno",
         "brake pads"
@@ -485,6 +520,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "disco de freno",
         "discos",
@@ -500,6 +536,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tambores",
         "campanas",
@@ -514,6 +551,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "zapatas",
         "zapatas de freno"
@@ -526,6 +564,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caliper",
         "cálipers",
@@ -540,6 +579,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de caliper",
         "pistón de caliper",
@@ -553,6 +593,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bombines de freno",
         "cilindros de rueda",
@@ -566,6 +607,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cilindro maestro",
         "bomba principal de freno",
@@ -579,6 +621,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "booster",
         "hidrovac",
@@ -594,6 +637,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de vacío",
         "bomba de freno de vacío"
@@ -606,6 +650,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sensor abs",
         "sensor de rueda",
@@ -619,6 +664,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "módulo abs",
         "unidad hidráulica",
@@ -632,6 +678,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "líneas de freno",
         "tuberías de freno",
@@ -647,6 +694,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "depósito de líquido de frenos",
         "tanque de líquido de frenos"
@@ -659,6 +707,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cable de freno de mano",
         "guaya freno de parqueo"
@@ -671,6 +720,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "herrajes",
         "clips de pastillas",
@@ -685,6 +735,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de frenos",
         "kit de reparación",
@@ -698,6 +749,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sensor de desgaste",
         "testigo de pastillas",
@@ -711,6 +763,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -720,6 +773,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "amortiguador",
         "shock",
@@ -733,6 +787,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "espirales",
         "resortes",
@@ -748,6 +803,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rótula",
         "rótula de suspensión",
@@ -761,6 +817,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "axial",
         "barra axial",
@@ -776,6 +833,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "buje",
         "bujes de suspensión",
@@ -790,6 +848,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tijera",
         "tijera de suspensión",
@@ -809,6 +868,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "barra estabilizadora",
         "estabilizadora",
@@ -822,6 +882,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "link",
         "bieleta",
@@ -840,6 +901,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rodamientos de rueda",
         "balineras",
@@ -853,6 +915,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "mazas",
         "cubos",
@@ -869,6 +932,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "mangueta",
         "punta de eje",
@@ -882,6 +946,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de dirección",
         "cremallera de dirección",
@@ -896,6 +961,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de dirección",
         "bomba hidráulica"
@@ -908,6 +974,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manguera de dirección",
         "manguera hidráulica",
@@ -921,6 +988,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "columna de dirección",
         "cruceta de dirección",
@@ -934,6 +1002,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "terminal",
         "terminal de dirección",
@@ -947,6 +1016,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "copa",
         "copa de amortiguador",
@@ -964,6 +1034,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guardapolvo",
         "fuelle",
@@ -978,6 +1049,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tope",
         "tope de suspensión",
@@ -992,6 +1064,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tren delantero",
         "kit tren delantero"
@@ -1004,6 +1077,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "suspensión de aire",
         "air suspension"
@@ -1016,6 +1090,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "coilover",
         "suspensión deportiva",
@@ -1029,6 +1104,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ballesta",
         "ballestas",
@@ -1045,6 +1121,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1054,6 +1131,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -1063,6 +1141,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bobina de encendido",
         "bobina de chispa",
@@ -1076,6 +1155,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "distribuidor",
         "tapa de distribuidor",
@@ -1089,6 +1169,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bujías",
         "bujía",
@@ -1105,6 +1186,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cables de bujía",
         "cables de encendido",
@@ -1118,6 +1200,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bujía de precalentamiento",
         "bujías diésel",
@@ -1132,6 +1215,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de sincronización",
         "afinación",
@@ -1148,6 +1232,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1157,6 +1242,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "starter",
         "arranque eléctrico",
@@ -1170,6 +1256,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bendix",
         "automático de arranque",
@@ -1184,6 +1271,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "alternador",
         "generador",
@@ -1197,6 +1285,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "regulador de voltaje",
         "regulador de alternador",
@@ -1210,6 +1299,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1219,6 +1309,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ecu",
         "computador",
@@ -1234,6 +1325,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "módulo",
         "módulo de control",
@@ -1247,6 +1339,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "actuador",
         "actuador de ralentí",
@@ -1260,6 +1353,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "sensor",
         "sensor de cigüeñal",
@@ -1279,6 +1373,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1288,6 +1383,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "fusible",
         "caja de fusibles",
@@ -1301,6 +1397,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "relay",
         "rele",
@@ -1314,6 +1411,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "suiche de encendido",
         "switch de arranque",
@@ -1328,6 +1426,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "switch",
         "suiche",
@@ -1343,6 +1442,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "llave",
         "carcasa de llave",
@@ -1358,6 +1458,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "arnés",
         "ramal",
@@ -1372,6 +1473,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "conector",
         "pacha",
@@ -1386,6 +1488,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bocina",
         "claxon",
@@ -1399,6 +1502,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1408,6 +1512,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "faros",
         "luces delanteras",
@@ -1424,6 +1529,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "luces traseras",
         "stop",
@@ -1440,6 +1546,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "luces direccionales",
         "intermitentes",
@@ -1454,6 +1561,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "luces auxiliares",
         "antiniebla",
@@ -1469,6 +1577,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "led",
         "luces led",
@@ -1489,6 +1598,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "bombillos",
         "bombillas",
@@ -1511,6 +1621,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "xenon",
         "hid",
@@ -1526,6 +1637,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "barra led",
         "barra de luces",
@@ -1540,6 +1652,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "luz de techo",
         "luz interior",
@@ -1554,6 +1667,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "drl",
         "luces diurnas",
@@ -1568,6 +1682,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "luz de placa",
         "luz de cortesía",
@@ -1581,6 +1696,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1590,6 +1706,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -1599,6 +1716,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "pistón",
         "pistones",
@@ -1612,6 +1730,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "anillos de pistón",
         "rines de pistón",
@@ -1625,6 +1744,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "biela",
         "bielas"
@@ -1637,6 +1757,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cigüeñal"
       ]
@@ -1648,6 +1769,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "árbol de levas",
         "eje de levas"
@@ -1660,6 +1782,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "culata",
         "cabezote",
@@ -1673,6 +1796,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "guías de válvula",
         "válvula de admisión",
@@ -1688,6 +1812,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "camisas de cilindro",
         "cilindros"
@@ -1700,6 +1825,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "juntas",
         "empaquetadura",
@@ -1719,6 +1845,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bomba de aceite"
       ]
@@ -1730,6 +1857,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "soporte de motor",
         "base de motor",
@@ -1743,6 +1871,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "motor completo",
         "motor usado",
@@ -1757,6 +1886,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -1766,6 +1896,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "correa",
         "correa de alternador",
@@ -1781,6 +1912,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "tensor",
         "tensor de correa",
@@ -1794,6 +1926,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "polea",
         "polea de cigüeñal",
@@ -1808,6 +1941,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "distribución",
         "tiempo"
@@ -1820,6 +1954,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "correa de distribución",
         "correa de tiempo",
@@ -1833,6 +1968,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cadena de distribución",
         "cadena de tiempo",
@@ -1846,6 +1982,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de distribución",
         "kit de tiempo",
@@ -1859,6 +1996,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "tensor de distribución",
         "guía de cadena",
@@ -1872,6 +2010,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -1881,6 +2020,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "radiador",
         "panal de radiador",
@@ -1894,6 +2034,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de agua",
         "water pump"
@@ -1906,6 +2047,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "termostato",
         "termostato de agua"
@@ -1918,6 +2060,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ventilador de radiador",
         "electroventilador",
@@ -1931,6 +2074,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manguera de radiador",
         "manguera de agua",
@@ -1945,6 +2089,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "depósito de agua",
         "tanque de expansión",
@@ -1958,6 +2103,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tapa de radiador",
         "tapa de presión"
@@ -1970,6 +2116,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "enfriador de aceite",
         "radiador de aceite",
@@ -1983,6 +2130,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -1992,6 +2140,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "turbo",
         "turbocargador",
@@ -2006,6 +2155,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "intercooler",
         "enfriador de aire"
@@ -2018,6 +2168,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "manguera de turbo",
         "manguera de intercooler",
@@ -2031,6 +2182,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "blow off",
         "válvula de alivio",
@@ -2045,6 +2197,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -2054,6 +2207,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bomba de combustible",
         "bomba de gasolina eléctrica",
@@ -2067,6 +2221,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "inyector",
         "inyectores de gasolina",
@@ -2083,6 +2238,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "riel de inyectores",
         "flauta de inyectores",
@@ -2096,6 +2252,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "regulador de presión",
         "regulador de gasolina",
@@ -2109,6 +2266,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cuerpo de aceleración",
         "throttle body",
@@ -2122,6 +2280,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "sensor de oxígeno",
         "sonda lambda",
@@ -2135,6 +2294,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "sensor map",
         "map",
@@ -2150,6 +2310,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "egr",
         "canister",
@@ -2163,6 +2324,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "carburador",
         "carburador weber",
@@ -2176,6 +2338,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cable de acelerador",
         "chicote de acelerador"
@@ -2188,6 +2351,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "tanque de gasolina",
         "tanque de combustible",
@@ -2201,6 +2365,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bomba de inyección",
         "bomba diésel",
@@ -2216,6 +2381,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "separador de agua",
         "trampa de agua",
@@ -2229,6 +2395,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -2238,6 +2405,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de embrague",
         "kit clutch",
@@ -2252,6 +2420,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "disco de embrague"
       ]
@@ -2263,6 +2432,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "prensa de embrague",
         "plato de presión"
@@ -2275,6 +2445,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "collarín",
         "rodamiento de embrague",
@@ -2288,6 +2459,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "bombín de embrague",
         "cilindro esclavo",
@@ -2304,6 +2476,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cable de clutch",
         "cable de embrague",
@@ -2317,6 +2490,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -2326,6 +2500,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "múltiple de admisión",
         "manifold de admisión",
@@ -2339,6 +2514,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "múltiple de escape",
         "header",
@@ -2352,6 +2528,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "catalizador",
         "convertidor catalítico"
@@ -2364,6 +2541,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "silenciador"
       ]
@@ -2375,6 +2553,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "resonador",
         "pre-silenciador"
@@ -2387,6 +2566,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "flexible",
         "flexible de exhosto",
@@ -2400,6 +2580,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "tubo de escape",
         "punta de exhosto",
@@ -2413,6 +2594,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja",
         "transmisión"
@@ -2425,6 +2607,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de cambios",
         "caja manual",
@@ -2439,6 +2622,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja automática",
         "transmisión automática",
@@ -2453,6 +2637,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "diferencial",
         "corona y piñón",
@@ -2466,6 +2651,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cardán",
         "cruceta",
@@ -2479,6 +2665,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "homocinética",
         "junta homocinética",
@@ -2495,6 +2682,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sincronizador",
         "piñón de caja",
@@ -2508,6 +2696,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "retenedor de caja",
         "retén de caja",
@@ -2521,6 +2710,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "soporte de caja",
         "base de caja",
@@ -2534,6 +2724,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "selectora",
         "guaya de cambios",
@@ -2547,6 +2738,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "volante",
         "flywheel",
@@ -2562,6 +2754,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de transferencia",
         "transfer",
@@ -2575,6 +2768,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -2584,6 +2778,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cubierta de motor",
         "tapa decorativa de motor",
@@ -2597,6 +2792,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "protector de motor",
         "guardapolvo de motor",
@@ -2611,6 +2807,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "carcasa de correa",
         "ducto de aire",
@@ -2624,6 +2821,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -2633,6 +2831,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de gas",
         "conversión a gas",
@@ -2647,6 +2846,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "regulador de gas",
         "reductor gnv"
@@ -2659,6 +2859,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "riel de gas",
         "inyectores de gas",
@@ -2672,6 +2873,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "cilindro de gas",
         "tanque de gas",
@@ -2685,6 +2887,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": true,
       "sinonimos": [
         "manguera de gas",
         "válvula de gas",
@@ -2698,6 +2901,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -2707,6 +2911,7 @@
       "nivel": "sub",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -2716,6 +2921,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "estribo",
         "estribos laterales",
@@ -2729,6 +2935,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de carroceria",
+      "soloCombustion": false,
       "sinonimos": [
         "barra de techo",
         "rieles de techo",
@@ -2742,6 +2949,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de carroceria",
+      "soloCombustion": false,
       "sinonimos": [
         "portaequipaje",
         "canastilla",
@@ -2756,6 +2964,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de carroceria",
+      "soloCombustion": false,
       "sinonimos": [
         "portabicicleta",
         "rack de bicicleta",
@@ -2769,6 +2978,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "portallanta",
         "porta llanta",
@@ -2782,6 +2992,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tiro",
         "enganche",
@@ -2796,6 +3007,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "deflector",
         "visera de ventana",
@@ -2810,6 +3022,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "protector",
         "protector de bómper",
@@ -2823,6 +3036,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "moldura",
         "moldura lateral",
@@ -2836,6 +3050,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "spoiler",
         "alerón",
@@ -2849,6 +3064,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parrilla deportiva",
         "rejilla decorativa"
@@ -2861,6 +3077,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "protector de puerta",
         "bordes de puerta",
@@ -2874,6 +3091,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "portaplacas",
         "marco de placa",
@@ -2887,6 +3105,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Talla / tipo de carroceria",
+      "soloCombustion": false,
       "sinonimos": [
         "cubrecarro",
         "forro para carro",
@@ -2902,6 +3121,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "snorkel",
         "toma de aire alta"
@@ -2914,6 +3134,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "polarizado",
         "película de seguridad",
@@ -2927,6 +3148,7 @@
       "nivel": "sub",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -2936,6 +3158,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de carroceria",
+      "soloCombustion": false,
       "sinonimos": [
         "tapetes de carro",
         "alfombras",
@@ -2951,6 +3174,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Numero de puestos",
+      "soloCombustion": false,
       "sinonimos": [
         "forros de asientos",
         "fundas de asiento",
@@ -2967,6 +3191,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "forro de timón",
         "cubrevolante",
@@ -2981,6 +3206,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cojín",
         "cojines de carro",
@@ -2994,6 +3220,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "organizador",
         "organizador de baúl",
@@ -3007,6 +3234,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cortasol",
         "parasol de parabrisas",
@@ -3020,6 +3248,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cortina",
         "cortina para carro",
@@ -3033,6 +3262,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "perchero",
         "gancho para ropa",
@@ -3046,6 +3276,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "portaobjeto",
         "bandeja",
@@ -3059,6 +3290,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "portavasos",
         "porta vasos"
@@ -3071,6 +3303,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "apoyabrazos",
         "descansabrazos",
@@ -3084,6 +3317,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "volante deportivo",
         "timón deportivo",
@@ -3097,6 +3331,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cubrepedales",
         "pedales de lujo"
@@ -3109,6 +3344,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "protector interior",
         "protector de tapicería",
@@ -3122,6 +3358,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "silla para bebé",
         "silla de carro para bebé",
@@ -3136,6 +3373,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "nevera para carro",
         "nevera portátil",
@@ -3149,6 +3387,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "inversor",
         "convertidor",
@@ -3168,6 +3407,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "soporte de celular",
         "porta celular",
@@ -3182,6 +3422,7 @@
       "nivel": "sub",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -3191,6 +3432,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Formato (1 DIN / 2 DIN)",
+      "soloCombustion": false,
       "sinonimos": [
         "radio",
         "radio de carro",
@@ -3207,6 +3449,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Formato y pulgadas",
+      "soloCombustion": false,
       "sinonimos": [
         "pantalla",
         "pantalla android",
@@ -3222,6 +3465,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Diametro",
+      "soloCombustion": false,
       "sinonimos": [
         "altavoces",
         "bafles",
@@ -3237,6 +3481,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Diametro",
+      "soloCombustion": false,
       "sinonimos": [
         "subwoofer",
         "bajo",
@@ -3251,6 +3496,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "amplificador",
         "planta",
@@ -3264,6 +3510,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ecualizador",
         "procesador de audio",
@@ -3277,6 +3524,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Diametro",
+      "soloCombustion": false,
       "sinonimos": [
         "tweeter",
         "tweeters",
@@ -3290,6 +3538,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja acústica",
         "cajón",
@@ -3304,6 +3553,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cable de audio",
         "rca",
@@ -3318,6 +3568,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "antenas",
         "antena",
@@ -3332,6 +3583,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de instalación",
         "kit de montaje",
@@ -3346,6 +3598,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -3355,6 +3608,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -3364,6 +3618,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parachoques",
         "bumper",
@@ -3383,6 +3638,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "capot",
         "capote",
@@ -3398,6 +3654,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guardafango",
         "guardabarros",
@@ -3413,6 +3670,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "puerta",
         "puerta delantera",
@@ -3427,6 +3685,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "baúl",
         "tapa de baúl",
@@ -3441,6 +3700,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "espejos",
         "espejo lateral",
@@ -3458,6 +3718,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "persiana",
         "parrilla",
@@ -3472,6 +3733,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rejilla",
         "toma de aire",
@@ -3485,6 +3747,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "soporte de bómper",
         "base de farola",
@@ -3498,6 +3761,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bisagra",
         "bisagra de puerta",
@@ -3511,6 +3775,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manijas",
         "manija de puerta",
@@ -3526,6 +3791,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cerradura de capó",
         "cerradura de baúl",
@@ -3540,6 +3806,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "resorte a gas",
         "amortiguador de capó",
@@ -3554,6 +3821,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parabrisas",
         "vidrio",
@@ -3569,6 +3837,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alzavidrios",
         "regulador de vidrio",
@@ -3589,6 +3858,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "burlete",
         "empaque de puerta",
@@ -3603,6 +3873,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "plumillas",
         "escobillas",
@@ -3620,6 +3891,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "brazo de limpiaparabrisas",
         "motor de limpiaparabrisas",
@@ -3633,6 +3905,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de agua de parabrisas",
         "depósito de lavaparabrisas",
@@ -3646,6 +3919,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pasarruedas",
         "guardapolvo de rueda",
@@ -3659,6 +3933,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "zócalo",
         "faldón",
@@ -3672,6 +3947,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "techo corredizo",
         "sunroof",
@@ -3685,6 +3961,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "emblemas"
       ]
@@ -3696,6 +3973,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "interior",
         "repuestos de interior"
@@ -3708,6 +3986,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manija interior",
         "manilla",
@@ -3721,6 +4000,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "panel de puerta",
         "tapizado de puerta",
@@ -3734,6 +4014,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tablero",
         "consola",
@@ -3748,6 +4029,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guantera",
         "tapa de guantera"
@@ -3760,6 +4042,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pomo",
         "palanca de cambios",
@@ -3774,6 +4057,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "freno de mano",
         "palanca de freno de mano",
@@ -3787,6 +4071,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pedal",
         "pedal de freno",
@@ -3801,6 +4086,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "asientos",
         "tapicería",
@@ -3814,6 +4100,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cinturón",
         "cinturón de seguridad",
@@ -3827,6 +4114,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "airbag",
         "bolsa de aire",
@@ -3842,6 +4130,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "retrovisor interior",
         "espejo interior",
@@ -3855,6 +4144,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parasol",
         "viseras",
@@ -3868,6 +4158,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cielorraso",
         "techo interior",
@@ -3881,6 +4172,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "encendedor",
         "toma 12v",
@@ -3894,6 +4186,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manivela",
         "manija de vidrio",
@@ -3907,6 +4200,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -3916,6 +4210,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "compresor",
         "compresor de aire acondicionado",
@@ -3929,6 +4224,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "condensador",
         "condensador de aire",
@@ -3942,6 +4238,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "evaporador",
         "evaporador de aire acondicionado"
@@ -3954,6 +4251,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "blower",
         "motor de ventilación",
@@ -3968,6 +4266,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "resistencia de blower",
         "resistencia de aire",
@@ -3981,6 +4280,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sensor de aire acondicionado",
         "presostato",
@@ -3994,6 +4294,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manguera de aire acondicionado",
         "tubería de ac"
@@ -4006,6 +4307,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "gas",
         "r134a",
@@ -4021,6 +4323,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "válvula de expansión",
         "válvula de ac",
@@ -4034,6 +4337,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "radiador de calefacción",
         "calefacción",
@@ -4047,6 +4351,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "comando de aire",
         "perilla de aire",
@@ -4061,6 +4366,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "difusor",
         "rejilla de aire",
@@ -4075,6 +4381,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4084,6 +4391,7 @@
       "nivel": "sub",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4093,6 +4401,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Formato y pulgadas",
+      "soloCombustion": false,
       "sinonimos": [
         "sistemas android / carplay",
         "android auto",
@@ -4107,6 +4416,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cámara de reversa",
         "cámara trasera",
@@ -4120,6 +4430,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cámaras dvr",
         "cámara dvr",
@@ -4136,6 +4447,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sensor de parqueo",
         "sensores de reversa",
@@ -4149,6 +4461,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tpms",
         "sensor de presión de llantas"
@@ -4161,6 +4474,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bluetooth",
         "adaptador bluetooth",
@@ -4174,6 +4488,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cargador ev",
         "cargador de carro eléctrico",
@@ -4188,6 +4503,7 @@
       "nivel": "sub",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4197,6 +4513,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alarma de carro"
       ]
@@ -4208,6 +4525,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "inmovilizador",
         "corta corriente",
@@ -4221,6 +4539,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "gps para carro"
       ]
@@ -4232,6 +4551,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bloqueo",
         "cerradura de seguridad",
@@ -4245,6 +4565,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "trabavolante",
         "traba volante",
@@ -4259,6 +4580,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "extintor",
         "extinguidor",
@@ -4272,6 +4594,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "triángulo",
         "triángulos reflectivos",
@@ -4285,6 +4608,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "botiquín",
         "botiquín de carretera",
@@ -4298,6 +4622,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de carretera",
         "equipo de carretera",
@@ -4311,6 +4636,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "chaleco reflectivo",
         "chaleco"
@@ -4323,6 +4649,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alcoholímetro"
       ]
@@ -4334,6 +4661,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4343,6 +4671,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta de moto",
         "llantas de moto",
@@ -4357,6 +4686,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta delantera",
         "llanta 2.75-18",
@@ -4370,6 +4700,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta trasera",
         "llanta 100/90-17",
@@ -4383,6 +4714,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta de scooter",
         "llanta 90/90-10",
@@ -4396,6 +4728,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta de enduro",
         "llanta cross",
@@ -4410,6 +4743,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "llanta de motocarro",
         "llanta de torito",
@@ -4423,6 +4757,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4432,6 +4767,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "rines de moto"
       ]
@@ -4443,6 +4779,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "radios",
         "rayos de rin"
@@ -4455,6 +4792,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "cubos de rueda",
         "hubs",
@@ -4471,6 +4809,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "rodamientos de rueda",
         "balineras",
@@ -4484,6 +4823,7 @@
       "nivel": "sub",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4493,6 +4833,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "tripas",
         "tubos",
@@ -4507,6 +4848,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "válvula de rin",
         "válvula de aire",
@@ -4521,6 +4863,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "tuerca de eje",
         "tuerca de rueda de moto"
@@ -4533,6 +4876,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Medida",
+      "soloCombustion": false,
       "sinonimos": [
         "protector de rin",
         "cinta de rin",
@@ -4546,6 +4890,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4555,6 +4900,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
+      "soloCombustion": false,
       "sinonimos": [
         "aceite 4t",
         "aceite de moto",
@@ -4571,6 +4917,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Norma JASO (FC/FD)",
+      "soloCombustion": false,
       "sinonimos": [
         "aceite 2t",
         "aceite de dos tiempos",
@@ -4584,6 +4931,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
+      "soloCombustion": false,
       "sinonimos": [
         "aceite de transmisión / caja",
         "aceite de caja",
@@ -4597,6 +4945,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
+      "soloCombustion": false,
       "sinonimos": [
         "aceite de barras",
         "aceite de horquilla",
@@ -4610,6 +4959,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "lubricante de cadena",
         "grasa de cadena",
@@ -4623,6 +4973,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Norma DOT",
+      "soloCombustion": false,
       "sinonimos": [
         "líquido de freno",
         "DOT 3",
@@ -4636,6 +4987,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
+      "soloCombustion": false,
       "sinonimos": [
         "refrigerante",
         "coolant",
@@ -4649,6 +5001,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aditivo",
         "grasa",
@@ -4662,6 +5015,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4671,6 +5025,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "filtro de aceite"
       ]
@@ -4682,6 +5037,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "filtro de aire"
       ]
@@ -4693,6 +5049,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "filtro de combustible",
         "filtro de gasolina"
@@ -4705,6 +5062,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4714,6 +5072,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4723,6 +5082,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cilindro de moto",
         "kit cilindro pistón"
@@ -4735,6 +5095,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pistón",
         "anillos",
@@ -4749,6 +5110,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "biela",
         "bielas"
@@ -4761,6 +5123,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cigüeñal"
       ]
@@ -4772,6 +5135,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rodamiento de cigüeñal",
         "balinera de cigüeñal",
@@ -4785,6 +5149,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "culata",
         "cabezote",
@@ -4798,6 +5163,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guías de válvula",
         "válvula de admisión",
@@ -4813,6 +5179,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "árbol de levas",
         "eje de levas"
@@ -4825,6 +5192,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "balancín",
         "balancines",
@@ -4838,6 +5206,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "juntas",
         "empaquetadura",
@@ -4857,6 +5226,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cárter",
         "tapa de motor",
@@ -4871,6 +5241,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de aceite"
       ]
@@ -4882,6 +5253,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "volante magnético",
         "magneto",
@@ -4895,6 +5267,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "motor completo",
         "motor usado",
@@ -4909,6 +5282,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "distribución",
         "tiempo"
@@ -4921,6 +5295,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cadena de distribución",
         "cadena de tiempo",
@@ -4935,6 +5310,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tensor de cadenilla",
         "guía de cadenilla",
@@ -4948,6 +5324,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de distribución",
         "kit de tiempo",
@@ -4962,6 +5339,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -4971,6 +5349,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "radiador",
         "panal de radiador",
@@ -4984,6 +5363,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de agua",
         "water pump"
@@ -4996,6 +5376,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "termostato",
         "termostato de agua"
@@ -5008,6 +5389,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manguera de radiador",
         "manguera de agua",
@@ -5022,6 +5404,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "moto ventilador"
       ]
@@ -5033,6 +5416,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5042,6 +5426,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "carburador",
         "carburador weber",
@@ -5055,6 +5440,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "inyector",
         "inyectores de gasolina",
@@ -5071,6 +5457,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bomba de combustible",
         "bomba de gasolina eléctrica",
@@ -5084,6 +5471,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cuerpo de aceleración",
         "throttle body",
@@ -5097,6 +5485,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "grifo de gasolina",
         "llave de paso"
@@ -5109,6 +5498,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5118,6 +5508,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "disco de embrague"
       ]
@@ -5129,6 +5520,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de embrague",
         "kit clutch",
@@ -5143,6 +5535,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "campana de clutch",
         "resorte de clutch",
@@ -5156,6 +5549,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sprocket",
         "piñón de salida",
@@ -5171,6 +5565,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sprocket trasero",
         "piñón trasero",
@@ -5186,6 +5581,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cadena de moto",
         "cadena de tracción"
@@ -5198,6 +5594,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de arrastre",
         "kit de transmisión",
@@ -5213,6 +5610,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "correa de scooter",
         "banda de scooter",
@@ -5226,6 +5624,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "clutch de scooter (variador)",
         "variador",
@@ -5241,6 +5640,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de cambios",
         "engranajes",
@@ -5255,6 +5655,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "selectora",
         "horquilla selectora"
@@ -5267,6 +5668,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "eje de cambios",
         "eje selector",
@@ -5280,6 +5682,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5289,6 +5692,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pisa",
         "motores de arranque (pisa)"
@@ -5301,6 +5705,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "piñón de arranque"
       ]
@@ -5312,6 +5717,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "patada",
         "kick starter",
@@ -5328,6 +5734,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "automático de arranque",
         "relé de arranque",
@@ -5342,6 +5749,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5351,6 +5759,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "escape",
         "tubo de escape",
@@ -5366,6 +5775,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "silenciador"
       ]
@@ -5377,6 +5787,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "catalizador",
         "convertidor catalítico"
@@ -5389,6 +5800,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "empaque de exhosto",
         "empaque de escape",
@@ -5402,6 +5814,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5411,6 +5824,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cable de freno",
         "chicote de freno"
@@ -5423,6 +5837,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cable de clutch",
         "cable de embrague",
@@ -5436,6 +5851,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cable de acelerador",
         "chicote de acelerador"
@@ -5448,6 +5864,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guaya de velocímetro",
         "cable de velocímetro",
@@ -5461,6 +5878,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guaya de ahogador",
         "choke",
@@ -5474,6 +5892,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guaya de tacómetro",
         "cable de tacómetro"
@@ -5486,6 +5905,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5495,6 +5915,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "batería de moto",
         "batería 12v moto",
@@ -5518,6 +5939,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bornes",
         "terminales de batería",
@@ -5532,6 +5954,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5541,6 +5964,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pastas de freno",
         "brake pads"
@@ -5553,6 +5977,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "zapatas",
         "zapatas de freno"
@@ -5565,6 +5990,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "disco de freno",
         "discos",
@@ -5580,6 +6006,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tambores",
         "campanas",
@@ -5594,6 +6021,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caliper",
         "cálipers",
@@ -5608,6 +6036,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cilindro maestro",
         "bomba principal de freno",
@@ -5621,6 +6050,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bombines de freno",
         "cilindros de rueda",
@@ -5634,6 +6064,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manguera de freno",
         "bandeja de freno",
@@ -5648,6 +6079,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manigueta",
         "manilla de freno",
@@ -5665,6 +6097,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de frenos",
         "kit de reparación",
@@ -5678,6 +6111,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "depósito de líquido de frenos",
         "tanque de líquido de frenos"
@@ -5690,6 +6124,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5699,6 +6134,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "casco",
         "casco cerrado",
@@ -5713,6 +6149,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "casco modular",
         "flip up"
@@ -5725,6 +6162,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "casco jet",
         "casco 3/4"
@@ -5737,6 +6175,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "casco enduro",
         "casco motocross"
@@ -5749,6 +6188,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "visor",
         "visor de casco",
@@ -5763,6 +6203,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5772,6 +6213,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rectificador",
         "regulador de voltaje",
@@ -5785,6 +6227,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cdi",
         "unidad de encendido",
@@ -5801,6 +6244,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bobina de encendido",
         "bobina de chispa"
@@ -5813,6 +6257,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bobina de carga",
         "estator",
@@ -5828,6 +6273,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bujía",
         "spark plug",
@@ -5843,6 +6289,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "capuchón",
         "capuchón de bujía",
@@ -5856,6 +6303,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "fusible",
         "relé",
@@ -5870,6 +6318,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "mandos",
         "switch",
@@ -5883,6 +6332,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "relé de direccionales",
         "destellador"
@@ -5895,6 +6345,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bocina",
         "claxon",
@@ -5908,6 +6359,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ramal",
         "arnés",
@@ -5922,6 +6374,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "velocímetro",
         "tacómetro",
@@ -5939,6 +6392,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sensor",
         "sensor de velocidad",
@@ -5952,6 +6406,7 @@
       "nivel": "macro",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -5961,6 +6416,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "faros",
         "luces delanteras",
@@ -5977,6 +6433,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "luces traseras",
         "stop",
@@ -5993,6 +6450,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "luces direccionales",
         "intermitentes",
@@ -6007,6 +6465,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "led",
         "luces led",
@@ -6027,6 +6486,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "bombillos",
         "bombillas",
@@ -6049,6 +6509,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Tipo de bombillo",
+      "soloCombustion": false,
       "sinonimos": [
         "exploradoras",
         "antiniebla",
@@ -6064,6 +6525,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6073,6 +6535,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "baúl",
         "maleta",
@@ -6088,6 +6551,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alforja",
         "alforjas",
@@ -6102,6 +6566,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parrilla",
         "parrilla trasera",
@@ -6116,6 +6581,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "defensa",
         "defensas",
@@ -6131,6 +6597,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "slider",
         "sliders",
@@ -6149,6 +6616,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Talla",
+      "soloCombustion": false,
       "sinonimos": [
         "cubremoto",
         "pijama para moto",
@@ -6164,6 +6632,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "parabrisas",
         "cúpula",
@@ -6180,6 +6649,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Rosca",
+      "soloCombustion": false,
       "sinonimos": [
         "espejo",
         "retrovisor",
@@ -6194,6 +6664,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cubrepuños",
         "cubremanos",
@@ -6207,6 +6678,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "soporte de celular",
         "porta celular",
@@ -6221,6 +6693,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "forro de sillín",
         "forro de silla",
@@ -6235,6 +6708,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pulpo",
         "red de pulpo",
@@ -6249,6 +6723,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rampa",
         "caballete de taller",
@@ -6262,6 +6737,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cubrerayos",
         "stickers",
@@ -6276,6 +6752,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cargador usb",
         "toma usb",
@@ -6289,6 +6766,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "intercomunicador",
         "intercom",
@@ -6302,6 +6780,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "altavoces",
         "bafles",
@@ -6317,6 +6796,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6326,6 +6806,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "chaqueta",
         "chaqueta de moto",
@@ -6339,6 +6820,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guantes",
         "guantes para moto",
@@ -6352,6 +6834,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "bota",
         "botas de moto",
@@ -6365,6 +6848,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pantalón",
         "pantalón de moto",
@@ -6378,6 +6862,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "impermeable",
         "traje de lluvia",
@@ -6392,6 +6877,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rodilleras",
         "coderas",
@@ -6407,6 +6893,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "chaleco reflectivo",
         "chaleco"
@@ -6419,6 +6906,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6428,6 +6916,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "carenaje",
         "plásticos",
@@ -6445,6 +6934,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tanque",
         "tanque de gasolina",
@@ -6459,6 +6949,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sillín",
         "silla",
@@ -6473,6 +6964,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "colín",
         "porta maleta"
@@ -6485,6 +6977,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guardafango",
         "fender",
@@ -6502,6 +6995,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "portaplaca",
         "porta placa",
@@ -6515,6 +7009,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pata",
         "pata lateral",
@@ -6531,6 +7026,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pedalín",
         "pedalines",
@@ -6548,6 +7044,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pedal de cambios",
         "pedal de freno",
@@ -6561,6 +7058,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "chasis",
         "subchasis",
@@ -6574,6 +7072,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de filtro",
         "caja de aire",
@@ -6587,6 +7086,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "agarradera",
         "agarradera trasera",
@@ -6600,6 +7100,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "eje de rueda",
         "eje delantero",
@@ -6613,6 +7114,7 @@
       "nivel": "macro",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6622,6 +7124,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "amortiguador",
         "amortiguador de moto",
@@ -6636,6 +7139,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "botellas",
         "telescópicos",
@@ -6650,6 +7154,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "retenedores de barra",
         "guardapolvos",
@@ -6668,6 +7173,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "resorte",
         "espiral",
@@ -6681,6 +7187,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "basculante",
         "tijera trasera",
@@ -6694,6 +7201,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rodamiento de tijera",
         "balinera de basculante",
@@ -6707,6 +7215,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rodamientos de dirección",
         "balineras de dirección",
@@ -6723,6 +7232,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "buje",
         "bujes de suspensión",
@@ -6737,6 +7247,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "manillar",
         "timón",
@@ -6756,6 +7267,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "puños",
         "manillas",
@@ -6770,6 +7282,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "triple",
         "yugo",
@@ -6783,6 +7296,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6792,6 +7306,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "gps para moto"
       ]
@@ -6803,6 +7318,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alarma de moto"
       ]
@@ -6814,6 +7330,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "candados, guayas y alarmas",
         "candado de moto",
@@ -6829,6 +7346,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cámara para moto",
         "cámara de seguridad",
@@ -6842,6 +7360,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6851,6 +7370,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "dados",
         "juego de copas",
@@ -6866,6 +7386,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "llave de cruz",
         "llave de rueda",
@@ -6879,6 +7400,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "torquímetro",
         "llave de torque",
@@ -6892,6 +7414,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "destornillador",
         "desarmador",
@@ -6905,6 +7428,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "alicate",
         "pinza",
@@ -6919,6 +7443,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "martillo",
         "cincel",
@@ -6932,6 +7457,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "extractor",
         "extractor de poleas",
@@ -6946,6 +7472,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "llave de filtro",
         "extractor de filtro"
@@ -6958,6 +7485,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "caja de herramientas",
         "set de herramientas",
@@ -6971,6 +7499,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -6980,6 +7509,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "taladro",
         "taladro inalámbrico"
@@ -6992,6 +7522,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "esmeril",
         "moto tool",
@@ -7007,6 +7538,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pistola de impacto",
         "llave de impacto"
@@ -7019,6 +7551,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "herramienta neumática",
         "pistola neumática",
@@ -7032,6 +7565,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "compresor",
         "compresor de aire",
@@ -7045,6 +7579,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pistola de calor",
         "cautín",
@@ -7058,6 +7593,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -7067,6 +7603,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "gato",
         "gato hidráulico",
@@ -7082,6 +7619,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "elevador",
         "elevador de carro",
@@ -7096,6 +7634,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "camilla",
         "camilla de mecánico"
@@ -7108,6 +7647,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "prensa hidráulica"
       ]
@@ -7119,6 +7659,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "grúa de motor",
         "pluma"
@@ -7131,6 +7672,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "winche",
         "malacate",
@@ -7144,6 +7686,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cargador de batería",
         "arrancador",
@@ -7159,6 +7702,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "inflador",
         "compresor portátil",
@@ -7177,6 +7721,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "montallantas",
         "kit de despinche",
@@ -7190,6 +7735,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -7199,6 +7745,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "escáner",
         "scanner",
@@ -7215,6 +7762,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "multímetro",
         "tester",
@@ -7228,6 +7776,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "calibrador",
         "vernier",
@@ -7244,6 +7793,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "lámpara estroboscópica",
         "lámpara de tiempo"
@@ -7256,6 +7806,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "compresímetro",
         "medidor de compresión",
@@ -7269,6 +7820,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -7278,6 +7830,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "shampoo para carro",
         "jabón para carro",
@@ -7293,6 +7846,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "desengrasante"
       ]
@@ -7304,6 +7858,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiavidrios",
         "limpiador de vidrios",
@@ -7317,6 +7872,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador interior",
         "limpiador de tablero",
@@ -7330,6 +7886,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de cuero",
         "limpiador de tapicería",
@@ -7343,6 +7900,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de motor",
         "desengrasante de motor",
@@ -7356,6 +7914,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de rines",
         "limpia rines",
@@ -7369,6 +7928,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "silicona para carro",
         "silicona para llantas",
@@ -7384,6 +7944,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cera",
         "cera para carro",
@@ -7400,6 +7961,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "sellador",
         "sellante",
@@ -7413,6 +7975,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "coating",
         "recubrimiento cerámico",
@@ -7426,6 +7989,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "hidrofóbico",
         "repelente de agua",
@@ -7439,6 +8003,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "protector uv",
         "protector solar de tablero",
@@ -7452,6 +8017,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "quita rayones",
         "restaurador de pintura",
@@ -7465,6 +8031,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "microfibra",
         "paños de microfibra",
@@ -7480,6 +8047,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cepillo",
         "aplicador",
@@ -7493,6 +8061,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "rubbing",
         "pulimento",
@@ -7507,6 +8076,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pad",
         "pad de pulido",
@@ -7521,6 +8091,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "abrillantador",
         "brillo",
@@ -7534,6 +8105,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "ambientador",
         "perfume para carro",
@@ -7551,6 +8123,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "anticorrosivo",
         "antioxidante",
@@ -7564,6 +8137,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "kit de limpieza",
         "kit de lavado",
@@ -7577,6 +8151,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de cadena",
         "desengrasante de cadena",
@@ -7590,6 +8165,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": []
     },
     {
@@ -7599,6 +8175,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "guantes de nitrilo",
         "guantes de taller",
@@ -7612,6 +8189,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "paño",
         "trapo",
@@ -7626,6 +8204,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "cinta",
         "cinta aislante",
@@ -7640,6 +8219,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "abrazadera",
         "clamp",
@@ -7653,6 +8233,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "tornillo",
         "tuerca",
@@ -7667,6 +8248,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "brida",
         "amarre plástico",
@@ -7681,6 +8263,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "silicona",
         "pegante",
@@ -7695,6 +8278,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "lubricante técnico",
         "wd40",
@@ -7709,6 +8293,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "limpiador de contactos",
         "limpiador de frenos",
@@ -7722,6 +8307,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aerosol",
         "spray"
@@ -7734,6 +8320,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "empaque",
         "empaquetadura",
@@ -7748,6 +8335,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "terminal eléctrico",
         "terminal de batería",
@@ -7762,6 +8350,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "pintura para carro",
         "retoque",
@@ -7777,6 +8366,7 @@
       "nivel": "macro",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "equipos de limpieza",
         "lavado",
@@ -7790,6 +8380,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "hidrolavadora",
         "lavadora a presión",
@@ -7803,6 +8394,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "polichadora",
         "pulidora",
@@ -7819,6 +8411,7 @@
       "nivel": "hoja",
       "compatibilidad": "universal",
       "atributo": null,
+      "soloCombustion": false,
       "sinonimos": [
         "aspiradora para carro",
         "aspiradora portátil",

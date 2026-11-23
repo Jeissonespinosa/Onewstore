@@ -115,6 +115,39 @@ prueba('enviar() no guarda el vehiculo', /\bguardar\(/.test(enviar || 'guardar('
 const elegirPaso = cuerpo('elegirPaso')
 prueba('elegirPaso() si guarda (es deliberado)', /\bguardar\(/.test(elegirPaso || ''), true)
 
+console.log('\n=== lo que un electrico NO lleva ===')
+const nodo = ruta => indice.nodos.find(n => n.path === ruta)
+const soloComb = ruta => { const n = nodo(ruta); return n ? !!n.soloCombustion : 'NO EXISTE' }
+/* Lo que no existe en un 100% electrico */
+;[
+  '/carros/filtros/filtros-de-aceite',
+  '/carros/filtros/filtros-de-combustible',
+  '/carros/lubricantes-y-mantenimiento/aceite-de-motor',
+  '/carros/electrico-y-electronico/encendido/bujias-de-encendido',
+  '/carros/electrico-y-electronico/arranque-y-carga/alternadores',
+  '/carros/motor-y-transmision/reparticion-distribucion/correas-de-reparticion',
+  '/carros/motor-y-transmision/combustible-e-inyeccion/inyectores',
+  '/carros/motor-y-transmision/admision-y-escape/mofles-silenciadores',
+  '/carros/motor-y-transmision/clutch-embrague',
+].forEach(r => prueba('no aplica: ' + r.split('/').pop(), soloComb(r), true))
+
+/* Lo que SI lleva: equivocarse hacia este lado le esconde al cliente algo
+   que su carro si necesita, que es el error caro. */
+;[
+  '/carros/filtros/filtros-de-cabina',
+  '/carros/baterias',
+  '/carros/frenos',
+  '/carros/llantas-y-rines',
+  '/carros/suspension-y-direccion',
+  '/carros/motor-y-transmision/refrigeracion/mangueras-de-refrigeracion',
+  '/carros/iluminacion',
+].forEach(r => prueba('si aplica: ' + r.split('/').pop(), soloComb(r), false))
+
+prueba('la marca hereda hacia abajo',
+  soloComb('/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina'), true)
+prueba('en motos no se marco nada',
+  indice.nodos.filter(n => n.seccion === 'Motos' && n.soloCombustion).length, 0)
+
 console.log('\n=== todo nodo tiene nivel ===')
 prueba('sin nodos sin clasificar', indice.nodos.filter(n => !n.compatibilidad).length, 0)
 

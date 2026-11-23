@@ -38,7 +38,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 /* El ranking y el almacen del vehiculo son compartidos con la pildora del
    header: una sola fuente, o los dos componentes se desincronizan. */
 import {
-  POPULARES, posMarca, posModelo, rutaDe, esElectrico,
+  POPULARES, posMarca, posModelo, rutaDe, esElectrico, modeloCoincide,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
 } from './vehiculo'
 import { buscarEnTienda, masBuscado } from './buscar'
@@ -167,6 +167,51 @@ function vehiculoAplica(compat, explicito, hayLlanta) {
   return false
 }
 
+/* Modelos que calzan con lo escrito cuando NO nombraron la marca: "frenos
+   corolla" en vez de "frenos toyota corolla".
+
+   La regla es al reves de lo que uno escribiria primero: no es que el nombre
+   del modelo quepa en la frase, es que las palabras de la frase esten en el
+   nombre del modelo. Con la otra regla "frontier" solo encontraba la Kia
+   Frontier —la Nissan se llama "Frontier NP300" y pedia esas dos palabras—
+   y el cliente de una Nissan, que son la mayoria, recibia la pieza de otra
+   camioneta sin enterarse.
+
+   Devuelve TODOS los que calzan, sin escoger: si "Swift" es de Suzuki y de
+   Chevrolet, los dos salen y decide el cliente. Adivinar la marca es como
+   terminamos trayendo llantas de Hilux para un Corolla.
+
+   Primero el que se llama exactamente asi ("Corolla" antes que "Corolla
+   Cross"); despues manda el ranking de ventas. */
+function modelosQueCalzan(base, palabras, vocabCategorias, comparar, orden) {
+  /* Las palabras que nombran una categoria no son el carro: en "frenos
+     corolla" el carro es "corolla". El vocabulario sale del mismo indice de
+     categorias, asi que no hay una lista a mano que se desactualice. */
+  const vocab = vocabCategorias || new Set()
+  const calza = comparar || ((m, mo, p) => toks(mo).indexOf(p) >= 0)
+  const utiles = palabras.filter(p => p.length >= 3 && !vocab.has(p))
+  if (!utiles.length) return []
+  const halla = []
+  Object.keys(base || {}).forEach(m => {
+    Object.keys(base[m] || {}).forEach(mo => {
+      const mt = toks(mo)
+      if (!mt.length) return
+      /* Calza por nombre, por apodo o sin guiones: "cx5" es el CX-5,
+         "morning" es el Picanto y "ns160" la Pulsar 160 NS. Lo decide el
+         mismo comparador que usa el panel de vehiculos del header. */
+      if (!utiles.every(p => calza(m, mo, p))) return
+      const exacto = mt.length === utiles.length && utiles.every(p => mt.indexOf(p) >= 0)
+      halla.push({ marca: m, modelo: mo, exacto })
+    })
+  })
+  const pos = orden || (() => 0)
+  halla.sort((a, b) => {
+    if (a.exacto !== b.exacto) return a.exacto ? -1 : 1
+    return pos(a) - pos(b)
+  })
+  return halla.map(c => ({ marca: c.marca, modelo: c.modelo }))
+}
+
 export default function Cris({
   placeholder = '¿Qué necesitas? Escribe el repuesto y tu vehículo',
   placeholderHerramientas = '¿Qué herramienta estás buscando?',
@@ -244,6 +289,12 @@ export default function Cris({
   }
 
   const entradas = useMemo(() => construirIndice(seccion), [seccion])
+  /* Todas las palabras con las que se nombra una categoria. */
+  const vocabCategorias = useMemo(() => {
+    const v = new Set()
+    entradas.forEach(e => e.palabras.forEach(w => v.add(w)))
+    return v
+  }, [entradas])
   const base = useMemo(
     () => (pideVehiculo ? vehiculos[seccion === 'motos' ? 'motos' : 'carros'] || {} : {}),
     [seccion, pideVehiculo]
@@ -262,6 +313,13 @@ export default function Cris({
 
     let marca = null
     let modelo = null
+    /* Modelos que calzan cuando NO escribieron la marca. La gente dice
+       "frenos corolla", no "frenos toyota corolla". Si solo hay un carro con
+       ese nombre se da por leido; si hay varios (Swift es Suzuki y Chevrolet,
+       Frontier es Nissan y Kia) NO se adivina: se ofrecen los dos y escoge
+       el cliente. Adivinar la marca es como terminamos trayendo llantas de
+       Hilux para un Corolla. */
+    let candidatos = []
     if (pideVehiculo) {
       Object.keys(base).forEach(m => {
         const mt = toks(m)
@@ -272,11 +330,26 @@ export default function Cris({
         const mt = toks(mo)
         if (mt.length && mt.every(t => palabras.indexOf(t) >= 0)) modelo = mo
       })
+      if (!marca) {
+        candidatos = modelosQueCalzan(
+          base, palabras, vocabCategorias,
+          (m, mo, pal) => modeloCoincide(seccion, m, mo, pal),
+          c => posMarca(seccion, c.marca) * 1000 + posModelo(c.marca, c.modelo)
+        )
+        if (candidatos.length === 1) {
+          marca = candidatos[0].marca
+          modelo = candidatos[0].modelo
+        }
+      }
     }
     /* Las palabras del vehiculo no deben leerse como categoria: "audi" no es
        "audio", y "Corolla" no es una categoria. */
     const usadasVehiculo = new Set(
-      [].concat(marca ? toks(marca) : [], modelo ? toks(modelo) : [])
+      [].concat(
+        marca ? toks(marca) : [],
+        modelo ? toks(modelo) : [],
+        candidatos.length ? toks(candidatos[0].modelo) : []
+      )
     )
     const paraCategoria = palabras.filter(w => !usadasVehiculo.has(w))
     const categoria = paraCategoria.length ? buscarCategoria(entradas, paraCategoria) : null
@@ -284,11 +357,12 @@ export default function Cris({
       categoria,
       marca,
       modelo,
+      candidatos,
       ano: anoM ? anoM[0] : null,
       llanta,
       palabras: paraCategoria,
     }
-  }, [texto, entradas, base, pideVehiculo])
+  }, [texto, entradas, vocabCategorias, base, pideVehiculo, seccion])
 
   /* Marcas de la seccion, ya ordenadas por venta. */
   const marcas = useMemo(
@@ -330,7 +404,9 @@ export default function Cris({
         s.tipo +
         ':' +
         (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
-        (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
+        (s.tipo === 'ir'
+          ? (s.conVehiculo ? ':con:' + s.veh.marca + '/' + (s.veh.modelo || '') : ':sin')
+          : '')
       if (!vistos.has(k) && out.length < 8) {
         vistos.add(k)
         out.push(sobra ? { ...s, noAplica: true } : s)
@@ -360,14 +436,27 @@ export default function Cris({
        este joven. Dandole las dos el cliente nunca queda sin camino, y no
        hace falta adivinar por el. */
     if (lectura && lectura.categoria) {
-      const veh = lectura.marca
-        ? { marca: lectura.marca, modelo: lectura.modelo, ano: lectura.ano }
-        : vehiculo
       const nodo = lectura.categoria.nodo
       const compat = nodo.compatibilidad || 'estricta'
-      if (veh && veh.marca && !lectura.llanta && compat !== 'universal') {
-        meter({ tipo: 'ir', nodo, veh, conVehiculo: true })
-        meter({ tipo: 'ir', nodo, veh: null, conVehiculo: false })
+      const varios = !lectura.marca && lectura.candidatos && lectura.candidatos.length > 1
+      if (!lectura.llanta && compat !== 'universal') {
+        if (varios) {
+          /* "frenos swift": Suzuki y Chevrolet. Se ofrecen los dos en vez de
+             escoger por el cliente. */
+          lectura.candidatos.slice(0, 3).forEach(c => {
+            meter({ tipo: 'ir', nodo, conVehiculo: true,
+                    veh: { marca: c.marca, modelo: c.modelo, ano: lectura.ano } })
+          })
+          meter({ tipo: 'ir', nodo, veh: null, conVehiculo: false })
+        } else {
+          const veh = lectura.marca
+            ? { marca: lectura.marca, modelo: lectura.modelo, ano: lectura.ano }
+            : vehiculo
+          if (veh && veh.marca) {
+            meter({ tipo: 'ir', nodo, veh, conVehiculo: true })
+            meter({ tipo: 'ir', nodo, veh: null, conVehiculo: false })
+          }
+        }
       }
     }
 
@@ -533,6 +622,19 @@ export default function Cris({
     return buscarTexto(texto)
   }
 
+  /* Los años que ese modelo existio, del mas nuevo al mas viejo. */
+  const listaDeAnos = (marca, modelo) => {
+    const rango = (base[marca] || {})[modelo]
+    if (!rango || !rango[0] || !rango[1]) return []
+    const anos = []
+    for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
+    return anos
+  }
+
+  /* A donde lleva la frase que escribio, si es que nombro una categoria. */
+  const destinoDeLaFrase = () =>
+    (lectura && lectura.categoria && lectura.categoria.nodo) || null
+
   /* Clic en una sugerencia. La categoria navega; la marca y el modelo NO
      navegan: abren el siguiente paso del embudo (marca -> modelo -> año),
      que es como funcionaba la prueba. Antes solo habia categorias, asi que
@@ -541,8 +643,24 @@ export default function Cris({
     /* Las dos salidas de una categoria con vehiculo. "con" manda el vehiculo
        como explicito, que es lo que hace que en "ajuste" si se filtre. */
     if (s.tipo === 'ir') {
-      /* Tampoco se guarda aqui: el vehiculo puede venir de la frase, y "ver
-         pastillas para ese carro" no es lo mismo que "ese carro es el mio". */
+      /* "frenos corolla" no dice de que año es, y un Corolla 2005 y uno 2021
+         no llevan la misma pastilla. Antes se iba con marca y modelo y ya:
+         la pagina mezclaba generaciones. Ahora se pide el año primero, que es
+         un toque mas y una respuesta exacta. El que no lo sepa sigue teniendo
+         "No sé el año", que va con marca y modelo como antes.
+
+         Aqui NO se guarda: el vehiculo viene de la frase, y "ver pastillas
+         para ese carro" no es lo mismo que "ese carro es el mio". */
+      const anos = s.conVehiculo && s.veh && s.veh.modelo && !s.veh.ano
+        ? listaDeAnos(s.veh.marca, s.veh.modelo)
+        : null
+      if (anos && anos.length) {
+        setTexto('')
+        setAbierto(false)
+        setPaso({ tipo: 'ano', marca: s.veh.marca, modelo: s.veh.modelo,
+                  opciones: anos, destino: s.nodo, guardarlo: false })
+        return
+      }
       irA(s.nodo, s.conVehiculo ? s.veh : null, null, s.conVehiculo, !s.conVehiculo)
       return
     }
@@ -553,44 +671,56 @@ export default function Cris({
     if (s.tipo === 'marca') {
       setTexto('')
       setAbierto(false)
-      setPaso({ tipo: 'modelo', marca: s.marca, opciones: modelosDe(s.marca).slice(0, 40) })
+      setPaso({ tipo: 'modelo', marca: s.marca, opciones: modelosDe(s.marca).slice(0, 40),
+                destino: destinoDeLaFrase(), guardarlo: true })
       return
     }
     /* Modelo: ya se sabe la marca, se salta directo al año. */
-    const rango = (base[s.marca] || {})[s.modelo]
-    const veh = { marca: s.marca, modelo: s.modelo, ano: null }
-    guardar(veh)
+    const anos = listaDeAnos(s.marca, s.modelo)
+    const destino = destinoDeLaFrase()
     setTexto('')
     setAbierto(false)
-    if (rango && rango[0] && rango[1]) {
-      const anos = []
-      for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
-      setPaso({ tipo: 'ano', marca: s.marca, modelo: s.modelo, opciones: anos })
+    if (anos.length) {
+      /* Ojo: aqui NO se guarda todavia. Guardar "Toyota Corolla" sin año y
+         pedir el año despues dejaba dos cosas rotas si el cliente se iba a
+         mitad de camino: la tienda filtrando por un carro incompleto, y un
+         duplicado sin año en la lista de vehiculos guardados. */
+      setPaso({ tipo: 'ano', marca: s.marca, modelo: s.modelo, opciones: anos,
+                destino, guardarlo: true })
       return
     }
+    /* Sin rango de años no hay nada mas que preguntar. */
+    const veh = { marca: s.marca, modelo: s.modelo, ano: null }
+    guardar(veh)
     setPaso(null)
+    if (destino) irA(destino, veh, lectura && lectura.llanta, true)
   }
 
   const elegirPaso = valor => {
     if (paso.tipo === 'modelo') {
-      const rango = (base[paso.marca] || {})[valor]
-      const veh = { marca: paso.marca, modelo: valor, ano: null }
-      if (rango && rango[0] && rango[1]) {
-        const anos = []
-        for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
-        guardar(veh)
-        setPaso({ tipo: 'ano', marca: paso.marca, modelo: valor, opciones: anos })
+      const anos = listaDeAnos(paso.marca, valor)
+      if (anos.length) {
+        setPaso({ tipo: 'ano', marca: paso.marca, modelo: valor, opciones: anos,
+                  destino: paso.destino, guardarlo: paso.guardarlo })
         return
       }
-      guardar(veh)
+      const veh = { marca: paso.marca, modelo: valor, ano: null }
+      if (paso.guardarlo !== false) guardar(veh)
       setPaso(null)
+      if (paso.destino) irA(paso.destino, veh, lectura && lectura.llanta, true)
       return
     }
-    const veh = { marca: paso.marca, modelo: paso.modelo, ano: valor }
-    guardar(veh)
+    cerrarElAno(valor)
+  }
+
+  /* Sale del paso del año, con año o sin el. Un solo sitio para las dos
+     salidas, que antes hacian cosas distintas sin razon. */
+  const cerrarElAno = valor => {
+    const veh = { marca: paso.marca, modelo: paso.modelo, ano: valor || null }
+    if (paso.guardarlo !== false) guardar(veh)
     setPaso(null)
-    const l = lectura
-    if (l && l.categoria) irA(l.categoria.nodo, veh, l.llanta, true)
+    const destino = paso.destino || (lectura && lectura.categoria && lectura.categoria.nodo)
+    if (destino) irA(destino, veh, lectura && lectura.llanta, true)
   }
 
   /* El panel se abre si hay ALGO que mostrar. Antes dependia solo de las
@@ -829,7 +959,9 @@ export default function Cris({
                         key={
                           s.tipo + ':' +
                           (s.nodo ? s.nodo.path : s.marca + '/' + (s.modelo || '')) +
-                          (s.tipo === 'ir' ? (s.conVehiculo ? ':con' : ':sin') : '')
+                          (s.tipo === 'ir'
+                            ? (s.conVehiculo ? ':con:' + s.veh.marca + '/' + (s.veh.modelo || '') : ':sin')
+                            : '')
                         }
                         className="rx-cris__op"
                         onMouseDown={e => { e.preventDefault(); elegirSugerencia(s) }}
@@ -848,7 +980,9 @@ export default function Cris({
                         <small>
                           {s.noAplica ? 'tu carro es eléctrico: no lleva' : null}
                           {!s.noAplica && s.tipo === 'ir'
-                            ? (s.conVehiculo ? 'solo lo que le sirve' : 'sin filtro de vehículo')
+                            ? (s.conVehiculo
+                              ? (s.veh && !s.veh.ano ? 'dinos el año y es exacto' : 'solo lo que le sirve')
+                              : 'sin filtro de vehículo')
                             : null}
                           {!s.noAplica && s.tipo === 'categoria' ? s.nodo.seccion : null}
                           {s.tipo === 'marca' ? 'marca' : null}
@@ -930,7 +1064,7 @@ export default function Cris({
               sabe no puede quedarse trancado en el paso. */}
           {paso.tipo === 'ano' ? (
             <button type="button" className="rx-cris__salto"
-              onClick={() => { guardar({ marca: paso.marca, modelo: paso.modelo, ano: null }); setPaso(null) }}>
+              onClick={() => cerrarElAno(null)}>
               No sé el año
             </button>
           ) : null}

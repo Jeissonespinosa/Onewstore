@@ -122,7 +122,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 44,9 kWh"
+            "nota": "Batería de 44,9 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -133,7 +135,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 38 kWh"
+            "nota": "Batería de 38 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },
@@ -144,7 +148,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 82,5 kWh"
+            "nota": "Batería de 82,5 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },
@@ -155,7 +161,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 60,5 kWh"
+            "nota": "Batería de 60,5 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -166,7 +174,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 45,1 kWh"
+            "nota": "Batería de 45,1 kWh",
+            "desde": 2025,
+            "hasta": 2027
           }
         ]
       }
@@ -210,7 +220,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 66 kWh"
+            "nota": "Batería de 66 kWh",
+            "desde": 2021,
+            "hasta": 2027
           }
         ]
       },
@@ -238,7 +250,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 52 kWh"
+            "nota": "Batería de 52 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },
@@ -300,11 +314,15 @@
         "motores": [
           {
             "id": "1.0T",
-            "nombre": "1.0 Turbo · 999 cc"
+            "nombre": "1.0 Turbo · 999 cc",
+            "desde": 2020,
+            "hasta": 2027
           },
           {
             "id": "1.2",
-            "nombre": "1.2 · 1199 cc"
+            "nombre": "1.2 · 1199 cc",
+            "desde": 2020,
+            "hasta": 2027
           }
         ]
       },
@@ -348,16 +366,21 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 41,9 kWh"
+            "nota": "Batería de 41,9 kWh",
+            "desde": 2025,
+            "hasta": 2027
           }
         ]
       },
       "Spark GT": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.2",
-            "nombre": "1.2 · 1206 cc"
+            "nombre": "1.2 · 1206 cc",
+            "desde": 2010,
+            "hasta": 2023,
+            "nota": "único motor en todo el rango · confirmado"
           }
         ]
       },
@@ -440,7 +463,10 @@
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1596 cc"
+            "nombre": "1.6 · 1596 cc",
+            "nota": "confirmado 2010-2019",
+            "desde": 2010,
+            "hasta": 2019
           }
         ]
       },
@@ -483,7 +509,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 48 kWh"
+            "nota": "Batería de 48 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       }
@@ -548,7 +576,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 58 kWh"
+            "nota": "Batería de 58 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -613,7 +643,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 30,2 kWh"
+            "nota": "Batería de 30,2 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       }
@@ -652,7 +684,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 64,2 kWh"
+            "nota": "Batería de 64,2 kWh",
+            "desde": 2025,
+            "hasta": 2027
           }
         ]
       },
@@ -663,7 +697,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 77,4 kWh"
+            "nota": "Batería de 77,4 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -799,7 +835,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 51 kWh"
+            "nota": "Batería de 51 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       }
@@ -871,7 +909,22 @@
         "motores": [
           {
             "id": "1.5",
-            "nombre": "1.5 · 1496 cc"
+            "nombre": "1.5 · 1496 cc",
+            "nota": "anterior a SkyActiv, por confirmar el corte",
+            "desde": 2008,
+            "hasta": 2014
+          },
+          {
+            "id": "1.5S",
+            "nombre": "1.5 SkyActiv · 1496 cc",
+            "nota": "SkyActiv-G, otro motor con el mismo cilindraje",
+            "desde": 2015
+          },
+          {
+            "id": "2.0S",
+            "nombre": "2.0 SkyActiv · 1998 cc",
+            "nota": "Carbon Edition",
+            "desde": 2024
           }
         ]
       },
@@ -939,16 +992,21 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 40 kWh"
+            "nota": "Batería de 40 kWh",
+            "desde": 2019,
+            "hasta": 2023
           }
         ]
       },
       "March": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2011,
+            "hasta": 2023,
+            "nota": "único motor en todo el rango · confirmado"
           }
         ]
       },
@@ -984,11 +1042,14 @@
         ]
       },
       "Versa": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2012,
+            "hasta": 2027,
+            "nota": "único motor en todo el rango · confirmado"
           }
         ]
       },
@@ -1052,15 +1113,17 @@
         ]
       },
       "Logan": {
-        "fuente": "verificado",
+        "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.6-8V",
-            "nombre": "1.6 8V · 85 hp"
+            "nombre": "1.6 8V · 85 hp",
+            "nota": "falta desde que año va cada uno"
           },
           {
             "id": "1.6-16V",
-            "nombre": "1.6 16V · 105-113 hp"
+            "nombre": "1.6 16V · 105-113 hp",
+            "nota": "falta desde que año va cada uno"
           }
         ]
       },
@@ -1071,7 +1134,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 60 kWh"
+            "nota": "Batería de 60 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -1089,28 +1154,32 @@
         ]
       },
       "Sandero": {
-        "fuente": "verificado",
+        "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.6-8V",
-            "nombre": "1.6 8V · 85 hp"
+            "nombre": "1.6 8V · 85 hp",
+            "nota": "falta desde que año va cada uno"
           },
           {
             "id": "1.6-16V",
-            "nombre": "1.6 16V · 105-113 hp"
+            "nombre": "1.6 16V · 105-113 hp",
+            "nota": "falta desde que año va cada uno"
           }
         ]
       },
       "Stepway": {
-        "fuente": "verificado",
+        "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.6-8V",
-            "nombre": "1.6 8V · 85 hp"
+            "nombre": "1.6 8V · 85 hp",
+            "nota": "falta desde que año va cada uno"
           },
           {
             "id": "1.6-16V",
-            "nombre": "1.6 16V · 105-113 hp"
+            "nombre": "1.6 16V · 105-113 hp",
+            "nota": "falta desde que año va cada uno"
           }
         ]
       },
@@ -1139,7 +1208,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 52 kWh"
+            "nota": "Batería de 52 kWh",
+            "desde": 2020,
+            "hasta": 2023
           }
         ]
       }
@@ -1370,7 +1441,9 @@
           {
             "id": "1.5HV",
             "nombre": "1.5 Híbrido · 1490 cc",
-            "nota": "HEV XS y XLS, la única que entró"
+            "nota": "HEV XS y XLS, la única que entró",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       }
@@ -1481,7 +1554,9 @@
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
-            "nota": "Batería de 51 kWh"
+            "nota": "Batería de 51 kWh",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       }

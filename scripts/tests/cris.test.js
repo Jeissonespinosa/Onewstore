@@ -15,7 +15,8 @@ const corte = src.slice(src.indexOf('const norm ='), src.indexOf('export default
 const codigo = corte.split('\n').filter(l => !l.startsWith('import')).join('\n')
 eval(codigo + '\nglobal.norm=norm; global.toks=toks; global.seccionDe=seccionDe;' +
      'global.construirIndice=construirIndice; global.buscarCategoria=buscarCategoria;' +
-     'global.medidaLlanta=medidaLlanta; global.vehiculoAplica=vehiculoAplica;')
+     'global.medidaLlanta=medidaLlanta; global.vehiculoAplica=vehiculoAplica;' +
+     'global.modelosQueCalzan=modelosQueCalzan;')
 
 let fallos = 0
 function prueba(nombre, real, esperado) {
@@ -114,6 +115,52 @@ prueba('se encontro enviar()', enviar !== null, true)
 prueba('enviar() no guarda el vehiculo', /\bguardar\(/.test(enviar || 'guardar('), false)
 const elegirPaso = cuerpo('elegirPaso')
 prueba('elegirPaso() si guarda (es deliberado)', /\bguardar\(/.test(elegirPaso || ''), true)
+
+console.log('\n=== el modelo sin la marca ===')
+/* "frenos corolla", no "frenos toyota corolla": asi escribe la gente.
+   modeloCoincide vive en vehiculo.js y es el mismo comparador que usa el
+   panel del header, por eso entiende apodos y nombres sin guion. */
+const vehSrc = fs.readFileSync('react/vehiculo.js', 'utf8')
+eval(vehSrc.split('\n').filter(l => !l.startsWith('import')).join('\n')
+  .replace(/^export (const|function|default) /gm, '$1 ')
+  .replace(/^export /gm, '') + '\nglobal.modeloCoincide = modeloCoincide;')
+
+const vocabDe = sec => {
+  const v = new Set()
+  construirIndice(sec === 'motos' ? 'motos' : 'carros').forEach(e =>
+    e.palabras.forEach(w => v.add(w)))
+  return v
+}
+const vocab = { carros: vocabDe('carros'), motos: vocabDe('motos') }
+const calza = (sec, frase) => modelosQueCalzan(
+  vehiculos[sec], toks(frase), vocab[sec],
+  (m, mo, pal) => modeloCoincide(sec, m, mo, pal)
+)
+const marcasDe = (sec, frase) => calza(sec, frase).map(c => c.marca + ' ' + c.modelo)
+
+prueba('"frenos corolla" lee el Corolla primero',
+  marcasDe('carros', 'frenos corolla')[0], 'Toyota Corolla')
+prueba('y ofrece tambien el Corolla Cross, que es otro carro',
+  marcasDe('carros', 'frenos corolla').indexOf('Toyota Corolla Cross') > 0, true)
+prueba('"pastillas morning" lee el Picanto por el apodo',
+  marcasDe('carros', 'pastillas morning'), ['Kia Picanto'])
+prueba('"amortiguadores cx5" encuentra el CX-5 sin guion',
+  marcasDe('carros', 'amortiguadores cx5')[0], 'Mazda CX-5')
+
+/* Lo importante: cuando el nombre es de varias marcas NO se adivina. */
+prueba('"frenos swift" ofrece Chevrolet y Suzuki',
+  Array.from(new Set(calza('carros', 'frenos swift').map(c => c.marca))).sort(),
+  ['Chevrolet', 'Suzuki'])
+/* Este es el que estaba mal con la regla vieja: la Nissan se llama
+   "Frontier NP300" y pedia esas dos palabras, asi que "frontier" solo
+   encontraba la Kia y el cliente de la Nissan ni se enteraba. */
+prueba('"frenos frontier" ofrece la Nissan tambien',
+  calza('carros', 'frenos frontier').some(c => c.marca === 'Nissan'), true)
+
+prueba('"pastillas ns160" lee la Pulsar 160 NS',
+  marcasDe('motos', 'pastillas ns160'), ['Bajaj Pulsar 160 NS'])
+prueba('una categoria sola no lee ningun carro', calza('carros', 'frenos'), [])
+prueba('una frase vacia tampoco', calza('carros', ''), [])
 
 console.log('\n=== lo que un electrico NO lleva ===')
 const nodo = ruta => indice.nodos.find(n => n.path === ruta)

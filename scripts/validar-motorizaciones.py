@@ -13,6 +13,9 @@ Tres formas de que esto quede mal en silencio, y las tres se revisan:
   4. Dos motores que ese año se ven IGUAL en pantalla. Si el Picanto 2011
      muestra dos opciones con el mismo rotulo, el cliente escoge a la suerte
      y la pieza llega mala igual que si no hubieramos preguntado.
+  5. Un motor VERIFICADO sin ventana de año. El año va en todos, incluso
+     cuando el motor nunca cambio: "de 2010 a 2023" es un dato; "sin año"
+     es un dato que falta.
 
 Sale con codigo 1 si algo esta mal, para que el CI lo atrape.
 """
@@ -98,21 +101,27 @@ print('%d modelos · %d motorizaciones' % (n_mod, n_mot))
 print('  %d no preguntan nada (un solo motor)' % len(un_motor))
 print('  %d por confirmar contra catalogo de distribuidor' % len(por_confirmar))
 
-# Aviso, no error: modelos que abarcan varias generaciones y cuyos motores
-# no tienen ventana de año. Ahi es donde mas facil se cuela la pieza mala.
-anchos = []
+# 5. El año es requisito de TODAS: un motor sin desde/hasta es un motor que
+#    se ofrece en años en los que a lo mejor no existio. En los verificados es
+#    un error; en los que faltan por confirmar es la cuenta de lo que falta.
+#    Cuando el motor es uno solo y no cambio nunca, el año igual se escribe:
+#    "de 2010 a 2023" es un dato confirmado, "sin año" es un dato que falta.
+sin_ano_ok = []
+sin_ano_falta = []
 for marca, modelos in motor['carros'].items():
     for modelo, info in modelos.items():
-        rango = base['carros'].get(marca, {}).get(modelo)
-        if not rango:
+        faltan = [mo['id'] for mo in info['motores']
+                  if not mo.get('desde') and not mo.get('hasta')]
+        if not faltan:
             continue
-        con_ano = [mo for mo in info['motores'] if mo.get('desde') or mo.get('hasta')]
-        if rango[1] - rango[0] >= 8 and not con_ano:
-            anchos.append('%s %s (%d-%d, %d motor%s sin año)'
-                          % (marca, modelo, rango[0], rango[1], len(info['motores']),
-                             'es' if len(info['motores']) != 1 else ''))
-if anchos:
-    print('  %d sin ventana de año abarcando 8 años o mas' % len(anchos))
+        linea = '%s %s · %s' % (marca, modelo, ', '.join(faltan))
+        if info['fuente'] == 'verificado':
+            fallas.append('%s sin ventana de año, y esta marcado verificado' % linea)
+        else:
+            sin_ano_falta.append(linea)
+
+if sin_ano_falta:
+    print('  %d modelos con algun motor sin ventana de año' % len(sin_ano_falta))
 
 if sin:
     print('\nMODELOS RANKEADOS SIN MOTORIZACION (%d) — se escapan:' % len(sin))

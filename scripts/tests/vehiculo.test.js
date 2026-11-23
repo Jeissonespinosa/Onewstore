@@ -154,8 +154,11 @@ prueba('Picanto 2008 era el 1.1',
 prueba('y con uno solo NO se pregunta', pideMotor('carros','Kia','Picanto','2008'), false)
 
 // El 1.6 de Renault no es uno: 8V y 16V llevan correa y bujias distintas.
-prueba('Sandero distingue 8V de 16V',
-  motoresDe('carros','Renault','Sandero','2018').map(m => m.id).sort(), ['1.6-16V','1.6-8V'])
+/* El Sandero tiene 8V y 16V, pero no sabemos desde que año va cada uno, y
+   sin el año el motor no se puede ofrecer: diria que un Sandero 2024 puede
+   ser 8V sin que nadie lo haya comprobado. Se queda por confirmar. */
+prueba('el Sandero no se ofrece mientras le falte el año',
+  motoresDe('carros','Renault','Sandero','2018'), [])
 
 // Lo que NO debe preguntar
 prueba('una moto nunca', pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), false)
@@ -243,6 +246,26 @@ prueba('en 2011 cada opcion dice de que generacion es',
   motoresDe('carros', 'Kia', 'Picanto', '2011').every(m => !!m.nota), true)
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
+
+console.log('\n=== el año va en todos ===')
+/* Regla nueva: un motor verificado SIN ventana de año no existe. "De 2010 a
+   2023" es un dato confirmado; "sin año" es un dato que falta. */
+const verificados = []
+Object.keys(motorizaciones.carros).forEach(ma => {
+  Object.keys(motorizaciones.carros[ma]).forEach(mo => {
+    const f = motorizaciones.carros[ma][mo]
+    if (f.fuente === 'verificado') verificados.push([ma, mo, f])
+  })
+})
+const sinAno = verificados
+  .filter(([, , f]) => f.motores.some(x => !x.desde && !x.hasta))
+  .map(([ma, mo]) => ma + ' ' + mo)
+prueba('ningun verificado tiene motores sin año', sinAno, [])
+prueba('y hay verificados de verdad', verificados.length > 10, true)
+prueba('el Spark GT quedo con su rango completo',
+  motoresDe('carros', 'Chevrolet', 'Spark GT', '2015').map(m => m.id), ['1.2'])
+prueba('y fuera de su rango no ofrece nada',
+  motoresDe('carros', 'Chevrolet', 'Spark GT', '2026'), [])
 
 console.log('\n=== el carro electrico ===')
 prueba('el Spark EUV es electrico', esElectrico('carros', 'Chevrolet', 'Spark EUV'), true)

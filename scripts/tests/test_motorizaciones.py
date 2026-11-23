@@ -28,7 +28,7 @@ class TestMotorizaciones(unittest.TestCase):
         """El cilindraje de una moto ya va en el nombre: Pulsar 160, XTZ 150.
         Preguntarlo seria un paso de mas que no cambia la pieza."""
         import json
-        with open(os.path.join(REPO, 'catalogo', 'motorizaciones.json'), encoding='utf-8') as fh:
+        with open(os.path.join(REPO, 'react', 'data', 'motorizaciones.json'), encoding='utf-8') as fh:
             d = json.load(fh)
         self.assertNotIn('motos', d, 'las motos no deben tener motorizaciones')
 

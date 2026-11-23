@@ -160,6 +160,14 @@ export const nombreDe = v => {
 }
 export const completoDe = v => (v && v.ano ? nombreDe(v) + ' · ' + v.ano : nombreDe(v))
 
+/* El motor va pegado al nombre: "Toyota Corolla 1.8 Híbrido". Dos Corolla
+   del mismo año llevan piezas distintas, asi que el nombre tiene que
+   distinguirlos o la lista de vehiculos muestra dos renglones iguales. */
+export const nombreConMotor = v => {
+  const n = nombreDe(v)
+  return v && v.motor ? n + ' ' + v.motor : n
+}
+
 /* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:
    que las marcas que Cris ofrece de entrada sean las que la gente de verdad
    tiene, y que al escribir "to" salga Toyota antes que Tata. Lo que no esta
@@ -276,4 +284,48 @@ export function rutaDe(route) {
   if (dpto) return '/' + dpto
   if (typeof window !== 'undefined' && window.location) return window.location.pathname
   return (r.path || '').split('?')[0]
+}
+
+/* ------------------------------------------------------------------
+   Motorizaciones.
+
+   Solo se le pregunta el motor a quien de verdad lo necesita:
+
+     - la seccion es carros (en motos el cilindraje ya va en el nombre
+       del modelo: Pulsar 160, XTZ 150)
+     - el modelo esta en la tabla y marcado "verificado"
+     - a ese modelo y ESE AÑO le corresponde mas de un motor
+
+   Lo demas se salta el paso. Un modelo con un solo motor no gana nada
+   preguntando, y uno sin verificar podria ofrecer un motor que no
+   existio: preferimos no preguntar a preguntar mal.
+   ------------------------------------------------------------------ */
+import motorizaciones from './data/motorizaciones.json'
+
+/* Mientras la tabla se confirma contra un catalogo de distribuidor, solo
+   los verificados preguntan. Subir esto a true abre los 93 de golpe. */
+const SOLO_VERIFICADOS = true
+
+export function motoresDe(seccion, marca, modelo, ano) {
+  if (seccion !== 'carros' || !marca || !modelo) return []
+  const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
+  if (!ficha) return []
+  if (SOLO_VERIFICADOS && ficha.fuente !== 'verificado') return []
+  const y = Number(ano)
+  return (ficha.motores || []).filter(m => {
+    if (!y) return true
+    if (m.desde && y < m.desde) return false
+    if (m.hasta && y > m.hasta) return false
+    return true
+  })
+}
+
+/* ¿Hay que mostrar el paso? Solo si hay mas de uno donde elegir. */
+export const pideMotor = (seccion, marca, modelo, ano) =>
+  motoresDe(seccion, marca, modelo, ano).length > 1
+
+export const nombreMotor = (seccion, marca, modelo, id) => {
+  if (!id) return ''
+  const m = motoresDe(seccion, marca, modelo, null).find(x => x.id === id)
+  return m ? m.nombre : id
 }

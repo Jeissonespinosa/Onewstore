@@ -30,7 +30,8 @@ import { useCssHandles } from 'vtex.css-handles'
 import vehiculos from './data/vehiculos-colombia.json'
 import {
   seccionDe, rutaDe, leerEstado, escribirEstado, suscribirEstado,
-  nombreDe, posMarca, posModelo, alPedirAbrir, MAX_VEHICULOS,
+  nombreDe, nombreConMotor, posMarca, posModelo, alPedirAbrir, MAX_VEHICULOS,
+  motoresDe, pideMotor,
 } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoHeader', 'vehiculoBoton', 'vehiculoPanel']
@@ -58,6 +59,7 @@ export default function VehiculoHeader({
   const [pop, setPop] = useState(false)
   const [marca, setMarca] = useState(null)
   const [modelo, setModelo] = useState(null)
+  const [ano, setAno] = useState(null)
   const relojes = useRef([])
   const boton = useRef(null)
 
@@ -101,7 +103,7 @@ export default function VehiculoHeader({
   const lista = estado.lista || []
   const activo = lista[estado.activo] || null
   const hay = !!activo
-  const nombre = nombreDe(activo)
+  const nombre = nombreConMotor(activo)
   const lleno = lista.length >= MAX_VEHICULOS
 
   /* Queda guardado: el cuadro viaja al icono y el icono acusa recibo. */
@@ -131,11 +133,24 @@ export default function VehiculoHeader({
     setModo(comoModo)
     setMarca(null)
     setModelo(null)
+    setAno(null)
     setVista('marca')
   }
 
+  /* El año no siempre es el ultimo paso: si ese modelo y ese año tienen mas
+     de un motor, falta uno. Dos Corolla 2021 llevan filtro distinto segun
+     sean 1.8 hibrido o 2.0. */
+  const trasElAno = y => {
+    setAno(y)
+    if (pideMotor(seccion, marca, modelo, y)) {
+      setVista('motor')
+      return
+    }
+    guardar({ marca, modelo, ano: y })
+  }
+
   const cerrar = () => setVista(null)
-  const esPaso = vista === 'marca' || vista === 'modelo' || vista === 'ano'
+  const esPaso = vista === 'marca' || vista === 'modelo' || vista === 'ano' || vista === 'motor'
 
   let titulo = 'Mis vehículos'
   let opciones = []
@@ -161,7 +176,14 @@ export default function VehiculoHeader({
     opciones = anos.map(y => ({
       clave: y,
       texto: y,
-      elegir: () => guardar({ marca, modelo, ano: y }),
+      elegir: () => trasElAno(y),
+    }))
+  } else if (vista === 'motor') {
+    titulo = '¿Qué motor tiene?'
+    opciones = motoresDe(seccion, marca, modelo, ano).map(mo => ({
+      clave: mo.id,
+      texto: mo.nombre,
+      elegir: () => guardar({ marca, modelo, ano, motor: mo.id }),
     }))
   }
 
@@ -408,15 +430,17 @@ export default function VehiculoHeader({
                   </button>
                 ))}
               </div>
-              {vista === 'ano' ? (
+              {vista === 'ano' || vista === 'motor' ? (
                 <button
                   type="button"
                   style={{ marginTop: '12px', border: 0, background: 'transparent', color: RED,
                     fontSize: '12.5px', fontWeight: 700, cursor: 'pointer', padding: '6px 0',
                     fontFamily: 'inherit' }}
-                  onClick={() => guardar({ marca, modelo, ano: null })}
+                  onClick={() => (vista === 'motor'
+                    ? guardar({ marca, modelo, ano, motor: null })
+                    : trasElAno(null))}
                 >
-                  No sé el año
+                  {vista === 'motor' ? 'No sé cuál es' : 'No sé el año'}
                 </button>
               ) : null}
             </div>
@@ -434,15 +458,15 @@ export default function VehiculoHeader({
                       className={`rx-veh__ficha ${esActivo ? 'rx-veh__ficha--activo' : ''}`}
                       aria-pressed={esActivo}
                       aria-label={esActivo
-                        ? `${nombreDe(v)}, filtrando la tienda`
-                        : `Filtrar la tienda por ${nombreDe(v)}`}
+                        ? `${nombreConMotor(v)}, filtrando la tienda`
+                        : `Filtrar la tienda por ${nombreConMotor(v)}`}
                       onClick={esActivo ? undefined : () => activar(i)}
                     >
                       <span className="rx-veh__disco">
                         {iconoCarro(esActivo ? '#FFFFFF' : RED, 21, 15)}
                       </span>
                       <span style={{ flexGrow: 1, minWidth: 0 }}>
-                        <span className="rx-veh__nom">{nombreDe(v)}</span>
+                        <span className="rx-veh__nom">{nombreConMotor(v)}</span>
                         <span className="rx-veh__sub">
                           {v.ano ? `Modelo ${v.ano}` : 'Año sin definir'}
                         </span>

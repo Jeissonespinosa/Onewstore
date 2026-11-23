@@ -9,6 +9,9 @@
 const fs = require('fs')
 
 const src = fs.readFileSync('react/vehiculo.js', 'utf8')
+/* vehiculo.js importa la tabla de motorizaciones; el eval de abajo quita los
+   imports, asi que se le entrega a mano. */
+const motorizaciones = JSON.parse(fs.readFileSync('react/data/motorizaciones.json', 'utf8'))
 
 /* localStorage de mentira, y un window que solo sirve para no reventar. */
 const almacen = {}
@@ -36,6 +39,8 @@ eval(codigo + `
   global.leer = leer; global.escribir = escribir; global.seccionDe = seccionDe;
   global.rutaDe = rutaDe; global.claveDe = claveDe; global.MAX = MAX_VEHICULOS;
   global.mismoVehiculo = mismoVehiculo; global.nombreDe = nombreDe;
+  global.motoresDe = motoresDe; global.pideMotor = pideMotor;
+  global.nombreConMotor = nombreConMotor;
 `)
 
 let fallos = 0
@@ -129,6 +134,35 @@ prueba('Chevrolet + Onix si se junta',
 prueba('Mazda + CX-5 si se junta',
   nombreDe({ marca: 'Mazda', modelo: 'CX-5' }), 'Mazda CX-5')
 prueba('sin vehiculo, cadena vacia', nombreDe(null), '')
+
+console.log('\n=== a quien se le pregunta el motor ===')
+// Solo a los verificados, y solo cuando ese año tiene mas de uno.
+prueba('Corolla 2021 tiene hibrido y gasolina',
+  motoresDe('carros','Toyota','Corolla','2021').map(m => m.id).sort(), ['1.8HV','2.0'])
+prueba('y por eso se le pregunta', pideMotor('carros','Toyota','Corolla','2021'), true)
+prueba('Corolla 2015 son los viejos',
+  motoresDe('carros','Toyota','Corolla','2015').map(m => m.id).sort(), ['1.6','1.8'])
+prueba('Picanto 2019: 1.0 y 1.25',
+  motoresDe('carros','Kia','Picanto','2019').map(m => m.id).sort(), ['1.0','1.25'])
+prueba('Picanto 2008 era el 1.1',
+  motoresDe('carros','Kia','Picanto','2008').map(m => m.id), ['1.1'])
+prueba('y con uno solo NO se pregunta', pideMotor('carros','Kia','Picanto','2008'), false)
+
+// El 1.6 de Renault no es uno: 8V y 16V llevan correa y bujias distintas.
+prueba('Sandero distingue 8V de 16V',
+  motoresDe('carros','Renault','Sandero','2018').map(m => m.id).sort(), ['1.6-16V','1.6-8V'])
+
+// Lo que NO debe preguntar
+prueba('una moto nunca', pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), false)
+prueba('herramientas tampoco', pideMotor('herramientas','Toyota','Corolla','2021'), false)
+prueba('un modelo sin verificar todavia no', pideMotor('carros','Ford','Ranger','2020'), false)
+prueba('un modelo que no existe no revienta', motoresDe('carros','Nada','Nada','2020'), [])
+
+console.log('\n=== el nombre distingue los dos Corolla ===')
+prueba('con motor', nombreConMotor({marca:'Toyota',modelo:'Corolla',ano:'2021',motor:'1.8HV'}),
+  'Toyota Corolla 1.8HV')
+prueba('sin motor queda igual que antes',
+  nombreConMotor({marca:'Chevrolet',modelo:'Onix',ano:'2022'}), 'Chevrolet Onix')
 
 console.log('\n=== mismoVehiculo ===')
 prueba('igual con el mismo año', mismoVehiculo(onix, { ...onix }), true)

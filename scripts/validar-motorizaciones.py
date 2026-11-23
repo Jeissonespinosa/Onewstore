@@ -17,7 +17,7 @@ import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-motor = json.load(open(os.path.join(ROOT, 'catalogo', 'motorizaciones.json'), encoding='utf-8'))
+motor = json.load(open(os.path.join(ROOT, 'react', 'data', 'motorizaciones.json'), encoding='utf-8'))
 base = json.load(open(os.path.join(ROOT, 'react', 'data', 'vehiculos-colombia.json'), encoding='utf-8'))
 fuente = open(os.path.join(ROOT, 'react', 'vehiculo.js'), encoding='utf-8').read()
 

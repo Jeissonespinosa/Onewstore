@@ -15,7 +15,7 @@ import React, { useEffect, useState } from 'react'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
-import { seccionDe, rutaDe, leer, suscribir, nombreDe, pedirAbrir } from './vehiculo'
+import { seccionDe, rutaDe, leer, suscribir, nombreConMotor, pedirAbrir } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoEnPagina']
 const RED = '#FF371E'
@@ -75,7 +75,7 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
           </>
         )}
       </svg>
-      <span className="rx-vp__nombre">{prefijo} {nombreDe(vehiculo)}</span>
+      <span className="rx-vp__nombre">{prefijo} {nombreConMotor(vehiculo)}</span>
       {vehiculo.ano ? <span className="rx-vp__ano">· {vehiculo.ano}</span> : null}
       <button type="button" className="rx-vp__cambiar" onClick={() => pedirAbrir(seccion)}>
         Cambiar

@@ -75,7 +75,7 @@ def visible(mo):
 
 for marca, modelos in motor['carros'].items():
     for modelo, info in modelos.items():
-        rango = base['carros'].get(marca, {}).get(modelo) or [1990, 2026]
+        rango = base['carros'].get(marca, {}).get(modelo) or [1990, 2027]
         for ano in range(rango[0], rango[1] + 1):
             ofrece = [mo for mo in info['motores']
                       if not (mo.get('desde') and ano < mo['desde'])

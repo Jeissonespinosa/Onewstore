@@ -41,7 +41,11 @@ eval(codigo + `
   global.mismoVehiculo = mismoVehiculo; global.nombreDe = nombreDe;
   global.motoresDe = motoresDe; global.pideMotor = pideMotor;
   global.nombreConMotor = nombreConMotor;
+  global.modeloCoincide = modeloCoincide; global.esVersion = esVersion;
+  global.plano = plano; global.VERSIONES = VERSIONES; global.APODOS = APODOS;
 `)
+
+const base = JSON.parse(fs.readFileSync('react/data/vehiculos-colombia.json', 'utf8'))
 
 let fallos = 0
 function prueba(nombre, real, esperado) {
@@ -163,6 +167,47 @@ prueba('con motor', nombreConMotor({marca:'Toyota',modelo:'Corolla',ano:'2021',m
   'Toyota Corolla 1.8HV')
 prueba('sin motor queda igual que antes',
   nombreConMotor({marca:'Chevrolet',modelo:'Onix',ano:'2022'}), 'Chevrolet Onix')
+
+console.log('\n=== encontrar el modelo escribiendo ===')
+const cal = (marca, modelo, q) => modeloCoincide('carros', marca, modelo, q)
+prueba('"yar" encuentra la Yaris Cross', cal('Toyota', 'Yaris Cross', 'yar'), true)
+prueba('la Yaris Cross existe en la base',
+  !!base.carros.Toyota['Yaris Cross'], true)
+prueba('"morning" lleva al Picanto', cal('Kia', 'Picanto', 'morning'), true)
+prueba('"ion" tambien', cal('Kia', 'Picanto', 'ion'), true)
+prueba('"spice" lleva al Rio', cal('Kia', 'Rio', 'spice'), true)
+prueba('"megane" sin tilde encuentra el Mégane', cal('Renault', 'Mégane', 'megane'), true)
+prueba('no confunde: "morning" no trae el Rio', cal('Kia', 'Rio', 'morning'), false)
+prueba('sin texto pasan todos', cal('Kia', 'Rio', ''), true)
+
+console.log('\n=== versiones, que no son modelos ===')
+prueba('zenith es version de Kia', esVersion('Kia', 'zenith'), 'Zenith')
+prueba('ltz es version de Chevrolet', esVersion('Chevrolet', 'ltz'), 'LTZ')
+prueba('picanto NO es version', esVersion('Kia', 'picanto'), null)
+prueba('una letra sola no dispara el aviso', esVersion('Kia', 'z'), null)
+/* Si una palabra de VERSIONES fuera tambien un modelo de verdad, le
+   estariamos diciendo "eso es una version" a alguien que escribio bien. */
+const choques = []
+Object.keys(VERSIONES).forEach(marca => {
+  const modelos = Object.keys(base.carros[marca] || {}).map(plano)
+  VERSIONES[marca].forEach(v => {
+    if (modelos.includes(plano(v))) choques.push(marca + ' ' + v)
+  })
+})
+prueba('ninguna version choca con un modelo real', choques, [])
+/* Lo mismo al reves: un apodo tiene que apuntar a un modelo que exista. */
+const huerfanos = []
+Object.keys(APODOS.carros).forEach(marca => {
+  Object.keys(APODOS.carros[marca]).forEach(modelo => {
+    if (!(base.carros[marca] || {})[modelo]) huerfanos.push(marca + ' ' + modelo)
+  })
+})
+prueba('ningun apodo apunta a un modelo que no existe', huerfanos, [])
+
+console.log('\n=== los modelos 2027 ===')
+prueba('el Onix llega a 2027', base.carros.Chevrolet.Onix[1], 2027)
+prueba('la Yaris Cross arranca en 2022', base.carros.Toyota['Yaris Cross'][0], 2022)
+prueba('lo descontinuado no se movio', base.carros.Chevrolet.Sail[1], 2020)
 
 console.log('\n=== el Picanto año por año ===')
 const ids = (ano) => motoresDe('carros', 'Kia', 'Picanto', ano).map(m => m.id)

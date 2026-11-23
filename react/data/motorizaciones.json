@@ -619,16 +619,25 @@
         "motores": [
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc"
+            "nombre": "2.0 · 1999 cc",
+            "nota": "Desire y versiones de entrada"
           },
           {
             "id": "2.0D",
-            "nombre": "2.0 CRDi Diésel · 1995 cc"
+            "nombre": "2.0 CRDi Diésel · 1995 cc",
+            "nota": "por confirmar qué años entraron"
           },
           {
             "id": "1.6T",
             "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "Vibrant",
             "desde": 2022
+          },
+          {
+            "id": "1.6T-HEV",
+            "nombre": "1.6 Turbo Híbrido · 1598 cc",
+            "nota": "Zenith HEV",
+            "desde": 2025
           }
         ]
       }
@@ -1157,6 +1166,16 @@
           {
             "id": "4.0",
             "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      },
+      "Yaris Cross": {
+        "fuente": "verificado",
+        "motores": [
+          {
+            "id": "1.5HV",
+            "nombre": "1.5 Híbrido · 1490 cc",
+            "nota": "HEV XS y XLS, la única que entró"
           }
         ]
       }

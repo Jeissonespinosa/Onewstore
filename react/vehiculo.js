@@ -184,6 +184,84 @@ export const nombreConMotor = v => {
    que las marcas que Cris ofrece de entrada sean las que la gente de verdad
    tiene, y que al escribir "to" salga Toyota antes que Tata. Lo que no esta
    en la lista conserva el orden alfabetico de la base. */
+/* ---------------------------------------------------------------------------
+   COMO LLAMA EL CLIENTE A SU CARRO
+
+   Dos cosas distintas que la gente escribe y que la base no conoce:
+
+   APODOS son nombres de generacion o de carroceria que SI identifican un
+   modelo: el que dice "Morning" tiene un Picanto, el que dice "Spice" tiene
+   un Rio. Buscarlos lleva al modelo.
+
+   VERSIONES son acabados: Zenith, Vibrant, Summa, LTZ. Van en media marca a
+   la vez, asi que no sirven para escoger el carro. Pero el cliente los lee en
+   la LINEA de su tarjeta de propiedad y los escribe. A ese hay que decirle
+   que eso es la version, no el modelo, en vez de dejarle la lista vacia.
+   --------------------------------------------------------------------------- */
+export const APODOS = {
+  carros: {
+    Kia: {
+      Picanto: ['Morning', 'Ion', 'X-Line', 'XTreme', 'X-Treme'],
+      Rio: ['Spice', 'Xcite', 'Stylus'],
+    },
+    Chevrolet: {
+      Aveo: ['Aveo Family'],
+      'Spark GT': ['Spark'],
+      Joy: ['Beat'],
+    },
+    Renault: {
+      Stepway: ['Sandero Stepway'],
+      Kwid: ['Kwid Outsider', 'Kwid E-Tech'],
+    },
+    Hyundai: {
+      'Grand i10': ['i10 Grand', 'Grand i10 Sedan'],
+      Accent: ['Accent Vision', 'Verna'],
+    },
+    Toyota: {
+      'Yaris Cross': ['Yaris Cross HEV'],
+      Hilux: ['Hilux SRV', 'Hilux Revo'],
+    },
+  },
+  motos: {},
+}
+
+export const VERSIONES = {
+  Kia: ['Zenith', 'Vibrant', 'Desire', 'Emotion', 'Summa', 'GT Line'],
+  Chevrolet: ['LS', 'LT', 'LTZ', 'Premier', 'Activ', 'RS'],
+  Renault: ['Life', 'Zen', 'Intens', 'Iconic', 'Dynamique', 'Expression'],
+  Toyota: ['XS', 'XLS', 'XEI', 'SRV', 'SR', 'Limited', 'Seg'],
+  Mazda: ['Prime', 'Touring', 'Grand Touring', 'Carbon'],
+  Nissan: ['Sense', 'Advance', 'Exclusive', 'Platinum'],
+  Suzuki: ['GL', 'GLX', 'Delta'],
+  Hyundai: ['GL', 'GLS', 'Premium', 'Limited'],
+}
+
+/* Sin tildes y en minuscula: nadie escribe "Mégane" con tilde en el celular. */
+export const plano = t => String(t || '')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
+
+const apodosDe = (seccion, marca, modelo) =>
+  (((APODOS[seccion] || {})[marca] || {})[modelo] || [])
+
+/* Un modelo responde a lo que escribieron si lo dice su nombre o uno de sus
+   apodos. "yar" trae Yaris, Yaris Cross y Yaris Hatchback; "morning" trae
+   Picanto aunque esa palabra no este en la base. */
+export function modeloCoincide(seccion, marca, modelo, texto) {
+  const q = plano(texto)
+  if (!q) return true
+  if (plano(modelo).includes(q)) return true
+  return apodosDe(seccion, marca, modelo).some(a => plano(a).includes(q))
+}
+
+/* Si lo que escribieron es un acabado, devuelve como se escribe de verdad,
+   para poder explicarselo. Null si no lo es. */
+export function esVersion(marca, texto) {
+  const q = plano(texto)
+  if (q.length < 2) return null
+  const lista = VERSIONES[marca] || []
+  return lista.find(v => plano(v) === q || plano(v).startsWith(q)) || null
+}
+
 export const RANK_MARCAS = {
   carros: [
     'Chevrolet', 'Renault', 'Mazda', 'Kia', 'Toyota', 'Nissan', 'Suzuki',

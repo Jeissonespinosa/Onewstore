@@ -31,7 +31,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 import {
   seccionDe, rutaDe, leerEstado, escribirEstado, suscribirEstado,
   nombreDe, nombreConMotor, posMarca, posModelo, alPedirAbrir, MAX_VEHICULOS,
-  motoresDe, pideMotor,
+  motoresDe, pideMotor, modeloCoincide, esVersion, plano, VERSIONES,
 } from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoHeader', 'vehiculoBoton', 'vehiculoPanel']
@@ -60,6 +60,8 @@ export default function VehiculoHeader({
   const [marca, setMarca] = useState(null)
   const [modelo, setModelo] = useState(null)
   const [ano, setAno] = useState(null)
+  const [busca, setBusca] = useState('')
+  const [guia, setGuia] = useState(null)   // 'ano' | 'motor': que campo busca
   const relojes = useRef([])
   const boton = useRef(null)
 
@@ -134,6 +136,7 @@ export default function VehiculoHeader({
     setMarca(null)
     setModelo(null)
     setAno(null)
+    setBusca('')
     setVista('marca')
   }
 
@@ -151,26 +154,37 @@ export default function VehiculoHeader({
 
   const cerrar = () => setVista(null)
   const esPaso = vista === 'marca' || vista === 'modelo' || vista === 'ano' || vista === 'motor'
+  const enGuia = vista === 'guia'
 
   let titulo = 'Mis vehículos'
   let opciones = []
+  let cuantas = 0          // cuantas habia antes de filtrar
+  let acabado = null       // escribio una version en vez de un modelo
   if (vista === 'marca') {
     titulo = '¿De qué marca es?'
-    opciones = marcas.map(m => ({
-      clave: m,
-      texto: m,
-      elegir: () => { setMarca(m); setModelo(null); setVista('modelo') },
-    }))
+    cuantas = marcas.length
+    opciones = marcas
+      .filter(m => plano(m).includes(plano(busca)))
+      .map(m => ({
+        clave: m,
+        texto: m,
+        elegir: () => { setMarca(m); setModelo(null); setBusca(''); setVista('modelo') },
+      }))
   } else if (vista === 'modelo') {
     titulo = `¿Qué ${marca} tienes?`
-    opciones = modelosDe(marca).map(m => ({
-      clave: m,
-      texto: m,
-      elegir: () => { setModelo(m); setVista('ano') },
-    }))
+    const todos = modelosDe(marca)
+    cuantas = todos.length
+    acabado = esVersion(marca, busca)
+    opciones = todos
+      .filter(m => modeloCoincide(seccion, marca, m, busca))
+      .map(m => ({
+        clave: m,
+        texto: m,
+        elegir: () => { setModelo(m); setBusca(''); setVista('ano') },
+      }))
   } else if (vista === 'ano') {
     titulo = '¿De qué año es?'
-    const rango = (base[marca] || {})[modelo] || [1990, 2026]
+    const rango = (base[marca] || {})[modelo] || [1990, 2027]
     const anos = []
     for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
     opciones = anos.map(y => ({
@@ -178,6 +192,8 @@ export default function VehiculoHeader({
       texto: y,
       elegir: () => trasElAno(y),
     }))
+  } else if (vista === 'guia') {
+    titulo = guia === 'motor' ? '¿Dónde dice el motor?' : '¿Dónde dice el año?'
   } else if (vista === 'motor') {
     titulo = '¿Qué motor tiene?'
     opciones = motoresDe(seccion, marca, modelo, ano).map(mo => ({
@@ -186,6 +202,22 @@ export default function VehiculoHeader({
       nota: mo.nota,
       elegir: () => guardar({ marca, modelo, ano, motor: mo.id }),
     }))
+  }
+
+  /* Una fila de la tarjeta de propiedad dibujada. */
+  const campoTp = (etiqueta, valor, encendido) => (
+    <div className={`rx-veh__tp-fila${encendido ? ' rx-veh__tp-fila--luz' : ''}`}>
+      <span className="rx-veh__tp-et">{etiqueta}</span>
+      <span className="rx-veh__tp-va">{valor}</span>
+    </div>
+  )
+
+  /* El cilindraje de ejemplo sale de los motores que ese carro puede tener,
+     para que el numero de la tarjeta calce con lo que acaba de ver. */
+  const ccEjemplo = () => {
+    const ms = motoresDe(seccion, marca, modelo, ano)
+    const con = ms.map(m => (m.nombre.match(/(\d{3,4})\s*cc/) || [])[1]).filter(Boolean)
+    return con[0] || '1248'
   }
 
   /* En /motos el icono es una moto. Mismo viewBox y mismo trazo redondo que
@@ -311,6 +343,37 @@ export default function VehiculoHeader({
       color: #6B6B70; margin-top: 2px }
     .rx-veh__chip--nota:hover .rx-veh__nota { color: ${RED} }
 
+    .rx-veh__buscar { width: 100%; box-sizing: border-box; margin-bottom: 8px;
+      border: 1.5px solid rgba(1,1,1,.12); border-radius: 12px; padding: 9px 12px;
+      font-size: 13px; font-family: inherit; font-weight: 600; color: ${INK};
+      background: #fff }
+    .rx-veh__buscar:focus { outline: 0; border-color: ${RED} }
+    .rx-veh__buscar::placeholder { color: #9A9AA2; font-weight: 500 }
+    .rx-veh__nada { font-size: 12.5px; color: #55555C; line-height: 1.5; padding: 4px 0 2px }
+    .rx-veh__nada b { color: ${INK} }
+
+    /* La tarjeta de propiedad dibujada. No es una foto: es el esqueleto del
+       documento con el campo que buscamos encendido. Lo que confunde a todo
+       el mundo es que el AÑO en la tarjeta se llama MODELO. */
+    .rx-veh__tp { border: 1.5px solid rgba(1,1,1,.14); border-radius: 12px;
+      overflow: hidden; background: #fff }
+    .rx-veh__tp-cab { background: #F2F2F4; padding: 7px 10px; display: flex;
+      align-items: center; justify-content: space-between; gap: 8px }
+    .rx-veh__tp-cab span { font-size: 8.5px; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase; color: #6B6B70 }
+    .rx-veh__tp-placa { font-size: 10px; font-weight: 800; letter-spacing: .1em;
+      color: ${INK} }
+    .rx-veh__tp-fila { display: flex; align-items: baseline; gap: 8px;
+      padding: 6px 10px; border-top: 1px solid rgba(1,1,1,.07) }
+    .rx-veh__tp-et { font-size: 8.5px; font-weight: 800; letter-spacing: .07em;
+      text-transform: uppercase; color: #9A9AA2; width: 74px; flex-shrink: 0 }
+    .rx-veh__tp-va { font-size: 11.5px; font-weight: 700; color: ${INK} }
+    .rx-veh__tp-fila--luz { background: rgba(255,55,30,.07);
+      box-shadow: inset 2.5px 0 0 ${RED} }
+    .rx-veh__tp-fila--luz .rx-veh__tp-et { color: ${RED} }
+    .rx-veh__tp-pie { font-size: 12.5px; color: #55555C; line-height: 1.5; margin-top: 10px }
+    .rx-veh__tp-pie b { color: ${INK} }
+
     .rx-veh__sumar { width: 100%; margin-top: 12px; padding: 12px 0 0;
       border: 0; border-top: 1px solid rgba(1,1,1,.08); background: none; cursor: pointer;
       display: flex; align-items: center; gap: 8px; font: inherit; font-size: 12.5px;
@@ -432,6 +495,33 @@ export default function VehiculoHeader({
 
           {esPaso ? (
             <div className="rx-veh__cuerpo">
+              {/* Con 74 Chevrolet o 28 Toyota la lista deja de servir para
+                  reconocer: hay que poder escribir. Y lo que escriben no
+                  siempre es el modelo ("morning", "spice"), asi que el
+                  filtro entiende los apodos. */}
+              {(vista === 'marca' || vista === 'modelo') && cuantas > 10 ? (
+                <input
+                  className="rx-veh__buscar"
+                  type="search"
+                  value={busca}
+                  onChange={e => setBusca(e.target.value)}
+                  placeholder={vista === 'marca' ? 'Buscar marca…' : `Buscar ${marca}…`}
+                  aria-label={vista === 'marca' ? 'Buscar marca' : 'Buscar modelo'}
+                />
+              ) : null}
+              {acabado ? (
+                <div className="rx-veh__nada">
+                  <b>{acabado}</b> es una versión, no un modelo. En la tarjeta de propiedad
+                  sale en la LÍNEA, después del modelo. Escribe el modelo: Picanto, Rio,
+                  Sportage.
+                </div>
+              ) : null}
+              {!acabado && busca && opciones.length === 0 ? (
+                <div className="rx-veh__nada">
+                  Ningún {vista === 'marca' ? 'marca' : marca} con ese nombre. Revisa la
+                  LÍNEA de tu tarjeta de propiedad.
+                </div>
+              ) : null}
               <div className="rx-veh__opciones">
                 {opciones.map(o => (
                   <button
@@ -451,9 +541,7 @@ export default function VehiculoHeader({
                   style={{ marginTop: '12px', border: 0, background: 'transparent', color: RED,
                     fontSize: '12.5px', fontWeight: 700, cursor: 'pointer', padding: '6px 0',
                     fontFamily: 'inherit' }}
-                  onClick={() => (vista === 'motor'
-                    ? guardar({ marca, modelo, ano, motor: null })
-                    : trasElAno(null))}
+                  onClick={() => { setGuia(vista); setVista('guia') }}
                 >
                   {vista === 'motor' ? 'No sé cuál es' : 'No sé el año'}
                 </button>
@@ -461,7 +549,62 @@ export default function VehiculoHeader({
             </div>
           ) : null}
 
-          {!esPaso && hay ? (
+          {enGuia ? (
+            <div className="rx-veh__cuerpo">
+              <div className="rx-veh__tp">
+                <div className="rx-veh__tp-cab">
+                  <span>Licencia de tránsito</span>
+                  <span className="rx-veh__tp-placa">ABC 123</span>
+                </div>
+                {campoTp('Marca', (marca || 'Kia').toUpperCase(), false)}
+                {campoTp('Línea', [
+                  (modelo || 'Picanto').toUpperCase(),
+                  ((VERSIONES[marca] || [])[0] || '').toUpperCase(),
+                  'AT',
+                ].filter(Boolean).join(' '), false)}
+                {campoTp('Modelo', ano || '2015', guia === 'ano')}
+                {campoTp('Cilindraje', ccEjemplo(), guia === 'motor')}
+              </div>
+              <p className="rx-veh__tp-pie">
+                {guia === 'ano' ? (
+                  <>
+                    El año es el campo <b>MODELO</b>. Es el que más se confunde: no es el
+                    año en que compraste el carro, y tampoco es la LÍNEA.
+                  </>
+                ) : (
+                  <>
+                    El motor es el <b>CILINDRAJE</b>, en centímetros cúbicos. Es el mismo
+                    número que ves arriba en las opciones: {ccEjemplo()} cc es el{' '}
+                    {(motoresDe(seccion, marca, modelo, ano)[0] || {}).id || '1.25'}.
+                  </>
+                )}
+              </p>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '12px',
+                alignItems: 'center' }}>
+                <button
+                  type="button"
+                  className="rx-veh__chip"
+                  style={{ fontWeight: 700 }}
+                  onClick={() => setVista(guia)}
+                >
+                  Ya lo vi, volver
+                </button>
+                <button
+                  type="button"
+                  style={{ border: 0, background: 'transparent', color: '#6B6B70',
+                    fontSize: '12.5px', fontWeight: 700, cursor: 'pointer', padding: '6px 0',
+                    fontFamily: 'inherit' }}
+                  onClick={() => (guia === 'motor'
+                    ? guardar({ marca, modelo, ano, motor: null })
+                    : trasElAno(null))}
+                >
+                  Seguir sin eso
+                </button>
+              </div>
+            </div>
+          ) : null}
+
+          {!esPaso && !enGuia && hay ? (
             <div className="rx-veh__cuerpo">
               <div className="rx-veh__lista">
                 {lista.map((v, i) => {
@@ -521,7 +664,7 @@ export default function VehiculoHeader({
             </div>
           ) : null}
 
-          {!esPaso && !hay ? (
+          {!esPaso && !enGuia && !hay ? (
             <div className="rx-veh__cuerpo">
               <p className="rx-veh__nota">
                 Todavía no has agregado ninguno. Cuando agregues tu {esMoto ? 'moto' : 'carro'},

@@ -164,6 +164,19 @@ prueba('con motor', nombreConMotor({marca:'Toyota',modelo:'Corolla',ano:'2021',m
 prueba('sin motor queda igual que antes',
   nombreConMotor({marca:'Chevrolet',modelo:'Onix',ano:'2022'}), 'Chevrolet Onix')
 
+console.log('\n=== el Picanto año por año ===')
+const ids = (ano) => motoresDe('carros', 'Kia', 'Picanto', ano).map(m => m.id)
+prueba('2008 es Morning: solo el 1.1', ids('2008'), ['1.1'])
+prueba('2010 igual', ids('2010'), ['1.1'])
+prueba('2011 es el año del cambio: conviven los tres', ids('2011').sort(),
+  ['1.0', '1.1', '1.25'])
+prueba('2012 ya es Ion: se fue el 1.1', ids('2012').sort(), ['1.0', '1.25'])
+prueba('2020 sigue siendo 1.0 y 1.25', ids('2020').sort(), ['1.0', '1.25'])
+prueba('en 2011 cada opcion dice de que generacion es',
+  motoresDe('carros', 'Kia', 'Picanto', '2011').every(m => !!m.nota), true)
+prueba('y esas notas no se repiten',
+  new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
+
 console.log('\n=== mismoVehiculo ===')
 prueba('igual con el mismo año', mismoVehiculo(onix, { ...onix }), true)
 prueba('distinto si cambia el año', mismoVehiculo(onix, { ...onix, ano: '2021' }), false)

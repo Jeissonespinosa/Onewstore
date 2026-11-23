@@ -524,17 +524,20 @@
           {
             "id": "1.1",
             "nombre": "1.1 · 1086 cc",
+            "nota": "Picanto / Morning, primera generación",
             "desde": 2005,
             "hasta": 2011
           },
           {
             "id": "1.0",
             "nombre": "1.0 · 998 cc",
+            "nota": "Picanto Ion en adelante",
             "desde": 2011
           },
           {
             "id": "1.25",
             "nombre": "1.25 · 1248 cc",
+            "nota": "Ion X-Treme, R, X-Line",
             "desde": 2011
           }
         ]
@@ -543,12 +546,23 @@
         "fuente": "por-confirmar",
         "motores": [
           {
+            "id": "1.5",
+            "nombre": "1.5 · 1495 cc",
+            "nota": "Rio viejo (DC), por confirmar",
+            "desde": 2000,
+            "hasta": 2005
+          },
+          {
             "id": "1.4",
-            "nombre": "1.4 · 1368 cc"
+            "nombre": "1.4 · 1368 cc",
+            "nota": "Rio, Rio Spice, Rio Hatchback",
+            "desde": 2006
           },
           {
             "id": "1.6",
-            "nombre": "1.6 · 1591 cc"
+            "nombre": "1.6 · 1591 cc",
+            "nota": "Xcite y versiones altas, por confirmar",
+            "desde": 2006
           }
         ]
       },

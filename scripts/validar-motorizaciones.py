@@ -10,6 +10,9 @@ Tres formas de que esto quede mal en silencio, y las tres se revisan:
      equivocada.
   3. Un motor con años fuera del rango del modelo. Ofreceriamos un motor
      que ese año no existio.
+  4. Dos motores que ese año se ven IGUAL en pantalla. Si el Picanto 2011
+     muestra dos opciones con el mismo rotulo, el cliente escoge a la suerte
+     y la pieza llega mala igual que si no hubieramos preguntado.
 
 Sale con codigo 1 si algo esta mal, para que el CI lo atrape.
 """
@@ -66,6 +69,24 @@ for marca, modelos in motor['carros'].items():
         if len(ids) != len(set(ids)):
             fallas.append('%s %s tiene ids de motor repetidos' % (marca, modelo))
 
+# 4. año por año, lo que se ve en pantalla distingue un motor de otro
+def visible(mo):
+    return (mo['nombre'] + ' · ' + mo.get('nota', '')).strip()
+
+for marca, modelos in motor['carros'].items():
+    for modelo, info in modelos.items():
+        rango = base['carros'].get(marca, {}).get(modelo) or [1990, 2026]
+        for ano in range(rango[0], rango[1] + 1):
+            ofrece = [mo for mo in info['motores']
+                      if not (mo.get('desde') and ano < mo['desde'])
+                      and not (mo.get('hasta') and ano > mo['hasta'])]
+            rotulos = [visible(mo) for mo in ofrece]
+            repes = {r for r in rotulos if rotulos.count(r) > 1}
+            if repes:
+                fallas.append('%s %s %d ofrece dos motores con el mismo rotulo: %s'
+                              % (marca, modelo, ano, ', '.join(sorted(repes))))
+                break
+
 n_mod = sum(len(v) for v in motor['carros'].values())
 n_mot = sum(len(i['motores']) for v in motor['carros'].values() for i in v.values())
 por_confirmar = [(ma, mo) for ma, v in motor['carros'].items()
@@ -76,6 +97,22 @@ un_motor = [(ma, mo) for ma, v in motor['carros'].items()
 print('%d modelos · %d motorizaciones' % (n_mod, n_mot))
 print('  %d no preguntan nada (un solo motor)' % len(un_motor))
 print('  %d por confirmar contra catalogo de distribuidor' % len(por_confirmar))
+
+# Aviso, no error: modelos que abarcan varias generaciones y cuyos motores
+# no tienen ventana de año. Ahi es donde mas facil se cuela la pieza mala.
+anchos = []
+for marca, modelos in motor['carros'].items():
+    for modelo, info in modelos.items():
+        rango = base['carros'].get(marca, {}).get(modelo)
+        if not rango:
+            continue
+        con_ano = [mo for mo in info['motores'] if mo.get('desde') or mo.get('hasta')]
+        if rango[1] - rango[0] >= 8 and not con_ano:
+            anchos.append('%s %s (%d-%d, %d motor%s sin año)'
+                          % (marca, modelo, rango[0], rango[1], len(info['motores']),
+                             'es' if len(info['motores']) != 1 else ''))
+if anchos:
+    print('  %d sin ventana de año abarcando 8 años o mas' % len(anchos))
 
 if sin:
     print('\nMODELOS RANKEADOS SIN MOTORIZACION (%d) — se escapan:' % len(sin))

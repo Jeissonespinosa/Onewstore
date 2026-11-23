@@ -183,6 +183,7 @@ export default function VehiculoHeader({
     opciones = motoresDe(seccion, marca, modelo, ano).map(mo => ({
       clave: mo.id,
       texto: mo.nombre,
+      nota: mo.nota,
       elegir: () => guardar({ marca, modelo, ano, motor: mo.id }),
     }))
   }
@@ -301,6 +302,14 @@ export default function VehiculoHeader({
       border-radius: 999px; padding: 9px 13px; font-size: 13px; font-weight: 600;
       cursor: pointer; min-height: 40px; font-family: inherit }
     .rx-veh__chip:hover { border-color: ${RED}; color: ${RED} }
+    /* Con nota el chip deja de ser pildora: dos renglones no caben redondos.
+       La nota es el nombre comercial con el que la gente reconoce su carro
+       ("Morning", "Ion"), que es mas util que los centimetros cubicos. */
+    .rx-veh__chip--nota { border-radius: 14px; text-align: left; display: block;
+      padding: 8px 13px }
+    .rx-veh__nota { display: block; font-size: 11px; font-weight: 500;
+      color: #6B6B70; margin-top: 2px }
+    .rx-veh__chip--nota:hover .rx-veh__nota { color: ${RED} }
 
     .rx-veh__sumar { width: 100%; margin-top: 12px; padding: 12px 0 0;
       border: 0; border-top: 1px solid rgba(1,1,1,.08); background: none; cursor: pointer;
@@ -425,8 +434,14 @@ export default function VehiculoHeader({
             <div className="rx-veh__cuerpo">
               <div className="rx-veh__opciones">
                 {opciones.map(o => (
-                  <button key={o.clave} type="button" className="rx-veh__chip" onClick={o.elegir}>
+                  <button
+                    key={o.clave}
+                    type="button"
+                    className={`rx-veh__chip${o.nota ? ' rx-veh__chip--nota' : ''}`}
+                    onClick={o.elegir}
+                  >
                     {o.texto}
+                    {o.nota ? <span className="rx-veh__nota">{o.nota}</span> : null}
                   </button>
                 ))}
               </div>

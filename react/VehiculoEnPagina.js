@@ -15,10 +15,22 @@ import React, { useEffect, useState } from 'react'
 import { useRuntime } from 'vtex.render-runtime'
 import { useCssHandles } from 'vtex.css-handles'
 
-import { seccionDe, rutaDe, leer, suscribir, nombreConMotor, pedirAbrir } from './vehiculo'
+import indice from './cris-index.json'
+import {
+  seccionDe, rutaDe, leer, suscribir, nombreConMotor, pedirAbrir, esElectrico,
+} from './vehiculo'
 
 const CSS_HANDLES = ['vehiculoEnPagina']
 const RED = '#FF371E'
+const AMBAR = '#B4690E'
+
+/* El nodo del catalogo al que corresponde esta pagina. En una busqueda libre
+   no hay nodo (la ruta lleva ?_q=...) y no pasa nada: simplemente no avisa. */
+const nodoDe = ruta => {
+  const limpia = String(ruta || '').split('?')[0].replace(/\/+$/, '')
+  if (!limpia) return null
+  return indice.nodos.find(n => n.path === limpia) || null
+}
 
 export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   const handles = useCssHandles(CSS_HANDLES)
@@ -34,6 +46,15 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   }, [seccion])
 
   if (!vehiculo || !vehiculo.marca) return null
+
+  /* Esta categoria no existe en un 100% electrico: filtro de aceite, bujias,
+     correa de reparticion. Cris ya no se la ofrece, pero aqui se puede llegar
+     por el menu o por un enlace, y callarse termina en una devolucion. */
+  const nodo = nodoDe(rutaDe(route))
+  const noLeSirve = !!(
+    nodo && nodo.soloCombustion && esElectrico(seccion, vehiculo.marca, vehiculo.modelo)
+  )
+  const queEs = nodo ? nodo.nombre.toLowerCase() : 'esta categoría'
 
   const css = `
     .rx-vp { display: flex; align-items: center; gap: 6px; margin: 0 0 .75rem;
@@ -52,7 +73,40 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
       .rx-vp__nombre, .rx-vp__ano { font-size: .9375rem }
       .rx-vp__cambiar { font-size: .8125rem }
     }
+
+    /* El aviso no es un error del cliente: es un dato de su carro. Por eso
+       va en ambar y no en rojo, y no esconde los productos — los explica. */
+    .rx-vp--ojo { align-items: flex-start; gap: .5rem; padding: .625rem .75rem;
+      border-radius: .5rem; background: rgba(180,105,14,.07);
+      border-left: 3px solid ${AMBAR} }
+    .rx-vp__texto { font-size: .8125rem; line-height: 1.45; color: #55555C }
+    .rx-vp__texto b { color: #010101; font-weight: 700 }
+    .rx-vp--ojo .rx-vp__cambiar { color: ${AMBAR}; margin-left: 0; padding-left: 0 }
+    @media (min-width: 40rem) {
+      .rx-vp__texto { font-size: .875rem }
+    }
   `
+
+  if (noLeSirve) {
+    return (
+      <div className={`rx-vp rx-vp--ojo ${handles.vehiculoEnPagina || ''}`} role="status">
+        <style>{css}</style>
+        <svg width="16" height="16" viewBox="0 0 22 22" fill="none" stroke={AMBAR}
+          strokeWidth="2" strokeLinecap="round" aria-hidden="true"
+          style={{ flexShrink: 0, marginTop: '.125rem' }}>
+          <circle cx="11" cy="11" r="9" />
+          <path d="M11 6.5v5.5M11 15.2v.1" />
+        </svg>
+        <div className="rx-vp__texto">
+          Tu <b>{nombreConMotor(vehiculo)}</b> es eléctrico y no lleva {queEs}.
+          Lo que ves aquí es para carros de gasolina o diésel.
+          <button type="button" className="rx-vp__cambiar" onClick={() => pedirAbrir(seccion)}>
+            Cambiar vehículo
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className={`rx-vp ${handles.vehiculoEnPagina || ''}`}>

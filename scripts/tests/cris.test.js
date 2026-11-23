@@ -148,6 +148,26 @@ prueba('la marca hereda hacia abajo',
 prueba('en motos no se marco nada',
   indice.nodos.filter(n => n.seccion === 'Motos' && n.soloCombustion).length, 0)
 
+console.log('\n=== el aviso de la pagina de categoria ===')
+/* nodoDe() es lo que decide si la pagina avisa. Vive en VehiculoEnPagina.js
+   y se evalua aqui contra el indice real, que es el mismo que usa la tienda. */
+const vpSrc = fs.readFileSync('react/VehiculoEnPagina.js', 'utf8')
+eval(vpSrc.slice(vpSrc.indexOf('const nodoDe'), vpSrc.indexOf('export default')) +
+     '\nglobal.nodoDe = nodoDe;')
+
+const avisa = ruta => { const n = nodoDe(ruta); return !!(n && n.soloCombustion) }
+prueba('en filtros de aceite avisa', avisa('/carros/filtros/filtros-de-aceite'), true)
+prueba('en bujias avisa',
+  avisa('/carros/electrico-y-electronico/encendido/bujias-de-encendido'), true)
+prueba('en pastillas no avisa', avisa('/carros/frenos/pastillas-de-freno'), false)
+prueba('en llantas no avisa', avisa('/carros/llantas-y-rines'), false)
+prueba('con barra al final igual lo encuentra',
+  avisa('/carros/filtros/filtros-de-aceite/'), true)
+prueba('una busqueda libre no es categoria: no avisa',
+  nodoDe('/carros/pastillas?_q=pastillas&map=ft'), null)
+prueba('sin ruta no revienta', nodoDe(''), null)
+prueba('una ruta que no existe tampoco', nodoDe('/carros/nada/de/nada'), null)
+
 console.log('\n=== todo nodo tiene nivel ===')
 prueba('sin nodos sin clasificar', indice.nodos.filter(n => !n.compatibilidad).length, 0)
 

@@ -41,7 +41,15 @@ function button() {
   return screen.getByRole('button')
 }
 
+// El componente lee window.location.pathname antes que route.path (en el sitio
+// VTEX a veces entrega una ruta interna /_v/...). En jsdom el pathname es '/',
+// asi que para simular la pagina actual hay que cambiar la URL de jsdom.
+function setPage(path) {
+  window.history.pushState({}, '', path)
+}
+
 beforeEach(() => {
+  setPage('/')
   runtime.__reset()
   apollo.__reset()
   apollo.__setFacets(CATALOG)
@@ -76,8 +84,9 @@ describe('cascada Marca -> Modelo -> Año', () => {
     render(<VehicleSelector query="carros" map="c" />)
     choose(selects().brand, 'chevrolet')
     const last = apollo.__calls().slice(-1)[0]
+    // La consulta de facets usa category-N; la 'c' es solo del map de la URL.
     expect(last.selectedFacets).toEqual([
-      { key: 'c', value: 'carros' },
+      { key: 'category-1', value: 'carros' },
       { key: 'marca-vehiculo', value: 'chevrolet' },
     ])
   })
@@ -87,11 +96,13 @@ describe('navegacion', () => {
   it('con marca, modelo y año navega a /<query>/<marca>/<modelo>/<año>?map=<map>,<k1>,<k2>,<k3>', () => {
     render(<VehicleSelector query="carros/frenos" map="c,c" />)
     choose(selects().brand, 'chevrolet')
-    choose(selects().model, 'spark')
+    // 'Spark' no esta en la base de vehiculos de Chevrolet (solo Spark GT, Spark Life...),
+    // asi que el cruce lo descarta; 'Sail' (2011-2020) si, y 2015 cae en su periodo.
+    choose(selects().model, 'sail')
     choose(selects().year, '2015')
     fireEvent.click(button())
     expect(runtime.useRuntime().navigate).toHaveBeenCalledWith({
-      to: '/carros/frenos/chevrolet/spark/2015',
+      to: '/carros/frenos/chevrolet/sail/2015',
       query: 'map=c,c,marca-vehiculo,modelo,ano',
     })
   })
@@ -142,12 +153,13 @@ describe('navegacion', () => {
   })
 
   it('sin props, deriva la base de la ruta de categoria y usa map c por segmento', () => {
+    setPage('/motos/frenos/pastillas-de-freno/')
     runtime.__setRuntime({ route: { path: '/motos/frenos/pastillas-de-freno/' } })
     render(<VehicleSelector />)
     expect(apollo.__calls()[0].selectedFacets).toEqual([
-      { key: 'c', value: 'motos' },
-      { key: 'c', value: 'frenos' },
-      { key: 'c', value: 'pastillas-de-freno' },
+      { key: 'category-1', value: 'motos' },
+      { key: 'category-2', value: 'frenos' },
+      { key: 'category-3', value: 'pastillas-de-freno' },
     ])
     choose(selects().brand, 'chevrolet')
     fireEvent.click(button())

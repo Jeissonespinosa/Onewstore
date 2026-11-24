@@ -134,11 +134,14 @@ class TestBloques(unittest.TestCase):
     def test_referencias_resuelven_a_bloque_definido_o_interfaz_nativa(self):
         """Cada children/blocks debe existir en el theme o ser interfaz nativa conocida."""
         bad = []
+        # Interfaces propias declaradas en store/interfaces.json: se pueden usar sin '#'.
+        with open(os.path.join(REPO, 'store', 'interfaces.json'), encoding='utf-8') as fh:
+            propias = set(json.load(fh))
         for ref, src, f in self.refs:
             if ref in self.defs:
                 continue
             base = ref.split('#')[0]
-            if base in NATIVE_INTERFACES:
+            if base in NATIVE_INTERFACES or base in propias:
                 continue
             bad.append((ref, src, f))
         self.assertEqual(bad, [], 'referencias a interfaces desconocidas (typo o app sin declarar)')

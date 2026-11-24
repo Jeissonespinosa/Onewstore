@@ -120,14 +120,23 @@ Salió bien con 3 registros de prueba. **Sin verificar:** tildes y eñes (los da
 tenían), y una exportación con muchos registros. El archivo lleva correos de personas: no lo
 dejes en carpetas compartidas.
 
-### En el admin de VTEX (sin verificar)
+### En el admin de VTEX (verificado el 2026-11-24: las entidades no aparecen)
 
-Master Data (Admin → Store Settings → Storefront → Master Data, abre `onewstore.vtexcrm.com.br`)
-es la vía natural para ver, filtrar y exportar sin código. **El 2026-11-16 no se pudo verificar**:
-la aplicación «Master Data» (MD) cargó una pantalla de «admin bloqueado por facturas sin pagar» en
-vez de la lista de entidades (Diego confirmó que la cuenta está bloqueada; la tienda y el menú de
-aplicaciones sí funcionan). Mientras siga así, el equipo lee por la API. Al regularizar, comprobar si `purchasefeedback` y `sitefeedback`
-aparecen (se crearon por API, no por el admin) y anotar aquí los pasos reales de filtro y exportación.
+El bloqueo por facturas sin pagar ya no está: Master Data carga sus pantallas. Pero **no sirve para
+leer este feedback**, porque las entidades creadas por API no se muestran en la interfaz clásica:
+
+1. Admin → buscar «Master Data» (Store Settings / Storefront) abre `onewstore.vtexcrm.com.br`.
+   Pide iniciar sesión de nuevo (token por correo, Google o contraseña).
+2. «Applications» solo lista «Profile System» (Clientes y Endereços); «Reload Applications» no
+   cambia nada.
+3. «Advanced Settings → Data structure» abre `onewstore.ds.vtexcrm.com.br` (otro inicio de sesión).
+   Su pestaña «Data Entities» lista 18 entidades nativas (Address, Customer, Orders…);
+   **`purchasefeedback` y `sitefeedback` no están**.
+
+**No se comprobó** si las entidades siguen existiendo (la consulta por API de ese día no se pudo
+hacer: el CLI pedía confirmar el login). Hasta resolverlo, el equipo lee por la API (secciones
+anteriores). Opciones a valorar: leer por API o CSV (funciona hoy), o crear un formulario o vista
+clásica en Master Data sobre las entidades (trabajo nuevo, sin probar).
 
 ### Quién lo lee y cómo se entera (Q11)
 

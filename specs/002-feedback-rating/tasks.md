@@ -74,7 +74,7 @@ La spec sigue en `implementing`: no se marca `done` hasta cerrar esto.
 
 - [ ] **6.2 Lighthouse, móvil de inicio:** 45 frente al piso de 50 (medias de Diego en `pruebatema`: inicio 45/83, categoría 53/80, producto 52/82). Repetir el móvil de inicio y compararlo contra `master` o con el botón quitado del header, para separar el efecto de la 002 de la variación entre corridas (~5 puntos). Recordar que la línea base de la 003 se midió en `devdiego`, ya borrado.
 - [ ] **5.1 Privacidad (RF-11):** falta la URL del aviso de privacidad, la retención de los datos y resolver 001 D5. Después, enlazar el aviso y la finalidad del correo en ambos formularios.
-- [ ] **6.1 README y Q11:** falta decidir quién lee el feedback (Q11, spec 000) y documentar los pasos del admin de Master Data. Siguen sin verificarse mientras el admin esté bloqueado por facturas; mientras tanto se lee por la API (documentado).
+- [ ] **6.1 README y Q11:** falta decidir quién lee el feedback (Q11, spec 000). El 2026-11-24, con el bloqueo por facturas resuelto, se revisó el admin: Master Data carga, pero **`purchasefeedback` y `sitefeedback` no aparecen** ni en «Applications» ni en «Data Entities» (solo las 18 nativas), así que no hay pasos de filtro y exportación que documentar en el admin. Documentado en el README. Falta: confirmar por API que las entidades siguen existiendo y decidir cómo lee el equipo (API/CSV, o un formulario clásico en Master Data, trabajo nuevo).
 - [ ] **Spec 004:** actualizarla para reutilizar el servicio `onewstore.feedback-service`.
 - [ ] **Responsable del servicio:** definir quién lo mantiene.
 - [ ] **Tests de `VehicleSelector`:** 6 en rojo desde antes de la 002 (no son de esta spec).

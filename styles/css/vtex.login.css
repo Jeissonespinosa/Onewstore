@@ -569,7 +569,7 @@
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexRow--headerActions),
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerActionsMobile),
 :global(.render-route-store-home) :global(.vtex-flex-layout-0-x-flexCol--headerDrawerMobile),
-:global(.render-route-store-home) :global(.vtex-telemarketing-1-x-container) {
+:global(.render-route-store-home) :global(.vtex-telemarketing-2-x-container) {
   display: none !important;
 }
 

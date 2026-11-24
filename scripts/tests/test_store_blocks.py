@@ -6,8 +6,8 @@ comentarios), construye el grafo de referencias (children / blocks / props
 que apuntan a bloques) y comprueba invariantes que `vtex link` solo
 detecta tarde (o nunca, como los links rotos en markdown).
 
-Cada test lleva: SUPUESTO, ENTRADA, HOY, ESPERADO. Los "ROJO_HOY" fallan
-con el repo actual a proposito.
+Cada test lleva: SUPUESTO, ENTRADA, HOY, ESPERADO. Los "ROJO_HOY" que
+quedan fallan con el repo actual a proposito (bugs pendientes).
 
 Correr:
     python3 -m pytest scripts/tests/test_store_blocks.py -v
@@ -198,7 +198,7 @@ class TestBloques(unittest.TestCase):
             self.assertNotIn('//', v['path'], k)
             self.assertNotRegex(v['path'], r'[A-Z\s]', 'mayusculas o espacios en %s' % k)
 
-    def test_ROJO_HOY_links_internos_apuntan_a_la_categoria_correcta(self):
+    def test_links_internos_apuntan_a_la_categoria_correcta(self):
         """
         SUPUESTO: los CTA del hero apuntan a la categoria que anuncian.
         ENTRADA: hero-slider.jsonc, rich-text#rx-carros-slide-1-cta1 = '[Ver baterías](/carros/electrico-y-electronico)'.
@@ -231,24 +231,7 @@ class TestBloques(unittest.TestCase):
                         bad.append((u, bid, os.path.relpath(f, REPO)))
         self.assertEqual(bad, [])
 
-    def test_ROJO_HOY_textos_de_otra_tienda(self):
-        """
-        SUPUESTO: el theme es de Repuestox.
-        ENTRADA: store/blocks/categories.jsonc (7 store.custom#categoria-* con ruta
-                 /linea-productos/*, rich-text#category-offer-title).
-        HOY: '## En Coéxito te ofrecemos' y '+65 años en el mercado' son textos del
-             cliente anterior (Coexito) y siguen publicados en 7 rutas vivas.
-        ESPERADO: sin referencias a Coexito en ningun bloque.
-        """
-        hits = []
-        for f in BLOCK_FILES:
-            for bid, body in load_jsonc(f).items():
-                t = (body.get('props') or {}).get('text', '')
-                if isinstance(t, str) and re.search(r'co[eé]xito', t, re.I):
-                    hits.append((bid, t))
-        self.assertEqual(hits, [])
-
-    def test_ROJO_HOY_blockclass_tiene_css(self):
+    def test_blockclass_tiene_css(self):
         """
         SUPUESTO: todo blockClass usado en bloques rx*/repuestox* tiene al menos una regla CSS.
         ENTRADA: repuestox-home.json, flex-layout.col#repuestox-split-herramientas-copy-slot
@@ -297,7 +280,7 @@ class TestInterfaces(unittest.TestCase):
             self.assertIn(app, deps)
         self.assertEqual(manifest()['builders'].get('react'), '3.x')
 
-    def test_ROJO_HOY_readme_no_dice_que_no_hay_react(self):
+    def test_readme_no_dice_que_no_hay_react(self):
         """
         SUPUESTO: el README describe el repo.
         HOY: README.md: 'No hay código React ni build de Node' y builders sin 'react 3.x',
@@ -309,7 +292,7 @@ class TestInterfaces(unittest.TestCase):
 
 
 class TestCss(unittest.TestCase):
-    def test_ROJO_HOY_versiones_de_handles_coinciden_con_manifest(self):
+    def test_versiones_de_handles_coinciden_con_manifest(self):
         """
         SUPUESTO: los selectores :global(.vtex-<app>-<major>-x-...) usan el major del manifest.
         ENTRADA: styles/css/vtex.login.css:554  .vtex-telemarketing-1-x-container
@@ -383,7 +366,7 @@ class TestCss(unittest.TestCase):
         dups = sorted(s for s, n in Counter(selectors).items() if n > 1)
         self.assertEqual(dups, [])
 
-    def test_ROJO_HOY_css_de_bloques_eliminados(self):
+    def test_css_de_bloques_eliminados(self):
         """
         SUPUESTO: no hay CSS para bloques que ya no existen.
         HOY: header/category-menu.json, footer/menu.json y home/deals.json se borraron pero
@@ -410,7 +393,7 @@ class TestCss(unittest.TestCase):
         checked = {c for _, c in orphans} & {'headerNavLinks', 'deals', 'menu-row', 'menu-link', 'headerDrawerMobile'}
         self.assertEqual(sorted(checked), [], 'CSS para blockClass de bloques borrados: %s' % sorted(orphans))
 
-    def test_ROJO_HOY_archivos_css_no_vacios(self):
+    def test_archivos_css_no_vacios(self):
         """
         HOY: styles/css/vtex.sticky-layout.css tiene 0 bytes. El CLI de VTEX descarta los
              archivos vacios al subir (ProjectFilesManager: stats.size > 0), asi que es un

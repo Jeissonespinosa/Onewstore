@@ -168,10 +168,7 @@
   },
   "flex-layout.col#repuestox-split-herramientas-copy-slot": {
     "props": {
-      "blockClass": [
-        "repuestoxSplitSlotCopy",
-        "repuestoxSplitSlotCopyCenter"
-      ],
+      "blockClass": "repuestoxSplitSlotCopy",
       "width": "100%"
     },
     "children": [

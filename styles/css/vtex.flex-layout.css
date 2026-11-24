@@ -45,21 +45,6 @@
   font-size: 14px;
 }
 
-.flexRow--deals {
-  background-color: #0F3E99;
-  padding: 14px 0px;
-}
-
-.flexRow--deals .stretchChildrenWidth {
-  align-items: center;
-}
-
-.flexRow--deals .flexCol {
-  align-items: center;
-  margin-bottom: 5px;
-  padding-top: 5px;
-}
-
 .flexCol--filterCol {
   max-width: 500px;
   min-width: 230px;

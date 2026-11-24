@@ -120,19 +120,37 @@ Salió bien con 3 registros de prueba. **Sin verificar:** tildes y eñes (los da
 tenían), y una exportación con muchos registros. El archivo lleva correos de personas: no lo
 dejes en carpetas compartidas.
 
-### En el admin de VTEX (sin verificar)
+### En el admin de VTEX (verificado el 2026-11-24: las entidades no aparecen)
 
-Master Data (Admin → Store Settings → Storefront → Master Data, abre `onewstore.vtexcrm.com.br`)
-es la vía natural para ver, filtrar y exportar sin código. **El 2026-11-16 no se pudo verificar**:
-la aplicación «Master Data» (MD) cargó una pantalla de «admin bloqueado por facturas sin pagar» en
-vez de la lista de entidades (Diego confirmó que la cuenta está bloqueada; la tienda y el menú de
-aplicaciones sí funcionan). Mientras siga así, el equipo lee por la API. Al regularizar, comprobar si `purchasefeedback` y `sitefeedback`
-aparecen (se crearon por API, no por el admin) y anotar aquí los pasos reales de filtro y exportación.
+El bloqueo por facturas sin pagar ya no está: Master Data carga sus pantallas. Pero **no sirve para
+leer este feedback**, porque las entidades creadas por API no se muestran en la interfaz clásica:
+
+1. Admin → buscar «Master Data» (Store Settings / Storefront) abre `onewstore.vtexcrm.com.br`.
+   Pide iniciar sesión de nuevo (token por correo, Google o contraseña).
+2. «Applications» solo lista «Profile System» (Clientes y Endereços); «Reload Applications» no
+   cambia nada.
+3. «Advanced Settings → Data structure» abre `onewstore.ds.vtexcrm.com.br` (otro inicio de sesión).
+   Su pestaña «Data Entities» lista 18 entidades nativas (Address, Customer, Orders…);
+   **`purchasefeedback` y `sitefeedback` no están**.
+
+Por la API sí existen: ese día, `search?_schema=v1` sobre ambas devolvió `HTTP 200` con una lista
+vacía (`[]`), es decir, sin registros. Tras enviar un feedback desde el botón flotante, `sitefeedback`
+devolvió ese registro (tipo, mensaje, correo, `pageUrl`, `viewport` y `createdIn` correctos) y
+`purchasefeedback` siguió vacía; **y «Data Entities» siguió sin listar la entidad**, ya con datos.
+**Decisión (2026-11-24): la lectura es por la API**, no por el admin de Master Data (ver Q11).
 
 ### Quién lo lee y cómo se entera (Q11)
 
-**Sin decidir** (Q11 de la spec 000). Hoy no hay aviso: alguien tiene que consultar los datos. Si se
-quiere un aviso por correo al llegar feedback negativo, es trabajo nuevo en este servicio.
+**Decidido el 2026-11-24 (Q11 de la spec 000):** el feedback lo revisan los **asesores como tickets de
+soporte**, que se asignan a un asesor. Eso se hará en un sistema aparte: la página para sellers,
+administradores y asesores, desarrollada en .NET, que **lee el feedback por la API** de Master Data
+(las consultas de «Por la API»). Ese sistema no está en este repo y aún no tiene spec.
+
+Mientras no exista, no hay aviso: alguien tiene que consultar los datos con los comandos de arriba.
+Este servicio no envía correos ni crea tickets. Cuando se construya el sistema .NET habrá que definir
+cómo se autentica contra Master Data (hoy solo lo permite una sesión o token de administrador), cómo
+detecta registros nuevos (el servicio no marca «leído» ni «asignado»; hoy se filtra por `createdIn`)
+y si un registro crea un ticket por cada feedback o solo por los negativos.
 
 ### Borrar datos de prueba
 

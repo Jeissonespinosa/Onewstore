@@ -137,13 +137,20 @@ Por la API sí existen: ese día, `search?_schema=v1` sobre ambas devolvió `HTT
 vacía (`[]`), es decir, sin registros. Tras enviar un feedback desde el botón flotante, `sitefeedback`
 devolvió ese registro (tipo, mensaje, correo, `pageUrl`, `viewport` y `createdIn` correctos) y
 `purchasefeedback` siguió vacía; **y «Data Entities» siguió sin listar la entidad**, ya con datos.
-Entonces el equipo lee por la API (secciones anteriores). Opciones a valorar: leer por API o CSV (funciona hoy), o crear un formulario o vista
-clásica en Master Data sobre las entidades (trabajo nuevo, sin probar).
+**Decisión (2026-11-24): la lectura es por la API**, no por el admin de Master Data (ver Q11).
 
 ### Quién lo lee y cómo se entera (Q11)
 
-**Sin decidir** (Q11 de la spec 000). Hoy no hay aviso: alguien tiene que consultar los datos. Si se
-quiere un aviso por correo al llegar feedback negativo, es trabajo nuevo en este servicio.
+**Decidido el 2026-11-24 (Q11 de la spec 000):** el feedback lo revisan los **asesores como tickets de
+soporte**, que se asignan a un asesor. Eso se hará en un sistema aparte: la página para sellers,
+administradores y asesores, desarrollada en .NET, que **lee el feedback por la API** de Master Data
+(las consultas de «Por la API»). Ese sistema no está en este repo y aún no tiene spec.
+
+Mientras no exista, no hay aviso: alguien tiene que consultar los datos con los comandos de arriba.
+Este servicio no envía correos ni crea tickets. Cuando se construya el sistema .NET habrá que definir
+cómo se autentica contra Master Data (hoy solo lo permite una sesión o token de administrador), cómo
+detecta registros nuevos (el servicio no marca «leído» ni «asignado»; hoy se filtra por `createdIn`)
+y si un registro crea un ticket por cada feedback o solo por los negativos.
 
 ### Borrar datos de prueba
 

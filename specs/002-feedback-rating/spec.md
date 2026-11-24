@@ -105,7 +105,7 @@ Si VTEX ya trae algo equivalente se reutiliza; si no, se construye con lo ya ins
 Decisión: **B**. El spike debe comprobar: (1) que `store.orderplaced` muestra el header global (**hecho**: sí) y de dónde sale el número de pedido; (2) que una app con `node` y `masterdata` se instala en el workspace y escribe en campos privados; (3) que una ruta pública del servicio responde a un visitante anónimo desde el origen de la tienda; (4) cómo el servidor identifica al usuario autenticado y lee el correo del pedido.
 
 ## 8. Preguntas abiertas
-- [ ] ¿Quién lee el feedback, con qué frecuencia y cómo se entera (solo admin, o aviso por correo)? *(reemplaza la antigua Q11 de moderación)*
+- [x] ¿Quién lee el feedback, con qué frecuencia y cómo se entera (solo admin, o aviso por correo)? → **Asesores, como tickets de soporte asignables, en un sistema aparte en .NET que lee por la API** (2026-11-24). Fuera del alcance de esta spec. *(reemplaza la antigua Q11 de moderación)*
 - [x] ¿El botón flotante se muestra también en la confirmación del pedido? → **Sí** (2026-11-15), RF-8c.
 - [x] ¿Se pide el correo en el rating de compra? → **Sí, opcional y escrito por la persona**, precargado con el de la cuenta si hay sesión (2026-11-16, sustituye a la decisión del 2026-11-15), RF-3 y RF-8b.
 - [x] ¿El correo es obligatorio para el usuario anónimo? → **No, es opcional** (2026-11-15), RF-8b.

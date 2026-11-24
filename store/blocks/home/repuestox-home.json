@@ -48,6 +48,8 @@
     "props": {
       "blockClass": "repuestoxSplitHeroImage",
       "src": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80",
+      "srcSet": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80 1600w",
+      "sizes": "100vw",
       "alt": "Repuestos para carros",
       "link": {
         "url": "/carros",
@@ -95,6 +97,8 @@
     "props": {
       "blockClass": "repuestoxSplitHeroImage",
       "src": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80",
+      "srcSet": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=75 800w, https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1600&q=80 1600w",
+      "sizes": "100vw",
       "alt": "Repuestos para motos",
       "link": {
         "url": "/motos",

@@ -133,9 +133,11 @@ leer este feedback**, porque las entidades creadas por API no se muestran en la 
    Su pestaña «Data Entities» lista 18 entidades nativas (Address, Customer, Orders…);
    **`purchasefeedback` y `sitefeedback` no están**.
 
-Por la API sí existen: ese mismo día, `search?_schema=v1` sobre ambas devolvió `HTTP 200` con una
-lista vacía (`[]`), es decir, **no tenían registros** (los de prueba ya no están). Entonces el equipo
-lee por la API (secciones anteriores). Opciones a valorar: leer por API o CSV (funciona hoy), o crear un formulario o vista
+Por la API sí existen: ese día, `search?_schema=v1` sobre ambas devolvió `HTTP 200` con una lista
+vacía (`[]`), es decir, sin registros. Tras enviar un feedback desde el botón flotante, `sitefeedback`
+devolvió ese registro (tipo, mensaje, correo, `pageUrl`, `viewport` y `createdIn` correctos) y
+`purchasefeedback` siguió vacía; **y «Data Entities» siguió sin listar la entidad**, ya con datos.
+Entonces el equipo lee por la API (secciones anteriores). Opciones a valorar: leer por API o CSV (funciona hoy), o crear un formulario o vista
 clásica en Master Data sobre las entidades (trabajo nuevo, sin probar).
 
 ### Quién lo lee y cómo se entera (Q11)

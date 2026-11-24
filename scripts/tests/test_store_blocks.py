@@ -28,6 +28,37 @@ BLOCK_FILES = sorted(glob.glob(os.path.join(REPO, 'store', 'blocks.jsonc')) +
                      glob.glob(os.path.join(REPO, 'store', 'blocks', '**', '*.json*'), recursive=True))
 CSS_FILES = sorted(glob.glob(os.path.join(REPO, 'styles', 'css', '**', '*.css'), recursive=True))
 
+def catalog_paths():
+    """Rutas de categorias marcadas "catalogo": true en el arbol: las sirve VTEX
+    como pagina nativa de categoria, por eso no estan en routes.json (el
+    generador tampoco las cuenta como enlaces rotos). Se hereda hacia abajo."""
+    import unicodedata
+
+    def slug(texto):
+        t = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode().lower()
+        return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+    with open(os.path.join(REPO, 'catalogo', 'estructura-categorias-v2.json'), encoding='utf-8') as fh:
+        tree = json.load(fh)
+    out = set()
+    for dept, sec in (('Carros', 'carros'), ('Motos', 'motos'), ('Herramientas', 'herramientas')):
+        for m in tree.get(dept, []):
+            mpath = '/%s/%s' % (sec, m.get('slug') or slug(m['nombre']))
+            macro_cat = bool(m.get('catalogo'))
+            if macro_cat:
+                out.add(mpath)
+            for s in m['subs']:
+                if s.get('nombre') is None:
+                    continue
+                spath = '%s/%s' % (mpath, s.get('slug') or slug(s['nombre']))
+                sub_cat = macro_cat or bool(s.get('catalogo'))
+                if sub_cat:
+                    out.add(spath)
+                    if s.get('vitrina') != 'filtros':
+                        out.update('%s/%s' % (spath, slug(t)) for t in s['tipos'])
+    return out
+
+
 # Interfaces nativas de las apps declaradas en manifest.json que el theme
 # usa SIN declararlas (sin '#'). Lista blanca mantenida a mano: si aparece
 # una nueva, o se agrega aqui o es un typo.
@@ -181,7 +212,7 @@ class TestBloques(unittest.TestCase):
 
     def test_links_markdown_e_image_link_apuntan_a_rutas_existentes(self):
         """Todo [texto](/path) e image.link.url interno debe existir en routes.json (o ser nativo)."""
-        known = set(v['path'] for v in routes().values()) | {'/', '/{slug}/p'}
+        known = set(v['path'] for v in routes().values()) | {'/', '/{slug}/p'} | catalog_paths()
         bad = []
         for f in BLOCK_FILES:
             for bid, body in load_jsonc(f).items():

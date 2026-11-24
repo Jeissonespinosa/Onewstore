@@ -2,7 +2,7 @@
  * Tests adversariales de react/VehicleSelector.js (jest + @testing-library/react).
  *
  * Cada test documenta: SUPUESTO que rompe, ENTRADA, HOY (bug), ESPERADO.
- * Los `it('ROJO HOY: ...')` fallan con el codigo actual a proposito.
+ * Los bloques HOY/ESPERADO documentan el bug que cada test cubre (ya corregido).
  *
  * Mocks (react/__tests__/__mocks__, cableados en jest.config.js):
  *  - vtex.render-runtime: useRuntime() -> { navigate: jest.fn(), route: { path } }
@@ -107,7 +107,7 @@ describe('navegacion', () => {
     })
   })
 
-  it('ROJO HOY: los valores de facet se codifican con encodeURIComponent al construir la ruta', () => {
+  it('los valores de facet se codifican con encodeURIComponent al construir la ruta', () => {
     /*
      * SUPUESTO: facets.values[].value nunca trae '/', '?', '#', '&' ni espacios.
      * ENTRADA: valor de modelo '1.5/1.6 16v' (VTEX no garantiza que `value` sea slug:
@@ -132,7 +132,7 @@ describe('navegacion', () => {
     expect(call.to).toBe('/carros/chevrolet/1.5%2F1.6%2016v')
   })
 
-  it('ROJO HOY: sin props query/map, una ruta que no es de categoria (PDP, /faq) no se usa como base', () => {
+  it('sin props query/map, una ruta que no es de categoria (PDP, /faq) no se usa como base', () => {
     /*
      * SUPUESTO: si no llegan props query/map, la ruta actual es /<sec>/<macro>/... (leaf).
      * ENTRADA: el bloque cae en un PDP: route.path = '/pastillas-bosch-123/p'.
@@ -142,10 +142,14 @@ describe('navegacion', () => {
      * ESPERADO: solo se deriva base cuando el primer segmento es una seccion conocida
      *           (carros|motos|herramientas); si no, base vacia (o el bloque no consulta).
      */
+    // El componente lee window.location.pathname (jsdom), no route.path: hay que
+    // cambiar la URL de jsdom o la base queda vacia y el test no prueba nada.
+    setPage('/pastillas-bosch-123/p')
     runtime.__setRuntime({ route: { path: '/pastillas-bosch-123/p' } })
     render(<VehicleSelector />)
     const first = apollo.__calls()[0]
-    expect(first.selectedFacets).not.toContainEqual({ key: 'c', value: 'p' })
+    expect(first.selectedFacets.map(f => f.value)).not.toContain('pastillas-bosch-123')
+    expect(first.selectedFacets.map(f => f.value)).not.toContain('p')
     choose(selects().brand, 'chevrolet')
     fireEvent.click(button())
     const call = runtime.useRuntime().navigate.mock.calls[0][0]
@@ -181,7 +185,7 @@ describe('facets', () => {
     expect(screen.getByRole('option', { name: 'Chevrolet' })).toBeTruthy()
   })
 
-  it('ROJO HOY: un espacio extra en el nombre del facet (admin) no debe impedir el match', () => {
+  it('un espacio extra en el nombre del facet (admin) no debe impedir el match', () => {
     /*
      * SUPUESTO: el nombre de la especificacion en el catalogo es exactamente 'Marca vehículo'.
      * ENTRADA: facet.name = 'Marca vehículo ' (espacio final, tipico al crear la spec en el admin).
@@ -194,7 +198,7 @@ describe('facets', () => {
     expect(selects().brand.disabled).toBe(false)
   })
 
-  it('ROJO HOY: los años se listan en orden numerico descendente, no en el orden del API', () => {
+  it('los años se listan en orden numerico descendente, no en el orden del API', () => {
     /*
      * SUPUESTO: el API devuelve los valores en un orden util.
      * ENTRADA: facet Año con valores ['2015','2021','2018'] (VTEX ordena por cantidad).
@@ -210,7 +214,7 @@ describe('facets', () => {
     expect(years).toEqual(['2021', '2018', '2015'])
   })
 
-  it('ROJO HOY: valores con quantity 0 no se ofrecen como opcion', () => {
+  it('valores con quantity 0 no se ofrecen como opcion', () => {
     /*
      * SUPUESTO: todo valor devuelto tiene productos.
      * ENTRADA: Marca vehículo = [Chevrolet (quantity 3), Renault (quantity 0)].

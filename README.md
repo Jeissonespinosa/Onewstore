@@ -1,14 +1,14 @@
 # Onewstore — Store Theme (VTEX IO)
 
 Theme de la tienda **Onewstore / Repuestox** construido sobre VTEX IO.
-Es una app de tipo *store-theme*: solo contiene configuración de bloques (JSON/JSONC), rutas y CSS. **No hay código React ni build de Node** en este repositorio.
+Es una app de tipo *store-theme*: contiene configuración de bloques (JSON/JSONC), rutas, CSS y unos pocos componentes React propios en `react/` (selector de vehículo, menú de categorías, feedback), que compila el builder `react 3.x` de VTEX; no hay build de Node propio.
 
 | | |
 |---|---|
 | Vendor | `onewstore` |
 | App | `store-theme` |
 | Versión | `5.2.0` |
-| Builders | `store 0.x`, `styles 2.x`, `sitemap 0.x`, `docs 0.x` |
+| Builders | `store 0.x`, `styles 2.x`, `sitemap 0.x`, `docs 0.x`, `react 3.x` |
 
 ---
 

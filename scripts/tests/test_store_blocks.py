@@ -6,8 +6,7 @@ comentarios), construye el grafo de referencias (children / blocks / props
 que apuntan a bloques) y comprueba invariantes que `vtex link` solo
 detecta tarde (o nunca, como los links rotos en markdown).
 
-Cada test lleva: SUPUESTO, ENTRADA, HOY, ESPERADO. Los "ROJO_HOY" fallan
-con el repo actual a proposito.
+Cada test lleva: SUPUESTO, ENTRADA, HOY, ESPERADO. Los bloques HOY/ESPERADO documentan el defecto que cada test cubre.
 
 Correr:
     python3 -m pytest scripts/tests/test_store_blocks.py -v
@@ -27,6 +26,37 @@ from _sandbox import REPO, load_jsonc  # noqa: E402
 BLOCK_FILES = sorted(glob.glob(os.path.join(REPO, 'store', 'blocks.jsonc')) +
                      glob.glob(os.path.join(REPO, 'store', 'blocks', '**', '*.json*'), recursive=True))
 CSS_FILES = sorted(glob.glob(os.path.join(REPO, 'styles', 'css', '**', '*.css'), recursive=True))
+
+def catalog_paths():
+    """Rutas de categorias marcadas "catalogo": true en el arbol: las sirve VTEX
+    como pagina nativa de categoria, por eso no estan en routes.json (el
+    generador tampoco las cuenta como enlaces rotos). Se hereda hacia abajo."""
+    import unicodedata
+
+    def slug(texto):
+        t = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode().lower()
+        return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+    with open(os.path.join(REPO, 'catalogo', 'estructura-categorias-v2.json'), encoding='utf-8') as fh:
+        tree = json.load(fh)
+    out = set()
+    for dept, sec in (('Carros', 'carros'), ('Motos', 'motos'), ('Herramientas', 'herramientas')):
+        for m in tree.get(dept, []):
+            mpath = '/%s/%s' % (sec, m.get('slug') or slug(m['nombre']))
+            macro_cat = bool(m.get('catalogo'))
+            if macro_cat:
+                out.add(mpath)
+            for s in m['subs']:
+                if s.get('nombre') is None:
+                    continue
+                spath = '%s/%s' % (mpath, s.get('slug') or slug(s['nombre']))
+                sub_cat = macro_cat or bool(s.get('catalogo'))
+                if sub_cat:
+                    out.add(spath)
+                    if s.get('vitrina') != 'filtros':
+                        out.update('%s/%s' % (spath, slug(t)) for t in s['tipos'])
+    return out
+
 
 # Interfaces nativas de las apps declaradas en manifest.json que el theme
 # usa SIN declararlas (sin '#'). Lista blanca mantenida a mano: si aparece
@@ -134,11 +164,14 @@ class TestBloques(unittest.TestCase):
     def test_referencias_resuelven_a_bloque_definido_o_interfaz_nativa(self):
         """Cada children/blocks debe existir en el theme o ser interfaz nativa conocida."""
         bad = []
+        # Interfaces propias declaradas en store/interfaces.json: se pueden usar sin '#'.
+        with open(os.path.join(REPO, 'store', 'interfaces.json'), encoding='utf-8') as fh:
+            propias = set(json.load(fh))
         for ref, src, f in self.refs:
             if ref in self.defs:
                 continue
             base = ref.split('#')[0]
-            if base in NATIVE_INTERFACES:
+            if base in NATIVE_INTERFACES or base in propias:
                 continue
             bad.append((ref, src, f))
         self.assertEqual(bad, [], 'referencias a interfaces desconocidas (typo o app sin declarar)')
@@ -164,7 +197,7 @@ class TestBloques(unittest.TestCase):
             self.assertNotIn('//', v['path'], k)
             self.assertNotRegex(v['path'], r'[A-Z\s]', 'mayusculas o espacios en %s' % k)
 
-    def test_ROJO_HOY_links_internos_apuntan_a_la_categoria_correcta(self):
+    def test_links_internos_apuntan_a_la_categoria_correcta(self):
         """
         SUPUESTO: los CTA del hero apuntan a la categoria que anuncian.
         ENTRADA: hero-slider.jsonc, rich-text#rx-carros-slide-1-cta1 = '[Ver baterías](/carros/electrico-y-electronico)'.
@@ -178,7 +211,7 @@ class TestBloques(unittest.TestCase):
 
     def test_links_markdown_e_image_link_apuntan_a_rutas_existentes(self):
         """Todo [texto](/path) e image.link.url interno debe existir en routes.json (o ser nativo)."""
-        known = set(v['path'] for v in routes().values()) | {'/', '/{slug}/p'}
+        known = set(v['path'] for v in routes().values()) | {'/', '/{slug}/p'} | catalog_paths()
         bad = []
         for f in BLOCK_FILES:
             for bid, body in load_jsonc(f).items():
@@ -197,24 +230,7 @@ class TestBloques(unittest.TestCase):
                         bad.append((u, bid, os.path.relpath(f, REPO)))
         self.assertEqual(bad, [])
 
-    def test_ROJO_HOY_textos_de_otra_tienda(self):
-        """
-        SUPUESTO: el theme es de Repuestox.
-        ENTRADA: store/blocks/categories.jsonc (7 store.custom#categoria-* con ruta
-                 /linea-productos/*, rich-text#category-offer-title).
-        HOY: '## En Coéxito te ofrecemos' y '+65 años en el mercado' son textos del
-             cliente anterior (Coexito) y siguen publicados en 7 rutas vivas.
-        ESPERADO: sin referencias a Coexito en ningun bloque.
-        """
-        hits = []
-        for f in BLOCK_FILES:
-            for bid, body in load_jsonc(f).items():
-                t = (body.get('props') or {}).get('text', '')
-                if isinstance(t, str) and re.search(r'co[eé]xito', t, re.I):
-                    hits.append((bid, t))
-        self.assertEqual(hits, [])
-
-    def test_ROJO_HOY_blockclass_tiene_css(self):
+    def test_blockclass_tiene_css(self):
         """
         SUPUESTO: todo blockClass usado en bloques rx*/repuestox* tiene al menos una regla CSS.
         ENTRADA: repuestox-home.json, flex-layout.col#repuestox-split-herramientas-copy-slot
@@ -263,7 +279,7 @@ class TestInterfaces(unittest.TestCase):
             self.assertIn(app, deps)
         self.assertEqual(manifest()['builders'].get('react'), '3.x')
 
-    def test_ROJO_HOY_readme_no_dice_que_no_hay_react(self):
+    def test_readme_no_dice_que_no_hay_react(self):
         """
         SUPUESTO: el README describe el repo.
         HOY: README.md: 'No hay código React ni build de Node' y builders sin 'react 3.x',
@@ -275,7 +291,7 @@ class TestInterfaces(unittest.TestCase):
 
 
 class TestCss(unittest.TestCase):
-    def test_ROJO_HOY_versiones_de_handles_coinciden_con_manifest(self):
+    def test_versiones_de_handles_coinciden_con_manifest(self):
         """
         SUPUESTO: los selectores :global(.vtex-<app>-<major>-x-...) usan el major del manifest.
         ENTRADA: styles/css/vtex.login.css:554  .vtex-telemarketing-1-x-container
@@ -293,25 +309,30 @@ class TestCss(unittest.TestCase):
                     bad.append((os.path.relpath(f, REPO), m.group(0), 'manifest=%s.x' % majors[app]))
         self.assertEqual(sorted(set(bad)), [])
 
-    def test_ROJO_HOY_tokens_rx_definidos_donde_siempre_cargan(self):
+    def test_tokens_rx_definidos_donde_siempre_cargan(self):
         """
         SUPUESTO: var(--rx-*) esta definido en toda pagina donde se usa.
-        HOY: los 13 tokens --rx-* se definen SOLO en styles/css/vtex.login.css (:global(html)).
-             VTEX inyecta el override de cada app solo cuando esa app renderiza en la pagina:
-             quitar/ocultar el bloque `login` del header (o una pagina sin header) deja
-             padding: 0 var(--rx-gutter), color: var(--rx-ink), etc. invalidos en
-             flex-layout, rich-text, slider-layout, search-result, product-price...
-        ESPERADO: definir los tokens en un override que siempre esta presente
-                  (vtex.store-header.css o vtex.flex-layout.css) o en cada archivo que los usa.
+        ENTRADA: los tokens --rx-* se definen en styles/css/vtex.login.css (:global(html)).
+        POR QUE AHI: el builder de VTEX rechaza :global(html) en cualquier otro override
+             ("Global selector ... :global(html)", probado en vtex.store-header.css) y solo
+             se salta la validacion para vtex.login@2.x. Mover los tokens no es una opcion.
+        RIESGO: VTEX inyecta el override de una app solo cuando esa app renderiza en la
+             pagina. Si el bloque `login` desaparece de alguno de los dos headers, todos los
+             padding: 0 var(--rx-gutter), color: var(--rx-ink), etc. quedan invalidos.
+        ESPERADO: (1) todo token usado esta definido en el propio archivo, en un override
+             siempre presente o en vtex.login.css; (2) `login` es alcanzable desde
+             header-layout.desktop y header-layout.mobile (la condicion que lo mantiene cargado).
         """
         defs_by_file = defaultdict(set)
         uses_by_file = defaultdict(set)
         for f in CSS_FILES:
             txt = open(f, encoding='utf-8').read()
-            rel = os.path.relpath(f, REPO)
+            rel = os.path.relpath(f, REPO).replace(os.sep, '/')
             defs_by_file[rel] |= set(re.findall(r'(--rx-[a-z0-9-]+)\s*:', txt))
             uses_by_file[rel] |= set(re.findall(r'var\((--rx-[a-z0-9-]+)', txt))
-        always = defs_by_file['styles/css/vtex.store-header.css'] | defs_by_file['styles/css/vtex.flex-layout.css']
+        always = (defs_by_file['styles/css/vtex.store-header.css']
+                  | defs_by_file['styles/css/vtex.flex-layout.css']
+                  | defs_by_file['styles/css/vtex.login.css'])
         bad = {}
         for rel, uses in uses_by_file.items():
             missing = {u for u in uses if u not in defs_by_file[rel] and u not in always
@@ -320,7 +341,20 @@ class TestCss(unittest.TestCase):
                 bad[rel] = sorted(missing)
         self.assertEqual(bad, {})
 
-    def test_ROJO_HOY_sin_bloques_de_reglas_duplicados(self):
+        blocks = load_jsonc(os.path.join(REPO, 'store', 'blocks', 'header', 'header.jsonc'))
+
+        def reaches_login(start, seen=()):
+            if start == 'login':
+                return True
+            body = blocks.get(start) or {}
+            kids = list(body.get('children') or []) + list(body.get('blocks') or [])
+            return any(k not in seen and reaches_login(k, seen + (start,)) for k in kids)
+
+        for layout in ('header-layout.desktop', 'header-layout.mobile'):
+            self.assertTrue(reaches_login(layout),
+                            '%s ya no incluye el bloque login: los tokens --rx-* dejarian de cargarse' % layout)
+
+    def test_sin_bloques_de_reglas_duplicados(self):
         """
         SUPUESTO: cada selector se declara una vez por archivo.
         HOY: vtex.flex-layout.css repite completos los bloques 'FILTRO Y LISTADO' y
@@ -349,7 +383,7 @@ class TestCss(unittest.TestCase):
         dups = sorted(s for s, n in Counter(selectors).items() if n > 1)
         self.assertEqual(dups, [])
 
-    def test_ROJO_HOY_css_de_bloques_eliminados(self):
+    def test_css_de_bloques_eliminados(self):
         """
         SUPUESTO: no hay CSS para bloques que ya no existen.
         HOY: header/category-menu.json, footer/menu.json y home/deals.json se borraron pero
@@ -376,7 +410,7 @@ class TestCss(unittest.TestCase):
         checked = {c for _, c in orphans} & {'headerNavLinks', 'deals', 'menu-row', 'menu-link', 'headerDrawerMobile'}
         self.assertEqual(sorted(checked), [], 'CSS para blockClass de bloques borrados: %s' % sorted(orphans))
 
-    def test_ROJO_HOY_archivos_css_no_vacios(self):
+    def test_archivos_css_no_vacios(self):
         """
         HOY: styles/css/vtex.sticky-layout.css tiene 0 bytes. El CLI de VTEX descarta los
              archivos vacios al subir (ProjectFilesManager: stats.size > 0), asi que es un

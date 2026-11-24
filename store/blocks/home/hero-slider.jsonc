@@ -114,7 +114,7 @@
   },
   "rich-text#rx-carros-slide-1-cta1": {
     "props": {
-      "text": "[Ver baterías](/carros/electrico-y-electronico)",
+      "text": "[Ver baterías](/carros/baterias)",
       "blockClass": "rxCtaPrimary"
     }
   },

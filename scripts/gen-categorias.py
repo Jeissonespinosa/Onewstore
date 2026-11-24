@@ -222,7 +222,7 @@ def export_csv(nodes):
     buf = io.StringIO()
     if True:
         fh = buf
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator='\n')  # el modo texto de Windows ya traduce a \r\n
         w.writerow(['Departamento', 'Nivel', 'Categoría (macro)', 'Subcategoría', 'Tipo de producto (hoja)', 'URL propuesta', 'Sinónimos (palabras clave)'])
         for n in nodes:
             for valor in n.get('valores', []):

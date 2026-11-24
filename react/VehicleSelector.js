@@ -131,7 +131,11 @@ function normalize(s) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim()
 }
+
+const SECCIONES = ['carros', 'motos', 'herramientas']
 
 /* VTEX a veces entrega la ruta interna de routing
    (/_v/segment/routing/vtex.store@2.x/subcategory/4/carros/llantas-y-rines/llantas).
@@ -144,6 +148,14 @@ function publicPath(path) {
     if (/^\d+$/.test(parts[i])) return `/${parts.slice(i + 1).join('/')}`
   }
   return clean
+}
+
+/* Anos del mas reciente al mas antiguo; lo que no es numero va al final. */
+function porAnoDesc(a, b) {
+  const ya = parseInt(a.name, 10)
+  const yb = parseInt(b.name, 10)
+  if (isNaN(ya) || isNaN(yb)) return isNaN(ya) - isNaN(yb)
+  return yb - ya
 }
 
 function parseBase(query, map) {
@@ -217,6 +229,9 @@ const VehicleSelector = ({
   const base = useMemo(() => {
     if (query) return parseBase(query, map)
     const segments = (routePath || '').split('?')[0].split('/').filter(Boolean)
+    // Solo una ruta de categoria (/carros|motos|herramientas/...) sirve de base;
+    // en un PDP, /faq, etc. no hay categoria que consultar.
+    if (!segments.length || SECCIONES.indexOf(normalize(segments[0])) === -1) return []
     return parseBase(segments.join('/'), segments.map(() => 'c').join(','))
   }, [query, map, routePath])
 
@@ -247,7 +262,8 @@ const VehicleSelector = ({
   const yearF = findFacet(facets, yearFacet)
 
   const seccion = isMoto ? 'motos' : 'carros'
-  const options = f => (f && f.values ? f.values : [])
+  // Un valor sin productos (quantity 0) llevaria a un listado vacio.
+  const options = f => (f && f.values ? f.values : []).filter(v => !(v && v.quantity === 0))
 
   /* Modelos: solo los que la base reconoce para la marca elegida. */
   const modelOptions = useMemo(() => {
@@ -258,7 +274,7 @@ const VehicleSelector = ({
 
   /* Anos: solo los del periodo en que se vendio ese modelo. */
   const yearOptions = useMemo(() => {
-    const opts = options(yearF)
+    const opts = options(yearF).slice().sort(porAnoDesc)
     if (!brand || !model) return opts
     const r = anosDeModelo(seccion, brand.value || brand.name, model.value || model.name)
     if (!r) return opts
@@ -274,7 +290,8 @@ const VehicleSelector = ({
   const onSubmit = e => {
     e.preventDefault()
     if (!ready) return
-    const segments = base.map(b => b.value).concat(picked.map(p => p.value))
+    // La base ya viene como segmentos de URL; solo se codifican los valores de facet.
+    const segments = base.map(b => b.value).concat(picked.map(p => encodeURIComponent(p.value)))
     const keys = base.map(b => b.key).concat(picked.map(p => p.key))
     navigate({ to: `/${segments.join('/')}`, query: `map=${keys.join(',')}` })
   }

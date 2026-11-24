@@ -2,8 +2,8 @@
 Tests adversariales de scripts/gen-categorias.py.
 
 Cada test documenta: SUPUESTO que rompe, ENTRADA concreta, QUE PASA HOY (bug)
-y QUE DEBERIA PASAR. Los tests marcados "ROJO HOY" fallan con el codigo
-actual a proposito: capturan el comportamiento correcto esperado.
+y QUE DEBERIA PASAR. Los bloques QUE PASA HOY / QUE DEBERIA PASAR documentan el bug que
+cada test cubre (ya corregido): capturan el comportamiento esperado.
 
 Nunca escriben en store/ ni catalogo/ reales: usan un Sandbox en tmp_path
 (ver _sandbox.py) porque el script ejecuta todo al importarse.
@@ -58,7 +58,7 @@ class TestSlugify(_Base):
         self.assertEqual(s('Citroën'), 'citroen')
         self.assertEqual(s('Año'), 'ano')
 
-    def test_ROJO_HOY_slug_vacio_debe_fallar_no_devolver_cadena_vacia(self):
+    def test_slug_vacio_debe_fallar_no_devolver_cadena_vacia(self):
         """
         SUPUESTO: todo nombre produce un slug no vacio.
         ENTRADA: nombres sin caracteres [a-z0-9] tras NFD: '日本語', '¿?', '   ', '€'.
@@ -71,7 +71,7 @@ class TestSlugify(_Base):
             with self.assertRaises(ValueError):      # el msg= evaluaba s(name) aqui mismo
                 s(name)
 
-    def test_ROJO_HOY_eszett_y_o_barrada(self):
+    def test_eszett_y_o_barrada(self):
         """
         SUPUESTO: unicodedata NFD basta para transliterar.
         ENTRADA: 'Straße', 'Ø-ring'.
@@ -94,7 +94,7 @@ class TestPlaceholderSvg(_Base):
     def test_nombre_simple_es_svg_valido(self):
         ET.fromstring(self._svg_of(self.fn['placeholder']('Frenos')))
 
-    def test_ROJO_HOY_ampersand_rompe_el_svg(self):
+    def test_ampersand_rompe_el_svg(self):
         """
         SUPUESTO: el nombre de la categoria se puede interpolar crudo en un data:image/svg+xml.
         ENTRADA: 'Llantas & rines'  (tambien '<', '>', "'").
@@ -128,7 +128,7 @@ class TestGridClass(_Base):
 # Seguridad de ejecucion
 # ---------------------------------------------------------------------------
 class TestEjecucion(_Base):
-    def test_ROJO_HOY_flag_desconocido_no_debe_escribir(self):
+    def test_flag_desconocido_no_debe_escribir(self):
         """
         SUPUESTO: solo '--real' cambia el comportamiento; cualquier otro flag es inofensivo.
         ENTRADA: python3 scripts/gen-categorias.py --dry-run   (o --help, o un typo de --real)
@@ -144,7 +144,7 @@ class TestEjecucion(_Base):
         self.assertNotEqual(malo.returncode, 0, 'un flag desconocido deberia fallar')
         self.assertEqual(sb.outputs(), [], 'un flag desconocido escribio bloques')
 
-    def test_ROJO_HOY_importar_el_modulo_no_debe_tener_efectos(self):
+    def test_importar_el_modulo_no_debe_tener_efectos(self):
         """
         SUPUESTO: un script se puede importar (p.ej. desde tests) sin ejecutarlo.
         ENTRADA: importlib sobre una copia del script en tmp.
@@ -157,7 +157,7 @@ class TestEjecucion(_Base):
         self.assertEqual(sb.outputs(), [], 'importar el modulo escribio archivos')
         self.assertTrue(hasattr(mod, 'main'), 'no existe main()')
 
-    def test_ROJO_HOY_routes_invalido_no_debe_dejar_salida_parcial(self):
+    def test_routes_invalido_no_debe_dejar_salida_parcial(self):
         """
         SUPUESTO: si algo falla, el repo queda como estaba.
         ENTRADA: store/routes.json con JSON invalido ('{ not json').
@@ -218,7 +218,7 @@ class TestSalida(_Base):
         with open(os.path.join(REPO, 'store', 'routes.json'), encoding='utf-8') as fh:
             self.assertEqual(sb.read_routes(), json.load(fh))
 
-    def test_ROJO_HOY_slug_vacio_no_debe_generar_ruta_con_barra_final(self):
+    def test_slug_vacio_no_debe_generar_ruta_con_barra_final(self):
         """
         SUPUESTO: cada nodo tiene slug; las rutas son /sec/macro[/sub][/hoja].
         ENTRADA: macro 'Carros' con nombre '日本語' (slug '').
@@ -232,7 +232,7 @@ class TestSalida(_Base):
         self.assertNotEqual(r.returncode, 0, 'acepto un slug vacio')
         self.assertEqual(sb.outputs(), [])
 
-    def test_ROJO_HOY_md_escape_tambien_en_el_rail(self):
+    def test_md_escape_tambien_en_el_rail(self):
         """
         SUPUESTO: los nombres se escapan antes de meterlos en un link markdown.
         ENTRADA: macro 'Frenos [ABS]'.
@@ -248,7 +248,7 @@ class TestSalida(_Base):
         self.assertEqual(rail['rich-text#rx-carros-linea-01-txt']['props']['text'],
                          '[Frenos \\[ABS\\]](/carros/frenos-abs)')
 
-    def test_ROJO_HOY_placeholder_con_ampersand_en_bloques(self):
+    def test_placeholder_con_ampersand_en_bloques(self):
         """Mismo bug que TestPlaceholderSvg pero visto en la salida real del generador."""
         t = minimal_tree(Carros=[{'nombre': 'Llantas & rines', 'subs': [{'nombre': None, 'tipos': ['A']}]}])
         sb = self.sandbox(tree=t)
@@ -259,7 +259,7 @@ class TestSalida(_Base):
         except ET.ParseError as e:
             self.fail('image#rx-carros-linea-01-img.src es un SVG invalido: %s' % e)
 
-    def test_ROJO_HOY_csv_hoja_bajo_macro_sin_sub_va_en_columna_hoja(self):
+    def test_csv_hoja_bajo_macro_sin_sub_va_en_columna_hoja(self):
         """
         SUPUESTO: la columna 'Tipo de producto (hoja)' contiene la hoja.
         ENTRADA: macro 'Frenos' sin subcategorias con tipo 'Pastillas' (134 de las
@@ -278,7 +278,7 @@ class TestSalida(_Base):
         self.assertEqual(row[:6],
                          ['Carros', 'Tipo de producto', 'Frenos', '', 'Pastillas', '/carros/frenos/pastillas'])
 
-    def test_ROJO_HOY_csv_injection(self):
+    def test_csv_injection(self):
         """
         SUPUESTO: el CSV solo lo abre gente de confianza / el JSON es de confianza.
         ENTRADA: nombre '=SUM(1)' y sinonimo '=HYPERLINK("http://evil")'.
@@ -295,7 +295,7 @@ class TestSalida(_Base):
                 self.assertFalse(cell[:1] in ('=', '+', '-', '@'),
                                  'celda con formula sin neutralizar: %r' % cell)
 
-    def test_ROJO_HOY_sub_sin_tipos_en_seccion_vehiculo_usa_layout_con_selector(self):
+    def test_sub_sin_tipos_en_seccion_vehiculo_usa_layout_con_selector(self):
         """
         SUPUESTO: en carros/motos toda pagina que lista productos lleva el selector de vehiculo.
         ENTRADA: Carros > Motor > sub 'Bloque' con tipos: [].
@@ -330,7 +330,7 @@ class TestSalida(_Base):
         self.assertEqual(out['store.custom#landing-herramientas'], {'path': '/herramientas'})
         self.assertEqual(out['store.custom#carros-frenos'], {'path': '/carros/frenos'})
 
-    def test_ROJO_HOY_ruta_manual_bajo_seccion_no_se_borra_en_silencio(self):
+    def test_ruta_manual_bajo_seccion_no_se_borra_en_silencio(self):
         """
         SUPUESTO (README): 'conserva las rutas que no son de categoria'.
         ENTRADA: routes.json con store.custom#promo -> /carros/promo-navidad (landing manual).
@@ -353,7 +353,7 @@ class TestSalida(_Base):
         self.assertEqual(sb.run_subprocess(['--force']).returncode, 0)
         self.assertNotIn('store.custom#promo', sb.read_routes())
 
-    def test_ROJO_HOY_hidden_facets_no_duplican_los_nombres_del_componente(self):
+    def test_hidden_facets_no_duplican_los_nombres_del_componente(self):
         """
         SUPUESTO: un solo lugar define los nombres de facet (brandFacet/modelFacet/yearFacet).
         HOY: category-filters.jsonc oculta 'Marca vehículo'/'Año'/'Modelo' con literales

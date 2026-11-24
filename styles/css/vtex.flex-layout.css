@@ -45,21 +45,6 @@
   font-size: 14px;
 }
 
-.flexRow--deals {
-  background-color: #0F3E99;
-  padding: 14px 0px;
-}
-
-.flexRow--deals .stretchChildrenWidth {
-  align-items: center;
-}
-
-.flexRow--deals .flexCol {
-  align-items: center;
-  margin-bottom: 5px;
-  padding-top: 5px;
-}
-
 .flexCol--filterCol {
   max-width: 500px;
   min-width: 230px;
@@ -330,34 +315,6 @@
   .flexCol--categoryHeroCol .flexCol--categoryHeroSlotCta {
     bottom: 1.5rem;
   }
-}
-
-/* --- Carros landing: hero --- */
-
-/* --- Carros landing: CTA banner --- */
-.flexRow--carrosCtaBanner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center center;
-  min-height: 360px;
-  margin: 3rem 0;
-}
-
-.flexRowContent--carrosCtaBanner {
-  min-height: 360px;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem;
-  box-sizing: border-box;
-}
-
-.flexCol--carrosCtaBannerContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.75rem;
-  max-width: 760px;
-  width: 100%;
 }
 
 /* --- Home Repuestox: splash / loading overlay --- */
@@ -778,24 +735,25 @@
 /* ============================================================
    BANNER CTA — misma tarjeta redondeada del hero, mas baja
    ============================================================ */
+/* --- Carros landing: CTA banner --- */
 .flexRow--carrosCtaBanner {
-  width: auto;
-  min-height: 0;
-  margin: 0 var(--rx-gutter) clamp(3rem, 6vw, 5rem);
-  border-radius: var(--rx-radius);
-  overflow: hidden;
   background-image: linear-gradient(rgba(1, 1, 1, 0.62), rgba(1, 1, 1, 0.62)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
   background-size: cover;
   background-position: center center;
+  min-height: 0;
+  margin: 0 var(--rx-gutter) clamp(3rem, 6vw, 5rem);
+  width: auto;
+  border-radius: var(--rx-radius);
+  overflow: hidden;
 }
 
 .flexRowContent--carrosCtaBanner {
   min-height: 20rem;
-  max-width: none;
   align-items: center;
   justify-content: center;
   padding: 3rem var(--rx-hero-pad);
   box-sizing: border-box;
+  max-width: none;
 }
 
 .flexCol--carrosCtaBannerContent {
@@ -1146,217 +1104,16 @@
   padding: 0 var(--rx-gutter);
 }
 
-/* ============================================================
-   FILTROS — layout con columna izquierda (subpaginas de frenos)
-   ============================================================ */
-.flexRow--rxFBody {
-  width: 100%;
-  margin: 0;
-  padding: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(2.5rem, 5vw, 4rem);
-}
-
-.flexRowContent--rxFBody {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 var(--rx-gutter);
-}
-
-.flexRowContent--rxFBody .stretchChildrenWidth {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* El ancho del panel lo fija la prop width del col (24%); el
-   wrapper de flex-layout no recibe modificador propio. */
-
-/* Panel de filtros: tarjeta gris redondeada de la referencia. */
-.flexCol--rxFSide {
-  position: sticky;
-  top: 6rem;
-  width: 100%;
-  margin: 0;
-  padding: 1.5rem 1.25rem;
-  background-color: var(--rx-surface);
-  border-radius: var(--rx-radius);
-}
-
-.flexColChild--rxFSide {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.flexCol--rxFMain {
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.flexRow--rxFilterbarF {
-  width: 100%;
-  margin: 0 0 1.25rem;
-  padding: 0;
-}
-
-.flexRowContent--rxFilterbarF {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.9rem;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-.flexRowContent--rxFilterbarF .stretchChildrenWidth {
-  width: auto !important;
-  max-width: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.flexRow--rxResultsF {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flexRowContent--rxResultsF {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Movil: selector de vehiculo arriba, en tarjeta gris. */
-.flexRow--rxFVehicleM {
-  width: 100%;
-  margin: 0;
-  padding: 1.25rem 0 0;
-}
-
-.flexRowContent--rxFVehicleM {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0 var(--rx-gutter);
-}
-
-.flexRowContent--rxFVehicleM .stretchChildrenWidth {
-  width: 100% !important;
-  max-width: none !important;
-  padding: 1.25rem !important;
-  margin: 0 !important;
-  background-color: var(--rx-surface);
-  border-radius: var(--rx-radius);
-}
-
-.flexRow--rxFilterbarM {
-  width: 100%;
-  margin: 0;
-  padding: 1.25rem 0 1rem;
-}
-
-.flexRowContent--rxFilterbarM {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0 var(--rx-gutter);
-}
-
-.flexRowContent--rxFilterbarM .stretchChildrenWidth {
-  width: auto !important;
-  max-width: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
 @media screen and (max-width: 47.99em) {
   .flexRowContent--rxResultsF {
     padding: 0 var(--rx-gutter);
   }
 }
 
-/* ============================================================
-   HERRAMIENTAS DE SECCION — buscador y "Busca por tu carro/moto"
-   ============================================================ */
-.flexRow--rxToolsSearch {
-  width: 100%;
-  margin: 0;
-  padding: clamp(1.5rem, 3vw, 2.25rem) 0 0;
-}
-
-.flexRowContent--rxToolsSearch {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
-.flexRow--rxSearchInner {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flexRowContent--rxSearchInner {
-  width: 100%;
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 var(--rx-gutter);
-  transition: padding 0.2s ease;
-}
-
-.flexRowContent--rxSearchInner .stretchChildrenWidth {
-  width: 100% !important;
-  max-width: 56rem !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-/* Panel "Busca por tu carro/moto": tarjeta gris con el selector en fila. */
-.flexRow--rxToolsVehicle {
-  width: 100%;
-  margin: 0;
-  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
-}
-
-.flexRowContent--rxToolsVehicle {
-  width: 100%;
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 var(--rx-gutter);
-}
-
-.flexRowContent--rxToolsVehicle .stretchChildrenWidth {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 2rem 1.25rem 1.5rem !important;
-  background-color: var(--rx-surface);
-  border-radius: var(--rx-radius);
-}
-
 @media screen and (min-width: 48em) {
   .flexRowContent--rxToolsVehicle .stretchChildrenWidth {
     padding: 2.75rem 2.5rem 2rem !important;
   }
-}
-
-/* Variante de 5 columnas (carros, 9 lineas): 5+4 en escritorio y
-   3+3+3 en tablet/movil, filas proporcionadas. */
-.flexRowContent--rxLineasGrid5 {
-  --rx-cols: 3;
 }
 
 @media screen and (min-width: 40em) {

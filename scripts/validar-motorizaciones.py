@@ -26,6 +26,10 @@ import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Lo que ve el cliente: las reglas duras aplican a los dos, porque los dos
+# se muestran. "por-confirmar" es lo que nadie ha mirado y no se muestra.
+MOSTRADOS = ('verificado', 'investigado')
+
 motor = json.load(open(os.path.join(ROOT, 'react', 'data', 'motorizaciones.json'), encoding='utf-8'))
 base = json.load(open(os.path.join(ROOT, 'react', 'data', 'vehiculos-colombia.json'), encoding='utf-8'))
 fuente = open(os.path.join(ROOT, 'react', 'vehiculo.js'), encoding='utf-8').read()
@@ -109,7 +113,7 @@ for marca, modelos in motor['carros'].items():
         if mo['desde'] > rango[0] or (mo.get('hasta') or rango[1]) < rango[1]:
             linea = ('%s %s: su unico motor va de %s a %s y el modelo de %d a %d'
                      % (marca, modelo, mo['desde'], mo.get('hasta'), rango[0], rango[1]))
-            if info['fuente'] == 'verificado':
+            if info['fuente'] in MOSTRADOS:
                 fallas.append(linea + ', y esta marcado verificado')
             else:
                 huecos.append(linea)
@@ -117,13 +121,16 @@ for marca, modelos in motor['carros'].items():
 n_mod = sum(len(v) for v in motor['carros'].values())
 n_mot = sum(len(i['motores']) for v in motor['carros'].values() for i in v.values())
 por_confirmar = [(ma, mo) for ma, v in motor['carros'].items()
-                 for mo, i in v.items() if i['fuente'] != 'verificado']
+                 for mo, i in v.items() if i['fuente'] == 'por-confirmar']
+investigados = [(ma, mo) for ma, v in motor['carros'].items()
+                for mo, i in v.items() if i['fuente'] == 'investigado']
 un_motor = [(ma, mo) for ma, v in motor['carros'].items()
             for mo, i in v.items() if len(i['motores']) == 1]
 
 print('%d modelos · %d motorizaciones' % (n_mod, n_mot))
 print('  %d no preguntan nada (un solo motor)' % len(un_motor))
-print('  %d por confirmar contra catalogo de distribuidor' % len(por_confirmar))
+print('  %d investigados (se muestran, falta muestreo)' % len(investigados))
+print('  %d por confirmar: nadie los ha mirado' % len(por_confirmar))
 
 # 5. El año es requisito de TODAS: un motor sin desde/hasta es un motor que
 #    se ofrece en años en los que a lo mejor no existio. En los verificados es
@@ -139,7 +146,7 @@ for marca, modelos in motor['carros'].items():
         if not faltan:
             continue
         linea = '%s %s · %s' % (marca, modelo, ', '.join(faltan))
-        if info['fuente'] == 'verificado':
+        if info['fuente'] in MOSTRADOS:
             fallas.append('%s sin ventana de año, y esta marcado verificado' % linea)
         else:
             sin_ano_falta.append(linea)

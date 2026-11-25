@@ -549,21 +549,27 @@ export function rutaDe(route) {
    ------------------------------------------------------------------ */
 import motorizaciones from './data/motorizaciones.json'
 
-/* El interruptor. Mientras la tabla se confirma contra un catalogo de
-   distribuidor solo preguntan los verificados, que hoy son 33 de 547 — 22 de ellos eléctricos, que no preguntan nada.
+/* QUE SE LE MUESTRA AL CLIENTE. Tres niveles de respaldo, y los dos
+   primeros se muestran:
 
-   Ponerlo en FALSE abre los 547 de golpe, con todo lo que todavia esta por
-   confirmar adentro. Para abrir UNO solo —probar un modelo, por ejemplo—
-   no se toca esto: se marca "fuente": "verificado" en la ficha de ese
-   modelo en data/motorizaciones.json, que es lo que hace que el Picanto
-   pregunte y el Rio no. */
-const SOLO_VERIFICADOS = true
+     verificado    lo confirmo una persona contra el catalogo
+     investigado   lo investigue contra fuentes publicas colombianas y pasa
+                   las validaciones automaticas
+     por-confirmar nadie lo ha mirado: no se muestra
+
+   La diferencia entre los dos primeros no es academica. Las fuentes
+   publicas se contradicen —el 1.4 16V del Symbol existia en una y no en
+   otra, y lo resolvio una confirmacion, no la investigacion—, asi que
+   "investigado" se muestra pero queda distinguible para revisarlo por
+   muestreo. Borrar esa diferencia seria perder el unico rastro de que
+   dato esta respaldado y cual no. */
+const MUESTRA = ['verificado', 'investigado']
 
 export function motoresDe(seccion, marca, modelo, ano) {
   if (seccion !== 'carros' || !marca || !modelo) return []
   const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
   if (!ficha) return []
-  if (SOLO_VERIFICADOS && ficha.fuente !== 'verificado') return []
+  if (MUESTRA.indexOf(ficha.fuente) < 0) return []
   const y = Number(ano)
   return (ficha.motores || []).filter(m => {
     if (!y) return true

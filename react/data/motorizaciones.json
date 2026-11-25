@@ -1137,7 +1137,7 @@
     },
     "Chevrolet": {
       "Alto": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -1154,7 +1154,7 @@
         ]
       },
       "Astra": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1165,35 +1165,40 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
             "desde": 1999,
             "hasta": 2006
           }
         ]
       },
       "Aveo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
-            "nombre": "1.4 · 1399 cc",
-            "desde": 2006,
-            "hasta": 2018
+            "nombre": "1.4 DOHC · 1399 cc",
+            "nota": "Aveo y Aveo Emotion",
+            "desde": 2005,
+            "hasta": 2013
           },
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc",
+            "nombre": "1.6 DOHC · 1598 cc",
+            "nota": "Emotion, GT y GTI",
             "desde": 2006,
             "hasta": 2018
           },
           {
             "id": "1.5",
-            "nombre": "1.5 · 1485 cc",
-            "desde": 2023
+            "nombre": "1.5 · 1498 cc",
+            "nota": "Aveo Family, el de la primera generación",
+            "desde": 2007,
+            "hasta": 2018
           }
         ]
       },
       "Aveo Emotion": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1205,7 +1210,7 @@
         ]
       },
       "Aveo Family": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -1217,7 +1222,7 @@
         ]
       },
       "Aveo Five": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1229,7 +1234,7 @@
         ]
       },
       "Aveo GT": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1241,16 +1246,18 @@
         ]
       },
       "Beat": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
-            "nombre": "1.2 · 1199 cc"
+            "nombre": "1.2 · 1199 cc",
+            "desde": 2018,
+            "hasta": 2024
           }
         ]
       },
       "Beat Hatchback": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
@@ -1262,7 +1269,7 @@
         ]
       },
       "Blazer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -1274,7 +1281,7 @@
         ]
       },
       "Blazer clásica": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "4.3",
@@ -1299,20 +1306,27 @@
         ]
       },
       "Camaro": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "3.6",
+            "id": "3.6-V6",
             "nombre": "3.6 V6 · 3564 cc",
             "nota": "RS",
             "desde": 2010,
             "hasta": 2023
           },
           {
-            "id": "6.2",
+            "id": "6.2-V8",
             "nombre": "6.2 V8 · 6162 cc",
             "nota": "SS y ZL1",
             "desde": 2010,
+            "hasta": 2023
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "desde la sexta generación",
+            "desde": 2016,
             "hasta": 2023
           }
         ]
@@ -1383,7 +1397,7 @@
         ]
       },
       "Captiva Sport": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -1395,7 +1409,7 @@
         ]
       },
       "Cavalier": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2",
@@ -1407,7 +1421,7 @@
         ]
       },
       "Celebrity": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.8",
@@ -1419,7 +1433,7 @@
         ]
       },
       "Chevette": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1431,7 +1445,7 @@
         ]
       },
       "Cheyenne": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "5.3",
@@ -1443,7 +1457,7 @@
         ]
       },
       "Cobalt": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1455,7 +1469,7 @@
         ]
       },
       "Colorado": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.5",
@@ -1465,14 +1479,14 @@
           },
           {
             "id": "2.8D",
-            "nombre": "2.8 Diésel · 2776 cc",
+            "nombre": "2.8 Turbodiésel · 2776 cc",
             "desde": 2013,
             "hasta": 2023
           }
         ]
       },
       "Corsa": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -1483,13 +1497,14 @@
           {
             "id": "1.6",
             "nombre": "1.6 · 1598 cc",
+            "nota": "versiones altas",
             "desde": 1996,
             "hasta": 2010
           }
         ]
       },
       "Corsa Evolution": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -1507,11 +1522,13 @@
         ]
       },
       "Cruze": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
-            "nombre": "1.8 · 1796 cc"
+            "nombre": "1.8 · 1796 cc",
+            "desde": 2010,
+            "hasta": 2019
           }
         ]
       },
@@ -1539,7 +1556,7 @@
         ]
       },
       "Equinox": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -1551,7 +1568,7 @@
         ]
       },
       "Esteem": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -1623,11 +1640,13 @@
         ]
       },
       "Groove": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
-            "nombre": "1.5 · 1485 cc"
+            "nombre": "1.5 · 1485 cc",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },
@@ -1644,16 +1663,18 @@
         ]
       },
       "Joy": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
-            "nombre": "1.4 · 1399 cc"
+            "nombre": "1.4 · 1399 cc",
+            "desde": 2019,
+            "hasta": 2023
           }
         ]
       },
       "Luv": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1664,7 +1685,14 @@
           {
             "id": "2.3",
             "nombre": "2.3 Gasolina · 2254 cc",
-            "desde": 1980,
+            "desde": 1988,
+            "hasta": 2005
+          },
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2499 cc",
+            "nota": "por confirmar qué años entró",
+            "desde": 1988,
             "hasta": 2005
           }
         ]
@@ -1699,7 +1727,7 @@
         ]
       },
       "Malibú": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -1711,7 +1739,7 @@
         ]
       },
       "Montana": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1723,7 +1751,7 @@
         ]
       },
       "Monza": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1741,7 +1769,7 @@
         ]
       },
       "N200": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
@@ -1753,7 +1781,7 @@
         ]
       },
       "N300": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
@@ -1765,7 +1793,7 @@
         ]
       },
       "N400": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -1794,7 +1822,7 @@
         ]
       },
       "Onix Turbo RS": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0T",
@@ -1842,7 +1870,7 @@
         ]
       },
       "Orlando": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1854,7 +1882,7 @@
         ]
       },
       "Rodeo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.2",
@@ -1881,7 +1909,7 @@
         ]
       },
       "Sail Hatchback": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -1893,7 +1921,7 @@
         ]
       },
       "Samurai": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -1905,7 +1933,7 @@
         ]
       },
       "Silverado": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "5.3",
@@ -1917,7 +1945,7 @@
         ]
       },
       "Sonic": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1929,7 +1957,7 @@
         ]
       },
       "Spark": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -1966,7 +1994,7 @@
         ]
       },
       "Spark Life": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -1978,7 +2006,7 @@
         ]
       },
       "Spin": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -1990,7 +2018,7 @@
         ]
       },
       "Sprint": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -2002,7 +2030,7 @@
         ]
       },
       "Super Carry": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -2014,7 +2042,7 @@
         ]
       },
       "Swift": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2026,7 +2054,7 @@
         ]
       },
       "Tahoe": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "falta": "faltan las generaciones anteriores a 2007",
         "motores": [
           {
@@ -2039,23 +2067,26 @@
         ]
       },
       "Tracker": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
-            "nombre": "1.8 · 1796 cc",
-            "desde": 2014,
-            "hasta": 2019
+            "nombre": "1.8 Ecotec · 1796 cc",
+            "nota": "primera generación, 138 hp",
+            "desde": 2013,
+            "hasta": 2020
           },
           {
             "id": "1.2T",
-            "nombre": "1.2 Turbo · 1199 cc",
-            "desde": 2020
+            "nombre": "1.2 Turbo · 1199 cc · 3 cilindros",
+            "nota": "segunda generación, 132 hp",
+            "desde": 2021,
+            "hasta": 2027
           }
         ]
       },
       "Trailblazer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.8D",
@@ -2067,7 +2098,7 @@
         ]
       },
       "Traverse": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -2079,7 +2110,7 @@
         ]
       },
       "Trooper": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.2",
@@ -2090,7 +2121,7 @@
         ]
       },
       "Vectra": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -2121,7 +2152,7 @@
         ]
       },
       "Wagon R+": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
@@ -2133,7 +2164,7 @@
         ]
       },
       "Zafira": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -4156,7 +4187,7 @@
     },
     "Isuzu": {
       "Luv": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -4167,13 +4198,20 @@
           {
             "id": "2.3",
             "nombre": "2.3 Gasolina · 2254 cc",
-            "desde": 1980,
+            "desde": 1988,
+            "hasta": 2005
+          },
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2499 cc",
+            "nota": "por confirmar qué años entró",
+            "desde": 1988,
             "hasta": 2005
           }
         ]
       },
       "Rodeo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.2",
@@ -4184,7 +4222,7 @@
         ]
       },
       "Trooper": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.2",

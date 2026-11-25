@@ -371,6 +371,23 @@ prueba('2011 es el año del cambio y los muestra todos',
 prueba('cada motor del Serie 1 dice que version es',
   motoresDe('carros', 'BMW', 'Serie 1', '2016').every(x => !!x.nota), true)
 
+console.log('\n=== la X1, confirmada ===')
+const x1 = a => motoresDe('carros', 'BMW', 'X1', a).map(x => x.id).sort()
+prueba('en 2011 el 28i todavía es el 3.0 de seis cilindros',
+  x1('2011'), ['2.0-asp', '2.0D', '3.0-6c'])
+prueba('en 2013 ya lo reemplazó el 2.0 turbo', x1('2013'),
+  ['2.0-asp', '2.0D', '2.0T'])
+prueba('en 2017 quedan el turbo y el diésel', x1('2017'), ['2.0D', '2.0T'])
+prueba('en 2021 entra el 1.5 de tres cilindros y ya no hay diésel',
+  x1('2021'), ['1.5T', '2.0T'])
+prueba('en 2025 están el híbrido enchufable y el M35i',
+  x1('2025'), ['1.5T', '2.0D-U11', '25e', 'M35i'])
+/* El diésel vuelve en 2024 pero es otro motor: no puede aparecer como el
+   mismo que el de 2015. */
+prueba('el diésel viejo y el nuevo no se confunden',
+  motoresDe('carros', 'BMW', 'X1', '2025').filter(x => x.id === '2.0D').length, 0)
+prueba('la X1 sí pregunta', pideMotor('carros', 'BMW', 'X1', '2025'), true)
+
 console.log('\n=== el año va en todos ===')
 /* Regla nueva: un motor verificado SIN ventana de año no existe. "De 2010 a
    2023" es un dato confirmado; "sin año" es un dato que falta. */

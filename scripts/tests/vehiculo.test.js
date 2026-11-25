@@ -156,11 +156,14 @@ prueba('Picanto 2008 era el 1.1',
 prueba('y con uno solo NO se pregunta', pideMotor('carros','Kia','Picanto','2008'), false)
 
 // El 1.6 de Renault no es uno: 8V y 16V llevan correa y bujias distintas.
-/* El Sandero tiene 8V y 16V, pero no sabemos desde que año va cada uno, y
-   sin el año el motor no se puede ofrecer: diria que un Sandero 2024 puede
-   ser 8V sin que nadie lo haya comprobado. Se queda por confirmar. */
-prueba('el Sandero no se ofrece mientras le falte el año',
-  motoresDe('carros','Renault','Sandero','2018'), [])
+/* El Sandero quedo confirmado: el 8V en las dos generaciones y el 16V H4M
+   desde 2015, que es el corte que no sabiamos. */
+prueba('el Sandero de 2018 ofrece el 8V, el H4M y el R.S.',
+  motoresDe('carros','Renault','Sandero','2018').map(x => x.id).sort(),
+  ['1.6-16V-H4M','1.6-8V','2.0'])
+prueba('y en 2012 todavia no hay H4M',
+  motoresDe('carros','Renault','Sandero','2012').map(x => x.id).sort(),
+  ['1.6-16V-K4M','1.6-8V'])
 
 // Lo que NO debe preguntar
 prueba('una moto nunca', pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), false)
@@ -386,11 +389,14 @@ prueba('el Mazda 3 de 2010 no ve SkyActiv',
   crudoEnAno('Mazda', 'Mazda 3', 2010), ['1.6', '2.0'])
 prueba('el Fortuner recupero el 2.4 diésel',
   crudoEnAno('Toyota', 'Fortuner', 2020), ['2.4D', '2.7', '2.8D'])
-prueba('el Symbol dejo de tener un solo motor',
-  motorizaciones.carros.Renault.Symbol.motores.length >= 3, true)
-prueba('el Twingo distingue 8V de 16V',
+/* La confirmacion zanjo la duda: el Symbol llevo 1.4 K7J y 1.6 16V K4M. El
+   "1.4 16V" que listaba una de las fuentes no existio. */
+prueba('el Symbol son dos motores, no cuatro',
+  motorizaciones.carros.Renault.Symbol.motores.map(x => x.id).sort(),
+  ['1.4','1.6-16V'])
+prueba('el Twingo quedo con sus tres motores confirmados',
   motorizaciones.carros.Renault.Twingo.motores.map(x => x.id).sort(),
-  ['1.2-16V', '1.2-8V'])
+  ['1.1', '1.2-16V', '1.3'])
 /* "Anteriores a 2005" no es un motor y no puede salir como opcion. */
 prueba('lo que falta se anota en la ficha, no entre los motores',
   motorizaciones.carros.Toyota.Hilux.motores.every(x => /\d/.test(x.id)), true)
@@ -421,18 +427,25 @@ prueba('el 2.0 viejo y el 2.0 TSI no se llaman igual',
     .filter(x => x.id.indexOf('2.0') === 0).map(x => x.nombre),
   ['2.0 Aspirado · 1984 cc', '2.0 TSI · 1984 cc'])
 
+/* Confirmado: el E46 convivia con cuatro y con seis cilindros, y el 2.0
+   de cuatro no es el mismo que el 2.0 de seis. */
 prueba('el Serie 3 de 2003 es todo aspirado',
-  crudoEnAno('BMW', 'Serie 3', 2003), ['1.8', '2.0-asp', '2.2-6c', '2.5-6c', '3.0-asp'])
-prueba('el de 2024 son dos', crudoEnAno('BMW', 'Serie 3', 2024), ['2.0T', '3.0T'])
+  crudoEnAno('BMW', 'Serie 3', 2003),
+  ['1.8', '2.0-4c', '2.0-6c', '2.5-6c', '2.8-6c', '3.0-6c', '3.2-6c'])
+prueba('y los dos 2.0 del E46 se ven distinto',
+  motorizaciones.carros.BMW['Serie 3'].motores
+    .filter(x => x.id.indexOf('2.0-') === 0).map(x => x.nombre),
+  ['2.0 Aspirado · 1995 cc · 4 cilindros', '2.0 Aspirado · 1991 cc · 6 cilindros'])
+prueba('el de 2024 trae el hibrido enchufable',
+  crudoEnAno('BMW', 'Serie 3', 2024).sort(), ['2.0T', '3.0T', '330e'])
 
 prueba('el Yaris viejo y el nuevo son motores distintos',
   crudoEnAno('Toyota', 'Yaris', 2010).concat(crudoEnAno('Toyota', 'Yaris', 2022)),
   ['1.5', '1.5-NR'])
-prueba('el Symbol de 2005 lleva el 1.4 8V',
-  crudoEnAno('Renault', 'Symbol', 2005).indexOf('1.4-8V') >= 0, true)
-prueba('y el de 2011 ya es 1.6',
-  crudoEnAno('Renault', 'Symbol', 2011).filter(x => x.indexOf('1.6') === 0).sort(),
-  ['1.6-16V', '1.6-8V'])
+prueba('el Symbol de 2005 lleva el 1.4 y el 1.6',
+  crudoEnAno('Renault', 'Symbol', 2005), ['1.4','1.6-16V'])
+prueba('y el de 2011 solo el 1.6, que es lo que siguio',
+  crudoEnAno('Renault', 'Symbol', 2011), ['1.6-16V'])
 prueba('el Koleos quedo con su rango completo',
   crudoEnAno('Renault', 'Koleos', 2015).indexOf('2.5') >= 0, true)
 

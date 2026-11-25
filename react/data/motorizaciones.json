@@ -275,91 +275,131 @@
         ]
       },
       "Serie 2": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "218i",
-            "nombre": "218i · 1.5 Turbo"
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc · 3 cilindros",
+            "nota": "218i de la F22",
+            "desde": 2014,
+            "hasta": 2021
           },
           {
-            "id": "220i",
-            "nombre": "220i · 2.0 Turbo"
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "220i, y el 218i desde 2022",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "M235i, M240i y M2",
+            "desde": 2014,
+            "hasta": 2027
           }
         ]
       },
       "Serie 3": {
-        "fuente": "por-confirmar",
-        "falta": "las designaciones salen de la historia del modelo; falta confirmar cuáles entraron a Colombia",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1596 cc",
-            "nota": "316i aspirado",
+            "nombre": "1.6 Aspirado · 1596 cc",
+            "nota": "316i del E30 y el E36",
             "desde": 1990,
             "hasta": 1998
           },
           {
             "id": "1.8",
-            "nombre": "1.8 · 1796 cc",
-            "nota": "318i",
+            "nombre": "1.8 Aspirado · 1796 cc",
+            "nota": "318i del E30, E36 y E46",
             "desde": 1990,
             "hasta": 2005
           },
           {
-            "id": "2.0-asp",
-            "nombre": "2.0 · 1995 cc",
-            "nota": "318i y 320i aspirados",
+            "id": "2.0-4c",
+            "nombre": "2.0 Aspirado · 1995 cc · 4 cilindros",
+            "nota": "318i del E46 y 320i del E90",
             "desde": 1998,
             "hasta": 2012
           },
           {
-            "id": "2.2-6c",
-            "nombre": "2.2 · 2171 cc · 6 cilindros",
-            "nota": "320i del E46",
-            "desde": 1998,
+            "id": "2.0-6c",
+            "nombre": "2.0 Aspirado · 1991 cc · 6 cilindros",
+            "nota": "320i del E30, E36 y E46",
+            "desde": 1990,
             "hasta": 2005
           },
           {
             "id": "2.5-6c",
-            "nombre": "2.5 · 2494 cc · 6 cilindros",
-            "nota": "325i",
+            "nombre": "2.5 Aspirado · 2494 cc · 6 cilindros",
+            "nota": "323i y 325i",
             "desde": 1990,
             "hasta": 2012
           },
           {
-            "id": "3.0-asp",
-            "nombre": "3.0 · 2979 cc · 6 cilindros",
-            "nota": "328i y 330i aspirados",
-            "desde": 1998,
+            "id": "2.8-6c",
+            "nombre": "2.8 Aspirado · 2793 cc · 6 cilindros",
+            "nota": "328i del E36 y E46",
+            "desde": 1995,
+            "hasta": 2005
+          },
+          {
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "330i del E46 y E90, y el M3 del E36",
+            "desde": 1996,
             "hasta": 2012
           },
           {
+            "id": "3.2-6c",
+            "nombre": "3.2 Aspirado · 3246 cc · 6 cilindros",
+            "nota": "M3 del E36 y E46",
+            "desde": 1995,
+            "hasta": 2006
+          },
+          {
+            "id": "4.0-V8",
+            "nombre": "4.0 V8 Aspirado · 3999 cc",
+            "nota": "M3 del E90",
+            "desde": 2007,
+            "hasta": 2013
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc · 3 cilindros",
+            "nota": "318i de la F30",
+            "desde": 2012,
+            "hasta": 2019
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "320i, 328i y 330i de la F30 y la G20",
+            "desde": 2012,
+            "hasta": 2027
+          },
+          {
             "id": "3.0T",
-            "nombre": "3.0 Turbo · 2979 cc · 6 cilindros",
-            "nota": "335i y M340i",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "335i, 340i, M340i y M3",
             "desde": 2007,
             "hasta": 2027
           },
           {
-            "id": "1.6T",
-            "nombre": "1.6 Turbo · 1598 cc",
-            "nota": "316i del F30",
-            "desde": 2012,
-            "hasta": 2016
-          },
-          {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1998 cc",
-            "nota": "320i, 328i y 330i",
-            "desde": 2012,
-            "hasta": 2027
-          },
-          {
             "id": "2.0D",
-            "nombre": "2.0 Diésel · 1995 cc",
+            "nombre": "2.0 Turbodiésel · 1995 cc",
             "nota": "320d",
-            "desde": 2012,
+            "desde": 2005,
             "hasta": 2019
+          },
+          {
+            "id": "330e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1998 cc",
+            "nota": "330e",
+            "desde": 2016,
+            "hasta": 2027
           }
         ]
       },
@@ -376,15 +416,105 @@
         ]
       },
       "Serie 5": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "520i",
-            "nombre": "520i · 2.0 Turbo"
+            "id": "1.8",
+            "nombre": "1.8 Aspirado · 1796 cc",
+            "nota": "518i del E34",
+            "desde": 1996,
+            "hasta": 1996
           },
           {
-            "id": "530i",
-            "nombre": "530i · 2.0 Turbo"
+            "id": "2.0-6c",
+            "nombre": "2.0 Aspirado · 1991 cc · 6 cilindros",
+            "nota": "520i del E34, E39 y E60",
+            "desde": 1996,
+            "hasta": 2010
+          },
+          {
+            "id": "2.3-6c",
+            "nombre": "2.3 Aspirado · 2494 cc · 6 cilindros",
+            "nota": "523i del E39",
+            "desde": 1996,
+            "hasta": 2003
+          },
+          {
+            "id": "2.5-6c",
+            "nombre": "2.5 Aspirado · 2494 cc · 6 cilindros",
+            "nota": "525i del E39 y E60",
+            "desde": 1996,
+            "hasta": 2010
+          },
+          {
+            "id": "2.8-6c",
+            "nombre": "2.8 Aspirado · 2793 cc · 6 cilindros",
+            "nota": "528i del E39",
+            "desde": 1996,
+            "hasta": 2003
+          },
+          {
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "530i del E39 y E60",
+            "desde": 1996,
+            "hasta": 2010
+          },
+          {
+            "id": "4.4-V8",
+            "nombre": "4.4 V8 · 4398 cc",
+            "nota": "540i, 545i, 550i, M550i y M5",
+            "desde": 1996,
+            "hasta": 2027
+          },
+          {
+            "id": "4.8-V8",
+            "nombre": "4.8 V8 Aspirado · 4799 cc",
+            "nota": "550i del E60",
+            "desde": 2005,
+            "hasta": 2010
+          },
+          {
+            "id": "5.0-V10",
+            "nombre": "5.0 V10 Aspirado · 4999 cc",
+            "nota": "M5 del E60",
+            "desde": 2005,
+            "hasta": 2010
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "520i, 528i y 530i de la F10 en adelante",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "535i y 540i",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1995 cc",
+            "nota": "520d",
+            "desde": 2004,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Turbodiésel · 2993 cc · 6 cilindros",
+            "nota": "525d, 530d y M50d",
+            "desde": 1996,
+            "hasta": 2027
+          },
+          {
+            "id": "530e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1998 cc",
+            "nota": "530e",
+            "desde": 2017,
+            "hasta": 2027
           }
         ]
       },
@@ -482,15 +612,56 @@
         ]
       },
       "X3": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "20i",
-            "nombre": "xDrive20i · 2.0 Turbo"
+            "id": "2.5-6c",
+            "nombre": "2.5 Aspirado · 2494 cc · 6 cilindros",
+            "nota": "2.5i y 2.5si del E83",
+            "desde": 2004,
+            "hasta": 2010
           },
           {
-            "id": "30i",
-            "nombre": "xDrive30i · 2.0 Turbo"
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "3.0i, 3.0si y el xDrive28i de los primeros años",
+            "desde": 2004,
+            "hasta": 2013
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "xDrive20i, xDrive28i, xDrive30i y el 20 xDrive",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "xDrive35i, M40i, X3 M y M50",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1995 cc",
+            "nota": "2.0d y xDrive20d",
+            "desde": 2004,
+            "hasta": 2024
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Turbodiésel · 2993 cc · 6 cilindros",
+            "nota": "3.0d y xDrive30d",
+            "desde": 2004,
+            "hasta": 2017
+          },
+          {
+            "id": "30e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1998 cc",
+            "nota": "xDrive30e",
+            "desde": 2019,
+            "hasta": 2027
           }
         ]
       },
@@ -507,15 +678,70 @@
         ]
       },
       "X5": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "40i",
-            "nombre": "xDrive40i · 3.0 Turbo"
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "3.0i del E53 y xDrive30i del E70",
+            "desde": 2000,
+            "hasta": 2010
           },
           {
-            "id": "30d",
-            "nombre": "xDrive30d · 3.0 Diésel"
+            "id": "4.4-V8",
+            "nombre": "4.4 V8 · 4395 cc",
+            "nota": "4.4i, xDrive50i, M50i, M60i y X5 M",
+            "desde": 2000,
+            "hasta": 2027
+          },
+          {
+            "id": "4.6-V8",
+            "nombre": "4.6 V8 Aspirado · 4619 cc",
+            "nota": "4.6is del E53",
+            "desde": 2001,
+            "hasta": 2003
+          },
+          {
+            "id": "4.8-V8",
+            "nombre": "4.8 V8 Aspirado · 4799 cc",
+            "nota": "4.8is y xDrive48i",
+            "desde": 2003,
+            "hasta": 2010
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "xDrive35i, xDrive40i y el 40 xDrive",
+            "desde": 2007,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Turbodiésel · 2993 cc · 6 cilindros",
+            "nota": "3.0d, xDrive30d, xDrive35d y M50d",
+            "desde": 2000,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1995 cc",
+            "nota": "xDrive25d",
+            "desde": 2014,
+            "hasta": 2018
+          },
+          {
+            "id": "40e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1998 cc",
+            "nota": "xDrive40e",
+            "desde": 2014,
+            "hasta": 2018
+          },
+          {
+            "id": "45e",
+            "nombre": "3.0 Turbo híbrido enchufable · 2998 cc · 6 cilindros",
+            "nota": "xDrive45e y xDrive50e",
+            "desde": 2019,
+            "hasta": 2027
           }
         ]
       },
@@ -1085,19 +1311,54 @@
         ]
       },
       "Captiva": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "2.4",
-            "nombre": "2.4 · 2384 cc"
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 · 3195 cc",
+            "nota": "Captiva de origen coreano",
+            "desde": 2007,
+            "hasta": 2018
           },
           {
-            "id": "3.0",
-            "nombre": "3.0 V6 · 2997 cc"
+            "id": "2.4",
+            "nombre": "2.4 Ecotec · 2384 cc",
+            "nota": "Captiva Sport",
+            "desde": 2011,
+            "hasta": 2018
+          },
+          {
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 · 2997 cc",
+            "nota": "Captiva Sport",
+            "desde": 2011,
+            "hasta": 2018
+          },
+          {
+            "id": "3.6-V6",
+            "nombre": "3.6 V6 · 3564 cc",
+            "nota": "Captiva Sport",
+            "desde": 2011,
+            "hasta": 2018
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 CDTi Diésel · 1991 cc",
+            "desde": 2007,
+            "hasta": 2018
           },
           {
             "id": "2.2D",
-            "nombre": "2.2 Diésel · 2231 cc"
+            "nombre": "2.2 CDTi Diésel · 2231 cc",
+            "desde": 2007,
+            "hasta": 2018
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1490 cc",
+            "nota": "Captiva Turbo, la de 2020 en adelante",
+            "desde": 2020,
+            "hasta": 2027
           }
         ]
       },
@@ -1291,31 +1552,54 @@
         ]
       },
       "Grand Vitara": {
-        "fuente": "por-confirmar",
-        "falta": "falta separar la primera generación de la de 2006",
+        "fuente": "verificado",
         "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "nota": "3 puertas",
+            "desde": 1999,
+            "hasta": 2005
+          },
           {
             "id": "2.0",
             "nombre": "2.0 · 1995 cc",
+            "nota": "5 puertas",
             "desde": 1999,
             "hasta": 2015
           },
           {
-            "id": "2.7",
-            "nombre": "2.7 V6 · 2736 cc",
-            "nota": "versiones altas",
+            "id": "2.5-V6",
+            "nombre": "2.5 V6 · 2493 cc",
             "desde": 1999,
-            "hasta": 2015
+            "hasta": 2005
           }
         ]
       },
       "Grand Vitara SZ": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
+            "id": "2.0",
+            "nombre": "2.0 J20A · 1995 cc",
+            "desde": 2006,
+            "hasta": 2015
+          },
+          {
             "id": "2.4",
-            "nombre": "2.4 · 2393 cc",
-            "nota": "único motor",
+            "nombre": "2.4 J24B · 2393 cc",
+            "desde": 2006,
+            "hasta": 2015
+          },
+          {
+            "id": "2.7-V6",
+            "nombre": "2.7 V6 H27A · 2736 cc",
+            "desde": 2006,
+            "hasta": 2015
+          },
+          {
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 N32A · 3195 cc",
             "desde": 2006,
             "hasta": 2015
           }
@@ -1331,12 +1615,12 @@
         ]
       },
       "Jimny": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.3",
-            "nombre": "1.3 · 1328 cc",
-            "nota": "único motor",
+            "nombre": "1.3 G13BB o M13A · 1328 cc",
+            "nota": "tercera generación",
             "desde": 1998,
             "hasta": 2007
           }
@@ -2454,15 +2738,34 @@
         ]
       },
       "EcoSport": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.5",
-            "nombre": "1.5 · 1498 cc"
+            "id": "1.6",
+            "nombre": "1.6 Aspirado · 1596 cc",
+            "nota": "primera generación y la Sigma de la segunda",
+            "desde": 2004,
+            "hasta": 2017
           },
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc"
+            "nombre": "2.0 Duratec · 1999 cc",
+            "desde": 2004,
+            "hasta": 2022
+          },
+          {
+            "id": "1.4D",
+            "nombre": "1.4 TDCi Diésel · 1399 cc",
+            "nota": "primera generación",
+            "desde": 2004,
+            "hasta": 2012
+          },
+          {
+            "id": "1.5",
+            "nombre": "1.5 Dragon · 1497 cc · 3 cilindros",
+            "nota": "desde el facelift de 2018",
+            "desde": 2018,
+            "hasta": 2022
           }
         ]
       },
@@ -2479,15 +2782,56 @@
         ]
       },
       "Escape": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc"
+            "nombre": "2.0 Aspirado · 1989 cc",
+            "nota": "primera generación",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "2.3",
+            "nombre": "2.3 Aspirado · 2261 cc",
+            "nota": "primera generación",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 Duratec · 2967 cc",
+            "nota": "primera y segunda generación",
+            "desde": 2001,
+            "hasta": 2012
           },
           {
             "id": "2.5",
-            "nombre": "2.5 · 2488 cc"
+            "nombre": "2.5 Aspirado · 2488 cc",
+            "nota": "segunda y tercera generación",
+            "desde": 2008,
+            "hasta": 2019
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 EcoBoost · 1999 cc",
+            "nota": "desde la tercera generación",
+            "desde": 2013,
+            "hasta": 2027
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 EcoBoost · 1497 cc · 3 cilindros",
+            "nota": "cuarta generación",
+            "desde": 2020,
+            "hasta": 2027
+          },
+          {
+            "id": "2.5HV",
+            "nombre": "2.5 Híbrido · 2488 cc",
+            "nota": "cuarta generación",
+            "desde": 2020,
+            "hasta": 2027
           }
         ]
       },
@@ -3098,15 +3442,42 @@
     },
     "Hyundai": {
       "Accent": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
+            "id": "1.3",
+            "nombre": "1.3 · 1341 cc",
+            "nota": "Accent Gyro",
+            "desde": 1995,
+            "hasta": 2006
+          },
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1495 cc",
+            "nota": "Accent Gyro",
+            "desde": 1995,
+            "hasta": 2006
+          },
+          {
             "id": "1.4",
-            "nombre": "1.4 · 1368 cc"
+            "nombre": "1.4 · 1399 cc",
+            "nota": "Web, Vision, i25 y el RB",
+            "desde": 2006,
+            "hasta": 2021
           },
           {
             "id": "1.6",
-            "nombre": "1.6 · 1591 cc"
+            "nombre": "1.6 CVVT · 1591 cc",
+            "nota": "Web, Vision, i25 y el Verna",
+            "desde": 2006,
+            "hasta": 2023
+          },
+          {
+            "id": "1.5D",
+            "nombre": "1.5 CRDi Diésel · 1493 cc",
+            "nota": "Web y Vision",
+            "desde": 2006,
+            "hasta": 2011
           }
         ]
       },
@@ -3239,15 +3610,27 @@
         ]
       },
       "Grand i10": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.0",
-            "nombre": "1.0 · 998 cc"
+            "nombre": "1.0 Kappa · 998 cc · 3 cilindros",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "1.25",
+            "nombre": "1.25 Kappa · 1248 cc",
+            "nota": "primera generación",
+            "desde": 2014,
+            "hasta": 2020
           },
           {
             "id": "1.2",
-            "nombre": "1.2 · 1197 cc"
+            "nombre": "1.2 MPi · 1197 cc",
+            "nota": "segunda generación",
+            "desde": 2021,
+            "hasta": 2027
           }
         ]
       },
@@ -3404,15 +3787,48 @@
         ]
       },
       "Tucson": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc"
+            "nombre": "2.0 Aspirado · 1999 cc",
+            "nota": "en las cuatro generaciones",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "2.7-V6",
+            "nombre": "2.7 V6 · 2656 cc",
+            "nota": "primera generación",
+            "desde": 2005,
+            "hasta": 2010
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 Theta II · 2359 cc",
+            "nota": "Tucson ix",
+            "desde": 2010,
+            "hasta": 2015
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1591 cc",
+            "nota": "tercera generación",
+            "desde": 2016,
+            "hasta": 2021
           },
           {
             "id": "2.0D",
-            "nombre": "2.0 CRDi Diésel · 1995 cc"
+            "nombre": "2.0 CRDi Diésel · 1995 cc",
+            "desde": 2005,
+            "hasta": 2021
+          },
+          {
+            "id": "1.6T-HEV",
+            "nombre": "1.6 Turbo Híbrido · 1598 cc",
+            "nota": "cuarta generación",
+            "desde": 2021,
+            "hasta": 2027
           }
         ]
       },
@@ -3447,15 +3863,34 @@
         ]
       },
       "i10": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
+            "id": "1.1",
+            "nombre": "1.1 Epsilon · 1086 cc",
+            "nota": "primera generación",
+            "desde": 2008,
+            "hasta": 2014
+          },
+          {
+            "id": "1.25",
+            "nombre": "1.25 Kappa · 1248 cc",
+            "desde": 2008,
+            "hasta": 2020
+          },
+          {
             "id": "1.0",
-            "nombre": "1.0 · 998 cc"
+            "nombre": "1.0 Kappa · 998 cc · 3 cilindros",
+            "nota": "desde el Grand i10",
+            "desde": 2014,
+            "hasta": 2023
           },
           {
             "id": "1.2",
-            "nombre": "1.2 · 1197 cc"
+            "nombre": "1.2 MPi · 1197 cc",
+            "nota": "desde 2021",
+            "desde": 2021,
+            "hasta": 2023
           }
         ]
       },
@@ -3783,15 +4218,21 @@
         ]
       },
       "Cerato": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1591 cc"
+            "nombre": "1.6 Gamma · 1591 cc",
+            "nota": "en las cuatro generaciones",
+            "desde": 2009,
+            "hasta": 2023
           },
           {
             "id": "2.0",
-            "nombre": "2.0 · 1999 cc"
+            "nombre": "2.0 · 1999 cc",
+            "nota": "Theta II y Nu según la generación",
+            "desde": 2009,
+            "hasta": 2023
           }
         ]
       },
@@ -4563,28 +5004,50 @@
         ]
       },
       "CX-30": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "2.0",
-            "nombre": "2.0 · 1998 cc"
+            "id": "2.0S",
+            "nombre": "2.0 SkyActiv-G · 1998 cc",
+            "desde": 2020,
+            "hasta": 2027
           },
           {
-            "id": "2.5",
-            "nombre": "2.5 · 2488 cc"
+            "id": "2.5S",
+            "nombre": "2.5 SkyActiv-G · 2488 cc",
+            "desde": 2020,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0S-MHEV",
+            "nombre": "2.0 e-SkyActiv-G MHEV · 1998 cc",
+            "nota": "híbrido ligero de 24V",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },
       "CX-5": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "2.0",
-            "nombre": "2.0 · 1998 cc"
+            "id": "2.0S",
+            "nombre": "2.0 SkyActiv-G · 1998 cc",
+            "desde": 2013,
+            "hasta": 2027
           },
           {
-            "id": "2.5",
-            "nombre": "2.5 · 2488 cc"
+            "id": "2.5S",
+            "nombre": "2.5 SkyActiv-G · 2488 cc",
+            "desde": 2013,
+            "hasta": 2027
+          },
+          {
+            "id": "2.5T",
+            "nombre": "2.5 SkyActiv-G Turbo · 2488 cc",
+            "nota": "segunda generación",
+            "desde": 2017,
+            "hasta": 2027
           }
         ]
       },
@@ -5540,43 +6003,78 @@
         ]
       },
       "Qashqai": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "2.0",
-            "nombre": "2.0 · 1997 cc",
-            "nota": "MR20, el documentado en Colombia",
+            "id": "1.6",
+            "nombre": "1.6 Aspirado · 1598 cc",
+            "nota": "primera generación",
             "desde": 2010,
-            "hasta": 2027
+            "hasta": 2014
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 MR20 · 1997 cc",
+            "nota": "primera y segunda generación",
+            "desde": 2010,
+            "hasta": 2022
           },
           {
             "id": "1.3T",
             "nombre": "1.3 Turbo · 1332 cc",
-            "nota": "Qashqai Advance — sale en la base del Ministerio, por verificar"
+            "nota": "tercera generación",
+            "desde": 2022,
+            "hasta": 2027
           }
-        ],
-        "falta": "verificar el 1.3 del Qashqai Advance antes de ofrecerlo"
+        ]
       },
       "Sentra": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.8",
-            "nombre": "1.8 · 1798 cc"
+            "id": "1.8-QG",
+            "nombre": "1.8 QG18DE · 1769 cc",
+            "nota": "B15",
+            "desde": 2001,
+            "hasta": 2006
           },
           {
-            "id": "2.0",
-            "nombre": "2.0 · 1997 cc"
+            "id": "2.5",
+            "nombre": "2.5 QR25DE · 2488 cc",
+            "nota": "SE-R del B15",
+            "desde": 2001,
+            "hasta": 2006
+          },
+          {
+            "id": "2.0-MR",
+            "nombre": "2.0 MR20DE · 1997 cc",
+            "nota": "B16",
+            "desde": 2007,
+            "hasta": 2012
+          },
+          {
+            "id": "1.8-MRA",
+            "nombre": "1.8 MRA8DE · 1798 cc",
+            "nota": "B17",
+            "desde": 2013,
+            "hasta": 2020
+          },
+          {
+            "id": "2.0-MRDD",
+            "nombre": "2.0 MR20DD · 1997 cc",
+            "nota": "B18",
+            "desde": 2020,
+            "hasta": 2027
           }
         ]
       },
       "Sentra B13": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1597 cc",
-            "nota": "único motor",
+            "nombre": "1.6 GA16 · 1597 cc",
+            "nota": "el B13 de toda la vida, carburador y luego inyección",
             "desde": 1992,
             "hasta": 2015
           }
@@ -6166,15 +6664,42 @@
         ]
       },
       "Duster": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "id": "1.6-K4M",
+            "nombre": "1.6 K4M · 1598 cc",
+            "nota": "primera generación",
+            "desde": 2012,
+            "hasta": 2021
           },
           {
             "id": "2.0",
-            "nombre": "2.0 · 1998 cc"
+            "nombre": "2.0 F4R · 1998 cc",
+            "nota": "primera generación",
+            "desde": 2012,
+            "hasta": 2021
+          },
+          {
+            "id": "1.6-H4M",
+            "nombre": "1.6 H4M · 1598 cc",
+            "nota": "segunda generación",
+            "desde": 2021,
+            "hasta": 2027
+          },
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo TCe · 1332 cc",
+            "nota": "segunda generación",
+            "desde": 2021,
+            "hasta": 2027
+          },
+          {
+            "id": "1.2T-HEV",
+            "nombre": "1.2 Turbo Híbrido · 1199 cc · 3 cilindros",
+            "nota": "Duster E-Tech",
+            "desde": 2025,
+            "hasta": 2027
           }
         ]
       },
@@ -6271,17 +6796,34 @@
         ]
       },
       "Logan": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.6-8V",
-            "nombre": "1.6 8V · 85 hp",
-            "nota": "falta desde que año va cada uno"
+            "id": "1.4",
+            "nombre": "1.4 K7J · 1390 cc",
+            "nota": "primera generación",
+            "desde": 2005,
+            "hasta": 2015
           },
           {
-            "id": "1.6-16V",
-            "nombre": "1.6 16V · 105-113 hp",
-            "nota": "falta desde que año va cada uno"
+            "id": "1.6-8V",
+            "nombre": "1.6 8V K7M · 1598 cc",
+            "nota": "en las dos generaciones",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "1.6-16V-K4M",
+            "nombre": "1.6 16V K4M · 1598 cc",
+            "desde": 2005,
+            "hasta": 2020
+          },
+          {
+            "id": "1.6-16V-H4M",
+            "nombre": "1.6 16V H4M · 1598 cc",
+            "nota": "de origen Nissan, segunda generación",
+            "desde": 2015,
+            "hasta": 2027
           }
         ]
       },
@@ -6466,17 +7008,35 @@
         ]
       },
       "Sandero": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6-8V",
-            "nombre": "1.6 8V · 85 hp",
-            "nota": "falta desde que año va cada uno"
+            "nombre": "1.6 8V K7M · 1598 cc",
+            "nota": "en las dos generaciones",
+            "desde": 2009,
+            "hasta": 2027
           },
           {
-            "id": "1.6-16V",
-            "nombre": "1.6 16V · 105-113 hp",
-            "nota": "falta desde que año va cada uno"
+            "id": "1.6-16V-K4M",
+            "nombre": "1.6 16V K4M · 1598 cc",
+            "nota": "automáticas y Stepway de la primera",
+            "desde": 2009,
+            "hasta": 2015
+          },
+          {
+            "id": "1.6-16V-H4M",
+            "nombre": "1.6 16V H4M · 1598 cc",
+            "nota": "segunda generación",
+            "desde": 2015,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 F4R · 1998 cc",
+            "nota": "Sandero R.S.",
+            "desde": 2015,
+            "hasta": 2022
           }
         ]
       },
@@ -6508,34 +7068,21 @@
         ]
       },
       "Symbol": {
-        "fuente": "por-confirmar",
-        "falta": "el 1.4 16V aparece en una fuente y no en la otra",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.4-8V",
-            "nombre": "1.4 8V · 1390 cc",
-            "nota": "el de la primera, 75 hp",
+            "id": "1.4",
+            "nombre": "1.4 K7J · 1390 cc",
+            "nota": "primera generación",
             "desde": 2001,
-            "hasta": 2008
-          },
-          {
-            "id": "1.6-8V",
-            "nombre": "1.6 8V · 1598 cc",
-            "nota": "entrada e intermedias de la segunda, 90 hp",
-            "desde": 2008,
-            "hasta": 2013
+            "hasta": 2009
           },
           {
             "id": "1.6-16V",
-            "nombre": "1.6 16V · 1598 cc",
-            "nota": "Dynamique y versiones altas",
-            "desde": 2009,
+            "nombre": "1.6 16V K4M · 1598 cc",
+            "nota": "en las dos generaciones",
+            "desde": 2001,
             "hasta": 2013
-          },
-          {
-            "id": "1.4-16V",
-            "nombre": "1.4 16V · 1390 cc",
-            "nota": "una fuente lo lista y la colombiana no: por verificar"
           }
         ]
       },
@@ -6552,20 +7099,30 @@
         ]
       },
       "Twingo": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.2-8V",
-            "nombre": "1.2 8V · 1149 cc",
-            "nota": "falta desde qué año"
+            "id": "1.1",
+            "nombre": "1.1 8V · 1149 cc",
+            "nota": "primera generación",
+            "desde": 1995,
+            "hasta": 2012
+          },
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1239 cc",
+            "nota": "primera generación",
+            "desde": 1995,
+            "hasta": 2012
           },
           {
             "id": "1.2-16V",
             "nombre": "1.2 16V · 1149 cc",
-            "nota": "falta desde qué año"
+            "nota": "primera y la de transición, 75 hp",
+            "desde": 1995,
+            "hasta": 2013
           }
-        ],
-        "falta": "falta separar 8V de 16V por año, y la etapa europea posterior"
+        ]
       },
       "Zoe": {
         "fuente": "verificado",
@@ -7012,15 +7569,14 @@
         ]
       },
       "Grand Vitara": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "2.0",
-            "nombre": "2.0 · 1995 cc"
-          },
-          {
-            "id": "2.4",
-            "nombre": "2.4 · 2393 cc"
+            "id": "1.5-MHEV",
+            "nombre": "1.5 K15C Mild Hybrid · 1462 cc",
+            "nota": "la nueva, Dualjet Smart Hybrid",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -7055,15 +7611,14 @@
         ]
       },
       "Jimny": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.5",
-            "nombre": "1.5 · 1462 cc"
-          },
-          {
-            "id": "1.3",
-            "nombre": "1.3 · 1328 cc"
+            "nombre": "1.5 K15B · 1462 cc",
+            "nota": "cuarta generación, 3 y 5 puertas",
+            "desde": 2019,
+            "hasta": 2027
           }
         ]
       },
@@ -7936,15 +8491,21 @@
         ]
       },
       "T-Cross": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "nombre": "1.6 MSI · 1598 cc",
+            "nota": "modelos 2019 a 2021",
+            "desde": 2020,
+            "hasta": 2021
           },
           {
-            "id": "1.4T",
-            "nombre": "1.4 TSI · 1395 cc"
+            "id": "1.0T",
+            "nombre": "1.0 TSI 200 · 999 cc · 3 cilindros",
+            "nota": "desde 2022",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },

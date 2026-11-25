@@ -247,6 +247,39 @@ prueba('en 2011 cada opcion dice de que generacion es',
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
 
+console.log('\n=== un solo motor: solo el año, sin preguntar ===')
+/* La regla que pidio el usuario, revisada sobre TODA la base: si el modelo
+   no cambia de motorizacion, el embudo termina en el año. */
+const todosLosModelos = []
+Object.keys(motorizaciones.carros).forEach(ma => {
+  Object.keys(motorizaciones.carros[ma]).forEach(mo => {
+    todosLosModelos.push([ma, mo, motorizaciones.carros[ma][mo]])
+  })
+})
+const unSoloMotor = todosLosModelos.filter(([, , f]) => f.motores.length === 1)
+const preguntaDeMas = unSoloMotor.filter(([ma, mo, f]) => {
+  const y = String(f.motores[0].desde || 2015)
+  return pideMotor('carros', ma, mo, y)
+}).map(([ma, mo]) => ma + ' ' + mo)
+prueba('ninguno de un solo motor pregunta', preguntaDeMas, [])
+prueba('y son muchos', unSoloMotor.length > 200, true)
+
+/* Y el que SI cambia tiene que preguntar, o volvemos al problema de origen. */
+const multi = todosLosModelos.filter(([, , f]) => f.motores.length > 1)
+prueba('los que cambian son los que preguntan', multi.length > 100, true)
+prueba('un modelo sin ficha tampoco pregunta',
+  pideMotor('carros', 'Chevrolet', 'NHR', '2015'), false)
+
+/* Un solo motor tiene que cubrir todos los años del modelo, o habria años
+   del carro sin motor. */
+const cortos = unSoloMotor.filter(([ma, mo, f]) => {
+  const r = (base.carros[ma] || {})[mo]
+  const x = f.motores[0]
+  return r && x.desde && (x.desde > r[0] || (x.hasta || r[1]) < r[1])
+}).map(([ma, mo]) => ma + ' ' + mo)
+prueba('y cubre todos los años del modelo, salvo los huecos conocidos',
+  cortos, ['Ford Fiesta'])
+
 console.log('\n=== no mezclar generaciones ===')
 /* Estos todavia son por-confirmar, asi que motoresDe() no los muestra: se
    revisan contra el dato crudo. Lo que se prueba es que las ventanas de año

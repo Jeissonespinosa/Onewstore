@@ -16,6 +16,9 @@ Tres formas de que esto quede mal en silencio, y las tres se revisan:
   5. Un motor VERIFICADO sin ventana de año. El año va en todos, incluso
      cuando el motor nunca cambio: "de 2010 a 2023" es un dato; "sin año"
      es un dato que falta.
+  6. Un modelo de un solo motor cuyo motor no cubre todo el rango. Ese
+     modelo no pregunta nada —el embudo termina en el año— asi que el
+     motor tiene que valer para todos sus años.
 
 Sale con codigo 1 si algo esta mal, para que el CI lo atrape.
 """
@@ -90,6 +93,27 @@ for marca, modelos in motor['carros'].items():
                               % (marca, modelo, ano, ', '.join(sorted(repes))))
                 break
 
+huecos = []
+
+# 6. Un modelo con UN SOLO motor no pregunta nada: el embudo termina en el
+#    año. Pero ese motor igual tiene que cubrir todo el rango del modelo, o
+#    habria años en los que el carro existe y no tiene motor declarado.
+for marca, modelos in motor['carros'].items():
+    for modelo, info in modelos.items():
+        if len(info['motores']) != 1:
+            continue
+        rango = base['carros'].get(marca, {}).get(modelo)
+        mo = info['motores'][0]
+        if not rango or not mo.get('desde'):
+            continue
+        if mo['desde'] > rango[0] or (mo.get('hasta') or rango[1]) < rango[1]:
+            linea = ('%s %s: su unico motor va de %s a %s y el modelo de %d a %d'
+                     % (marca, modelo, mo['desde'], mo.get('hasta'), rango[0], rango[1]))
+            if info['fuente'] == 'verificado':
+                fallas.append(linea + ', y esta marcado verificado')
+            else:
+                huecos.append(linea)
+
 n_mod = sum(len(v) for v in motor['carros'].values())
 n_mot = sum(len(i['motores']) for v in motor['carros'].values() for i in v.values())
 por_confirmar = [(ma, mo) for ma, v in motor['carros'].items()
@@ -122,6 +146,8 @@ for marca, modelos in motor['carros'].items():
 
 if sin_ano_falta:
     print('  %d modelos con algun motor sin ventana de año' % len(sin_ano_falta))
+if huecos:
+    print('  %d con años del modelo sin motor declarado' % len(huecos))
 
 if sin:
     print('\nMODELOS RANKEADOS SIN MOTORIZACION (%d) — se escapan:' % len(sin))

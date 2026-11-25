@@ -5,7 +5,221 @@
     "por-confirmar": "Armado con lo conocido del mercado. HAY QUE CONFIRMARLO contra un catalogo de distribuidor antes de subirlo a VTEX."
   },
   "carros": {
+    "Audi": {
+      "A1": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      },
+      "A3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "desde": 1998,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "versiones altas",
+            "desde": 1998,
+            "hasta": 2027
+          }
+        ]
+      },
+      "A4": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2010",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "desde": 1996,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "desde": 1996,
+            "hasta": 2027
+          }
+        ]
+      },
+      "A5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      },
+      "A6": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Q2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "nota": "único motor",
+            "desde": 2017,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Q3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "desde": 2012,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "versiones altas",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Q5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "único motor",
+            "desde": 2009,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Q7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "desde": 2006,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 V6 TFSI · 2995 cc",
+            "nota": "versiones altas",
+            "desde": 2006,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Q8": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 V6 TFSI · 2995 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "TT": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2023
+          }
+        ]
+      },
+      "e-tron": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 95 kWh",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
     "BMW": {
+      "Mini Cooper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2002,
+            "hasta": 2013
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "desde 2014",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "Cooper S",
+            "desde": 2014,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Mini Countryman": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "Cooper S",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      },
       "Serie 1": {
         "fuente": "verificado",
         "motores": [
@@ -149,6 +363,18 @@
           }
         ]
       },
+      "Serie 4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "420i y 430i",
+            "desde": 2014,
+            "hasta": 2027
+          }
+        ]
+      },
       "Serie 5": {
         "fuente": "por-confirmar",
         "motores": [
@@ -159,6 +385,26 @@
           {
             "id": "530i",
             "nombre": "530i · 2.0 Turbo"
+          }
+        ]
+      },
+      "Serie 7": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2015",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2979 cc · 6 cilindros",
+            "nota": "740i",
+            "desde": 1995,
+            "hasta": 2027
+          },
+          {
+            "id": "4.4T",
+            "nombre": "4.4 V8 Turbo · 4395 cc",
+            "nota": "750i",
+            "desde": 1995,
+            "hasta": 2027
           }
         ]
       },
@@ -175,6 +421,18 @@
           }
         ]
       },
+      "X2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "sDrive20i",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
       "X3": {
         "fuente": "por-confirmar",
         "motores": [
@@ -188,6 +446,18 @@
           }
         ]
       },
+      "X4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "xDrive20i y 30i",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
       "X5": {
         "fuente": "por-confirmar",
         "motores": [
@@ -198,6 +468,63 @@
           {
             "id": "30d",
             "nombre": "xDrive30d · 3.0 Diésel"
+          }
+        ]
+      },
+      "X6": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2979 cc · 6 cilindros",
+            "nota": "xDrive40i",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Z4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "sDrive20i",
+            "desde": 2003,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2998 cc · 6 cilindros",
+            "nota": "M40i",
+            "desde": 2003,
+            "hasta": 2027
+          }
+        ]
+      },
+      "i3": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 42 kWh",
+            "desde": 2015,
+            "hasta": 2022
+          }
+        ]
+      },
+      "iX": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 76,6 kWh",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       }
@@ -269,7 +596,295 @@
         ]
       }
     },
+    "Baic": {
+      "BJ40": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1996 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "X25 X35": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2017,
+            "hasta": 2021
+          }
+        ]
+      },
+      "X55": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Changan": {
+      "Alsvin": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1477 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2023
+          }
+        ]
+      },
+      "CS15": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1477 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "CS35 Plus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "CS55": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "CS75": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Hunter": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1996 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Uni-K": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Uni-T": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Chery": {
+      "Arrizo 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2021
+          }
+        ]
+      },
+      "Jaecoo 7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "único motor",
+            "desde": 2025,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Omoda 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "QQ": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 812 cc",
+            "nota": "único motor",
+            "desde": 2009,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Tiggo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1971 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Tiggo 2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Tiggo 3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2017,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Tiggo 4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Tiggo 7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Tiggo 8": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
     "Chevrolet": {
+      "Alto": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 993 cc",
+            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Astra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "desde": 1999,
+            "hasta": 2006
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 1999,
+            "hasta": 2006
+          }
+        ]
+      },
       "Aveo": {
         "fuente": "por-confirmar",
         "motores": [
@@ -292,12 +907,96 @@
           }
         ]
       },
+      "Aveo Emotion": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Aveo Family": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2007,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Aveo Five": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2012
+          }
+        ]
+      },
+      "Aveo GT": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2012
+          }
+        ]
+      },
       "Beat": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.2",
             "nombre": "1.2 · 1199 cc"
+          }
+        ]
+      },
+      "Beat Hatchback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1199 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2024
+          }
+        ]
+      },
+      "Blazer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Blazer clásica": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.3",
+            "nombre": "4.3 V6 · 4293 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2004
           }
         ]
       },
@@ -311,6 +1010,25 @@
             "nota": "Batería de 66 kWh",
             "desde": 2021,
             "hasta": 2027
+          }
+        ]
+      },
+      "Camaro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3564 cc",
+            "nota": "RS",
+            "desde": 2010,
+            "hasta": 2023
+          },
+          {
+            "id": "6.2",
+            "nombre": "6.2 V8 · 6162 cc",
+            "nota": "SS y ZL1",
+            "desde": 2010,
+            "hasta": 2023
           }
         ]
       },
@@ -344,6 +1062,95 @@
           }
         ]
       },
+      "Captiva Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2384 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Cavalier": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2",
+            "nombre": "2.2 · 2190 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2000
+          }
+        ]
+      },
+      "Celebrity": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.8",
+            "nombre": "2.8 V6 · 2837 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 1990
+          }
+        ]
+      },
+      "Chevette": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 1982,
+            "hasta": 1996
+          }
+        ]
+      },
+      "Cheyenne": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "5.3",
+            "nombre": "5.3 V8 · 5328 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2012
+          }
+        ]
+      },
+      "Cobalt": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Colorado": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 Gasolina · 2491 cc",
+            "desde": 2013,
+            "hasta": 2023
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2776 cc",
+            "desde": 2013,
+            "hasta": 2023
+          }
+        ]
+      },
       "Corsa": {
         "fuente": "por-confirmar",
         "motores": [
@@ -354,6 +1161,24 @@
           {
             "id": "1.6",
             "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Corsa Evolution": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1389 cc",
+            "desde": 2003,
+            "hasta": 2010
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 2003,
+            "hasta": 2010
           }
         ]
       },
@@ -379,6 +1204,67 @@
           }
         ]
       },
+      "Equinox": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1490 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Esteem": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1298 cc",
+            "desde": 1996,
+            "hasta": 2004
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "nota": "versiones altas",
+            "desde": 1996,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Grand Vitara": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar la primera generación de la de 2006",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc",
+            "desde": 1999,
+            "hasta": 2015
+          },
+          {
+            "id": "2.7",
+            "nombre": "2.7 V6 · 2736 cc",
+            "nota": "versiones altas",
+            "desde": 1999,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Grand Vitara SZ": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2393 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2015
+          }
+        ]
+      },
       "Groove": {
         "fuente": "por-confirmar",
         "motores": [
@@ -388,12 +1274,144 @@
           }
         ]
       },
+      "Jimny": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1328 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2007
+          }
+        ]
+      },
       "Joy": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.4",
             "nombre": "1.4 · 1399 cc"
+          }
+        ]
+      },
+      "Luv": {
+        "fuente": "por-confirmar",
+        "falta": "falta el diésel y separar generaciones",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 Gasolina · 1584 cc",
+            "desde": 1980,
+            "hasta": 2005
+          },
+          {
+            "id": "2.3",
+            "nombre": "2.3 Gasolina · 2254 cc",
+            "desde": 1980,
+            "hasta": 2005
+          }
+        ]
+      },
+      "Luv D-Max": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2405 cc",
+            "desde": 2005,
+            "hasta": 2013
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2999 cc",
+            "desde": 2005,
+            "hasta": 2013
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3471 cc",
+            "nota": "versiones altas",
+            "desde": 2005,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Malibú": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2384 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Montana": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Monza": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "desde": 1985,
+            "hasta": 1996
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 1985,
+            "hasta": 1996
+          }
+        ]
+      },
+      "N200": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1206 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2012
+          }
+        ]
+      },
+      "N300": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1206 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      },
+      "N400": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1485 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },
@@ -410,6 +1428,18 @@
             "id": "1.2",
             "nombre": "1.2 · 1199 cc",
             "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Onix Turbo RS": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0T",
+            "nombre": "1.0 Turbo · 999 cc",
+            "nota": "único motor",
+            "desde": 2021,
             "hasta": 2027
           }
         ]
@@ -431,6 +1461,42 @@
           }
         ]
       },
+      "Optra Advance": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Orlando": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Rodeo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.2",
+            "nombre": "3.2 V6 · 3165 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2004
+          }
+        ]
+      },
       "Sail": {
         "fuente": "verificado",
         "motores": [
@@ -444,6 +1510,66 @@
             "id": "1.5",
             "nombre": "1.5 · 1485 cc",
             "desde": 2019
+          }
+        ]
+      },
+      "Sail Hatchback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Samurai": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2000
+          }
+        ]
+      },
+      "Silverado": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "5.3",
+            "nombre": "5.3 V8 · 5328 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Sonic": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Spark": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 995 cc",
+            "nota": "único motor",
+            "desde": 2004,
+            "hasta": 2010
           }
         ]
       },
@@ -472,6 +1598,79 @@
           }
         ]
       },
+      "Spark Life": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 995 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Spin": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Sprint": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 993 cc",
+            "nota": "único motor",
+            "desde": 1986,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Super Carry": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 970 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 2007
+          }
+        ]
+      },
+      "Swift": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1298 cc",
+            "nota": "único motor",
+            "desde": 1991,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Tahoe": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2007",
+        "motores": [
+          {
+            "id": "5.3",
+            "nombre": "5.3 V8 · 5328 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
       "Tracker": {
         "fuente": "por-confirmar",
         "motores": [
@@ -487,9 +1686,720 @@
             "desde": 2020
           }
         ]
+      },
+      "Trailblazer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2776 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Traverse": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3564 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Trooper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.2",
+            "nombre": "3.2 V6 · 3165 cc",
+            "nota": "único motor",
+            "desde": 1986,
+            "hasta": 2002
+          }
+        ]
+      },
+      "Vectra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2003
+          }
+        ]
+      },
+      "Vitara": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar generaciones",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "desde": 1993,
+            "hasta": 2006
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc",
+            "nota": "versiones altas",
+            "desde": 1993,
+            "hasta": 2006
+          }
+        ]
+      },
+      "Wagon R+": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc",
+            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Zafira": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2005
+          }
+        ]
+      }
+    },
+    "Citroën": {
+      "Berlingo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      },
+      "C-Elysée": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2014,
+            "hasta": 2022
+          }
+        ]
+      },
+      "C3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "desde": 2005,
+            "hasta": 2021
+          },
+          {
+            "id": "1.2T",
+            "nombre": "1.2 Turbo · 1199 cc",
+            "nota": "desde 2022",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "C3 Aircross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "C4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2018
+          }
+        ]
+      },
+      "C4 Cactus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "C5 Aircross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Jumper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2198 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Jumpy": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6D",
+            "nombre": "1.6 Diésel · 1560 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Daewoo": {
+      "Cielo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2001
+          }
+        ]
+      },
+      "Damas": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2003
+          }
+        ]
+      },
+      "Lanos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1349 cc",
+            "desde": 1997,
+            "hasta": 2003
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 1997,
+            "hasta": 2003
+          }
+        ]
+      },
+      "Leganza": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2002
+          }
+        ]
+      },
+      "Matiz": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc",
+            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2005
+          }
+        ]
+      },
+      "Nubira": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2003
+          }
+        ]
+      },
+      "Racer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 1997
+          }
+        ]
+      },
+      "Tico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2001
+          }
+        ]
+      }
+    },
+    "Daihatsu": {
+      "Charade": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1295 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 1998
+          }
+        ]
+      },
+      "Cuore": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 847 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 1999
+          }
+        ]
+      },
+      "Sirion": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1298 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2012
+          }
+        ]
+      },
+      "Terios": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1495 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2018
+          }
+        ]
+      }
+    },
+    "Dodge": {
+      "Caliber": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 2007,
+            "hasta": 2012
+          }
+        ]
+      },
+      "Caravan Grand Caravan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Charger": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "desde": 2011,
+            "hasta": 2023
+          },
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5654 cc",
+            "nota": "R/T",
+            "desde": 2011,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Durango": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5654 cc",
+            "nota": "R/T",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Journey": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2360 cc",
+            "desde": 2009,
+            "hasta": 2020
+          },
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "nota": "versiones altas",
+            "desde": 2009,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Neon": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1996 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2005
+          }
+        ]
+      }
+    },
+    "Fiat": {
+      "500": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2022
+          }
+        ]
+      },
+      "Argo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1332 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Cronos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1332 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Ducato": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3D",
+            "nombre": "2.3 Diésel · 2287 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Fastback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Fiorino": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Mobi": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 999 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Palio": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1242 cc",
+            "desde": 2000,
+            "hasta": 2017
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2017
+          }
+        ]
+      },
+      "Premio": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1301 cc",
+            "desde": 1988,
+            "hasta": 1996
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1581 cc",
+            "nota": "versiones altas",
+            "desde": 1988,
+            "hasta": 1996
+          }
+        ]
+      },
+      "Pulse": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1332 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Punto": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Siena": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "desde": 2000,
+            "hasta": 2017
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2017
+          }
+        ]
+      },
+      "Strada": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Toro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1747 cc",
+            "desde": 2017,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1956 cc",
+            "desde": 2017,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Uno": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 999 cc",
+            "desde": 2011,
+            "hasta": 2023
+          },
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1242 cc",
+            "desde": 2011,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Uno clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1301 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 2004
+          }
+        ]
       }
     },
     "Ford": {
+      "Bronco": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3T",
+            "nombre": "2.3 EcoBoost · 2261 cc",
+            "desde": 2021,
+            "hasta": 2027
+          },
+          {
+            "id": "2.7T",
+            "nombre": "2.7 V6 EcoBoost · 2694 cc",
+            "nota": "versiones altas",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Bronco Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 EcoBoost · 1497 cc",
+            "desde": 2021,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 EcoBoost · 1995 cc",
+            "nota": "versiones altas",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
       "EcoSport": {
         "fuente": "por-confirmar",
         "motores": [
@@ -503,6 +2413,18 @@
           }
         ]
       },
+      "Edge": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3496 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2023
+          }
+        ]
+      },
       "Escape": {
         "fuente": "por-confirmar",
         "motores": [
@@ -513,6 +2435,18 @@
           {
             "id": "2.5",
             "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "Expedition": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5T",
+            "nombre": "3.5 V6 EcoBoost · 3496 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
           }
         ]
       },
@@ -546,14 +2480,45 @@
           }
         ]
       },
+      "F-250 F-350": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "6.2",
+            "nombre": "6.2 V8 Gasolina · 6210 cc",
+            "desde": 2000,
+            "hasta": 2027
+          },
+          {
+            "id": "6.7D",
+            "nombre": "6.7 V8 Diésel · 6651 cc",
+            "nota": "Power Stroke",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
       "Fiesta": {
         "fuente": "por-confirmar",
+        "falta": "el Fiesta anterior a 2010 no tiene motores: ahí cambia",
         "motores": [
           {
             "id": "1.6",
             "nombre": "1.6 · 1596 cc",
             "nota": "confirmado 2010-2019",
             "desde": 2010,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Fiesta Sedán": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1596 cc",
+            "nota": "único motor",
+            "desde": 2011,
             "hasta": 2019
           }
         ]
@@ -568,6 +2533,102 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Fusion": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "desde": 2007,
+            "hasta": 2019
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2967 cc",
+            "nota": "versiones altas",
+            "desde": 2007,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Ka": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1597 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2008
+          }
+        ]
+      },
+      "Laser": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 1996
+          }
+        ]
+      },
+      "Maverick": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 EcoBoost · 1995 cc",
+            "desde": 2022,
+            "hasta": 2027
+          },
+          {
+            "id": "2.5HV",
+            "nombre": "2.5 Híbrido · 2488 cc",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Mondeo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "desde": 1996,
+            "hasta": 2007
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "nota": "versiones altas",
+            "desde": 1996,
+            "hasta": 2007
+          }
+        ]
+      },
+      "Mustang": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2015",
+        "motores": [
+          {
+            "id": "2.3T",
+            "nombre": "2.3 EcoBoost · 2261 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "5.0",
+            "nombre": "5.0 V8 · 4951 cc",
+            "nota": "GT",
+            "desde": 2005,
+            "hasta": 2027
           }
         ]
       },
@@ -610,9 +2671,151 @@
             "hasta": 2027
           }
         ]
+      },
+      "Ranger clásica": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar qué versiones entraron",
+        "motores": [
+          {
+            "id": "2.3",
+            "nombre": "2.3 Gasolina · 2294 cc",
+            "desde": 1998,
+            "hasta": 2011
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2982 cc",
+            "nota": "versiones altas",
+            "desde": 1998,
+            "hasta": 2011
+          }
+        ]
+      },
+      "Sierra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3",
+            "nombre": "2.3 · 2294 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 1993
+          }
+        ]
+      },
+      "Territory": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Transit": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2198 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Geely": {
+      "Coolray": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Starray": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
+            "desde": 2025,
+            "hasta": 2027
+          }
+        ]
+      },
+      "EX5": {
+        "fuente": "verificado",
+        "electrico": true,
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "nota": "Batería de 60,2 kWh",
+            "desde": 2025,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "Great Wall": {
+      "Haval H2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2016,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Haval H6": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Haval H9": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1967 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Haval Jolion": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
       "Ora 03": {
         "fuente": "verificado",
         "electrico": true,
@@ -622,6 +2825,219 @@
             "nombre": "Eléctrico · sin cilindraje",
             "nota": "Batería de 48 kWh",
             "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Poer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1996 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Wingle 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2378 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Wingle 7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1996 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Honda": {
+      "Accord": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2354 cc",
+            "desde": 1990,
+            "hasta": 2023
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3471 cc",
+            "nota": "versiones altas",
+            "desde": 1990,
+            "hasta": 2023
+          }
+        ]
+      },
+      "BR-V": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1497 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2023
+          }
+        ]
+      },
+      "CR-V": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2354 cc",
+            "desde": 1997,
+            "hasta": 2017
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "desde 2018",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "City": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1497 cc",
+            "nota": "único motor",
+            "desde": 2009,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Civic": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2006",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1799 cc",
+            "desde": 1992,
+            "hasta": 2016
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1997 cc",
+            "desde": 1992,
+            "hasta": 2016
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "desde 2016",
+            "desde": 2016,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Civic Type R": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1996 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Fit": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1497 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2020
+          }
+        ]
+      },
+      "HR-V": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1799 cc",
+            "desde": 2016,
+            "hasta": 2022
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1498 cc",
+            "nota": "desde 2023",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Odyssey": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3471 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Pilot": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3471 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Ridgeline": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3471 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2023
+          }
+        ]
+      },
+      "WR-V": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1497 cc",
+            "nota": "único motor",
+            "desde": 2023,
             "hasta": 2027
           }
         ]
@@ -638,6 +3054,66 @@
           {
             "id": "1.6",
             "nombre": "1.6 · 1591 cc"
+          }
+        ]
+      },
+      "Accent Vision": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc",
+            "desde": 2006,
+            "hasta": 2011
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1599 cc",
+            "nota": "versiones altas",
+            "desde": 2006,
+            "hasta": 2011
+          }
+        ]
+      },
+      "Accent i25": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1396 cc",
+            "desde": 2011,
+            "hasta": 2018
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "nota": "versiones altas",
+            "desde": 2011,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Atos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 999 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Atos Prime": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.1",
+            "nombre": "1.1 · 1086 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2010
           }
         ]
       },
@@ -667,6 +3143,48 @@
           }
         ]
       },
+      "Excel": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1495 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 1999
+          }
+        ]
+      },
+      "Galloper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2476 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Getz": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1399 cc",
+            "desde": 2003,
+            "hasta": 2011
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1599 cc",
+            "nota": "versiones altas",
+            "desde": 2003,
+            "hasta": 2011
+          }
+        ]
+      },
       "Grand i10": {
         "fuente": "por-confirmar",
         "motores": [
@@ -677,6 +3195,52 @@
           {
             "id": "1.2",
             "nombre": "1.2 · 1197 cc"
+          }
+        ]
+      },
+      "H1": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2359 cc",
+            "desde": 2008,
+            "hasta": 2021
+          },
+          {
+            "id": "2.5D",
+            "nombre": "2.5 CRDi Diésel · 2497 cc",
+            "desde": 2008,
+            "hasta": 2021
+          }
+        ]
+      },
+      "H100 Porter": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.6D",
+            "nombre": "2.6 Diésel · 2607 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2027
+          }
+        ]
+      },
+      "HB20": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0T",
+            "nombre": "1.0 Turbo · 999 cc",
+            "desde": 2023,
+            "hasta": 2027
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -706,6 +3270,18 @@
           }
         ]
       },
+      "Palisade": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.8",
+            "nombre": "3.8 V6 · 3778 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
       "Santa Fe": {
         "fuente": "por-confirmar",
         "motores": [
@@ -716,6 +3292,61 @@
           {
             "id": "2.2D",
             "nombre": "2.2 CRDi Diésel · 2199 cc"
+          }
+        ]
+      },
+      "Sonata": {
+        "fuente": "por-confirmar",
+        "falta": "cubre varias generaciones: falta separarlas",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "desde": 1993,
+            "hasta": 2019
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2359 cc",
+            "nota": "versiones altas",
+            "desde": 1993,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Starex": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2476 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2008
+          }
+        ]
+      },
+      "Staria": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 CRDi Diésel · 2199 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Terracan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.9D",
+            "nombre": "2.9 CRDi Diésel · 2902 cc",
+            "nota": "único motor",
+            "desde": 2002,
+            "hasta": 2007
           }
         ]
       },
@@ -732,6 +3363,36 @@
           }
         ]
       },
+      "Tucson ix35": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "desde": 2010,
+            "hasta": 2015
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2359 cc",
+            "nota": "versiones altas",
+            "desde": 2010,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Venue": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
       "i10": {
         "fuente": "por-confirmar",
         "motores": [
@@ -742,6 +3403,36 @@
           {
             "id": "1.2",
             "nombre": "1.2 · 1197 cc"
+          }
+        ]
+      },
+      "i20": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1396 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2015
+          }
+        ]
+      },
+      "i30": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "desde": 2008,
+            "hasta": 2015
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "nota": "versiones altas",
+            "desde": 2008,
+            "hasta": 2015
           }
         ]
       }
@@ -759,9 +3450,231 @@
             "hasta": 2027
           }
         ]
+      },
+      "JS2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1499 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "JS4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "S2": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1499 cc",
+            "nota": "único motor",
+            "desde": 2017,
+            "hasta": 2023
+          }
+        ]
+      },
+      "S3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "nota": "único motor",
+            "desde": 2016,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Jeep": {
+      "Cherokee": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2360 cc",
+            "desde": 2002,
+            "hasta": 2023
+          },
+          {
+            "id": "3.2",
+            "nombre": "3.2 V6 · 3239 cc",
+            "nota": "versiones altas",
+            "desde": 2002,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Cherokee clásico XJ": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.0",
+            "nombre": "4.0 · 3960 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2001
+          }
+        ]
+      },
+      "Commander": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Compass": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2360 cc",
+            "desde": 2012,
+            "hasta": 2021
+          },
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "desde 2022",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Gladiator": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Grand Cherokee": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar generaciones y el diésel",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "desde": 1994,
+            "hasta": 2027
+          },
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5654 cc",
+            "nota": "versiones altas",
+            "desde": 1994,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Patriot": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2360 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Renegade": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1747 cc",
+            "desde": 2016,
+            "hasta": 2021
+          },
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "desde 2022",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Willys CJ": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar qué motor llevó cada serie",
+        "motores": [
+          {
+            "id": "2.2",
+            "nombre": "2.2 · 2199 cc",
+            "nota": "motor Hurricane",
+            "desde": 1950,
+            "hasta": 1990
+          },
+          {
+            "id": "4.2",
+            "nombre": "4.2 · 4235 cc · 6 cilindros",
+            "nota": "motor 258",
+            "desde": 1950,
+            "hasta": 1990
+          }
+        ]
+      },
+      "Wrangler": {
+        "fuente": "por-confirmar",
+        "falta": "faltan el 3.8 V6 y las generaciones anteriores",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "Kia": {
+      "Carens": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1793 cc",
+            "desde": 2000,
+            "hasta": 2019
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2019
+          }
+        ]
+      },
       "Carnival": {
         "fuente": "por-confirmar",
         "motores": [
@@ -785,6 +3698,42 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Cerato Forte": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "desde": 2010,
+            "hasta": 2013
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2010,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Cerato Pro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "desde": 2013,
+            "hasta": 2018
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2013,
+            "hasta": 2018
           }
         ]
       },
@@ -814,6 +3763,96 @@
           }
         ]
       },
+      "Frontier": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2497 cc",
+            "nota": "único motor",
+            "desde": 2009,
+            "hasta": 2027
+          }
+        ]
+      },
+      "K2700 K3000": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.7D",
+            "nombre": "2.7 Diésel · 2665 cc",
+            "nota": "K2700",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2957 cc",
+            "nota": "K3000",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "K3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      },
+      "New Sportage": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 Gasolina · 1999 cc",
+            "desde": 2016,
+            "hasta": 2022
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 CRDi Diésel · 1995 cc",
+            "desde": 2016,
+            "hasta": 2022
+          }
+        ]
+      },
+      "Niro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6HV",
+            "nombre": "1.6 Híbrido · 1580 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Optima": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "desde": 2011,
+            "hasta": 2019
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2359 cc",
+            "nota": "versiones altas",
+            "desde": 2011,
+            "hasta": 2019
+          }
+        ]
+      },
       "Picanto": {
         "fuente": "verificado",
         "motores": [
@@ -835,6 +3874,18 @@
             "nombre": "1.25 · 1248 cc",
             "nota": "Ion X-Treme, R, X-Line",
             "desde": 2011
+          }
+        ]
+      },
+      "Pride": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 2000
           }
         ]
       },
@@ -862,6 +3913,24 @@
           }
         ]
       },
+      "Rio Hatchback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "desde": 2012,
+            "hasta": 2027
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1591 cc",
+            "nota": "versiones altas",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
       "Seltos": {
         "fuente": "por-confirmar",
         "motores": [
@@ -872,6 +3941,24 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1999 cc"
+          }
+        ]
+      },
+      "Sephia": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "desde": 1994,
+            "hasta": 2001
+          },
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1793 cc",
+            "nota": "versiones altas",
+            "desde": 1994,
+            "hasta": 2001
           }
         ]
       },
@@ -942,9 +4029,304 @@
             "hasta": 2027
           }
         ]
+      },
+      "Sportage Revolution": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 Gasolina · 1999 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Stonic": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "desde": 2021,
+            "hasta": 2027
+          },
+          {
+            "id": "1.0T",
+            "nombre": "1.0 Turbo · 998 cc",
+            "nota": "versiones altas",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Lada": {
+      "2107 Riva": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1451 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 1998
+          }
+        ]
+      },
+      "Niva": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.7",
+            "nombre": "1.7 · 1690 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Samara": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1499 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 1998
+          }
+        ]
+      }
+    },
+    "Land Rover": {
+      "Defender": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1997 cc",
+            "desde": 1990,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2996 cc · 6 cilindros",
+            "nota": "versiones altas",
+            "desde": 1990,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Discovery": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 V6 · 2995 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Discovery Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1997 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Freelander": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2179 cc",
+            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2014
+          }
+        ]
+      },
+      "Range Rover": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar generaciones y los diésel",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2996 cc",
+            "desde": 1995,
+            "hasta": 2027
+          },
+          {
+            "id": "5.0",
+            "nombre": "5.0 V8 · 5000 cc",
+            "nota": "versiones altas",
+            "desde": 1995,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Range Rover Evoque": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1997 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Range Rover Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2996 cc",
+            "desde": 2006,
+            "hasta": 2027
+          },
+          {
+            "id": "5.0",
+            "nombre": "5.0 V8 · 5000 cc",
+            "nota": "versiones altas",
+            "desde": 2006,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Range Rover Velar": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1997 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Lexus": {
+      "ES": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2487 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2027
+          }
+        ]
+      },
+      "IS": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2020
+          }
+        ]
+      },
+      "LX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5663 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      },
+      "NX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
+      "RX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3456 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "UX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1987 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "MG": {
+      "HS": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1490 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "MG 3": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "MG 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
       "MG4": {
         "fuente": "verificado",
         "electrico": true,
@@ -957,9 +4339,81 @@
             "hasta": 2027
           }
         ]
+      },
+      "RX5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1490 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "ZS": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1498 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "Mazda": {
+      "323": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "desde": 1985,
+            "hasta": 2005
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 1985,
+            "hasta": 2005
+          }
+        ]
+      },
+      "323 Allegro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "desde": 1995,
+            "hasta": 2008
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 1995,
+            "hasta": 2008
+          }
+        ]
+      },
+      "626": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1991 cc",
+            "nota": "único motor",
+            "desde": 1985,
+            "hasta": 2002
+          }
+        ]
+      },
       "Allegro": {
         "fuente": "por-confirmar",
         "motores": [
@@ -970,6 +4424,25 @@
           {
             "id": "1.6",
             "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "B-2200 B-2600": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2",
+            "nombre": "2.2 · 2184 cc",
+            "nota": "B-2200",
+            "desde": 1985,
+            "hasta": 2007
+          },
+          {
+            "id": "2.6",
+            "nombre": "2.6 · 2606 cc",
+            "nota": "B-2600",
+            "desde": 1985,
+            "hasta": 2007
           }
         ]
       },
@@ -1021,6 +4494,103 @@
           }
         ]
       },
+      "CX-50": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5S",
+            "nombre": "2.5 SkyActiv · 2488 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      },
+      "CX-60": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.3",
+            "nombre": "3.3 · 3283 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "CX-7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3T",
+            "nombre": "2.3 Turbo · 2261 cc",
+            "desde": 2007,
+            "hasta": 2012
+          },
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "desde": 2007,
+            "hasta": 2012
+          }
+        ]
+      },
+      "CX-9": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar el año exacto del cambio de motor",
+        "motores": [
+          {
+            "id": "3.7",
+            "nombre": "3.7 V6 · 3726 cc",
+            "nota": "primera etapa",
+            "desde": 2008,
+            "hasta": 2015
+          },
+          {
+            "id": "2.5T",
+            "nombre": "2.5 Turbo · 2488 cc",
+            "nota": "desde 2016",
+            "desde": 2016,
+            "hasta": 2023
+          }
+        ]
+      },
+      "CX-90": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.3T",
+            "nombre": "3.3 Turbo · 3283 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      },
+      "MPV": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 V6 · 2497 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2006
+          }
+        ]
+      },
+      "MX-5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2027
+          }
+        ]
+      },
       "Mazda 2": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1042,6 +4612,18 @@
             "nombre": "2.0 SkyActiv · 1998 cc",
             "nota": "Carbon Edition",
             "desde": 2024
+          }
+        ]
+      },
+      "Mazda 2 Sedán": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5S",
+            "nombre": "1.5 SkyActiv · 1496 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
           }
         ]
       },
@@ -1085,6 +4667,18 @@
           }
         ]
       },
+      "Mazda 5": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "nota": "único motor",
+            "desde": 2007,
+            "hasta": 2013
+          }
+        ]
+      },
       "Mazda 6": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1095,6 +4689,24 @@
           {
             "id": "2.5",
             "nombre": "2.5 · 2488 cc"
+          }
+        ]
+      },
+      "Tribute": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1989 cc",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2967 cc",
+            "nota": "versiones altas",
+            "desde": 2001,
+            "hasta": 2007
           }
         ]
       }
@@ -1149,6 +4761,18 @@
             "nota": "A 45 y CLA 45",
             "desde": 2013,
             "hasta": 2027
+          }
+        ]
+      },
+      "Clase B": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.7",
+            "nombre": "1.7 · 1699 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2019
           }
         ]
       },
@@ -1214,6 +4838,30 @@
             "nombre": "3.0 V6 Biturbo · 2996 cc",
             "nota": "E 400 y E 43 AMG",
             "desde": 2016,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Clase G": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.0T",
+            "nombre": "4.0 V8 Biturbo · 3982 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Clase S": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2999 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 1999,
             "hasta": 2027
           }
         ]
@@ -1335,9 +4983,318 @@
             "hasta": 2027
           }
         ]
+      },
+      "GLS GL": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2999 cc",
+            "desde": 2007,
+            "hasta": 2027
+          },
+          {
+            "id": "4.0T",
+            "nombre": "4.0 V8 Biturbo · 3982 cc",
+            "nota": "versiones altas",
+            "desde": 2007,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Vito": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.1D",
+            "nombre": "2.1 CDI Diésel · 2143 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Mini": {
+      "Clubman": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Cooper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2002,
+            "hasta": 2013
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "desde 2014",
+            "desde": 2014,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Countryman": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Mitsubishi": {
+      "ASX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Eclipse Cross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1499 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "L200 Sportero": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2351 cc",
+            "desde": 1995,
+            "hasta": 2027
+          },
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Diésel · 2477 cc",
+            "desde": 1995,
+            "hasta": 2027
+          },
+          {
+            "id": "3.2D",
+            "nombre": "3.2 Diésel · 3200 cc",
+            "nota": "versiones altas",
+            "desde": 1995,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Lancer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "desde": 1993,
+            "hasta": 2016
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 1993,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Lancer Evolution": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Mirage": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1193 cc",
+            "nota": "único motor",
+            "desde": 2014,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Montero Pajero": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar generaciones y el 2.8 diésel del viejo",
+        "motores": [
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2972 cc",
+            "desde": 2007,
+            "hasta": 2027
+          },
+          {
+            "id": "3.2D",
+            "nombre": "3.2 Diésel · 3200 cc",
+            "desde": 2007,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Montero Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2972 cc",
+            "desde": 2008,
+            "hasta": 2027
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Diésel · 2442 cc",
+            "desde": 2008,
+            "hasta": 2027
+          },
+          {
+            "id": "3.2D",
+            "nombre": "3.2 Diésel · 3200 cc",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Montero clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2972 cc",
+            "desde": 1985,
+            "hasta": 2006
+          },
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2835 cc",
+            "desde": 1985,
+            "hasta": 2006
+          }
+        ]
+      },
+      "Nativa": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2972 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2007
+          }
+        ]
+      },
+      "Outlander": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2360 cc",
+            "desde": 2004,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2998 cc",
+            "nota": "versiones altas",
+            "desde": 2004,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Space Wagon": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2351 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Xpander": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1499 cc",
+            "nota": "único motor",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "Nissan": {
+      "Almera": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1597 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2006
+          }
+        ]
+      },
+      "D21 D22 Frontier": {
+        "fuente": "por-confirmar",
+        "falta": "falta el 2.5 diésel y separar D21 de D22",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2389 cc",
+            "desde": 1993,
+            "hasta": 2008
+          },
+          {
+            "id": "3.0",
+            "nombre": "3.0 V6 · 2960 cc",
+            "nota": "versiones altas",
+            "desde": 1993,
+            "hasta": 2008
+          }
+        ]
+      },
       "Frontier NP300": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1348,6 +5305,18 @@
           {
             "id": "2.4",
             "nombre": "2.4 Gasolina · 2389 cc"
+          }
+        ]
+      },
+      "Juke": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1618 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2016
           }
         ]
       },
@@ -1385,6 +5354,97 @@
           }
         ]
       },
+      "Murano": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3498 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2023
+          }
+        ]
+      },
+      "NV350": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Navara": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 dCi Diésel · 2488 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Note": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Pathfinder": {
+        "fuente": "por-confirmar",
+        "falta": "cubre varias generaciones: falta separarlas",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3498 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Patrol": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar qué años llevó cada motor",
+        "motores": [
+          {
+            "id": "4.2",
+            "nombre": "4.2 · 4169 cc · 6 cilindros",
+            "desde": 1990,
+            "hasta": 2010
+          },
+          {
+            "id": "4.8",
+            "nombre": "4.8 · 4758 cc · 6 cilindros",
+            "desde": 1990,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Primera": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2003
+          }
+        ]
+      },
       "Qashqai": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1416,12 +5476,53 @@
           }
         ]
       },
+      "Sentra B13": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1597 cc",
+            "nota": "único motor",
+            "desde": 1992,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Terrano": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2389 cc",
+            "desde": 1995,
+            "hasta": 2005
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 Diésel · 2953 cc",
+            "desde": 1995,
+            "hasta": 2005
+          }
+        ]
+      },
       "Tiida": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.8",
             "nombre": "1.8 · 1798 cc"
+          }
+        ]
+      },
+      "Urvan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 · 2488 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
           }
         ]
       },
@@ -1451,7 +5552,454 @@
         ]
       }
     },
+    "Opel": {
+      "Astra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1796 cc",
+            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2006
+          }
+        ]
+      },
+      "Corsa": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1389 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2007
+          }
+        ]
+      },
+      "Vectra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2003
+          }
+        ]
+      },
+      "Zafira": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2005
+          }
+        ]
+      }
+    },
+    "Peugeot": {
+      "2008": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2015,
+            "hasta": 2019
+          },
+          {
+            "id": "1.2T",
+            "nombre": "1.2 Turbo · 1199 cc",
+            "nota": "desde 2020",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "205": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1360 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 1998
+          }
+        ]
+      },
+      "206": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar cuáles versiones entraron",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1360 cc",
+            "desde": 2000,
+            "hasta": 2010
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2010
+          }
+        ]
+      },
+      "207": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1360 cc",
+            "desde": 2008,
+            "hasta": 2013
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "versiones altas",
+            "desde": 2008,
+            "hasta": 2013
+          }
+        ]
+      },
+      "208": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2013,
+            "hasta": 2019
+          },
+          {
+            "id": "1.2T",
+            "nombre": "1.2 Turbo · 1199 cc",
+            "nota": "desde 2020",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "3008": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "301": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2023
+          }
+        ]
+      },
+      "306": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "desde": 1994,
+            "hasta": 2002
+          },
+          {
+            "id": "1.8",
+            "nombre": "1.8 · 1761 cc",
+            "nota": "versiones altas",
+            "desde": 1994,
+            "hasta": 2002
+          }
+        ]
+      },
+      "307": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "desde": 2002,
+            "hasta": 2010
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1997 cc",
+            "nota": "versiones altas",
+            "desde": 2002,
+            "hasta": 2010
+          }
+        ]
+      },
+      "308": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2008,
+            "hasta": 2020
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 2008,
+            "hasta": 2020
+          }
+        ]
+      },
+      "405": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1580 cc",
+            "desde": 1990,
+            "hasta": 1998
+          },
+          {
+            "id": "1.9",
+            "nombre": "1.9 · 1905 cc",
+            "nota": "versiones altas",
+            "desde": 1990,
+            "hasta": 1998
+          }
+        ]
+      },
+      "406": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2005
+          }
+        ]
+      },
+      "5008": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Boxer": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2179 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Expert": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6D",
+            "nombre": "1.6 Diésel · 1560 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Partner": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1587 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Porsche": {
+      "911": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Bóxer Turbo · 2981 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Cayenne": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 V6 Turbo · 2995 cc",
+            "nota": "único motor",
+            "desde": 2003,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Macan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1984 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Panamera": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.0T",
+            "nombre": "3.0 V6 Turbo · 2995 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "RAM": {
+      "1000": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1499 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "1500": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3604 cc",
+            "desde": 2013,
+            "hasta": 2027
+          },
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5654 cc",
+            "nota": "versiones altas",
+            "desde": 2013,
+            "hasta": 2027
+          }
+        ]
+      },
+      "2500": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "6.7D",
+            "nombre": "6.7 Diésel · 6690 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2027
+          }
+        ]
+      },
+      "700": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1368 cc",
+            "nota": "único motor",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Rampage": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo Diésel · 1956 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
     "Renault": {
+      "Alaskan": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3D",
+            "nombre": "2.3 dCi Diésel · 2298 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Arkana": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Boreal": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3T",
+            "nombre": "1.3 Turbo · 1332 cc",
+            "nota": "único motor",
+            "desde": 2026,
+            "hasta": 2027
+          }
+        ]
+      },
       "Captur": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1465,6 +6013,54 @@
           }
         ]
       },
+      "Clio": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1390 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2002
+          }
+        ]
+      },
+      "Clio Campus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4-8V",
+            "nombre": "1.4 8V · 1390 cc",
+            "desde": 2005,
+            "hasta": 2016
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 2005,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Clio II": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4-8V",
+            "nombre": "1.4 8V · 1390 cc",
+            "desde": 2000,
+            "hasta": 2016
+          },
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2016
+          }
+        ]
+      },
       "Duster": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1475,6 +6071,60 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1998 cc"
+          }
+        ]
+      },
+      "Duster Oroch": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0-16V",
+            "nombre": "2.0 16V · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2016,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Fluence": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 16V · 1997 cc",
+            "nota": "único motor",
+            "desde": 2011,
+            "hasta": 2016
+          }
+        ]
+      },
+      "Kangoo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Kardian": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0T",
+            "nombre": "1.0 Turbo · 999 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },
@@ -1504,6 +6154,18 @@
           }
         ]
       },
+      "Laguna": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2007
+          }
+        ]
+      },
       "Logan": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1516,6 +6178,18 @@
             "id": "1.6-16V",
             "nombre": "1.6 16V · 105-113 hp",
             "nota": "falta desde que año va cada uno"
+          }
+        ]
+      },
+      "Master": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.3D",
+            "nombre": "2.3 dCi Diésel · 2298 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
           }
         ]
       },
@@ -1545,6 +6219,148 @@
           }
         ]
       },
+      "Mégane II": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "desde": 2004,
+            "hasta": 2010
+          },
+          {
+            "id": "2.0-16V",
+            "nombre": "2.0 16V · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2004,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Mégane III": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "desde": 2010,
+            "hasta": 2015
+          },
+          {
+            "id": "2.0-16V",
+            "nombre": "2.0 16V · 1998 cc",
+            "nota": "versiones altas",
+            "desde": 2010,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Renault 12": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1289 cc",
+            "nota": "único motor",
+            "desde": 1973,
+            "hasta": 1989
+          }
+        ]
+      },
+      "Renault 18": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1647 cc",
+            "desde": 1981,
+            "hasta": 1991
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc",
+            "nota": "GTX",
+            "desde": 1981,
+            "hasta": 1991
+          }
+        ]
+      },
+      "Renault 19": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1390 cc",
+            "desde": 1993,
+            "hasta": 2000
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 1993,
+            "hasta": 2000
+          }
+        ]
+      },
+      "Renault 21": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc",
+            "nota": "único motor",
+            "desde": 1988,
+            "hasta": 1994
+          }
+        ]
+      },
+      "Renault 4": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.1",
+            "nombre": "1.1 · 1108 cc",
+            "nota": "único motor",
+            "desde": 1970,
+            "hasta": 1992
+          }
+        ]
+      },
+      "Renault 6": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.1",
+            "nombre": "1.1 · 1108 cc",
+            "desde": 1973,
+            "hasta": 1986
+          },
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1289 cc",
+            "desde": 1973,
+            "hasta": 1986
+          }
+        ]
+      },
+      "Renault 9": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar si el 1.6 de la GTX entró",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1289 cc",
+            "desde": 1983,
+            "hasta": 1999
+          },
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1397 cc",
+            "desde": 1983,
+            "hasta": 1999
+          }
+        ]
+      },
       "Sandero": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1557,6 +6373,18 @@
             "id": "1.6-16V",
             "nombre": "1.6 16V · 105-113 hp",
             "nota": "falta desde que año va cada uno"
+          }
+        ]
+      },
+      "Scénic": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6-16V",
+            "nombre": "1.6 16V · 1598 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2010
           }
         ]
       },
@@ -1607,6 +6435,18 @@
           }
         ]
       },
+      "Trafic": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 dCi Diésel · 1995 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
       "Twingo": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1637,7 +6477,326 @@
         ]
       }
     },
+    "Seat": {
+      "Córdoba": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 1997,
+            "hasta": 2008
+          }
+        ]
+      },
+      "Ibiza": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2012
+          }
+        ]
+      },
+      "León": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8T",
+            "nombre": "1.8 TSI · 1798 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2012
+          }
+        ]
+      }
+    },
+    "Skoda": {
+      "Fabia": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Felicia": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1289 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2001
+          }
+        ]
+      },
+      "Octavia": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8T",
+            "nombre": "1.8 TSI · 1798 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2010
+          }
+        ]
+      }
+    },
+    "SsangYong": {
+      "Actyon": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1998 cc",
+            "nota": "único motor",
+            "desde": 2007,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Actyon Sports": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1998 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Korando": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1998 cc",
+            "desde": 2011,
+            "hasta": 2027
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "versiones nuevas",
+            "desde": 2011,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Korando clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.9D",
+            "nombre": "2.9 Diésel · 2874 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2006
+          }
+        ]
+      },
+      "Kyron": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Diésel · 1998 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2014
+          }
+        ]
+      },
+      "Musso": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2157 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Musso clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.9D",
+            "nombre": "2.9 Diésel · 2874 cc",
+            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2006
+          }
+        ]
+      },
+      "Rexton": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.2D",
+            "nombre": "2.2 Diésel · 2157 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Stavic Rodius": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.7D",
+            "nombre": "2.7 Diésel · 2696 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Tivoli": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1597 cc",
+            "desde": 2016,
+            "hasta": 2023
+          },
+          {
+            "id": "1.6D",
+            "nombre": "1.6 Diésel · 1597 cc",
+            "desde": 2016,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Torres": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Subaru": {
+      "Evoltis Ascent": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4T",
+            "nombre": "2.4 Bóxer Turbo · 2387 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Forester": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 Bóxer · 1995 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Impreza": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 Bóxer · 1600 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Legacy": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 Bóxer · 2498 cc",
+            "nota": "único motor",
+            "desde": 1995,
+            "hasta": 2021
+          }
+        ]
+      },
+      "Outback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.5",
+            "nombre": "2.5 Bóxer · 2498 cc",
+            "nota": "único motor",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "WRX": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Bóxer Turbo · 1998 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
+      "XV Crosstrek": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 Bóxer · 1995 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
     "Suzuki": {
+      "APV": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2015
+          }
+        ]
+      },
       "Alto": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1651,12 +6810,96 @@
           }
         ]
       },
+      "Alto 800": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2019
+          }
+        ]
+      },
       "Baleno": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.4",
             "nombre": "1.4 · 1373 cc"
+          }
+        ]
+      },
+      "Carry": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1493 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Celerio": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 998 cc",
+            "nota": "único motor",
+            "desde": 2015,
+            "hasta": 2019
+          }
+        ]
+      },
+      "Ciaz": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4",
+            "nombre": "1.4 · 1373 cc",
+            "nota": "único motor",
+            "desde": 2016,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Dzire": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Ertiga": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1462 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Fronx": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1462 cc",
+            "nota": "único motor",
+            "desde": 2024,
+            "hasta": 2027
           }
         ]
       },
@@ -1673,6 +6916,36 @@
           }
         ]
       },
+      "Grand Vitara clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1995 cc",
+            "desde": 1999,
+            "hasta": 2015
+          },
+          {
+            "id": "2.7",
+            "nombre": "2.7 V6 · 2736 cc",
+            "nota": "versiones altas",
+            "desde": 1999,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Ignis": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1197 cc",
+            "nota": "único motor",
+            "desde": 2017,
+            "hasta": 2027
+          }
+        ]
+      },
       "Jimny": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1686,12 +6959,84 @@
           }
         ]
       },
+      "Jimny clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1328 cc",
+            "nota": "único motor",
+            "desde": 1998,
+            "hasta": 2018
+          }
+        ]
+      },
+      "S-Cross": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 Turbo · 1373 cc",
+            "desde": 2015,
+            "hasta": 2027
+          },
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1462 cc",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
       "S-Presso": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.0",
             "nombre": "1.0 · 998 cc"
+          }
+        ]
+      },
+      "SJ410 SJ413": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 970 cc",
+            "nota": "SJ410",
+            "desde": 1985,
+            "hasta": 1998
+          },
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "nota": "SJ413",
+            "desde": 1985,
+            "hasta": 1998
+          }
+        ]
+      },
+      "Samurai": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.3",
+            "nombre": "1.3 · 1324 cc",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2000
+          }
+        ]
+      },
+      "Super Carry": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 970 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 2007
           }
         ]
       },
@@ -1708,6 +7053,18 @@
           }
         ]
       },
+      "Swift Sport": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 Turbo · 1373 cc",
+            "nota": "único motor",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
       "Vitara": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1720,9 +7077,82 @@
             "nombre": "1.4 Turbo · 1373 cc"
           }
         ]
+      },
+      "Vitara clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1590 cc",
+            "nota": "único motor",
+            "desde": 1993,
+            "hasta": 2006
+          }
+        ]
+      },
+      "XL7": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1462 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
       }
     },
     "Toyota": {
+      "4Runner": {
+        "fuente": "por-confirmar",
+        "falta": "faltan las generaciones anteriores a 2003",
+        "motores": [
+          {
+            "id": "2.7",
+            "nombre": "2.7 Gasolina · 2694 cc",
+            "desde": 1996,
+            "hasta": 2027
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc",
+            "nota": "versiones altas",
+            "desde": 1996,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Avanza": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1495 cc",
+            "nota": "único motor",
+            "desde": 2008,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Camry": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2362 cc",
+            "desde": 2000,
+            "hasta": 2018
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3456 cc",
+            "nota": "versiones altas",
+            "desde": 2000,
+            "hasta": 2018
+          }
+        ]
+      },
       "Corolla": {
         "fuente": "verificado",
         "motores": [
@@ -1796,6 +7226,30 @@
           }
         ]
       },
+      "Hiace": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.8D",
+            "nombre": "2.8 Diésel · 2755 cc",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Highlander": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3456 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
+          }
+        ]
+      },
       "Hilux": {
         "fuente": "por-confirmar",
         "falta": "la Hilux anterior a 2005 (22R, 3L, 5L) todavía no está",
@@ -1827,6 +7281,85 @@
             "nota": "1GD-FTV",
             "desde": 2016,
             "hasta": 2027
+          }
+        ]
+      },
+      "Land Cruiser 200": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.5D",
+            "nombre": "4.5 V8 Diésel · 4461 cc"
+          },
+          {
+            "id": "4.0",
+            "nombre": "4.0 V6 · 3956 cc"
+          }
+        ]
+      },
+      "Land Cruiser 300": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5TT",
+            "nombre": "3.5 V6 Twin Turbo · 3444 cc",
+            "desde": 2022,
+            "hasta": 2027
+          },
+          {
+            "id": "3.3D",
+            "nombre": "3.3 V6 Diésel · 3346 cc",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Land Cruiser 70 Macho": {
+        "fuente": "por-confirmar",
+        "falta": "por confirmar qué años llevó cada motor",
+        "motores": [
+          {
+            "id": "4.5",
+            "nombre": "4.5 · 4477 cc · 6 cilindros",
+            "desde": 1985,
+            "hasta": 2027
+          },
+          {
+            "id": "4.2D",
+            "nombre": "4.2 Diésel · 4164 cc",
+            "desde": 1985,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Land Cruiser Burbuja": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.5",
+            "nombre": "4.5 · 4477 cc · 6 cilindros",
+            "nota": "único motor",
+            "desde": 1990,
+            "hasta": 2007
+          }
+        ]
+      },
+      "Land Cruiser FJ40 FJ43 Campero": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "4.2",
+            "nombre": "4.2 · 4230 cc · 6 cilindros",
+            "nota": "motor 2F",
+            "desde": 1960,
+            "hasta": 1985
+          },
+          {
+            "id": "3.9",
+            "nombre": "3.9 · 3878 cc · 6 cilindros",
+            "nota": "motor F",
+            "desde": 1960,
+            "hasta": 1985
           }
         ]
       },
@@ -1870,6 +7403,18 @@
           }
         ]
       },
+      "Prius": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.8HV",
+            "nombre": "1.8 Híbrido · 1798 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
+          }
+        ]
+      },
       "RAV4": {
         "fuente": "por-confirmar",
         "motores": [
@@ -1884,6 +7429,84 @@
           {
             "id": "2.5HV",
             "nombre": "2.5 Híbrido · 2487 cc"
+          }
+        ]
+      },
+      "Raize": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.2",
+            "nombre": "1.2 · 1198 cc",
+            "nota": "único motor",
+            "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Rush": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1496 cc",
+            "nota": "único motor",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Sequoia": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5663 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Sienna": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3456 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Tacoma": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.7",
+            "nombre": "2.7 Gasolina · 2694 cc",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "3.5",
+            "nombre": "3.5 V6 · 3456 cc",
+            "nota": "versiones altas",
+            "desde": 2016,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Tundra": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "5.7",
+            "nombre": "5.7 V8 · 5663 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
           }
         ]
       },
@@ -1907,19 +7530,6 @@
           }
         ]
       },
-      "Land Cruiser 200": {
-        "fuente": "por-confirmar",
-        "motores": [
-          {
-            "id": "4.5D",
-            "nombre": "4.5 V8 Diésel · 4461 cc"
-          },
-          {
-            "id": "4.0",
-            "nombre": "4.0 V6 · 3956 cc"
-          }
-        ]
-      },
       "Yaris Cross": {
         "fuente": "verificado",
         "motores": [
@@ -1928,6 +7538,25 @@
             "nombre": "1.5 Híbrido · 1490 cc",
             "nota": "HEV XS y XLS, la única que entró",
             "desde": 2022,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Yaris Hatchback": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5",
+            "nombre": "1.5 · 1496 cc",
+            "nota": "Yaris anterior (1NZ-FE)",
+            "desde": 2006,
+            "hasta": 2017
+          },
+          {
+            "id": "1.5-NR",
+            "nombre": "1.5 Dual VVT-i · 1496 cc",
+            "nota": "Yaris actual (2NR-FE)",
+            "desde": 2018,
             "hasta": 2027
           }
         ]
@@ -1944,6 +7573,78 @@
           {
             "id": "3.0D",
             "nombre": "3.0 V6 TDI · 2967 cc"
+          }
+        ]
+      },
+      "Bora": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 Aspirado · 1984 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Caddy": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Combi Kombi": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1584 cc",
+            "nota": "único motor",
+            "desde": 1980,
+            "hasta": 2013
+          }
+        ]
+      },
+      "Crafter": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0D",
+            "nombre": "2.0 TDI Diésel · 1968 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Crossfox": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2006,
+            "hasta": 2015
+          }
+        ]
+      },
+      "Escarabajo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1584 cc",
+            "nota": "único motor",
+            "desde": 1960,
+            "hasta": 1998
           }
         ]
       },
@@ -2050,12 +7751,66 @@
           }
         ]
       },
+      "Nivus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0T",
+            "nombre": "1.0 TSI · 999 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Passat": {
+        "fuente": "por-confirmar",
+        "falta": "falta separar generaciones",
+        "motores": [
+          {
+            "id": "1.8T",
+            "nombre": "1.8 Turbo · 1781 cc",
+            "desde": 1998,
+            "hasta": 2019
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TSI · 1984 cc",
+            "desde": 1998,
+            "hasta": 2019
+          }
+        ]
+      },
       "Polo": {
         "fuente": "por-confirmar",
         "motores": [
           {
             "id": "1.6",
             "nombre": "1.6 · 1598 cc"
+          }
+        ]
+      },
+      "Polo clásico": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2003,
+            "hasta": 2010
+          }
+        ]
+      },
+      "Saveiro": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
           }
         ]
       },
@@ -2072,6 +7827,18 @@
           }
         ]
       },
+      "Taos": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc",
+            "nota": "único motor",
+            "desde": 2021,
+            "hasta": 2027
+          }
+        ]
+      },
       "Tiguan": {
         "fuente": "por-confirmar",
         "motores": [
@@ -2082,6 +7849,53 @@
           {
             "id": "2.0T",
             "nombre": "2.0 TSI · 1984 cc"
+          }
+        ]
+      },
+      "Touareg": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.6",
+            "nombre": "3.6 V6 · 3597 cc",
+            "desde": 2004,
+            "hasta": 2018
+          },
+          {
+            "id": "3.0D",
+            "nombre": "3.0 TDI Diésel · 2967 cc",
+            "desde": 2004,
+            "hasta": 2018
+          }
+        ]
+      },
+      "Virtus": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "desde": 2019,
+            "hasta": 2027
+          },
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TSI · 1395 cc",
+            "nota": "versiones altas",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Voyage": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
+            "nota": "único motor",
+            "desde": 2010,
+            "hasta": 2023
           }
         ]
       }
@@ -2097,6 +7911,104 @@
             "nota": "Batería de 51 kWh",
             "desde": 2024,
             "hasta": 2027
+          }
+        ]
+      },
+      "S40": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.4",
+            "nombre": "2.4 · 2435 cc · 5 cilindros",
+            "nota": "único motor",
+            "desde": 2000,
+            "hasta": 2012
+          }
+        ]
+      },
+      "S60": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1969 cc",
+            "nota": "único motor",
+            "desde": 2001,
+            "hasta": 2023
+          }
+        ]
+      },
+      "V40": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1999 cc",
+            "nota": "único motor",
+            "desde": 2013,
+            "hasta": 2019
+          }
+        ]
+      },
+      "XC40": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1969 cc",
+            "nota": "único motor",
+            "desde": 2018,
+            "hasta": 2027
+          }
+        ]
+      },
+      "XC60": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1969 cc",
+            "nota": "único motor",
+            "desde": 2009,
+            "hasta": 2027
+          }
+        ]
+      },
+      "XC90": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1969 cc",
+            "nota": "único motor",
+            "desde": 2003,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Zotye": {
+      "T600": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1497 cc",
+            "nota": "único motor",
+            "desde": 2016,
+            "hasta": 2020
+          }
+        ]
+      },
+      "Z100": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.0",
+            "nombre": "1.0 · 999 cc",
+            "nota": "único motor",
+            "desde": 2016,
+            "hasta": 2018
           }
         ]
       }

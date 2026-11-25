@@ -624,10 +624,60 @@ export function rutaConVehiculo(ruta, busca, veh) {
   const otros = ps.filter(([tipo]) => !LLAVES_VEH[tipo])
   const slug = t => compacto(t) && plano(t).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
   if (veh && veh.marca) {
-    otros.push(['marca-vehiculo', slug(veh.marca)])
+    /* Las dos insignias cuando el carro es gemelo: VTEX suma los valores
+       repetidos del mismo filtro (verificado: 12 + 6 = 18), asi que la
+       pieza aparece este etiquetada como Chevrolet o como Suzuki. */
+    marcasDelCarro('carros', veh.marca, veh.modelo, veh.ano)
+      .forEach(ma => otros.push(['marca-vehiculo', slug(ma)]))
     if (veh.modelo) otros.push(['modelo', slug(veh.modelo)])
     if (veh.ano) otros.push(['ano', String(veh.ano)])
   }
   if (!otros.length) return null
   return '/' + otros.map(p => p[1]).join('/') + '?map=' + otros.map(p => p[0]).join(',')
+}
+
+/* ---------------------------------------------------------------------------
+   EL MISMO CARRO CON DOS INSIGNIAS
+
+   En Colombia media gama de Suzuki, Isuzu y Opel se vendio como Chevrolet. El
+   Swift, el Vitara, la Luv, el Corsa: mismo carro, misma pieza, otro emblema
+   en la parrilla. Si el repuesto quedo etiquetado bajo una marca y el cliente
+   escoge la otra, la pagina le dice que no tenemos algo que si tenemos.
+
+   LO QUE LO DECIDE ES EL AÑO, no el nombre. Tres casos del mismo listado NO
+   son gemelos porque sus años no se tocan — son nombres reciclados en carros
+   distintos, y confundirlos seria peor que el problema original:
+
+     Vitara        Chevrolet 1993-2006  vs  Suzuki 2016-2027
+     Grand Vitara  Chevrolet 1999-2015  vs  Suzuki 2023-2027
+     Jimny         Chevrolet 1998-2007  vs  Suzuki 2019-2027
+
+   Tampoco es este caso el de dos marcas que repiten nombre sin compartir
+   nada: la Frontier de Kia y la de Nissan son dos camionetas distintas, y
+   ahi preguntar cual es lo correcto.
+   --------------------------------------------------------------------------- */
+export const GEMELOS = [
+  { modelo: 'Alto', marcas: ['Chevrolet', 'Suzuki'], desde: 1999, hasta: 2010 },
+  { modelo: 'Astra', marcas: ['Chevrolet', 'Opel'], desde: 1999, hasta: 2006 },
+  { modelo: 'Corsa', marcas: ['Chevrolet', 'Opel'], desde: 1996, hasta: 2007 },
+  { modelo: 'Luv', marcas: ['Chevrolet', 'Isuzu'], desde: 1980, hasta: 2005 },
+  { modelo: 'Rodeo', marcas: ['Chevrolet', 'Isuzu'], desde: 1998, hasta: 2004 },
+  { modelo: 'Samurai', marcas: ['Chevrolet', 'Suzuki'], desde: 1990, hasta: 2000 },
+  { modelo: 'Super Carry', marcas: ['Chevrolet', 'Suzuki'], desde: 1993, hasta: 2007 },
+  { modelo: 'Swift', marcas: ['Chevrolet', 'Suzuki'], desde: 1991, hasta: 2004 },
+  { modelo: 'Trooper', marcas: ['Chevrolet', 'Isuzu'], desde: 1986, hasta: 2002 },
+  { modelo: 'Vectra', marcas: ['Chevrolet', 'Opel'], desde: 1997, hasta: 2003 },
+  { modelo: 'Zafira', marcas: ['Chevrolet', 'Opel'], desde: 2001, hasta: 2005 },
+]
+
+/* Las marcas por las que hay que filtrar para este carro: una, o las dos del
+   gemelo cuando el año cae en la ventana compartida. Sin año no se arriesga
+   —un Swift puede ser el viejo o el moderno— y devuelve solo la suya. */
+export function marcasDelCarro(seccion, marca, modelo, ano) {
+  if (seccion !== 'carros' || !marca || !modelo) return marca ? [marca] : []
+  const y = Number(ano)
+  const g = GEMELOS.find(x =>
+    plano(x.modelo) === plano(modelo) && x.marcas.indexOf(marca) >= 0 &&
+    y && y >= x.desde && y <= x.hasta)
+  return g ? g.marcas.slice() : [marca]
 }

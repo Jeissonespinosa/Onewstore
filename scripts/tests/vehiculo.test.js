@@ -44,6 +44,7 @@ eval(codigo + `
   global.modeloCoincide = modeloCoincide; global.esVersion = esVersion;
   global.esElectrico = esElectrico;
   global.vehiculoDeRuta = vehiculoDeRuta; global.rutaConVehiculo = rutaConVehiculo;
+  global.marcasDelCarro = marcasDelCarro; global.GEMELOS = GEMELOS;
   global.plano = plano; global.VERSIONES = VERSIONES; global.APODOS = APODOS;
 `)
 
@@ -247,6 +248,54 @@ prueba('en 2011 cada opcion dice de que generacion es',
   motoresDe('carros', 'Kia', 'Picanto', '2011').every(m => !!m.nota), true)
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
+
+console.log('\n=== el mismo carro con dos insignias ===')
+/* Medio Suzuki e Isuzu se vendio como Chevrolet. Si la pieza quedo
+   etiquetada con una marca y el cliente escoge la otra, le decimos que no
+   tenemos algo que si tenemos. */
+prueba('un Swift del 98 filtra por las dos marcas',
+  marcasDelCarro('carros', 'Chevrolet', 'Swift', '1998'), ['Chevrolet', 'Suzuki'])
+prueba('y da igual por cual de las dos entre',
+  marcasDelCarro('carros', 'Suzuki', 'Swift', '1998'), ['Chevrolet', 'Suzuki'])
+/* El año es lo que decide: el Swift moderno Chevrolet nunca lo vendio. */
+prueba('el Swift moderno es solo Suzuki',
+  marcasDelCarro('carros', 'Suzuki', 'Swift', '2015'), ['Suzuki'])
+prueba('sin año no se arriesga',
+  marcasDelCarro('carros', 'Chevrolet', 'Swift', null), ['Chevrolet'])
+/* Los tres que NO son gemelos: mismo nombre, carros distintos. Meterlos
+   juntos seria peor que el problema que estamos arreglando. */
+prueba('el Vitara nuevo no arrastra al viejo',
+  marcasDelCarro('carros', 'Suzuki', 'Vitara', '2020'), ['Suzuki'])
+prueba('ni el viejo al nuevo',
+  marcasDelCarro('carros', 'Chevrolet', 'Vitara', '2000'), ['Chevrolet'])
+prueba('el Jimny tampoco', marcasDelCarro('carros', 'Suzuki', 'Jimny', '2022'), ['Suzuki'])
+prueba('un carro normal filtra por su marca y ya',
+  marcasDelCarro('carros', 'Toyota', 'Corolla', '2021'), ['Toyota'])
+
+/* Un gemelo tiene que llevar los MISMOS motores en los años compartidos: es
+   el mismo carro, no puede tener un motor distinto segun el emblema. */
+const motoresEn = (ma, mo, y) => {
+  const f = (motorizaciones.carros[ma] || {})[mo]
+  if (!f) return []
+  return f.motores
+    .filter(x => !(x.desde && y < x.desde) && !(x.hasta && y > x.hasta))
+    .map(x => x.nombre).sort()
+}
+const desalineados = []
+GEMELOS.forEach(g => {
+  for (let y = g.desde; y <= g.hasta; y += 1) {
+    const a = motoresEn(g.marcas[0], g.modelo, y).join('|')
+    const b = motoresEn(g.marcas[1], g.modelo, y).join('|')
+    if (a !== b) { desalineados.push(g.modelo + ' ' + y); break }
+  }
+})
+prueba('los gemelos llevan los mismos motores en los años que comparten',
+  desalineados, [])
+
+prueba('la URL de un gemelo pide las dos marcas',
+  rutaConVehiculo('/carros/frenos', '?map=c,c',
+    { marca: 'Chevrolet', modelo: 'Swift', ano: '1998' }),
+  '/carros/frenos/chevrolet/suzuki/swift/1998?map=c,c,marca-vehiculo,marca-vehiculo,modelo,ano')
 
 console.log('\n=== el carro que viene en la URL ===')
 /* Es lo que permite darse cuenta de que la pagina esta filtrando por un

@@ -907,9 +907,14 @@
         "fuente": "por-confirmar",
         "motores": [
           {
+            "id": "0.8",
+            "nombre": "0.8 · 796 cc",
+            "desde": 1999,
+            "hasta": 2010
+          },
+          {
             "id": "1.0",
             "nombre": "1.0 · 993 cc",
-            "nota": "único motor",
             "desde": 1999,
             "hasta": 2010
           }
@@ -927,7 +932,6 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1998 cc",
-            "nota": "versiones altas",
             "desde": 1999,
             "hasta": 2006
           }
@@ -1204,11 +1208,15 @@
         "motores": [
           {
             "id": "1.4",
-            "nombre": "1.4 · 1389 cc"
+            "nombre": "1.4 · 1389 cc",
+            "desde": 1996,
+            "hasta": 2010
           },
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc"
+            "nombre": "1.6 · 1598 cc",
+            "desde": 1996,
+            "hasta": 2010
           }
         ]
       },
@@ -1345,7 +1353,6 @@
       },
       "Luv": {
         "fuente": "por-confirmar",
-        "falta": "falta el diésel y separar generaciones",
         "motores": [
           {
             "id": "1.6",
@@ -1539,7 +1546,6 @@
           {
             "id": "3.2",
             "nombre": "3.2 V6 · 3165 cc",
-            "nota": "único motor",
             "desde": 1998,
             "hasta": 2004
           }
@@ -1765,7 +1771,6 @@
           {
             "id": "3.2",
             "nombre": "3.2 V6 · 3165 cc",
-            "nota": "único motor",
             "desde": 1986,
             "hasta": 2002
           }
@@ -2789,18 +2794,6 @@
           }
         ]
       },
-      "Starray": {
-        "fuente": "por-confirmar",
-        "motores": [
-          {
-            "id": "1.5T",
-            "nombre": "1.5 Turbo · 1477 cc",
-            "nota": "único motor",
-            "desde": 2025,
-            "hasta": 2027
-          }
-        ]
-      },
       "EX5": {
         "fuente": "verificado",
         "electrico": true,
@@ -2809,6 +2802,18 @@
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
             "nota": "Batería de 60,2 kWh",
+            "desde": 2025,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Starray": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1477 cc",
+            "nota": "único motor",
             "desde": 2025,
             "hasta": 2027
           }
@@ -3481,6 +3486,47 @@
             "nota": "versiones altas",
             "desde": 2008,
             "hasta": 2015
+          }
+        ]
+      }
+    },
+    "Isuzu": {
+      "Luv": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 Gasolina · 1584 cc",
+            "desde": 1980,
+            "hasta": 2005
+          },
+          {
+            "id": "2.3",
+            "nombre": "2.3 Gasolina · 2254 cc",
+            "desde": 1980,
+            "hasta": 2005
+          }
+        ]
+      },
+      "Rodeo": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.2",
+            "nombre": "3.2 V6 · 3165 cc",
+            "desde": 1998,
+            "hasta": 2004
+          }
+        ]
+      },
+      "Trooper": {
+        "fuente": "por-confirmar",
+        "motores": [
+          {
+            "id": "3.2",
+            "nombre": "3.2 V6 · 3165 cc",
+            "desde": 1986,
+            "hasta": 2002
           }
         ]
       }
@@ -5607,7 +5653,12 @@
           {
             "id": "1.8",
             "nombre": "1.8 · 1796 cc",
-            "nota": "único motor",
+            "desde": 1999,
+            "hasta": 2006
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 · 1998 cc",
             "desde": 1999,
             "hasta": 2006
           }
@@ -5619,7 +5670,12 @@
           {
             "id": "1.4",
             "nombre": "1.4 · 1389 cc",
-            "nota": "único motor",
+            "desde": 1996,
+            "hasta": 2007
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 · 1598 cc",
             "desde": 1996,
             "hasta": 2007
           }
@@ -6850,11 +6906,15 @@
         "motores": [
           {
             "id": "0.8",
-            "nombre": "0.8 · 796 cc"
+            "nombre": "0.8 · 796 cc",
+            "desde": 1999,
+            "hasta": 2010
           },
           {
             "id": "1.0",
-            "nombre": "1.0 · 998 cc"
+            "nombre": "1.0 · 993 cc",
+            "desde": 1999,
+            "hasta": 2010
           }
         ]
       },
@@ -7092,12 +7152,25 @@
         "fuente": "por-confirmar",
         "motores": [
           {
+            "id": "1.3",
+            "nombre": "1.3 · 1298 cc",
+            "nota": "el viejo, el mismo que vendió Chevrolet",
+            "desde": 1991,
+            "hasta": 2004
+          },
+          {
             "id": "1.2",
-            "nombre": "1.2 · 1197 cc"
+            "nombre": "1.2 · 1242 cc",
+            "nota": "el moderno",
+            "desde": 2005,
+            "hasta": 2027
           },
           {
             "id": "1.4",
-            "nombre": "1.4 · 1372 cc"
+            "nombre": "1.4 · 1372 cc",
+            "nota": "el moderno, versiones altas",
+            "desde": 2005,
+            "hasta": 2027
           }
         ]
       },

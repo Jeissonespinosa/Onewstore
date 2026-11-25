@@ -39,6 +39,36 @@ Año:             2010 … 2024
 "Frontier" si en la lista dice "Frontier NP300": el producto terminaría
 asociado a otro vehículo. En la plantilla van todos los valores admitidos.
 
+### El mismo carro con dos insignias
+
+En Colombia media gama de Suzuki, Isuzu y Opel se vendió como Chevrolet. Es el
+mismo carro y la misma pieza, con otro emblema en la parrilla. **Si tu repuesto
+sirve para uno, sirve para el otro: declara las dos marcas.**
+
+| Modelo | Marcas | Años en que son el mismo carro |
+|---|---|---|
+| Alto | Chevrolet · Suzuki | 1999–2010 |
+| Astra | Chevrolet · Opel | 1999–2006 |
+| Corsa | Chevrolet · Opel | 1996–2007 |
+| Luv | Chevrolet · Isuzu | 1980–2005 |
+| Rodeo | Chevrolet · Isuzu | 1998–2004 |
+| Samurai | Chevrolet · Suzuki | 1990–2000 |
+| Super Carry | Chevrolet · Suzuki | 1993–2007 |
+| Swift | Chevrolet · Suzuki | 1991–2004 |
+| Trooper | Chevrolet · Isuzu | 1986–2002 |
+| Vectra | Chevrolet · Opel | 1997–2003 |
+| Zafira | Chevrolet · Opel | 2001–2005 |
+
+Como "Marca vehículo" es de selección múltiple, van las dos en el mismo
+producto: `Chevrolet, Suzuki`. Si solo pones una, al cliente que tenga la otra
+le vamos a decir que no tenemos la pieza.
+
+**Ojo con tres que NO son el mismo carro**, aunque repitan nombre: el **Vitara**
+(Chevrolet 1993–2006 / Suzuki 2016–2027), el **Grand Vitara** (Chevrolet
+1999–2015 / Suzuki 2023–2027) y el **Jimny** (Chevrolet 1998–2007 / Suzuki
+2019–2027). Los años no se tocan porque son generaciones distintas y no
+comparten piezas: ahí va una sola marca, la que diga la ficha del repuesto.
+
 ## Valores cerrados, nunca texto libre
 
 Si un seller escribe `185 mm` y otro `185`, salen dos filtros distintos y el

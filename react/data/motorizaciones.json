@@ -177,49 +177,6 @@
       }
     },
     "BMW": {
-      "Mini Cooper": {
-        "fuente": "por-confirmar",
-        "motores": [
-          {
-            "id": "1.6",
-            "nombre": "1.6 · 1598 cc",
-            "desde": 2002,
-            "hasta": 2013
-          },
-          {
-            "id": "1.5T",
-            "nombre": "1.5 Turbo · 1499 cc",
-            "nota": "desde 2014",
-            "desde": 2014,
-            "hasta": 2027
-          },
-          {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1998 cc",
-            "nota": "Cooper S",
-            "desde": 2014,
-            "hasta": 2027
-          }
-        ]
-      },
-      "Mini Countryman": {
-        "fuente": "por-confirmar",
-        "motores": [
-          {
-            "id": "1.5T",
-            "nombre": "1.5 Turbo · 1499 cc",
-            "desde": 2011,
-            "hasta": 2027
-          },
-          {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1998 cc",
-            "nota": "Cooper S",
-            "desde": 2011,
-            "hasta": 2027
-          }
-        ]
-      },
       "Serie 1": {
         "fuente": "verificado",
         "motores": [
@@ -6008,42 +5965,78 @@
     },
     "Mini": {
       "Clubman": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
-            "nombre": "1.5 Turbo · 1499 cc",
-            "nota": "único motor",
+            "nombre": "1.5 Turbo · 1499 cc · 3 cilindros",
+            "nota": "Cooper",
+            "desde": 2008,
+            "hasta": 2023
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "Cooper S y John Cooper Works",
             "desde": 2008,
             "hasta": 2023
           }
         ]
       },
       "Cooper": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
-            "nombre": "1.6 · 1598 cc",
+            "nombre": "1.6 Aspirado · 1598 cc",
+            "nota": "hasta el cambio de 2014",
             "desde": 2002,
             "hasta": 2013
           },
           {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1598 cc",
+            "nota": "Cooper S de la segunda generación",
+            "desde": 2007,
+            "hasta": 2013
+          },
+          {
             "id": "1.5T",
-            "nombre": "1.5 Turbo · 1499 cc",
-            "nota": "desde 2014",
+            "nombre": "1.5 Turbo · 1499 cc · 3 cilindros",
+            "nota": "Cooper, desde 2014",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "Cooper S y John Cooper Works",
             "desde": 2014,
             "hasta": 2027
           }
         ]
       },
       "Countryman": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
+            "id": "1.6",
+            "nombre": "1.6 Aspirado · 1598 cc",
+            "nota": "primera generación",
+            "desde": 2011,
+            "hasta": 2016
+          },
+          {
             "id": "1.5T",
-            "nombre": "1.5 Turbo · 1499 cc",
-            "nota": "único motor",
+            "nombre": "1.5 Turbo · 1499 cc · 3 cilindros",
+            "nota": "Cooper",
+            "desde": 2017,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1998 cc",
+            "nota": "Cooper S y John Cooper Works",
             "desde": 2011,
             "hasta": 2027
           }

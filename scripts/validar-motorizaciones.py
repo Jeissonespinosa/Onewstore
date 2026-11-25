@@ -19,10 +19,13 @@ Tres formas de que esto quede mal en silencio, y las tres se revisan:
   6. Un modelo de un solo motor cuyo motor no cubre todo el rango. Ese
      modelo no pregunta nada —el embudo termina en el año— asi que el
      motor tiene que valer para todos sus años.
+  7. Un modelo que se llama como otra marca. Casi siempre es el mismo carro
+     metido dos veces, como "Mini Cooper" bajo BMW teniendo MINI su propia
+     marca con su propio Cooper.
 
 Sale con codigo 1 si algo esta mal, para que el CI lo atrape.
 """
-import json, os, re, sys
+import json, os, re, sys, unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -118,6 +121,33 @@ for marca, modelos in motor['carros'].items():
             else:
                 huecos.append(linea)
 
+# 7. Un modelo que se llama como OTRA marca casi siempre es el mismo carro
+#    metido dos veces: "Mini Cooper" bajo BMW cuando MINI ya es marca y
+#    tiene su Cooper. El cliente busca por lo que dice la tarjeta —ahi la
+#    MARCA es MINI— asi que la copia bajo BMW no la encuentra nadie y lo que
+#    se etiquete en ella queda invisible.
+#    "Mini Van" de DFSK es tipo de carroceria, no la marca MINI.
+SALVEDADES = {('DFSK Dongfeng', 'Mini Van Mini Truck')}
+
+def _norm(t):
+    t = unicodedata.normalize('NFD', t).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z0-9]+', ' ', t).strip()
+
+copias = []
+for seccion in ('carros', 'motos'):
+    marcas = {_norm(x): x for x in base[seccion]}
+    for marca, modelos in base[seccion].items():
+        for modelo in modelos:
+            if (marca, modelo) in SALVEDADES:
+                continue
+            n = _norm(modelo)
+            for mn, real in marcas.items():
+                if real == marca:
+                    continue
+                if n == mn or n.startswith(mn + ' '):
+                    copias.append('%s "%s" — "%s" ya es marca aparte'
+                                  % (marca, modelo, real))
+
 n_mod = sum(len(v) for v in motor['carros'].values())
 n_mot = sum(len(i['motores']) for v in motor['carros'].values() for i in v.values())
 por_confirmar = [(ma, mo) for ma, v in motor['carros'].items()
@@ -155,6 +185,11 @@ if sin_ano_falta:
     print('  %d modelos con algun motor sin ventana de año' % len(sin_ano_falta))
 if huecos:
     print('  %d con años del modelo sin motor declarado' % len(huecos))
+
+if copias:
+    print('\nMODELOS QUE REPITEN UNA MARCA (%d) — revisar si estan duplicados:' % len(copias))
+    for c in copias:
+        print('   ', c)
 
 if sin:
     print('\nMODELOS RANKEADOS SIN MOTORIZACION (%d) — se escapan:' % len(sin))

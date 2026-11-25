@@ -257,6 +257,24 @@ prueba('en 2011 cada opcion dice de que generacion es',
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
 
+console.log('\n=== MINI es marca, no un modelo de BMW ===')
+/* En la tarjeta de propiedad la MARCA dice MINI y la LINEA dice COOPER S.
+   Estaba metido dos veces: como "Mini Cooper" bajo BMW y como "Cooper"
+   bajo Mini. Quien busca su MINI bajo BMW no lo encuentra, y lo que se
+   hubiera etiquetado en la copia quedaba invisible. */
+prueba('BMW ya no tiene modelos Mini',
+  Object.keys(base.carros.BMW).filter(x => /^Mini/.test(x)), [])
+prueba('y Mini los tiene todos',
+  Object.keys(base.carros.Mini).sort(), ['Clubman', 'Cooper', 'Countryman'])
+prueba('el Cooper viejo y el nuevo son motores distintos',
+  motoresDe('carros', 'Mini', 'Cooper', '2010').map(x => x.id).sort(), ['1.6', '1.6T'])
+prueba('y el de 2020 ya es el 1.5 de tres cilindros',
+  motoresDe('carros', 'Mini', 'Cooper', '2020').map(x => x.id).sort(), ['1.5T', '2.0T'])
+prueba('quien escriba "mini cooper" igual lo encuentra',
+  modeloCoincide('carros', 'Mini', 'Cooper', 'mini cooper'), true)
+prueba('y quien escriba "cooper s" tambien',
+  modeloCoincide('carros', 'Mini', 'Cooper', 'cooper s'), true)
+
 console.log('\n=== el mismo carro con dos insignias ===')
 /* Medio Suzuki e Isuzu se vendio como Chevrolet. Si la pieza quedo
    etiquetada con una marca y el cliente escoge la otra, le decimos que no

@@ -149,9 +149,12 @@ export default function VehiculoHeader({
       setVista('motor')
       return
     }
-    /* Al electrico no se le pregunta nada, pero si se le anota: de eso
-       depende que no le ofrezcamos filtro de aceite ni bujias. */
-    const motor = esElectrico(seccion, marca, modelo) ? 'EV' : undefined
+    /* Al electrico puro no se le pregunta nada, pero si se le anota: de eso
+       depende que no le ofrezcamos filtro de aceite ni bujias. Al que se
+       vende en las dos formas —el Kwid— si se le pregunta, y por eso ya
+       entro por pideMotor() mas arriba. */
+    const unico = motoresDe(seccion, marca, modelo, y)[0]
+    const motor = unico && unico.electrico ? unico.id : undefined
     guardar(motor ? { marca, modelo, ano: y, motor } : { marca, modelo, ano: y })
   }
 

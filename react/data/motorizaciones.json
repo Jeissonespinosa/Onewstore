@@ -164,11 +164,11 @@
       },
       "e-tron": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 95 kWh",
             "desde": 2020,
             "hasta": 2027
@@ -404,12 +404,19 @@
         ]
       },
       "Serie 4": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "2.0T",
-            "nombre": "2.0 Turbo · 1998 cc",
-            "nota": "420i y 430i",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "420i, 428i y 430i",
+            "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "435i, 440i, M440i y M4",
             "desde": 2014,
             "hasta": 2027
           }
@@ -778,11 +785,11 @@
       },
       "i3": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 42 kWh",
             "desde": 2015,
             "hasta": 2022
@@ -791,11 +798,11 @@
       },
       "iX": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 76,6 kWh",
             "desde": 2022,
             "hasta": 2027
@@ -806,11 +813,11 @@
     "BYD": {
       "Dolphin": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 44,9 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -819,11 +826,11 @@
       },
       "Dolphin Mini": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 38 kWh",
             "desde": 2024,
             "hasta": 2027
@@ -832,11 +839,11 @@
       },
       "Seal": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 82,5 kWh",
             "desde": 2024,
             "hasta": 2027
@@ -845,11 +852,11 @@
       },
       "Yuan Plus Atto 3": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 60,5 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -858,11 +865,11 @@
       },
       "Yuan Pro": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 45,1 kWh",
             "desde": 2025,
             "hasta": 2027
@@ -1280,11 +1287,11 @@
       },
       "Bolt EV": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 66 kWh",
             "desde": 2021,
             "hasta": 2027
@@ -1364,11 +1371,11 @@
       },
       "Captiva EV": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 52 kWh",
             "desde": 2024,
             "hasta": 2027
@@ -1935,11 +1942,11 @@
       },
       "Spark EUV": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 41,9 kWh",
             "desde": 2025,
             "hasta": 2027
@@ -3020,14 +3027,20 @@
         ]
       },
       "Fiesta": {
-        "fuente": "por-confirmar",
-        "falta": "el Fiesta anterior a 2010 no tiene motores: ahí cambia",
+        "fuente": "verificado",
+        "falta": "el Fiesta anterior a 2010 sigue sin motores",
         "motores": [
           {
             "id": "1.6",
             "nombre": "1.6 · 1596 cc",
-            "nota": "confirmado 2010-2019",
             "desde": 2010,
+            "hasta": 2019
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 EcoBoost Turbo · 1596 cc",
+            "nota": "Fiesta ST, 197 hp",
+            "desde": 2016,
             "hasta": 2019
           }
         ]
@@ -3277,11 +3290,11 @@
       },
       "EX5": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 60,2 kWh",
             "desde": 2025,
             "hasta": 2027
@@ -3352,11 +3365,11 @@
       },
       "Ora 03": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 48 kWh",
             "desde": 2024,
             "hasta": 2027
@@ -3859,11 +3872,11 @@
       },
       "Ioniq 5": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 58 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -4185,11 +4198,11 @@
     "JAC": {
       "E10X": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 30,2 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -4517,11 +4530,11 @@
       },
       "EV5": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 64,2 kWh",
             "desde": 2025,
             "hasta": 2027
@@ -4530,11 +4543,11 @@
       },
       "EV6": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 77,4 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -5137,11 +5150,11 @@
       },
       "MG4": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 51 kWh",
             "desde": 2024,
             "hasta": 2027
@@ -6266,11 +6279,11 @@
       },
       "Leaf": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 40 kWh",
             "desde": 2019,
             "hasta": 2023
@@ -7173,11 +7186,22 @@
         ]
       },
       "Kwid": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.0",
-            "nombre": "1.0 · 999 cc"
+            "nombre": "1.0 · 999 cc · 3 cilindros",
+            "nota": "el de gasolina, 66 hp",
+            "desde": 2018,
+            "hasta": 2027
+          },
+          {
+            "id": "EV",
+            "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
+            "nota": "Kwid E-Tech, batería de 26,8 kWh",
+            "desde": 2023,
+            "hasta": 2027
           }
         ]
       },
@@ -7239,11 +7263,11 @@
       },
       "Megane E-Tech": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 60 kWh",
             "desde": 2023,
             "hasta": 2027
@@ -7529,11 +7553,11 @@
       },
       "Zoe": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 52 kWh",
             "desde": 2020,
             "hasta": 2023
@@ -9109,11 +9133,11 @@
     "Volvo": {
       "EX30": {
         "fuente": "verificado",
-        "electrico": true,
         "motores": [
           {
             "id": "EV",
             "nombre": "Eléctrico · sin cilindraje",
+            "electrico": true,
             "nota": "Batería de 51 kWh",
             "desde": 2024,
             "hasta": 2027

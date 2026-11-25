@@ -185,11 +185,24 @@ export const nombreConMotor = v => {
 /* Un carro 100% electrico no tiene cilindraje, y media tienda no le sirve:
    filtro de aceite, bujias, correa de reparticion, exosto. Saberlo es lo que
    evita que le vendamos algo que su carro no tiene. Los hibridos NO entran
-   aqui: siguen llevando motor de gasolina y todos sus repuestos. */
-export function esElectrico(seccion, marca, modelo) {
+   aqui: siguen llevando motor de gasolina y todos sus repuestos.
+
+   LA BANDERA VA EN EL MOTOR, NO EN EL MODELO. El Kwid se vende a gasolina y
+   electrico con el mismo nombre, igual que el 500, el MINI Cooper o el XC40.
+   Decir "el Kwid es electrico" le esconderia el filtro de aceite al dueño
+   del de gasolina, que es el mismo error al reves.
+
+   Sin motor escogido solo cuenta como electrico el modelo que NO tiene otra
+   cosa: un Leaf siempre lo es; un Kwid, hasta que no diga cual tiene, no. */
+export function esElectrico(seccion, marca, modelo, motor) {
   if (seccion !== 'carros' || !marca || !modelo) return false
   const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
-  return !!(ficha && ficha.electrico)
+  if (!ficha || !ficha.motores || !ficha.motores.length) return false
+  if (motor) {
+    const mo = ficha.motores.find(x => x.id === motor)
+    return !!(mo && mo.electrico)
+  }
+  return ficha.motores.every(x => x.electrico)
 }
 
 /* Orden de venta en Colombia (estimado, editable). Sirve para dos cosas:

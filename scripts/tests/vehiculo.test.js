@@ -362,8 +362,9 @@ const cortos = unSoloMotor.filter(([ma, mo, f]) => {
   const x = f.motores[0]
   return r && x.desde && (x.desde > r[0] || (x.hasta || r[1]) < r[1])
 }).map(([ma, mo]) => ma + ' ' + mo)
-prueba('y cubre todos los años del modelo, salvo los huecos conocidos',
-  cortos, ['Ford Fiesta'])
+/* El Fiesta salio de esta lista al ganar el ST: ya no es de un solo motor.
+   Su hueco de 1996-2009 sigue anotado en la ficha. */
+prueba('ninguno de un solo motor deja años del carro sin motor', cortos, [])
 
 console.log('\n=== no mezclar generaciones ===')
 /* Estos todavia son por-confirmar, asi que motoresDe() no los muestra: se
@@ -512,6 +513,30 @@ prueba('y fuera de su rango no ofrece nada',
   motoresDe('carros', 'Chevrolet', 'Spark GT', '2026'), [])
 
 console.log('\n=== el carro electrico ===')
+/* La bandera va en el MOTOR, no en el modelo: hay carros que se venden a
+   gasolina y electricos con el mismo nombre. Decir "el Kwid es electrico"
+   le esconderia el filtro de aceite al dueño del de gasolina. */
+prueba('al Kwid se le pregunta cual de los dos tiene',
+  pideMotor('carros', 'Renault', 'Kwid', '2025'), true)
+prueba('el Kwid con el motor de gasolina NO es electrico',
+  esElectrico('carros', 'Renault', 'Kwid', '1.0'), false)
+prueba('con el E-Tech si', esElectrico('carros', 'Renault', 'Kwid', 'EV'), true)
+prueba('y sin saber cual tiene, no se asume',
+  esElectrico('carros', 'Renault', 'Kwid'), false)
+/* El que no tiene otra cosa si cuenta sin preguntar. */
+prueba('el Leaf es electrico aunque no se escoja motor',
+  esElectrico('carros', 'Nissan', 'Leaf'), true)
+prueba('y el Kwid del 2020 todavia no tenia el electrico',
+  motoresDe('carros', 'Renault', 'Kwid', '2020').map(x => x.id), ['1.0'])
+
+console.log('\n=== lo que el usuario encontro revisando ===')
+prueba('el Fiesta ST es otro motor, no un acabado',
+  motoresDe('carros', 'Ford', 'Fiesta', '2017').map(x => x.id).sort(), ['1.6', '1.6T'])
+prueba('y en 2012 todavia no estaba',
+  motoresDe('carros', 'Ford', 'Fiesta', '2012').map(x => x.id), ['1.6'])
+prueba('el Serie 4 separa el 420i del 440i',
+  motoresDe('carros', 'BMW', 'Serie 4', '2022').map(x => x.id).sort(), ['2.0T', '3.0T'])
+
 prueba('el Spark EUV es electrico', esElectrico('carros', 'Chevrolet', 'Spark EUV'), true)
 prueba('el Spark GT no', esElectrico('carros', 'Chevrolet', 'Spark GT'), false)
 prueba('el Leaf si', esElectrico('carros', 'Nissan', 'Leaf'), true)

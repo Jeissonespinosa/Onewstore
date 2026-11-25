@@ -100,7 +100,7 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   const nodo = nodoDe(rutaDe(route))
   const noLeSirve = !!(
     nodo && nodo.soloCombustion && enContexto &&
-    esElectrico(seccion, enContexto.marca, enContexto.modelo)
+    esElectrico(seccion, enContexto.marca, enContexto.modelo, enContexto.motor)
   )
   const queEs = nodo ? nodo.nombre.toLowerCase() : 'esta categoría'
 

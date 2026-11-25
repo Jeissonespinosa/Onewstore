@@ -395,7 +395,8 @@ export default function Cris({
        reparticion. Con la caja vacia no se le ofrecen: seria mandarlo a una
        pagina que no es para su carro. Si EL las escribe si se le muestran,
        marcadas, porque dejarlo sin resultados y sin explicacion es peor. */
-    const electrico = esElectrico(seccion, (vehiculo || {}).marca, (vehiculo || {}).modelo)
+    const electrico = esElectrico(seccion, (vehiculo || {}).marca, (vehiculo || {}).modelo,
+      (vehiculo || {}).motor)
 
     const meter = s => {
       const sobra = electrico && s.nodo && s.nodo.soloCombustion

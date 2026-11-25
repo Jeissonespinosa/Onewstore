@@ -171,7 +171,7 @@ prueba('herramientas tampoco', pideMotor('herramientas','Toyota','Corolla','2021
 /* Lo que nadie ha mirado no se muestra: no se puede ofrecer un motor que
    no ha pasado ni por investigacion ni por catalogo. */
 prueba('un modelo que nadie ha mirado todavia no pregunta',
-  pideMotor('carros','Mercedes-Benz','GLC','2020'), false)
+  pideMotor('carros','Audi','Q7','2020'), false)
 prueba('y uno investigado si',
   pideMotor('carros','Ford','Ranger','2020'), true)
 prueba('un modelo que no existe no revienta', motoresDe('carros','Nada','Nada','2020'), [])

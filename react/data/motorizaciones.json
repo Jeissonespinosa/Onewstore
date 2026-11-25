@@ -1,9 +1,4 @@
 {
-  "_nota": "Motorizaciones por modelo para el mercado colombiano. El paso del motor solo se le pregunta al cliente cuando el modelo y el año tienen MAS DE UNA. Las motos no estan: su cilindraje ya va en el nombre del modelo (Pulsar 160, Boxer CT 100, XTZ 150).",
-  "_fuentes": {
-    "verificado": "Confirmado contra fichas tecnicas publicadas. No tocar sin volver a verificar.",
-    "por-confirmar": "Armado con lo conocido del mercado. HAY QUE CONFIRMARLO contra un catalogo de distribuidor antes de subirlo a VTEX."
-  },
   "carros": {
     "Audi": {
       "A1": {
@@ -37,20 +32,56 @@
         ]
       },
       "A4": {
-        "fuente": "por-confirmar",
-        "falta": "faltan las generaciones anteriores a 2010",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.4T",
-            "nombre": "1.4 TFSI · 1395 cc",
-            "desde": 1996,
-            "hasta": 2027
+            "id": "1.8T",
+            "nombre": "1.8 Turbo · 1781 cc",
+            "nota": "B6, B7 y el 1.8 TFSI de la B8",
+            "desde": 2001,
+            "hasta": 2015
+          },
+          {
+            "id": "2.0",
+            "nombre": "2.0 Aspirado · 1984 cc",
+            "nota": "B6",
+            "desde": 2001,
+            "hasta": 2005
+          },
+          {
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 Aspirado · 2976 cc",
+            "nota": "B6",
+            "desde": 2001,
+            "hasta": 2005
           },
           {
             "id": "2.0T",
             "nombre": "2.0 TFSI · 1984 cc",
-            "desde": 1996,
+            "nota": "de la B7 en adelante, 35 y 40 TFSI",
+            "desde": 2005,
             "hasta": 2027
+          },
+          {
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 FSI · 3123 cc",
+            "nota": "B7 y B8",
+            "desde": 2005,
+            "hasta": 2015
+          },
+          {
+            "id": "3.0T-V6",
+            "nombre": "3.0 V6 TFSI Sobrealimentado · 2995 cc",
+            "nota": "B8",
+            "desde": 2009,
+            "hasta": 2015
+          },
+          {
+            "id": "1.4T",
+            "nombre": "1.4 TFSI · 1395 cc",
+            "nota": "primeras series de la B9",
+            "desde": 2016,
+            "hasta": 2020
           }
         ]
       },
@@ -483,22 +514,49 @@
         ]
       },
       "Serie 7": {
-        "fuente": "por-confirmar",
-        "falta": "faltan las generaciones anteriores a 2015",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "3.0T",
-            "nombre": "3.0 Turbo · 2979 cc · 6 cilindros",
-            "nota": "740i",
-            "desde": 1995,
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "730i y 740i del E65",
+            "desde": 2002,
+            "hasta": 2008
+          },
+          {
+            "id": "4.4-V8",
+            "nombre": "4.4 V8 · 4395 cc",
+            "nota": "745i, 750i del E65 y el 750i del F01",
+            "desde": 2002,
+            "hasta": 2022
+          },
+          {
+            "id": "6.0-V12",
+            "nombre": "6.0 V12 Aspirado · 5972 cc",
+            "nota": "760Li",
+            "desde": 2002,
+            "hasta": 2008
+          },
+          {
+            "id": "3.0T-6c",
+            "nombre": "3.0 TwinPower Turbo · 2979 cc · 6 cilindros",
+            "nota": "740i, del F01 en adelante",
+            "desde": 2009,
             "hasta": 2027
           },
           {
-            "id": "4.4T",
-            "nombre": "4.4 V8 Turbo · 4395 cc",
-            "nota": "750i",
-            "desde": 1995,
-            "hasta": 2027
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "730i del G11",
+            "desde": 2016,
+            "hasta": 2022
+          },
+          {
+            "id": "745e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1998 cc",
+            "nota": "740e y 745e",
+            "desde": 2016,
+            "hasta": 2022
           }
         ]
       },
@@ -3468,26 +3526,56 @@
         ]
       },
       "Civic": {
-        "fuente": "por-confirmar",
-        "falta": "faltan las generaciones anteriores a 2006",
+        "fuente": "verificado",
+        "falta": "la base arranca en 1992: la primera, segunda y tercera generación quedan fuera",
         "motores": [
           {
-            "id": "1.8",
-            "nombre": "1.8 · 1799 cc",
+            "id": "1.5",
+            "nombre": "1.5 Aspirado · 1493 cc",
+            "nota": "bloque D15, hasta la quinta",
             "desde": 1992,
+            "hasta": 1995
+          },
+          {
+            "id": "1.6",
+            "nombre": "1.6 Aspirado · 1590 cc",
+            "nota": "bloques D16, con y sin VTEC",
+            "desde": 1992,
+            "hasta": 2000
+          },
+          {
+            "id": "1.7",
+            "nombre": "1.7 i-VTEC · 1668 cc",
+            "nota": "séptima generación, bloque D17",
+            "desde": 2001,
+            "hasta": 2005
+          },
+          {
+            "id": "1.8",
+            "nombre": "1.8 i-VTEC · 1799 cc",
+            "nota": "octava y novena, bloques R18",
+            "desde": 2006,
             "hasta": 2016
           },
           {
             "id": "2.0",
-            "nombre": "2.0 · 1997 cc",
-            "desde": 1992,
-            "hasta": 2016
+            "nombre": "2.0 i-VTEC · 1998 cc",
+            "nota": "Civic Si y el EXL de la décima",
+            "desde": 2006,
+            "hasta": 2021
           },
           {
             "id": "1.5T",
             "nombre": "1.5 Turbo · 1498 cc",
-            "nota": "desde 2016",
+            "nota": "EX-T, Touring y Sport, bloque L15B7",
             "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0HV",
+            "nombre": "2.0 Híbrido e:HEV · 1993 cc",
+            "nota": "ciclo Atkinson, undécima generación",
+            "desde": 2022,
             "hasta": 2027
           }
         ]
@@ -4336,21 +4424,84 @@
         ]
       },
       "Grand Cherokee": {
-        "fuente": "por-confirmar",
-        "falta": "falta separar generaciones y el diésel",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "3.6",
-            "nombre": "3.6 V6 · 3604 cc",
+            "id": "4.0-6c",
+            "nombre": "4.0 · 3960 cc · 6 cilindros",
+            "nota": "ZJ y WJ, bloque AMC Power-Tech",
             "desde": 1994,
+            "hasta": 2004
+          },
+          {
+            "id": "5.2-V8",
+            "nombre": "5.2 V8 Magnum · 5211 cc",
+            "nota": "ZJ Limited",
+            "desde": 1994,
+            "hasta": 1998
+          },
+          {
+            "id": "5.9-V8",
+            "nombre": "5.9 V8 · 5898 cc",
+            "nota": "Limited LX, solo 1998",
+            "desde": 1998,
+            "hasta": 1998
+          },
+          {
+            "id": "4.7-V8",
+            "nombre": "4.7 V8 PowerTech · 4701 cc",
+            "nota": "WJ y WK",
+            "desde": 1999,
+            "hasta": 2010
+          },
+          {
+            "id": "3.7-V6",
+            "nombre": "3.7 V6 · 3701 cc",
+            "nota": "WK",
+            "desde": 2005,
+            "hasta": 2010
+          },
+          {
+            "id": "5.7-V8",
+            "nombre": "5.7 V8 HEMI · 5654 cc",
+            "nota": "WK y WK2",
+            "desde": 2005,
+            "hasta": 2021
+          },
+          {
+            "id": "6.1-V8",
+            "nombre": "6.1 V8 HEMI · 6059 cc",
+            "nota": "SRT8",
+            "desde": 2005,
+            "hasta": 2010
+          },
+          {
+            "id": "3.0D-V6",
+            "nombre": "3.0 V6 Turbodiésel · 2987 cc",
+            "nota": "CRD: Mercedes en la WK, VM Motori en la WK2",
+            "desde": 2005,
+            "hasta": 2021
+          },
+          {
+            "id": "3.6-V6",
+            "nombre": "3.6 V6 Pentastar · 3604 cc",
+            "nota": "de la WK2 en adelante",
+            "desde": 2011,
             "hasta": 2027
           },
           {
-            "id": "5.7",
-            "nombre": "5.7 V8 · 5654 cc",
-            "nota": "versiones altas",
-            "desde": 1994,
-            "hasta": 2027
+            "id": "6.4-V8",
+            "nombre": "6.4 V8 HEMI · 6417 cc",
+            "nota": "SRT",
+            "desde": 2011,
+            "hasta": 2021
+          },
+          {
+            "id": "6.2-V8",
+            "nombre": "6.2 V8 Supercargado · 6166 cc",
+            "nota": "Trackhawk",
+            "desde": 2017,
+            "hasta": 2021
           }
         ]
       },
@@ -5661,53 +5812,96 @@
     },
     "Mercedes-Benz": {
       "CLA": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6T",
             "nombre": "1.6 Turbo · 1595 cc",
-            "nota": "los 200",
+            "nota": "CLA 180 y CLA 200 de la C117",
             "desde": 2014,
+            "hasta": 2019
+          },
+          {
+            "id": "1.8D",
+            "nombre": "1.8 CDI Turbodiésel · 1796 cc",
+            "nota": "CLA 200 CDI de las primeras",
+            "desde": 2014,
+            "hasta": 2016
+          },
+          {
+            "id": "2.1D",
+            "nombre": "2.1 CDI Turbodiésel · 2143 cc",
+            "nota": "CLA 200 CDI de las últimas",
+            "desde": 2016,
             "hasta": 2019
           },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "los 200 nuevos, los 250 y los 35 AMG",
+            "nota": "CLA 250",
             "desde": 2014,
             "hasta": 2027
           },
           {
-            "id": "2.0T-45",
+            "id": "2.0T-AMG",
             "nombre": "2.0 Turbo AMG · 1991 cc",
-            "nota": "A 45 y CLA 45",
+            "nota": "CLA 45, 45 S y 35 AMG",
             "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "1.33T",
+            "nombre": "1.33 Turbo · 1332 cc",
+            "nota": "CLA 200 de la C118, mild hybrid en las últimas",
+            "desde": 2020,
             "hasta": 2027
           }
         ]
       },
       "Clase A": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
+        "falta": "la W168 y la W169 quedan fuera: la base arranca en 2013",
         "motores": [
+          {
+            "id": "1.6",
+            "nombre": "1.6 Aspirado · 1598 cc",
+            "nota": "A 160 de la W168",
+            "desde": 2013,
+            "hasta": 2013
+          },
+          {
+            "id": "1.7",
+            "nombre": "1.7 Aspirado · 1699 cc",
+            "nota": "A 170 y A 180 de la W169",
+            "desde": 2013,
+            "hasta": 2013
+          },
           {
             "id": "1.6T",
             "nombre": "1.6 Turbo · 1595 cc",
-            "nota": "los 200",
+            "nota": "A 180 y A 200 de la W176",
             "desde": 2013,
-            "hasta": 2019
+            "hasta": 2018
           },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "los 200 nuevos, los 250 y los 35 AMG",
+            "nota": "A 250",
             "desde": 2013,
             "hasta": 2027
           },
           {
-            "id": "2.0T-45",
+            "id": "2.0T-AMG",
             "nombre": "2.0 Turbo AMG · 1991 cc",
-            "nota": "A 45 y CLA 45",
+            "nota": "A 45, 45 S y 35 AMG",
             "desde": 2013,
+            "hasta": 2027
+          },
+          {
+            "id": "1.33T",
+            "nombre": "1.33 Turbo · 1332 cc",
+            "nota": "A 200 de la W177, mild hybrid en las últimas",
+            "desde": 2019,
             "hasta": 2027
           }
         ]
@@ -5725,68 +5919,215 @@
         ]
       },
       "Clase C": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.8K",
             "nombre": "1.8 Kompressor · 1796 cc",
-            "nota": "C 180, C 200 y C 250 CGI",
+            "nota": "C 180 y C 200 Kompressor",
+            "desde": 1994,
+            "hasta": 2011
+          },
+          {
+            "id": "2.0K",
+            "nombre": "2.0 Kompressor · 1998 cc",
+            "nota": "C 200 Kompressor de la W203",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "2.6-V6",
+            "nombre": "2.6 V6 Aspirado · 2597 cc",
+            "nota": "C 240",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 Aspirado · 3199 cc",
+            "nota": "C 320",
+            "desde": 2001,
+            "hasta": 2007
+          },
+          {
+            "id": "1.8T",
+            "nombre": "1.8 CGI Turbo · 1796 cc",
+            "nota": "C 180, C 200 y C 250 CGI de la W204",
             "desde": 2008,
             "hasta": 2014
           },
           {
-            "id": "3.5V6",
-            "nombre": "3.5 V6 · 3498 cc",
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 Aspirado · 2996 cc",
+            "nota": "C 300",
+            "desde": 2008,
+            "hasta": 2014
+          },
+          {
+            "id": "3.5-V6",
+            "nombre": "3.5 V6 Aspirado · 3498 cc",
             "nota": "C 350",
             "desde": 2008,
-            "hasta": 2015
+            "hasta": 2014
+          },
+          {
+            "id": "6.2-V8",
+            "nombre": "6.2 V8 Aspirado · 6208 cc",
+            "nota": "C 63 AMG",
+            "desde": 2008,
+            "hasta": 2014
+          },
+          {
+            "id": "1.6T",
+            "nombre": "1.6 Turbo · 1595 cc",
+            "nota": "C 180 de la W205",
+            "desde": 2015,
+            "hasta": 2021
           },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "C 200, C 250 y C 300 — mismo bloque",
-            "desde": 2014,
-            "hasta": 2027
-          },
-          {
-            "id": "3.0V6",
-            "nombre": "3.0 V6 Biturbo · 2996 cc",
-            "nota": "C 400 y C 43 AMG",
+            "nota": "C 200, C 250 y C 300",
             "desde": 2015,
             "hasta": 2027
           },
           {
-            "id": "2.1D",
-            "nombre": "2.1 CDI Diésel · 2143 cc",
-            "nota": "C 220d y C 250 CDI",
-            "desde": 2008,
-            "hasta": 2018
+            "id": "2.2D",
+            "nombre": "2.2 CDI Turbodiésel · 2143 cc",
+            "nota": "C 220 CDI de la W203 y W204",
+            "desde": 2001,
+            "hasta": 2014
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1950 cc",
+            "nota": "C 220 d de la W205",
+            "desde": 2015,
+            "hasta": 2021
+          },
+          {
+            "id": "350e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1991 cc",
+            "nota": "C 350 e",
+            "desde": 2015,
+            "hasta": 2021
+          },
+          {
+            "id": "3.0T-V6",
+            "nombre": "3.0 V6 Biturbo · 2996 cc",
+            "nota": "C 43 AMG",
+            "desde": 2015,
+            "hasta": 2021
+          },
+          {
+            "id": "4.0T-V8",
+            "nombre": "4.0 V8 Biturbo · 3982 cc",
+            "nota": "C 63 S AMG",
+            "desde": 2015,
+            "hasta": 2021
+          },
+          {
+            "id": "1.5T",
+            "nombre": "1.5 Turbo · 1496 cc",
+            "nota": "C 180 y C 200 de la W206, mild hybrid 48V",
+            "desde": 2022,
+            "hasta": 2027
           }
         ]
       },
       "Clase E": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "3.5V6",
-            "nombre": "3.5 V6 · 3498 cc",
+            "id": "1.8K",
+            "nombre": "1.8 Kompressor · 1796 cc",
+            "nota": "E 200 Kompressor de la W211",
+            "desde": 2003,
+            "hasta": 2009
+          },
+          {
+            "id": "2.6-V6",
+            "nombre": "2.6 V6 Aspirado · 2597 cc",
+            "nota": "E 240",
+            "desde": 2003,
+            "hasta": 2009
+          },
+          {
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 Aspirado · 3199 cc",
+            "nota": "E 320",
+            "desde": 2003,
+            "hasta": 2009
+          },
+          {
+            "id": "3.5-V6",
+            "nombre": "3.5 V6 Aspirado · 3498 cc",
             "nota": "E 350",
+            "desde": 2003,
+            "hasta": 2016
+          },
+          {
+            "id": "5.0-V8",
+            "nombre": "5.0 V8 Aspirado · 4966 cc",
+            "nota": "E 500",
+            "desde": 2003,
+            "hasta": 2009
+          },
+          {
+            "id": "1.8T",
+            "nombre": "1.8 CGI Turbo · 1796 cc",
+            "nota": "E 200 y E 250 CGI de la W212",
+            "desde": 2010,
+            "hasta": 2016
+          },
+          {
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 Aspirado · 2996 cc",
+            "nota": "E 300",
             "desde": 2010,
             "hasta": 2016
           },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "E 200, E 250 y E 300 — mismo bloque",
+            "nota": "E 200, E 250 y E 300 de la W213 en adelante",
             "desde": 2016,
             "hasta": 2027
           },
           {
-            "id": "3.0V6",
-            "nombre": "3.0 V6 Biturbo · 2996 cc",
-            "nota": "E 400 y E 43 AMG",
-            "desde": 2016,
+            "id": "2.2D",
+            "nombre": "2.2 CDI Turbodiésel · 2143 cc",
+            "nota": "E 220 y E 250 CDI",
+            "desde": 2003,
+            "hasta": 2016
+          },
+          {
+            "id": "3.0D-V6",
+            "nombre": "3.0 CDI Turbodiésel · 2987 cc · 6 cilindros",
+            "nota": "E 320 CDI",
+            "desde": 2003,
+            "hasta": 2009
+          },
+          {
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1950 cc",
+            "nota": "E 220 d",
+            "desde": 2017,
             "hasta": 2027
+          },
+          {
+            "id": "300e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1991 cc",
+            "nota": "E 350 e y E 300 e",
+            "desde": 2017,
+            "hasta": 2027
+          },
+          {
+            "id": "5.5T-V8",
+            "nombre": "5.5 V8 Biturbo · 5461 cc",
+            "nota": "E 63 AMG",
+            "desde": 2010,
+            "hasta": 2016
           }
         ]
       },
@@ -5815,59 +6156,73 @@
         ]
       },
       "GLA": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "1.6T",
             "nombre": "1.6 Turbo · 1595 cc",
-            "nota": "los 200",
+            "nota": "GLA 180 y GLA 200 de la X156",
             "desde": 2014,
-            "hasta": 2019
+            "hasta": 2020
+          },
+          {
+            "id": "2.1D",
+            "nombre": "2.1 CDI Turbodiésel · 2143 cc",
+            "nota": "GLA 220d",
+            "desde": 2014,
+            "hasta": 2020
           },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "los 200 nuevos, los 250 y los 35 AMG",
+            "nota": "GLA 250",
             "desde": 2014,
             "hasta": 2027
           },
           {
-            "id": "2.0T-45",
+            "id": "2.0T-AMG",
             "nombre": "2.0 Turbo AMG · 1991 cc",
-            "nota": "A 45 y CLA 45",
+            "nota": "GLA 45, 45 S y 35 AMG",
             "desde": 2014,
+            "hasta": 2027
+          },
+          {
+            "id": "1.33T",
+            "nombre": "1.33 Turbo · 1332 cc",
+            "nota": "GLA 200 de la H247, mild hybrid en las últimas",
+            "desde": 2021,
             "hasta": 2027
           }
         ]
       },
       "GLB": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "1.6T",
-            "nombre": "1.6 Turbo · 1595 cc",
-            "nota": "los 200",
-            "desde": 2020,
-            "hasta": 2019
-          },
-          {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "los 200 nuevos, los 250 y los 35 AMG",
+            "id": "1.33T",
+            "nombre": "1.33 Turbo · 1332 cc",
+            "nota": "GLB 200, microhibridado en las últimas",
             "desde": 2020,
             "hasta": 2027
           },
           {
-            "id": "2.0T-45",
+            "id": "2.0T",
+            "nombre": "2.0 Turbo · 1991 cc",
+            "nota": "GLB 250",
+            "desde": 2020,
+            "hasta": 2027
+          },
+          {
+            "id": "2.0T-AMG",
             "nombre": "2.0 Turbo AMG · 1991 cc",
-            "nota": "A 45 y CLA 45",
+            "nota": "GLB 35 AMG",
             "desde": 2020,
             "hasta": 2027
           }
         ]
       },
       "GLC": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
             "id": "2.0T",
@@ -5877,57 +6232,113 @@
             "hasta": 2027
           },
           {
-            "id": "3.0V6",
-            "nombre": "3.0 V6 Biturbo · 2996 cc",
-            "nota": "GLC 43 AMG",
-            "desde": 2017,
-            "hasta": 2027
+            "id": "2.1D",
+            "nombre": "2.1 CDI Turbodiésel · 2143 cc",
+            "nota": "GLC 220 d y 250 d de la X253",
+            "desde": 2016,
+            "hasta": 2019
           },
           {
-            "id": "2.0T-PHEV",
-            "nombre": "2.0 Turbo híbrido enchufable",
-            "nota": "GLC 350e — por confirmar si entró",
-            "desde": 2017,
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1950 cc",
+            "nota": "GLC 220 d y 300 d",
+            "desde": 2019,
             "hasta": 2022
           },
           {
-            "id": "2.1D",
-            "nombre": "2.1 CDI Diésel · 2143 cc",
-            "nota": "GLC 220d — por confirmar si entró",
+            "id": "350e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1991 cc",
+            "nota": "GLC 350 e y 300 e",
             "desde": 2016,
-            "hasta": 2021
+            "hasta": 2027
+          },
+          {
+            "id": "3.0T-V6",
+            "nombre": "3.0 V6 Biturbo · 2996 cc",
+            "nota": "GLC 43 AMG",
+            "desde": 2016,
+            "hasta": 2022
+          },
+          {
+            "id": "4.0T-V8",
+            "nombre": "4.0 V8 Biturbo · 3982 cc",
+            "nota": "GLC 63 S AMG",
+            "desde": 2016,
+            "hasta": 2022
           }
         ]
       },
       "GLE ML": {
-        "fuente": "por-confirmar",
+        "fuente": "verificado",
         "motores": [
           {
-            "id": "3.5V6",
-            "nombre": "3.5 V6 · 3498 cc",
-            "nota": "ML 350 y GLE 350",
-            "desde": 1998,
-            "hasta": 2019
-          },
-          {
-            "id": "3.0D",
-            "nombre": "3.0 CDI Diésel · 2987 cc",
-            "nota": "ML 350 CDI y GLE 350d",
+            "id": "3.5-V6",
+            "nombre": "3.5 V6 Aspirado · 3498 cc",
+            "nota": "ML 350",
             "desde": 2006,
             "hasta": 2019
           },
           {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1991 cc",
-            "nota": "GLE 300",
-            "desde": 2019,
+            "id": "5.5-V8",
+            "nombre": "5.5 V8 Aspirado · 5461 cc",
+            "nota": "ML 500",
+            "desde": 2006,
+            "hasta": 2011
+          },
+          {
+            "id": "3.0D-V6",
+            "nombre": "3.0 CDI Turbodiésel · 2987 cc · 6 cilindros",
+            "nota": "ML 320/350 CDI y GLE 350 d",
+            "desde": 2006,
+            "hasta": 2019
+          },
+          {
+            "id": "2.1D",
+            "nombre": "2.1 CDI Turbodiésel · 2143 cc",
+            "nota": "ML 250 CDI y GLE 250 d",
+            "desde": 2012,
+            "hasta": 2019
+          },
+          {
+            "id": "3.0T-V6",
+            "nombre": "3.0 V6 Biturbo · 2996 cc",
+            "nota": "GLE 400 y GLE 43 AMG",
+            "desde": 2015,
+            "hasta": 2019
+          },
+          {
+            "id": "5.5T-V8",
+            "nombre": "5.5 V8 Biturbo · 5461 cc",
+            "nota": "GLE 63 S AMG",
+            "desde": 2012,
+            "hasta": 2019
+          },
+          {
+            "id": "500e",
+            "nombre": "3.0 V6 Turbo híbrido enchufable · 2996 cc",
+            "nota": "GLE 500 e",
+            "desde": 2015,
+            "hasta": 2019
+          },
+          {
+            "id": "3.0T-6c",
+            "nombre": "3.0 Turbo · 2999 cc · 6 cilindros",
+            "nota": "GLE 450, mild hybrid 48V",
+            "desde": 2020,
             "hasta": 2027
           },
           {
-            "id": "3.0V6",
-            "nombre": "3.0 Biturbo · 2996 cc · 6 cilindros",
-            "nota": "GLE 450 y GLE 43",
-            "desde": 2016,
+            "id": "2.0D",
+            "nombre": "2.0 Turbodiésel · 1950 cc",
+            "nota": "GLE 300 d, mild hybrid",
+            "desde": 2020,
+            "hasta": 2027
+          },
+          {
+            "id": "400e",
+            "nombre": "2.0 Turbo híbrido enchufable · 1991 cc",
+            "nota": "GLE 350 de y 400 e",
+            "desde": 2020,
             "hasta": 2027
           }
         ]

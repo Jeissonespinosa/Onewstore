@@ -536,8 +536,14 @@ export function rutaDe(route) {
    ------------------------------------------------------------------ */
 import motorizaciones from './data/motorizaciones.json'
 
-/* Mientras la tabla se confirma contra un catalogo de distribuidor, solo
-   los verificados preguntan. Subir esto a true abre los 93 de golpe. */
+/* El interruptor. Mientras la tabla se confirma contra un catalogo de
+   distribuidor solo preguntan los verificados, que hoy son 33 de 547 — 22 de ellos eléctricos, que no preguntan nada.
+
+   Ponerlo en FALSE abre los 547 de golpe, con todo lo que todavia esta por
+   confirmar adentro. Para abrir UNO solo —probar un modelo, por ejemplo—
+   no se toca esto: se marca "fuente": "verificado" en la ficha de ese
+   modelo en data/motorizaciones.json, que es lo que hace que el Picanto
+   pregunte y el Rio no. */
 const SOLO_VERIFICADOS = true
 
 export function motoresDe(seccion, marca, modelo, ano) {

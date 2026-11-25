@@ -381,10 +381,16 @@ prueba('la Ranger vieja no ve el motor de la nueva',
   crudoEnAno('Ford', 'Ranger', 2018), ['2.2D', '2.5', '3.2D'])
 prueba('y la nueva no ve los de la vieja',
   crudoEnAno('Ford', 'Ranger', 2025), ['2.0BT', '3.0V6D'])
-prueba('la Hilux de 2012 no ve el 2.8 diésel, que salio en 2016',
-  crudoEnAno('Toyota', 'Hilux', 2012), ['2.7', '4.0'])
-prueba('la Hilux de 2020 no ve el V6',
-  crudoEnAno('Toyota', 'Hilux', 2020), ['2.4D', '2.7', '2.8D'])
+/* Confirmado: la septima lleva los D-4D de 2.5 y 3.0, y el V6 solo aparece
+   en la octava, en las GR-Sport. */
+prueba('la Hilux de 2012 lleva los D-4D de la septima',
+  crudoEnAno('Toyota', 'Hilux', 2012), ['2.5D', '2.7', '3.0D'])
+prueba('y no ve los GD, que salieron en 2016',
+  crudoEnAno('Toyota', 'Hilux', 2012).indexOf('2.8D'), -1)
+prueba('la Hilux de 2020 lleva los GD y el V6 de la GR-Sport',
+  crudoEnAno('Toyota', 'Hilux', 2020), ['2.4D', '2.7', '2.8D', '4.0-V6'])
+prueba('y ya no ve el 3.0 de la septima',
+  crudoEnAno('Toyota', 'Hilux', 2020).indexOf('3.0D'), -1)
 prueba('el Mazda 3 de 2010 no ve SkyActiv',
   crudoEnAno('Mazda', 'Mazda 3', 2010), ['1.6', '2.0'])
 prueba('el Fortuner recupero el 2.4 diésel',
@@ -400,7 +406,9 @@ prueba('el Twingo quedo con sus tres motores confirmados',
 /* "Anteriores a 2005" no es un motor y no puede salir como opcion. */
 prueba('lo que falta se anota en la ficha, no entre los motores',
   motorizaciones.carros.Toyota.Hilux.motores.every(x => /\d/.test(x.id)), true)
-prueba('y la ficha lo dice', !!motorizaciones.carros.Toyota.Hilux.falta, true)
+/* Lo que falta ahora es anterior: de 1990 a 1997. */
+prueba('y la ficha dice lo que todavia falta',
+  /1990/.test(motorizaciones.carros.Toyota.Hilux.falta || ''), true)
 
 console.log('\n=== los cinco que faltaba completar ===')
 prueba('el Jetta de 2015 no ve el 1.4 TSI, que llego en 2019',

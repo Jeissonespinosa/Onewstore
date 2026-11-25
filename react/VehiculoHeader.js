@@ -158,6 +158,7 @@ export default function VehiculoHeader({
     guardar(motor ? { marca, modelo, ano: y, motor } : { marca, modelo, ano: y })
   }
 
+  const esMotoSeccion = seccion === 'motos'
   const cerrar = () => setVista(null)
   const esPaso = vista === 'marca' || vista === 'modelo' || vista === 'ano' || vista === 'motor'
   const enGuia = vista === 'guia'
@@ -199,9 +200,13 @@ export default function VehiculoHeader({
       elegir: () => trasElAno(y),
     }))
   } else if (vista === 'guia') {
-    titulo = guia === 'motor' ? '¿Dónde dice el motor?' : '¿Dónde dice el año?'
+    titulo = guia === 'motor'
+      ? (esMotoSeccion ? '¿Dónde dice el cilindraje?' : '¿Dónde dice el motor?')
+      : '¿Dónde dice el año?'
   } else if (vista === 'motor') {
-    titulo = '¿Qué motor tiene?'
+    /* En moto el dato es el cilindraje y asi lo pide la gente: "¿es la 100
+       o la 125?". Preguntar "que motor tiene" suena a otra cosa. */
+    titulo = esMotoSeccion ? '¿De qué cilindraje es?' : '¿Qué motor tiene?'
     opciones = motoresDe(seccion, marca, modelo, ano).map(mo => ({
       clave: mo.id,
       texto: mo.nombre,
@@ -549,7 +554,9 @@ export default function VehiculoHeader({
                     fontFamily: 'inherit' }}
                   onClick={() => { setGuia(vista); setVista('guia') }}
                 >
-                  {vista === 'motor' ? 'No sé cuál es' : 'No sé el año'}
+                  {vista === 'motor'
+                    ? (esMotoSeccion ? 'No sé el cilindraje' : 'No sé cuál es')
+                    : 'No sé el año'}
                 </button>
               ) : null}
             </div>

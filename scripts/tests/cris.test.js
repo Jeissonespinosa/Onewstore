@@ -192,8 +192,21 @@ const soloComb = ruta => { const n = nodo(ruta); return n ? !!n.soloCombustion :
 
 prueba('la marca hereda hacia abajo',
   soloComb('/carros/motor-y-transmision/combustible-e-inyeccion/bombas-de-gasolina'), true)
-prueba('en motos no se marco nada',
-  indice.nodos.filter(n => n.seccion === 'Motos' && n.soloCombustion).length, 0)
+/* En motos tambien: una electrica no lleva filtro de aceite, bujia,
+   carburador ni clutch. Lo que SI lleva —frenos, llantas, bateria,
+   suspension— se dejo fuera a proposito. */
+prueba('en motos tambien hay categorias de solo combustion',
+  indice.nodos.filter(n => n.seccion === 'Motos' && n.soloCombustion).length > 20, true)
+;[
+  '/motos/filtros/filtros-de-aceite',
+  '/motos/motor-y-transmision/combustible/carburadores',
+  '/motos/electrico-y-electronico/bujias',
+  '/motos/electrico-y-electronico/cdi-modulos-de-encendido',
+].forEach(r => prueba('moto, no aplica: ' + r.split('/').pop(), soloComb(r), true))
+;[
+  '/motos/frenos', '/motos/llantas-y-rines', '/motos/baterias',
+  '/motos/lubricantes-y-mantenimiento/aceite-de-suspension',
+].forEach(r => prueba('moto, si aplica: ' + r.split('/').pop(), soloComb(r), false))
 
 console.log('\n=== el aviso de la pagina de categoria ===')
 /* nodoDe() es lo que decide si la pagina avisa. Vive en VehiculoEnPagina.js

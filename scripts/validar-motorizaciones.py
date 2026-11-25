@@ -33,6 +33,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # se muestran. "por-confirmar" es lo que nadie ha mirado y no se muestra.
 MOSTRADOS = ('verificado', 'investigado')
 
+
+def _todas(motor):
+    """(seccion, marca, modelos) de carros y motos. Las reglas valen para
+    las dos: una Discover 100 y una Discover 125 son dos motos distintas
+    igual que un Picanto 1.0 y un 1.25 son dos carros distintos."""
+    for seccion in ('carros', 'motos'):
+        for marca, modelos in (motor.get(seccion) or {}).items():
+            yield seccion, marca, modelos
+
 motor = json.load(open(os.path.join(ROOT, 'react', 'data', 'motorizaciones.json'), encoding='utf-8'))
 base = json.load(open(os.path.join(ROOT, 'react', 'data', 'vehiculos-colombia.json'), encoding='utf-8'))
 fuente = open(os.path.join(ROOT, 'react', 'vehiculo.js'), encoding='utf-8').read()
@@ -47,13 +56,13 @@ rank_carros = {k: v for k, v in rank.items() if k in base['carros']}
 fallas = []
 
 # 1. cada modelo con motores existe en la base, igual escrito
-for marca, modelos in motor['carros'].items():
-    if marca not in base['carros']:
+for seccion_, marca, modelos in _todas(motor):
+    if marca not in base[seccion_]:
         fallas.append('marca "%s" no esta en la base de vehiculos' % marca)
         continue
     for modelo in modelos:
-        if modelo not in base['carros'][marca]:
-            cerca = [x for x in base['carros'][marca] if x.lower().startswith(modelo.lower()[:4])]
+        if modelo not in base[seccion_][marca]:
+            cerca = [x for x in base[seccion_][marca] if x.lower().startswith(modelo.lower()[:4])]
             fallas.append('%s "%s" no esta en la base%s'
                           % (marca, modelo, (' (¿sera "%s"?)' % cerca[0]) if cerca else ''))
 
@@ -65,9 +74,9 @@ for marca, modelos in rank_carros.items():
             sin.append('%s %s' % (marca, modelo))
 
 # 3. los años del motor caben en los del modelo
-for marca, modelos in motor['carros'].items():
+for seccion_, marca, modelos in _todas(motor):
     for modelo, info in modelos.items():
-        rango = base['carros'].get(marca, {}).get(modelo)
+        rango = base[seccion_].get(marca, {}).get(modelo)
         if not rango:
             continue
         for mo in info['motores']:
@@ -86,9 +95,9 @@ for marca, modelos in motor['carros'].items():
 def visible(mo):
     return (mo['nombre'] + ' · ' + mo.get('nota', '')).strip()
 
-for marca, modelos in motor['carros'].items():
+for seccion_, marca, modelos in _todas(motor):
     for modelo, info in modelos.items():
-        rango = base['carros'].get(marca, {}).get(modelo) or [1990, 2027]
+        rango = base[seccion_].get(marca, {}).get(modelo) or [1990, 2027]
         for ano in range(rango[0], rango[1] + 1):
             ofrece = [mo for mo in info['motores']
                       if not (mo.get('desde') and ano < mo['desde'])
@@ -105,11 +114,11 @@ huecos = []
 # 6. Un modelo con UN SOLO motor no pregunta nada: el embudo termina en el
 #    año. Pero ese motor igual tiene que cubrir todo el rango del modelo, o
 #    habria años en los que el carro existe y no tiene motor declarado.
-for marca, modelos in motor['carros'].items():
+for seccion_, marca, modelos in _todas(motor):
     for modelo, info in modelos.items():
         if len(info['motores']) != 1:
             continue
-        rango = base['carros'].get(marca, {}).get(modelo)
+        rango = base[seccion_].get(marca, {}).get(modelo)
         mo = info['motores'][0]
         if not rango or not mo.get('desde'):
             continue
@@ -148,13 +157,13 @@ for seccion in ('carros', 'motos'):
                     copias.append('%s "%s" — "%s" ya es marca aparte'
                                   % (marca, modelo, real))
 
-n_mod = sum(len(v) for v in motor['carros'].values())
-n_mot = sum(len(i['motores']) for v in motor['carros'].values() for i in v.values())
-por_confirmar = [(ma, mo) for ma, v in motor['carros'].items()
+n_mod = sum(len(v) for _, _, v in _todas(motor))
+n_mot = sum(len(i['motores']) for _, _, v in _todas(motor) for i in v.values())
+por_confirmar = [(ma, mo) for _, ma, v in _todas(motor)
                  for mo, i in v.items() if i['fuente'] == 'por-confirmar']
-investigados = [(ma, mo) for ma, v in motor['carros'].items()
+investigados = [(ma, mo) for _, ma, v in _todas(motor)
                 for mo, i in v.items() if i['fuente'] == 'investigado']
-un_motor = [(ma, mo) for ma, v in motor['carros'].items()
+un_motor = [(ma, mo) for _, ma, v in _todas(motor)
             for mo, i in v.items() if len(i['motores']) == 1]
 
 print('%d modelos · %d motorizaciones' % (n_mod, n_mot))
@@ -169,7 +178,7 @@ print('  %d por confirmar: nadie los ha mirado' % len(por_confirmar))
 #    "de 2010 a 2023" es un dato confirmado, "sin año" es un dato que falta.
 sin_ano_ok = []
 sin_ano_falta = []
-for marca, modelos in motor['carros'].items():
+for seccion_, marca, modelos in _todas(motor):
     for modelo, info in modelos.items():
         faltan = [mo['id'] for mo in info['motores']
                   if not mo.get('desde') and not mo.get('hasta')]

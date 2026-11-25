@@ -167,7 +167,15 @@ prueba('y en 2012 todavia no hay H4M',
   ['1.6-16V-K4M','1.6-8V'])
 
 // Lo que NO debe preguntar
-prueba('una moto nunca', pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), false)
+/* En moto el cilindraje va en el nombre, asi que casi ninguna pregunta.
+   Las que si: las que la base agrupo en un solo nombre. */
+prueba('una moto con el cilindraje en el nombre no pregunta',
+  pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), false)
+prueba('pero la Discover 100 125 si, porque son dos motos',
+  pideMotor('motos','Bajaj','Discover 100 125','2015'), true)
+prueba('y ofrece los dos cilindrajes',
+  motoresDe('motos','Bajaj','Discover 100 125','2015').map(x => x.id), ['100','125'])
+prueba('la Chetak es electrica', esElectrico('motos','Bajaj','Chetak eléctrica'), true)
 prueba('herramientas tampoco', pideMotor('herramientas','Toyota','Corolla','2021'), false)
 /* Lo que nadie ha mirado no se muestra: no se puede ofrecer un motor que
    no ha pasado ni por investigacion ni por catalogo. */

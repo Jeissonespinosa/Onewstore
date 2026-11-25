@@ -281,12 +281,14 @@
     "/motos/lubricantes-y-mantenimiento/aceite-de-motor-2t": {
       "nivel": "ajuste",
       "atributo": "Norma JASO (FC/FD)",
-      "razon": "La mezcla 2T la define la norma, no el modelo."
+      "razon": "La mezcla 2T la define la norma, no el modelo.",
+      "soloCombustion": true
     },
     "/motos/lubricantes-y-mantenimiento/aceite-de-motor-4t": {
       "nivel": "ajuste",
       "atributo": "Viscosidad y norma JASO",
-      "razon": "Igual que en carros, pero la norma que manda es JASO MA/MA2 (embrague humedo). Yamalube sirve a varias Yamaha: el valor es multi-vehiculo."
+      "razon": "Igual que en carros, pero la norma que manda es JASO MA/MA2 (embrague humedo). Yamalube sirve a varias Yamaha: el valor es multi-vehiculo.",
+      "soloCombustion": true
     },
     "/motos/lubricantes-y-mantenimiento/aditivos-y-grasas": {
       "nivel": "universal"
@@ -375,6 +377,58 @@
       "soloCombustion": true
     },
     "/carros/motor-y-transmision/transmision-y-caja/volantes-de-motor": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/filtros/filtros-de-aceite": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/filtros/filtros-de-aire": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/filtros/filtros-de-combustible": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/motor-y-transmision/bloque-y-culata": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/motor-y-transmision/reparticion-distribucion": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/motor-y-transmision/combustible": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/motor-y-transmision/clutch-y-transmision": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/motor-y-transmision/escape": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/electrico-y-electronico/bujias": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/electrico-y-electronico/capuchones-de-bujia": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/electrico-y-electronico/cdi-modulos-de-encendido": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/electrico-y-electronico/bobinas-de-alta": {
+      "nivel": "estricta",
+      "soloCombustion": true
+    },
+    "/motos/electrico-y-electronico/estatores-platos-de-bobinas": {
       "nivel": "estricta",
       "soloCombustion": true
     }

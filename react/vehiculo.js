@@ -195,8 +195,9 @@ export const nombreConMotor = v => {
    Sin motor escogido solo cuenta como electrico el modelo que NO tiene otra
    cosa: un Leaf siempre lo es; un Kwid, hasta que no diga cual tiene, no. */
 export function esElectrico(seccion, marca, modelo, motor) {
-  if (seccion !== 'carros' || !marca || !modelo) return false
-  const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
+  if (!marca || !modelo) return false
+  if (seccion !== 'carros' && seccion !== 'motos') return false
+  const ficha = ((motorizaciones[seccion] || {})[marca] || {})[modelo]
   if (!ficha || !ficha.motores || !ficha.motores.length) return false
   if (motor) {
     const mo = ficha.motores.find(x => x.id === motor)
@@ -572,8 +573,14 @@ import motorizaciones from './data/motorizaciones.json'
 const MUESTRA = ['verificado', 'investigado']
 
 export function motoresDe(seccion, marca, modelo, ano) {
-  if (seccion !== 'carros' || !marca || !modelo) return []
-  const ficha = ((motorizaciones.carros || {})[marca] || {})[modelo]
+  if (!marca || !modelo) return []
+  /* En motos el cilindraje va casi siempre en el nombre del modelo —Pulsar
+     160, XTZ 150, CB 125F— asi que no hay nada que preguntar y no tienen
+     ficha. La excepcion son las que la base agrupo en un solo nombre:
+     "Discover 100 125" son dos motos distintas y no comparten piston ni
+     kit de arrastre. Esas si llevan ficha y si preguntan. */
+  if (seccion !== 'carros' && seccion !== 'motos') return []
+  const ficha = ((motorizaciones[seccion] || {})[marca] || {})[modelo]
   if (!ficha) return []
   if (MUESTRA.indexOf(ficha.fuente) < 0) return []
   const y = Number(ano)

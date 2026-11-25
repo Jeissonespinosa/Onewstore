@@ -9895,5 +9895,401 @@
         ]
       }
     }
+  },
+  "motos": {
+    "Auteco (Victory)": {
+      "Starker eléctricas": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrica · sin cilindraje",
+            "electrico": true,
+            "nota": "línea 100% eléctrica",
+            "desde": 2019,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Victory MRX 125 150": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2017,
+            "hasta": 2027
+          },
+          {
+            "id": "150",
+            "nombre": "150 cc",
+            "desde": 2017,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Bajaj": {
+      "Chetak eléctrica": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "EV",
+            "nombre": "Eléctrica · sin cilindraje",
+            "electrico": true,
+            "nota": "scooter 100% eléctrica",
+            "desde": 2023,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Discover 100 125": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "100",
+            "nombre": "100 cc",
+            "desde": 2008,
+            "hasta": 2023
+          },
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2008,
+            "hasta": 2023
+          }
+        ]
+      },
+      "Platina 100 125": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "100",
+            "nombre": "100 cc",
+            "desde": 2008,
+            "hasta": 2027
+          },
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2008,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Honda": {
+      "CRF 250 450 R": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "450",
+            "nombre": "450 cc",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "XL 125 XL 185": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 1985,
+            "hasta": 2000
+          },
+          {
+            "id": "185",
+            "nombre": "185 cc",
+            "desde": 1985,
+            "hasta": 2000
+          }
+        ]
+      }
+    },
+    "Husqvarna": {
+      "FE 350 450": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "350",
+            "nombre": "350 cc",
+            "desde": 2015,
+            "hasta": 2027
+          },
+          {
+            "id": "450",
+            "nombre": "450 cc",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      },
+      "TE 250 300": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2015,
+            "hasta": 2027
+          },
+          {
+            "id": "300",
+            "nombre": "300 cc",
+            "desde": 2015,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Jialing Jincheng": {
+      "JL 110 125": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "110",
+            "nombre": "110 cc",
+            "desde": 2000,
+            "hasta": 2012
+          },
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2000,
+            "hasta": 2012
+          }
+        ]
+      }
+    },
+    "KTM": {
+      "EXC 250 300": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2010,
+            "hasta": 2027
+          },
+          {
+            "id": "300",
+            "nombre": "300 cc",
+            "desde": 2010,
+            "hasta": 2027
+          }
+        ]
+      },
+      "SX 125 250 450": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "450",
+            "nombre": "450 cc",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "Kawasaki": {
+      "KX 250 450": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "450",
+            "nombre": "450 cc",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "Ninja 250 300": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2010,
+            "hasta": 2018
+          },
+          {
+            "id": "300",
+            "nombre": "300 cc",
+            "desde": 2010,
+            "hasta": 2018
+          }
+        ]
+      }
+    },
+    "Suzuki": {
+      "Burgman 125 200": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2012,
+            "hasta": 2027
+          },
+          {
+            "id": "200",
+            "nombre": "200 cc",
+            "desde": 2012,
+            "hasta": 2027
+          }
+        ]
+      },
+      "DR 250 DR 350": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 1990,
+            "hasta": 2005
+          },
+          {
+            "id": "350",
+            "nombre": "350 cc",
+            "desde": 1990,
+            "hasta": 2005
+          }
+        ]
+      },
+      "TS 125 TS 185": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 1985,
+            "hasta": 2005
+          },
+          {
+            "id": "185",
+            "nombre": "185 cc",
+            "desde": 1985,
+            "hasta": 2005
+          }
+        ]
+      }
+    },
+    "Triumph": {
+      "Tiger 660 900": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "660",
+            "nombre": "660 cc · 3 cilindros",
+            "desde": 2020,
+            "hasta": 2027
+          },
+          {
+            "id": "900",
+            "nombre": "900 cc · 3 cilindros",
+            "desde": 2020,
+            "hasta": 2027
+          }
+        ]
+      }
+    },
+    "UM (United Motors)": {
+      "Max 125 150": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2010,
+            "hasta": 2019
+          },
+          {
+            "id": "150",
+            "nombre": "150 cc",
+            "desde": 2010,
+            "hasta": 2019
+          }
+        ]
+      }
+    },
+    "Yamaha": {
+      "Libero 110 125": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "110",
+            "nombre": "110 cc",
+            "desde": 2000,
+            "hasta": 2016
+          },
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 2000,
+            "hasta": 2016
+          }
+        ]
+      },
+      "WR 250 450": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 2005,
+            "hasta": 2027
+          },
+          {
+            "id": "450",
+            "nombre": "450 cc",
+            "desde": 2005,
+            "hasta": 2027
+          }
+        ]
+      },
+      "YZ 125 250": {
+        "fuente": "investigado",
+        "motores": [
+          {
+            "id": "125",
+            "nombre": "125 cc",
+            "desde": 1995,
+            "hasta": 2027
+          },
+          {
+            "id": "250",
+            "nombre": "250 cc",
+            "desde": 1995,
+            "hasta": 2027
+          }
+        ]
+      }
+    }
   }
 }

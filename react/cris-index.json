@@ -4900,7 +4900,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Viscosidad y norma JASO",
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "aceite 4t",
         "aceite de moto",
@@ -4917,7 +4917,7 @@
       "nivel": "hoja",
       "compatibilidad": "ajuste",
       "atributo": "Norma JASO (FC/FD)",
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "aceite 2t",
         "aceite de dos tiempos",
@@ -5025,7 +5025,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de aceite"
       ]
@@ -5037,7 +5037,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de aire"
       ]
@@ -5049,7 +5049,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "filtro de combustible",
         "filtro de gasolina"
@@ -5072,7 +5072,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -5082,7 +5082,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cilindro de moto",
         "kit cilindro pistón"
@@ -5095,7 +5095,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "pistón",
         "anillos",
@@ -5110,7 +5110,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "biela",
         "bielas"
@@ -5123,7 +5123,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cigüeñal"
       ]
@@ -5135,7 +5135,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "rodamiento de cigüeñal",
         "balinera de cigüeñal",
@@ -5149,7 +5149,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "culata",
         "cabezote",
@@ -5163,7 +5163,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "guías de válvula",
         "válvula de admisión",
@@ -5179,7 +5179,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "árbol de levas",
         "eje de levas"
@@ -5192,7 +5192,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "balancín",
         "balancines",
@@ -5206,7 +5206,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "juntas",
         "empaquetadura",
@@ -5226,7 +5226,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cárter",
         "tapa de motor",
@@ -5241,7 +5241,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "bomba de aceite"
       ]
@@ -5253,7 +5253,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "volante magnético",
         "magneto",
@@ -5267,7 +5267,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "motor completo",
         "motor usado",
@@ -5282,7 +5282,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "distribución",
         "tiempo"
@@ -5295,7 +5295,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cadena de distribución",
         "cadena de tiempo",
@@ -5310,7 +5310,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "tensor de cadenilla",
         "guía de cadenilla",
@@ -5324,7 +5324,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de distribución",
         "kit de tiempo",
@@ -5416,7 +5416,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -5426,7 +5426,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "carburador",
         "carburador weber",
@@ -5440,7 +5440,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "inyector",
         "inyectores de gasolina",
@@ -5457,7 +5457,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "bomba de combustible",
         "bomba de gasolina eléctrica",
@@ -5471,7 +5471,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cuerpo de aceleración",
         "throttle body",
@@ -5485,7 +5485,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "grifo de gasolina",
         "llave de paso"
@@ -5498,7 +5498,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -5508,7 +5508,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "disco de embrague"
       ]
@@ -5520,7 +5520,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de embrague",
         "kit clutch",
@@ -5535,7 +5535,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "campana de clutch",
         "resorte de clutch",
@@ -5549,7 +5549,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "sprocket",
         "piñón de salida",
@@ -5565,7 +5565,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "sprocket trasero",
         "piñón trasero",
@@ -5581,7 +5581,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cadena de moto",
         "cadena de tracción"
@@ -5594,7 +5594,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "kit de arrastre",
         "kit de transmisión",
@@ -5610,7 +5610,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "correa de scooter",
         "banda de scooter",
@@ -5624,7 +5624,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "clutch de scooter (variador)",
         "variador",
@@ -5640,7 +5640,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "caja de cambios",
         "engranajes",
@@ -5655,7 +5655,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "selectora",
         "horquilla selectora"
@@ -5668,7 +5668,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "eje de cambios",
         "eje selector",
@@ -5749,7 +5749,7 @@
       "nivel": "sub",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": []
     },
     {
@@ -5759,7 +5759,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "escape",
         "tubo de escape",
@@ -5775,7 +5775,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "silenciador"
       ]
@@ -5787,7 +5787,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "catalizador",
         "convertidor catalítico"
@@ -5800,7 +5800,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "empaque de exhosto",
         "empaque de escape",
@@ -6227,7 +6227,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "cdi",
         "unidad de encendido",
@@ -6244,7 +6244,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "bobina de encendido",
         "bobina de chispa"
@@ -6257,7 +6257,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "bobina de carga",
         "estator",
@@ -6273,7 +6273,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "bujía",
         "spark plug",
@@ -6289,7 +6289,7 @@
       "nivel": "hoja",
       "compatibilidad": "estricta",
       "atributo": null,
-      "soloCombustion": false,
+      "soloCombustion": true,
       "sinonimos": [
         "capuchón",
         "capuchón de bujía",

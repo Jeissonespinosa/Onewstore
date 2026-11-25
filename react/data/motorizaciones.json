@@ -2,7 +2,7 @@
   "carros": {
     "Audi": {
       "A1": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4T",
@@ -14,19 +14,27 @@
         ]
       },
       "A3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
+          {
+            "id": "1.8T",
+            "nombre": "1.8 Turbo · 1781 cc",
+            "nota": "la A3 vieja",
+            "desde": 1998,
+            "hasta": 2012
+          },
           {
             "id": "1.4T",
             "nombre": "1.4 TFSI · 1395 cc",
-            "desde": 1998,
+            "nota": "desde la 8V",
+            "desde": 2013,
             "hasta": 2027
           },
           {
             "id": "2.0T",
             "nombre": "2.0 TFSI · 1984 cc",
-            "nota": "versiones altas",
-            "desde": 1998,
+            "nota": "S3 y versiones altas",
+            "desde": 2006,
             "hasta": 2027
           }
         ]
@@ -86,7 +94,7 @@
         ]
       },
       "A5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -98,7 +106,7 @@
         ]
       },
       "A6": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -110,7 +118,7 @@
         ]
       },
       "Q2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4T",
@@ -122,7 +130,7 @@
         ]
       },
       "Q3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4T",
@@ -140,7 +148,7 @@
         ]
       },
       "Q5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -152,25 +160,40 @@
         ]
       },
       "Q7": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "2.0T",
-            "nombre": "2.0 TFSI · 1984 cc",
+            "id": "3.0T-V6",
+            "nombre": "3.0 V6 TFSI · 2995 cc",
+            "nota": "en las dos generaciones",
             "desde": 2006,
             "hasta": 2027
           },
           {
-            "id": "3.0T",
-            "nombre": "3.0 V6 TFSI · 2995 cc",
-            "nota": "versiones altas",
+            "id": "4.2-V8",
+            "nombre": "4.2 V8 FSI · 4163 cc",
+            "nota": "primera generación",
             "desde": 2006,
+            "hasta": 2015
+          },
+          {
+            "id": "3.0D-V6",
+            "nombre": "3.0 V6 TDI Turbodiésel · 2967 cc",
+            "nota": "primera generación",
+            "desde": 2006,
+            "hasta": 2015
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TFSI · 1984 cc",
+            "nota": "segunda generación",
+            "desde": 2016,
             "hasta": 2027
           }
         ]
       },
       "Q8": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -182,7 +205,7 @@
         ]
       },
       "TT": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -622,7 +645,7 @@
         ]
       },
       "X2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -688,7 +711,7 @@
         ]
       },
       "X4": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -768,7 +791,7 @@
         ]
       },
       "X6": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -780,20 +803,34 @@
         ]
       },
       "Z4": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "2.0T",
-            "nombre": "2.0 Turbo · 1998 cc",
-            "nota": "sDrive20i",
+            "id": "2.5-6c",
+            "nombre": "2.5 Aspirado · 2494 cc · 6 cilindros",
+            "nota": "E85",
             "desde": 2003,
+            "hasta": 2008
+          },
+          {
+            "id": "3.0-6c",
+            "nombre": "3.0 Aspirado · 2979 cc · 6 cilindros",
+            "nota": "E85 y E89",
+            "desde": 2003,
+            "hasta": 2016
+          },
+          {
+            "id": "2.0T",
+            "nombre": "2.0 TwinPower Turbo · 1998 cc",
+            "nota": "sDrive20i, desde la E89",
+            "desde": 2009,
             "hasta": 2027
           },
           {
             "id": "3.0T",
-            "nombre": "3.0 Turbo · 2998 cc · 6 cilindros",
-            "nota": "M40i",
-            "desde": 2003,
+            "nombre": "3.0 TwinPower Turbo · 2998 cc · 6 cilindros",
+            "nota": "sDrive35i y M40i",
+            "desde": 2009,
             "hasta": 2027
           }
         ]
@@ -894,7 +931,7 @@
     },
     "Baic": {
       "BJ40": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -906,7 +943,7 @@
         ]
       },
       "X25 X35": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -918,7 +955,7 @@
         ]
       },
       "X55": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -932,7 +969,7 @@
     },
     "Changan": {
       "Alsvin": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -944,7 +981,7 @@
         ]
       },
       "CS15": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -956,7 +993,7 @@
         ]
       },
       "CS35 Plus": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -968,7 +1005,7 @@
         ]
       },
       "CS55": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -980,7 +1017,7 @@
         ]
       },
       "CS75": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -992,7 +1029,7 @@
         ]
       },
       "Hunter": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -1004,7 +1041,7 @@
         ]
       },
       "Uni-K": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -1016,7 +1053,7 @@
         ]
       },
       "Uni-T": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -1030,7 +1067,7 @@
     },
     "Chery": {
       "Arrizo 5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -1042,7 +1079,7 @@
         ]
       },
       "Jaecoo 7": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6T",
@@ -1054,7 +1091,7 @@
         ]
       },
       "Omoda 5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -1066,7 +1103,7 @@
         ]
       },
       "QQ": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -1078,7 +1115,7 @@
         ]
       },
       "Tiggo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -1090,7 +1127,7 @@
         ]
       },
       "Tiggo 2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -1102,7 +1139,7 @@
         ]
       },
       "Tiggo 3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -1114,7 +1151,7 @@
         ]
       },
       "Tiggo 4": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -1126,7 +1163,7 @@
         ]
       },
       "Tiggo 7": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -1138,7 +1175,7 @@
         ]
       },
       "Tiggo 8": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6T",
@@ -2193,7 +2230,7 @@
     },
     "Citroën": {
       "Berlingo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2205,7 +2242,7 @@
         ]
       },
       "C-Elysée": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2217,7 +2254,7 @@
         ]
       },
       "C3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2235,7 +2272,7 @@
         ]
       },
       "C3 Aircross": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2247,7 +2284,7 @@
         ]
       },
       "C4": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2259,7 +2296,7 @@
         ]
       },
       "C4 Cactus": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2271,7 +2308,7 @@
         ]
       },
       "C5 Aircross": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6T",
@@ -2283,7 +2320,7 @@
         ]
       },
       "Jumper": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2D",
@@ -2295,7 +2332,7 @@
         ]
       },
       "Jumpy": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6D",
@@ -2309,7 +2346,7 @@
     },
     "Daewoo": {
       "Cielo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -2321,7 +2358,7 @@
         ]
       },
       "Damas": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -2333,7 +2370,7 @@
         ]
       },
       "Lanos": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2351,7 +2388,7 @@
         ]
       },
       "Leganza": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -2363,7 +2400,7 @@
         ]
       },
       "Matiz": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -2375,7 +2412,7 @@
         ]
       },
       "Nubira": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -2387,7 +2424,7 @@
         ]
       },
       "Racer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -2399,7 +2436,7 @@
         ]
       },
       "Tico": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -2413,7 +2450,7 @@
     },
     "Daihatsu": {
       "Charade": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2425,7 +2462,7 @@
         ]
       },
       "Cuore": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "0.8",
@@ -2437,7 +2474,7 @@
         ]
       },
       "Sirion": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2449,7 +2486,7 @@
         ]
       },
       "Terios": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -2463,7 +2500,7 @@
     },
     "Dodge": {
       "Caliber": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -2475,7 +2512,7 @@
         ]
       },
       "Caravan Grand Caravan": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -2487,7 +2524,7 @@
         ]
       },
       "Charger": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -2505,7 +2542,7 @@
         ]
       },
       "Durango": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -2523,7 +2560,7 @@
         ]
       },
       "Journey": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -2532,16 +2569,23 @@
             "hasta": 2020
           },
           {
-            "id": "3.6",
-            "nombre": "3.6 V6 · 3604 cc",
-            "nota": "versiones altas",
+            "id": "3.5-V6",
+            "nombre": "3.5 V6 · 3518 cc",
+            "nota": "primeras series",
             "desde": 2009,
+            "hasta": 2010
+          },
+          {
+            "id": "3.6-V6",
+            "nombre": "3.6 V6 Pentastar · 3604 cc",
+            "nota": "desde 2011",
+            "desde": 2011,
             "hasta": 2020
           }
         ]
       },
       "Neon": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -2555,7 +2599,7 @@
     },
     "Fiat": {
       "500": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2567,7 +2611,7 @@
         ]
       },
       "Argo": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2579,7 +2623,7 @@
         ]
       },
       "Cronos": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2591,7 +2635,7 @@
         ]
       },
       "Ducato": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.3D",
@@ -2603,7 +2647,7 @@
         ]
       },
       "Fastback": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3T",
@@ -2615,7 +2659,7 @@
         ]
       },
       "Fiorino": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2627,7 +2671,7 @@
         ]
       },
       "Mobi": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -2639,7 +2683,7 @@
         ]
       },
       "Palio": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2657,7 +2701,7 @@
         ]
       },
       "Premio": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2675,7 +2719,7 @@
         ]
       },
       "Pulse": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -2687,7 +2731,7 @@
         ]
       },
       "Punto": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2699,7 +2743,7 @@
         ]
       },
       "Siena": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2717,7 +2761,7 @@
         ]
       },
       "Strada": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -2729,7 +2773,7 @@
         ]
       },
       "Toro": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -2746,7 +2790,7 @@
         ]
       },
       "Uno": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",
@@ -2763,7 +2807,7 @@
         ]
       },
       "Uno clásico": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -3328,7 +3372,7 @@
     },
     "Geely": {
       "Coolray": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -3353,7 +3397,7 @@
         ]
       },
       "Starray": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -3367,7 +3411,7 @@
     },
     "Great Wall": {
       "Haval H2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -3379,7 +3423,7 @@
         ]
       },
       "Haval H6": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -3391,7 +3435,7 @@
         ]
       },
       "Haval H9": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -3403,7 +3447,7 @@
         ]
       },
       "Haval Jolion": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -3428,7 +3472,7 @@
         ]
       },
       "Poer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -3440,7 +3484,7 @@
         ]
       },
       "Wingle 5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -3452,7 +3496,7 @@
         ]
       },
       "Wingle 7": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -3466,25 +3510,48 @@
     },
     "Honda": {
       "Accord": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
+        "falta": "por confirmar qué versiones de los 90 entraron a Colombia",
         "motores": [
           {
-            "id": "2.4",
-            "nombre": "2.4 · 2354 cc",
+            "id": "2.0",
+            "nombre": "2.0 Aspirado · 1997 cc",
+            "nota": "las primeras",
             "desde": 1990,
+            "hasta": 2002
+          },
+          {
+            "id": "2.2",
+            "nombre": "2.2 Aspirado · 2156 cc",
+            "nota": "las primeras",
+            "desde": 1990,
+            "hasta": 2002
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 i-VTEC · 2354 cc",
+            "nota": "de la séptima en adelante",
+            "desde": 2003,
             "hasta": 2023
           },
           {
-            "id": "3.5",
+            "id": "3.0-V6",
+            "nombre": "3.0 V6 · 2997 cc",
+            "nota": "séptima generación",
+            "desde": 2003,
+            "hasta": 2007
+          },
+          {
+            "id": "3.5-V6",
             "nombre": "3.5 V6 · 3471 cc",
-            "nota": "versiones altas",
-            "desde": 1990,
+            "nota": "de la octava en adelante",
+            "desde": 2008,
             "hasta": 2023
           }
         ]
       },
       "BR-V": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -3496,7 +3563,7 @@
         ]
       },
       "CR-V": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -3514,7 +3581,7 @@
         ]
       },
       "City": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -3581,7 +3648,7 @@
         ]
       },
       "Civic Type R": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -3593,7 +3660,7 @@
         ]
       },
       "Fit": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -3605,7 +3672,7 @@
         ]
       },
       "HR-V": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -3623,7 +3690,7 @@
         ]
       },
       "Odyssey": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.5",
@@ -3635,7 +3702,7 @@
         ]
       },
       "Pilot": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.5",
@@ -3647,7 +3714,7 @@
         ]
       },
       "Ridgeline": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.5",
@@ -3659,7 +3726,7 @@
         ]
       },
       "WR-V": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -4302,7 +4369,7 @@
         ]
       },
       "JS2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -4314,7 +4381,7 @@
         ]
       },
       "JS4": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -4326,7 +4393,7 @@
         ]
       },
       "S2": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -4338,7 +4405,7 @@
         ]
       },
       "S3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -4352,25 +4419,33 @@
     },
     "Jeep": {
       "Cherokee": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "2.4",
-            "nombre": "2.4 · 2360 cc",
+            "id": "3.7-V6",
+            "nombre": "3.7 V6 · 3701 cc",
+            "nota": "Liberty KJ y KK",
             "desde": 2002,
+            "hasta": 2013
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 Tigershark · 2360 cc",
+            "nota": "KL, desde 2014",
+            "desde": 2014,
             "hasta": 2023
           },
           {
-            "id": "3.2",
-            "nombre": "3.2 V6 · 3239 cc",
-            "nota": "versiones altas",
-            "desde": 2002,
+            "id": "3.2-V6",
+            "nombre": "3.2 V6 Pentastar · 3239 cc",
+            "nota": "KL, desde 2014",
+            "desde": 2014,
             "hasta": 2023
           }
         ]
       },
       "Cherokee clásico XJ": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "4.0",
@@ -4382,7 +4457,7 @@
         ]
       },
       "Commander": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -4394,7 +4469,7 @@
         ]
       },
       "Compass": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -4412,7 +4487,7 @@
         ]
       },
       "Gladiator": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -4506,7 +4581,7 @@
         ]
       },
       "Patriot": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -4518,7 +4593,7 @@
         ]
       },
       "Renegade": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -4536,7 +4611,7 @@
         ]
       },
       "Willys CJ": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "falta": "por confirmar qué motor llevó cada serie",
         "motores": [
           {
@@ -4556,7 +4631,7 @@
         ]
       },
       "Wrangler": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "falta": "faltan el 3.8 V6 y las generaciones anteriores",
         "motores": [
           {
@@ -5043,7 +5118,7 @@
     },
     "Lada": {
       "2107 Riva": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -5055,7 +5130,7 @@
         ]
       },
       "Niva": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.7",
@@ -5067,7 +5142,7 @@
         ]
       },
       "Samara": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -5081,25 +5156,41 @@
     },
     "Land Rover": {
       "Defender": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
+        "falta": "entre 2017 y 2019 no se vendió: la clásica salió y la nueva no había llegado",
         "motores": [
+          {
+            "id": "2.5D",
+            "nombre": "2.5 Tdi Turbodiésel · 2495 cc",
+            "nota": "la clásica",
+            "desde": 1990,
+            "hasta": 2006
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 TDCi Turbodiésel · 2402 cc",
+            "nota": "la clásica, última etapa",
+            "desde": 2007,
+            "hasta": 2016
+          },
           {
             "id": "2.0T",
             "nombre": "2.0 Turbo · 1997 cc",
-            "desde": 1990,
+            "nota": "la nueva L663",
+            "desde": 2020,
             "hasta": 2027
           },
           {
             "id": "3.0T",
             "nombre": "3.0 Turbo · 2996 cc · 6 cilindros",
-            "nota": "versiones altas",
-            "desde": 1990,
+            "nota": "la nueva L663",
+            "desde": 2020,
             "hasta": 2027
           }
         ]
       },
       "Discovery": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -5111,7 +5202,7 @@
         ]
       },
       "Discovery Sport": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -5123,7 +5214,7 @@
         ]
       },
       "Freelander": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2D",
@@ -5135,26 +5226,47 @@
         ]
       },
       "Range Rover": {
-        "fuente": "por-confirmar",
-        "falta": "falta separar generaciones y los diésel",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "3.0T",
-            "nombre": "3.0 Turbo · 2996 cc",
+            "id": "4.6-V8",
+            "nombre": "4.6 V8 Aspirado · 4554 cc",
+            "nota": "P38",
             "desde": 1995,
+            "hasta": 2002
+          },
+          {
+            "id": "4.4-V8",
+            "nombre": "4.4 V8 · 4394 cc",
+            "nota": "L322",
+            "desde": 2003,
+            "hasta": 2012
+          },
+          {
+            "id": "5.0-V8",
+            "nombre": "5.0 V8 Supercargado · 5000 cc",
+            "nota": "L322 y L405",
+            "desde": 2010,
+            "hasta": 2022
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2996 cc · 6 cilindros",
+            "nota": "L405 y L460, mild hybrid",
+            "desde": 2013,
             "hasta": 2027
           },
           {
-            "id": "5.0",
-            "nombre": "5.0 V8 · 5000 cc",
-            "nota": "versiones altas",
-            "desde": 1995,
-            "hasta": 2027
+            "id": "3.0D-V6",
+            "nombre": "3.0 V6 TDV6 Turbodiésel · 2993 cc",
+            "nota": "L322 y L405",
+            "desde": 2006,
+            "hasta": 2022
           }
         ]
       },
       "Range Rover Evoque": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -5166,25 +5278,38 @@
         ]
       },
       "Range Rover Sport": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "3.0T",
-            "nombre": "3.0 Turbo · 2996 cc",
+            "id": "4.4-V8",
+            "nombre": "4.4 V8 · 4394 cc",
+            "nota": "primera generación",
             "desde": 2006,
+            "hasta": 2013
+          },
+          {
+            "id": "5.0-V8",
+            "nombre": "5.0 V8 Supercargado · 5000 cc",
+            "desde": 2010,
+            "hasta": 2022
+          },
+          {
+            "id": "3.0T",
+            "nombre": "3.0 Turbo · 2996 cc · 6 cilindros",
+            "nota": "de la segunda en adelante",
+            "desde": 2014,
             "hasta": 2027
           },
           {
-            "id": "5.0",
-            "nombre": "5.0 V8 · 5000 cc",
-            "nota": "versiones altas",
+            "id": "3.0D-V6",
+            "nombre": "3.0 V6 TDV6 Turbodiésel · 2993 cc",
             "desde": 2006,
-            "hasta": 2027
+            "hasta": 2022
           }
         ]
       },
       "Range Rover Velar": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -5198,7 +5323,7 @@
     },
     "Lexus": {
       "ES": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.5",
@@ -5210,7 +5335,7 @@
         ]
       },
       "IS": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -5222,7 +5347,7 @@
         ]
       },
       "LX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "5.7",
@@ -5234,7 +5359,7 @@
         ]
       },
       "NX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -5246,7 +5371,7 @@
         ]
       },
       "RX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.5",
@@ -5258,7 +5383,7 @@
         ]
       },
       "UX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -5272,7 +5397,7 @@
     },
     "MG": {
       "HS": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -5284,7 +5409,7 @@
         ]
       },
       "MG 3": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -5296,7 +5421,7 @@
         ]
       },
       "MG 5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -5321,7 +5446,7 @@
         ]
       },
       "RX5": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -5333,7 +5458,7 @@
         ]
       },
       "ZS": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -5907,7 +6032,7 @@
         ]
       },
       "Clase B": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.7",
@@ -6132,7 +6257,7 @@
         ]
       },
       "Clase G": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "4.0T",
@@ -6144,7 +6269,7 @@
         ]
       },
       "Clase S": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -6344,25 +6469,47 @@
         ]
       },
       "GLS GL": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "3.0T",
-            "nombre": "3.0 Turbo · 2999 cc",
+            "id": "4.6-V8",
+            "nombre": "4.6 V8 Biturbo · 4663 cc",
+            "nota": "GL 500 de la X166",
             "desde": 2007,
+            "hasta": 2015
+          },
+          {
+            "id": "5.5-V8",
+            "nombre": "5.5 V8 · 5461 cc",
+            "nota": "GL 500 de la X164",
+            "desde": 2007,
+            "hasta": 2012
+          },
+          {
+            "id": "3.0D-V6",
+            "nombre": "3.0 CDI Turbodiésel · 2987 cc · 6 cilindros",
+            "nota": "GL 320 y 350 CDI",
+            "desde": 2007,
+            "hasta": 2019
+          },
+          {
+            "id": "4.0T-V8",
+            "nombre": "4.0 V8 Biturbo · 3982 cc",
+            "nota": "GLS 580 y AMG",
+            "desde": 2016,
             "hasta": 2027
           },
           {
-            "id": "4.0T",
-            "nombre": "4.0 V8 Biturbo · 3982 cc",
-            "nota": "versiones altas",
-            "desde": 2007,
+            "id": "3.0T-6c",
+            "nombre": "3.0 Turbo · 2999 cc · 6 cilindros",
+            "nota": "GLS 450, mild hybrid",
+            "desde": 2020,
             "hasta": 2027
           }
         ]
       },
       "Vito": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.1D",
@@ -6456,7 +6603,7 @@
     },
     "Mitsubishi": {
       "ASX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -6468,7 +6615,7 @@
         ]
       },
       "Eclipse Cross": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -6480,31 +6627,40 @@
         ]
       },
       "L200 Sportero": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "2.4",
-            "nombre": "2.4 Gasolina · 2351 cc",
-            "desde": 1995,
-            "hasta": 2027
-          },
-          {
             "id": "2.5D",
-            "nombre": "2.5 Diésel · 2477 cc",
+            "nombre": "2.5 Turbodiésel · 2477 cc",
+            "nota": "Sportero",
             "desde": 1995,
-            "hasta": 2027
+            "hasta": 2015
           },
           {
             "id": "3.2D",
-            "nombre": "3.2 Diésel · 3200 cc",
-            "nota": "versiones altas",
-            "desde": 1995,
+            "nombre": "3.2 Turbodiésel · 3200 cc",
+            "nota": "Sportero",
+            "desde": 2007,
+            "hasta": 2015
+          },
+          {
+            "id": "2.4",
+            "nombre": "2.4 Gasolina · 2351 cc",
+            "nota": "L200 nueva",
+            "desde": 2016,
+            "hasta": 2027
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Turbodiésel · 2442 cc",
+            "nota": "L200 nueva",
+            "desde": 2016,
             "hasta": 2027
           }
         ]
       },
       "Lancer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -6515,14 +6671,14 @@
           {
             "id": "2.0",
             "nombre": "2.0 · 1998 cc",
-            "nota": "versiones altas",
-            "desde": 1993,
+            "nota": "desde la novena generación",
+            "desde": 2008,
             "hasta": 2016
           }
         ]
       },
       "Lancer Evolution": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -6534,7 +6690,7 @@
         ]
       },
       "Mirage": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.2",
@@ -6546,7 +6702,7 @@
         ]
       },
       "Montero Pajero": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "falta": "falta separar generaciones y el 2.8 diésel del viejo",
         "motores": [
           {
@@ -6564,30 +6720,33 @@
         ]
       },
       "Montero Sport": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
-            "id": "3.0",
+            "id": "3.0-V6",
             "nombre": "3.0 V6 · 2972 cc",
+            "nota": "primera generación",
             "desde": 2008,
-            "hasta": 2027
-          },
-          {
-            "id": "2.4D",
-            "nombre": "2.4 Diésel · 2442 cc",
-            "desde": 2008,
-            "hasta": 2027
+            "hasta": 2016
           },
           {
             "id": "3.2D",
-            "nombre": "3.2 Diésel · 3200 cc",
+            "nombre": "3.2 Turbodiésel · 3200 cc",
+            "nota": "primera generación",
             "desde": 2008,
+            "hasta": 2016
+          },
+          {
+            "id": "2.4D",
+            "nombre": "2.4 Turbodiésel · 2442 cc",
+            "nota": "segunda generación",
+            "desde": 2016,
             "hasta": 2027
           }
         ]
       },
       "Montero clásico": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0",
@@ -6604,7 +6763,7 @@
         ]
       },
       "Nativa": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0",
@@ -6616,25 +6775,26 @@
         ]
       },
       "Outlander": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
             "nombre": "2.4 · 2360 cc",
+            "nota": "en todas las generaciones",
             "desde": 2004,
             "hasta": 2027
           },
           {
-            "id": "3.0",
+            "id": "3.0-V6",
             "nombre": "3.0 V6 · 2998 cc",
-            "nota": "versiones altas",
-            "desde": 2004,
-            "hasta": 2027
+            "nota": "segunda y tercera generación",
+            "desde": 2007,
+            "hasta": 2015
           }
         ]
       },
       "Space Wagon": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -6646,7 +6806,7 @@
         ]
       },
       "Xpander": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -7019,7 +7179,7 @@
     },
     "Opel": {
       "Astra": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8",
@@ -7036,7 +7196,7 @@
         ]
       },
       "Corsa": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -7053,7 +7213,7 @@
         ]
       },
       "Vectra": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -7065,7 +7225,7 @@
         ]
       },
       "Zafira": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -7079,7 +7239,7 @@
     },
     "Peugeot": {
       "2008": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7097,7 +7257,7 @@
         ]
       },
       "205": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -7109,7 +7269,7 @@
         ]
       },
       "206": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "falta": "por confirmar cuáles versiones entraron",
         "motores": [
           {
@@ -7128,7 +7288,7 @@
         ]
       },
       "207": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -7146,7 +7306,7 @@
         ]
       },
       "208": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7164,7 +7324,7 @@
         ]
       },
       "3008": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6T",
@@ -7176,7 +7336,7 @@
         ]
       },
       "301": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7188,7 +7348,7 @@
         ]
       },
       "306": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7206,7 +7366,7 @@
         ]
       },
       "307": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7224,7 +7384,7 @@
         ]
       },
       "308": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7242,7 +7402,7 @@
         ]
       },
       "405": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7260,7 +7420,7 @@
         ]
       },
       "406": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -7272,7 +7432,7 @@
         ]
       },
       "5008": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6T",
@@ -7284,7 +7444,7 @@
         ]
       },
       "Boxer": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2D",
@@ -7296,7 +7456,7 @@
         ]
       },
       "Expert": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6D",
@@ -7308,7 +7468,7 @@
         ]
       },
       "Partner": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -7322,7 +7482,7 @@
     },
     "Porsche": {
       "911": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -7334,7 +7494,7 @@
         ]
       },
       "Cayenne": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -7346,7 +7506,7 @@
         ]
       },
       "Macan": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -7358,7 +7518,7 @@
         ]
       },
       "Panamera": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.0T",
@@ -7372,7 +7532,7 @@
     },
     "RAM": {
       "1000": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5",
@@ -7384,7 +7544,7 @@
         ]
       },
       "1500": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "3.6",
@@ -7402,7 +7562,7 @@
         ]
       },
       "2500": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "6.7D",
@@ -7414,7 +7574,7 @@
         ]
       },
       "700": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.4",
@@ -7426,7 +7586,7 @@
         ]
       },
       "Rampage": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -8035,7 +8195,7 @@
     },
     "Seat": {
       "Córdoba": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -8047,7 +8207,7 @@
         ]
       },
       "Ibiza": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -8059,7 +8219,7 @@
         ]
       },
       "León": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8T",
@@ -8073,7 +8233,7 @@
     },
     "Skoda": {
       "Fabia": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -8085,7 +8245,7 @@
         ]
       },
       "Felicia": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.3",
@@ -8097,7 +8257,7 @@
         ]
       },
       "Octavia": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.8T",
@@ -8111,7 +8271,7 @@
     },
     "SsangYong": {
       "Actyon": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -8123,7 +8283,7 @@
         ]
       },
       "Actyon Sports": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -8135,25 +8295,26 @@
         ]
       },
       "Korando": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
-            "nombre": "2.0 Diésel · 1998 cc",
+            "nombre": "2.0 Turbodiésel · 1998 cc",
+            "nota": "tercera generación",
             "desde": 2011,
-            "hasta": 2027
+            "hasta": 2019
           },
           {
             "id": "1.5T",
             "nombre": "1.5 Turbo · 1497 cc",
-            "nota": "versiones nuevas",
-            "desde": 2011,
+            "nota": "cuarta generación",
+            "desde": 2020,
             "hasta": 2027
           }
         ]
       },
       "Korando clásico": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.9D",
@@ -8165,7 +8326,7 @@
         ]
       },
       "Kyron": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0D",
@@ -8177,7 +8338,7 @@
         ]
       },
       "Musso": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2D",
@@ -8189,7 +8350,7 @@
         ]
       },
       "Musso clásico": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.9D",
@@ -8201,7 +8362,7 @@
         ]
       },
       "Rexton": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.2D",
@@ -8213,7 +8374,7 @@
         ]
       },
       "Stavic Rodius": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.7D",
@@ -8225,7 +8386,7 @@
         ]
       },
       "Tivoli": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -8242,7 +8403,7 @@
         ]
       },
       "Torres": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -8256,7 +8417,7 @@
     },
     "Subaru": {
       "Evoltis Ascent": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4T",
@@ -8268,7 +8429,7 @@
         ]
       },
       "Forester": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -8280,7 +8441,7 @@
         ]
       },
       "Impreza": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.6",
@@ -8292,7 +8453,7 @@
         ]
       },
       "Legacy": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.5",
@@ -8304,7 +8465,7 @@
         ]
       },
       "Outback": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.5",
@@ -8316,7 +8477,7 @@
         ]
       },
       "WRX": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -8328,7 +8489,7 @@
         ]
       },
       "XV Crosstrek": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -9636,7 +9797,7 @@
         ]
       },
       "S40": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.4",
@@ -9648,7 +9809,7 @@
         ]
       },
       "S60": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -9660,7 +9821,7 @@
         ]
       },
       "V40": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0",
@@ -9672,7 +9833,7 @@
         ]
       },
       "XC40": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -9684,7 +9845,7 @@
         ]
       },
       "XC60": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -9696,7 +9857,7 @@
         ]
       },
       "XC90": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "2.0T",
@@ -9710,7 +9871,7 @@
     },
     "Zotye": {
       "T600": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.5T",
@@ -9722,7 +9883,7 @@
         ]
       },
       "Z100": {
-        "fuente": "por-confirmar",
+        "fuente": "investigado",
         "motores": [
           {
             "id": "1.0",

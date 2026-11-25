@@ -45,6 +45,7 @@ eval(codigo + `
   global.esElectrico = esElectrico;
   global.vehiculoDeRuta = vehiculoDeRuta; global.rutaConVehiculo = rutaConVehiculo;
   global.marcasDelCarro = marcasDelCarro; global.GEMELOS = GEMELOS;
+  global.MUESTRA = MUESTRA;
   global.plano = plano; global.VERSIONES = VERSIONES; global.APODOS = APODOS;
 `)
 
@@ -170,10 +171,20 @@ prueba('una moto nunca', pideMotor('motos','Bajaj','Pulsar 160 NS','2021'), fals
 prueba('herramientas tampoco', pideMotor('herramientas','Toyota','Corolla','2021'), false)
 /* Lo que nadie ha mirado no se muestra: no se puede ofrecer un motor que
    no ha pasado ni por investigacion ni por catalogo. */
-prueba('un modelo que nadie ha mirado todavia no pregunta',
-  pideMotor('carros','Audi','Q7','2020'), false)
-prueba('y uno investigado si',
-  pideMotor('carros','Ford','Ranger','2020'), true)
+/* La puerta: lo que nadie ha mirado no se muestra. Ya no queda ningun
+   modelo en ese estado, asi que la regla se prueba sobre la puerta misma
+   y no sobre un ejemplo que manaña cambia de nivel. */
+prueba('la puerta deja pasar dos niveles y no mas',
+  MUESTRA.slice().sort(), ['investigado', 'verificado'])
+prueba('"por-confirmar" no pasa', MUESTRA.indexOf('por-confirmar'), -1)
+const sinMirar = []
+Object.keys(motorizaciones.carros).forEach(ma => {
+  Object.keys(motorizaciones.carros[ma]).forEach(mo => {
+    if (motorizaciones.carros[ma][mo].fuente === 'por-confirmar') sinMirar.push(ma + ' ' + mo)
+  })
+})
+prueba('y hoy no queda ninguno sin mirar', sinMirar, [])
+prueba('un investigado si pregunta', pideMotor('carros', 'Ford', 'Ranger', '2020'), true)
 prueba('un modelo que no existe no revienta', motoresDe('carros','Nada','Nada','2020'), [])
 
 console.log('\n=== el nombre distingue los dos Corolla ===')

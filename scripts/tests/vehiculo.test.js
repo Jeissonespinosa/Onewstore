@@ -43,6 +43,7 @@ eval(codigo + `
   global.nombreConMotor = nombreConMotor;
   global.modeloCoincide = modeloCoincide; global.esVersion = esVersion;
   global.esElectrico = esElectrico;
+  global.vehiculoDeRuta = vehiculoDeRuta; global.rutaConVehiculo = rutaConVehiculo;
   global.plano = plano; global.VERSIONES = VERSIONES; global.APODOS = APODOS;
 `)
 
@@ -246,6 +247,38 @@ prueba('en 2011 cada opcion dice de que generacion es',
   motoresDe('carros', 'Kia', 'Picanto', '2011').every(m => !!m.nota), true)
 prueba('y esas notas no se repiten',
   new Set(motoresDe('carros', 'Kia', 'Picanto', '2011').map(m => m.nota)).size, 3)
+
+console.log('\n=== el carro que viene en la URL ===')
+/* Es lo que permite darse cuenta de que la pagina esta filtrando por un
+   carro distinto al guardado. Sale de la ruta, no del almacenamiento. */
+const U = '/carros/frenos/2021/corolla/toyota'
+const Q = '?map=c,c,ano,modelo,marca-vehiculo'
+prueba('lee marca, modelo y año de la ruta',
+  vehiculoDeRuta(U, Q, base.carros), { marca: 'Toyota', modelo: 'Corolla', ano: '2021' })
+prueba('devuelve el nombre de la base, no el slug',
+  vehiculoDeRuta('/carros/frenos/mazda-3/mazda', '?map=c,c,modelo,marca-vehiculo',
+    base.carros).modelo, 'Mazda 3')
+prueba('una categoria sin filtro no trae carro',
+  vehiculoDeRuta('/carros/frenos/pastillas-de-freno', '', base.carros), null)
+prueba('si el map y la ruta no calzan, no inventa',
+  vehiculoDeRuta(U, '?map=c,c', base.carros), null)
+prueba('una marca que no existe en la base no cuenta',
+  vehiculoDeRuta('/carros/frenos/nada', '?map=c,c,marca-vehiculo', base.carros), null)
+
+console.log('\n=== cambiar de carro sin perder la categoria ===')
+prueba('cambia el vehiculo y conserva la categoria',
+  rutaConVehiculo(U, Q, { marca: 'Chevrolet', modelo: 'Aveo', ano: '2015' }),
+  '/carros/frenos/chevrolet/aveo/2015?map=c,c,marca-vehiculo,modelo,ano')
+prueba('quitar el vehiculo deja la categoria sola',
+  rutaConVehiculo(U, Q, null), '/carros/frenos?map=c,c')
+prueba('sin map no hay a donde ir',
+  rutaConVehiculo('/carros/frenos', '', null), null)
+/* La medida de llanta no se puede perder al cambiar de carro: es el filtro
+   que el cliente mas trabajo le costo poner. */
+const UL = '/carros/llantas/185/65/15/toyota'
+const QL = '?map=c,c,ancho,alto--perfil-,rin,marca-vehiculo'
+prueba('conserva la medida de llanta al quitar el vehiculo',
+  rutaConVehiculo(UL, QL, null), '/carros/llantas/185/65/15?map=c,c,ancho,alto--perfil-,rin')
 
 console.log('\n=== un solo motor: solo el año, sin preguntar ===')
 /* La regla que pidio el usuario, revisada sobre TODA la base: si el modelo

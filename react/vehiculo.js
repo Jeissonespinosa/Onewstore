@@ -569,3 +569,65 @@ export const nombreMotor = (seccion, marca, modelo, id) => {
   const m = motoresDe(seccion, marca, modelo, null).find(x => x.id === id)
   return m ? m.nombre : id
 }
+
+/* ---------------------------------------------------------------------------
+   EL VEHICULO QUE VIENE EN LA URL
+
+   Cris navega poniendo el vehiculo como filtro en la ruta:
+
+     /carros/frenos/2021/corolla/toyota?map=c,c,ano,modelo,marca-vehiculo
+
+   Las dos listas van pareadas por posicion: el segmento i de la ruta es del
+   tipo i del map. Asi la pagina puede saber por que carro esta filtrando sin
+   depender de lo que haya en el almacenamiento, que es lo que permite darse
+   cuenta de que el cliente esta viendo un carro distinto al suyo.
+   --------------------------------------------------------------------------- */
+const LLAVES_VEH = { 'marca-vehiculo': 'marca', modelo: 'modelo', ano: 'ano' }
+
+const pares = (ruta, busca) => {
+  const map = String(busca || '').replace(/^\?/, '').split('&')
+    .map(p => p.split('='))
+    .filter(p => p[0] === 'map')
+    .map(p => decodeURIComponent(p[1] || ''))[0]
+  const tipos = (map || '').split(',').filter(Boolean)
+  const segmentos = String(ruta || '').split('/').filter(Boolean).map(decodeURIComponent)
+  if (!tipos.length || tipos.length !== segmentos.length) return null
+  return segmentos.map((s, i) => [tipos[i], s])
+}
+
+/* El nombre de verdad a partir del segmento: la ruta trae "toyota" y la base
+   "Toyota", "mazda-3" y "Mazda 3". */
+const nombreReal = (lista, segmento) =>
+  lista.find(n => compacto(n) === compacto(segmento)) || null
+
+export function vehiculoDeRuta(ruta, busca, base) {
+  const ps = pares(ruta, busca)
+  if (!ps) return null
+  const crudo = {}
+  ps.forEach(([tipo, seg]) => {
+    const campo = LLAVES_VEH[tipo]
+    if (campo) crudo[campo] = seg
+  })
+  if (!crudo.marca) return null
+  const marcas = Object.keys(base || {})
+  const marca = nombreReal(marcas, crudo.marca)
+  if (!marca) return null
+  const modelo = crudo.modelo ? nombreReal(Object.keys(base[marca] || {}), crudo.modelo) : null
+  return { marca, modelo, ano: crudo.ano || null }
+}
+
+/* La misma pagina con otro vehiculo, o sin ninguno. Conserva la categoria y
+   cualquier otro filtro (medida de llanta, posicion, marca del repuesto). */
+export function rutaConVehiculo(ruta, busca, veh) {
+  const ps = pares(ruta, busca)
+  if (!ps) return null
+  const otros = ps.filter(([tipo]) => !LLAVES_VEH[tipo])
+  const slug = t => compacto(t) && plano(t).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+  if (veh && veh.marca) {
+    otros.push(['marca-vehiculo', slug(veh.marca)])
+    if (veh.modelo) otros.push(['modelo', slug(veh.modelo)])
+    if (veh.ano) otros.push(['ano', String(veh.ano)])
+  }
+  if (!otros.length) return null
+  return '/' + otros.map(p => p[1]).join('/') + '?map=' + otros.map(p => p[0]).join(',')
+}

@@ -282,12 +282,25 @@ prueba('lo que falta se anota en la ficha, no entre los motores',
 prueba('y la ficha lo dice', !!motorizaciones.carros.Toyota.Hilux.falta, true)
 
 console.log('\n=== los cinco que faltaba completar ===')
-prueba('el Jetta de 2015 no ve el TSI, que llego en 2019',
-  crudoEnAno('Volkswagen', 'Jetta', 2015), ['2.0', '2.5'])
+prueba('el Jetta de 2015 no ve el 1.4 TSI, que llego en 2019',
+  crudoEnAno('Volkswagen', 'Jetta', 2015), ['1.8TSI', '2.0'])
 prueba('y el de 2022 no ve los aspirados',
   crudoEnAno('Volkswagen', 'Jetta', 2022), ['1.4T', '2.0T'])
 /* El 2.0 viejo y el 2.0 del GLI son el mismo cilindraje y otro motor: tienen
    que verse distinto o el cliente escoge a la suerte. */
+/* Dos 1.8 turbo que no son el mismo motor: el 20V del Clasico/GLI y el
+   TSI que reemplazo al 2.5 en 2014. */
+prueba('el Jetta de 2003 ya tiene el 1.8 turbo del Clásico',
+  crudoEnAno('Volkswagen', 'Jetta', 2003), ['1.8T', '2.0'])
+prueba('en 2014 conviven el 2.5 y el TSI que lo reemplaza',
+  crudoEnAno('Volkswagen', 'Jetta', 2014), ['1.8TSI', '2.0', '2.5'])
+prueba('los dos 1.8 turbo se ven distinto',
+  motorizaciones.carros.Volkswagen.Jetta.motores
+    .filter(x => x.id.indexOf('1.8') === 0).map(x => x.nombre),
+  ['1.8 Turbo 20V · 1781 cc', '1.8 TSI · 1798 cc'])
+prueba('y nunca se ofrecen el mismo año',
+  crudoEnAno('Volkswagen', 'Jetta', 2013).indexOf('1.8TSI'), -1)
+
 prueba('el 2.0 viejo y el 2.0 TSI no se llaman igual',
   motorizaciones.carros.Volkswagen.Jetta.motores
     .filter(x => x.id.indexOf('2.0') === 0).map(x => x.nombre),

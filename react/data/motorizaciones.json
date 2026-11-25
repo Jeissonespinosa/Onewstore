@@ -2004,6 +2004,7 @@
       },
       "Jetta": {
         "fuente": "por-confirmar",
+        "falta": "afinar el corte del 2.0 aspirado y hasta cuándo se vendió el Clásico",
         "motores": [
           {
             "id": "2.0",
@@ -2013,10 +2014,24 @@
             "hasta": 2018
           },
           {
+            "id": "1.8T",
+            "nombre": "1.8 Turbo 20V · 1781 cc",
+            "nota": "Jetta Clásico y GLI",
+            "desde": 1999,
+            "hasta": 2013
+          },
+          {
             "id": "2.5",
             "nombre": "2.5 · 2480 cc · 5 cilindros",
-            "nota": "versiones altas de la etapa anterior",
+            "nota": "hasta que el 1.8 TSI lo reemplazó",
             "desde": 2006,
+            "hasta": 2014
+          },
+          {
+            "id": "1.8TSI",
+            "nombre": "1.8 TSI · 1798 cc",
+            "nota": "reemplazó al 2.5 en 2014",
+            "desde": 2014,
             "hasta": 2018
           },
           {
@@ -2029,7 +2044,7 @@
           {
             "id": "2.0T",
             "nombre": "2.0 TSI · 1984 cc",
-            "nota": "GLI — mismo cilindraje que el viejo, otro motor",
+            "nota": "GLI — mismo cilindraje que el viejo 2.0, otro motor",
             "desde": 2019,
             "hasta": 2027
           }

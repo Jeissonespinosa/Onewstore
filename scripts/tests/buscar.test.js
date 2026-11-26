@@ -75,12 +75,63 @@ prueba('sin ruta no hay facet', rutaFacet(''), '')
    entera sin pintar, incluidos los universales que si habian respondido. */
 const lento = new Promise(() => {})
 const rapido = Promise.resolve('listo')
+
+/* Un producto como los que devuelve product_search, con o sin vehiculo
+   declarado en las especificaciones. */
+const prod = (id, nombre, props) => ({
+  productId: String(id),
+  productName: nombre,
+  link: '/x/p',
+  properties: props || [],
+  items: [{ images: [], sellers: [{ commertialOffer: { Price: 1000, ListPrice: 1000, AvailableQuantity: 1 } }] }],
+})
+const conVehiculo = (id, nombre, marca, modelo) => prod(id, nombre, [
+  { name: 'Marca vehículo', values: [marca] },
+  { name: 'Modelo', values: [modelo] },
+])
+
 ;(async () => {
   prueba('lo que responde, pasa', await conTope(rapido), 'listo')
   const t = Date.now()
   const r = await conTope(lento)
   prueba('lo que se cuelga se corta', r, null)
   prueba('y no espera para siempre', Date.now() - t < 6000, true)
+
+  console.log('\n=== un "universal" no puede declarar vehiculo ===')
+  /* Visto en vivo: /motos/accesorios esta marcado universal en el arbol,
+     pero adentro cuelga "Defensas (mataperros)", que es de un modelo
+     exacto. La defensa del Boxer CT 100 aparecia bajo el rotulo "sirve
+     para cualquier vehiculo" en una pagina de Pulsar. El producto manda
+     sobre el arbol. */
+  const respuestas = {
+    'category-1/motos/category-2/accesorios': [
+      prod(1, 'Baúl trasero 45 L con base universal'),
+      conVehiculo(2, 'Defensa delantera tubular Bajaj Boxer CT 100', 'Bajaj', 'Boxer CT 100'),
+    ],
+    'category-1/motos/category-2/frenos/category-3/pastillas-de-freno': [
+      conVehiculo(3, 'Pastillas Pulsar NS 200', 'Bajaj', 'Pulsar 200 NS'),
+    ],
+  }
+  global.fetch = async url => {
+    const clave = Object.keys(respuestas).find(k => url.includes(k))
+    return {
+      ok: true,
+      json: async () => ({ products: clave ? respuestas[clave] : [] }),
+    }
+  }
+
+  const abajo = await loDeAbajo({
+    categoria: '/motos/frenos/pastillas-de-freno',
+    universales: ['/motos/accesorios'],
+  })
+  prueba('el baul universal entra',
+    abajo.universales.map(p => p.nombre), ['Baúl trasero 45 L con base universal'])
+  prueba('la defensa de un modelo NO entra en universales',
+    abajo.universales.some(p => /Defensa/.test(p.nombre)), false)
+  prueba('la categoria si trae el suyo, con rotulo',
+    abajo.deLaCategoria.map(p => p.paraQue), ['Bajaj Pulsar 200 NS'])
+  prueba('y ningun universal lleva rotulo de vehiculo',
+    abajo.universales.filter(p => p.paraQue), [])
 
   console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
   process.exit(fallos ? 1 : 0)

@@ -13,9 +13,13 @@
   "flex-layout.row#specifications-title": {
     "children": ["rich-text#specifications"]
   },
+  /* Debajo de este titulo va la tabla de especificaciones, y el primer grupo
+     que trae es "Compatibilidad" (Marca vehiculo, Modelo, Ano): es la parte
+     de la pagina que le dice al cliente si la pieza le sirve. Decia
+     "Product Specifications", en ingles, del tema base. */
   "rich-text#specifications": {
     "props": {
-      "text": "##### Product Specifications"
+      "text": "##### Ficha técnica y compatibilidad"
     }
   },
   "flex-layout.row#product-breadcrumb": {

@@ -37,19 +37,54 @@ const AMBAR = '#B4690E'
 
 /* Las macros que el arbol marca universales: de ahi salen los productos que
    le sirven a cualquiera. Herramientas entra siempre, para carro y moto. */
-const universalesDe = seccion => {
-  const quiero = seccion === 'motos' ? 'Motos' : 'Carros'
-  const raices = indice.nodos
-    .filter(n => n.nivel === 'macro' && n.compatibilidad === 'universal' &&
-      (n.seccion === quiero || n.seccion === 'Herramientas'))
-    .map(n => n.path)
-  return raices
+const macrosUniversales = seccion => indice.nodos
+  .filter(n => n.nivel === 'macro' && n.compatibilidad === 'universal' &&
+    n.seccion === seccion)
+  .map(n => n.path)
+
+/* POR QUE SE INTERCALAN. loDeAbajo solo pide las primeras cuatro para no
+   disparar diez busquedas. Pegando una lista detras de la otra, en motos
+   las cuatro se las comian cascos, accesorios, ropa y tecnologia, y
+   herramientas no aparecia nunca — y una copa o un gato le sirven igual al
+   motociclista. Intercalando, cada lado pone dos. */
+const universalesDe = (seccion, salvo) => {
+  const propias = macrosUniversales(seccion === 'motos' ? 'Motos' : 'Carros')
+  const taller = macrosUniversales('Herramientas')
+  const mezcla = []
+  for (let i = 0; i < Math.max(propias.length, taller.length); i++) {
+    if (propias[i]) mezcla.push(propias[i])
+    if (taller[i]) mezcla.push(taller[i])
+  }
+  /* Una macro no se recomienda a si misma: en /carros/accesorios los
+     accesorios ya estan arriba, lo que falta es herramientas y tecnologia. */
+  return mezcla.filter(p => p !== salvo)
+}
+
+/* La macro en la que esta la pagina: /carros/accesorios/tapetes -> /carros/accesorios */
+const macroDe = ruta => {
+  const partes = String(ruta || '').split('?')[0].split('/').filter(Boolean)
+  return partes.length >= 2 ? '/' + partes[0] + '/' + partes[1] : null
 }
 
 const nodoDe = ruta => {
   const limpia = String(ruta || '').split('?')[0].replace(/\/+$/, '')
   if (!limpia) return null
   return indice.nodos.find(n => n.path === limpia) || null
+}
+
+/* A QUIEN SE NOMBRA EN LA NOTA. El carro que la pagina ESTA mostrando, no el
+   guardado. Si alguien con un Aveo guardado esta viendo resultados de Corolla,
+   decirle "no estan declarados para tu Aveo" lo confunde mas de lo que lo
+   ayuda: lo que tiene al frente es el Corolla.
+   "filtrando" sale del mismo dato, asi que no puede quedar un bloque que
+   filtra nombrando un carro distinto. */
+export const aQuienNombrar = (enLaUrl, guardado) => {
+  const filtrando = !!(enLaUrl && enLaUrl.marca)
+  const enContexto = filtrando ? enLaUrl : guardado
+  return {
+    filtrando,
+    nombre: enContexto && enContexto.marca ? nombreDe(enContexto) : null,
+  }
 }
 
 export default function TambienTeInteresa({ titulo = 'También te puede interesar' }) {
@@ -91,10 +126,12 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
     const hayFiltro = !!deLaUrl
     loDeAbajo({
       categoria: hayFiltro && nodo ? nodo.path : null,
-      /* En una categoria que ya es universal no tiene sentido repetir el
-         bloque de universales: todo lo de arriba ya lo es. */
-      universales: nodo && nodo.compatibilidad === 'universal'
-        ? [] : universalesDe(seccion),
+      /* En una categoria que ya es universal no se repite SU macro —todo lo
+         de arriba ya salio de ahi—, pero las otras macros universales si
+         aportan: en accesorios sirve ver herramientas, y al contrario. */
+      universales: universalesDe(
+        seccion,
+        nodo && nodo.compatibilidad === 'universal' ? macroDe(ruta) : null),
     })
       .then(d => { if (vivo) setDatos(d) })
       .catch(() => { if (vivo) setDatos(null) })
@@ -105,13 +142,10 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
   const { universales, deLaCategoria, patrocinados } = datos
   if (!universales.length && !deLaCategoria.length && !patrocinados.length) return null
 
-  /* El nombre que se nombra es el del carro que la pagina ESTA mostrando,
-     no el guardado. Si alguien con un Aveo guardado esta viendo resultados
-     de Corolla, decirle "no estan declarados para tu Aveo" lo confunde mas
-     de lo que lo ayuda: lo que tiene al frente es el Corolla. */
-  const enContexto = enLaUrl && enLaUrl.marca ? enLaUrl : vehiculo
-  const nombre = enContexto && enContexto.marca ? nombreDe(enContexto) : null
-  const filtrando = !!(enLaUrl && enLaUrl.marca)
+  const { nombre, filtrando } = aQuienNombrar(enLaUrl, vehiculo)
+  /* En una pagina de motos decir "no dependen del carro" suena a que la
+     tienda no sabe que esta vendiendo. */
+  const cosa = seccion === 'motos' ? 'moto' : 'carro'
 
   const css = `
     .rx-ab { margin: 2rem 0 0; }
@@ -176,13 +210,13 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
       <h2 className="rx-ab__titulo">{titulo}</h2>
       {bloque(universales, 'Sirve para cualquier vehículo', 'Certeza total',
         'rx-ab__sello--ok',
-        'No dependen del carro: aceite por norma, herramienta, líquidos, accesorios.',
+        `No dependen de la ${cosa}: aceite por norma, herramienta, líquidos, accesorios.`,
         false)}
       {bloque(filtrando ? deLaCategoria : [], 'Otros de esta categoría', 'Hay que mirar',
         'rx-ab__sello--ojo',
         nombre
-          ? `No están declarados para tu ${nombre}. Cada uno dice para qué carro sirve.`
-          : 'Cada uno dice para qué carro sirve. Revisa que coincida con el tuyo.',
+          ? `No están declarados para tu ${nombre}. Cada uno dice para qué ${cosa} sirve.`
+          : `Cada uno dice para qué ${cosa} sirve. Revisa que coincida con la tuya.`,
         true)}
       {bloque(patrocinados, 'Descuentos de nuestros vendedores', 'Patrocinado',
         'rx-ab__sello--pauta', null, true)}

@@ -207,6 +207,14 @@ export async function loDeAbajo({ categoria, universales, excluir, senal, cuanto
     (universales || []).slice(0, 4).map(r =>
       uno('/product_search/' + rutaFacet(r) + '?count=' + cuantos))
   ).then(ls => [].concat.apply([], ls))
+    /* UN UNIVERSAL NO DECLARA VEHICULO. El arbol marca universal la MACRO
+       (/motos/accesorios), pero adentro hay hojas que no lo son: una defensa
+       tubular es de un modelo exacto. Buscando por macro se colaba, y quedaba
+       bajo el rotulo "sirve para cualquier vehiculo" — justo la promesa que
+       produce devoluciones. El producto manda sobre el arbol: si declara
+       marca de vehiculo, no entra aqui; cae en "otros de esta categoria",
+       donde si lleva rotulo. */
+    .then(ls => ls.filter(p => !p.paraQue))
 
   const [uni, cat, pauta] = await Promise.all([
     deUni,

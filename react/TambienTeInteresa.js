@@ -59,7 +59,7 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
 
   const [datos, setDatos] = useState(null)
   const [vehiculo, setVehiculo] = useState(null)
-  const [filtrando, setFiltrando] = useState(false)
+  const [enLaUrl, setEnLaUrl] = useState(null)
 
   /* OJO CON LA DEPENDENCIA. useRuntime() devuelve un objeto route NUEVO en
      cada render, asi que depender de el relanzaba el efecto sin parar: cada
@@ -80,14 +80,15 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
        filtrando por un carro: ahi el cliente ve lo suyo arriba y esto es lo
        que hay para otros. Sin filtro, la galeria de arriba ya muestra la
        categoria entera y este bloque repetiria los mismos productos. */
-    let hayFiltro = false
+    let deLaUrl = null
     try {
-      hayFiltro = !!vehiculoDeRuta(window.location.pathname, window.location.search,
+      deLaUrl = vehiculoDeRuta(window.location.pathname, window.location.search,
         vehiculos[seccion === 'motos' ? 'motos' : 'carros'] || {})
     } catch (e) {
-      hayFiltro = false
+      deLaUrl = null
     }
-    setFiltrando(hayFiltro)
+    setEnLaUrl(deLaUrl)
+    const hayFiltro = !!deLaUrl
     loDeAbajo({
       categoria: hayFiltro && nodo ? nodo.path : null,
       /* En una categoria que ya es universal no tiene sentido repetir el
@@ -104,7 +105,13 @@ export default function TambienTeInteresa({ titulo = 'También te puede interesa
   const { universales, deLaCategoria, patrocinados } = datos
   if (!universales.length && !deLaCategoria.length && !patrocinados.length) return null
 
-  const nombre = vehiculo && vehiculo.marca ? nombreDe(vehiculo) : null
+  /* El nombre que se nombra es el del carro que la pagina ESTA mostrando,
+     no el guardado. Si alguien con un Aveo guardado esta viendo resultados
+     de Corolla, decirle "no estan declarados para tu Aveo" lo confunde mas
+     de lo que lo ayuda: lo que tiene al frente es el Corolla. */
+  const enContexto = enLaUrl && enLaUrl.marca ? enLaUrl : vehiculo
+  const nombre = enContexto && enContexto.marca ? nombreDe(enContexto) : null
+  const filtrando = !!(enLaUrl && enLaUrl.marca)
 
   const css = `
     .rx-ab { margin: 2rem 0 0; }

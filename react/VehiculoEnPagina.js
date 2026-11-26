@@ -40,6 +40,7 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
   const { route, navigate } = useRuntime()
   const seccion = seccionDe(rutaDe(route))
 
+  const ruta = rutaDe(route)
   const [vehiculo, setVehiculo] = useState(null)
   /* El carro por el que esta filtrando la pagina, que sale de la URL y no
      del almacenamiento. Se lee en el efecto y no en el render porque en el
@@ -58,7 +59,7 @@ export default function VehiculoEnPagina({ prefijo = 'Para tu' }) {
       setEnLaUrl(null)
     }
     return suscribir(seccion, setVehiculo)
-  }, [seccion, route])
+  }, [seccion, ruta])
 
   /* Tres situaciones, no dos:
        - la pagina filtra por el carro guardado  -> "Para tu ..."

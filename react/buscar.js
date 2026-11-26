@@ -64,7 +64,23 @@ export function aProducto(p) {
     /* Solo se muestra tachado si de verdad hay descuento. */
     antes: lista && precio && lista > precio ? pesos(lista) : null,
     agotado: !(oferta.AvailableQuantity > 0),
+    /* Para que carro sirve, de las especificaciones de compatibilidad. Un
+       repuesto de calce estricto no se puede ofrecer sin decirlo: la
+       pastilla de un Aveo en la lista de alguien con Corolla, sin rotulo,
+       se compra y se devuelve. */
+    paraQue: paraQueSirve(p),
   }
+}
+
+function paraQueSirve(p) {
+  const props = {}
+  ;(p.properties || []).forEach(x => { props[x.name] = x.values || [] })
+  const marcas = props['Marca vehículo'] || []
+  const modelos = props.Modelo || []
+  if (!marcas.length) return null
+  if (marcas.length > 2 || modelos.length > 2) return 'varios vehículos'
+  if (!modelos.length) return marcas.join(' y ')
+  return marcas.slice(0, 1).concat(modelos.slice(0, 2)).join(' ')
 }
 
 export async function buscarEnTienda(q, senal) {
@@ -132,3 +148,75 @@ export async function masBuscado(senal) {
 }
 
 export { pesos as formatearPesos }
+
+/* ---------------------------------------------------------------------------
+   LO QUE VA DEBAJO DE LOS RESULTADOS
+
+   Tres bloques, y lo que los separa no es la estetica: es cuanta certeza
+   tenemos de que el producto le sirve.
+
+     universales   no dependen del carro. Se afirman sin reservas.
+     deLaCategoria mismo tipo de repuesto, otros vehiculos. Hay que AVISARLO
+                   en cada tarjeta o terminan en devolucion.
+     patrocinados  lo que se le vende al comercio. Lleva sello.
+
+   Cada uno falla y se pinta solo: si una llamada se cae, las otras siguen.
+
+   OJO CON LA RUTA DE CATEGORIA. En este endpoint el filtro NO va como
+   "/carros/frenos?map=c,c" —esa es la forma de la tienda y aqui devuelve
+   cero sin avisar— sino con la llave en la ruta:
+
+     /product_search/category-1/carros/category-2/frenos
+
+   Comprobado contra la tienda: la primera forma da 0 y la segunda 3.
+   --------------------------------------------------------------------------- */
+const rutaFacet = ruta => (ruta || '')
+  .split('/')
+  .filter(Boolean)
+  .map((seg, i) => 'category-' + (i + 1) + '/' + seg)
+  .join('/')
+
+const sinRepetir = (lista, fuera) => {
+  const ya = new Set(fuera || [])
+  return lista.filter(p => (ya.has(p.id) ? false : ya.add(p.id)))
+}
+
+/* Si un endpoint no contesta, el bloque entero no puede quedarse colgado.
+   Paso: sponsored_products no respondia desde la pagina y, como las tres
+   llamadas iban en un Promise.all, el bloque no pintaba NUNCA — ni siquiera
+   los universales, que si habian respondido. Lo que no llega a tiempo se
+   trata como vacio. */
+const ESPERA = 4000
+
+const conTope = promesa => Promise.race([
+  promesa,
+  new Promise(resolver => setTimeout(() => resolver(null), ESPERA)),
+])
+
+export async function loDeAbajo({ categoria, universales, excluir, senal, cuantos = 8 }) {
+  const uno = async url => {
+    const d = await conTope(pedir(BASE + url, senal))
+    return ((d && d.products) || []).map(aProducto)
+  }
+  const deCat = categoria
+    ? uno('/product_search/' + rutaFacet(categoria) + '?count=' + cuantos)
+    : Promise.resolve([])
+  /* Los universales salen de las categorias que el indice marca asi:
+     accesorios, tecnologia, cascos, ropa y toda herramientas. */
+  const deUni = Promise.all(
+    (universales || []).slice(0, 4).map(r =>
+      uno('/product_search/' + rutaFacet(r) + '?count=' + cuantos))
+  ).then(ls => [].concat.apply([], ls))
+
+  const [uni, cat, pauta] = await Promise.all([
+    deUni,
+    deCat,
+    uno('/sponsored_products/?query=&count=3'),
+  ])
+  const fuera = (excluir || []).slice()
+  return {
+    universales: sinRepetir(uni, fuera).slice(0, cuantos),
+    deLaCategoria: sinRepetir(cat, fuera).slice(0, cuantos),
+    patrocinados: sinRepetir(pauta, fuera).slice(0, 3),
+  }
+}

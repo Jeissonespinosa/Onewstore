@@ -380,7 +380,8 @@
     "children": [
       "flex-layout.row#rx-cat-head",
       "flex-layout.row#rx-size",
-      "flex-layout.row#rx-f-body"
+      "flex-layout.row#rx-f-body",
+      "flex-layout.row#rx-abajo"
     ]
   },
   "search-result-layout.mobile#rx-cat": {
@@ -394,8 +395,28 @@
       "flex-layout.row#rx-cat-head",
       "flex-layout.row#rx-size",
       "flex-layout.row#rx-results-f",
-      "flex-layout.row#rx-filterbar-m"
+      "flex-layout.row#rx-filterbar-m",
+      "flex-layout.row#rx-abajo"
     ]
+  },
+
+  /* "Tambien te puede interesar": tres bloques debajo de los resultados,
+     separados por cuanta certeza hay de que el producto le sirve. Cada uno
+     se pinta solo si tiene contenido, asi que con el catalogo joven la
+     mayoria de las veces no aparece nada y la pagina no miente. */
+  "flex-layout.row#rx-abajo": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "rxAbajo"
+    },
+    "children": [
+      "tambien-te-interesa#rx"
+    ]
+  },
+  "tambien-te-interesa#rx": {
+    "props": {
+      "titulo": "También te puede interesar"
+    }
   },
   "flex-layout.row#rx-cat-head": {
     "props": {

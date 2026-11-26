@@ -16,5 +16,8 @@
   },
   "logo-rx": {
     "component": "LogoRx"
+  },
+  "tambien-te-interesa": {
+    "component": "TambienTeInteresa"
   }
 }

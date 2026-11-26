@@ -11,7 +11,8 @@ const codigo = src
   .join('\n')
   .replace(/^export (async function|function|const) /gm, '$1 ')
   .replace(/^export .*$/gm, '')
-eval(codigo + '\nglobal.aProducto = aProducto; global.pesos = pesos;')
+eval(codigo + '\nglobal.aProducto = aProducto; global.pesos = pesos;' +
+     'global.rutaFacet = rutaFacet; global.conTope = conTope; global.loDeAbajo = loDeAbajo;')
 
 let fallos = 0
 const prueba = (nombre, real, esperado) => {
@@ -58,5 +59,29 @@ prueba('sin items', aProducto({ productId: '1', productName: 'X' }).precioTexto,
 prueba('sin imagen', aProducto({ productId: '1', items: [{ sellers: [] }] }).imagen, null)
 prueba('sin link usa linkText', aProducto({ productId: '1', linkText: 'abc' }).url, '/abc/p')
 
-console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
-process.exit(fallos ? 1 : 0)
+
+console.log('\n=== lo que va debajo de los resultados ===')
+/* La ruta de categoria en ESTE endpoint lleva la llave adentro. La forma de
+   la tienda ("/carros/frenos?map=c,c") devuelve cero sin avisar, que fue
+   justo lo que me paso al construirlo. */
+prueba('la ruta de categoria lleva la llave',
+  rutaFacet('/carros/frenos'), 'category-1/carros/category-2/frenos')
+prueba('tres niveles', rutaFacet('/carros/frenos/pastillas-de-freno'),
+  'category-1/carros/category-2/frenos/category-3/pastillas-de-freno')
+prueba('sin ruta no hay facet', rutaFacet(''), '')
+
+/* El tope de espera: si un endpoint no contesta, el bloque no se puede
+   quedar colgado. Paso de verdad con sponsored_products y dejo la seccion
+   entera sin pintar, incluidos los universales que si habian respondido. */
+const lento = new Promise(() => {})
+const rapido = Promise.resolve('listo')
+;(async () => {
+  prueba('lo que responde, pasa', await conTope(rapido), 'listo')
+  const t = Date.now()
+  const r = await conTope(lento)
+  prueba('lo que se cuelga se corta', r, null)
+  prueba('y no espera para siempre', Date.now() - t < 6000, true)
+
+  console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
+  process.exit(fallos ? 1 : 0)
+})()

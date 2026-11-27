@@ -45,7 +45,6 @@
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
 }
 
-
 .orderByButton--rx:hover {
   border-color: rgba(255, 55, 30, 0.7);
   box-shadow: 0 0 0 4px rgba(255, 55, 30, 0.08);
@@ -247,7 +246,6 @@
 .filterPopupContent--rxM {
   font-family: var(--rx-font);
 }
-
 
 /* ============================================================
    MOVIL — pildora flotante de filtros y orden

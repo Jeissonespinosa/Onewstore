@@ -35,20 +35,54 @@
     "blocks": ["product-review-form"]
   },
 
+  /* La pagina de "no existe". Decia "**PAGE NOT FOUND**", en ingles y sin
+     una sola salida: el cliente que llegaba por un enlace viejo se quedaba
+     ahi. Ahora dice que paso y por donde seguir. */
+  "store.not-found": {
+    "blocks": ["flex-layout.row#rx-404"]
+  },
+
   "store.not-found#product": {
-    "blocks": ["rich-text#not-found"]
+    "blocks": ["flex-layout.row#rx-404"]
   },
 
   "store.not-found#search": {
-    "blocks": ["rich-text#not-found"]
+    "blocks": ["flex-layout.row#rx-404"]
+  },
+
+  "flex-layout.row#rx-404": {
+    "props": {
+      "blockClass": "rx404",
+      "horizontalAlign": "center",
+      "paddingTop": 8,
+      "paddingBottom": 8
+    },
+    "children": ["flex-layout.col#rx-404"]
+  },
+
+  "flex-layout.col#rx-404": {
+    "props": {
+      "blockClass": "rx404Col",
+      "horizontalAlign": "center"
+    },
+    "children": ["rich-text#not-found", "rich-text#rx-404-salidas"]
   },
 
   "rich-text#not-found": {
     "props": {
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "text": "**PAGE NOT FOUND**",
-      "font": "t-heading-1"
+      "text": "## Esta página no existe\n\nPuede que el enlace esté viejo o que la escribieras distinto. Busca el repuesto arriba, o entra por tu vehículo.",
+      "blockClass": "rx404Texto"
+    }
+  },
+
+  "rich-text#rx-404-salidas": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "[Repuestos para carro](/carros) · [Repuestos para moto](/motos) · [Herramienta de taller](/herramientas)",
+      "blockClass": "rx404Salidas"
     }
   }
 }

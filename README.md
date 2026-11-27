@@ -73,12 +73,12 @@ store/
     pdp/               Página de producto: assembly, gifts, tabla de especificaciones
     product-summary/   Tarjeta de producto, quickview, listas
     quienes-somos.jsonc  Página /quienes-somos (el texto se edita en el Site Editor)
-    faq.jsonc, contact.jsonc, search.jsonc, minicart.jsonc, ...
+    search.jsonc, minicart.jsonc, orderplaced.jsonc, ...
 styles/
   configs/style.json   Tokens del theme: colores, tipografías, espaciados
   css/                 Overrides de CSS por app (vtex.store-header.css, vtex.flex-layout.css, ...)
 sitemap/               Configuración del sitemap
-docs/                  Documentación y assets de apoyo (contact-schema.json, Buton.png)
+docs/                  Documentación y assets de apoyo (Buton.png)
 catalogo/              Estructura de categorías (CSV + JSON) e íconos SVG por categoría
 scripts/               gen-categorias.py (páginas de categoría) y gen-sinonimos.py
                        (CSV de sinónimos para Intelligent Search); tests en scripts/tests/
@@ -155,8 +155,6 @@ Definidas en `store/routes.json`:
 | `/carros` | `store.custom#landing-carros` |
 | `/motos` | `store.custom#landing-motos` |
 | `/quienes-somos` | `store.custom#quienes-somos` |
-| `/faq` | `store.custom#faq` |
-| `/contact-us` | `store.custom#contact-us` |
 | `/carros/<macro>[/<sub>][/<hoja>]` | `store.custom#carros-...` (generadas) |
 | `/motos/<macro>[/<sub>][/<hoja>]` | `store.custom#motos-...` (generadas) |
 | `/herramientas` y `/herramientas/<macro>[/<hoja>]` | `store.custom#landing-herramientas`, `store.custom#herramientas-...` (generadas) |

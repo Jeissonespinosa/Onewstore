@@ -125,25 +125,8 @@
   padding-top: 5px;
 }
 
-.flexCol--filterCol {
-  max-width: 500px;
-  min-width: 230px;
-}
-
-.flexCol--productCountCol {
-  align-items: flex-start;
-}
-
 .flexCol--orderByCol {
   align-items: flex-end;
-}
-
-.flexCol--orderByMobileCol {
-  width: 42%;
-}
-
-.flexCol--filterMobileCol {
-  width: 38%;
 }
 
 .flexRow--quickviewMainRow {
@@ -1061,19 +1044,6 @@
   margin: 0 !important;
 }
 
-.flexRow--rxResults {
-  width: 100%;
-  margin: 0;
-  padding: 0 0 clamp(2.5rem, 5vw, 4rem);
-}
-
-.flexRowContent--rxResults {
-  width: 100%;
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 0 var(--rx-gutter);
-}
-
 .flexRow--rxEmpty {
   width: 100%;
   margin: 0;
@@ -1554,4 +1524,32 @@
   .flexRowContent--rxLineasGrid .flexCol--rxLineaCardText .flexRowContent--rxLineaFoot {
     padding: 1.1rem 1.25rem;
   }
+}
+
+/* --- Listado de las paginas generadas (flex-layout.row#rx-results) ---
+   Hoy no se pinta porque todas las categorias existen en el catalogo y las
+   sirve VTEX con #rx-cat, pero el bloque lo sigue generando
+   gen-categorias.py para la categoria que algun dia no este. */
+.flexRow--rxResults {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.flexRowContent--rxResults {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 var(--rx-gutter);
+}
+
+/* --- Pagina que no existe: la columna centrada --- */
+.flexRowContent--rx404 {
+  justify-content: center;
+}
+
+.flexCol--rx404Col {
+  align-items: center;
+  text-align: center;
+  max-width: 40rem;
 }

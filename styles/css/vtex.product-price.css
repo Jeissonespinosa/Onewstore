@@ -63,21 +63,6 @@
   font-size: 0.875rem;
 }
 
-.savings--summaryPercentage {
-  background: #0f3e99;
-  border-radius: 1000px;
-  align-items: center;
-  display: flex;
-}
-
-.savingsPercentage--summaryPercentage {
-  font-size: 0.875rem;
-  font-weight: 600;
-  vertical-align: baseline;
-  color: #FFFFFF;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-}
-
 /* ============================================================
    PRECIOS — tarjeta rxCard
    Venta en rojo, lista tachada en gris debajo, y pildora

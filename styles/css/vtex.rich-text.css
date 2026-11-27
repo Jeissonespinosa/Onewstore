@@ -8,31 +8,6 @@
   margin: 0;
 }
 
-.container--question {
-  justify-content: center;
-}
-
-.container--question .paragraph {
-  text-align: center;
-  max-width: 540px;
-  margin: 0 16px;
-  padding-top: 120px;
-  color: #03034E;
-}
-
-.container--question .strong {
-  font-size: 32px;
-  line-height: 2rem;
-  font-weight: 700;
-}
-
-@media only screen and (min-width: 640px) {
-  .container--question .strong {
-    font-size: 40px;
-    line-height: 3rem;
-  }
-}
-
 /* Home Repuestox: split hero title (Bershka-style, full card + title both clickable) */
 .container--repuestoxSplitHeroTitle {
   justify-content: center;
@@ -452,6 +427,65 @@
    Hoy solo "Quienes somos". /faq y /contact-us siguen siendo el andamio de
    VTEX, en ingles y con un telefono de Nueva York: enlazarlos seria mandar
    al cliente a una pagina rota. Entran aqui cuando se reescriban. */
+.container--repuestoxFooterLinks {
+  justify-content: center;
+}
+
+.container--repuestoxFooterLinks .link {
+  color: #010101;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255, 55, 30, 0.45);
+  padding-bottom: 2px;
+}
+
+.container--repuestoxFooterLinks .link:hover {
+  color: #FF371E;
+  border-bottom-color: #FF371E;
+}
+
+/* --- Pagina que no existe ---
+   Decia "PAGE NOT FOUND", en ingles y sin una sola salida. Las salidas van
+   en rojo y separadas por puntos, como una fila de enlaces, no como un
+   parrafo. */
+.container--rx404Texto .headingLevel2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #010101;
+}
+
+.container--rx404Texto .paragraph {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #55555C;
+}
+
+.container--rx404Salidas {
+  margin-top: 1.25rem;
+}
+
+.container--rx404Salidas .paragraph {
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(1, 1, 1, 0.35);
+}
+
+.container--rx404Salidas .link {
+  color: #FF371E;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container--rx404Salidas .link:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer: enlaces de la tienda ---
+   Hoy solo "Quienes somos". Las de ayuda entran cuando existan. */
 .container--repuestoxFooterLinks {
   justify-content: center;
 }

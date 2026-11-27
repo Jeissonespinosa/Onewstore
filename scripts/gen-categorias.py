@@ -1152,7 +1152,12 @@ def build_and_write(NODES, RAILS, routes):
             dropped[k] = p
             continue
         kept[k] = v
-    kept['store.custom#landing-herramientas'] = {'path': '/herramientas'}
+    # La landing de herramientas se vuelve a poner porque el bucle de arriba la
+    # tira junto con las /herramientas/... generadas. Se conserva lo que ya
+    # tuviera (titulo y metaTags para el SEO): escribir {'path': ...} a secas
+    # se los llevaba en cada corrida y la pagina se quedaba sin <title>.
+    kept['store.custom#landing-herramientas'] = (
+        routes.get('store.custom#landing-herramientas') or {'path': '/herramientas'})
     for n in NODES:
         if n.get('catalogo'):
             continue          # la sirve VTEX como pagina nativa de categoria

@@ -36,9 +36,9 @@
 
    LO QUE FALTA DECIDIR (spec 000 §10, Q5: canal y responsable de
    atencion): el correo, el numero y quien lee los mensajes. Lo
-   unico confirmado por el negocio (2026-11-27) es el HORARIO,
-   8:00 a.m. a 6:00 p.m., y por eso es lo unico que esta escrito
-   abajo. Faltan los dias de la semana.
+   unico confirmado por el negocio (2026-11-27) es el HORARIO:
+   lunes a sabado, 8:00 a.m. a 6:00 p.m. Por eso es lo unico que
+   esta escrito abajo.
 
    El resto de canales vive en canales-contacto#rx, vacio: se
    llenan en el Site Editor y aparecen solos, sin tocar codigo.
@@ -134,7 +134,7 @@
      porque todavia no existen: ver Q5. */
   "canales-contacto#rx": {
     "props": {
-      "horario": "8:00 a.m. a 6:00 p.m."
+      "horario": "lunes a sábado, 8:00 a.m. a 6:00 p.m."
     }
   }
 }

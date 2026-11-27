@@ -1,22 +1,44 @@
 {
   "store.custom#landing-carros": {
-    "path": "/carros"
+    "path": "/carros",
+    "title": "Repuestos para carro | Repuestox",
+    "metaTags": {
+      "description": "Frenos, filtros, suspensión, motor, eléctrico y más. Guarda tu carro con año y motor y la tienda deja de mostrarte lo que no le sirve."
+    }
   },
   "store.custom#landing-motos": {
-    "path": "/motos"
+    "path": "/motos",
+    "title": "Repuestos para moto | Repuestox",
+    "metaTags": {
+      "description": "Frenos, arrastre, llantas, eléctrico, cascos y accesorios. Guarda tu moto y te mostramos solo lo que le sirve."
+    }
   },
   "store.custom#quienes-somos": {
-    "path": "/quienes-somos"
+    "path": "/quienes-somos",
+    "title": "Quiénes somos | Repuestox",
+    "metaTags": {
+      "description": "Repuestox vende repuestos para carro y para moto, y herramienta de taller. Toda la tienda está armada para que no te llegue una pieza que no es la de tu vehículo."
+    }
   },
   "store.custom#contacto": {
-    "path": "/contacto"
+    "path": "/contacto",
+    "title": "Contacto | Repuestox",
+    "metaTags": {
+      "description": "Escríbenos si no encuentras el repuesto o no sabes cuál es el de tu vehículo. Atendemos de lunes a sábado, de 8:00 a.m. a 6:00 p.m."
+    }
   },
   "store.custom#preguntas": {
-    "path": "/preguntas-frecuentes"
+    "path": "/preguntas-frecuentes",
+    "title": "Preguntas frecuentes | Repuestox",
+    "metaTags": {
+      "description": "Cómo saber si un repuesto le sirve a tu vehículo, dónde ver el año y el motor en la licencia de tránsito, y qué significa que una pieza sirva para cualquier vehículo."
+    }
   },
-
-
   "store.custom#landing-herramientas": {
-    "path": "/herramientas"
+    "path": "/herramientas",
+    "title": "Herramienta de taller | Repuestox",
+    "metaTags": {
+      "description": "Llaves, copas, torquímetros, gatos, pistolas de impacto y equipos de diagnóstico. Herramienta que sirve para cualquier vehículo."
+    }
   }
 }

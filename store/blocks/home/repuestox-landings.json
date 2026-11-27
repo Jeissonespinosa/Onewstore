@@ -45,7 +45,7 @@
   },
   "rich-text#carros-cta-banner-button": {
     "props": {
-      "text": "[Escríbenos y lo conseguimos](/contact-us)",
+      "text": "[Escríbenos y lo conseguimos](/contacto)",
       "textAlignment": "CENTER",
       "blockClass": "carrosCtaBannerButton"
     }

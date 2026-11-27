@@ -1,24 +1,26 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
   },
-
   "footer-layout.desktop": {
     "children": [
+      "flex-layout.row#repuestox-footer-links",
       "flex-layout.row#repuestox-footer-socials",
       "flex-layout.row#footer-payments",
       "flex-layout.row#footer-credits"
     ]
   },
-
   "footer-layout.mobile": {
     "children": [
+      "flex-layout.row#repuestox-footer-links",
       "flex-layout.row#repuestox-footer-socials",
       "flex-layout.row#footer-payments",
       "flex-layout.row#footer-credits"
     ]
   },
-
   "flex-layout.row#repuestox-footer-socials": {
     "props": {
       "blockClass": "repuestoxSocials",
@@ -33,7 +35,6 @@
       "image#repuestox-social-tiktok"
     ]
   },
-
   "image#repuestox-social-facebook": {
     "props": {
       "blockClass": "repuestoxSocialIcon",
@@ -70,9 +71,10 @@
       }
     }
   },
-
   "flex-layout.row#footer-payments": {
-    "children": ["accepted-payment-methods"],
+    "children": [
+      "accepted-payment-methods"
+    ],
     "props": {
       "blockClass": "payment-methods",
       "paddingTop": 2,
@@ -82,12 +84,17 @@
   },
   "accepted-payment-methods": {
     "props": {
-      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
+      "paymentMethods": [
+        "MasterCard",
+        "Visa",
+        "Diners Club"
+      ]
     }
   },
-
   "flex-layout.row#footer-credits": {
-    "children": ["rich-text#footer"],
+    "children": [
+      "rich-text#footer"
+    ],
     "props": {
       "blockClass": "credits",
       "paddingBottom": 4
@@ -98,6 +105,24 @@
       "text": "© Repuestox · Todos los derechos reservados",
       "textAlignment": "CENTER",
       "blockClass": "footer"
+    }
+  },
+  "flex-layout.row#repuestox-footer-links": {
+    "props": {
+      "blockClass": "repuestoxFooterLinks",
+      "paddingTop": 4,
+      "paddingBottom": 0,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#repuestox-footer-links"
+    ]
+  },
+  "rich-text#repuestox-footer-links": {
+    "props": {
+      "text": "[Quiénes somos](/quienes-somos)",
+      "textAlignment": "CENTER",
+      "blockClass": "repuestoxFooterLinks"
     }
   }
 }

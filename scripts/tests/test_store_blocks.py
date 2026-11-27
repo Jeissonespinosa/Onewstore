@@ -233,18 +233,16 @@ class TestBloques(unittest.TestCase):
                 mirar(bid, body, os.path.relpath(f, REPO))
         self.assertEqual(hits, [])
 
-    def test_ROJO_HOY_assets_de_otro_tenant_de_vtex(self):
+    def test_assets_de_otro_tenant_de_vtex(self):
         """
         SUPUESTO: ninguna imagen del theme se sirve desde el VTEX de otra tienda.
         ENTRADA: todos los "src" de los bloques que apunten a un host de VTEX.
-        HOY: queda uno, store/blocks/about-us.json -> image#mobile-phone, que
-             sale de storecomponents.vteximg.com.br: la tienda de ejemplo del
-             theme base. Toda la pagina /about-us sigue siendo el andamio de
-             VTEX (ese telefono y un video de YouTube cualquiera) y hay que
-             rehacerla con contenido de Repuestox.
-        ESPERADO: 0. Habia 17 — 7 heroes de /linea-productos y 10 logos de
-                  marca en los landings, todos desde coexitoestaticas; se
-                  borraron con las secciones que los usaban.
+        ESPERADO: 0.
+
+        Habia 18. Diecisiete desde coexitoestaticas.vtexassets.com — 7 heroes
+        de /linea-productos y 10 logos de marca en los landings — y una desde
+        storecomponents.vteximg.com.br, la tienda de ejemplo del theme base,
+        en /about-us. Se fueron con las paginas que las usaban.
 
         POR QUE SOLO HOSTS DE VTEX. YouTube, Unsplash o simpleicons son
         terceros y son una decision aparte. El VTEX de OTRA tienda no: es una

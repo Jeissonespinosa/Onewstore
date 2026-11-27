@@ -72,8 +72,8 @@ store/
                        (category-*.jsonc: GENERADAS, ver abajo)
     pdp/               Página de producto: assembly, gifts, tabla de especificaciones
     product-summary/   Tarjeta de producto, quickview, listas
-    categories.jsonc   Plantillas de las páginas de línea de producto
-    about-us.json, faq.jsonc, contact.jsonc, search.jsonc, minicart.jsonc, ...
+    quienes-somos.jsonc  Página /quienes-somos (el texto se edita en el Site Editor)
+    faq.jsonc, contact.jsonc, search.jsonc, minicart.jsonc, ...
 styles/
   configs/style.json   Tokens del theme: colores, tipografías, espaciados
   css/                 Overrides de CSS por app (vtex.store-header.css, vtex.flex-layout.css, ...)
@@ -154,7 +154,7 @@ Definidas en `store/routes.json`:
 |---|---|
 | `/carros` | `store.custom#landing-carros` |
 | `/motos` | `store.custom#landing-motos` |
-| `/about-us` | `store.custom#about-us` |
+| `/quienes-somos` | `store.custom#quienes-somos` |
 | `/faq` | `store.custom#faq` |
 | `/contact-us` | `store.custom#contact-us` |
 | `/carros/<macro>[/<sub>][/<hoja>]` | `store.custom#carros-...` (generadas) |

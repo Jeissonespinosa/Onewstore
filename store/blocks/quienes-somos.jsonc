@@ -1,0 +1,28 @@
+/* ============================================================
+   QUIENES SOMOS — /quienes-somos
+   ------------------------------------------------------------
+   Reemplaza a /about-us, que era la pagina de ejemplo de VTEX tal
+   cual venia: en ingles, con una foto servida desde el VTEX de
+   otra tienda y un video de YouTube cualquiera, y vendiendo la
+   plataforma de VTEX. Nada de eso era de Repuestox.
+
+   La ruta cambia a /quienes-somos porque el resto de las rutas
+   propias de la tienda estan en español (/carros, /motos,
+   /herramientas) y nada enlazaba a /about-us.
+
+   TODO EL TEXTO SE EDITA SIN TOCAR CODIGO, en
+   Admin > Storefront > Site Editor, sobre este bloque. Lo que se
+   deje vacio no se pinta: las secciones de historia y de datos de
+   la empresa estan asi a proposito, porque son datos del negocio.
+   ============================================================ */
+{
+  "store.custom#quienes-somos": {
+    "blocks": [
+      "quienes-somos#rx"
+    ]
+  },
+
+  "quienes-somos#rx": {
+    "props": {}
+  }
+}

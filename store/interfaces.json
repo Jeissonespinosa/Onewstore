@@ -19,5 +19,8 @@
   },
   "tambien-te-interesa": {
     "component": "TambienTeInteresa"
+  },
+  "quienes-somos": {
+    "component": "QuienesSomos"
   }
 }

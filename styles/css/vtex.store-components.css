@@ -104,11 +104,6 @@
   padding-top: 0px;
 }
 
-.imageElement--storePrint {
-  max-height: 300px;
-  margin-bottom: 20px;
-}
-
 .skuSelectorContainer {
   margin: 1rem 0;
 }
@@ -119,10 +114,6 @@
   }
   .label {
      font-size: 40px;
-  }
-  .imageElement--storePrint {
-    margin-bottom: 0px;
-    max-height: 600px;
   }
 }
 

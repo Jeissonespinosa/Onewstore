@@ -26,31 +26,10 @@
   font-weight: 700;
 }
 
-.container--title {
-  color: #03034E;
-  font-size: 28px;
-  font-weight: 700;
-}
-
 @media only screen and (min-width: 640px) {
   .container--question .strong {
     font-size: 40px;
     line-height: 3rem;
-  }
-
-  .container--about {
-    max-width: 85%;
-  }
-
-  .container--title {
-    color: #03034E;
-    font-size: 40px;
-    font-weight: 700;
-    max-width: 60%;
-  }
-
-  .container--title .paragraph {
-    line-height: 1.3em;
   }
 }
 
@@ -467,4 +446,26 @@
   font-family: var(--rx-font);
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* --- Footer: enlaces de la tienda ---
+   Hoy solo "Quienes somos". /faq y /contact-us siguen siendo el andamio de
+   VTEX, en ingles y con un telefono de Nueva York: enlazarlos seria mandar
+   al cliente a una pagina rota. Entran aqui cuando se reescriban. */
+.container--repuestoxFooterLinks {
+  justify-content: center;
+}
+
+.container--repuestoxFooterLinks .link {
+  color: #010101;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255, 55, 30, 0.45);
+  padding-bottom: 2px;
+}
+
+.container--repuestoxFooterLinks .link:hover {
+  color: #FF371E;
+  border-bottom-color: #FF371E;
 }

@@ -5,8 +5,8 @@
   "store.custom#landing-motos": {
     "path": "/motos"
   },
-  "store.custom#about-us": {
-    "path": "/about-us"
+  "store.custom#quienes-somos": {
+    "path": "/quienes-somos"
   },
   "store.custom#faq": {
     "path": "/faq"

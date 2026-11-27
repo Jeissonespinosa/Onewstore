@@ -177,8 +177,25 @@ class TestBloques(unittest.TestCase):
                          '[Ver baterías](/carros/baterias)')
 
     def test_links_markdown_e_image_link_apuntan_a_rutas_existentes(self):
-        """Todo [texto](/path) e image.link.url interno debe existir en routes.json (o ser nativo)."""
-        known = set(v['path'] for v in routes().values()) | {'/', '/{slug}/p'}
+        """Todo [texto](/path) e image.link.url interno debe llevar a una pagina real.
+
+        OJO CON LAS CATEGORIAS. Una pagina de categoria existe de dos maneras:
+        como ruta en store/routes.json, o porque la categoria esta en el
+        catalogo de VTEX y la sirve VTEX sola (gen-categorias.py no genera
+        ruta para esas, van marcadas "catalogo": true en el arbol). Mirando
+        solo routes.json, las 33 macros que sirve VTEX —/carros/frenos,
+        /motos/llantas-y-rines...— salian como rotas estando perfectamente
+        vivas, y un test que grita en 33 enlaces buenos tapa el malo: el
+        enlace muerto de verdad que habia (/contact-us en los landings) lo
+        cazo el validador de gen-categorias.py, no este.
+
+        react/cris-index.json trae el path de TODOS los nodos del arbol, los
+        sirva quien los sirva, asi que es la lista buena.
+        """
+        with open(os.path.join(REPO, 'react', 'cris-index.json'), encoding='utf-8') as fh:
+            del_arbol = {n['path'] for n in json.load(fh)['nodos']}
+        known = (set(v['path'] for v in routes().values()) | del_arbol
+                 | {'/', '/{slug}/p'})
         bad = []
         for f in BLOCK_FILES:
             for bid, body in load_jsonc(f).items():

@@ -496,9 +496,16 @@ export const posModelo = (marca, modelo) => {
    ------------------------------------------------------------------ */
 const ABRIR = 'rx-vehiculo-abrir'
 
-export function pedirAbrir(seccion) {
+/* El segundo argumento es opcional: un {marca, modelo} con el que el panel
+   arranca en el paso del año en vez de pedir la marca otra vez.
+
+   Lo usa Cris. Si alguien escribe "pastillas corolla", Cris ya sabe que es
+   un Toyota Corolla: volver a preguntarle la marca y el modelo que acaba de
+   escribir es el camino mas corto a que abandone el paso. Lo que falta es el
+   año y, si ese modelo lo necesita, el motor. */
+export function pedirAbrir(seccion, desde) {
   try {
-    window.dispatchEvent(new CustomEvent(ABRIR, { detail: { seccion } }))
+    window.dispatchEvent(new CustomEvent(ABRIR, { detail: { seccion, desde: desde || null } }))
   } catch (e) {
     /* sin CustomEvent el boton no abre nada; el header sigue estando ahi */
   }
@@ -506,7 +513,7 @@ export function pedirAbrir(seccion) {
 
 export function alPedirAbrir(seccion, fn) {
   const oir = e => {
-    if (e && e.detail && e.detail.seccion === seccion) fn()
+    if (e && e.detail && e.detail.seccion === seccion) fn(e.detail.desde || null)
   }
   try {
     window.addEventListener(ABRIR, oir)

@@ -16,7 +16,10 @@ const codigo = corte.split('\n').filter(l => !l.startsWith('import')).join('\n')
 eval(codigo + '\nglobal.norm=norm; global.toks=toks; global.seccionDe=seccionDe;' +
      'global.construirIndice=construirIndice; global.buscarCategoria=buscarCategoria;' +
      'global.medidaLlanta=medidaLlanta; global.vehiculoAplica=vehiculoAplica;' +
-     'global.modelosQueCalzan=modelosQueCalzan;')
+     'global.modelosQueCalzan=modelosQueCalzan;' +
+     'global.leerVehiculoEn=leerVehiculoEn; global.cruceDeSeccion=cruceDeSeccion;' +
+     'global.nodoEnSeccion=nodoEnSeccion; global.palabrasDeVehiculo=palabrasDeVehiculo;' +
+     'global.OTRAS_SECCIONES=OTRAS_SECCIONES;')
 
 let fallos = 0
 function prueba(nombre, real, esperado) {
@@ -230,6 +233,121 @@ prueba('una ruta que no existe tampoco', nodoDe('/carros/nada/de/nada'), null)
 
 console.log('\n=== todo nodo tiene nivel ===')
 prueba('sin nodos sin clasificar', indice.nodos.filter(n => !n.compatibilidad).length, 0)
+
+console.log('\n=== cruce de seccion: una moto buscada en Carros ===')
+/* EL CASO REAL. Alguien busco "boxer ct" en Carros. En Carros "boxer" SI
+   calza: es el Peugeot Boxer, una van que se vendio aca. Cris lo daba por
+   leido, le pedia el año del Peugeot y lo mandaba a unas pastillas filtradas
+   por un carro que no es el suyo; ahi no hay nada declarado y debajo le
+   aparecian las pastillas del Chevrolet Aveo. */
+/* En herramientas el indice es otro: ahi solo hay herramienta. */
+const vocabHerr = (() => {
+  const v = new Set()
+  idxHerr.forEach(e => e.palabras.forEach(w => v.add(w)))
+  return v
+})()
+const vocabDeSeccion = sec => (sec === 'herramientas' ? vocabHerr : vocab[sec])
+
+/* Se lee con el comparador de verdad, el que entiende apodos, que es el que
+   corre en la pagina. */
+const lee = (sec, frase, voc) => leerVehiculoEn(
+  vehiculos[sec] || {}, toks(frase), voc,
+  (m, mo, pal) => modeloCoincide(sec, m, mo, pal), () => 0)
+
+const cruzar = (sec, frase) => {
+  const voc = vocabDeSeccion(sec)
+  const aqui = sec === 'herramientas' ? null : lee(sec, frase, voc)
+  const alla = OTRAS_SECCIONES[sec].map(o =>
+    Object.assign({ seccion: o }, lee(o, frase, voc)))
+  return { aqui, cruce: cruceDeSeccion(sec, aqui, alla, palabrasDeVehiculo(toks(frase), voc)) }
+}
+const soloCruce = (sec, frase) => cruzar(sec, frase).cruce
+
+const enCarros = lee('carros', 'boxer ct', vocab.carros)
+prueba('en Carros "boxer" calza con el Peugeot Boxer',
+  [enCarros.marca, enCarros.modelo], ['Peugeot', 'Boxer'])
+/* Y por eso el cliente aterrizaba ahi: Cris no estaba adivinando mal, la
+   van existe. Lo que faltaba era avisar que el nombre es de dos secciones. */
+prueba('con la marca deducida, no escrita', enCarros.candidatos.length, 1)
+
+const cruce = soloCruce('carros', 'boxer ct')
+prueba('se avisa que tambien es una moto', !!cruce, true)
+prueba('y la otra seccion es motos', cruce.lecturas.map(l => l.seccion), ['motos'])
+prueba('con varias motos candidatas', cruce.lecturas[0].candidatos.length > 1, true)
+prueba('la palabra que lo delata es "boxer"', cruce.palabra, 'boxer')
+
+console.log('\n=== y al contrario: un carro buscado en Motos y en Herramientas ===')
+prueba('"corolla" en Motos avisa',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('motos', 'corolla')),
+  ['carros'])
+prueba('"corolla" en Herramientas avisa',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('herramientas', 'corolla')),
+  ['carros'])
+prueba('"boxer" en Herramientas avisa de las dos secciones',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('herramientas', 'boxer')),
+  ['carros', 'motos'])
+
+console.log('\n=== lo que NO se debe avisar ===')
+/* Quien escribe la marca ya dijo en que seccion esta. Avisarle ahi es ruido,
+   y el ruido entrena a la gente a ignorar el aviso que si importa. */
+prueba('"peugeot boxer" en Carros no avisa',
+  soloCruce('carros', 'peugeot boxer'), null)
+prueba('"bajaj boxer" en Motos no avisa',
+  soloCruce('motos', 'bajaj boxer'), null)
+/* Un numero solo no nombra una moto: "100" esta dentro de Discover 100 125,
+   Platina 100 125 y Boxer CT 100. Antes de la guarda, "aceite 100" cruzaba. */
+prueba('"aceite 100" en Carros no avisa',
+  soloCruce('carros', 'aceite 100'), null)
+prueba('"filtro de aceite" en Carros no avisa',
+  soloCruce('carros', 'filtro de aceite'), null)
+prueba('"pastillas de freno" en Motos no avisa',
+  soloCruce('motos', 'pastillas de freno'), null)
+prueba('"destornillador" en Herramientas no avisa',
+  soloCruce('herramientas', 'destornillador'), null)
+/* Si AQUI calza con varios, Cris ya le va a preguntar cual es el suyo y los
+   va a nombrar. El aviso encima de esa pregunta es ruido: "boxer" en Motos
+   son cuatro Bajaj, no hay por que hablarle del Peugeot. */
+prueba('"kit de arrastre boxer" en Motos no avisa: aqui ya son cuatro',
+  soloCruce('motos', 'kit de arrastre boxer'), null)
+prueba('y en Motos "boxer" si calza con varias',
+  cruzar('motos', 'kit de arrastre boxer').aqui.candidatos.length > 1, true)
+prueba('una frase vacia no avisa', soloCruce('carros', ''), null)
+
+console.log('\n=== marcas que venden carro Y moto ===')
+/* Honda y Suzuki son las dos. Que la marca exista alla no basta para
+   avisar: lo que decide es que alla haya un MODELO. */
+prueba('"honda cb 110" en Carros avisa: la CB 110 es moto',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('carros', 'honda cb 110')),
+  ['motos'])
+prueba('y nombra el modelo, no solo la marca',
+  (c => c.lecturas[0].modelo)(soloCruce('carros', 'honda cb 110')), 'CB 110')
+prueba('"honda" sola en Carros no avisa', soloCruce('carros', 'honda'), null)
+prueba('"suzuki" sola en Motos no avisa', soloCruce('motos', 'suzuki'), null)
+prueba('"honda civic" en Carros no avisa', soloCruce('carros', 'honda civic'), null)
+prueba('"suzuki swift" en Motos avisa: el Swift es carro',
+  (c => c && c.lecturas[0].modelo)(soloCruce('motos', 'suzuki swift')), 'Swift')
+
+console.log('\n=== la misma categoria en la otra seccion ===')
+const pastillasC = indice.nodos.find(n => n.path === '/carros/frenos/pastillas-de-freno')
+const llave = indice.nodos.find(n => n.path.indexOf('/herramientas/') === 0)
+prueba('pastillas de Carros -> pastillas de Motos',
+  (n => n && n.path)(nodoEnSeccion(indice.nodos, pastillasC, 'motos')),
+  '/motos/frenos/pastillas-de-freno')
+prueba('y de vuelta',
+  (n => n && n.path)(nodoEnSeccion(indice.nodos,
+    indice.nodos.find(n2 => n2.path === '/motos/frenos/pastillas-de-freno'), 'carros')),
+  '/carros/frenos/pastillas-de-freno')
+/* Una herramienta no se traduce: es la misma para carro y para moto. */
+prueba('una herramienta se queda donde esta',
+  (n => n && n.path)(nodoEnSeccion(indice.nodos, llave, 'motos')), llave.path)
+prueba('sin nodo no hay destino', nodoEnSeccion(indice.nodos, null, 'motos'), null)
+/* Lo que no existe alla devuelve null, y entonces la pildora lleva a la
+   seccion y no a una pagina inventada. */
+const soloCarros = indice.nodos.find(n =>
+  n.path.indexOf('/carros/') === 0 &&
+  !indice.nodos.some(o => o.path === n.path.replace('/carros/', '/motos/')))
+prueba('una categoria que no existe en motos da null',
+  nodoEnSeccion(indice.nodos, soloCarros, 'motos'), null)
 
 console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
 process.exit(fallos ? 1 : 0)

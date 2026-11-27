@@ -72,8 +72,34 @@ export default function VehiculoHeader({
 
   useEffect(() => () => relojes.current.forEach(clearTimeout), [])
 
-  /* El "Cambiar" de la linea "Para tu ..." de la pagina abre este panel. */
-  useEffect(() => alPedirAbrir(seccion, () => setVista('lista')), [seccion])
+  /* El "Cambiar" de la linea "Para tu ..." de la pagina abre este panel.
+
+     Cris lo abre tambien, y puede llegar con el vehiculo ya nombrado: quien
+     escribio "pastillas corolla" ya dijo marca y modelo, y volver a
+     preguntarselos es el camino mas corto a que abandone. En ese caso se
+     entra directo al paso del año, y detras viene el motor si ese modelo lo
+     necesita.
+
+     Se comprueba contra la base antes de saltar: un {marca, modelo} que no
+     existe dejaria el panel preguntando el año de un carro inexistente. Y si
+     ya hay el maximo de vehiculos se abre la lista, porque lo que falta no es
+     un paso mas sino sacar uno. */
+  useEffect(() => alPedirAbrir(seccion, desde => {
+    const sirve = desde && desde.marca && desde.modelo &&
+      (vehiculos[seccion === 'motos' ? 'motos' : 'carros'] || {})[desde.marca] &&
+      ((vehiculos[seccion === 'motos' ? 'motos' : 'carros'] || {})[desde.marca] || {})[desde.modelo]
+    const topado = (leerEstado(seccion).lista || []).length >= MAX_VEHICULOS
+    if (!sirve || topado) {
+      setVista('lista')
+      return
+    }
+    setModo('agregar')
+    setMarca(desde.marca)
+    setModelo(desde.modelo)
+    setAno(null)
+    setBusca('')
+    setVista('ano')
+  }), [seccion])
 
   /* Esc cierra, como cualquier dialogo. Sin esto quien navega con teclado
      queda atrapado detras de la capa oscura. */
@@ -190,7 +216,15 @@ export default function VehiculoHeader({
         elegir: () => { setModelo(m); setBusca(''); setVista('ano') },
       }))
   } else if (vista === 'ano') {
-    titulo = '¿De qué año es?'
+    /* Se nombra el vehiculo. En el camino largo (marca -> modelo -> año) es
+       una confirmacion de lo que acaba de tocar; llegando de Cris, que entro
+       directo aqui con lo que el cliente escribio, es la unica señal de que
+       Cris le entendio. "¿De qué año es?" a secas, sin decir de que, es donde
+       alguien que escribio "boxer" se entera tarde de que le estamos
+       preguntando por un Peugeot. */
+    titulo = marca && modelo
+      ? `¿De qué año es tu ${nombreDe({ marca, modelo })}?`
+      : '¿De qué año es?'
     const rango = (base[marca] || {})[modelo] || [1990, 2027]
     const anos = []
     for (let y = rango[1]; y >= rango[0]; y -= 1) anos.push(String(y))
@@ -206,7 +240,12 @@ export default function VehiculoHeader({
   } else if (vista === 'motor') {
     /* En moto el dato es el cilindraje y asi lo pide la gente: "¿es la 100
        o la 125?". Preguntar "que motor tiene" suena a otra cosa. */
-    titulo = esMotoSeccion ? '¿De qué cilindraje es?' : '¿Qué motor tiene?'
+    const suyo = marca && modelo
+      ? nombreDe({ marca, modelo }) + (ano ? ' ' + ano : '')
+      : null
+    titulo = esMotoSeccion
+      ? (suyo ? `¿De qué cilindraje es tu ${suyo}?` : '¿De qué cilindraje es?')
+      : (suyo ? `¿Qué motor tiene tu ${suyo}?` : '¿Qué motor tiene?')
     opciones = motoresDe(seccion, marca, modelo, ano).map(mo => ({
       clave: mo.id,
       texto: mo.nombre,

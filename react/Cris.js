@@ -40,6 +40,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 import {
   POPULARES, posMarca, posModelo, rutaDe, esElectrico, modeloCoincide,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
+  leerEstado, suscribirEstado, pedirAbrir, nombreDe, MAX_VEHICULOS,
 } from './vehiculo'
 import { buscarEnTienda, masBuscado } from './buscar'
 
@@ -212,6 +213,125 @@ function modelosQueCalzan(base, palabras, vocabCategorias, comparar, orden) {
   return halla.map(c => ({ marca: c.marca, modelo: c.modelo }))
 }
 
+/* ------------------------------------------------------------------
+   CRUCE DE SECCION: lo escrito no vive donde esta parado el cliente.
+
+   Caso real que lo motivo: alguien busco "boxer ct" en Carros. En Carros
+   "boxer" SI calza — es el Peugeot Boxer, una van que se vendio aca — asi
+   que Cris lo daba por leido, le pedia el año del Peugeot y lo mandaba a
+   pastillas filtradas por un carro que no es el suyo. Ahi no hay nada
+   declarado, y debajo le aparecieron las pastillas del Chevrolet Aveo. El
+   cliente vio una pastilla "para su Boxer" que es de otro vehiculo: eso es
+   una devolucion, y de las caras.
+
+   El nombre de un modelo no es unico entre las tres secciones. Cuando lo
+   escrito tambien nombra un vehiculo de otra, Cris no escoge por el cliente:
+   lo dice y le ofrece el cambio.
+   ------------------------------------------------------------------ */
+const OTRAS_SECCIONES = {
+  carros: ['motos'],
+  motos: ['carros'],
+  /* En herramientas no hay vehiculo, pero quien escribe ahi el nombre de su
+     moto esta buscando repuestos, no una llave. */
+  herramientas: ['carros', 'motos'],
+}
+
+const NOMBRE_SECCION = { carros: 'Carros', motos: 'Motos', herramientas: 'Herramientas' }
+const UN_VEHICULO = { carros: 'un carro', motos: 'una moto' }
+
+/* Las palabras de la frase que pueden nombrar un vehiculo: el mismo criterio
+   que usa modelosQueCalzan, para que lo que se advierte sea exactamente lo
+   que se busca. */
+function palabrasDeVehiculo(palabras, vocabCategorias) {
+  const vocab = vocabCategorias || new Set()
+  return (palabras || []).filter(p => p.length >= 3 && !vocab.has(p))
+}
+
+/* Marca y modelo que salen de una frase contra UNA base de vehiculos. Es la
+   misma lectura para la seccion donde esta parado el cliente y para las
+   otras: un solo sitio, o la advertencia dice una cosa y la busqueda hace
+   otra. */
+function leerVehiculoEn(base, palabras, vocabCategorias, calza, orden) {
+  let marca = null
+  let modelo = null
+  Object.keys(base || {}).forEach(m => {
+    const mt = toks(m)
+    if (mt.length && mt.every(t => palabras.indexOf(t) >= 0)) marca = m
+  })
+  if (marca) {
+    Object.keys(base[marca] || {}).forEach(mo => {
+      const mt = toks(mo)
+      if (mt.length && mt.every(t => palabras.indexOf(t) >= 0)) modelo = mo
+    })
+  }
+  let candidatos = []
+  if (!marca) {
+    candidatos = modelosQueCalzan(base, palabras, vocabCategorias, calza, orden)
+    if (candidatos.length === 1) {
+      marca = candidatos[0].marca
+      modelo = candidatos[0].modelo
+    }
+  }
+  return { marca, modelo, candidatos }
+}
+
+/* ¿Hay que advertir que lo escrito es de otra seccion? Null cuando no.
+
+   Dos guardas, las dos puestas por falsos positivos que estan en la base de
+   hoy, no por precaucion:
+
+     una palabra con letras  "aceite 100" cruzaba a motos, porque "100" esta
+                             dentro de Discover 100 125, Platina 100 125 y
+                             Boxer CT 100. Un numero solo no nombra una moto.
+     alla hay un MODELO      que alla exista la marca no basta. Honda y Suzuki
+                             venden carro y moto: con solo "suzuki" en Motos
+                             se avisaria de un carro que nadie nombro.
+
+   Y una tercera, sobre lo que pasa AQUI:
+
+     aqui no hay varios       si en esta seccion lo escrito calza con varios,
+                              Cris ya le va a preguntar cual es el suyo y va
+                              a nombrarlos; el aviso seria ruido encima de
+                              una pregunta. "kit de arrastre boxer" en Motos
+                              son cuatro Bajaj: se le preguntan las cuatro,
+                              no se le habla del Peugeot.
+
+   Lo que el aviso evita es que Cris se COMPROMETA en silencio con un
+   vehiculo: un solo candidato aqui y mas alla es exactamente "boxer ct" en
+   Carros, donde se iba derecho al Peugeot sin preguntar nada.
+
+   No hace falta una guarda para "ya dijo la marca". Quien escribe "peugeot
+   boxer" no cruza por si solo: modelosQueCalzan exige que TODAS las palabras
+   utiles esten en el nombre del modelo, y ningun modelo de moto se llama
+   "peugeot". Lo que si cruza, y debe, es "honda cb 110" en Carros: ahi la
+   marca existe en las dos secciones y el modelo solo en una. */
+function cruceDeSeccion(seccion, aqui, alla, utiles) {
+  if (aqui && (aqui.candidatos || []).length > 1) return null
+  const conLetras = (utiles || []).filter(p => /[a-z]/.test(p))
+  if (!conLetras.length) return null
+  const lecturas = (alla || []).filter(l => l && (l.modelo || (l.candidatos || []).length))
+  if (!lecturas.length) return null
+  return { lecturas, palabra: conLetras[0] }
+}
+
+/* La misma categoria en otra seccion: /carros/frenos/pastillas-de-freno ->
+   /motos/frenos/pastillas-de-freno. Las herramientas no se traducen, son las
+   mismas para los dos. Null si alla no existe. */
+function nodoEnSeccion(nodos, nodo, otra) {
+  if (!nodo) return null
+  const partes = nodo.path.split('/').filter(Boolean)
+  if (!partes.length) return null
+  if (partes[0] === 'herramientas') return nodo
+  const destino = '/' + [otra].concat(partes.slice(1)).join('/')
+  return (nodos || []).find(n => n.path === destino) || null
+}
+
+/* Como se compara un modelo y como se ordenan los que calzan, por seccion.
+   Van aparte porque leerVehiculoEn se usa contra varias secciones a la vez y
+   cada una tiene sus apodos y su ranking de ventas. */
+const calzaEn = sec => (m, mo, pal) => modeloCoincide(sec, m, mo, pal)
+const ordenEn = sec => c => posMarca(sec, c.marca) * 1000 + posModelo(c.marca, c.modelo)
+
 export default function Cris({
   placeholder = '¿Qué necesitas? Escribe el repuesto y tu vehículo',
   placeholderHerramientas = '¿Qué herramienta estás buscando?',
@@ -240,6 +360,9 @@ export default function Cris({
   const [tienda, setTienda] = useState(VACIO)
   const [cargando, setCargando] = useState(false)
   const [masBuscadas, setMasBuscadas] = useState([])
+  const [guardados, setGuardados] = useState([])
+  const [cruceVisto, setCruceVisto] = useState(false)
+  const [agregarVisto, setAgregarVisto] = useState(false)
   const caja = useRef(null)
 
   /* Lo que la tienda sabe de lo escrito: sugerencias, marcas, productos y
@@ -283,6 +406,38 @@ export default function Cris({
     return suscribir(seccion, setVehiculo)
   }, [seccion, pideVehiculo])
 
+  /* La lista completa (hasta 3), no solo el activo: ofrecerle agregar un
+     vehiculo que ya tiene guardado es ruido, y si ya tiene el maximo lo que
+     le falta no es un paso mas sino sacar uno. */
+  useEffect(() => {
+    if (!pideVehiculo) return undefined
+    setGuardados(leerEstado(seccion).lista || [])
+    return suscribirEstado(seccion, e => setGuardados((e && e.lista) || []))
+  }, [seccion, pideVehiculo])
+
+  /* Cada aviso se puede cerrar, y cambiar la frase vuelve a abrirlo: una
+     frase nueva es una pregunta nueva. */
+  useEffect(() => {
+    setCruceVisto(false)
+    setAgregarVisto(false)
+  }, [texto])
+
+  /* Llegar con la busqueda puesta. La pildora "Cambiar a motos" navega a la
+     otra seccion con ?busca=..., porque cuando lo escrito calza con varias
+     motos no hay nada que adivinar: alla Cris vuelve a leer la frase y le
+     pregunta cual es la suya. */
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get('busca')
+      if (q) {
+        setTexto(q)
+        setAbierto(true)
+      }
+    } catch (e) {
+      /* sin URLSearchParams simplemente no se precarga */
+    }
+  }, [])
+
   const guardar = v => {
     setVehiculo(v)
     escribirVehiculo(seccion, v)
@@ -311,37 +466,28 @@ export default function Cris({
     if (anoM) limpio = limpio.replace(anoM[0], ' ')
     const palabras = toks(limpio)
 
-    let marca = null
-    let modelo = null
     /* Modelos que calzan cuando NO escribieron la marca. La gente dice
        "frenos corolla", no "frenos toyota corolla". Si solo hay un carro con
        ese nombre se da por leido; si hay varios (Swift es Suzuki y Chevrolet,
        Frontier es Nissan y Kia) NO se adivina: se ofrecen los dos y escoge
        el cliente. Adivinar la marca es como terminamos trayendo llantas de
        Hilux para un Corolla. */
-    let candidatos = []
-    if (pideVehiculo) {
-      Object.keys(base).forEach(m => {
-        const mt = toks(m)
-        if (mt.length && mt.every(t => palabras.indexOf(t) >= 0)) marca = m
-      })
-      const modelos = marca ? Object.keys(base[marca] || {}) : []
-      modelos.forEach(mo => {
-        const mt = toks(mo)
-        if (mt.length && mt.every(t => palabras.indexOf(t) >= 0)) modelo = mo
-      })
-      if (!marca) {
-        candidatos = modelosQueCalzan(
-          base, palabras, vocabCategorias,
-          (m, mo, pal) => modeloCoincide(seccion, m, mo, pal),
-          c => posMarca(seccion, c.marca) * 1000 + posModelo(c.marca, c.modelo)
-        )
-        if (candidatos.length === 1) {
-          marca = candidatos[0].marca
-          modelo = candidatos[0].modelo
-        }
-      }
-    }
+    const aqui = pideVehiculo
+      ? leerVehiculoEn(base, palabras, vocabCategorias, calzaEn(seccion), ordenEn(seccion))
+      : { marca: null, modelo: null, candidatos: [] }
+    const marca = aqui.marca
+    const modelo = aqui.modelo
+    const candidatos = aqui.candidatos
+
+    /* La misma lectura contra las OTRAS secciones. En herramientas se hace
+       igual aunque ahi no haya vehiculo: quien escribe el nombre de su moto
+       en herramientas no esta buscando una llave. */
+    const utiles = palabrasDeVehiculo(palabras, vocabCategorias)
+    const alla = (OTRAS_SECCIONES[seccion] || []).map(o => Object.assign(
+      { seccion: o },
+      leerVehiculoEn(vehiculos[o] || {}, palabras, vocabCategorias, calzaEn(o), ordenEn(o))
+    ))
+    const cruce = cruceDeSeccion(seccion, aqui, alla, utiles)
     /* Las palabras del vehiculo no deben leerse como categoria: "audi" no es
        "audio", y "Corolla" no es una categoria. */
     const usadasVehiculo = new Set(
@@ -358,6 +504,7 @@ export default function Cris({
       marca,
       modelo,
       candidatos,
+      cruce,
       ano: anoM ? anoM[0] : null,
       llanta,
       palabras: paraCategoria,
@@ -501,7 +648,16 @@ export default function Cris({
 
   /* Navega a la categoria con el vehiculo aplicado como filtro, o a la
      busqueda libre si no hay categoria. */
-  const irA = (nodo, veh, llanta, explicito, sinVehiculo) => {
+  /* Arma la URL del destino. Aparte de navegar, porque cambiar de SECCION no
+     se puede hacer con navigate(): se comprobo en vivo y cambia la URL a
+     /motos dejando montada la pagina de carros —la ruta de la seccion es
+     store.custom y VTEX no la resuelve en cliente—, asi que Cris seguia
+     creyendo estar en Carros y el aviso seguia ahi. */
+  const urlDe = (nodo, veh, llanta, explicito, sinVehiculo, seccionDestino) => {
+    /* El destino puede estar en otra seccion que la que se esta viendo: es
+       el salto de "Cambiar a motos". Importa porque la medida de llanta se
+       escribe distinto en cada una. */
+    const sec = seccionDestino || seccion
     /* El nivel sale del indice, que lo trae de
        catalogo/compatibilidad-por-categoria.json. La regla de cuando aplica
        esta en vehiculoAplica(), arriba, con el porque.
@@ -534,7 +690,7 @@ export default function Cris({
          La llave "alto--perfil-" lleva dos guiones a proposito: VTEX la deriva
          del nombre "Alto (perfil)" y NO colapsa los guiones consecutivos. Esta
          comprobado contra el facet en vivo, no es un slug escrito a mano. */
-      if (seccion === 'motos') {
+      if (sec === 'motos') {
         segmentos.push(llanta.completa)
         llaves.push('medida')
       } else {
@@ -554,9 +710,14 @@ export default function Cris({
         llaves.push('ano')
       }
     }
+    if (!segmentos.length) return null
+    return { to: '/' + segmentos.join('/'), query: 'map=' + llaves.join(',') }
+  }
+
+  const irA = (nodo, veh, llanta, explicito, sinVehiculo) => {
+    const d = urlDe(nodo, veh, llanta, explicito, sinVehiculo, seccion)
     limpiarAux()
-    if (!segmentos.length) return
-    navigate({ to: '/' + segmentos.join('/'), query: 'map=' + llaves.join(',') })
+    if (d) navigate(d)
   }
 
   /* Navega a una ruta que ya viene armada (una marca del facet, un producto).
@@ -574,11 +735,61 @@ export default function Cris({
     navigate({ to: '/' + encodeURIComponent(q.trim()) + '/s', query: 'map=ft' })
   }
 
+  /* Cambiar de seccion es un cambio de pagina de verdad, no de facetas. Ver
+     el porque en urlDe(). */
+  const cargarPagina = (ruta, query) => {
+    const url = query ? ruta + '?' + query : ruta
+    try {
+      window.location.assign(url)
+    } catch (e) {
+      navigate(query ? { to: ruta, query } : { to: ruta })
+    }
+  }
+
+  /* "Cambiar a motos". Dos caminos, segun que tan claro este lo que escribio:
+
+       un solo vehiculo alla   se va derecho a la categoria equivalente
+                               filtrada por el: "pastillas corolla" en Motos
+                               aterriza en las pastillas del Corolla.
+       varios alla             "boxer" son cuatro motos y no se adivina: se
+                               lleva la frase en ?busca= y alla Cris la vuelve
+                               a leer y le pregunta cual es la suya. */
+  const irAOtraSeccion = (otra, alla) => {
+    const nodo = nodoEnSeccion(indice.nodos, destinoDeLaFrase(), otra)
+    const unico = alla && alla.marca && alla.modelo
+    let destino = null
+    if (unico && nodo) {
+      destino = urlDe(
+        nodo,
+        { marca: alla.marca, modelo: alla.modelo, ano: lectura && lectura.ano },
+        lectura && lectura.llanta, true, false, otra
+      )
+    }
+    /* Sin un vehiculo unico no se adivina: se lleva la frase y alla Cris la
+       vuelve a leer con la base de esa seccion y le pregunta cual es el suyo. */
+    if (!destino) {
+      destino = {
+        to: nodo ? nodo.path : '/' + otra,
+        query: 'busca=' + encodeURIComponent(texto.trim()),
+      }
+    }
+    limpiarAux()
+    cargarPagina(destino.to, destino.query)
+  }
+
   const enviar = e => {
     if (e) e.preventDefault()
     const l = lectura
     if (!l) {
       if (vehiculo) irA(null, vehiculo, null)
+      return
+    }
+    /* Lo escrito es de otra seccion y todavia no ha dicho que hacer: NO se
+       navega. Esto es el arreglo de "boxer ct": antes la frase se daba por
+       leida como Peugeot Boxer y el cliente aterrizaba en una pagina de otro
+       vehiculo. Una pregunta de mas vale menos que una devolucion. */
+    if (l.cruce && !cruceVisto) {
+      setAbierto(true)
       return
     }
     /* Vehiculo incompleto: Cris pide lo que falta en vez de buscar mal. */
@@ -724,10 +935,123 @@ export default function Cris({
     if (destino) irA(destino, veh, lectura && lectura.llanta, true)
   }
 
+  /* ------------------------------------------------------------------
+     EL AVISO. Una sola linea arriba del panel, con una pildora que resuelve
+     y una salida para seguir donde esta. Dos motivos, nunca los dos a la vez
+     y en este orden:
+
+       cruce de seccion   lo escrito es de otra seccion. Manda, porque un
+                          vehiculo de otra seccion no se puede agregar aqui
+                          y seguir buscandolo aqui no lleva a nada.
+       agregar vehiculo   lo escrito es un vehiculo de ESTA seccion que no
+                          tiene guardado. Escribirlo filtra esta busqueda;
+                          guardarlo filtra la tienda entera, y para eso hace
+                          falta el año y el motor. La pildora abre el selector
+                          del header con el vehiculo ya nombrado, que es la
+                          unica puerta de los vehiculos.
+     ------------------------------------------------------------------ */
+  const nombreDeLectura = l => {
+    if (!l) return ''
+    if (l.marca && l.modelo) return nombreDe({ marca: l.marca, modelo: l.modelo })
+    const c = (l.candidatos || [])[0]
+    return c ? nombreDe({ marca: c.marca, modelo: c.modelo }) : ''
+  }
+
+  const yaLoTengo = (m, mo) => guardados.some(v =>
+    v && norm(v.marca) === norm(m) && norm(v.modelo || '') === norm(mo || ''))
+
+  const aviso = (() => {
+    const cruce = lectura && lectura.cruce
+    if (cruce && !cruceVisto) {
+      const uno = cruce.lecturas[0]
+      const nom = nombreDeLectura(uno)
+      const mas = Math.max(0, (uno.candidatos || []).length - 1)
+      const queEs = cruce.lecturas.length > 1
+        ? 'un carro o una moto'
+        : UN_VEHICULO[uno.seccion]
+      const nombreAqui = lectura.marca ? nombreDeLectura(lectura) : null
+      let detalle
+      if (seccion === 'herramientas') {
+        detalle = 'Aquí solo hay herramienta, que sirve para cualquier vehículo. ' +
+          'Los repuestos están en la sección del vehículo.'
+      } else if (nombreAqui) {
+        /* El caso de "boxer": aqui calza algo, pero puede no ser lo que
+           busca. Se le dice QUE le estamos mostrando, que es el dato que le
+           faltaba para darse cuenta. */
+        detalle = `Aquí te estamos mostrando repuestos de ${nombreAqui}. ` +
+          `Si lo tuyo es ${nom}, cambia de sección.`
+      } else {
+        detalle = `Coincide con ${nom}${mas ? ` y ${mas} más` : ''}. ` +
+          `En ${NOMBRE_SECCION[seccion]} no vas a encontrar sus repuestos.`
+      }
+      return {
+        titulo: nombreAqui
+          ? `«${cruce.palabra}» también es ${queEs}.`
+          : `Eso es ${queEs} y estás en ${NOMBRE_SECCION[seccion]}.`,
+        detalle,
+        pildoras: cruce.lecturas.map(l => ({
+          clave: l.seccion,
+          texto: `Cambiar a ${l.seccion}`,
+          hacer: () => irAOtraSeccion(l.seccion, l),
+        })),
+        seguir: {
+          texto: `Seguir en ${NOMBRE_SECCION[seccion].toLowerCase()}`,
+          hacer: () => setCruceVisto(true),
+        },
+      }
+    }
+
+    if (!pideVehiculo || agregarVisto || !lectura) return null
+    if (guardados.length >= MAX_VEHICULOS) return null
+    const comoSeLlama = seccion === 'motos' ? 'moto' : 'carro'
+
+    /* Un solo vehiculo: se ofrece guardarlo. */
+    if (lectura.marca && lectura.modelo && !yaLoTengo(lectura.marca, lectura.modelo)) {
+      const nom = nombreDeLectura(lectura)
+      const moto = seccion === 'motos'
+      return {
+        titulo: moto ? `¿Es tuya la ${nom}?` : `¿Es tuyo el ${nom}?`,
+        detalle: `Guárdal${moto ? 'a' : 'o'} con el año y ` +
+          `${moto ? 'el cilindraje' : 'el motor'} y la tienda te muestra solo lo que le ` +
+          'sirve, en toda la página. Escribirlo filtra nada más esta búsqueda.',
+        pildoras: [{
+          clave: 'agregar',
+          texto: 'Agregar a mis vehículos',
+          hacer: () => pedirAbrir(seccion, { marca: lectura.marca, modelo: lectura.modelo }),
+        }],
+        seguir: { texto: 'Solo esta búsqueda', hacer: () => setAgregarVisto(true) },
+      }
+    }
+
+    /* Varios: no se adivina. "boxer" en Motos son cuatro, "swift" es Suzuki
+       y Chevrolet. Se nombran y escoge el cliente; adivinar la marca es como
+       terminamos trayendo llantas de Hilux para un Corolla. */
+    const varios = (lectura.candidatos || []).filter(c => !yaLoTengo(c.marca, c.modelo))
+    if (varios.length > 1) {
+      /* En motos todo va en femenino: "calza con varias, elige la tuya". Un
+         texto que no concuerda se lee como un texto de plantilla. */
+      const moto = seccion === 'motos'
+      return {
+        titulo: `¿Cuál es tu ${comoSeLlama}?`,
+        detalle: `Lo que escribiste calza con ${moto ? 'varias' : 'varios'}. ` +
+          `Elige ${moto ? 'la tuya' : 'el tuyo'} y te pedimos el año y ` +
+          `${moto ? 'el cilindraje' : 'el motor'} para mostrarte solo lo que le sirve.`,
+        pildoras: varios.slice(0, 3).map(c => ({
+          clave: c.marca + '/' + c.modelo,
+          texto: nombreDe({ marca: c.marca, modelo: c.modelo }),
+          hacer: () => pedirAbrir(seccion, { marca: c.marca, modelo: c.modelo }),
+        })),
+        seguir: { texto: 'Solo esta búsqueda', hacer: () => setAgregarVisto(true) },
+      }
+    }
+    return null
+  })()
+
   /* El panel se abre si hay ALGO que mostrar. Antes dependia solo de las
      sugerencias locales, asi que una busqueda que solo traia productos no
      abria nada. */
   const hayPanel =
+    !!aviso ||
     sugerencias.length > 0 ||
     tienda.sugerencias.length > 0 ||
     tienda.marcas.length > 0 ||
@@ -840,6 +1164,22 @@ export default function Cris({
       .rx-cris--barra .rx-cris__go{height:2.375rem;width:2.375rem;right:.25rem;top:.25rem}
       .rx-cris--barra .rx-cris__lupa{left:.875rem}
     }
+    /* ---- el aviso ----
+       Rojo claro, no rojo pleno: avisa sin parecer un error de la tienda.
+       Vive dentro del panel para que sirva igual en la barra del header,
+       donde no hay sitio debajo de la caja sin crecerle al header. */
+    .rx-cris__aviso{margin:.25rem .25rem .5rem;padding:.75rem .85rem;border-radius:12px;
+      background:#FFF6F4;border:1px solid rgba(255,55,30,.25)}
+    .rx-cris__aviso b{display:block;font-size:.875rem;font-weight:800;color:${INK};
+      line-height:1.3;margin-bottom:.2rem}
+    .rx-cris__aviso p{margin:0;font-size:.75rem;line-height:1.45;color:#55555C}
+    .rx-cris__acc{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:.65rem}
+    .rx-cris__pil{border:0;background:${RED};color:#fff;font:inherit;font-weight:800;
+      font-size:.8125rem;padding:.45rem .9rem;border-radius:999px;cursor:pointer}
+    .rx-cris__pil:hover,.rx-cris__pil:focus{filter:brightness(.93)}
+    .rx-cris__seguir{border:0;background:none;color:#55555C;font:inherit;font-weight:700;
+      font-size:.75rem;text-decoration:underline;cursor:pointer;padding:.3rem 0}
+    .rx-cris__seguir:hover{color:${INK}}
     .rx-cris__titulo{padding:.5rem .7rem .2rem;font-size:.8rem;font-weight:700;
       letter-spacing:.04em;text-transform:uppercase;color:rgba(1,1,1,.45)}
     .rx-cris__salto{background:none;border:0;color:${RED};font:inherit;font-weight:700;
@@ -911,6 +1251,26 @@ export default function Cris({
 
         {abierto && hayPanel ? (
           <div className={`rx-cris__panel ${handles.crisSuggestions || ''}`}>
+            {/* El aviso va arriba de todo: es lo que cambia a donde va a
+                terminar el cliente, no una sugerencia mas. */}
+            {aviso ? (
+              <div className="rx-cris__aviso" role="status">
+                <b>{aviso.titulo}</b>
+                <p>{aviso.detalle}</p>
+                <div className="rx-cris__acc">
+                  {aviso.pildoras.map(pi => (
+                    <button key={pi.clave} type="button" className="rx-cris__pil"
+                      onMouseDown={e => { e.preventDefault(); pi.hacer() }}>
+                      {pi.texto}
+                    </button>
+                  ))}
+                  <button type="button" className="rx-cris__seguir"
+                    onMouseDown={e => { e.preventDefault(); aviso.seguir.hacer() }}>
+                    {aviso.seguir.texto}
+                  </button>
+                </div>
+              </div>
+            ) : null}
             <div className="rx-cris__cols">
 
               <div className="rx-cris__izq">

@@ -190,6 +190,34 @@ vtex install onewstore.store-theme@<version>
 
 Coordina siempre con el responsable de la tienda antes de publicar o instalar una versión nueva.
 
+### Ajustes que NO viven en este repositorio
+
+Hay cosas que el theme no puede fijar y que hay que dejar puestas en la cuenta. Si se
+promueve sin ellas, la tienda sale con defectos visibles.
+
+**Apps › My Apps › VTEX Store › Settings** — los títulos de las páginas. Puestos el
+2026-11-27 en el workspace `devwilbis`:
+
+| Campo | Valor |
+|---|---|
+| `storeName` | `Repuestox` |
+| `titleTag` | `Repuestox \| Repuestos para carro y moto, y herramienta de taller` |
+| `metaTagDescription` | `Dinos tu vehículo —marca, línea, año y motor— y te mostramos solo los repuestos que le sirven. Carros, motos y herramienta de taller.` |
+
+Sin `storeName`, cada página de categoría sale como **"Pastillas de freno - undefined"**, y
+sin `titleTag` la home se queda **sin `<title>`**. Los títulos de las rutas propias
+(`/carros`, `/contacto`, …) sí están en `store/routes.json` y viajan con el repositorio.
+
+> **Al promover:** comprueba que estos tres campos estén puestos en el workspace que se
+> promueve. Se guardaron en `devwilbis`; si la promoción sale de otro, hay que repetirlos.
+
+**Master Data › entidad `contact`** — el schema `site-contact` del formulario de
+`/contacto`. Creado el 2026-11-27 a partir de `docs/contact-schema.json`. Si falta, el
+formulario muestra "Error al cargar el formulario" (ver `store/blocks/contacto.jsonc`).
+
+**Redirecciones (Storefront › Redirects)** — pendientes, para las rutas que se borraron:
+`/about-us`, `/faq`, `/contact-us` y las siete `/linea-productos/*`.
+
 ---
 
 ## Notas

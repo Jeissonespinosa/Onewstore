@@ -503,3 +503,49 @@
   color: #FF371E;
   border-bottom-color: #FF371E;
 }
+
+/* --- Contacto --- */
+.container--rxContactoIntro .headingLevel1 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: #010101;
+}
+
+.container--rxContactoIntro .paragraph {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #55555C;
+}
+
+/* La linea de "ten a mano" va destacada: es la que ahorra el ida y vuelta. */
+.container--rxContactoTener {
+  margin: 1.5rem 0 2rem;
+}
+
+.container--rxContactoTener .paragraph {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid #FF371E;
+  background: #FFF6F4;
+  border-radius: 0 0.625rem 0.625rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #010101;
+}
+
+.container--rxContactoListo .headingLevel2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0A7A3D;
+}
+
+.container--rxContactoListo .paragraph {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #55555C;
+}

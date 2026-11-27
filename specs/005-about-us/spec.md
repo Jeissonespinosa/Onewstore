@@ -1,8 +1,8 @@
 # 005 — Página "Quiénes somos" (`/about-us`)
 
-- **Estado:** draft
+- **Estado:** hecha salvo el contenido de negocio
 - **Responsable:** Por asignar
-- **Rama:** `feat/005-about-us`
+- **Rama:** `feat/motorizacion` (se hizo aquí)
 - **Depende de:** 000 (hallazgo #1); contenido de negocio sin definir
 
 ## 1. Contexto y problema
@@ -29,6 +29,17 @@ Además es el lugar natural del aviso legal (razón social, NIT) que pide la spe
 - `AC-2` Los datos legales coinciden con los documentos oficiales (verificado por el responsable de negocio).
 - `AC-3` Los enlaces a contacto y a legales funcionan.
 - `AC-4` Se ve correctamente a 360, 768 y 1280 px.
+
+## 4bis. Estado (2026-11-27)
+La página se rehízo en `/quienes-somos` (la ruta cambió: el resto de las propias están en
+español y a `/about-us` no enlazaba nadie). Cumple RF-1, RF-2, RF-4 (enlaza a `/contacto`) y
+RF-5 (enlazada desde el footer). **RF-3 no**: razón social y NIT siguen sin asignar (Q1), así
+que esa sección existe vacía y no se pinta hasta que alguien la escriba en el Site Editor.
+Tampoco se enlazan los documentos legales, que no existen todavía (spec 001).
+
+Dato para Q1, sin confirmar: la cuenta VTEX `onewstore` figura con `companyName`
+"William Baquero Romero" y `name` "One W Store". **No se publicó**: es el titular de la cuenta,
+no necesariamente la razón social de Repuestox.
 
 ## 5. Preguntas abiertas (bloquean el contenido)
 - [ ] ¿Qué es Onewstore respecto de Repuestox? ¿Razón social y NIT? (spec 000 §10)

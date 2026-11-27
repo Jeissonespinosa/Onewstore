@@ -1,0 +1,132 @@
+/* ============================================================
+   CONTACTO — /contacto
+   ------------------------------------------------------------
+   Reemplaza a /contact-us, que era la pagina de ejemplo de VTEX
+   ("Contact Us", "Submit", "Thanks for reaching out!") y que
+   ademas estaba ROTA: mostraba "Error al cargar el formulario"
+   (spec 004).
+
+   LA CAUSA, diagnosticada el 2026-11-27 contra la cuenta: la
+   entidad de Master Data "contact" EXISTE pero no tiene ningun
+   schema. /api/dataentities/contact/schemas devuelve [] y
+   .../schemas/site-contact devuelve vacio. vtex.store-form dibuja
+   los campos a partir del schema, asi que sin schema no hay nada
+   que dibujar y el bloque falla.
+
+   ARREGLADO el 2026-11-27: se creo el schema site-contact en la
+   cuenta (PUT a /api/dataentities/contact/schemas/site-contact
+   con docs/contact-schema.json). El formulario dibuja los cinco
+   campos y un envio de prueba quedo guardado en Master Data
+   (AC-2 de la spec 004). Si alguna vez hay que recrearlo, el
+   JSON esta en docs/.
+
+   OJO CON "v-security". El schema NO lleva publicWrite: VTEX
+   bloqueo la creacion de campos publicos nuevos en Master Data
+   (nota del 2026-10-23) y el PUT con publicWrite devuelve 422.
+   Solo lleva publicJsonSchema, que es lo que el formulario
+   necesita para leer los campos; el envio lo hace la propia app
+   vtex.store-form. Por eso un POST a pelo contra
+   /api/dataentities sin cookie responde 403 "Cannot write in
+   private fields" y el formulario si funciona: no usan el mismo
+   camino.
+
+   FALTA (AC-4 de la spec 004): repetir la prueba de envio en
+   produccion con un visitante anonimo. En devwilbis no se puede,
+   porque el workspace exige login.
+
+   LO QUE FALTA DECIDIR (spec 000 §10, Q5: canal y responsable de
+   atencion): quien lee los mensajes y por donde mas se atiende.
+   Los canales (telefono, WhatsApp, correo, direccion, horario)
+   viven en canales-contacto#rx y estan vacios: se llenan en el
+   Site Editor y aparecen solos.
+   ============================================================ */
+{
+  "store.custom#contacto": {
+    "blocks": [
+      "flex-layout.row#rx-contacto"
+    ]
+  },
+
+  "flex-layout.row#rx-contacto": {
+    "props": {
+      "blockClass": "rxContacto",
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 8
+    },
+    "children": ["flex-layout.col#rx-contacto"]
+  },
+
+  "flex-layout.col#rx-contacto": {
+    "props": {
+      "blockClass": "rxContactoCol"
+    },
+    "children": [
+      "rich-text#rx-contacto-intro",
+      "rich-text#rx-contacto-tener",
+      "form#contacto",
+      "canales-contacto#rx"
+    ]
+  },
+
+  "rich-text#rx-contacto-intro": {
+    "props": {
+      "text": "# Escríbenos\n\nSi no encuentras el repuesto, no sabes cuál es el de tu vehículo o algo no te cuadra, cuéntanos. Entre más nos digas del vehículo, más exacta es la respuesta.",
+      "blockClass": "rxContactoIntro"
+    }
+  },
+
+  /* Esto no es relleno: es lo que hace la diferencia entre una respuesta
+     en un mensaje y cuatro mensajes de ida y vuelta preguntando el año. */
+  "rich-text#rx-contacto-tener": {
+    "props": {
+      "text": "**Ten a mano:** la marca, la línea y el **año** de tu vehículo (en la licencia de tránsito el año es el campo MODELO), el **cilindraje** si lo sabes, y la referencia o una foto de la pieza que vas a cambiar.",
+      "blockClass": "rxContactoTener"
+    }
+  },
+
+  "form#contacto": {
+    "props": {
+      "entity": "contact",
+      "schema": "site-contact"
+    },
+    "blocks": ["form-success#contacto"],
+    "children": [
+      "form-input.text#nombre",
+      "form-input.text#correo",
+      "form-input.text#telefono",
+      "form-input.text#vehiculo",
+      "form-input.textarea#mensaje",
+      "form-submit#contacto"
+    ]
+  },
+
+  "form-input.text#nombre": { "props": { "pointer": "#/properties/nombre" } },
+  "form-input.text#correo": { "props": { "pointer": "#/properties/correo" } },
+  "form-input.text#telefono": { "props": { "pointer": "#/properties/telefono" } },
+  "form-input.text#vehiculo": { "props": { "pointer": "#/properties/vehiculo" } },
+  "form-input.textarea#mensaje": { "props": { "pointer": "#/properties/mensaje" } },
+
+  "form-submit#contacto": {
+    "props": {
+      "label": "Enviar"
+    }
+  },
+
+  "form-success#contacto": {
+    "children": ["rich-text#rx-contacto-listo"]
+  },
+
+  /* No se promete un plazo: quien atiende todavia esta por asignar
+     (spec 000 §10, Q5). Cuando se decida, aqui va el plazo real. */
+  "rich-text#rx-contacto-listo": {
+    "props": {
+      "text": "## Listo, nos llegó\n\nTe respondemos al correo que nos dejaste.",
+      "blockClass": "rxContactoListo"
+    }
+  },
+
+  "canales-contacto#rx": {
+    "props": {}
+  }
+}

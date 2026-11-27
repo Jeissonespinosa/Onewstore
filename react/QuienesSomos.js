@@ -75,6 +75,7 @@ export default function QuienesSomos({
   ctaCarros = 'Repuestos para carro',
   ctaMotos = 'Repuestos para moto',
   ctaHerramientas = 'Herramienta de taller',
+  ctaContacto = 'Escríbenos',
   imagen = '',
   imagenAlt = 'Repuestox',
 }) {
@@ -129,6 +130,8 @@ export default function QuienesSomos({
       padding:.65rem 1.15rem;font-size:.875rem;font-weight:700;color:${INK};
       text-decoration:none;background:#fff}
     .rx-qs__cta:hover{border-color:${RED};color:${RED}}
+    .rx-qs__cta--fuerte{background:${RED};border-color:${RED};color:#fff}
+    .rx-qs__cta--fuerte:hover{color:#fff;filter:brightness(.93)}
 
     @media screen and (min-width:48rem){
       .rx-qs{padding:3rem 1.5rem 4.5rem}
@@ -189,6 +192,8 @@ export default function QuienesSomos({
           <a className="rx-qs__cta" href="/carros">{ctaCarros}</a>
           <a className="rx-qs__cta" href="/motos">{ctaMotos}</a>
           <a className="rx-qs__cta" href="/herramientas">{ctaHerramientas}</a>
+          {/* La spec 005 (RF-4) pide que esta pagina enlace a contacto. */}
+          <a className="rx-qs__cta rx-qs__cta--fuerte" href="/contacto">{ctaContacto}</a>
         </div>
       </div>
     </section>
@@ -228,5 +233,6 @@ QuienesSomos.schema = {
     ctaCarros: texto('Cierre — botón de carros'),
     ctaMotos: texto('Cierre — botón de motos'),
     ctaHerramientas: texto('Cierre — botón de herramientas'),
+    ctaContacto: texto('Cierre — botón de contacto'),
   },
 }

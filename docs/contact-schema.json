@@ -1,0 +1,31 @@
+{
+  "title": "Contacto Repuestox",
+  "type": "object",
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "title": "Tu nombre"
+    },
+    "correo": {
+      "type": "string",
+      "format": "email",
+      "title": "Correo"
+    },
+    "telefono": {
+      "type": "string",
+      "title": "Teléfono o WhatsApp (opcional)"
+    },
+    "vehiculo": {
+      "type": "string",
+      "title": "Tu vehículo: marca, línea, año y motor"
+    },
+    "mensaje": {
+      "type": "string",
+      "title": "¿Qué necesitas?"
+    }
+  },
+  "required": ["nombre", "correo", "mensaje"],
+  "v-security": {
+    "publicJsonSchema": true
+  }
+}

@@ -22,5 +22,11 @@
   },
   "quienes-somos": {
     "component": "QuienesSomos"
+  },
+  "canales-contacto": {
+    "component": "CanalesContacto"
+  },
+  "preguntas": {
+    "component": "Preguntas"
   }
 }

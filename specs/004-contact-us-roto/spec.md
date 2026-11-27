@@ -1,8 +1,8 @@
 # 004 — Formulario de contacto roto (`/contact-us`)
 
-- **Estado:** draft
+- **Estado:** casi done (falta AC-3 y AC-4)
 - **Responsable:** Por asignar
-- **Rama:** `fix/004-contact-us`
+- **Rama:** `feat/motorizacion` (se hizo aquí)
 - **Depende de:** 000 (hallazgo #2)
 
 ## 1. Contexto y problema
@@ -34,7 +34,35 @@ con ese schema no existe en la cuenta o el workspace.
 - `AC-4` Se repite la comprobación en producción y se anota la fecha.
 
 ## 5. Preguntas abiertas
-- [ ] ¿Qué dice la consola/red al cargar el formulario? (primer paso del diagnóstico)
-- [ ] ¿Existe la entidad y el schema en la cuenta `onewstore`? ¿También en producción?
-- [ ] ¿Quién atiende y por qué canal? (spec 000 §10)
-- [ ] ¿Hay datos personales en el formulario? Si sí, enlazar política de privacidad (spec 001).
+- [x] ¿Qué dice la consola/red al cargar el formulario? → **Resuelta (2026-11-27).** No era la
+  consola: `GET /api/dataentities/contact/schemas` devolvía `[]`. `vtex.store-form` dibuja los
+  campos a partir del JSON Schema; sin schema no hay nada que dibujar y el bloque falla.
+- [x] ¿Existe la entidad y el schema en la cuenta `onewstore`? → **Resuelta (2026-11-27).** La
+  entidad `contact` **sí** existe (una búsqueda devuelve `[]`, no 404); el schema `site-contact`
+  **no** existía. Se creó con `docs/contact-schema.json` (nombre, correo, teléfono, vehículo,
+  mensaje). En **producción está sin verificar**.
+- [ ] ¿Quién atiende y por qué canal? (spec 000 §10, Q5) → **sigue abierta.** Hoy los mensajes
+  quedan en Master Data y nadie está asignado a leerlos. Mientras tanto la sección de canales
+  de `/contacto` (teléfono, WhatsApp, correo, dirección, horario) está vacía a propósito y no
+  se pinta.
+- [ ] ¿Hay datos personales en el formulario? → **sí**: nombre, correo, teléfono. Falta enlazar
+  la política de privacidad (spec 001 D5) cuando exista.
+
+## 6. Hallazgo nuevo: VTEX bloqueó los campos públicos de Master Data
+El schema se creó **sin `publicWrite`**. VTEX bloqueó temporalmente la creación de campos
+públicos nuevos (nota de release del 2026-10-23) y el `PUT` con `publicWrite` devuelve
+`422 BlockedRules`. Consecuencias comprobadas el 2026-11-27:
+
+- Un `POST` directo a `/api/dataentities/contact/documents` **sin cookie** responde
+  `403 Cannot write in private fields`.
+- El formulario **sí** envía: la app `vtex.store-form` no usa ese camino. El envío de prueba
+  quedó guardado (id `99e81589-eb29-4612-8fcd-e04de0fa9afc`, marcado "Se puede borrar").
+
+Queda por comprobar en producción con un visitante anónimo (AC-4): el workspace `devwilbis`
+exige login, así que ahí no se puede probar de verdad.
+
+## 7. Estado de los criterios
+- `AC-1` El formulario carga sin errores — **cumplido** (2026-11-27, devwilbis).
+- `AC-2` Un envío de prueba aparece en Master Data — **cumplido** (ver id arriba).
+- `AC-3` El responsable confirma haberlo recibido — **pendiente**: no hay responsable (Q5).
+- `AC-4` Repetir en producción y anotar la fecha — **pendiente**.

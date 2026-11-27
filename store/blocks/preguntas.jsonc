@@ -1,0 +1,24 @@
+/* ============================================================
+   PREGUNTAS FRECUENTES — /preguntas-frecuentes
+   ------------------------------------------------------------
+   Reemplaza a /faq, que era la pagina de ejemplo de VTEX: en
+   ingles, con un telefono de Nueva York y cuatro preguntas que
+   eran dos repetidas.
+
+   El texto se edita en Admin > Storefront > Site Editor. Las
+   preguntas de envios, pagos, devoluciones y garantia estan
+   vacias a proposito y NO se pintan hasta que tengan respuesta:
+   esas decisiones estan abiertas en las specs (Q3 pasarela, Q4
+   transportadoras, 001 TyC).
+   ============================================================ */
+{
+  "store.custom#preguntas": {
+    "blocks": [
+      "preguntas#rx"
+    ]
+  },
+
+  "preguntas#rx": {
+    "props": {}
+  }
+}

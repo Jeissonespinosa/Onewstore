@@ -120,7 +120,7 @@
   },
   "rich-text#repuestox-footer-links": {
     "props": {
-      "text": "[Quiénes somos](/quienes-somos)",
+      "text": "[Quiénes somos](/quienes-somos) · [Preguntas frecuentes](/preguntas-frecuentes) · [Contacto](/contacto)",
       "textAlignment": "CENTER",
       "blockClass": "repuestoxFooterLinks"
     }

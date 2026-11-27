@@ -8,6 +8,12 @@
   "store.custom#quienes-somos": {
     "path": "/quienes-somos"
   },
+  "store.custom#contacto": {
+    "path": "/contacto"
+  },
+  "store.custom#preguntas": {
+    "path": "/preguntas-frecuentes"
+  },
 
 
   "store.custom#landing-herramientas": {

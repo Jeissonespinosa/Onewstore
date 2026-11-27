@@ -197,22 +197,72 @@ class TestBloques(unittest.TestCase):
                         bad.append((u, bid, os.path.relpath(f, REPO)))
         self.assertEqual(bad, [])
 
-    def test_ROJO_HOY_textos_de_otra_tienda(self):
+    def test_nada_de_otra_tienda(self):
         """
-        SUPUESTO: el theme es de Repuestox.
-        ENTRADA: store/blocks/categories.jsonc (7 store.custom#categoria-* con ruta
-                 /linea-productos/*, rich-text#category-offer-title).
-        HOY: '## En Coéxito te ofrecemos' y '+65 años en el mercado' son textos del
-             cliente anterior (Coexito) y siguen publicados en 7 rutas vivas.
-        ESPERADO: sin referencias a Coexito en ningun bloque.
+        SUPUESTO: el theme es de Repuestox y no sirve nada de otra tienda.
+        ENTRADA: todos los store/blocks/**.json(c), en cualquier prop de texto.
+        ESPERADO: ni el nombre ni los assets de otra tienda.
+
+        POR QUE EXISTE. El theme nacio de un andamio de Coexito y se quedaron
+        vivas 7 rutas /linea-productos/* que decian "En Coexito te ofrecemos",
+        con el claim "+65 años en el mercado" —que es la historia de ellos, no
+        la nuestra— y con las 7 imagenes de heroe servidas desde
+        coexitoestaticas.vtexassets.com, el CDN del otro. Se borraron en el
+        commit que trajo esta prueba.
+
+        Se mira TODA prop de texto, no solo "text": la que mas dolia era un
+        "src". Un nombre se ve leyendo la pagina; un dominio ajeno en un src
+        no lo ve nadie hasta que el otro borra el archivo.
         """
+        ajeno = re.compile(r'co[eé]xito', re.I)
         hits = []
+
+        def mirar(bid, valor, camino):
+            if isinstance(valor, str):
+                if ajeno.search(valor):
+                    hits.append((bid, camino, valor[:120]))
+            elif isinstance(valor, dict):
+                for k, v in valor.items():
+                    mirar(bid, v, camino + '.' + str(k))
+            elif isinstance(valor, list):
+                for i, v in enumerate(valor):
+                    mirar(bid, v, camino + '[%d]' % i)
+
         for f in BLOCK_FILES:
             for bid, body in load_jsonc(f).items():
-                t = (body.get('props') or {}).get('text', '')
-                if isinstance(t, str) and re.search(r'co[eé]xito', t, re.I):
-                    hits.append((bid, t))
+                mirar(bid, body, os.path.relpath(f, REPO))
         self.assertEqual(hits, [])
+
+    def test_ROJO_HOY_assets_de_otro_tenant_de_vtex(self):
+        """
+        SUPUESTO: ninguna imagen del theme se sirve desde el VTEX de otra tienda.
+        ENTRADA: todos los "src" de los bloques que apunten a un host de VTEX.
+        HOY: queda uno, store/blocks/about-us.json -> image#mobile-phone, que
+             sale de storecomponents.vteximg.com.br: la tienda de ejemplo del
+             theme base. Toda la pagina /about-us sigue siendo el andamio de
+             VTEX (ese telefono y un video de YouTube cualquiera) y hay que
+             rehacerla con contenido de Repuestox.
+        ESPERADO: 0. Habia 17 — 7 heroes de /linea-productos y 10 logos de
+                  marca en los landings, todos desde coexitoestaticas; se
+                  borraron con las secciones que los usaban.
+
+        POR QUE SOLO HOSTS DE VTEX. YouTube, Unsplash o simpleicons son
+        terceros y son una decision aparte. El VTEX de OTRA tienda no: es una
+        cuenta ajena que podemos perder de un dia para otro, y mientras tanto
+        estamos publicando sus archivos como si fueran nuestros.
+        """
+        de_vtex = ('vtexassets.com', 'vteximg.com.br', 'vtexcommercestable.com.br')
+        nuestros = ('onewstore', 'repuestox')
+        malos = []
+        for f in BLOCK_FILES:
+            for bid, body in load_jsonc(f).items():
+                src = (body.get('props') or {}).get('src')
+                if not isinstance(src, str) or not src.startswith('http'):
+                    continue
+                host = src.split('/')[2]
+                if any(v in host for v in de_vtex) and not any(n in host for n in nuestros):
+                    malos.append((os.path.relpath(f, REPO), bid, host))
+        self.assertEqual(malos, [])
 
     def test_ROJO_HOY_blockclass_tiene_css(self):
         """

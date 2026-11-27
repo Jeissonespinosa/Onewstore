@@ -5,18 +5,14 @@
       "slider-layout#rx-hero-carros",
       "flex-layout.row#rx-lineas-section-carros",
       "flex-layout.row#rx-productos-carros",
-      "flex-layout.row#carros-cta-banner",
-      "rich-text#repuestox-section-brands-landing-carros",
-      "flex-layout.row#repuestox-brands-static-landing-carros"
+      "flex-layout.row#carros-cta-banner"
     ]
   },
   "store.custom#landing-motos": {
     "blocks": [
       "flex-layout.row#repuestox-splash",
       "slider-layout#rx-hero-motos",
-      "flex-layout.row#rx-lineas-section-motos",
-      "rich-text#repuestox-section-brands-landing-motos",
-      "flex-layout.row#repuestox-brands-static-landing-motos"
+      "flex-layout.row#rx-lineas-section-motos"
     ]
   },
   "flex-layout.row#carros-cta-banner": {
@@ -52,198 +48,6 @@
       "text": "[Escríbenos y lo conseguimos](/contact-us)",
       "textAlignment": "CENTER",
       "blockClass": "carrosCtaBannerButton"
-    }
-  },
-  "rich-text#repuestox-section-brands-landing-carros": {
-    "props": {
-      "text": "## Contamos con marcas lideres en el mercado",
-      "textAlignment": "CENTER",
-      "blockClass": "repuestoxSectionHeading"
-    }
-  },
-  "rich-text#repuestox-section-brands-landing-motos": {
-    "props": {
-      "text": "## Marcas para tu linea de motos",
-      "textAlignment": "CENTER",
-      "blockClass": "repuestoxSectionHeading"
-    }
-  },
-  "flex-layout.row#repuestox-brands-static-landing-carros": {
-    "props": {
-      "fullWidth": true,
-      "preventHorizontalStretch": true,
-      "blockClass": "repuestoxBrandsStaticRow"
-    },
-    "children": [
-      "flex-layout.col#repuestox-brand-1-landing-carros",
-      "flex-layout.col#repuestox-brand-2-landing-carros",
-      "flex-layout.col#repuestox-brand-3-landing-carros",
-      "flex-layout.col#repuestox-brand-4-landing-carros",
-      "flex-layout.col#repuestox-brand-5-landing-carros"
-    ]
-  },
-  "flex-layout.row#repuestox-brands-static-landing-motos": {
-    "props": {
-      "fullWidth": true,
-      "preventHorizontalStretch": true,
-      "blockClass": "repuestoxBrandsStaticRow"
-    },
-    "children": [
-      "flex-layout.col#repuestox-brand-1-landing-motos",
-      "flex-layout.col#repuestox-brand-2-landing-motos",
-      "flex-layout.col#repuestox-brand-3-landing-motos",
-      "flex-layout.col#repuestox-brand-4-landing-motos",
-      "flex-layout.col#repuestox-brand-5-landing-motos"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-1-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-1-landing-carros"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-1-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-1-landing-motos"
-    ]
-  },
-  "image#repuestox-brand-1-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0061ef75-77a5-4ffe-bda4-0f2600f56a91___695dfa71ddc3f02d0eb3ca95924bc64d.png",
-      "alt": "Marca MAC"
-    }
-  },
-  "image#repuestox-brand-1-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/0061ef75-77a5-4ffe-bda4-0f2600f56a91___695dfa71ddc3f02d0eb3ca95924bc64d.png",
-      "alt": "Marca MAC"
-    }
-  },
-  "flex-layout.col#repuestox-brand-2-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-2-landing-carros"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-2-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-2-landing-motos"
-    ]
-  },
-  "image#repuestox-brand-2-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/5f2f5912-c1c9-41d8-b906-6f99f26d39e0___7a022803378e56fb4cb02f9bcb436e1f.png",
-      "alt": "Marca Magna"
-    }
-  },
-  "image#repuestox-brand-2-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/5f2f5912-c1c9-41d8-b906-6f99f26d39e0___7a022803378e56fb4cb02f9bcb436e1f.png",
-      "alt": "Marca Magna"
-    }
-  },
-  "flex-layout.col#repuestox-brand-3-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-3-landing-carros"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-3-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-3-landing-motos"
-    ]
-  },
-  "image#repuestox-brand-3-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/8cdf2d5e-6063-4f63-90ac-cce1ad878c0b___5de370a522c78993a73677ec34386aaa.webp",
-      "alt": "Marca Goodride"
-    }
-  },
-  "image#repuestox-brand-3-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/8cdf2d5e-6063-4f63-90ac-cce1ad878c0b___5de370a522c78993a73677ec34386aaa.webp",
-      "alt": "Marca Goodride"
-    }
-  },
-  "flex-layout.col#repuestox-brand-4-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-4-landing-carros"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-4-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-4-landing-motos"
-    ]
-  },
-  "image#repuestox-brand-4-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/4e90ef65-6e54-47dc-a0bb-365ff156c399___1122986a61c3a0a9934dc624bea7af4a.png",
-      "alt": "Marca Snap-on"
-    }
-  },
-  "image#repuestox-brand-4-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/4e90ef65-6e54-47dc-a0bb-365ff156c399___1122986a61c3a0a9934dc624bea7af4a.png",
-      "alt": "Marca Snap-on"
-    }
-  },
-  "flex-layout.col#repuestox-brand-5-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-5-landing-carros"
-    ]
-  },
-  "flex-layout.col#repuestox-brand-5-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandCol"
-    },
-    "children": [
-      "image#repuestox-brand-5-landing-motos"
-    ]
-  },
-  "image#repuestox-brand-5-landing-carros": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/28c7280a-11d0-46f9-881e-25caf92c9999___4f4d9bff1e37ce3fe76978fb53d7ba03.png",
-      "alt": "Marca NGK"
-    }
-  },
-  "image#repuestox-brand-5-landing-motos": {
-    "props": {
-      "blockClass": "repuestoxBrandImage",
-      "src": "https://coexitoestaticas.vtexassets.com/assets/vtex.file-manager-graphql/images/28c7280a-11d0-46f9-881e-25caf92c9999___4f4d9bff1e37ce3fe76978fb53d7ba03.png",
-      "alt": "Marca NGK"
     }
   }
 }

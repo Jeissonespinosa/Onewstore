@@ -157,13 +157,6 @@ Definidas en `store/routes.json`:
 | `/about-us` | `store.custom#about-us` |
 | `/faq` | `store.custom#faq` |
 | `/contact-us` | `store.custom#contact-us` |
-| `/linea-productos/baterias` | `store.custom#categoria-baterias` |
-| `/linea-productos/lubricantes` | `store.custom#categoria-lubricantes` |
-| `/linea-productos/autopartes` | `store.custom#categoria-autopartes` |
-| `/linea-productos/motopartes` | `store.custom#categoria-motopartes` |
-| `/linea-productos/equipos-de-diagnostico` | `store.custom#categoria-equipos-diagnostico` |
-| `/linea-productos/sistemas-de-respaldo` | `store.custom#categoria-sistemas-respaldo` |
-| `/linea-productos/baterias-de-traccion` | `store.custom#categoria-baterias-traccion` |
 | `/carros/<macro>[/<sub>][/<hoja>]` | `store.custom#carros-...` (generadas) |
 | `/motos/<macro>[/<sub>][/<hoja>]` | `store.custom#motos-...` (generadas) |
 | `/herramientas` y `/herramientas/<macro>[/<hoja>]` | `store.custom#landing-herramientas`, `store.custom#herramientas-...` (generadas) |

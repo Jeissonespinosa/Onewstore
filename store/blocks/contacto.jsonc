@@ -35,10 +35,13 @@
    porque el workspace exige login.
 
    LO QUE FALTA DECIDIR (spec 000 §10, Q5: canal y responsable de
-   atencion): quien lee los mensajes y por donde mas se atiende.
-   Los canales (telefono, WhatsApp, correo, direccion, horario)
-   viven en canales-contacto#rx y estan vacios: se llenan en el
-   Site Editor y aparecen solos.
+   atencion): el correo, el numero y quien lee los mensajes. Lo
+   unico confirmado por el negocio (2026-11-27) es el HORARIO,
+   8:00 a.m. a 6:00 p.m., y por eso es lo unico que esta escrito
+   abajo. Faltan los dias de la semana.
+
+   El resto de canales vive en canales-contacto#rx, vacio: se
+   llenan en el Site Editor y aparecen solos, sin tocar codigo.
    ============================================================ */
 {
   "store.custom#contacto": {
@@ -117,16 +120,21 @@
     "children": ["rich-text#rx-contacto-listo"]
   },
 
-  /* No se promete un plazo: quien atiende todavia esta por asignar
-     (spec 000 §10, Q5). Cuando se decida, aqui va el plazo real. */
+  /* No se promete un plazo —cuantas horas o dias— porque quien atiende
+     todavia esta por asignar (Q5). El horario si, que esta confirmado. */
   "rich-text#rx-contacto-listo": {
     "props": {
-      "text": "## Listo, nos llegó\n\nTe respondemos al correo que nos dejaste.",
+      "text": "## Listo, nos llegó\n\nTe respondemos al correo que nos dejaste, en horario de atención.",
       "blockClass": "rxContactoListo"
     }
   },
 
+  /* El horario es el unico dato de atencion confirmado por el negocio
+     (2026-11-27). Telefono, WhatsApp, correo y direccion siguen vacios
+     porque todavia no existen: ver Q5. */
   "canales-contacto#rx": {
-    "props": {}
+    "props": {
+      "horario": "8:00 a.m. a 6:00 p.m."
+    }
   }
 }

@@ -37,9 +37,11 @@ RF-5 (enlazada desde el footer). **RF-3 no**: razón social y NIT siguen sin asi
 que esa sección existe vacía y no se pinta hasta que alguien la escriba en el Site Editor.
 Tampoco se enlazan los documentos legales, que no existen todavía (spec 001).
 
-Dato para Q1, sin confirmar: la cuenta VTEX `onewstore` figura con `companyName`
-"William Baquero Romero" y `name` "One W Store". **No se publicó**: es el titular de la cuenta,
-no necesariamente la razón social de Repuestox.
+Sobre Q1: el negocio confirmó el 2026-11-27 que **el nombre de la empresa es Repuestox**, lo
+que zanja la duda con "One W Store". Pero siguen faltando **NIT y razón social formal**, que es
+lo que pide RF-3, así que la sección sigue vacía: "Repuestox" a secas no es un aviso legal, y
+todo el sitio ya lo dice. La cuenta VTEX figura con `companyName` "William Baquero Romero";
+**no se publicó**, es el titular de la cuenta.
 
 ## 5. Preguntas abiertas (bloquean el contenido)
 - [ ] ¿Qué es Onewstore respecto de Repuestox? ¿Razón social y NIT? (spec 000 §10)

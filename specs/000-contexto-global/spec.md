@@ -231,11 +231,11 @@ decisiones de negocio y no se asignan sin confirmación del equipo.
 
 | ID | Pregunta (resumen) | Bloquea | Estado | Responsable | Fecha límite |
 |---|---|---|---|---|---|
-| Q1 | Relación Onewstore ↔ Repuestox; razón social y NIT | 001, 005 | **Parcial**: Onewstore es una tienda previa; NIT y razón social por asignar (placeholder). Falta pedir a VTEX el cambio de cuenta. | Por asignar | Por definir |
+| Q1 | Relación Onewstore ↔ Repuestox; razón social y NIT | 001, 005 | **Parcial**: el nombre de la empresa es **Repuestox** (confirmado 2026-11-27). Onewstore es una tienda previa; la cuenta VTEX figura como `onewstore` / "One W Store" / companyName "William Baquero Romero". Faltan **NIT y razón social formal**, y pedir a VTEX el cambio de cuenta. | Por asignar | Por definir |
 | Q2 | ¿Intermediario o vendedor directo? ¿Marketplace con fecha? | 001 | **Parcial**: Repuestox es **intermediario únicamente** (2026-11-15). Falta la fecha del marketplace con sellers terceros y decidir qué se hace con el seller de prueba `Repuestox` (id 1). | Por asignar | Por definir |
 | Q3 | Pasarela de pago, comisiones y liquidación a sellers | 001 (D4) | **Abierta** (ídem) | Por asignar | Por definir |
 | Q4 | Quién envía y qué transportadoras hay | 001 (D3, D6) | **Abierta** (ídem) | Por asignar | Por definir |
-| Q5 | Canal y responsable de atención al cliente | 004 | **Abierta** (ídem) | Por asignar | Por definir |
+| Q5 | Canal y responsable de atención al cliente | 004 | **Parcial** (2026-11-27): **horario 8:00 a.m. – 6:00 p.m.** (faltan los días de la semana). El formulario de `/contacto` ya funciona y los mensajes quedan en Master Data. Faltan **correo**, **número** y **quién los lee**. | Por asignar | Por definir |
 | Q6 | Abogado revisor y plazo | 001 (AC-5) | **Abierta** | Por asignar | Por definir |
 | Q7 | Fuente de la compatibilidad Marca/Modelo/Año y VIN | CU-3 | **Resuelta para la fase inicial**: la carga el seller. Alternativas futuras abajo. | — | — |
 | Q8 | ¿Árbol completo o subconjunto en VTEX primero? | 003 | **Parcial**: aún no se carga. Falta elegir el subconjunto y el método de validación. | Por asignar | Por definir |

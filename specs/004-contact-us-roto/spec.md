@@ -41,12 +41,14 @@ con ese schema no existe en la cuenta o el workspace.
   entidad `contact` **sí** existe (una búsqueda devuelve `[]`, no 404); el schema `site-contact`
   **no** existía. Se creó con `docs/contact-schema.json` (nombre, correo, teléfono, vehículo,
   mensaje). En **producción está sin verificar**.
-- [ ] ¿Quién atiende y por qué canal? (spec 000 §10, Q5) → **sigue abierta.** Hoy los mensajes
-  quedan en Master Data y nadie está asignado a leerlos. Mientras tanto la sección de canales
-  de `/contacto` (teléfono, WhatsApp, correo, dirección, horario) está vacía a propósito y no
-  se pinta.
+- [ ] ¿Quién atiende y por qué canal? (spec 000 §10, Q5) → **parcial (2026-11-27).** Confirmado
+  el **horario: 8:00 a.m. a 6:00 p.m.** (faltan los días de la semana), y ya se publica en
+  `/contacto`. Siguen sin definir el **correo**, el **número** y **quién lee los mensajes**:
+  hoy quedan en Master Data y nadie está asignado. Esos tres campos están vacíos y no se
+  pintan hasta que existan.
 - [ ] ¿Hay datos personales en el formulario? → **sí**: nombre, correo, teléfono. Falta enlazar
-  la política de privacidad (spec 001 D5) cuando exista.
+  la política de privacidad (spec 001 D5) cuando exista. El negocio confirmó el 2026-11-27 que
+  **un abogado está redactando las políticas** y que avisará para subirlas.
 
 ## 6. Hallazgo nuevo: VTEX bloqueó los campos públicos de Master Data
 El schema se creó **sin `publicWrite`**. VTEX bloqueó temporalmente la creación de campos

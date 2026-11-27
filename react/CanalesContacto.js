@@ -11,6 +11,13 @@
  * Admin > Storefront > Site Editor, sin tocar codigo. Cuando Q5 se responda,
  * se escriben ahi y aparecen solos.
  *
+ * EL HORARIO VA APARTE, no en la rejilla. No es un canal: es cuando se
+ * responde. Hoy es el unico dato confirmado (8:00 a.m. a 6:00 p.m., el
+ * 2026-11-27), asi que meterlo en una rejilla titulada "otras formas de
+ * escribirnos" con una sola casilla que ni siquiera es una forma de escribir
+ * se leeria como una pagina a medias. Puesto debajo del formulario dice lo
+ * que el cliente quiere saber: cuando le contestan.
+ *
  * WhatsApp no esta aqui como boton flotante ni como chat: eso es la spec 015
  * (chatbot de IA, pendiente de la respuesta de VTEX). Este campo es solo el
  * numero, si lo hay.
@@ -57,12 +64,12 @@ export default function CanalesContacto({
     { clase: 'whatsapp', etiqueta: 'WhatsApp', valor: whatsapp },
     { clase: 'correo', etiqueta: 'Correo', valor: correo },
     { clase: 'direccion', etiqueta: 'Dirección', valor: direccion },
-    { clase: 'horario', etiqueta: 'Horario', valor: horario },
   ].filter(c => String(c.valor || '').trim())
+  const hayHorario = !!String(horario || '').trim()
 
-  /* Sin un solo canal confirmado no hay seccion: un titulo sobre el vacio
-     se lee como una pagina rota. */
-  if (!canales.length) return null
+  /* Ni canales ni horario: no hay seccion. Un titulo sobre el vacio se lee
+     como una pagina rota. */
+  if (!canales.length && !hayHorario) return null
 
   const css = `
     .rx-cc{margin:2.5rem 0 0}
@@ -78,6 +85,10 @@ export default function CanalesContacto({
     .rx-cc__va{font-size:.9375rem;font-weight:700;color:${INK};text-decoration:none;
       line-height:1.35;word-break:break-word}
     a.rx-cc__va:hover{color:${RED}}
+    .rx-cc__horario{display:flex;align-items:center;gap:.6rem;margin:1.25rem 0 0;
+      padding:.85rem 1rem;border-radius:.75rem;background:#F7F7F8;
+      font-size:.875rem;color:#010101;line-height:1.45}
+    .rx-cc__horario b{font-weight:800}
     @media screen and (min-width:48rem){
       .rx-cc__lista{grid-template-columns:repeat(2,1fr);gap:1rem}
     }
@@ -86,7 +97,21 @@ export default function CanalesContacto({
   return (
     <section className={`rx-cc ${handles.canalesContacto || ''}`}>
       <style>{css}</style>
-      <h2 className="rx-cc__h">{titulo}</h2>
+
+      {hayHorario ? (
+        <p className="rx-cc__horario">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={RED}
+            strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+            style={{ flexShrink: 0 }}>
+            <path d={ICONOS.horario} />
+          </svg>
+          {/* El punto solo si el valor no lo trae ya: "8:00 a.m. a 6:00 p.m."
+              termina en punto y quedaba "p.m..". */}
+          <span>Atendemos de <b>{horario}</b>{/\.$/.test(horario) ? '' : '.'}</span>
+        </p>
+      ) : null}
+
+      {canales.length ? <h2 className="rx-cc__h">{titulo}</h2> : null}
       <div className="rx-cc__lista">
         {canales.map(c => {
           const href = enlaceDe(c.clase, c.valor)
@@ -124,6 +149,8 @@ CanalesContacto.schema = {
     whatsapp: campo('WhatsApp', 'Solo el número con indicativo. Se vuelve un enlace a wa.me.'),
     correo: campo('Correo', 'Se vuelve un enlace mailto.'),
     direccion: campo('Dirección'),
-    horario: campo('Horario de atención', 'Ej: lunes a viernes de 8:00 a 6:00, sábados hasta mediodía.'),
+    horario: campo('Horario de atención',
+      'Va aparte, debajo del formulario: no es un canal, es cuándo se responde. ' +
+      'Se escribe sin la palabra "horario", porque la frase ya dice "Atendemos de ...".'),
   },
 }

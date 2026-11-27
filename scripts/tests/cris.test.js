@@ -126,7 +126,8 @@ console.log('\n=== el modelo sin la marca ===')
 const vehSrc = fs.readFileSync('react/vehiculo.js', 'utf8')
 eval(vehSrc.split('\n').filter(l => !l.startsWith('import')).join('\n')
   .replace(/^export (const|function|default) /gm, '$1 ')
-  .replace(/^export /gm, '') + '\nglobal.modeloCoincide = modeloCoincide;')
+  .replace(/^export /gm, '') + '\nglobal.modeloCoincide = modeloCoincide;' +
+  '\nglobal.modeloCoincideEntero = modeloCoincideEntero;')
 
 const vocabDe = sec => {
   const v = new Set()
@@ -137,7 +138,7 @@ const vocabDe = sec => {
 const vocab = { carros: vocabDe('carros'), motos: vocabDe('motos') }
 const calza = (sec, frase) => modelosQueCalzan(
   vehiculos[sec], toks(frase), vocab[sec],
-  (m, mo, pal) => modeloCoincide(sec, m, mo, pal)
+  (m, mo, pal) => modeloCoincideEntero(sec, m, mo, pal)
 )
 const marcasDe = (sec, frase) => calza(sec, frase).map(c => c.marca + ' ' + c.modelo)
 
@@ -252,14 +253,23 @@ const vocabDeSeccion = sec => (sec === 'herramientas' ? vocabHerr : vocab[sec])
    corre en la pagina. */
 const lee = (sec, frase, voc) => leerVehiculoEn(
   vehiculos[sec] || {}, toks(frase), voc,
-  (m, mo, pal) => modeloCoincide(sec, m, mo, pal), () => 0)
+  (m, mo, pal) => modeloCoincideEntero(sec, m, mo, pal), () => 0)
+
+/* Las marcas de la seccion donde esta parado el cliente. Con ellas se sabe
+   si una marca de la otra seccion es exclusiva suya (Bajaj) o de las dos
+   (Honda, Suzuki). */
+const marcasDeLaSeccion = sec => new Set(Object.keys(vehiculos[sec] || {}).map(norm))
 
 const cruzar = (sec, frase) => {
   const voc = vocabDeSeccion(sec)
   const aqui = sec === 'herramientas' ? null : lee(sec, frase, voc)
   const alla = OTRAS_SECCIONES[sec].map(o =>
     Object.assign({ seccion: o }, lee(o, frase, voc)))
-  return { aqui, cruce: cruceDeSeccion(sec, aqui, alla, palabrasDeVehiculo(toks(frase), voc)) }
+  return {
+    aqui,
+    cruce: cruceDeSeccion(sec, aqui, alla, palabrasDeVehiculo(toks(frase), voc),
+                          marcasDeLaSeccion(sec)),
+  }
 }
 const soloCruce = (sec, frase) => cruzar(sec, frase).cruce
 
@@ -312,6 +322,60 @@ prueba('"kit de arrastre boxer" en Motos no avisa: aqui ya son cuatro',
 prueba('y en Motos "boxer" si calza con varias',
   cruzar('motos', 'kit de arrastre boxer').aqui.candidatos.length > 1, true)
 prueba('una frase vacia no avisa', soloCruce('carros', ''), null)
+
+console.log('\n=== la marca sola basta si es de una sola seccion ===')
+/* REPORTADO POR EL NEGOCIO: "pastillas de freno bajaj" en Carros no avisaba
+   nada. Bajaj hace motos y punto; no hacia falta que dijera el modelo. La
+   guarda de "alla tiene que haber un MODELO" estaba puesta para Honda y
+   Suzuki y se llevaba por delante las otras 70 marcas. */
+prueba('"pastillas de freno bajaj" en Carros avisa',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('carros', 'pastillas de freno bajaj')),
+  ['motos'])
+prueba('y lo que trae es la marca, sin modelo',
+  (c => [c.lecturas[0].marca, c.lecturas[0].modelo])(soloCruce('carros', 'pastillas de freno bajaj')),
+  ['Bajaj', null])
+prueba('"bajaj" sola tambien', !!soloCruce('carros', 'bajaj'), true)
+prueba('"frenos ktm" en Carros avisa', !!soloCruce('carros', 'frenos ktm'), true)
+prueba('"llantas yamaha" en Carros avisa', !!soloCruce('carros', 'llantas yamaha'), true)
+/* Y al reves: una marca que solo hace carros, buscada en Motos. */
+prueba('"pastillas chevrolet" en Motos avisa',
+  (c => c && c.lecturas[0].marca)(soloCruce('motos', 'pastillas chevrolet')), 'Chevrolet')
+prueba('"filtro renault" en Motos avisa',
+  (c => c && c.lecturas[0].marca)(soloCruce('motos', 'filtro renault')), 'Renault')
+/* BMW y BMW Motorrad son marcas distintas, una por seccion. */
+prueba('"frenos bmw" en Motos avisa del carro',
+  (c => c && c.lecturas[0].marca)(soloCruce('motos', 'frenos bmw')), 'BMW')
+prueba('"bmw motorrad" en Carros avisa de la moto',
+  (c => c && c.lecturas[0].marca)(soloCruce('carros', 'bmw motorrad')), 'BMW Motorrad')
+/* En herramientas no hay marcas propias, asi que cualquiera cruza. */
+prueba('"bajaj" en Herramientas avisa',
+  (c => c && c.lecturas.map(l => l.seccion))(soloCruce('herramientas', 'bajaj')), ['motos'])
+
+console.log('\n=== un pedazo de palabra no cruza de seccion ===')
+/* El nombre de un modelo se reconoce por substring, que es lo que hace falta
+   en el panel del vehiculo para poder escribir "cx5". Pero por substring un
+   pedazo de tres letras cruza por accidente: "bateria MAC" —una marca de
+   baterias muy comun aca— caia en el Porsche MACan. */
+prueba('"bateria mac" en Herramientas no avisa',
+  soloCruce('herramientas', 'bateria mac'), null)
+prueba('"bateria mac" en Motos tampoco',
+  soloCruce('motos', 'bateria mac'), null)
+/* Pero una palabra entera del nombre si cruza, aunque sea corta. */
+prueba('"guayas nkd" en Carros si avisa: nkd es la palabra entera',
+  (c => c && c.lecturas[0].candidatos.concat([{modelo: c.lecturas[0].modelo}])
+        .some(x => /NKD/.test(x.modelo || '')))(soloCruce('carros', 'guayas nkd')), true)
+
+/* Los dos que la coincidencia por pedazo tapaba: no solo no avisaban, es que
+   Cris le ofrecia al cliente tres Jeep Cherokee cuando escribia "frenos
+   hero". */
+prueba('"frenos hero" en Carros avisa: Hero es marca de motos',
+  (c => c && c.lecturas[0].marca)(soloCruce('carros', 'frenos hero')), 'Hero')
+prueba('y aqui ya no sale ningun Cherokee',
+  cruzar('carros', 'frenos hero').aqui.candidatos.length, 0)
+prueba('"frenos ram" en Motos avisa: RAM es marca de carros',
+  (c => c && c.lecturas[0].marca)(soloCruce('motos', 'frenos ram')), 'RAM')
+prueba('y aqui ya no sale ninguna Scrambler',
+  cruzar('motos', 'frenos ram').aqui.candidatos.length, 0)
 
 console.log('\n=== marcas que venden carro Y moto ===')
 /* Honda y Suzuki son las dos. Que la marca exista alla no basta para

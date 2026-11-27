@@ -415,6 +415,33 @@ export function modeloCoincide(seccion, marca, modelo, texto) {
   return apodosDe(seccion, marca, modelo).some(a => compacto(a).includes(q))
 }
 
+const palabrasDe = n => plano(n).split(/[^a-z0-9]+/).filter(Boolean)
+const empiezaOEsPalabra = (n, q) =>
+  compacto(n).startsWith(q) || palabrasDe(n).indexOf(q) >= 0
+
+/* La version ESTRICTA, para interpretar una frase escrita entera.
+
+   La de arriba busca el pedazo donde sea, que es lo que hace falta en el
+   cuadro del panel: se escribe de a poco y "yar" tiene que traer Yaris
+   mientras se teclea. Pero cuando el cliente YA escribio la palabra
+   completa, encontrarla en la mitad de otra es un error con consecuencias:
+
+     "frenos hero"   Hero es una marca de motos, y en carros salian tres
+                     Jeep C-HERO-kee, asi que Cris le preguntaba cual de los
+                     tres Cherokee era el suyo.
+     "frenos ram"    RAM es marca de carros, y en motos caia en la Ducati
+                     Sc-RAM-bler y la Royal Enfield Sc-RAM 411.
+
+   Aqui la palabra tiene que ser el principio del nombre ("yar" -> Yaris,
+   "boxer" -> Boxer CT 100) o una palabra entera suya ("np300" -> Frontier
+   NP300). Los apodos siguen valiendo igual: "morning" es el Picanto. */
+export function modeloCoincideEntero(seccion, marca, modelo, texto) {
+  const q = compacto(texto)
+  if (!q) return true
+  if (empiezaOEsPalabra(modelo, q)) return true
+  return apodosDe(seccion, marca, modelo).some(a => empiezaOEsPalabra(a, q))
+}
+
 /* Si lo que escribieron es un acabado, devuelve como se escribe de verdad,
    para poder explicarselo. Null si no lo es. */
 export function esVersion(marca, texto) {

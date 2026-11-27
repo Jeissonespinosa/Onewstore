@@ -38,7 +38,7 @@ import vehiculos from './data/vehiculos-colombia.json'
 /* El ranking y el almacen del vehiculo son compartidos con la pildora del
    header: una sola fuente, o los dos componentes se desincronizan. */
 import {
-  POPULARES, posMarca, posModelo, rutaDe, esElectrico, modeloCoincide,
+  POPULARES, posMarca, posModelo, rutaDe, esElectrico, modeloCoincideEntero,
   leer as leerVehiculo, escribir as escribirVehiculo, suscribir,
   leerEstado, suscribirEstado, pedirAbrir, nombreDe, MAX_VEHICULOS,
 } from './vehiculo'
@@ -296,6 +296,16 @@ function leerVehiculoEn(base, palabras, vocabCategorias, calza, orden) {
                               son cuatro Bajaj: se le preguntan las cuatro,
                               no se le habla del Peugeot.
 
+   LA MARCA SOLA BASTA SI ES DE LA OTRA SECCION Y NADA MAS. "pastillas de
+   freno bajaj" en Carros no avisaba, y es el caso mas claro que hay: Bajaj
+   hace motos y punto. La regla de "alla tiene que haber un MODELO" estaba
+   pensada para Honda y Suzuki, que venden carro Y moto, y se llevaba por
+   delante las otras 70 marcas, que son de una sola seccion (25 solo de
+   moto, 47 solo de carro). Ahora:
+
+     marca que no existe aqui   basta ella sola (Bajaj, KTM, Chevrolet...)
+     marca que existe aqui      hace falta ademas un modelo (Honda, Suzuki)
+
    Lo que el aviso evita es que Cris se COMPROMETA en silencio con un
    vehiculo: un solo candidato aqui y mas alla es exactamente "boxer ct" en
    Carros, donde se iba derecho al Peugeot sin preguntar nada.
@@ -305,11 +315,30 @@ function leerVehiculoEn(base, palabras, vocabCategorias, calza, orden) {
    utiles esten en el nombre del modelo, y ningun modelo de moto se llama
    "peugeot". Lo que si cruza, y debe, es "honda cb 110" en Carros: ahi la
    marca existe en las dos secciones y el modelo solo en una. */
-function cruceDeSeccion(seccion, aqui, alla, utiles) {
+function cruceDeSeccion(seccion, aqui, alla, utiles, marcasDeAqui) {
   if (aqui && (aqui.candidatos || []).length > 1) return null
   const conLetras = (utiles || []).filter(p => /[a-z]/.test(p))
   if (!conLetras.length) return null
-  const lecturas = (alla || []).filter(l => l && (l.modelo || (l.candidatos || []).length))
+  const propias = marcasDeAqui || new Set()
+  const sirve = l => {
+    if (!l) return false
+    /* Marca que alla existe y aqui no: evidencia firme por si sola. Una
+       marca se reconoce por palabras completas, no por pedazos. */
+    if (l.marca && !propias.has(norm(l.marca))) return true
+    if (!l.modelo && !(l.candidatos || []).length) return false
+    /* Por modelo la cosa es mas floja: el nombre se reconoce por substring,
+       que es lo que hace falta en el panel del vehiculo para poder escribir
+       "cx5". Pero un pedazo de tres letras cruza de seccion por accidente:
+       "bateria MAC" —una marca de baterias— caia en el Porsche MACan. Se
+       exige que la palabra sea larga, o que sea una palabra ENTERA del
+       nombre del modelo: "nkd" lo es de "NKD 125" y debe cruzar. */
+    const enteras = new Set()
+    ;[l.modelo].concat((l.candidatos || []).map(c => c.modelo))
+      .filter(Boolean)
+      .forEach(n => toks(n).forEach(x => enteras.add(x)))
+    return conLetras.some(p => p.length >= 4 || enteras.has(p))
+  }
+  const lecturas = (alla || []).filter(sirve)
   if (!lecturas.length) return null
   return { lecturas, palabra: conLetras[0] }
 }
@@ -329,7 +358,10 @@ function nodoEnSeccion(nodos, nodo, otra) {
 /* Como se compara un modelo y como se ordenan los que calzan, por seccion.
    Van aparte porque leerVehiculoEn se usa contra varias secciones a la vez y
    cada una tiene sus apodos y su ranking de ventas. */
-const calzaEn = sec => (m, mo, pal) => modeloCoincide(sec, m, mo, pal)
+/* La estricta, no la del cuadro del panel: aqui la palabra ya viene escrita
+   entera y encontrarla en la mitad de otro nombre es un error. Ver
+   modeloCoincideEntero() en vehiculo.js. */
+const calzaEn = sec => (m, mo, pal) => modeloCoincideEntero(sec, m, mo, pal)
 const ordenEn = sec => c => posMarca(sec, c.marca) * 1000 + posModelo(c.marca, c.modelo)
 
 export default function Cris({
@@ -454,6 +486,12 @@ export default function Cris({
     () => (pideVehiculo ? vehiculos[seccion === 'motos' ? 'motos' : 'carros'] || {} : {}),
     [seccion, pideVehiculo]
   )
+  /* Las marcas de ESTA seccion. Sirven para saber si una marca de la otra es
+     exclusiva suya: Bajaj solo hace motos, pero Honda hace las dos cosas. */
+  const marcasPropias = useMemo(
+    () => new Set(Object.keys(base).map(norm)),
+    [base]
+  )
 
   /* Lo que Cris entendio de la frase. */
   const lectura = useMemo(() => {
@@ -487,7 +525,7 @@ export default function Cris({
       { seccion: o },
       leerVehiculoEn(vehiculos[o] || {}, palabras, vocabCategorias, calzaEn(o), ordenEn(o))
     ))
-    const cruce = cruceDeSeccion(seccion, aqui, alla, utiles)
+    const cruce = cruceDeSeccion(seccion, aqui, alla, utiles, marcasPropias)
     /* Las palabras del vehiculo no deben leerse como categoria: "audi" no es
        "audio", y "Corolla" no es una categoria. */
     const usadasVehiculo = new Set(
@@ -509,7 +547,7 @@ export default function Cris({
       llanta,
       palabras: paraCategoria,
     }
-  }, [texto, entradas, vocabCategorias, base, pideVehiculo, seccion])
+  }, [texto, entradas, vocabCategorias, base, marcasPropias, pideVehiculo, seccion])
 
   /* Marcas de la seccion, ya ordenadas por venta. */
   const marcas = useMemo(
@@ -756,17 +794,22 @@ export default function Cris({
                                a leer y le pregunta cual es la suya. */
   const irAOtraSeccion = (otra, alla) => {
     const nodo = nodoEnSeccion(indice.nodos, destinoDeLaFrase(), otra)
-    const unico = alla && alla.marca && alla.modelo
     let destino = null
-    if (unico && nodo) {
+    /* Se lleva TODO lo que se sepa del vehiculo, aunque sea solo la marca.
+       "pastillas de freno bajaj" en Carros no dice que moto es, pero Bajaj
+       si: el cliente aterriza en las pastillas de freno de Motos ya
+       filtradas por Bajaj, que es a donde queria ir. */
+    if (alla && alla.marca && nodo) {
       destino = urlDe(
         nodo,
-        { marca: alla.marca, modelo: alla.modelo, ano: lectura && lectura.ano },
+        { marca: alla.marca, modelo: alla.modelo || null,
+          ano: (lectura && lectura.ano) || null },
         lectura && lectura.llanta, true, false, otra
       )
     }
-    /* Sin un vehiculo unico no se adivina: se lleva la frase y alla Cris la
-       vuelve a leer con la base de esa seccion y le pregunta cual es el suyo. */
+    /* Sin marca no se adivina: se lleva la frase a la categoria equivalente
+       (o a la seccion) y alla Cris la vuelve a leer con la base de esa
+       seccion y le pregunta cual es el suyo. */
     if (!destino) {
       destino = {
         to: nodo ? nodo.path : '/' + otra,
@@ -954,7 +997,10 @@ export default function Cris({
     if (!l) return ''
     if (l.marca && l.modelo) return nombreDe({ marca: l.marca, modelo: l.modelo })
     const c = (l.candidatos || [])[0]
-    return c ? nombreDe({ marca: c.marca, modelo: c.modelo }) : ''
+    if (c) return nombreDe({ marca: c.marca, modelo: c.modelo })
+    /* Solo la marca: "pastillas de freno bajaj" no dice que moto es, pero
+       decir "Bajaj" ya le sirve al cliente para reconocerse. */
+    return l.marca || ''
   }
 
   const yaLoTengo = (m, mo) => guardados.some(v =>
@@ -980,6 +1026,10 @@ export default function Cris({
            faltaba para darse cuenta. */
         detalle = `Aquí te estamos mostrando repuestos de ${nombreAqui}. ` +
           `Si lo tuyo es ${nom}, cambia de sección.`
+      } else if (!uno.modelo && !(uno.candidatos || []).length) {
+        /* Solo la marca, y es exclusiva de la otra seccion. */
+        detalle = `${nom} es marca de ${uno.seccion}. ` +
+          `En ${NOMBRE_SECCION[seccion]} no vas a encontrar sus repuestos.`
       } else {
         detalle = `Coincide con ${nom}${mas ? ` y ${mas} más` : ''}. ` +
           `En ${NOMBRE_SECCION[seccion]} no vas a encontrar sus repuestos.`

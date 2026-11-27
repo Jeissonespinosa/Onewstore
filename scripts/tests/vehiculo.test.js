@@ -42,6 +42,7 @@ eval(codigo + `
   global.motoresDe = motoresDe; global.pideMotor = pideMotor;
   global.nombreConMotor = nombreConMotor;
   global.modeloCoincide = modeloCoincide; global.esVersion = esVersion;
+  global.modeloCoincideEntero = modeloCoincideEntero;
   global.esElectrico = esElectrico;
   global.vehiculoDeRuta = vehiculoDeRuta; global.rutaConVehiculo = rutaConVehiculo;
   global.marcasDelCarro = marcasDelCarro; global.GEMELOS = GEMELOS;
@@ -621,6 +622,33 @@ prueba('escoger el motor completa el que estaba sin declarar, no lo duplica',
 escribir('carros', picSin)
 prueba('decir "no se cual es" despues lo deja otra vez sin motor',
   leerEstado('carros'), { lista: [picSin], activo: 0 })
+
+console.log('\n=== modeloCoincideEntero: la frase escrita, no el cuadro de busqueda ===')
+/* La floja busca el pedazo donde sea, que es lo que hace falta mientras se
+   teclea en el panel. La estricta es para una frase ya escrita, donde
+   encontrar la palabra en la mitad de otra es un error con consecuencias. */
+prueba('"hero" NO es un Cherokee',
+  modeloCoincideEntero('carros', 'Jeep', 'Cherokee', 'hero'), false)
+prueba('pero la floja si lo daba por bueno',
+  modeloCoincide('carros', 'Jeep', 'Cherokee', 'hero'), true)
+prueba('"ram" NO es una Scrambler',
+  modeloCoincideEntero('motos', 'Ducati', 'Scrambler', 'ram'), false)
+prueba('"scram" si: empieza el nombre',
+  modeloCoincideEntero('motos', 'Ducati', 'Scrambler', 'scram'), true)
+
+/* Lo que tiene que seguir funcionando. */
+prueba('"yar" trae el Yaris: empieza el nombre',
+  modeloCoincideEntero('carros', 'Toyota', 'Yaris', 'yar'), true)
+prueba('"boxer" es palabra entera de "Boxer CT 100"',
+  modeloCoincideEntero('motos', 'Bajaj', 'Boxer CT 100', 'boxer'), true)
+prueba('"np300" es palabra entera de "Frontier NP300"',
+  modeloCoincideEntero('carros', 'Nissan', 'Frontier NP300', 'np300'), true)
+prueba('"cx5" encuentra el CX-5 sin guion',
+  modeloCoincideEntero('carros', 'Mazda', 'CX-5', 'cx5'), true)
+prueba('"morning" sigue siendo el Picanto, por el apodo',
+  modeloCoincideEntero('carros', 'Kia', 'Picanto', 'morning'), true)
+prueba('vacio calza con todo, como la floja',
+  modeloCoincideEntero('carros', 'Kia', 'Picanto', ''), true)
 
 console.log(fallos ? `\n${fallos} PRUEBAS FALLIDAS` : '\nTodas las pruebas pasaron')
 process.exit(fallos ? 1 : 0)

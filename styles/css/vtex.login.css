@@ -408,12 +408,16 @@
   animation: rx-search-glow 2.8s ease-in-out infinite alternate;
 }
 
+/* 0%/100% y no from/to: el linter de VTEX los cuenta como selectores de
+   tipo y tumba el build. Este keyframe venia asi de antes y no fallaba
+   porque el linter solo mira los archivos que cambian; el dia que alguien
+   tocara este, reventaba sin razon aparente. */
 @keyframes rx-search-glow {
-  from {
+  0% {
     box-shadow: 0 14px 34px -8px rgba(255, 55, 30, 0.42), 0 0 0 6px rgba(255, 55, 30, 0.06);
     border-color: rgba(255, 55, 30, 0.3);
   }
-  to {
+  100% {
     box-shadow: 0 18px 46px -6px rgba(255, 55, 30, 0.62), 0 0 0 10px rgba(255, 55, 30, 0.12);
     border-color: rgba(255, 55, 30, 0.6);
   }

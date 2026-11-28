@@ -77,19 +77,23 @@
   }
 }
 
+/* Fuera de la media query a proposito. Una regla de fotogramas anidada
+   dentro de una media query es CSS valido, pero Safari lo ha resuelto mal
+   durante años: el nombre no existe, la animacion no aplica y el logo se
+   queda quieto. Definida aqui arriba funciona en todas partes. */
+@keyframes repuestoxSplashAparece {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* A quien pidio menos movimiento no se le gira nada: aparece y ya. */
 @media (prefers-reduced-motion: reduce) {
   .imageElement--repuestoxSplashLogo {
     animation: repuestoxSplashAparece 0.3s ease both;
-  }
-
-  @keyframes repuestoxSplashAparece {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 }
 

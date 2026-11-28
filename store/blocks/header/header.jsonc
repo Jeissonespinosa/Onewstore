@@ -37,6 +37,7 @@
   /* ---------- escritorio ---------- */
   "header-layout.desktop": {
     "children": [
+      "icono-rx#rx",
       "flex-layout.row#1-desktop",
       "sticky-layout#4-desktop"
     ]
@@ -102,6 +103,13 @@
   /* logo-rx en vez del bloque logo de VTEX: el href tiene que
      depender de la seccion. Desde /carros el logo lleva a
      /carros, no al selector del home. */
+  /* El favicon. No pinta nada: solo mete los <link rel="icon"> en el head
+     con Helmet. Va en el HEADER y no en el footer porque el footer se pinta
+     tarde —queda debajo del pliegue y VTEX lo monta al bajar— y el favicon
+     se probo ahi: nunca llegaba al head. */
+  "icono-rx#rx": {
+    "props": {}
+  },
   "logo-rx#desktop": {
     "props": {
       "variante": "logotipo",
@@ -166,6 +174,7 @@
   /* ---------- movil ---------- */
   "header-layout.mobile": {
     "children": [
+      "icono-rx#rx",
       "sticky-layout#1-mobile"
     ]
   },

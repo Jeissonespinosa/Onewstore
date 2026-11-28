@@ -28,5 +28,8 @@
   },
   "preguntas": {
     "component": "Preguntas"
+  },
+  "icono-rx": {
+    "component": "IconoRx"
   }
 }
